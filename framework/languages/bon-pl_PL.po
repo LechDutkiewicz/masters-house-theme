@@ -1,0 +1,2195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: TechSavvy Marketers\n"
+"POT-Creation-Date: 2015-01-16 17:20+0100\n"
+"PO-Revision-Date: 2015-02-17 15:20+0100\n"
+"Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
+"Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.4\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;"
+"esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comment.php:19
+msgid "Your comment is awaiting moderation."
+msgstr "Twój komentarz oczekuje na zatwierdzenie"
+
+#: comments.php:17 comments.php:21
+msgid "No Responses"
+msgstr "Brak Odpowiedzi"
+
+#: comments.php:17 comments.php:21
+msgid "One Response"
+msgstr "Jedna odpowiedź"
+
+#: comments.php:17 comments.php:21
+msgid "% Responses"
+msgstr "% Odpowiedzi"
+
+#: comments.php:25
+msgid "&larr; Previous"
+msgstr "&larr; Poprzednie"
+
+#: comments.php:26
+#, php-format
+msgid "Page %1$s of %2$s"
+msgstr "Strona:%1$s z %2$s"
+
+#: comments.php:27
+msgid "Next &rarr;"
+msgstr "Następne &rarr;"
+
+#: comments.php:41
+#, php-format
+msgid ""
+"Comments are closed, but <a href=\"%s\" title=\"Trackback URL for this post\">trackbacks</a> and pingbacks are "
+"open."
+msgstr ""
+"Komentarze są zamknięte, ale <a href=\"\"%s\"\" title=\"Trackback URL for this post\">trackbacks</a> i pingbacks "
+"są otwarte."
+
+#: comments.php:47
+msgid "Comments are closed."
+msgstr "Komentowanie jest wyłączone."
+
+#: comments.php:57 comments.php:62 framework/functions/comments.php:208
+msgid "Leave a Reply"
+msgstr "Dodaj komentarz"
+
+#: comments.php:57 comments.php:62 framework/functions/comments.php:209
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr "Zostaw komentarz do %s"
+
+#: comments.php:69
+#, php-format
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "Musisz być %1$slogged  w%2$s, aby dodać komentarz."
+
+#: comments.php:76
+#, php-format
+msgid "Logged in as %1$s. %2$sLog out &raquo;%3$s"
+msgstr "Zalogowany jako %1$s. %2$sWyloguj &raquo;%3$s"
+
+#: comments.php:76 framework/functions/comments.php:203
+msgid "Log out of this account"
+msgstr "Wyloguj się z tego konta"
+
+#: comments.php:112
+msgid "Submit Comment"
+msgstr "Dodaj komentarz"
+
+#: framework/classes/class-bon-accounts.php:75
+msgctxt "edit-account-slug"
+msgid "edit-account"
+msgstr "Edytuj konto"
+
+#: framework/classes/class-bon-accounts.php:76
+msgctxt "lost-password-slug"
+msgid "lost-password"
+msgstr "Utracone hasło"
+
+#: framework/classes/class-bon-accounts.php:269 includes/theme-actions.php:1156 includes/theme-actions.php:1265
+#: includes/theme-toolkit-override.php:752 page-templates/page-template-about-us.php:150
+#: templates/blocks/block-agent.php:86 templates/blocks/block-modal-contact.php:32
+#: templates/blocks/block-modal-customize.php:32 templates/blocks/block-modal-ebook.php:14
+#: templates/blocks/block-modal-visit-request.php:32 templates/blocks/boat-listing/footer.php:98
+#: templates/blocks/car-listing/footer.php:98 templates/contents/content-agent.php:84
+#: templates/contents/content-sales-representative.php:77 templates/deprecated/block-carlistingfooter.php:98
+#: templates/deprecated/block-listingfooter.php:101
+msgid "Please enter your name."
+msgstr "Wpisz proszę swoje imię i nazwisko."
+
+#: framework/classes/class-bon-accounts.php:273
+msgid "Please provide a valid email address."
+msgstr "Wpisz proszę prawidłowy adres email."
+
+#: framework/classes/class-bon-accounts.php:275
+msgid "This email address is already registered."
+msgstr "Ten adres email jest już zarejestrowany."
+
+#: framework/classes/class-bon-accounts.php:279
+msgid "Please re-enter your password."
+msgstr "Wprowadź proszę ponownie hasło."
+
+#: framework/classes/class-bon-accounts.php:281 framework/classes/class-bon-accounts.php:534
+msgid "Passwords do not match."
+msgstr "Hasła się nie zgadzają."
+
+#: framework/classes/class-bon-accounts.php:328
+msgid "Your password has been reset."
+msgstr "Twoje hasło zostało zrestartowane."
+
+#: framework/classes/class-bon-accounts.php:328 framework/classes/class-bon-shortcodes.php:188
+#: framework/functions/shortcodes.php:143
+msgid "Log in"
+msgstr "Zaloguj się"
+
+#: framework/classes/class-bon-accounts.php:349
+msgid "Account details changed successfully."
+msgstr "Szczegóły konta zostały zmienione pomyślnie."
+
+#: framework/classes/class-bon-accounts.php:383
+msgid "Username is required."
+msgstr "Nazwa użytkownika jest wymagana."
+
+#: framework/classes/class-bon-accounts.php:384
+msgid "Password is required."
+msgstr "Hasło jest wymagane."
+
+#: framework/classes/class-bon-accounts.php:442
+msgid "Username already taken"
+msgstr "Nazwa użytkownika już istnieje"
+
+#: framework/classes/class-bon-accounts.php:445
+msgid "Invalid username"
+msgstr "Nieprawidłowa nazwa użytkownika"
+
+#: framework/classes/class-bon-accounts.php:448
+msgid "Please enter a username"
+msgstr "Wpisz proszę nazwę użytkownika"
+
+#: framework/classes/class-bon-accounts.php:451
+msgid "Invalid email"
+msgstr "Błędny e-mail"
+
+#: framework/classes/class-bon-accounts.php:454
+msgid "Email already registered"
+msgstr "Ten adres już jest zarejestrowany"
+
+#: framework/classes/class-bon-accounts.php:457
+msgid "Please enter a password"
+msgstr "Wpisz proszę ponownie hasło"
+
+#: framework/classes/class-bon-accounts.php:460
+msgid "Passwords do not match"
+msgstr "Hasła się nie zgadzają"
+
+#: framework/classes/class-bon-accounts.php:465
+msgid "Cheatin&#8217; uh?"
+msgstr "Oszukujesz, co?"
+
+#: framework/classes/class-bon-accounts.php:481
+msgid "Your chosen password"
+msgstr "Wybrane przez Ciebie hasło"
+
+#: framework/classes/class-bon-accounts.php:529
+msgid "Please enter your password."
+msgstr "Wpisz proszę ponownie swoje hasło."
+
+#: framework/classes/class-bon-accounts.php:568
+msgid "Please enter a username or e-mail address."
+msgstr "Wpisz proszę nazwę użytkownika lub adres email."
+
+#: framework/classes/class-bon-accounts.php:575
+msgid "There is no user registered with that email address."
+msgstr "Nie istnieje użytkownik zarejestrowany na ten adres email."
+
+#: framework/classes/class-bon-accounts.php:591
+msgid "Invalid username or e-mail."
+msgstr "Nieprawidłowa nazwa użytkownika lub email."
+
+#: framework/classes/class-bon-accounts.php:604
+msgid "Password reset is not allowed for this user"
+msgstr "Restartowanie hasła nie jest dozwolone dla tego użytkownika"
+
+#: framework/classes/class-bon-accounts.php:626
+msgid "Someone requested that the password be reset for the following account:"
+msgstr "Ktos poprosił o reset hasła dla wskazanego konta:"
+
+#: framework/classes/class-bon-accounts.php:628
+#, php-format
+msgid "Username: %s"
+msgstr "Nazwa użytkownika: %s"
+
+#: framework/classes/class-bon-accounts.php:629
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr "Jeśli to pomyłka, zignoruj proszę ten email i nic się nie wydarzy."
+
+#: framework/classes/class-bon-accounts.php:630
+msgid "To reset your password, visit the following address:"
+msgstr "Aby zrestartować swoje hasło, odwiedź poniższy adres:"
+
+#: framework/classes/class-bon-accounts.php:641
+#, php-format
+msgid "[%s] Password Reset"
+msgstr "[%s] Reset Hasła"
+
+#: framework/classes/class-bon-accounts.php:663
+msgid "The e-mail could not be sent."
+msgstr "Emal nie mógł zostać wysłany."
+
+#: framework/classes/class-bon-accounts.php:663
+msgid "Possible reason: your host may have disabled the mail() function."
+msgstr "Możliwy powód: Twój host może blokować funkcję mail()."
+
+#: framework/classes/class-bon-accounts.php:667
+msgid "Check your e-mail for the confirmation link."
+msgstr "Sprawdź swój email po link potwierdzający."
+
+#: framework/classes/class-bon-accounts.php:688 framework/classes/class-bon-accounts.php:693
+#: framework/classes/class-bon-accounts.php:700
+msgid "Invalid Key."
+msgstr "Nieprawidłowy klucz."
+
+#: framework/classes/class-bon-accounts.php:725
+msgid "Skype Username"
+msgstr "Nazwa użytkownika Skype"
+
+#: framework/classes/class-bon-accounts.php:726
+msgid "Twitter URL"
+msgstr "Podaj URL do twitter"
+
+#: framework/classes/class-bon-accounts.php:727 templates/contents/content-agent.php:58
+#: templates/contents/content-sales-representative.php:55
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: framework/classes/class-bon-accounts.php:728
+msgid "Google Plus"
+msgstr "Google Plus"
+
+#: framework/classes/class-bon-accounts.php:729
+msgid "Facebook URL"
+msgstr "Facebook URL"
+
+#: framework/classes/class-bon-accounts.php:730
+msgid "YouTube URL"
+msgstr "YouTube URL"
+
+#: framework/classes/class-bon-accounts.php:731
+msgid "Pinterest URL"
+msgstr "Pinterest URL"
+
+#: framework/classes/class-bon-accounts.php:732
+msgid "Instagram URL"
+msgstr "Instagram URL"
+
+#: framework/classes/class-bon-accounts.php:733
+msgid "Dribbble URL"
+msgstr "Adres URL Dribbble"
+
+#: framework/classes/class-bon-accounts.php:734
+msgid "Github URL"
+msgstr "GitHub URL"
+
+#: framework/classes/class-bon-accounts.php:735
+msgid "WordPress URL"
+msgstr "WordPress adres URL"
+
+#: framework/classes/class-bon-admin.php:144
+msgid "Default options restored."
+msgstr "Opcje domyślne przywrócone."
+
+#: framework/classes/class-bon-admin.php:204
+msgid "Options saved."
+msgstr "Opcje zapisane."
+
+#: framework/classes/class-bon-admin.php:452
+msgid "Reset Options"
+msgstr "Przywróć poprzednie ustawienia"
+
+#: framework/classes/class-bon-admin.php:452
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr "﻿Kliknij przycisk OK, aby zresetować. Wszelkie ustawienia dla motywu zostaną utracone!"
+
+#: framework/classes/class-bon-admin.php:453
+msgid "Save All Changes"
+msgstr "Zapisz wszystkie zmiany"
+
+#: framework/classes/class-bon-admin.php:477
+msgid "View Theme Documentation"
+msgstr "Zobacz dokumentację skórki"
+
+#: framework/classes/class-bon-admin.php:480
+msgid "Visit Support Forum"
+msgstr "Odwiedź Forum pomocy"
+
+#: framework/classes/class-bon-admin.php:531 framework/classes/class-bon-machine.php:746
+#: framework/classes/menus/class-bon-advanced-menu.php:483 framework/classes/menus/class-bon-advanced-menu.php:671
+msgid "Upload"
+msgstr "Wgraj"
+
+#: framework/classes/class-bon-admin.php:532 framework/classes/class-bon-machine.php:748
+#: framework/classes/menus/class-bon-advanced-menu.php:485 framework/classes/menus/class-bon-advanced-menu.php:672
+#: framework/classes/menus/class-bon-walker-menu-edit.php:204 framework/functions/utility.php:488
+msgid "Remove"
+msgstr "Usuń"
+
+#: framework/classes/class-bon-admin.php:545 framework/classes/class-bon-meta-box.php:93
+msgid "Clear"
+msgstr "Wyczyść"
+
+#: framework/classes/class-bon-admin.php:546 framework/classes/class-bon-meta-box.php:94
+#: framework/extensions/theme-layouts.php:341
+msgid "Default"
+msgstr "Domyślne"
+
+#: framework/classes/class-bon-admin.php:547 framework/classes/class-bon-meta-box.php:95
+msgid "Select Color"
+msgstr "Wybierz kolor"
+
+#: framework/classes/class-bon-admin.php:618
+#, php-format
+msgid "BonFramework %s"
+msgstr "BonFramework %s"
+
+#: framework/classes/class-bon-backup.php:49 framework/classes/class-bon-backup.php:71
+#: framework/classes/class-bon-backup.php:118
+msgid "Import / Export"
+msgstr "Import/Export"
+
+#: framework/classes/class-bon-backup.php:74
+msgid "Import Settings"
+msgstr "Importuj ustawienia"
+
+#: framework/classes/class-bon-backup.php:75
+msgid ""
+"If you have Theme settings in a backup file on your computer, the Import / Export system can import those into "
+"this site. To get started, upload your backup file to import from below."
+msgstr ""
+"Jeśli masz ustawienia w pliku kopii zapasowej na komputerze, importu / eksportu systemu można zaimportować do "
+"tej strony. Aby rozpocząć, prześlij plik kopia zapasowa do importu."
+
+#: framework/classes/class-bon-backup.php:79
+#, php-format
+msgid "Upload File: (Maximum Size: %s)"
+msgstr "Upload plików: (maksymalny rozmiar: %s)"
+
+#: framework/classes/class-bon-backup.php:82
+msgid "Upload File and Import"
+msgstr "Wgrywanie pliku"
+
+#: framework/classes/class-bon-backup.php:89
+msgid "Export Settings"
+msgstr "Eksportuj ustawienia"
+
+#: framework/classes/class-bon-backup.php:91
+msgid ""
+"When you click the button below, the Import / Export system will create a text file for you to save to your "
+"computer."
+msgstr "Naciśnij przycisk Pobierz, aby zapisać raport na swoim komputerze. </cf>"
+
+#: framework/classes/class-bon-backup.php:92
+#, php-format
+msgid ""
+"This text file can be used to restore your settings here on \"%s\", or to easily setup another website with the "
+"same settings\"."
+msgstr ""
+"Ten plik tekstowy można przywrócić ustawienia tutaj na \"%s\", lub aby łatwo wgrać na inną stronę te ustawienia."
+
+#: framework/classes/class-bon-backup.php:97
+msgid "Download Export File"
+msgstr "Pobierz plik"
+
+#: framework/classes/class-bon-backup.php:119
+msgid "Here are a few notes on using this screen."
+msgstr "Oto kilka uwag na temat korzystania z tego ekranu."
+
+#: framework/classes/class-bon-backup.php:120
+msgid ""
+"The backup manager allows you to backup or restore your \"Theme Options\" and other settings to or from a text "
+"file."
+msgstr ""
+"Backup manager umożliwia kopia zapasowa lub przywracanie swoje \"Theme Options\" i inne ustawienia do lub z "
+"pliku tekstowego."
+
+#: framework/classes/class-bon-backup.php:121
+msgid ""
+"To create a backup, simply select the setting type you'd like to backup (or \"All Settings\") and hit the "
+"\"Download Export File\" button."
+msgstr ""
+"Do tworzenia kopii zapasowej, po prostu wybierz typ ustawienia chcesz do tworzenia kopii zapasowych (lub \"All "
+"Settings\") i hit \"Download Export File\" przycisk."
+
+#: framework/classes/class-bon-backup.php:122
+msgid ""
+"To restore your settings from a backup, browse your computer for the file (under the \"Import Settings\" "
+"heading) and hit the \"Upload File and Import\" button. This will restore only the settings that have changed "
+"since the backup."
+msgstr ""
+"To restore your settings from a backup, browse your computer for the file (under the \"Import Settings\" "
+"heading) and hit the \"Upload File and Import\" button. This will restore only the settings that have changed "
+"since the backup."
+
+#: framework/classes/class-bon-backup.php:124
+msgid "Please note that only valid backup files generated through the Backup Manager should be imported."
+msgstr ""
+"Należy pamiętać, że tylko kopii zapasowej plików generowanych przez Backup Manager powinien być przywożone."
+
+#: framework/classes/class-bon-backup.php:126
+msgid "Looking for assistance?"
+msgstr "Szukasz pomocy?"
+
+#: framework/classes/class-bon-backup.php:127 framework/classes/class-bon-backup.php:148
+#, php-format
+msgid ""
+"Please note that this backup manager backs up only your settings and not your content. To backup your content, "
+"please use the %sWordPress Export Tool%s."
+msgstr ""
+"Należy pamiętać, że ten Menedżer kopii zapasowej wykonuje kopię zapasową tylko ustawienia i nie treści. Aby "
+"wykonać kopię zapasową zawartości, użyj WordPress %s narzędzie do exportu %s."
+
+#: framework/classes/class-bon-backup.php:151
+msgid "There was a problem importing your settings. Please Try again."
+msgstr "Wystąpił problem podczas importowania ustawień. Proszę spróbować ponownie."
+
+#: framework/classes/class-bon-backup.php:153
+msgid "There was a problem exporting your settings. Please Try again."
+msgstr "Wystąpił problem podczas eksportowania ustawienia. Proszę spróbować ponownie."
+
+#: framework/classes/class-bon-backup.php:155
+msgid "The import file you've provided is invalid. Please try again."
+msgstr "Importuj plik, który podałeś już jest nieprawidłowy. Proszę spróbować ponownie."
+
+#: framework/classes/class-bon-backup.php:157
+#, php-format
+msgid "Settings successfully imported. | Return to %sTheme Options%s"
+msgstr "Ustawienia pomyślnie zaimportował. | Opcje powrotu do % sTheme %s"
+
+#: framework/classes/class-bon-cpt.php:65 framework/classes/class-bon-cpt.php:136
+#, php-format
+msgid "Add New %s"
+msgstr "Dodaj nowy %s"
+
+#: framework/classes/class-bon-cpt.php:66 framework/classes/class-bon-cpt.php:134
+#, php-format
+msgid "Edit %s"
+msgstr "Edytuj %s"
+
+#: framework/classes/class-bon-cpt.php:67
+#, php-format
+msgid "New %s"
+msgstr "Nowy %s"
+
+#: framework/classes/class-bon-cpt.php:68 framework/classes/class-bon-cpt.php:131
+#, php-format
+msgid "All %s"
+msgstr "Wszystkie %s"
+
+#: framework/classes/class-bon-cpt.php:69
+#, php-format
+msgid "View %s"
+msgstr "Zobacz %s"
+
+#: framework/classes/class-bon-cpt.php:70 framework/classes/class-bon-cpt.php:130
+#, php-format
+msgid "Search %s"
+msgstr "Szukaj %s"
+
+#: framework/classes/class-bon-cpt.php:71
+#, php-format
+msgid "No %s found"
+msgstr "Nie znaleziono %s"
+
+#: framework/classes/class-bon-cpt.php:72
+#, php-format
+msgid "No %s found in Trash"
+msgstr "Nie znaleziono %s w koszu"
+
+#: framework/classes/class-bon-cpt.php:132 framework/classes/class-bon-cpt.php:133
+#, php-format
+msgid "Parent %s"
+msgstr "Kategoria wyżej %s"
+
+#: framework/classes/class-bon-cpt.php:135
+#, php-format
+msgid "Update %s"
+msgstr "Zaktualizuj %s"
+
+#: framework/classes/class-bon-cpt.php:137
+#, php-format
+msgid "New %s Name"
+msgstr "Nazwa nowego %s"
+
+#: framework/classes/class-bon-cpt.php:138 framework/classes/class-bon-shortcodes.php:439
+#: framework/classes/class-tgm-plugin-activation.php:377 framework/classes/class-tgm-plugin-activation.php:505
+#: framework/classes/class-tgm-plugin-activation.php:542 framework/classes/class-tgm-plugin-activation.php:2053
+#: framework/functions/shortcodes.php:403
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: framework/classes/class-bon-front-end-editor.php:83
+#, php-format
+msgid "Editing %s"
+msgstr "Edycja %s"
+
+#: framework/classes/class-bon-front-end-editor.php:107
+msgctxt "edit-post-slug"
+msgid "edit-post"
+msgstr "Edycja postu"
+
+#: framework/classes/class-bon-front-end-editor.php:108
+msgctxt "add-post-slug"
+msgid "add-post"
+msgstr "Dodaj post"
+
+#: framework/classes/class-bon-front-end-editor.php:305
+msgid "The item you are trying to move to the Trash no longer exists."
+msgstr "Element, który chcesz wrzucić do kosza już nie istnieje."
+
+#: framework/classes/class-bon-front-end-editor.php:308
+msgid "Unknown post type."
+msgstr "Typ nieznany postu."
+
+#: framework/classes/class-bon-front-end-editor.php:311
+msgid "You are not allowed to move this item to the Trash."
+msgstr "Nie wolno przenosić ten element do kosza."
+
+#: framework/classes/class-bon-front-end-editor.php:315
+#, php-format
+msgid "You cannot move this item to the Trash. %s is currently editing."
+msgstr "Nie można przenieść ten element do kosza. %s jest obecnie edycji."
+
+#: framework/classes/class-bon-front-end-editor.php:319
+msgid "Error in moving to Trash."
+msgstr "Wystąpił błąd podczas przenoszenia do kosza."
+
+#: framework/classes/class-bon-front-end-editor.php:421 framework/classes/class-bon-front-end-editor.php:562
+#: framework/classes/menus/class-bon-walker-menu-edit.php:205
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: framework/classes/class-bon-front-end-editor.php:424
+msgid "LOCKED"
+msgstr "Zablokowana"
+
+#: framework/classes/class-bon-front-end-editor.php:561
+msgid "OK"
+msgstr "OK"
+
+#: framework/classes/class-bon-front-end-editor.php:563
+msgid "Publish on:"
+msgstr "Opublikuj"
+
+#: framework/classes/class-bon-front-end-editor.php:564
+msgid "Schedule for:"
+msgstr "Zaplanuj na:"
+
+#: framework/classes/class-bon-front-end-editor.php:565
+msgid "Published on:"
+msgstr "Opublikowane na:"
+
+#: framework/classes/class-bon-front-end-editor.php:566
+#, php-format
+msgid "%1$s %2$s, %3$s @ %4$s : %5$s"
+msgstr "%1$s %2$s, %3$s @ %4$s : %5$s"
+
+#: framework/classes/class-bon-front-end-editor.php:567
+msgid "Show more comments"
+msgstr "Pokaż więcej komentarzy"
+
+#: framework/classes/class-bon-front-end-editor.php:568
+msgid "No more comments found."
+msgstr "Nie znaleziono więcej komentarzy."
+
+#: framework/classes/class-bon-front-end-editor.php:569 framework/classes/class-bon-front-end-editor.php:844
+msgid "Publish"
+msgstr "Opublikuj"
+
+#: framework/classes/class-bon-front-end-editor.php:570
+msgid "Schedule"
+msgstr "Harmonogram"
+
+#: framework/classes/class-bon-front-end-editor.php:571 framework/classes/class-bon-front-end-editor.php:599
+msgid "Update"
+msgstr "Aktualizuj"
+
+#: framework/classes/class-bon-front-end-editor.php:572
+msgid "Save as Pending"
+msgstr "Zapisz jako oczekujące"
+
+#: framework/classes/class-bon-front-end-editor.php:573
+msgid "Save Draft"
+msgstr "Zapisz jako szkic"
+
+#: framework/classes/class-bon-front-end-editor.php:574
+msgid "Private"
+msgstr "Prywatnie"
+
+#: framework/classes/class-bon-front-end-editor.php:575
+msgid "Public"
+msgstr "Publiczne"
+
+#: framework/classes/class-bon-front-end-editor.php:576
+msgid "Public, Sticky"
+msgstr "Publiczny, Przyklejony"
+
+#: framework/classes/class-bon-front-end-editor.php:577
+msgid "Password Protected"
+msgstr "Ochrona hasłem"
+
+#: framework/classes/class-bon-front-end-editor.php:578
+msgid "Privately Published"
+msgstr "Prywatnie Publikacja"
+
+#: framework/classes/class-bon-front-end-editor.php:579
+msgid "Published"
+msgstr "Opublikowany"
+
+#: framework/classes/class-bon-front-end-editor.php:580
+msgctxt "tag delimiter"
+msgid ","
+msgstr ", [tag przecinek]"
+
+#: framework/classes/class-bon-front-end-editor.php:590
+msgid "Saving Draft&#8230;"
+msgstr "Zapisywanie projektu &#8230;"
+
+#: framework/classes/class-bon-front-end-editor.php:591
+msgid "The changes you made will be lost if you navigate away from this page."
+msgstr "Wprowadzone zmiany zostaną utracone, jeśli możesz przejść od tej strony."
+
+#: framework/classes/class-bon-front-end-editor.php:598
+msgid "Insert/edit link"
+msgstr "Wstaw/Edytuj łącza"
+
+#: framework/classes/class-bon-front-end-editor.php:600
+msgid "Add Link"
+msgstr "Dodaj odnośnik"
+
+#: framework/classes/class-bon-front-end-editor.php:601
+msgid "(no title)"
+msgstr "(Brak nazwy)"
+
+#: framework/classes/class-bon-front-end-editor.php:602
+msgid "No matches found."
+msgstr "Nie znaleziono dopasowań."
+
+#: framework/classes/class-bon-front-end-editor.php:643 framework/classes/class-bon-front-end-editor.php:655
+msgid "You attempted to edit an item that doesn&#8217;t exist. Perhaps it was deleted?"
+msgstr "Próbowano edytować element który istnieje. Być może został usunięty?"
+
+#: framework/classes/class-bon-front-end-editor.php:660
+msgid "You are not allowed to edit this item."
+msgstr "Nie masz uprawnień do edytowania tej pozycji."
+
+#: framework/classes/class-bon-front-end-editor.php:665 framework/classes/class-bon-front-end-editor.php:753
+#, php-format
+msgid ""
+"There is an autosave of this post that is more recent than the version below. <a href=\"%s\">View the autosave</"
+"a>"
+msgstr ""
+"Istnieje opcja automatycznego zapamiętywania tego postu, który jest nowsza niż wersja poniżej. <a href=\"%s"
+"\">Widok autozapis</a>"
+
+#: framework/classes/class-bon-front-end-editor.php:782
+#, php-format
+msgid "Post updated. <a href=\"%s\">View post</a>"
+msgstr "zaktualizowane. <a href=\"%s\">Zobacz post</a>."
+
+#: framework/classes/class-bon-front-end-editor.php:783 framework/classes/class-bon-front-end-editor.php:799
+msgid "Custom field updated."
+msgstr "Dodatkowe pola zaktualizowane."
+
+#: framework/classes/class-bon-front-end-editor.php:784 framework/classes/class-bon-front-end-editor.php:800
+msgid "Custom field deleted."
+msgstr "Dodatkowe pole usunięte."
+
+#: framework/classes/class-bon-front-end-editor.php:785
+msgid "Post updated."
+msgstr "Post zaktualizowany"
+
+#. translators: %s: date and time of the revision
+#: framework/classes/class-bon-front-end-editor.php:787
+#, php-format
+msgid "Post restored to revision from %s"
+msgstr "Post przywrócony do wersji z %s"
+
+#: framework/classes/class-bon-front-end-editor.php:788
+#, php-format
+msgid "Post published. <a href=\"%s\">View post</a>"
+msgstr "Post opublikowany. <a href=\"%s\">Zobacz post</a>"
+
+#: framework/classes/class-bon-front-end-editor.php:789
+msgid "Post saved."
+msgstr "Post zapisany."
+
+#: framework/classes/class-bon-front-end-editor.php:790
+#, php-format
+msgid "Post submitted. <a target=\"_blank\" href=\"%s\">Preview post</a>"
+msgstr "Wiadomość dodano. <a target=\"\"_blank\"\" href=\"\"%s\"\">Podejrzyj post</a>"
+
+#: framework/classes/class-bon-front-end-editor.php:791
+#, php-format
+msgid "Post scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview post</a>"
+msgstr "Post zaplanowany na: <strong>%1$ s</strong>. <a target=\"\"_blank\"\" href=\"\"%2$s\"\">Podejrzyj post</a>"
+
+#. translators: Publish box date format, see http://php.net/date
+#: framework/classes/class-bon-front-end-editor.php:793 framework/classes/class-bon-front-end-editor.php:806
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: framework/classes/class-bon-front-end-editor.php:794
+#, php-format
+msgid "Post draft updated. <a target=\"_blank\" href=\"%s\">Preview post</a>"
+msgstr "Szkic posta zaktualizowany. <a target=\"\"_blank\"\" href=\"\"%s\"\">Podejrzyj post</a>"
+
+#: framework/classes/class-bon-front-end-editor.php:798
+#, php-format
+msgid "Page updated. <a href=\"%s\">View page</a>"
+msgstr "Strona aktualizowana. <a href=\"%s\">Widok strony</a>"
+
+#: framework/classes/class-bon-front-end-editor.php:801
+msgid "Page updated."
+msgstr "Strona aktualizowana."
+
+#: framework/classes/class-bon-front-end-editor.php:802
+#, php-format
+msgid "Page restored to revision from %s"
+msgstr "Strona przywrócona do wersji z %s"
+
+#: framework/classes/class-bon-front-end-editor.php:803
+#, php-format
+msgid "Page published. <a href=\"%s\">View page</a>"
+msgstr "Strona opublikowana. <a href=\"%s\">Widok strony</a>"
+
+#: framework/classes/class-bon-front-end-editor.php:804
+msgid "Page saved."
+msgstr "Zapisano!"
+
+#: framework/classes/class-bon-front-end-editor.php:805
+#, php-format
+msgid "Page submitted. <a target=\"_blank\" href=\"%s\">Preview page</a>"
+msgstr "Dodano stronę. <a target=\"_blank\" href=\"%s\">Podgląd strony</a>"
+
+#: framework/classes/class-bon-front-end-editor.php:806
+#, php-format
+msgid "Page scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview page</a>"
+msgstr "Strony planowane: <strong>%1$ s</strong>. <a target=\"_blank\"\" href=\"\"%2$s\">Podgląd strony</a>"
+
+#: framework/classes/class-bon-front-end-editor.php:807
+#, php-format
+msgid "Page draft updated. <a target=\"_blank\" href=\"%s\">Preview page</a>"
+msgstr "Szkic posta zaktualizowany. <a target=\"\"_blank\"\" href=\"\"%s\"\">Podejrzyj post</a>"
+
+#: framework/classes/class-bon-front-end-editor.php:810
+msgid "Media attachment updated."
+msgstr "Załączniki media zaktualizowane."
+
+#: framework/classes/class-bon-front-end-editor.php:840
+msgid "Revisions"
+msgstr "Wersje"
+
+#: framework/classes/class-bon-front-end-editor.php:847
+msgctxt "post format"
+msgid "Format"
+msgstr "Format"
+
+#: framework/classes/class-bon-front-end-editor.php:864
+msgid "Page Attributes"
+msgstr "Zmień atrybuty strony"
+
+#: framework/classes/class-bon-front-end-editor.php:864
+msgid "Attributes"
+msgstr "Atrybuty"
+
+#: framework/classes/class-bon-front-end-editor.php:867
+msgid "Excerpt"
+msgstr "Skrót"
+
+#: framework/classes/class-bon-front-end-editor.php:870
+msgid "Send Trackbacks"
+msgstr "Wyślij Trackbacks"
+
+#: framework/classes/class-bon-front-end-editor.php:873
+msgid "Custom Fields"
+msgstr "Dodatkowe pola"
+
+#: framework/classes/class-bon-front-end-editor.php:876
+msgid "Discussion"
+msgstr "Dyskusja"
+
+#: framework/classes/class-bon-front-end-editor.php:879
+msgid "Featured Image"
+msgstr "Główny obraz"
+
+#: framework/classes/class-bon-machine.php:370 framework/classes/class-bon-machine.php:398
+#: framework/classes/class-bon-machine.php:538 framework/classes/class-bon-machine.php:539
+#: framework/classes/menus/class-bon-advanced-menu.php:88 framework/extensions/input-filter.php:230
+#: framework/extensions/input-filter.php:265 framework/extensions/input-filter.php:367
+#: framework/extensions/input-filter.php:392
+msgid "Select One"
+msgstr "Wybierz"
+
+#: framework/classes/class-bon-machine.php:602
+msgid "Delete image"
+msgstr "Usuń obraz"
+
+#: framework/classes/class-bon-machine.php:602
+msgid "Delete"
+msgstr "Usuń"
+
+#: framework/classes/class-bon-machine.php:611
+msgid "Add gallery images"
+msgstr "﻿Dodaj Galerię / Zdjęcia"
+
+#: framework/classes/class-bon-machine.php:743 framework/classes/menus/class-bon-advanced-menu.php:479
+msgid "No file chosen"
+msgstr "Nie wybrano pliku"
+
+#: framework/classes/class-bon-machine.php:751
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "Zmień swoją wersję WordPressa na pełną obsługę multimediów."
+
+#: framework/classes/class-bon-machine.php:775
+msgid "View File"
+msgstr "Zobacz plik"
+
+#: framework/classes/class-bon-main.php:188
+msgid "Framework Settings"
+msgstr "Ustawienia frameworka"
+
+#: framework/classes/class-bon-shortcodes.php:112 framework/functions/core-seo.php:93
+#: framework/functions/shortcodes.php:77
+msgid "Y"
+msgstr "Y"
+
+#: framework/classes/class-bon-shortcodes.php:135 framework/functions/shortcodes.php:100
+msgid "WordPress"
+msgstr "WordPress"
+
+#: framework/classes/class-bon-shortcodes.php:149
+#, php-format
+msgid "%s WordPress Theme"
+msgstr "%s skórka do WordPress"
+
+#: framework/classes/class-bon-shortcodes.php:186 framework/functions/shortcodes.php:141
+msgid "Log out"
+msgstr "Wyloguj"
+
+#: framework/classes/class-bon-shortcodes.php:203 framework/functions/shortcodes.php:158
+#, php-format
+msgid "This page loaded in %1$s seconds with %2$s database queries."
+msgstr "Ta strona jest załadowany w %1$ s sekund z kwerendy bazy danych %2$ s."
+
+#: framework/classes/class-bon-shortcodes.php:255 framework/classes/class-bon-shortcodes.php:536
+#: framework/functions/shortcodes.php:211 framework/functions/shortcodes.php:501
+#, php-format
+msgid "Edit %1$s"
+msgstr "Edytuj %1$ s"
+
+#: framework/classes/class-bon-shortcodes.php:255 framework/classes/class-bon-shortcodes.php:536
+#: framework/extensions/breadcrumb-trail.php:1129 framework/extensions/breadcrumb-trail.php:1165
+#: framework/extensions/breadcrumb-trail.php:1182 framework/extensions/breadcrumb-trail.php:1213
+#: framework/functions/shortcodes.php:211 framework/functions/shortcodes.php:501
+msgid "Edit"
+msgstr "Edytuj"
+
+#: framework/classes/class-bon-shortcodes.php:267 framework/functions/shortcodes.php:223
+msgid "Posted on:"
+msgstr "Zamieszczone:"
+
+#: framework/classes/class-bon-shortcodes.php:269 framework/classes/class-bon-shortcodes.php:467
+#: framework/functions/core-seo.php:115 framework/functions/shortcodes.php:225
+#: framework/classes/class-bon-shortcodes.php:286 framework/functions/shortcodes.php:241
+msgid "Comment:"
+msgid_plural "Comments:"
+msgstr[0] "Komentarz:"
+msgstr[1] "Komentarze:"
+msgstr[2] "Komentarzy:"
+
+#: framework/classes/class-bon-shortcodes.php:286 framework/functions/shortcodes.php:241
+msgid "Comments:"
+msgstr "Komentarze:"
+
+#: framework/classes/class-bon-shortcodes.php:293 framework/classes/class-bon-shortcodes.php:295
+#: framework/classes/class-bon-shortcodes.php:297 framework/functions/shortcodes.php:248
+#: framework/functions/shortcodes.php:250 framework/functions/shortcodes.php:252
+#, php-format
+msgid "Comment on %1$s"
+msgstr "Skomentuj %1$s"
+
+#: framework/classes/class-bon-shortcodes.php:293 framework/classes/class-bon-shortcodes.php:295
+#: framework/classes/class-bon-shortcodes.php:297 framework/functions/shortcodes.php:248
+#: framework/functions/shortcodes.php:250 framework/functions/shortcodes.php:252
+#, php-format
+msgid "Comments on %1$s"
+msgstr "Komentarze o %1$s"
+
+#: framework/classes/class-bon-shortcodes.php:311 framework/functions/shortcodes.php:269
+msgid "Author:"
+msgstr "Autor:"
+
+#: framework/classes/class-bon-shortcodes.php:325 framework/functions/shortcodes.php:283
+#, php-format
+msgid "About %1s"
+msgstr "O %1s"
+
+#: framework/classes/class-bon-shortcodes.php:339 framework/functions/shortcodes.php:298
+#, php-format
+msgid "Category:"
+msgstr "Kategoria:"
+
+#: framework/classes/class-bon-shortcodes.php:400 framework/functions/shortcodes.php:363
+msgid "(Untitled)"
+msgstr "(Bez tytułu)"
+
+#: framework/classes/class-bon-shortcodes.php:418 framework/functions/shortcodes.php:379
+msgid "Shortlink"
+msgstr "Krótki link"
+
+#: framework/classes/class-bon-shortcodes.php:437 framework/classes/menus/class-bon-advanced-menu.php:1101
+#: framework/functions/shortcodes.php:401 includes/theme-shortcodes.php:197
+msgid "Read More"
+msgstr "Czytaj więcej"
+
+#: framework/classes/class-bon-shortcodes.php:439 framework/classes/class-bon-shortcodes.php:594
+#: framework/functions/shortcodes.php:403 framework/functions/shortcodes.php:551 includes/theme-hooks.php:801
+#: includes/theme-hooks.php:804 templates/blocks/block-listing-footer.php:3
+#: templates/blocks/block-salesreplisting.php:63
+msgid "Permalink to "
+msgstr "Link do"
+
+#: framework/classes/class-bon-shortcodes.php:467 framework/functions/shortcodes.php:431
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s w %2$s"
+
+#: framework/classes/class-bon-shortcodes.php:515 framework/functions/shortcodes.php:480
+#, php-format
+msgid "Permalink to comment %1$s"
+msgstr "Link do komentarza %1$s"
+
+#: framework/classes/class-bon-shortcodes.php:515 framework/functions/shortcodes.php:480
+msgid "Permalink"
+msgstr "Odnośnik bezpośredni"
+
+#: framework/classes/class-bon-shortcodes.php:557 framework/functions/shortcodes.php:520
+msgid "Reply"
+msgstr "Odpowiedz"
+
+#: framework/classes/class-bon-shortcodes.php:558 framework/functions/shortcodes.php:521
+msgid "Log in to reply."
+msgstr "Zaloguj się, aby odpowiedzieć."
+
+#: framework/classes/class-bon-shortcodes.php:591
+#, php-format
+msgid "View all posts in: %s"
+msgstr "Zobacz wszystkie wpisy w %s"
+
+#: framework/classes/class-bon-validation.php:40
+#, php-format
+msgid "The %s field is required."
+msgstr "%s jest wymagane."
+
+#: framework/classes/class-bon-validation.php:41
+#, php-format
+msgid "The %s field must have a value."
+msgstr "%s pole musi mieć wartość."
+
+#: framework/classes/class-bon-validation.php:42
+#, php-format
+msgid "The %s field must contain a valid email address."
+msgstr "%s pole musi zawierać poprawny adres e-mail."
+
+#: framework/classes/class-bon-validation.php:43
+#, php-format
+msgid "The %s field must contain a valid URL."
+msgstr "%s pole musi zawierać poprawny adres URL."
+
+#: framework/classes/class-bon-validation.php:44
+#, php-format
+msgid "The %s field must be at least %s characters in length."
+msgstr "%s polu musi być co najmniej %s znaków długości."
+
+#: framework/classes/class-bon-validation.php:45
+#, php-format
+msgid "The %s field can not exceed %s characters in length."
+msgstr "%s Pole nie może przekroczyć %s znaków długości."
+
+#: framework/classes/class-bon-validation.php:46
+#, php-format
+msgid "The %s field must be exactly %s characters in length."
+msgstr "%s pole musi być dokładnie %s znaków."
+
+#: framework/classes/class-bon-validation.php:47
+#, php-format
+msgid "The %s field may only contain alphabetical characters."
+msgstr "%s pole może zawierać tylko znaki alfabetu."
+
+#: framework/classes/class-bon-validation.php:48
+#, php-format
+msgid "The %s field may only contain alpha-numeric characters."
+msgstr "%s pole może zawierać tylko znaki alfanumeryczne."
+
+#: framework/classes/class-bon-validation.php:49
+#, php-format
+msgid "The %s field may only contain alpha-numeric characters, underscores, and dashes."
+msgstr "%s pole może zawierać tylko znaki alfanumeryczne, podkreślenia i kreski."
+
+#: framework/classes/class-bon-validation.php:50
+#, php-format
+msgid "The %s field must contain only numbers."
+msgstr "%s pole musi zawierać tylko liczby."
+
+#: framework/classes/class-bon-validation.php:51
+#, php-format
+msgid "The %s field must contain only numeric characters."
+msgstr "%s poe musi zawierać tylko cyfry."
+
+#: framework/classes/class-bon-validation.php:52
+#, php-format
+msgid "The %s field must contain an integer."
+msgstr "%s pole musi zawierać liczbę całkowitą."
+
+#: framework/classes/class-bon-validation.php:53
+#, php-format
+msgid "The %s field is not in the correct format."
+msgstr "Pole %s nie jest w odpowiednim formacie."
+
+#: framework/classes/class-bon-validation.php:54
+#, php-format
+msgid "The %s field does not match the %s field."
+msgstr "Pole%s nie pasuje do %s."
+
+#: framework/classes/class-bon-validation.php:55
+#, php-format
+msgid "The %s field must contain only positive numbers."
+msgstr "%s pole musi zawierać tylko liczby."
+
+#: framework/classes/class-bon-validation.php:56
+#, php-format
+msgid "The %s field must contain a number greater than zero."
+msgstr "%s pole musi zawierać liczbę większą od zera."
+
+#: framework/classes/class-bon-validation.php:57
+#, php-format
+msgid "The %s field must contain a decimal number."
+msgstr "%s pole musi zawierać liczbę dziesiętną."
+
+#: framework/classes/class-bon-validation.php:58
+#, php-format
+msgid "The %s field must contain a number less than %s."
+msgstr "%s pole musi zawierać liczbę mniejszą niż %s."
+
+#: framework/classes/class-bon-validation.php:59
+#, php-format
+msgid "The %s field must contain a number greater than %s."
+msgstr "%s pole musi zawierać liczbę większą od %s,"
+
+#: framework/classes/class-tgm-plugin-activation.php:1966 framework/classes/menus/class-bon-advanced-menu.php:123
+#: framework/classes/menus/class-bon-advanced-menu.php:843 framework/classes/menus/class-bon-advanced-menu.php:851
+#: framework/classes/menus/class-bon-advanced-menu.php:920 framework/classes/menus/class-bon-advanced-menu.php:885
+#: framework/templates/accounts/form-lost-password.php:50
+msgid "Save"
+msgstr "Zapisz"
+
+#: framework/classes/menus/class-bon-walker-menu-edit.php:121 framework/extensions/breadcrumb-trail.php:172
+msgid "Browse:"
+msgstr "Przeglądaj:"
+
+#: framework/extensions/breadcrumb-trail.php:173 templates/blocks/block-pageheader.php:12
+msgid "Home"
+msgstr "Główna"
+
+#: framework/extensions/breadcrumb-trail.php:174 framework/functions/template.php:356
+msgid "404 Not Found"
+msgstr "404: Strony nie znaleziono"
+
+#: framework/extensions/breadcrumb-trail.php:175 framework/functions/template.php:201
+msgid "Archives"
+msgstr "Archiwum"
+
+#: framework/extensions/breadcrumb-trail.php:177 framework/functions/template.php:337
+#, php-format
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Wyniki wyszukiwania dla &quot;%s&quot;"
+
+#: framework/extensions/breadcrumb-trail.php:179
+#, php-format
+msgid "Page %s"
+msgstr "Strona %s"
+
+#: framework/extensions/breadcrumb-trail.php:181 framework/functions/template.php:298
+#, php-format
+msgid "Minute %s"
+msgstr "Minuta% s"
+
+#: framework/extensions/breadcrumb-trail.php:183
+#, php-format
+msgid "Week %s"
+msgstr "Tydzień% s"
+
+#: framework/extensions/breadcrumb-trail.php:760 framework/extensions/breadcrumb-trail.php:789
+#: framework/extensions/breadcrumb-trail.php:816 framework/extensions/breadcrumb-trail.php:843
+#: framework/extensions/breadcrumb-trail.php:761 framework/extensions/breadcrumb-trail.php:1157
+msgid "Split"
+msgstr "Podziel"
+
+#: framework/extensions/breadcrumb-trail.php:1161
+msgid "Merge"
+msgstr "Połącz"
+
+#: framework/extensions/input-filter.php:512
+msgid "No Repeat"
+msgstr "Nie Powtórz"
+
+#: framework/extensions/input-filter.php:513
+msgid "Repeat Horizontally"
+msgstr "Powtarzaj poziomo"
+
+#: framework/extensions/input-filter.php:514
+msgid "Repeat Vertically"
+msgstr "Powtarzaj pionowo"
+
+#: framework/extensions/input-filter.php:515
+msgid "Repeat All"
+msgstr "Powtarzaj wszystkie"
+
+#: framework/extensions/pagination.php:82
+msgid "First"
+msgstr "Pierwszy"
+
+#: framework/extensions/pagination.php:90 framework/extensions/pagination.php:94
+msgid "Previous"
+msgstr "Poprzedni"
+
+#: framework/extensions/pagination.php:110 framework/extensions/pagination.php:114
+#: includes/idx-includes/templates/results-pagination.php:43
+msgid "Next"
+msgstr "Następny"
+
+#: framework/extensions/pagination.php:119
+msgid "Last"
+msgstr "Ostatni"
+
+#: framework/extensions/theme-layouts.php:474 framework/functions/comments.php:188
+msgid "*"
+msgstr "*"
+
+#: framework/functions/comments.php:193 framework/templates/accounts/form-edit-account.php:21
+msgid "Name"
+msgstr "Imię i nazwisko"
+
+#: framework/functions/comments.php:194
+msgid "Email"
+msgstr "Email"
+
+#: framework/functions/comments.php:195 framework/templates/accounts/form-edit-account.php:77
+msgid "Website"
+msgstr "Strona www"
+
+#: framework/functions/comments.php:201
+msgid "Comment"
+msgstr "Skomentuj"
+
+#: framework/functions/comments.php:202
+#, php-format
+msgid "You must be <a href=\"%1$s\" title=\"Log in\">logged in</a> to post a comment."
+msgstr "Musisz być <a href=\"%1$s\" zalogowany</a> aby wysłać komentarz."
+
+#: framework/functions/comments.php:203
+#, php-format
+msgid "Logged in as <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+msgstr "Zalogowany jako <a href=\"%1$s\" title=\"%2$s\">%2$s</a>."
+
+#: framework/functions/comments.php:203
+msgid "Log out &raquo;"
+msgstr "Wyloguj się &raquo;"
+
+#: framework/functions/comments.php:210
+msgid "Click here to cancel reply."
+msgstr "Anuluj odpowiedź"
+
+#: framework/functions/comments.php:211
+msgid "Post Comment"
+msgstr "Opublikuj komentarz"
+
+#: framework/functions/core-seo.php:89
+msgid "F Y"
+msgstr "F Y"
+
+#: framework/functions/head.php:179
+#, php-format
+msgid "%1$s Page %2$s"
+msgstr "%1$s strona %2$s"
+
+#: framework/functions/notice.php:42
+msgid "ERROR"
+msgstr "BŁĄD"
+
+#: framework/functions/notice.php:44
+msgid "SUCCESS"
+msgstr "SUKCES"
+
+#: framework/functions/notice.php:46
+msgid "NOTICE"
+msgstr "UWAGA"
+
+#: framework/functions/template.php:167
+#, php-format
+msgid "You are browsing the search results for &#8220;%s&#8221;"
+msgstr "Wyniki wyszukiwania dla &quot;%s&quot;"
+
+#: framework/functions/template.php:173
+msgid "You are browsing the site archives by time."
+msgstr "Przeglądasz archiwa ze względu na czas."
+
+#: framework/functions/template.php:176 framework/functions/template.php:179 framework/functions/template.php:182
+#, php-format
+msgid "You are browsing the site archives for %s."
+msgstr "Przeglądasz archiwa witryny w poszukiwaniu %s."
+
+#: framework/functions/template.php:185
+msgid "You are browsing the site archives."
+msgstr "Przeglądasz archiwa witryny."
+
+#: framework/functions/template.php:240
+#, php-format
+msgid "Week %1$s of %2$s"
+msgstr "Tydzień %1$s z %2$s"
+
+#: framework/options.php:17 framework/options.php:91 framework/templates/accounts/form-edit-account.php:24
+msgid "First name"
+msgstr "Imię"
+
+#: framework/templates/accounts/form-edit-account.php:28
+msgid "Last name"
+msgstr "Nazwisko"
+
+#: framework/templates/accounts/form-edit-account.php:32
+msgid "Nickname"
+msgstr "Pseudonim"
+
+#: framework/templates/accounts/form-edit-account.php:37
+msgid "Display name publicly as"
+msgstr "Nazwa wyświetlana publicznie jako"
+
+#: framework/templates/accounts/form-edit-account.php:70 framework/templates/accounts/my-account.php:45
+msgid "Contact Info"
+msgstr "Dane Kontaktowe"
+
+#: framework/templates/accounts/form-edit-account.php:73 framework/templates/accounts/form-register.php:28
+msgid "Email address"
+msgstr "Adres e-mail"
+
+#: framework/templates/accounts/form-edit-account.php:104
+msgid "About Yourself"
+msgstr "O sobie"
+
+#: framework/templates/accounts/form-edit-account.php:107
+msgid "Biographical Info"
+msgstr "Biografia"
+
+#: framework/templates/accounts/form-edit-account.php:117
+msgid "Password (leave blank to leave unchanged)"
+msgstr "Hasło (pozostaw puste, aby pozostawić bez zmian)"
+
+#: framework/templates/accounts/form-edit-account.php:121
+msgid "Repeat new password"
+msgstr "Powtórz hasło"
+
+#: framework/templates/accounts/form-edit-account.php:128
+msgid "Save changes"
+msgstr "Zapisz zmiany"
+
+#: framework/templates/accounts/form-login.php:17 framework/templates/accounts/form-login.php:36
+msgid "Login"
+msgstr "Zaloguj"
+
+#: framework/templates/accounts/form-login.php:24
+msgid "Username or email address"
+msgstr "Nazwa użytkownika lub adres e-mail *"
+
+#: framework/templates/accounts/form-login.php:28 framework/templates/accounts/form-register.php:33
+msgid "Password"
+msgstr "Hasło"
+
+#: framework/templates/accounts/form-login.php:38
+msgid "Remember me"
+msgstr "Pamiętaj mnie"
+
+#: framework/templates/accounts/form-login.php:42
+msgid "Lost your password?"
+msgstr "Nie pamiętasz hasła?"
+
+#: framework/templates/accounts/form-lost-password.php:22
+msgid ""
+"Lost your password? Please enter your username or email address. You will receive a link to create a new "
+"password via email."
+msgstr ""
+"Zapomniałeś hasła? Proszę wpisać swój login lub adres e-mail. Otrzymasz e-mail z linkiem do utworzenia nowego "
+"hasła."
+
+#: framework/templates/accounts/form-lost-password.php:25
+msgid "Username or email"
+msgstr "Nazwa użytkownika lub adres e-mail"
+
+#: framework/templates/accounts/form-lost-password.php:31
+msgid "Enter a new password below."
+msgstr "Wprowadź nowe hasło poniżej."
+
+#: framework/templates/accounts/form-lost-password.php:34
+msgid "New password"
+msgstr "Nowe hasło"
+
+#: framework/templates/accounts/form-lost-password.php:38
+msgid "Re-enter new password"
+msgstr "Wprowadź proszę ponownie hasło."
+
+#: framework/templates/accounts/form-lost-password.php:50
+msgid "Reset Password"
+msgstr "Resetuj hasło"
+
+#: framework/templates/accounts/form-register.php:17 framework/templates/accounts/form-register.php:53
+#: includes/idx-includes/idx-main.php:2283
+msgid "Register"
+msgstr "Zarejestruj"
+
+#: framework/templates/accounts/form-register.php:23
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: framework/templates/accounts/form-register.php:38
+msgid "Confirm Password"
+msgstr "Potwierdź hasło"
+
+#: framework/templates/accounts/form-register.php:44
+msgid "Anti-spam"
+msgstr "Ochrona przed spamem (Anti-Spam)"
+
+#: framework/templates/accounts/my-account.php:24
+#, php-format
+msgid "Hello <strong>%1$s</strong> (not %1$s? <a href=\"%2$s\">Sign out</a>)."
+msgstr "Witaj <strong>%1$s</strong> (nie jesteś %1$s? <a href=\"%2$s\">Wyloguj</a>)."
+
+#: framework/templates/accounts/my-account.php:29
+#, php-format
+msgid ""
+"From your account dashboard you can view your profile or <a href=\"%s\">edit your password and account details</"
+"a>."
+msgstr ""
+"Na tej stronie możesz zobaczyć swoje zamówienia, zarządzać adresami, <a href=\"%s\">edytować hasło i dane konta</"
+"a>."
+
+#: framework/templates/accounts/my-account.php:59
+msgid "Recent Posts"
+msgstr "Ostatnie wpisy"
+
+#: framework/templates/posts/meta-section.php:29 framework/templates/posts/meta-section.php:77
+msgid "Click to toggle"
+msgstr "Kliknij, aby uruchomić"
+
+#: includes/idx-includes/idx-main.php:2288 includes/idx-includes/idx-main.php:2291
+#: includes/idx-includes/templates/results-pagination.php:42
+#, php-format
+msgid "Prev"
+msgstr "Poprzednie"
+
+#: includes/idx-includes/templates/results-sorting-control.php:17
+msgid "Price, highest first"
+msgstr "Cena, od najwyższej"
+
+#: includes/idx-includes/templates/results-sorting-control.php:20
+msgid "Price, lowest first"
+msgstr "Cena, od najniższej"
+
+#: includes/idx-includes/templates/results-sorting-control.php:35
+msgid "Lot size, largest first"
+msgstr "Powierzchnia działki, najpierw największe"
+
+#: includes/post-types/boat.php:127 includes/post-types/boat.php:515 includes/post-types/car.php:361
+#: templates/blocks/car-listing/tab.php:108 templates/deprecated/block-carlistingtab.php:108
+#: includes/post-types/boat.php:166 includes/post-types/boat.php:167 includes/post-types/car.php:119
+#: page-templates/page-template-compare-car-listings.php:180 templates/blocks/car-listing/tab.php:75
+#: includes/post-types/boat.php:173 includes/post-types/boat.php:174 includes/post-types/car.php:126
+#: page-templates/page-template-compare-car-listings.php:181 templates/blocks/car-listing/tab.php:76
+#: includes/post-types/boat.php:187 includes/post-types/boat.php:188 includes/post-types/car.php:133
+#: includes/search-fields.php:1328 page-templates/page-template-compare-car-listings.php:182
+#: templates/blocks/car-listing/tab.php:77 includes/post-types/boat.php:207 includes/theme-hooks.php:767
+#: includes/post-types/boat.php:249 includes/post-types/car.php:256
+#: page-templates/page-template-compare-car-listings.php:186 templates/blocks/car-listing/tab.php:81
+#: includes/post-types/boat.php:383 includes/post-types/boat.php:390 includes/post-types/boat.php:394
+#: includes/post-types/car.php:91 includes/search-fields.php:13 includes/post-types/boat.php:395
+#: includes/post-types/car.php:92 includes/theme-toolkit-override.php:152 includes/theme-toolkit-override.php:234
+#: includes/post-types/boat.php:396 includes/post-types/car.php:93 includes/theme-toolkit-override.php:156
+#: includes/theme-toolkit-override.php:236 includes/post-types/boat.php:397 includes/post-types/car.php:94
+#: includes/theme-toolkit-override.php:154 includes/theme-toolkit-override.php:235
+#: includes/post-types/boat.php:398 includes/post-types/car.php:95 includes/theme-toolkit-override.php:153
+#: includes/theme-toolkit-override.php:233 includes/post-types/boat.php:399 includes/post-types/car.php:96
+#: includes/theme-toolkit-override.php:155 includes/post-types/boat.php:405 includes/post-types/car.php:150
+#: includes/theme-hooks.php:1656 includes/theme-options.php:108 includes/theme-posttypes.php:265
+#: includes/theme-posttypes.php:290 includes/widgets/widget-related-listing.php:340
+#: includes/post-types/boat.php:429 includes/post-types/boat.php:504 includes/search-fields.php:1383
+#: includes/theme-toolkit-override.php:280 page-templates/page-template-compare-car-listings.php:172
+#: templates/blocks/car-listing/tab.php:64 includes/post-types/car.php:61 includes/post-types/property.php:84
+#: includes/post-types/car.php:62 includes/post-types/property.php:85 includes/post-types/car.php:112
+#: includes/search-fields.php:1577 includes/theme-hooks.php:1663
+#: page-templates/page-template-compare-car-listings.php:179 templates/blocks/car-listing/tab.php:74
+#: includes/post-types/car.php:141 includes/search-fields.php:1491
+#: page-templates/page-template-compare-car-listings.php:178 templates/blocks/car-listing/tab.php:73
+#: includes/post-types/car.php:167 page-templates/page-template-compare-car-listings.php:177
+#: templates/blocks/car-listing/tab.php:72 includes/post-types/car.php:175
+#: page-templates/page-template-compare-car-listings.php:176 templates/blocks/car-listing/tab.php:71
+#: includes/post-types/car.php:211 page-templates/page-template-compare-car-listings.php:190
+#: page-templates/page-template-compare-car-listings.php:201 templates/blocks/car-listing/tab.php:88
+#: includes/post-types/car.php:220 page-templates/page-template-compare-car-listings.php:192
+#: page-templates/page-template-compare-car-listings.php:203 templates/blocks/car-listing/tab.php:90
+#: includes/post-types/car.php:229 page-templates/page-template-compare-car-listings.php:191
+#: page-templates/page-template-compare-car-listings.php:202 templates/blocks/car-listing/tab.php:89
+#: includes/post-types/car.php:238 page-templates/page-template-compare-car-listings.php:193
+#: page-templates/page-template-compare-car-listings.php:204 templates/blocks/car-listing/tab.php:91
+#: includes/post-types/car.php:247 page-templates/page-template-compare-car-listings.php:185
+#: templates/blocks/car-listing/tab.php:80 includes/post-types/car.php:276 includes/theme-options.php:84
+#: includes/theme-options.php:101 includes/theme-posttypes.php:267 includes/theme-posttypes.php:292
+#: page-templates/page-template-compare-listings.php:249 templates/blocks/car-listing/tab.php:67
+#: includes/post-types/car.php:409 includes/post-types/property.php:404 includes/post-types/car.php:416
+#: includes/post-types/property.php:410 includes/post-types/car.php:423 includes/post-types/property.php:416
+#: includes/post-types/car.php:437 includes/post-types/property.php:428 includes/theme-toolkit-override.php:758
+#: page-templates/page-template-about-us.php:156 templates/blocks/block-agent.php:92
+#: templates/blocks/block-modal-contact.php:38 templates/blocks/block-modal-customize.php:38
+#: templates/blocks/block-modal-ebook.php:20 templates/blocks/block-modal-visit-request.php:38
+#: templates/blocks/boat-listing/footer.php:104 templates/blocks/car-listing/footer.php:104
+#: templates/contents/content-agent.php:90 templates/contents/content-sales-representative.php:83
+#: templates/deprecated/block-carlistingfooter.php:104 templates/deprecated/block-listingfooter.php:107
+msgid "Email Address"
+msgstr "Adres e-mail"
+
+#: includes/post-types/property.php:66
+msgid "Cottage"
+msgstr "Domek drewniany"
+
+#: includes/post-types/property.php:67
+msgid "Cottages"
+msgstr "Domki drewniane"
+
+#: includes/post-types/property.php:71
+msgctxt "product url slug"
+msgid "wooden-cottage"
+msgstr "domek-drewniany"
+
+#: includes/post-types/property.php:111 includes/search-fields.php:893 includes/theme-hooks.php:1661
+#: includes/theme-options.php:110 includes/widgets/widget-dsidxpress-search.php:238
+#: includes/widgets/widget-related-listing.php:341
+msgid "Size"
+msgstr "Rozmiar"
+
+#: includes/post-types/property.php:111 includes/search-fields.php:893 includes/theme-hooks.php:1661
+#: includes/theme-options.php:110 includes/widgets/widget-dsidxpress-search.php:238
+#: includes/widgets/widget-related-listing.php:341
+msgid "Price"
+msgstr "Cena"
+
+#: includes/post-types/property.php:123 includes/post-types/property.php:389 includes/search-fields.php:1219
+#: includes/post-types/property.php:491 templates/blocks/listing/services.php:4
+msgid "Services"
+msgstr "Usługi"
+
+#: includes/post-types/property.php:351
+msgctxt "products category url slug"
+msgid "type"
+msgstr "domki-drewniane"
+
+#: includes/post-types/property.php:567 templates/blocks/listing/tab.php:75
+msgid "Additional services"
+msgstr "Dodatkowe usługi"
+
+#: page-templates/page-template-about-us.php:143
+msgid "Contact"
+msgstr "Kontakt"
+
+#: includes/post-types/property.php:584 page-templates/page-template-about-us.php:141
+msgid "FAQ"
+msgstr "FAQ"
+
+#: includes/post-types/property.php:652 includes/post-types/property.php:709 includes/search-fields.php:14
+msgid "Top Seller"
+msgstr "Hit"
+
+#: includes/search-fields.php:15 includes/search-fields.php:131 includes/search-fields.php:235
+msgid "New"
+msgstr "Nowość"
+
+#: includes/search-fields.php:23 includes/search-fields.php:35 includes/search-fields.php:47
+#: includes/search-fields.php:59 includes/search-fields.php:71 includes/search-fields.php:81
+#: includes/search-fields.php:89 includes/search-fields.php:141 includes/search-fields.php:153
+#: includes/search-fields.php:165 includes/search-fields.php:177 includes/search-fields.php:189
+#: includes/search-fields.php:201 includes/search-fields.php:244 includes/search-fields.php:256
+#: includes/search-fields.php:268 includes/search-fields.php:280 includes/search-fields.php:292
+#: includes/search-fields.php:304 includes/search-fields.php:488 includes/search-fields.php:569
+#: includes/search-fields.php:610 includes/search-fields.php:677 includes/search-fields.php:718
+#: includes/search-fields.php:784 includes/search-fields.php:825 includes/search-fields.php:965
+#: includes/search-fields.php:998 includes/search-fields.php:1031 includes/search-fields.php:1154
+#: includes/search-fields.php:1187 includes/search-fields.php:1324 includes/search-fields.php:1354
+#: includes/search-fields.php:1487 includes/search-fields.php:1517 includes/search-fields.php:1593
+#: includes/search-fields.php:1620 includes/search-fields.php:1647 includes/theme-actions.php:478
+#: includes/theme-actions.php:505 includes/theme-actions.php:518 includes/theme-actions.php:535
+#: includes/theme-actions.php:559 includes/theme-actions.php:572 includes/widgets/widget-dsidxpress-search.php:149
+#: includes/widgets/widget-dsidxpress-search.php:168 includes/widgets/widget-dsidxpress-search.php:186
+#: includes/widgets/widget-dsidxpress-search.php:204 includes/widgets/widget-dsidxpress-search.php:247
+#: includes/widgets/widget-dsidxpress-search.php:258
+msgid "Any"
+msgstr "Każdy"
+
+#: includes/search-fields.php:413 includes/theme-toolkit-override.php:132 includes/theme-toolkit-override.php:218
+#: includes/theme-toolkit-override.php:318 includes/search-fields.php:437 includes/theme-actions.php:587
+#: includes/widgets/widget-dsidxpress-search.php:218 includes/search-fields.php:462 includes/search-fields.php:930
+#: includes/search-fields.php:1005 includes/search-fields.php:1038 includes/search-fields.php:1120
+#: includes/theme-actions.php:593 includes/widgets/widget-dsidxpress-search.php:223
+msgid "Type"
+msgstr "Rodzaj"
+
+#: includes/search-fields.php:413 includes/theme-toolkit-override.php:132 includes/theme-toolkit-override.php:218
+#: includes/theme-toolkit-override.php:318 includes/search-fields.php:437 includes/theme-actions.php:587
+#: includes/widgets/widget-dsidxpress-search.php:218 includes/search-fields.php:462 includes/search-fields.php:930
+#: includes/search-fields.php:1005 includes/search-fields.php:1038 includes/search-fields.php:1120
+#: includes/theme-actions.php:593 includes/widgets/widget-dsidxpress-search.php:223
+msgid "Price Range"
+msgstr "Zakres cen"
+
+#: includes/search-fields.php:1245 templates/blocks/car-listing/tab.php:63 includes/search-fields.php:1409
+#: includes/theme-toolkit-override.php:274 page-templates/page-template-compare-car-listings.php:174
+#: templates/blocks/car-listing/tab.php:66 includes/search-fields.php:1461 includes/theme-toolkit-override.php:298
+#: page-templates/page-template-compare-car-listings.php:173
+#: page-templates/page-template-compare-car-listings.php:175 templates/blocks/car-listing/tab.php:65
+#: includes/theme-actions.php:458 includes/theme-toolkit-override.php:179
+#: includes/widgets/widget-dsidxpress-search.php:125 includes/widgets/widget-related-listing.php:342
+#: includes/theme-actions.php:460 includes/theme-actions.php:476 includes/theme-actions.php:501
+#: includes/theme-actions.php:516 includes/theme-actions.php:533 includes/theme-actions.php:556
+#: includes/theme-actions.php:570 includes/theme-actions.php:625
+msgid "Search the Site..."
+msgstr "Szukaj na stronie..."
+
+#: includes/theme-actions.php:651
+msgid "Follow us on Facebook"
+msgstr "Dołącz do nas na Facebooku"
+
+#: includes/theme-actions.php:654
+msgid "Follow us on Twitter"
+msgstr "Śledź nas na Twitterze"
+
+#: includes/theme-actions.php:657
+msgid "Follow us on Google Plus"
+msgstr "Śledź nas na Google Plus"
+
+#: includes/theme-actions.php:660
+msgid "Follow us on Pinterest"
+msgstr "Dołącz do nas na Pinterest"
+
+#: includes/theme-actions.php:663
+msgid "Follow us on Flickr"
+msgstr "Dołącz do nas na Flickr"
+
+#: includes/theme-actions.php:666
+msgid "Find us on Vimeo"
+msgstr "Znajdź nas na Vimeo"
+
+#: includes/theme-actions.php:669
+msgid "Find us on YouTube"
+msgstr "Znajdź nas na YouTube"
+
+#: includes/theme-actions.php:672
+msgid "Find us on LinkedIn"
+msgstr "Znajdź nas na LinkedIn"
+
+#: includes/theme-actions.php:1149 includes/theme-actions.php:1258
+msgid "Cannot send email to destination. No parameter receive form AJAX call."
+msgstr "Nie można wysłać e-mail do miejsca przeznaczenia."
+
+#: includes/theme-actions.php:1163 includes/theme-actions.php:1272
+msgid "Please enter a valid email address."
+msgstr "Wpisz proszę prawidłowy adres email."
+
+#: includes/theme-actions.php:1196 includes/theme-actions.php:1299
+msgid "Cheatin Huh?!"
+msgstr "Oszukujesz, co?"
+
+#: includes/theme-actions.php:1205
+#, php-format
+msgid "You have received a new contact form message via %s \n"
+msgstr "Odebrano nową wiadomość poprzez formularz kontaktowy %s \n"
+
+#: includes/theme-actions.php:1206
+#, php-format
+msgid "Sender Name : %s \n"
+msgstr "Nadawca Nazwa: %s \n"
+
+#: includes/theme-actions.php:1207
+#, php-format
+msgid "Sender Email : %s \n"
+msgstr "Nadawca e-mail: %s \n"
+
+#: includes/theme-actions.php:1208
+#, php-format
+msgid "Subject : %s \n"
+msgstr "Temat: %s \n"
+
+#: includes/theme-actions.php:1209
+#, php-format
+msgid "Sender Phone Number : %s \n"
+msgstr "Nr tel : %s \n"
+
+#: includes/theme-actions.php:1210
+#, php-format
+msgid "Email Send From : %s \n"
+msgstr "E-mail wysłany z : %s \n"
+
+#: includes/theme-actions.php:1211
+#, php-format
+msgid "Message : %s \n"
+msgstr "Wiadomość : %s \n"
+
+#: includes/theme-actions.php:1217 includes/theme-actions.php:1226 includes/theme-actions.php:1237
+#: includes/theme-actions.php:1369 includes/theme-actions.php:1377
+msgid "Masters House"
+msgstr "Dom Mistrza"
+
+#: includes/theme-actions.php:1223
+msgid "We succesfully received your request. Our representative will contact you within one hour."
+msgstr "Pomyślnie otrzymaliśmy Twoje zapytanie. Nasz przedstawiciel skontaktuje się z Tobą w ciągu jednej godziny."
+
+#: includes/theme-actions.php:1224 includes/theme-actions.php:1353 templates/woocommerce/email-template.php:58
+msgid "All the best"
+msgstr "Wszystkiego dobrego"
+
+#: includes/theme-actions.php:1227 includes/theme-actions.php:1234 includes/theme-actions.php:1230
+msgid "Thank you for contacting us"
+msgstr "Dziękujemy za skontaktowanie się z nami."
+
+#: includes/theme-actions.php:1243 includes/theme-actions.php:1382
+msgid "Email was sent successfully."
+msgstr "E-mail został wysłany."
+
+#: includes/theme-actions.php:1247 includes/theme-actions.php:1385
+msgid "There is an error sending email."
+msgstr "Wystąpił błąd podczas wysyłania poczty."
+
+#: includes/theme-actions.php:1347 templates/woocommerce/email-template.php:52
+msgid "Thank you for downloading our ebook."
+msgstr "Dziękujemy za pobranie e-booka."
+
+#: includes/theme-actions.php:1348 templates/woocommerce/email-template.php:53
+msgid "You can download it here"
+msgstr "Pobierz tutaj"
+
+#: includes/theme-actions.php:1349 templates/woocommerce/email-template.php:54
+msgid "We hope you find this helpful!"
+msgstr "Mamy nadzieję, że to pomocne!"
+
+#: includes/theme-actions.php:1434 templates/blocks/boat-listing/footer.php:78
+#: templates/blocks/car-listing/footer.php:78 includes/theme-actions.php:1438
+msgid "View Image"
+msgstr "Zobacz zdjęcie"
+
+#: includes/theme-hooks.php:640 templates/blocks/block-agentlisting.php:67 templates/loops/loop-listing.php:48
+#, php-format
+msgid "%s Bed"
+msgid_plural "%s Beds"
+msgstr[0] "%s Łóżko"
+msgstr[1] "%s Łóżka"
+msgstr[2] "%s Łóżek"
+
+#: includes/theme-hooks.php:666
+#, php-format
+msgid "%s Room"
+msgid_plural "%s Rooms"
+msgstr[0] "%s Pokój"
+msgstr[1] "%s Pokoje"
+msgstr[2] "%s Pokoi"
+
+#: includes/theme-hooks.php:676 includes/theme-hooks.php:697 includes/theme-hooks.php:703
+#: includes/theme-hooks.php:709 templates/blocks/block-salesreplisting.php:68
+#: templates/blocks/block-salesreplisting.php:73 templates/blocks/block-salesreplisting.php:77
+#: templates/blocks/car-listing/meta.php:40 includes/theme-hooks.php:1650 includes/theme-options.php:114
+msgid "Ascending"
+msgstr "Rosnąco"
+
+#: includes/theme-hooks.php:1651 includes/theme-options.php:115
+msgid "Descending"
+msgstr "Malejąco"
+
+#: includes/theme-hooks.php:1665 page-templates/page-template-compare-car-listings.php:189
+#: page-templates/page-template-compare-car-listings.php:200 templates/blocks/car-listing/tab.php:87
+#: includes/theme-hooks.php:1956
+msgid "Back to Top"
+msgstr "Wróć na początek"
+
+#: includes/theme-hooks.php:2033
+msgid "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
+msgstr "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
+
+#: includes/theme-posttypes.php:172 includes/theme-posttypes.php:213 includes/theme-toolkit-override.php:124
+#: includes/theme-posttypes.php:185 includes/theme-posttypes.php:193 includes/theme-posttypes.php:226
+#: includes/theme-posttypes.php:234 includes/theme-toolkit-override.php:123
+#: includes/theme-toolkit-override.php:137 includes/theme-toolkit-override.php:174
+#: includes/theme-toolkit-override.php:160 includes/theme-toolkit-override.php:203
+#: includes/theme-toolkit-override.php:242 includes/theme-toolkit-override.php:304
+#: includes/theme-toolkit-override.php:185 includes/theme-toolkit-override.php:191
+#: includes/theme-toolkit-override.php:229 includes/theme-toolkit-override.php:751
+#: page-templates/page-template-about-us.php:149 templates/blocks/block-agent.php:85
+#: templates/blocks/block-modal-contact.php:31 templates/blocks/block-modal-customize.php:31
+#: templates/blocks/block-modal-ebook.php:13 templates/blocks/block-modal-visit-request.php:31
+#: templates/blocks/boat-listing/footer.php:97 templates/blocks/car-listing/footer.php:97
+#: templates/contents/content-agent.php:83 templates/contents/content-sales-representative.php:76
+#: templates/deprecated/block-carlistingfooter.php:97 includes/theme-toolkit-override.php:772
+#: page-templates/page-template-about-us.php:171 templates/blocks/block-agent.php:107
+#: templates/blocks/block-modal-customize.php:53 templates/blocks/boat-listing/footer.php:119
+#: templates/blocks/car-listing/footer.php:119 templates/contents/content-agent.php:105
+#: templates/contents/content-sales-representative.php:98 templates/deprecated/block-carlistingfooter.php:119
+#: includes/widgets/widget-calculator.php:158 includes/widgets/widget-custom-numbers.php:138
+#: includes/widgets/widget-featured-car.php:190 includes/widgets/widget-featured-listing.php:208
+#: includes/widgets/widget-related-listing.php:326 includes/widgets/widget-calculator.php:162
+#: includes/widgets/widget-featured-car.php:35 includes/widgets/widget-featured-car.php:141
+#: includes/widgets/widget-featured-listing.php:159 includes/widgets/widget-featured-car.php:179
+#: includes/widgets/widget-featured-car.php:194 includes/widgets/widget-featured-listing.php:212
+#: includes/widgets/widget-featured-car.php:198 page-templates/page-template-about-us.php:102
+#: templates/blocks/block-agent.php:48 templates/blocks/boat-listing/footer.php:39
+#: templates/blocks/car-listing/footer.php:39 templates/contents/content-agent.php:150
+#: templates/contents/content-sales-representative.php:139 templates/deprecated/block-carlistingfooter.php:39
+#: templates/deprecated/block-listingfooter.php:40
+msgid "Mobile:"
+msgstr "Tel. kom:"
+
+#: page-templates/page-template-about-us.php:108 templates/blocks/block-agent.php:54
+#: templates/blocks/boat-listing/footer.php:45 templates/blocks/car-listing/footer.php:45
+#: templates/deprecated/block-carlistingfooter.php:45 templates/deprecated/block-listingfooter.php:46
+msgid "Offce:"
+msgstr "Biuro:"
+
+#: page-templates/page-template-about-us.php:114 templates/blocks/block-agent.php:60
+#: templates/blocks/boat-listing/footer.php:51 templates/blocks/car-listing/footer.php:51
+#: templates/contents/content-agent.php:162 templates/contents/content-sales-representative.php:151
+#: templates/deprecated/block-carlistingfooter.php:51 templates/deprecated/block-listingfooter.php:52
+msgid "Fax:"
+msgstr "Fax:"
+
+#: page-templates/page-template-about-us.php:157 templates/blocks/block-agent.php:93
+#: templates/blocks/block-modal-contact.php:39 templates/blocks/block-modal-customize.php:39
+#: templates/blocks/block-modal-ebook.php:21 templates/blocks/block-modal-visit-request.php:39
+#: templates/blocks/boat-listing/footer.php:105 templates/blocks/car-listing/footer.php:105
+#: templates/contents/content-agent.php:91 templates/contents/content-sales-representative.php:84
+#: templates/deprecated/block-carlistingfooter.php:105 templates/deprecated/block-listingfooter.php:108
+msgid "Please enter your email."
+msgstr "Podaj proszę adres email."
+
+#: includes/theme-actions.php:1175 includes/theme-toolkit-override.php:772
+#: page-templates/page-template-about-us.php:174 templates/blocks/block-agent.php:107
+#: templates/blocks/block-modal-customize.php:53 templates/blocks/boat-listing/footer.php:119
+#: templates/contents/content-agent.php:105 templates/contents/content-sales-representative.php:98
+#: templates/deprecated/block-listingfooter.php:122
+msgid "Please enter your messages."
+msgstr "Podaj proszę wiadomość."
+
+#: includes/theme-toolkit-override.php:751 page-templates/page-template-about-us.php:152
+#: templates/blocks/block-agent.php:85 templates/blocks/block-modal-contact.php:31
+#: templates/blocks/block-modal-customize.php:31 templates/blocks/block-modal-ebook.php:13
+#: templates/blocks/block-modal-visit-request.php:31 templates/contents/content-agent.php:83
+#: templates/contents/content-sales-representative.php:76 templates/deprecated/block-listingfooter.php:100
+msgid "Full Name"
+msgstr "Imię i nazwisko"
+
+#: page-templates/page-template-about-us.php:163 templates/blocks/block-agent.php:99
+#: templates/blocks/block-modal-contact.php:45 templates/blocks/block-modal-customize.php:45
+#: templates/blocks/block-modal-visit-request.php:45
+msgid "Phone Number (optional)"
+msgstr "Numer telefonu (opcjonalnie)"
+
+#: page-templates/page-template-about-us.php:164 templates/blocks/block-agent.php:100
+#: templates/blocks/block-modal-contact.php:46 templates/blocks/block-modal-customize.php:46
+#: templates/blocks/block-modal-visit-request.php:46 templates/blocks/boat-listing/footer.php:112
+#: templates/blocks/car-listing/footer.php:112 templates/contents/content-agent.php:98
+#: templates/contents/content-sales-representative.php:91 templates/deprecated/block-carlistingfooter.php:112
+#: templates/deprecated/block-listingfooter.php:115
+msgid "Please enter your phone number."
+msgstr "Podaj proszę numer telefonu."
+
+#: page-templates/page-template-about-us.php:170 templates/blocks/block-agent.php:106
+#: templates/blocks/block-modal-customize.php:52 templates/blocks/boat-listing/footer.php:118
+#: templates/blocks/car-listing/footer.php:118 templates/contents/content-agent.php:104
+#: templates/contents/content-sales-representative.php:97 templates/deprecated/block-carlistingfooter.php:118
+#: templates/deprecated/block-listingfooter.php:121
+msgid "Message"
+msgstr "Wiadomość"
+
+#: page-templates/page-template-about-us.php:175
+msgid "Contact from About us Page"
+msgstr "Kontakt ze strony O nas"
+
+#: page-templates/page-template-about-us.php:178 templates/blocks/block-agent.php:114
+#: templates/blocks/boat-listing/footer.php:126 templates/blocks/car-listing/footer.php:126
+#: templates/contents/content-agent.php:112 templates/contents/content-sales-representative.php:105
+#: templates/deprecated/block-carlistingfooter.php:126 templates/deprecated/block-listingfooter.php:129
+msgid "Submit"
+msgstr "Wyślij"
+
+#: page-templates/page-template-compare-car-listings.php:184 templates/blocks/car-listing/tab.php:79
+#: page-templates/page-template-compare-car-listings.php:187
+#: page-templates/page-template-compare-car-listings.php:198 templates/blocks/car-listing/tab.php:85
+#: page-templates/page-template-compare-car-listings.php:188
+#: page-templates/page-template-compare-car-listings.php:199 templates/blocks/car-listing/tab.php:86
+#: page-templates/page-template-compare-listings.php:95 searchform.php:6
+msgid "Enter search terms..."
+msgstr "Wprowadź szukany termin..."
+
+#: searchform.php:9
+msgid "Search"
+msgstr "Szukaj"
+
+#: templates/blocks/block-agent.php:22
+msgid "Contact our representative"
+msgstr "Skontaktuj się z naszym przedstawicielem"
+
+#: templates/blocks/block-agent.php:111 templates/blocks/boat-listing/footer.php:123
+#: templates/blocks/car-listing/footer.php:123 templates/deprecated/block-carlistingfooter.php:123
+#: templates/deprecated/block-listingfooter.php:126
+#, php-format
+msgid "Contact For: %s Property"
+msgstr "Kontakt dla: %s Domek"
+
+#: templates/blocks/block-ebook.php:8
+msgid "Learn from our experts"
+msgstr "Dowiedz się od naszych ekspertów"
+
+#: templates/blocks/block-ebook.php:30
+msgid "Download"
+msgstr "Pobierz"
+
+#: templates/blocks/block-featured-slider.php:18
+msgid "Our ready projects"
+msgstr "Nasze gotowe domki"
+
+#: templates/blocks/block-modal-contact.php:6 templates/blocks/block-modal-contact.php:55
+#: templates/blocks/block-modal-customize.php:6 templates/blocks/block-price.php:6
+#: templates/blocks/block-toolsection-home.php:22 templates/blocks/block-toolsection.php:22
+msgid "Contact us"
+msgstr "Skontaktuj się z nami"
+
+#: templates/blocks/block-modal-contact.php:6 templates/blocks/block-price.php:6
+msgid "and order your cottage"
+msgstr "i zamów swój domek"
+
+#: templates/blocks/block-modal-contact.php:24 templates/blocks/block-modal-customize.php:24
+#: templates/blocks/block-modal-visit-request.php:24
+msgid "Call us directly at:"
+msgstr "Zadzwoń do nas na:"
+
+#: templates/blocks/block-modal-contact.php:24 templates/blocks/block-modal-customize.php:24
+#: templates/blocks/block-modal-visit-request.php:24
+msgid "or leave us your details data, so our representative can contact you."
+msgstr "lub pozostaw nam swoje dane kontaktowe, aby mógł się z Tobą skontaktować nasz przedstawiciel."
+
+#: templates/blocks/block-modal-contact.php:25 templates/blocks/block-modal-customize.php:25
+#: templates/blocks/block-modal-visit-request.php:25
+msgid "We work from Monday to Friday 8 am to 4 pm. During this time we contact you back within one hour"
+msgstr "Pracujemy od poniedziałku do piątku od 8 do 16. W tym czasie odpowiemy w ciągu godziny."
+
+#: templates/blocks/block-modal-contact.php:50
+#, php-format
+msgid "Email from %s"
+msgstr "E-mail wysłany z : %s"
+
+#: templates/blocks/block-modal-contact.php:54
+msgid "Buy it request from the website"
+msgstr "Pytanie o zakup ze strony internetowej."
+
+#: templates/blocks/block-modal-customize.php:57
+#, php-format
+msgid "Customization form from %s"
+msgstr "Formularz o dopasowanie domku z %s"
+
+#: templates/blocks/block-modal-customize.php:61
+msgid "Send"
+msgstr "WYŚLIJ"
+
+#: templates/blocks/block-modal-ebook.php:6
+msgid "Fill out this form to get your free ebook"
+msgstr "Wypełnij ten formularz, aby otrzymać bezpłatny e-book"
+
+#: templates/blocks/block-modal-ebook.php:25
+msgid "Ebook from Master's House"
+msgstr "E-book z Domu Mistrza"
+
+#: templates/blocks/block-modal-ebook.php:29
+msgid "Get your ebook by email"
+msgstr "Pobierz ebook e-mailem"
+
+#: templates/blocks/block-modal-visit-request.php:6 templates/blocks/block-modal-visit-request.php:53
+msgid "Request a free visit"
+msgstr "Zamów bezpłatną wizytę"
+
+#: templates/blocks/block-modal-visit-request.php:50
+msgid "Free visit request"
+msgstr "Wniosek o bezpłatną wizytę"
+
+#: templates/blocks/block-modal-visit-request.php:52
+msgid "Visit request"
+msgstr "Wniosek o wizytę"
+
+#: templates/blocks/block-price.php:3
+msgid "includes VAT"
+msgstr "zawiera VAT"
+
+#: templates/blocks/block-related.php:105
+msgid "You may also like"
+msgstr "Może także spodobać Ci się"
+
+#: templates/blocks/block-shop-slider.php:23
+msgid "Improve your leisure time"
+msgstr "Zadbaj o swój wypoczynek"
+
+#: templates/blocks/block-testimonials-slider.php:8
+msgid "Our clients rock"
+msgstr "Nasi klienci już znaleźli"
+
+#: templates/blocks/block-testimonials-slider.php:44
+msgid "Read full story"
+msgstr "Przeczytaj całą historię"
+
+#: templates/blocks/block-toolsection-home.php:8
+msgid "It's really simple"
+msgstr "To naprawdę proste"
+
+#: templates/blocks/block-toolsection.php:8
+msgid "Customization"
+msgstr "Dostosowanie"
+
+#: templates/blocks/car-listing/tab.php:99 templates/blocks/listing/tab.php:68
+#: templates/deprecated/block-carlistingtab.php:99 templates/deprecated/block-listingtab.php:55
+msgid "Details"
+msgstr "Szczegóły"
+
+#: templates/blocks/car-listing/tab.php:102 templates/blocks/listing/tab.php:77
+#: templates/deprecated/block-carlistingtab.php:102 templates/deprecated/block-listingtab.php:60
+msgid "Specifications"
+msgstr "Specyfikacja"
+
+#: templates/blocks/car-listing/tab.php:105 templates/deprecated/block-carlistingtab.php:105
+msgid "Dimensions"
+msgstr "Rozmiary"
+
+#: templates/blocks/listing/addon.php:9
+msgid "Price includes"
+msgstr "Cena zawiera"
+
+#: templates/blocks/listing/faq.php:14
+msgid "faq"
+msgstr "faq"
+
+#: templates/blocks/listing/faq.php:41
+msgid "Show more"
+msgstr "Pokaż więcej"
+
+#: templates/blocks/listing/home_features.php:9
+msgid "We are"
+msgstr "Jesteśmy"
+
+#: templates/blocks/listing/meta.php:45 templates/blocks/listing/meta.php:55
+#: templates/deprecated/block-listingmeta.php:55
+#, php-format
+msgid "1 Room"
+msgid_plural "%s Rooms"
+msgstr[0] "1 Pokój"
+msgstr[1] "%s Pokoje"
+msgstr[2] "%s Pokoi"
+
+#: templates/blocks/listing/meta.php:55 templates/deprecated/block-listingmeta.php:55
+msgid "No Room"
+msgstr "Brak pomieszczeń"
+
+#: templates/blocks/listing/tab.php:44
+msgid "Price:"
+msgstr "Cena:"
+
+#: templates/blocks/listing/tab.php:46
+msgid "Size:"
+msgstr "Rozmiar:"
+
+#: templates/blocks/listing/tab.php:47
+msgid "Terrace size:"
+msgstr "Rozmiar tarasu:"
+
+#: templates/blocks/listing/tab.php:48
+msgid "Rooms:"
+msgstr "Pokoje:"
+
+#: templates/blocks/listing/tab.php:49 templates/deprecated/block-listingtab.php:48
+msgid "Floors:"
+msgstr "Piętra:"
+
+#: templates/blocks/listing/tab.php:53
+msgid "Dimensions:"
+msgstr "Wymiary:"
+
+#: templates/blocks/listing/tab.php:54
+msgid "Height:"
+msgstr "Wysokość:"
+
+#: templates/blocks/listing/tab.php:55
+msgid "Wall height:"
+msgstr "Wysokość ścian:"
+
+#: templates/blocks/listing/tab.php:56
+msgid "Wall thickness:"
+msgstr "Grubość ścian:"
+
+#: templates/blocks/listing/tab.php:57
+msgid "Floor thickness:"
+msgstr "Grubość podłogi:"
+
+#: templates/blocks/listing/tab.php:58
+msgid "Roof thickness:"
+msgstr "Grubość dachu:"
+
+#: templates/blocks/listing/tab.php:59
+msgid "Windows:"
+msgstr "Okna:"
+
+#: templates/blocks/listing/tab.php:60
+msgid "Windows sizes:"
+msgstr "Rozmiary okien:"
+
+#: templates/blocks/listing/tab.php:61
+msgid "Doors:"
+msgstr "Drzwi:"
+
+#: templates/blocks/listing/tab.php:62
+msgid "Doors sizes:"
+msgstr "Rozmiary drzwi:"
+
+#: templates/contents/content-agent.php:41 templates/contents/content-sales-representative.php:39
+msgid "Mobile"
+msgstr "Tel. kom"
+
+#: templates/contents/content-agent.php:44 templates/contents/content-sales-representative.php:42
+msgid "Office"
+msgstr "Biuro"
+
+#: templates/contents/content-agent.php:47 templates/contents/content-sales-representative.php:45
+msgid "Fax"
+msgstr "Fax"
+
+#: templates/contents/content-agent.php:53 templates/contents/content-sales-representative.php:50
+msgid "Follow on"
+msgstr "Śledź na"
+
+#: templates/contents/content-agent.php:55 templates/contents/content-sales-representative.php:52
+msgid "Facebook"
+msgstr "Facebook"
+
+#: templates/contents/content-agent.php:61 templates/contents/content-sales-representative.php:58
+msgid "Twitter"
+msgstr "Twitter"
+
+#: templates/contents/content-agent.php:72 templates/contents/content-attachment.php:12
+#: templates/contents/content-attachment.php:25 templates/contents/content-boat-listing.php:30
+#: templates/contents/content-car-listing.php:31 templates/contents/content-gallery.php:26
+#: templates/contents/content-gallery.php:44 templates/contents/content-image.php:28
+#: templates/contents/content-image.php:44 templates/contents/content-listing.php:23
+#: templates/contents/content-page.php:21 templates/contents/content-page.php:39
+#: templates/contents/content-poll.php:15 templates/contents/content-poll.php:27
+#: templates/contents/content-promotions.php:22 templates/contents/content-promotions.php:46
+#: templates/contents/content-promotions.php:73 templates/contents/content-quiz.php:15
+#: templates/contents/content-quiz.php:27 templates/contents/content-quote.php:20
+#: templates/contents/content-quote.php:36 templates/contents/content-sales-representative.php:67
+#: templates/contents/content-search.php:20 templates/contents/content-search.php:37
+#: templates/contents/content-shop-product.php:23 templates/contents/content-video.php:20
+#: templates/contents/content-video.php:38 templates/contents/content.php:22 templates/contents/content.php:54
+#: templates/contents/content.php:79
+msgid "Pages:"
+msgstr "Stron:"
+
+#: templates/contents/content-agent.php:156 templates/contents/content-attachment.php:7
+#: templates/contents/content-attachment.php:20 templates/contents/content-gallery.php:21
+#: templates/contents/content-gallery.php:42 templates/contents/content-image.php:23
+#: templates/contents/content-image.php:40 templates/contents/content-link.php:15
+#: templates/contents/content-link.php:30 templates/contents/content-promotions.php:17
+#: templates/contents/content-promotions.php:41 templates/contents/content-promotions.php:70
+#: templates/contents/content-quote.php:15 templates/contents/content-quote.php:31
+#: templates/contents/content-search.php:15 templates/contents/content-search.php:32
+#: templates/contents/content-video.php:15 templates/contents/content-video.php:35
+#: templates/contents/content.php:17 templates/contents/content.php:49 templates/contents/content.php:76
+msgid "Posted on "
+msgstr "Zamieszczone w dniu"
+
+#: templates/contents/content-attachment.php:7 templates/contents/content-attachment.php:20
+#: templates/contents/content-image.php:23 templates/contents/content-image.php:40
+#: templates/contents/content-link.php:15 templates/contents/content-link.php:30
+#: templates/contents/content-quote.php:15 templates/contents/content-quote.php:31
+#: templates/contents/content-search.php:15 templates/contents/content-boat-listing.php:21
+#: templates/contents/content-car-listing.php:22
+msgid "Published on "
+msgstr "Opublikowano w dniu"
+
+#: templates/contents/content-gallery.php:21 templates/contents/content-gallery.php:42
+#: templates/contents/content-promotions.php:17 templates/contents/content-promotions.php:41
+#: templates/contents/content-promotions.php:70 templates/contents/content-video.php:15
+#: templates/contents/content-video.php:35 templates/contents/content.php:17
+#: templates/contents/content-gallery.php:30 templates/contents/content-image.php:32
+#: templates/contents/content-link.php:23 templates/contents/content-promotions.php:26
+#: templates/contents/content-quote.php:24 templates/contents/content-search.php:24
+#: templates/contents/content-video.php:24 templates/contents/content.php:26 templates/contents/content.php:58
+msgid "Tagged in:"
+msgstr "Tagi:"
+
+#: templates/contents/content-gallery.php:30 templates/contents/content-image.php:32
+#: templates/contents/content-link.php:23 templates/contents/content-promotions.php:26
+#: templates/contents/content-quote.php:24 templates/contents/content-search.php:24
+#: templates/contents/content-video.php:24 templates/contents/content.php:26
+#: templates/contents/content-gallery.php:43 templates/contents/content-promotions.php:72
+#: templates/contents/content-video.php:37 templates/contents/content.php:78
+msgid "Read more"
+msgstr "Czytaj więcej"
+
+#: templates/contents/content-quote.php:35
+msgid "Read more &rarr;"
+msgstr "Czytaj więcej &rarr;"
+
+#: templates/loops/loop-error.php:4
+msgid "Nothing found"
+msgstr "Nic nie znaleziono"
+
+#: templates/loops/loop-error.php:8
+msgid "Apologies, but no entries were found."
+msgstr "Przepraszamy, ale nie ma wpisów."
+
+#: templates/loops/loop-listing.php:66
+#, php-format
+msgid "%s Item Listed"
+msgid_plural "%s Items Listed"
+msgstr[0] "%s wynik znaleziony"
+msgstr[1] "%s wyniki znalezione"
+msgstr[2] "%s wyników znaleziono"
+
+#: templates/loops/loop-nav.php:6
+msgid "<span class=\"meta-nav\">&larr;</span> Return to entry"
+msgstr "<span class=\"meta-nav\">←</span> Powrót do wpisu"
+
+#: templates/loops/loop-nav.php:12
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">←</span> Poprzedni"
+
+#: templates/loops/loop-nav.php:13
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Następny <span class=\"meta-nav\">→</span>"
+
+#: templates/loops/loop-nav.php:18
+msgid "<span class=\"meta-nav\">&larr;</span> Older Entries"
+msgstr "<span class=\"meta-nav\">←</span> Starsze wpisy"
+
+#: templates/loops/loop-nav.php:18
+msgid "Newer Entries <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nowsze wpisy <span class=\"meta-nav\">→</span>"
+
+#: templates/woocommerce/result-count.php:19
+msgid "Showing the single result"
+msgstr "Pojedynczy wynik"
+
+#: templates/woocommerce/result-count.php:21
+#, php-format
+msgid "Showing all %d results"
+msgstr "Wszystkie %d wyniki"
+
+#: templates/woocommerce/result-count.php:23
+#, php-format
+msgctxt "%1$d = first, %2$d = last, %3$d = total"
+msgid "Showing %1$d&ndash;%2$d of %3$d results"
+msgstr "Wszystkie %1$d&ndash;%2$d z %3$d wyników"
