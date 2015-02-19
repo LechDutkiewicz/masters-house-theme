@@ -44,7 +44,11 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}before_home", "shandora_ebook_section", 25 );
 
-		add_action( "{$prefix}before_home", "shandora_shop_slider", 30 );
+		if ( shandora_woocommerce_plugin_active() ) {
+
+			add_action( "{$prefix}before_home", "shandora_shop_slider", 30 );
+
+		}
 
 		add_action( "{$prefix}before_home", "shandora_home_bottom_cta", 35 );
 
@@ -862,7 +866,7 @@ function shandora_listing_meta() {
 function shandora_listing_services() {
 	?>
 
-	<section>
+	<section class="entry-meta" itemprop="description">
 		<?php
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'services' );
 		?>
