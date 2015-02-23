@@ -271,6 +271,19 @@ img.auto
 {
     width:100%
 }
+img.boxed {
+    padding:0.13333em;
+    background-color:#f8f9f9;
+    border:1px solid #eee
+}
+@media screen and (min-width: 768px)
+{
+    img.boxed
+    {
+        padding:0.53333em
+    }
+
+}
 textarea
 {
     height:auto;
@@ -9013,9 +9026,19 @@ article.listing #bx-pager,article.agent #bx-pager
 .property-details li strong,.property-spec li strong
 {
     display:inline-block;
-    width:20%;
     vertical-align:middle
 }
+
+@media screen and (min-width: 768px)
+{
+    .property-details li strong,.property-spec li strong
+    {
+        display:inline-block;
+        width:20%;
+        vertical-align:middle
+    }
+}
+
 .property-details li span, .property-spec li span
 {
     display:inline-block;
