@@ -388,7 +388,7 @@ function shandora_custom_typo( $theme_fonts ) {
 
 }
 
-add_action('wp_enqueue_scripts', 'shandora_enqueue_scripts' );
+/*add_action('wp_enqueue_scripts', 'shandora_enqueue_scripts' );*/
 
 /*function shandora_enqueue_scripts() {
 
