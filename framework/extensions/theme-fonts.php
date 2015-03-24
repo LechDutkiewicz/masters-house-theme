@@ -277,7 +277,8 @@ final class Theme_Fonts {
 	 */
 	public function enqueue_styles() {
 
-		$stylesheet = $this->get_style_uri();
+		// Prevent loading fonts from google fonts
+		//$stylesheet = $this->get_style_uri();
 
 		if ( !empty( $stylesheet ) )
 			wp_enqueue_style( 'theme-fonts', $stylesheet, array(), null );

@@ -207,7 +207,6 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'type' => 'select' );
 
 
-
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Show Image Slider in Home', 'bon' ),
 			'desc' => __( 'Show or hide image slider in home page template', 'bon' ),
 			'id' => 'show_slider',
@@ -225,6 +224,24 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'std' => '',
 			'class' => 'code_mirror',
 			'type' => 'textarea' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Google Map center point latitude', 'bon' ),
+			'desc' => __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
+			'id' => 'global_latitude',
+			'type' => 'text' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Google Map center point longitude', 'bon' ),
+			'desc'	=> __('The Map Longitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
+			'id' => 'global_longitude',
+			'type' => 'text' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Google Map starting zoom level', 'bon' ),
+			'id' => 'global_zoom',
+			'type' => 'number',
+			'value' => '8' );
 
 
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Display Options', 'bon' ),

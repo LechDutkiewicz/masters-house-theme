@@ -605,11 +605,36 @@ if ( !function_exists( 'shandora_setup_testimonials_post_type' ) ) {
 		$cpt->create( 'Testimonial', array( 'supports' => array( 'editor', 'title', 'thumbnail', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 15, 'menu_icon' => 'dashicons-smiley' ), array(), $name, $plural );
 
 		$prop_options = array(
+			array( 
+				'label'	=> __('Map Latitude', 'bon'),
+				'desc'	=> __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
+				'id'	=> $prefix . $suffix .'maplatitude',
+				'type'	=> 'text',				
+			),
+			array( 
+				'label'	=> __('Map Longitude', 'bon'),
+				'desc'	=> __('The Map Longitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the longitude value generated there', 'bon'), 
+				'id'	=> $prefix . $suffix .'maplongitude',
+				'type'	=> 'text',				
+			),
 			array(
 				'label' => __( 'Related post', 'bon' ),
 				'desc' => __( 'Pick post if theres a related one', 'bon' ),
 				'id' => $prefix . $suffix . 'related_post',
 				'type' => 'post_chosen'
+			),
+			array(
+				'label' => __( 'Related cottage', 'bon' ),
+				'desc' => __( 'Pick cottage if theres a related one', 'bon' ),
+				'id' => $prefix . $suffix . 'related_cottage',
+				'post_type' => 'Listing',
+				'type' => 'post_chosen'
+			),
+			array(
+				'label' => __( 'Author image', 'bon' ),
+				'desc' => __( 'Upload author image to display it on testimonials carousel', 'bon' ),
+				'id' => $prefix . $suffix . 'user_img',
+				'type' => 'image'
 			),
 		);
 

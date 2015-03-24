@@ -805,7 +805,7 @@ function shandora_listing_entry_title() {
 		$price = '<a href="' . get_permalink( $post->ID ) . '" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '"><span class="price">' . shandora_get_listing_price( false ) . '</span></a>';
 	}
 
-	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title" itemprop="name"><a href="' . get_permalink() . '" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '">', '</a>' . $price . '</h3>', false ) );
+	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title" itemprop="name"><a href="' . get_permalink() . '" class="product-link" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '">', '</a>' . $price . '</h3>', false ) );
 }
 
 /**
@@ -1444,10 +1444,12 @@ if ( !function_exists( 'shandora_document_info' ) ) {
 				$title = $title . ' - ' . $price;
 			}
 			?>
+			<meta property="og:type" content="article" />
 			<meta property="og:title" content="<?php echo $title; ?>" />
 			<meta property="og:description" content="<?php echo strip_tags( strip_shortcodes( $content ) ); ?>" />
+			<meta property="og:image" content="<?php echo get_thumbnail_src(); ?>" />
 			<meta property="og:url" content="<?php the_permalink(); ?>" />
-			<meta property="og:type" content="article" />
+			<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
 		<?php endif; ?>
 		<?php bon_doctitle(); ?>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -1540,7 +1542,8 @@ if ( !function_exists( 'shandora_get_left_sidebar' ) ) {
 				is_page_template( 'page-templates/page-template-car-status.php' ) ||
 				is_page_template( 'page-templates/page-template-all-boats.php' ) ||
 				is_page_template( 'page-templates/page-template-search-boat.php' ) ||
-				is_page_template( 'page-templates/page-template-search-listings.php' ) ) {
+				is_page_template( 'page-templates/page-template-search-listings.php' ) ||
+				is_page_template( 'page-templates/page-template-testimonials.php' ) ) {
 				get_sidebar( 'secondary' );
 		} else if ( is_page_template( 'page-templates/page-template-about-us.php' ) ) {
 			get_sidebar( 'about-us' );
@@ -1756,7 +1759,8 @@ if ( !function_exists( 'shandora_get_right_sidebar' ) ) {
 				is_page_template( 'page-templates/page-template-search-car-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-property-status.php' ) ||
 				is_page_template( 'page-templates/page-template-car-status.php' ) ||
-				is_page_template( 'page-templates/page-template-search-listings.php' ) ) {
+				is_page_template( 'page-templates/page-template-search-listings.php' ) ||
+				is_page_template( 'page-templates/page-template-testimonials.php' )  ) {
 				get_sidebar( 'secondary' );
 		} else if ( is_page_template( 'page-templates/page-template-about-us.php' ) ) {
 			get_sidebar( 'about-us' );
@@ -1874,7 +1878,7 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 						<span class="sha-calendar"></span>
 					</div>
 					<span class="info-title"><?php echo bon_get_option( 'hgroup2_title' ); ?></span>
-					<span class="phone phone-1"><strong><a href='#visit-modal' role='button' data-toggle='modal' title="<?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?>"><?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?></a></strong></span>
+					<span class="phone visit"><strong><a href='#visit-modal' role='button' data-toggle='modal' title="<?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?>"><?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?></a></strong></span>
 				</div>
 			<?php endif; ?>
 		</div>

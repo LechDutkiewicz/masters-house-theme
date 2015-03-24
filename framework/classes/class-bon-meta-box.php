@@ -80,7 +80,7 @@ class BON_Metabox {
 				bon_find_field_type( 'post_chosen', $this->fields )
 			) ) ) {
 				wp_register_script( 'bon-chosen', BON_JS . '/chosen.js', array( 'jquery' ) );
-				$deps[] = 'chosen';
+				$deps[] = 'bon-chosen';
 				wp_enqueue_style( 'bon-chosen', BON_CSS . '/chosen.css' );
 			}
 			if ( bon_find_field_type( 'color', $this->fields ) ) {

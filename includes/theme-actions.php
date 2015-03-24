@@ -17,20 +17,20 @@ function shandora_get_listing_price( $echo = true, $total = true ) {
 	switch ( $placement ) {
 
 		case 'left-space':
-			$format = $currency . ' ' . $price;
-			break;
+		$format = $currency . ' ' . $price;
+		break;
 
 		case 'right':
-			$format = $price . $currency;
-			break;
+		$format = $price . $currency;
+		break;
 
 		case 'right-space':
-			$format = $price . ' ' . $currency;
-			break;
+		$format = $price . ' ' . $currency;
+		break;
 
 		default:
-			$format = $currency . $price;
-			break;
+		$format = $currency . $price;
+		break;
 	}
 
 	$o .= shandora_get_rent_period( $format );
@@ -52,20 +52,20 @@ function shandora_get_price_meta( $postID ) {
 	switch ( $placement ) {
 
 		case 'left-space':
-			$price = $currency . ' ' . $price;
-			break;
+		$price = $currency . ' ' . $price;
+		break;
 
 		case 'right':
-			$price = $price . $currency;
-			break;
+		$price = $price . $currency;
+		break;
 
 		case 'right-space':
-			$price = $price . ' ' . $currency;
-			break;
+		$price = $price . ' ' . $currency;
+		break;
 
 		default:
-			$price = $currency . $price;
-			break;
+		$price = $currency . $price;
+		break;
 	}
 
 	return $price;
@@ -87,24 +87,24 @@ function shandora_get_rent_period( $price ) {
 
 		switch ( $period ) {
 			case 'per-day':
-				$price .= ' <span class="rent-period">/' . __( 'day', 'bon' ) . '</span>';
-				break;
+			$price .= ' <span class="rent-period">/' . __( 'day', 'bon' ) . '</span>';
+			break;
 
 			case 'per-week':
-				$price .= ' <span class="rent-period">/' . __( 'week', 'bon' ) . '</span>';
-				break;
+			$price .= ' <span class="rent-period">/' . __( 'week', 'bon' ) . '</span>';
+			break;
 
 			case 'per-year':
-				$price .= ' <span class="rent-period">/' . __( 'year', 'bon' ) . '</span>';
-				break;
+			$price .= ' <span class="rent-period">/' . __( 'year', 'bon' ) . '</span>';
+			break;
 
 			case 'per-month':
-				$price .= ' <span class="rent-period">/' . __( 'month', 'bon' ) . '</span>';
-				break;
+			$price .= ' <span class="rent-period">/' . __( 'month', 'bon' ) . '</span>';
+			break;
 
 			default:
-				$price;
-				break;
+			$price;
+			break;
 		}
 	}
 
@@ -149,102 +149,102 @@ function shandora_get_search_page_url() {
 
 			$languages = icl_get_languages( 'skip_missing=0&orderby=custom' );
 
-			if ( count( $languages ) >= 1 ):
+		if ( count( $languages ) >= 1 ):
 
-				foreach ( (array) $languages as $language ):
+			foreach ( (array) $languages as $language ):
 
-					if ( $language['active'] == 1 ) :
+				if ( $language['active'] == 1 ) :
 
-						$id = icl_object_id( $search_page, 'post', false, ICL_LANGUAGE_CODE );
-						if ( $id ) {
-							$page = get_post( $id );
-							$slug = $page->post_name;
-							$search_permalink = trailingslashit( home_url() ) . $language['code'] . $slug;
-						} else {
-							$search_permalink = get_permalink( $search_page );
-						}
+					$id = icl_object_id( $search_page, 'post', false, ICL_LANGUAGE_CODE );
+				if ( $id ) {
+					$page = get_post( $id );
+					$slug = $page->post_name;
+					$search_permalink = trailingslashit( home_url() ) . $language['code'] . $slug;
+				} else {
+					$search_permalink = get_permalink( $search_page );
+				}
 
-					endif;
+				endif;
 
 				endforeach;
 
-			endif;
+				endif;
 
-		else :
+				else :
 
-			$search_permalink = get_permalink( $search_page );
+					$search_permalink = get_permalink( $search_page );
 
-		endif;
-	} else {
+				endif;
+			} else {
 
-		return;
-	}
+				return;
+			}
 
-	return $search_permalink;
-}
+			return $search_permalink;
+		}
 
-function shandora_get_search_listing_form( $is_widget = false ) {
+		function shandora_get_search_listing_form( $is_widget = false ) {
 
-	global $bon;
+			global $bon;
 
-	$values = array();
-	$values['property_type'] = isset( $_COOKIE['property_type'] ) ? $_COOKIE['property_type'] : '';
-	$values['title'] = isset( $_COOKIE['title'] ) ? $_COOKIE['title'] : '';
-	$values['property_location'] = isset( $_COOKIE['property_location'] ) ? $_COOKIE['property_location'] : '';
-	$values['property_location_level1'] = isset( $_COOKIE['property_location_level1'] ) ? $_COOKIE['property_location_level1'] : '';
-	$values['property_location_level2'] = isset( $_COOKIE['property_location_level2'] ) ? $_COOKIE['property_location_level2'] : '';
-	$values['property_location_level3'] = isset( $_COOKIE['property_location_level3'] ) ? $_COOKIE['property_location_level3'] : '';
-	$values['dealer_location_level1'] = isset( $_COOKIE['dealer_location_level1'] ) ? $_COOKIE['dealer_location_level1'] : '';
-	$values['dealer_location_level2'] = isset( $_COOKIE['dealer_location_level2'] ) ? $_COOKIE['dealer_location_level2'] : '';
-	$values['dealer_location_level3'] = isset( $_COOKIE['dealer_location_level3'] ) ? $_COOKIE['dealer_location_level3'] : '';
-	$values['property_status'] = isset( $_COOKIE['property_status'] ) ? $_COOKIE['property_status'] : '';
-	$values['property_bath'] = isset( $_COOKIE['property_bath'] ) ? $_COOKIE['property_bath'] : '';
-	$values['property_bed'] = isset( $_COOKIE['property_bed'] ) ? $_COOKIE['property_bed'] : '';
-	$values['max_price'] = isset( $_COOKIE['max_price'] ) ? $_COOKIE['max_price'] : '';
-	$values['min_price'] = isset( $_COOKIE['min_price'] ) ? $_COOKIE['min_price'] : '';
-	$values['max_lotsize'] = isset( $_COOKIE['max_lotsize'] ) ? $_COOKIE['max_lotsize'] : '';
-	$values['min_lotsize'] = isset( $_COOKIE['min_lotsize'] ) ? $_COOKIE['min_lotsize'] : '';
-	$values['max_buildingsize'] = isset( $_COOKIE['max_buildingsize'] ) ? $_COOKIE['max_buildingsize'] : '';
-	$values['min_buildingsize'] = isset( $_COOKIE['min_buildingsize'] ) ? $_COOKIE['min_buildingsize'] : '';
-	$values['property_mls'] = isset( $_COOKIE['property_mls'] ) ? $_COOKIE['property_mls'] : '';
-	$values['property_zip'] = isset( $_COOKIE['property_zip'] ) ? $_COOKIE['property_zip'] : '';
-	$values['property_feature'] = isset( $_COOKIE['property_feature'] ) ? $_COOKIE['property_feature'] : '';
-	$values['property_agent'] = isset( $_COOKIE['property_agent'] ) ? $_COOKIE['property_agent'] : '';
-	$values['property_floor'] = isset( $_COOKIE['property_floor'] ) ? $_COOKIE['property_floor'] : '';
-	$values['property_basement'] = isset( $_COOKIE['property_basement'] ) ? $_COOKIE['property_basement'] : '';
-	$values['property_garage'] = isset( $_COOKIE['property_garage'] ) ? $_COOKIE['property_garage'] : '';
-	$values['property_mortgage'] = isset( $_COOKIE['property_mortgage'] ) ? $_COOKIE['property_mortgage'] : '';
+			$values = array();
+			$values['property_type'] = isset( $_COOKIE['property_type'] ) ? $_COOKIE['property_type'] : '';
+			$values['title'] = isset( $_COOKIE['title'] ) ? $_COOKIE['title'] : '';
+			$values['property_location'] = isset( $_COOKIE['property_location'] ) ? $_COOKIE['property_location'] : '';
+			$values['property_location_level1'] = isset( $_COOKIE['property_location_level1'] ) ? $_COOKIE['property_location_level1'] : '';
+			$values['property_location_level2'] = isset( $_COOKIE['property_location_level2'] ) ? $_COOKIE['property_location_level2'] : '';
+			$values['property_location_level3'] = isset( $_COOKIE['property_location_level3'] ) ? $_COOKIE['property_location_level3'] : '';
+			$values['dealer_location_level1'] = isset( $_COOKIE['dealer_location_level1'] ) ? $_COOKIE['dealer_location_level1'] : '';
+			$values['dealer_location_level2'] = isset( $_COOKIE['dealer_location_level2'] ) ? $_COOKIE['dealer_location_level2'] : '';
+			$values['dealer_location_level3'] = isset( $_COOKIE['dealer_location_level3'] ) ? $_COOKIE['dealer_location_level3'] : '';
+			$values['property_status'] = isset( $_COOKIE['property_status'] ) ? $_COOKIE['property_status'] : '';
+			$values['property_bath'] = isset( $_COOKIE['property_bath'] ) ? $_COOKIE['property_bath'] : '';
+			$values['property_bed'] = isset( $_COOKIE['property_bed'] ) ? $_COOKIE['property_bed'] : '';
+			$values['max_price'] = isset( $_COOKIE['max_price'] ) ? $_COOKIE['max_price'] : '';
+			$values['min_price'] = isset( $_COOKIE['min_price'] ) ? $_COOKIE['min_price'] : '';
+			$values['max_lotsize'] = isset( $_COOKIE['max_lotsize'] ) ? $_COOKIE['max_lotsize'] : '';
+			$values['min_lotsize'] = isset( $_COOKIE['min_lotsize'] ) ? $_COOKIE['min_lotsize'] : '';
+			$values['max_buildingsize'] = isset( $_COOKIE['max_buildingsize'] ) ? $_COOKIE['max_buildingsize'] : '';
+			$values['min_buildingsize'] = isset( $_COOKIE['min_buildingsize'] ) ? $_COOKIE['min_buildingsize'] : '';
+			$values['property_mls'] = isset( $_COOKIE['property_mls'] ) ? $_COOKIE['property_mls'] : '';
+			$values['property_zip'] = isset( $_COOKIE['property_zip'] ) ? $_COOKIE['property_zip'] : '';
+			$values['property_feature'] = isset( $_COOKIE['property_feature'] ) ? $_COOKIE['property_feature'] : '';
+			$values['property_agent'] = isset( $_COOKIE['property_agent'] ) ? $_COOKIE['property_agent'] : '';
+			$values['property_floor'] = isset( $_COOKIE['property_floor'] ) ? $_COOKIE['property_floor'] : '';
+			$values['property_basement'] = isset( $_COOKIE['property_basement'] ) ? $_COOKIE['property_basement'] : '';
+			$values['property_garage'] = isset( $_COOKIE['property_garage'] ) ? $_COOKIE['property_garage'] : '';
+			$values['property_mortgage'] = isset( $_COOKIE['property_mortgage'] ) ? $_COOKIE['property_mortgage'] : '';
 
-	$values['reg_number'] = isset( $_COOKIE['reg_number'] ) ? $_COOKIE['reg_number'] : '';
-	$values['dealer_location'] = isset( $_COOKIE['dealer_location'] ) ? $_COOKIE['dealer_location'] : '';
-	$values['car_feature'] = isset( $_COOKIE['car_feature'] ) ? $_COOKIE['car_feature'] : '';
-	$values['body_type'] = isset( $_COOKIE['body_type'] ) ? $_COOKIE['body_type'] : '';
-	$values['manufacturer'] = isset( $_COOKIE['manufacturer'] ) ? $_COOKIE['manufacturer'] : '';
-	$values['manufacturer_level1'] = isset( $_COOKIE['manufacturer_level1'] ) ? $_COOKIE['manufacturer_level1'] : '';
-	$values['manufacturer_level2'] = isset( $_COOKIE['manufacturer_level2'] ) ? $_COOKIE['manufacturer_level2'] : '';
-	$values['manufacturer_level3'] = isset( $_COOKIE['manufacturer_level3'] ) ? $_COOKIE['manufacturer_level3'] : '';
+			$values['reg_number'] = isset( $_COOKIE['reg_number'] ) ? $_COOKIE['reg_number'] : '';
+			$values['dealer_location'] = isset( $_COOKIE['dealer_location'] ) ? $_COOKIE['dealer_location'] : '';
+			$values['car_feature'] = isset( $_COOKIE['car_feature'] ) ? $_COOKIE['car_feature'] : '';
+			$values['body_type'] = isset( $_COOKIE['body_type'] ) ? $_COOKIE['body_type'] : '';
+			$values['manufacturer'] = isset( $_COOKIE['manufacturer'] ) ? $_COOKIE['manufacturer'] : '';
+			$values['manufacturer_level1'] = isset( $_COOKIE['manufacturer_level1'] ) ? $_COOKIE['manufacturer_level1'] : '';
+			$values['manufacturer_level2'] = isset( $_COOKIE['manufacturer_level2'] ) ? $_COOKIE['manufacturer_level2'] : '';
+			$values['manufacturer_level3'] = isset( $_COOKIE['manufacturer_level3'] ) ? $_COOKIE['manufacturer_level3'] : '';
 
-	$values['car_status'] = isset( $_COOKIE['car_status'] ) ? $_COOKIE['car_status'] : '';
-	$values['fuel_type'] = isset( $_COOKIE['fuel_type'] ) ? $_COOKIE['fuel_type'] : '';
-	$values['transmission'] = isset( $_COOKIE['transmission'] ) ? $_COOKIE['transmission'] : '';
-	$values['ancap'] = isset( $_COOKIE['ancap'] ) ? $_COOKIE['ancap'] : '';
-	$values['min_mileage'] = isset( $_COOKIE['min_mileage'] ) ? $_COOKIE['min_mileage'] : '';
-	$values['max_mileage'] = isset( $_COOKIE['max_mileage'] ) ? $_COOKIE['max_mileage'] : '';
-	$values['exterior_color'] = isset( $_COOKIE['exterior_color'] ) ? $_COOKIE['exterior_color'] : '';
-	$values['interior_color'] = isset( $_COOKIE['interior_color'] ) ? $_COOKIE['interior_color'] : '';
-	$values['yearbuilt'] = isset( $_COOKIE['yearbuilt'] ) ? $_COOKIE['yearbuilt'] : '';
+			$values['car_status'] = isset( $_COOKIE['car_status'] ) ? $_COOKIE['car_status'] : '';
+			$values['fuel_type'] = isset( $_COOKIE['fuel_type'] ) ? $_COOKIE['fuel_type'] : '';
+			$values['transmission'] = isset( $_COOKIE['transmission'] ) ? $_COOKIE['transmission'] : '';
+			$values['ancap'] = isset( $_COOKIE['ancap'] ) ? $_COOKIE['ancap'] : '';
+			$values['min_mileage'] = isset( $_COOKIE['min_mileage'] ) ? $_COOKIE['min_mileage'] : '';
+			$values['max_mileage'] = isset( $_COOKIE['max_mileage'] ) ? $_COOKIE['max_mileage'] : '';
+			$values['exterior_color'] = isset( $_COOKIE['exterior_color'] ) ? $_COOKIE['exterior_color'] : '';
+			$values['interior_color'] = isset( $_COOKIE['interior_color'] ) ? $_COOKIE['interior_color'] : '';
+			$values['yearbuilt'] = isset( $_COOKIE['yearbuilt'] ) ? $_COOKIE['yearbuilt'] : '';
 
-	$values['min_yearbuilt'] = isset( $_COOKIE['min_yearbuilt'] ) ? $_COOKIE['min_yearbuilt'] : '';
-	$values['max_yearbuilt'] = isset( $_COOKIE['max_yearbuilt'] ) ? $_COOKIE['max_yearbuilt'] : '';
+			$values['min_yearbuilt'] = isset( $_COOKIE['min_yearbuilt'] ) ? $_COOKIE['min_yearbuilt'] : '';
+			$values['max_yearbuilt'] = isset( $_COOKIE['max_yearbuilt'] ) ? $_COOKIE['max_yearbuilt'] : '';
 
-	$output = apply_atomic( 'search_listing_form', '', $values, $is_widget );
+			$output = apply_atomic( 'search_listing_form', '', $values, $is_widget );
 
-	if ( !empty( $output ) ) {
-		return $output;
-	}
+			if ( !empty( $output ) ) {
+				return $output;
+			}
 
-	$button_color = bon_get_option( 'search_button_color', 'red' );
-	$form = $bon->form();
+			$button_color = bon_get_option( 'search_button_color', 'red' );
+			$form = $bon->form();
 
 	$ro = '<div class="row search-listing-form">'; // row open
 	$rc = '</div>';  // row close
@@ -322,7 +322,7 @@ function shandora_get_search_listing_form( $is_widget = false ) {
 					'manufacturer_level3',
 					'yearbuilt',
 					'fuel_type',
-				);
+					);
 
 				if ( !$is_widget ) {
 
@@ -434,14 +434,14 @@ function shandora_get_search_listing_form_idx() {
 			'communities' => $manual_community,
 			'tracts' => $manual_tract,
 			'zips' => $manual_zip,
-		);
+			);
 	} else {
 		$searchOptions = array(
 			'cities' => shandora_get_idx_options( 'City' ),
 			'communities' => shandora_get_idx_options( 'Community' ),
 			'tracts' => shandora_get_idx_options( 'Tract' ),
 			'zips' => shandora_get_idx_options( 'Zip' ),
-		);
+			);
 	}
 
 	$ro = '<div class="row search-listing-form">'; // row open
@@ -507,175 +507,175 @@ function shandora_get_search_listing_form_idx() {
 				for ( $i = 1; $i <= $bed_opt; $i++ ) {
 					?>
 					<option value="<?php echo $i; ?>" <?php selected( 'idx-q-BedsMin', $i ); ?>><?php echo $i; ?></option>
-				<?php } ?>
-			</select>
-		</div>
-		<?php echo $cc . $rc; ?>
+					<?php } ?>
+				</select>
+			</div>
+			<?php echo $cc . $rc; ?>
 
-		<?php echo $ro . $co; ?>
-		<label for="idx-q-TractIdentifiers"><?php _e( 'Tract', 'bon' ); ?></label>
-		<select id="idx-q-TractIdentifiers" name="idx-q-TractIdentifiers" class="select-dark idx-q-Location-Filter">
-			<option value=""><?php _e( 'Any', 'bon' ); ?></option>
-			<?php
-			if ( !empty( $searchOptions['tracts'] ) ) {
-				foreach ( $searchOptions["tracts"] as $tract ) {
-					// there's an extra trim here in case the data was corrupted before the trim was added in the update code below
-					$tract = ($autoload_options == 'no') ? htmlentities( trim( $tract ) ) : htmlentities( trim( $tract->Name ) );
-					?>
-					<option value="<?php echo $tract; ?>" <?php selected( 'idx-q-TractIdentifiers', $tract ); ?>><?php echo $tract; ?></option>
-					<?php
-				}
-			}
-			?>
-		</select>
-		<?php echo $cc; ?>
-		<?php echo $co; ?>
-		<label for="idx-q-ZipCodes"><?php _e( 'Zip', 'bon' ); ?></label>
-		<select id="idx-q-ZipCodes" name="idx-q-ZipCodes" class="select-dark idx-q-Location-Filter">
-			<option value=""><?php _e( 'Any', 'bon' ); ?></option>
-			<?php
-			if ( !empty( $searchOptions['zips'] ) ) {
-				foreach ( $searchOptions["zips"] as $zip ) {
-					// there's an extra trim here in case the data was corrupted before the trim was added in the update code below
-					$zip = ($autoload_options == 'no') ? htmlentities( trim( $zip ) ) : htmlentities( trim( $zip->Name ) );
-					?>
-					<option value="<?php echo $zip; ?>" <?php selected( 'idx-q-ZipCodes', $zip ); ?>><?php echo $zip; ?></option>
-					<?php
-				}
-			}
-			?>
-		</select>
-		<?php echo $cc; ?>
-		<?php echo $co; ?>
-		<?php
-		$bath_opt = absint( bon_get_option( 'maximum_bath', 5 ) );
-		if ( !is_int( $bath_opt ) ) {
-			$bath_opt = 5;
-		}
-		?>
-		<label for="idx-q-BathsMin"><?php _e( 'Baths', 'bon' ); ?></label>
-		<div class="ui-slider-wrapper-custom baths-wrapper">
-			<select name="idx-q-BathsMin" id="idx-q-BathsMin" class="bon-dsidx-baths2 dsidx-baths no-custom select-slider">
+			<?php echo $ro . $co; ?>
+			<label for="idx-q-TractIdentifiers"><?php _e( 'Tract', 'bon' ); ?></label>
+			<select id="idx-q-TractIdentifiers" name="idx-q-TractIdentifiers" class="select-dark idx-q-Location-Filter">
 				<option value=""><?php _e( 'Any', 'bon' ); ?></option>
 				<?php
-				for ( $i = 1; $i <= $bath_opt; $i++ ) {
-					?>
-					<option value="<?php echo $i; ?>" <?php selected( 'idx-q-BathsMin', $i ); ?>><?php echo $i; ?></option>
-				<?php } ?>
-			</select>
-		</div>
-		<?php echo $cc . $rc; ?>
-
-		<?php echo $ro . $co; ?>
-		<label for="idx-q-Communities"><?php _e( 'Community', 'bon' ); ?></label>
-		<select id="idx-q-Communities" name="idx-q-Communities" class="select-dark idx-q-Location-Filter">
-			<option value=""><?php _e( 'Any', 'bon' ); ?></option>
-			<?php
-			if ( !empty( $searchOptions['communities'] ) ) {
-				foreach ( $searchOptions["communities"] as $community ) {
+				if ( !empty( $searchOptions['tracts'] ) ) {
+					foreach ( $searchOptions["tracts"] as $tract ) {
 					// there's an extra trim here in case the data was corrupted before the trim was added in the update code below
-					$community = ($autoload_options == 'no') ? htmlentities( trim( $community ) ) : htmlentities( trim( $community->Name ) );
-					?>
-					<option value="<?php echo $community; ?>" <?php selected( 'idx-q-Communities', $community ); ?>><?php echo $community; ?></option>
-					<?php
+						$tract = ($autoload_options == 'no') ? htmlentities( trim( $tract ) ) : htmlentities( trim( $tract->Name ) );
+						?>
+						<option value="<?php echo $tract; ?>" <?php selected( 'idx-q-TractIdentifiers', $tract ); ?>><?php echo $tract; ?></option>
+						<?php
+					}
 				}
+				?>
+			</select>
+			<?php echo $cc; ?>
+			<?php echo $co; ?>
+			<label for="idx-q-ZipCodes"><?php _e( 'Zip', 'bon' ); ?></label>
+			<select id="idx-q-ZipCodes" name="idx-q-ZipCodes" class="select-dark idx-q-Location-Filter">
+				<option value=""><?php _e( 'Any', 'bon' ); ?></option>
+				<?php
+				if ( !empty( $searchOptions['zips'] ) ) {
+					foreach ( $searchOptions["zips"] as $zip ) {
+					// there's an extra trim here in case the data was corrupted before the trim was added in the update code below
+						$zip = ($autoload_options == 'no') ? htmlentities( trim( $zip ) ) : htmlentities( trim( $zip->Name ) );
+						?>
+						<option value="<?php echo $zip; ?>" <?php selected( 'idx-q-ZipCodes', $zip ); ?>><?php echo $zip; ?></option>
+						<?php
+					}
+				}
+				?>
+			</select>
+			<?php echo $cc; ?>
+			<?php echo $co; ?>
+			<?php
+			$bath_opt = absint( bon_get_option( 'maximum_bath', 5 ) );
+			if ( !is_int( $bath_opt ) ) {
+				$bath_opt = 5;
 			}
 			?>
-		</select>
-		<?php echo $cc; ?>
-		<?php echo $co; ?>
-		<label for="idx-q-MlsNumbers"><?php _e( 'MLS #', 'bon' ); ?></label>
-		<input id="idx-q-MlsNumbers" name="idx-q-MlsNumbers" type="text" class="dsidx-mlsnumber" value="<?php isset( $_GET['idx-q-MlsNumbers'] ) ? $_GET['idx-q-MlsNumbers'] : ''; ?>" />
+			<label for="idx-q-BathsMin"><?php _e( 'Baths', 'bon' ); ?></label>
+			<div class="ui-slider-wrapper-custom baths-wrapper">
+				<select name="idx-q-BathsMin" id="idx-q-BathsMin" class="bon-dsidx-baths2 dsidx-baths no-custom select-slider">
+					<option value=""><?php _e( 'Any', 'bon' ); ?></option>
+					<?php
+					for ( $i = 1; $i <= $bath_opt; $i++ ) {
+						?>
+						<option value="<?php echo $i; ?>" <?php selected( 'idx-q-BathsMin', $i ); ?>><?php echo $i; ?></option>
+						<?php } ?>
+					</select>
+				</div>
+				<?php echo $cc . $rc; ?>
 
-		<?php echo $cc; ?>
-		<?php echo $co; ?>
+				<?php echo $ro . $co; ?>
+				<label for="idx-q-Communities"><?php _e( 'Community', 'bon' ); ?></label>
+				<select id="idx-q-Communities" name="idx-q-Communities" class="select-dark idx-q-Location-Filter">
+					<option value=""><?php _e( 'Any', 'bon' ); ?></option>
+					<?php
+					if ( !empty( $searchOptions['communities'] ) ) {
+						foreach ( $searchOptions["communities"] as $community ) {
+					// there's an extra trim here in case the data was corrupted before the trim was added in the update code below
+							$community = ($autoload_options == 'no') ? htmlentities( trim( $community ) ) : htmlentities( trim( $community->Name ) );
+							?>
+							<option value="<?php echo $community; ?>" <?php selected( 'idx-q-Communities', $community ); ?>><?php echo $community; ?></option>
+							<?php
+						}
+					}
+					?>
+				</select>
+				<?php echo $cc; ?>
+				<?php echo $co; ?>
+				<label for="idx-q-MlsNumbers"><?php _e( 'MLS #', 'bon' ); ?></label>
+				<input id="idx-q-MlsNumbers" name="idx-q-MlsNumbers" type="text" class="dsidx-mlsnumber" value="<?php isset( $_GET['idx-q-MlsNumbers'] ) ? $_GET['idx-q-MlsNumbers'] : ''; ?>" />
 
-		<label for="idx-q-PriceMin"><?php _e( 'Price Range', 'bon' ); ?>
-			<span class="price-text" id="idx-min-price-text"></span>
-			<span class="price-text" id="idx-max-price-text"></span>
-		</label>
-		<div class="price-slider-wrapper ui-slider-wrapper-custom">
-			<div id="idx-slider-range2"></div>
-		</div>
-		<input id="idx-q-PriceMin" name="idx-q-PriceMin" type="hidden" class="dsidx-price bon-dsidx-price-min2" value="<?php isset( $_GET['idx-q-PriceMin'] ) ? $_GET['idx-q-PriceMin'] : ''; ?>" placeholder="min price" />
-		<input id="idx-q-PriceMax" name="idx-q-PriceMax" type="hidden" class="dsidx-price bon-dsidx-price-max2" value="<?php isset( $_GET['idx-q-PriceMax'] ) ? $_GET['idx-q-PriceMax'] : ''; ?>" placeholder="max price" />
+				<?php echo $cc; ?>
+				<?php echo $co; ?>
 
-		<?php echo $cc . $rc . $cc; ?>
-		<div class="column large-2 small-11 large-uncentered small-centered" id="submit-button">
-			<?php
-			$button_color = bon_get_option( 'search_button_color', 'red' );
-			$search_label = bon_get_option( 'search_button_label', __( 'Find Property', 'bon' ) );
-			?>
-			<input type="submit" class="button flat <?php echo $button_color; ?> expand small radius submit" value="<?php echo $search_label; ?>" />
-		</div>
-	</div>
-	</form>
+				<label for="idx-q-PriceMin"><?php _e( 'Price Range', 'bon' ); ?>
+					<span class="price-text" id="idx-min-price-text"></span>
+					<span class="price-text" id="idx-max-price-text"></span>
+				</label>
+				<div class="price-slider-wrapper ui-slider-wrapper-custom">
+					<div id="idx-slider-range2"></div>
+				</div>
+				<input id="idx-q-PriceMin" name="idx-q-PriceMin" type="hidden" class="dsidx-price bon-dsidx-price-min2" value="<?php isset( $_GET['idx-q-PriceMin'] ) ? $_GET['idx-q-PriceMin'] : ''; ?>" placeholder="min price" />
+				<input id="idx-q-PriceMax" name="idx-q-PriceMax" type="hidden" class="dsidx-price bon-dsidx-price-max2" value="<?php isset( $_GET['idx-q-PriceMax'] ) ? $_GET['idx-q-PriceMax'] : ''; ?>" placeholder="max price" />
 
-	<?php
-}
+				<?php echo $cc . $rc . $cc; ?>
+				<div class="column large-2 small-11 large-uncentered small-centered" id="submit-button">
+					<?php
+					$button_color = bon_get_option( 'search_button_color', 'red' );
+					$search_label = bon_get_option( 'search_button_label', __( 'Find Property', 'bon' ) );
+					?>
+					<input type="submit" class="button flat <?php echo $button_color; ?> expand small radius submit" value="<?php echo $search_label; ?>" />
+				</div>
+			</div>
+		</form>
 
-function shandora_get_searchform( $location = "", $button = false ) {
-
-	if ( $location != "header" ) {
-		$output = "";
-	} else {
-		$output = '
-		<div class="searchform">
-		<form role="search" method="get" class="search hidden-phone" id="searchform" action="' . home_url( '/' ) . '" >
-		<i class="icon sha-zoom"></i><input class="input-medium" type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . esc_attr( __( 'Search the Site...', 'bon' ) ) . '" />
-		</form></div>';
+		<?php
 	}
 
-	echo $output;
-}
+	function shandora_get_searchform( $location = "", $button = false ) {
 
-function shandora_get_social_icons( $header = true ) {
-	if ( $header ) {
-		$id = 'top-social-icons';
-		$class = 'right social-icons';
-		$navclass = 'large-6 column right';
-	} else {
-		$id = 'footer-social-icons';
-		$class = 'social-icons';
-		$navclass = '';
-	}
+		if ( $location != "header" ) {
+			$output = "";
+		} else {
+			$output = '
+			<div class="searchform">
+			<form role="search" method="get" class="search hidden-phone" id="searchform" action="' . home_url( '/' ) . '" >
+			<i class="icon sha-zoom"></i><input class="input-medium" type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . esc_attr( __( 'Search the Site...', 'bon' ) ) . '" />
+			</form></div>';
+		}
 
-	$output = '<nav class="' . $navclass . '">
-	    <ul class="' . $class . '" id="' . $id . '">';
-
-	if ( function_exists( 'icl_get_languages' ) ) {
-		$output .= shandora_get_country_selection();
+		echo $output;
 	}
 
-	if ( bon_get_option( 'social_facebook' ) ) {
-		$output .= '<li><a href="http://facebook.com/' . bon_get_option( 'social_facebook' ) . '" title="' . __( 'Follow us on Facebook', 'bon' ) . '"><span class="sha-facebook"></span></a></li>';
-	}
-	if ( bon_get_option( 'social_twitter' ) ) {
-		$output .= '<li><a href="http://twitter.com/' . bon_get_option( 'social_twitter' ) . '" title="' . __( 'Follow us on Twitter', 'bon' ) . '"><span class="sha-twitter"></span></a></li>';
-	}
-	if ( bon_get_option( 'social_google_plus' ) ) {
-		$output .= '<li><a href="http://plus.google.com/' . bon_get_option( 'social_google_plus' ) . '" title="' . __( 'Follow us on Google Plus', 'bon' ) . '"><span class="sha-googleplus"></span></a></li>';
-	}
-	if ( bon_get_option( 'social_pinterest' ) ) {
-		$output .= '<li><a href="http://pinterest.com/' . bon_get_option( 'social_pinterest' ) . '" title="' . __( 'Follow us on Pinterest', 'bon' ) . '"><span class="sha-pinterest"></span></a></li>';
-	}
-	if ( bon_get_option( 'social_flickr' ) ) {
-		$output .= '<li><a href="http://flickr.com/photos/' . bon_get_option( 'social_flickr' ) . '" title="' . __( 'Follow us on Flickr', 'bon' ) . '"><span class="sha-flickr"></span></a></li>';
-	}
-	if ( bon_get_option( 'social_vimeo' ) ) {
-		$output .= '<li><a href="http://vimeo.com/' . bon_get_option( 'social_vimeo' ) . '" title="' . __( 'Find us on Vimeo', 'bon' ) . '"><span class="sha-vimeo"></span></a></li>';
-	}
-	if ( bon_get_option( 'social_youtube' ) ) {
-		$output .= '<li><a href="http://youtube.com/' . bon_get_option( 'social_youtube' ) . '" title="' . __( 'Find us on YouTube', 'bon' ) . '"><span class="sha-youtube"></span></a></li>';
-	}
-	if ( bon_get_option( 'social_linkedin' ) ) {
-		$output .= '<li><a href="http://linkedin.com/' . bon_get_option( 'social_linkedin' ) . '" title="' . __( 'Find us on LinkedIn', 'bon' ) . '"><span class="sha-linkedin"></span></a></li>';
-	}
+	function shandora_get_social_icons( $header = true ) {
+		if ( $header ) {
+			$id = 'top-social-icons';
+			$class = 'right social-icons';
+			$navclass = 'large-6 column right';
+		} else {
+			$id = 'footer-social-icons';
+			$class = 'social-icons';
+			$navclass = '';
+		}
 
-	$output .= '</ul></nav>';
+		$output = '<nav class="' . $navclass . '">
+		<ul class="' . $class . '" id="' . $id . '">';
 
-	echo $output;
-}
+		if ( function_exists( 'icl_get_languages' ) ) {
+			$output .= shandora_get_country_selection();
+		}
+
+		if ( bon_get_option( 'social_facebook' ) ) {
+			$output .= '<li><a href="http://facebook.com/' . bon_get_option( 'social_facebook' ) . '" title="' . __( 'Follow us on Facebook', 'bon' ) . '"><span class="sha-facebook"></span></a></li>';
+		}
+		if ( bon_get_option( 'social_twitter' ) ) {
+			$output .= '<li><a href="http://twitter.com/' . bon_get_option( 'social_twitter' ) . '" title="' . __( 'Follow us on Twitter', 'bon' ) . '"><span class="sha-twitter"></span></a></li>';
+		}
+		if ( bon_get_option( 'social_google_plus' ) ) {
+			$output .= '<li><a href="http://plus.google.com/' . bon_get_option( 'social_google_plus' ) . '" title="' . __( 'Follow us on Google Plus', 'bon' ) . '"><span class="sha-googleplus"></span></a></li>';
+		}
+		if ( bon_get_option( 'social_pinterest' ) ) {
+			$output .= '<li><a href="http://pinterest.com/' . bon_get_option( 'social_pinterest' ) . '" title="' . __( 'Follow us on Pinterest', 'bon' ) . '"><span class="sha-pinterest"></span></a></li>';
+		}
+		if ( bon_get_option( 'social_flickr' ) ) {
+			$output .= '<li><a href="http://flickr.com/photos/' . bon_get_option( 'social_flickr' ) . '" title="' . __( 'Follow us on Flickr', 'bon' ) . '"><span class="sha-flickr"></span></a></li>';
+		}
+		if ( bon_get_option( 'social_vimeo' ) ) {
+			$output .= '<li><a href="http://vimeo.com/' . bon_get_option( 'social_vimeo' ) . '" title="' . __( 'Find us on Vimeo', 'bon' ) . '"><span class="sha-vimeo"></span></a></li>';
+		}
+		if ( bon_get_option( 'social_youtube' ) ) {
+			$output .= '<li><a href="http://youtube.com/' . bon_get_option( 'social_youtube' ) . '" title="' . __( 'Find us on YouTube', 'bon' ) . '"><span class="sha-youtube"></span></a></li>';
+		}
+		if ( bon_get_option( 'social_linkedin' ) ) {
+			$output .= '<li><a href="http://linkedin.com/' . bon_get_option( 'social_linkedin' ) . '" title="' . __( 'Find us on LinkedIn', 'bon' ) . '"><span class="sha-linkedin"></span></a></li>';
+		}
+
+		$output .= '</ul></nav>';
+
+		echo $output;
+	}
 
 /**
  * =====================================================================================================
@@ -841,7 +841,7 @@ function shandora_set_theme_column() {
 	} else if ( is_page_template( 'page-templates/page-template-idx-details.php' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'shandora_theme_layout_idx_details' );
 	} else if ( is_page_template( 'page-templates/page-template-home.php' ) ||
-			is_page_template( 'page-templates/page-template-compare-listings.php' ) ) {
+		is_page_template( 'page-templates/page-template-compare-listings.php' ) ) {
 		add_filter( 'theme_mod_theme_layout', 'shandora_theme_layout_one_column' );
 	} else if ( is_attachment() && wp_attachment_is_image() ) {
 		add_filter( 'theme_mod_theme_layout', 'shandora_theme_layout_one_column' );
@@ -955,7 +955,7 @@ function shandora_admin_script( $hook ) {
 
 			wp_register_script( 'shandora-page-script', BON_THEME_URI . '/assets/js/admin/page.js', array( 'jquery' ) );
 
-			wp_enqueue_script( 'shandora-page-script' );
+		wp_enqueue_script( 'shandora-page-script' );
 
 		endif;
 	}
@@ -993,35 +993,35 @@ function shandora_get_video() {
 		$o .= '<div id="jp-video-embed" class="bon-jplayer jp-jplayer jp-jplayer-video" data-poster="' . $poster . '" data-m4v="' . $m4v . '" data-ogv="' . $ogv . '"></div>';
 
 		$o .= '<div class="jp-video-container">
-	        <div class="jp-video">
-	            <div class="jp-type-single">
-	                <div id="jp-interface-video-embed" class="jp-interface">
-	                    <div class="jp-controls">
-	                        <div class="jp-play" tabindex="1">
-	                            <span class="bonicons bi-play icon"></span>
-	                        </div>
-	                        <div class="jp-pause" tabindex="1">
-	                            <span class="bonicons bi-pause icon"></span>
-	                        </div>
-	                        <div class="jp-progress-container">
-	                            <div class="jp-progress">
-	                                <div class="jp-seek-bar">
-	                                    <div class="jp-play-bar"></div>
-	                                </div>
-	                            </div>
-	                        </div>
-	                        <div class="jp-mute" tabindex="1"><span class="bonicons bi-volume-up icon"></span></div>
-	                        <div class="jp-unmute" tabindex="1"><span class="bonicons bi-volume-off icon"></span></div>
-	                        <div class="jp-volume-bar-container">
-	                            <div class="jp-volume-bar">
-	                                <div class="jp-volume-bar-value"></div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>';
+		<div class="jp-video">
+		<div class="jp-type-single">
+		<div id="jp-interface-video-embed" class="jp-interface">
+		<div class="jp-controls">
+		<div class="jp-play" tabindex="1">
+		<span class="bonicons bi-play icon"></span>
+		</div>
+		<div class="jp-pause" tabindex="1">
+		<span class="bonicons bi-pause icon"></span>
+		</div>
+		<div class="jp-progress-container">
+		<div class="jp-progress">
+		<div class="jp-seek-bar">
+		<div class="jp-play-bar"></div>
+		</div>
+		</div>
+		</div>
+		<div class="jp-mute" tabindex="1"><span class="bonicons bi-volume-up icon"></span></div>
+		<div class="jp-unmute" tabindex="1"><span class="bonicons bi-volume-off icon"></span></div>
+		<div class="jp-volume-bar-container">
+		<div class="jp-volume-bar">
+		<div class="jp-volume-bar-value"></div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>
+		</div>';
 
 		$o.= '</div>';
 	}
@@ -1060,29 +1060,29 @@ function shandora_listing_post_per_page( $query ) {
 
 			switch ( $orderby ) {
 				case 'price':
-					$orderby = 'meta_value_num';
-					$key = bon_get_prefix() . 'listing_price';
-					break;
+				$orderby = 'meta_value_num';
+				$key = bon_get_prefix() . 'listing_price';
+				break;
 
 				case 'title':
-					$orderby = 'title';
+				$orderby = 'title';
 
-					break;
+				break;
 
 				case 'size':
-					$orderby = 'meta_value_num';
+				$orderby = 'meta_value_num';
 
-					if ( $query->is_tax( get_object_taxonomies( 'listing' ) ) ) {
-						$key = bon_get_prefix() . 'listing_buildingsize';
-					} else if ( $query->is_tax( get_object_taxonomies( 'product' ) ) ) {
-						$key = bon_get_prefix() . 'listing_mileage';
-					}
+				if ( $query->is_tax( get_object_taxonomies( 'listing' ) ) ) {
+					$key = bon_get_prefix() . 'listing_buildingsize';
+				} else if ( $query->is_tax( get_object_taxonomies( 'product' ) ) ) {
+					$key = bon_get_prefix() . 'listing_mileage';
+				}
 
-					break;
+				break;
 
 				default:
-					$orderby = 'date';
-					break;
+				$orderby = 'date';
+				break;
 			}
 
 			if ( isset( $_GET['search_orderby'] ) ) {
@@ -1193,60 +1193,67 @@ function shandora_process_contactform() {
 		$response = akismet_http_post( $query_string, $akismet_api_host, '/1.1/comment-check', $akismet_api_port );
 
 		if ( 'true' == $response[1] ) { // Akismet says it's SPAM
-			$return_data['value'] = __( 'Cheatin Huh?!', 'bon' );
-			die( json_encode( $return_data ) );
-		}
-	}
-
-	/* Email configuration */
-
-	$receiver = $_POST['receiver'];
-
-	$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "You have received a new contact form message via %s \n", "bon" ), get_bloginfo( 'name' ) ) . '</p>';
-	$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Name : %s \n", "bon" ), $name ) . '</p>';
-	$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Email : %s \n", "bon" ), $email ) . '</p>';
-	$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Subject : %s \n", "bon" ), $subject ) . '</p>';
-	$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Phone Number : %s \n", "bon" ), $phone ) . '</p>';
-	$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Email Send From : %s \n", "bon" ), get_permalink( $listing_id ) ) . '</p>';
-	$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Message : %s \n", "bon" ), $messages ) . '</p>';
-
-	$headers[] = "From: " . $name;
-	$headers[] = "Reply-To: " . $email;
-	$headers[] = "Content-Type: text/html";
-
-	$subject = sprintf( "%s %s", $subject, __( "Masters House", 'bon' ) );
-
-	/* Responsne email configuration */
-
-	$response_receiver = $email;
-
-	$response_body = '<p style = "margin-bottom:1em">' . __( 'We succesfully received your request. Our representative will contact you within one hour.' ) . '</p>';
-	$response_body .= '<p style = "margin-bottom:1em">' . __( 'All the best', 'bon' ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
-
-	$response_headers[] = "From: " . __( "Masters House", 'bon' );
-	$response_headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
-	$response_headers[] = "Content-Type: text/html";
-
-	$response_subject = __( 'Thank you for contacting us' );
-
-	if ( wp_mail( $receiver, $subject, $body, $headers ) ) {
-		add_filter( 'wp_mail_from', function() {
-			return __( 'no-reply@mastershouse.com', 'bon' );
-		} );
-		add_filter( 'wp_mail_from_name', function() {
-			return __( "Masters House", 'bon' );
-		} );
-
-		wp_mail( $response_receiver, $response_subject, $response_body, $response_headers );
-
-		$return_data['success'] = '1';
-		$return_data['value'] = __( 'Email was sent successfully.', 'bon' );
-		die( json_encode( $return_data ) );
-	} else {
-
-		$return_data['value'] = __( 'There is an error sending email.', 'bon' );
+		$return_data['value'] = __( 'Cheatin Huh?!', 'bon' );
 		die( json_encode( $return_data ) );
 	}
+}
+
+/* Email configuration */
+
+$receiver = $_POST['receiver'];
+
+$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "You have received a new contact form message via %s \n", "bon" ), get_bloginfo( 'name' ) ) . '</p>';
+$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Name : %s \n", "bon" ), $name ) . '</p>';
+$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Email : %s \n", "bon" ), $email ) . '</p>';
+$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Subject : %s \n", "bon" ), $subject ) . '</p>';
+$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Phone Number : %s \n", "bon" ), $phone ) . '</p>';
+$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Email Send From : %s \n", "bon" ), get_permalink( $listing_id ) ) . '</p>';
+$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Message : %s \n", "bon" ), $messages ) . '</p>';
+
+$headers[] = "From: " . __( "Masters House", "bon" );
+$headers[] = "Reply-To: " . $email;
+$headers[] = "Content-Type: text/html";
+
+add_filter( 'wp_mail_from', function() {
+	return $email;
+} );
+add_filter( 'wp_mail_from_name', function() {
+	return __( "Masters House", 'bon' );
+} );
+
+$subject = sprintf( "%s %s", $subject, __( "Masters House", 'bon' ) );
+
+/* Responsne email configuration */
+
+$response_receiver = $email;
+
+$response_body = '<p style = "margin-bottom:1em">' . __( 'We succesfully received your request. Our representative will contact you within one hour.', 'bon' ) . '</p>';
+$response_body .= '<p style = "margin-bottom:1em">' . __( 'Kind regards', 'bon' ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
+
+$response_headers[] = "From: " . __( "Masters House", "bon" );
+$response_headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
+$response_headers[] = "Content-Type: text/html";
+
+$response_subject = __( 'Thank you for contacting us', 'bon' );
+
+if ( wp_mail( $receiver, $subject, $body, $headers ) ) {
+	add_filter( 'wp_mail_from', function() {
+		return __( 'no-reply@mastershouse.com', 'bon' );
+	} );
+	add_filter( 'wp_mail_from_name', function() {
+		return __( "Masters House", 'bon' );
+	} );
+
+	wp_mail( $response_receiver, $response_subject, $response_body, $response_headers );
+
+	$return_data['success'] = '1';
+	$return_data['value'] = __( 'Email was sent successfully.', 'bon' );
+	die( json_encode( $return_data ) );
+} else {
+
+	$return_data['value'] = __( 'There is an error sending email.', 'bon' );
+	die( json_encode( $return_data ) );
+}
 }
 
 add_action( 'wp_ajax_process-ebook-downloadform', 'shandora_process_ebook_downloadform' );
@@ -1296,95 +1303,95 @@ function shandora_process_ebook_downloadform() {
 		$response = akismet_http_post( $query_string, $akismet_api_host, '/1.1/comment-check', $akismet_api_port );
 
 		if ( 'true' == $response[1] ) { // Akismet says it's SPAM
-			$return_data['value'] = __( 'Cheatin Huh?!', 'bon' );
-			die( json_encode( $return_data ) );
-		}
-	}
-
-	$body .= '<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate!important;border-radius:4px;background-color:#ffffff;padding:30px;border:1px solid #ffffff;border-bottom:1px solid #acacac" bgcolor="#ffffff">';
-	$body .= '<tbody>';
-	$body .= '<tr>';
-	$body .= '<td align="center" valign="top">';
-	$body .= '<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse!important;width:600px" width="600">';
-	$body .= '<tbody>';
-	$body .= '<tr>';
-	$body .= '<td align="left" valign="top" width="100%" colspan="12" style="color:#444444;font-family:sans-serif;font-size:15px;line-height:150%;text-align:left">';
-	$body .= '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse!important">';
-	$body .= '<tbody>';
-	$body .= '<tr>';
-	$body .= '<td align="left" valign="top" colspan="12" width="100.0%" style="text-align:left;font-family:sans-serif;font-size:15px;line-height:1.5em;color:#444444">';
-	$body .= '<div>';
-	$body .= '<div>';
-	$body .= '<div style="color:inherit;font-size:inherit;line-height:inherit;margin:inherit;padding:inherit">';
-	$body .= '<p style="margin-bottom:1em">';
-	$body .= '<a href="' . get_home_url() . '" title="' . esc_attr( get_bloginfo( "name", "display" ) ) . '">';
-
-	if ( bon_get_option( 'logo' ) ) {
-		$body .= '<img src = "' . (bon_get_option( 'logo_dark', get_template_directory_uri() . "/assets/images/logo.png" )) . '" alt = "' . esc_attr( get_bloginfo( "name", "display" ) ) . '"/>';
-	} else {
-		$body .= esc_attr( get_bloginfo( 'name' ) );
-	}
-	$body .= '</a>';
-	$body .= '</p>';
-	$body.='</div>';
-	$body.='</div>';
-	$body.='</div>';
-	$body.='</td>';
-	$body.='</tr>';
-	$body.='</tbody>';
-	$body.='</table>';
-	$body.='</td>';
-	$body.='</tr>';
-	$body .= '<tr>';
-	$body .= '<td align = "left" valign = "top" width = "100%" colspan = "12" style = "color:#444444;font-family:sans-serif;font-size:15px;line-height:150%;text-align:left">';
-	$body .= '<table cellpadding = "0" cellspacing = "0" border = "0" width = "100%" style = "border-collapse:collapse!important">';
-	$body .= '<tbody>';
-	$body .= '<tr>';
-	$body .= '<td align = "left" valign = "top" colspan = "12" width = "100.0%" style = "text-align:left;font-family:sans-serif;font-size:15px;line-height:1.5em;color:#444444">';
-	$body .= '<div>';
-	$body .= '<div style = "color:inherit;font-size:inherit;line-height:inherit;margin:inherit;padding:inherit">';
-	$body .= '<p style = "margin-bottom:1em" >Hi&nbsp;' . $name . ',</p>';
-	$body .= '<p style = "margin-bottom:1em">' . __( "Thank you for downloading our ebook.", "bon" ) . ' ' . $subject . '</p>';
-	$body .= '<p style = "margin-bottom:1em">' . __( "You can download it here", "bon" ) . '-' . '&nbsp;<a href = "' . $link . '" target = "_blank">' . $anchor . '</a></p>';
-	$body .= '<p style = "margin-bottom:1em">' . __( "We hope you find this helpful!", "bon" ) . '</p>';
-	$body .= '<p style = "margin-bottom:1em;">';
-	$body .= '<a style = "display:inline-block;padding-top:0.86667em;padding-right:1.2em;padding-bottom:0.86667em;padding-left:1.2em;font-size:1.06667em;background-color: #27AE60;border-color: #0E9547;border-radius:5px;border-style:solid;border-width:0 0 5px;color:#FFF;text-decoration:none" href = "' . $link . '">' . $anchor . '</a>';
-	$body .= '</p>';
-	$body .= '<p style = "margin-bottom:1em">' . __( "All the best", "bon" ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
-	$body .= '</div>';
-	$body .= '</div>';
-	$body .= '</td>';
-	$body .= '</tr>';
-	$body .= '</tbody>';
-	$body .= '</table>';
-	$body .= '</td>';
-	$body .= '</tr>';
-	$body .= '</tbody>';
-	$body .= '</table>';
-	$body .= '</td>';
-	$body .= '</tr>';
-	$body .= '</tbody>';
-	$body .= '</table>';
-
-	$headers[] = "From: " . __( "Masters House", 'bon' );
-	$headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
-	$headers[] = "Content-Type: text/html";
-
-	add_filter( 'wp_mail_from', function() {
-		return __( 'no-reply@mastershouse.com', 'bon' );
-	} );
-	add_filter( 'wp_mail_from_name', function() {
-		return __( "Masters House", 'bon' );
-	} );
-
-	if ( wp_mail( $email, $subject, $body, $headers ) ) {
-		$return_data['success'] = '1';
-		$return_data['value'] = __( 'Email was sent successfully.', 'bon' );
-		die( json_encode( $return_data ) );
-	} else {
-		$return_data['value'] = __( 'There is an error sending email.', 'bon' );
+		$return_data['value'] = __( 'Cheatin Huh?!', 'bon' );
 		die( json_encode( $return_data ) );
 	}
+}
+
+$body .= '<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate!important;border-radius:4px;background-color:#ffffff;padding:30px;border:1px solid #ffffff;border-bottom:1px solid #acacac" bgcolor="#ffffff">';
+$body .= '<tbody>';
+$body .= '<tr>';
+$body .= '<td align="center" valign="top">';
+$body .= '<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse!important;width:600px" width="600">';
+$body .= '<tbody>';
+$body .= '<tr>';
+$body .= '<td align="left" valign="top" width="100%" colspan="12" style="color:#444444;font-family:sans-serif;font-size:15px;line-height:150%;text-align:left">';
+$body .= '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse!important">';
+$body .= '<tbody>';
+$body .= '<tr>';
+$body .= '<td align="left" valign="top" colspan="12" width="100.0%" style="text-align:left;font-family:sans-serif;font-size:15px;line-height:1.5em;color:#444444">';
+$body .= '<div>';
+$body .= '<div>';
+$body .= '<div style="color:inherit;font-size:inherit;line-height:inherit;margin:inherit;padding:inherit">';
+$body .= '<p style="margin-bottom:1em">';
+$body .= '<a href="' . get_home_url() . '" title="' . esc_attr( get_bloginfo( "name", "display" ) ) . '">';
+
+if ( bon_get_option( 'logo' ) ) {
+	$body .= '<img src = "' . (bon_get_option( 'logo_dark', get_template_directory_uri() . "/assets/images/logo.png" )) . '" alt = "' . esc_attr( get_bloginfo( "name", "display" ) ) . '"/>';
+} else {
+	$body .= esc_attr( get_bloginfo( 'name' ) );
+}
+$body .= '</a>';
+$body .= '</p>';
+$body.='</div>';
+$body.='</div>';
+$body.='</div>';
+$body.='</td>';
+$body.='</tr>';
+$body.='</tbody>';
+$body.='</table>';
+$body.='</td>';
+$body.='</tr>';
+$body .= '<tr>';
+$body .= '<td align = "left" valign = "top" width = "100%" colspan = "12" style = "color:#444444;font-family:sans-serif;font-size:15px;line-height:150%;text-align:left">';
+$body .= '<table cellpadding = "0" cellspacing = "0" border = "0" width = "100%" style = "border-collapse:collapse!important">';
+$body .= '<tbody>';
+$body .= '<tr>';
+$body .= '<td align = "left" valign = "top" colspan = "12" width = "100.0%" style = "text-align:left;font-family:sans-serif;font-size:15px;line-height:1.5em;color:#444444">';
+$body .= '<div>';
+$body .= '<div style = "color:inherit;font-size:inherit;line-height:inherit;margin:inherit;padding:inherit">';
+$body .= '<p style = "margin-bottom:1em" >Hi&nbsp;' . $name . ',</p>';
+$body .= '<p style = "margin-bottom:1em">' . __( "Thank you for downloading our ebook.", "bon" ) . ' ' . $subject . '</p>';
+$body .= '<p style = "margin-bottom:1em">' . __( "You can download it here", "bon" ) . '-' . '&nbsp;<a href = "' . $link . '" target = "_blank">' . $anchor . '</a></p>';
+$body .= '<p style = "margin-bottom:1em">' . __( "We hope you find this helpful!", "bon" ) . '</p>';
+$body .= '<p style = "margin-bottom:1em;">';
+$body .= '<a style = "display:inline-block;padding-top:0.86667em;padding-right:1.2em;padding-bottom:0.86667em;padding-left:1.2em;font-size:1.06667em;background-color: #27AE60;border-color: #0E9547;border-radius:5px;border-style:solid;border-width:0 0 5px;color:#FFF;text-decoration:none" href = "' . $link . '">' . $anchor . '</a>';
+$body .= '</p>';
+$body .= '<p style = "margin-bottom:1em">' . __( "All the best", "bon" ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
+$body .= '</div>';
+$body .= '</div>';
+$body .= '</td>';
+$body .= '</tr>';
+$body .= '</tbody>';
+$body .= '</table>';
+$body .= '</td>';
+$body .= '</tr>';
+$body .= '</tbody>';
+$body .= '</table>';
+$body .= '</td>';
+$body .= '</tr>';
+$body .= '</tbody>';
+$body .= '</table>';
+
+$headers[] = "From: " . __( "Masters House", 'bon' );
+$headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
+$headers[] = "Content-Type: text/html";
+
+add_filter( 'wp_mail_from', function() {
+	return __( 'no-reply@mastershouse.com', 'bon' );
+} );
+add_filter( 'wp_mail_from_name', function() {
+	return __( "Masters House", 'bon' );
+} );
+
+if ( wp_mail( $email, $subject, $body, $headers ) ) {
+	$return_data['success'] = '1';
+	$return_data['value'] = __( 'Email was sent successfully.', 'bon' );
+	die( json_encode( $return_data ) );
+} else {
+	$return_data['value'] = __( 'There is an error sending email.', 'bon' );
+	die( json_encode( $return_data ) );
+}
 }
 
 function shandora_get_listing_hover_action( $post_id = '' ) {
@@ -1403,46 +1410,46 @@ function shandora_get_listing_hover_action( $post_id = '' ) {
 			'post_type' => 'attachment',
 			'numberposts' => 5,
 			'post_parent' => $post_id,
-		);
+			);
 
-		$listing_gal = shandora_get_meta( $post_id, 'listing_gallery' );
+	$listing_gal = shandora_get_meta( $post_id, 'listing_gallery' );
 
-		$imageset = '';
+	$imageset = '';
 
-		if ( $listing_gal ) {
-			$attachments = array_filter( explode( ', ', $listing_gal ) );
-			if ( $attachments ) {
-				$i = 0;
-				foreach ( $attachments as $attachment_id ) {
+	if ( $listing_gal ) {
+		$attachments = array_filter( explode( ', ', $listing_gal ) );
+		if ( $attachments ) {
+			$i = 0;
+			foreach ( $attachments as $attachment_id ) {
 
-					$image_src = wp_get_attachment_image_src( $attachment_id, 'full' );
-					$data_imageset[$i]['src'] = $image_src[0];
-					$data_imageset[$i]['title'] = get_the_title( $attachment_id );
-					$i++;
-				}
+				$image_src = wp_get_attachment_image_src( $attachment_id, 'full' );
+				$data_imageset[$i]['src'] = $image_src[0];
+				$data_imageset[$i]['title'] = get_the_title( $attachment_id );
+				$i++;
 			}
 		}
+	}
 
-		$imageset = json_encode( $data_imageset );
+	$imageset = json_encode( $data_imageset );
 
 	endif;
 
 	if ( !empty( $_overlay_btns ) ) :
 
 		$o = '<div class = "hover-icon-wrapper">';
-		if ( isset( $_overlay_btns['link'] ) && $_overlay_btns['link'] == true ) :
-			$o .= '<a data-tooltip data-options = "disable-for-touch: true" title = "' . sprintf( __( 'Permalink to %s', 'bon' ), get_the_title( $post_id ) ) . '" href = "' . get_permalink( $post_id ) . '" class = "hover-icon has-tip tip-top tip-centered-top"><i class = "sha-link"></i></a>';
-		endif;
+	if ( isset( $_overlay_btns['link'] ) && $_overlay_btns['link'] == true ) :
+		$o .= '<a data-tooltip data-options = "disable-for-touch: true" title = "' . sprintf( __( 'Permalink to %s', 'bon' ), get_the_title( $post_id ) ) . '" href = "' . get_permalink( $post_id ) . '" class = "hover-icon has-tip tip-top tip-centered-top"><i class = "sha-link"></i></a>';
+	endif;
 
-		if ( !empty( $data_imageset ) && isset( $_overlay_btns['gallery'] ) && $_overlay_btns['gallery'] == true ) :
-			$o .= '<a data-tooltip data-options = "disable-for-touch: true" data-imageset = \'' . $imageset . '\' title="' . __( 'View Image', 'bon' ) . '" class="has-tip tip-top top-centered-top hover-icon listing-gallery"><i class="sha-zoom"></i></a>';
-		endif;
+	if ( !empty( $data_imageset ) && isset( $_overlay_btns['gallery'] ) && $_overlay_btns['gallery'] == true ) :
+		$o .= '<a data-tooltip data-options = "disable-for-touch: true" data-imageset = \'' . $imageset . '\' title="' . __( 'View Image', 'bon' ) . '" class="has-tip tip-top top-centered-top hover-icon listing-gallery"><i class="sha-zoom"></i></a>';
+	endif;
 
-		if ( isset( $_overlay_btns['compare'] ) && $_overlay_btns['compare'] == true ) :
-			$o .= '<a data-tooltip data-options="disable-for-touch: true" title="' . __( 'Compare Listing', 'bon' ) . '" data-id=' . $post_id . ' class="hover-icon has-tip tip-top tip-centered-top listing-compare"><i class="sha-paperclip"></i></a>';
-		endif;
+	if ( isset( $_overlay_btns['compare'] ) && $_overlay_btns['compare'] == true ) :
+		$o .= '<a data-tooltip data-options="disable-for-touch: true" title="' . __( 'Compare Listing', 'bon' ) . '" data-id=' . $post_id . ' class="hover-icon has-tip tip-top tip-centered-top listing-compare"><i class="sha-paperclip"></i></a>';
+	endif;
 
-		$o .= '</div>';
+	$o .= '</div>';
 
 	endif;
 
@@ -1501,120 +1508,138 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			$onClick = '';
 			$show = TRUE;
 			if ( $cta['enable_home_cta_tool'] ) {
+				$destination = 'open-tool';
 				$link = bon_get_option( 'tool_section_cta_link_url' );
 				$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1035,height=690,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
 				if ( $_SESSION['layoutType'] === 'mobile' )
 					$show = FALSE;
 			}
 			if ( $cta['enable_home_cta_page'] ) {
+				$destination = 'browse-all';
 				$link = get_permalink( $cta['home_cta_link_page'] );
 			}
 			if ( $cta['enable_home_cta_post'] ) {
+				$destination = 'open-post';
 				$link = get_permalink( $cta['home_cta_link_post'] );
 			}
 			if ( $cta['enable_home_cta_url'] ) {
+				$destination = 'custom-url';
 				$link = $cta['home_cta_link_link_url'];
 			}
 		} else {
+			$destination = 'request-visit';
 			$link = '#visit-modal';
 			$onClick = "role='button' data-toggle='modal'";
 			$show = TRUE;
 		}
 		if ( $show ) :
-			echo "<a href='$link' class='flat button large " . $cta['home_cta_color'] . " radius' $onClick>" . $cta['home_cta_text'] . "</a>";
+			echo "<a href='$link' data-function='" . $destination . "' class='flat button large " . $cta['home_cta_color'] . " radius' $onClick>" . $cta['home_cta_text'] . "</a>";
 		endif;
-	endforeach;
-}
-
-function extra_class( $id ) {
-	$term_meta = wp_get_post_terms( $id, 'property-type' );
-	return $term_meta[0]->slug;
-}
-
-function get_cat_color( $id ) {
-	$property_taxonomies = get_terms( 'property-type', array( 'slug' => extra_class( $id ) ) );
-	$color = $property_taxonomies[0]->term_id;
-	$color = get_option( "taxonomy_$color" );
-	return $color['color'];
-}
-
-add_filter( 'cleaner_gallery_defaults', 'shandora_cleaner_gallery_defaults', 10 );
-
-function shandora_cleaner_gallery_defaults( $args ) {
-
-	$detect = new Mobile_Detect;
-	if ( $detect->isMobile() && !$detect->isTablet() ) {
-		$args['size'] = 'thumbnail';
-	} else {
-		$args['size'] = 'blog_small';
-	}
-	$args['columns'] = 2;
-	$args['links'] = 'attachment_page';
-
-	return $args;
-}
-
-function shandora_remove_attachment_comment() {
-	remove_post_type_support( 'attachment', 'comments' );
-}
-
-add_action( 'init', 'shandora_remove_attachment_comment' );
-
-function shandora_get_idx_options( $type = '', $r_array = false ) {
-
-	if ( empty( $type ) ) {
-		return;
+		endforeach;
 	}
 
-
-	$return = false;
-	$limit = bon_get_option( 'idx_search_option_limit', 100 );
-	$options = get_option( DSIDXPRESS_OPTION_NAME );
-	$setup_id = $options['SearchSetupID'];
-
-	$url = 'http://api-c.idx.diversesolutions.com/api/';
-
-	$results = wp_remote_get( $url . 'LocationsByType?searchSetupID=' . $setup_id . '&type=' . $type . '&minListingCount=1', array( 'decompress' => false ) );
-
-	if ( is_wp_error( $results ) ) {
-
-		$error_message = $results->get_error_message();
-		return false;
+	function extra_class( $id ) {
+		$term_meta = wp_get_post_terms( $id, 'property-type' );
+		return $term_meta[0]->slug;
 	}
 
-	$return = $results["response"]["code"] == "200" ? array_slice( json_decode( $results["body"] ), 0, $limit ) : null;
+	function get_cat_color( $id ) {
+		$property_taxonomies = get_terms( 'property-type', array( 'slug' => extra_class( $id ) ) );
+		$color = $property_taxonomies[0]->term_id;
+		$color = get_option( "taxonomy_$color" );
+		return $color['color'];
+	}
 
-	if ( $return ) {
-		if ( $r_array ) {
-			$new_return = array();
-			foreach ( $return as $r ) {
-				$new_return[] = $r->Name;
-			}
-			return $new_return;
+	add_filter( 'cleaner_gallery_defaults', 'shandora_cleaner_gallery_defaults', 10 );
+
+	function shandora_cleaner_gallery_defaults( $args ) {
+
+		$detect = new Mobile_Detect;
+		if ( $detect->isMobile() && !$detect->isTablet() ) {
+			$args['size'] = 'thumbnail';
 		} else {
-			return $return;
+			$args['size'] = 'blog_small';
 		}
-	} else {
-		return;
-	}
-}
+		$args['columns'] = 2;
+		$args['links'] = 'attachment_page';
 
-function shandora_get_country_selection() {
-	$languages = icl_get_languages( 'skip_missing=0&orderby=code' );
-	if ( !empty( $languages ) ) {
-		$o = '';
-		foreach ( $languages as $l ) {
-			$o .= '<li class="language-selector">';
-			if ( !$l['active'] ) {
-				$o .= '<a href="' . $l['url'] . '">';
-			} else {
-				$o .= '<a>';
-			}
-			$o .= '<img src="' . $l['country_flag_url'] . '" height="12" alt="' . $l['language_code'] . '" width="18" />';
-			$o .= '</a>';
-			$o .= '</li>';
-		}
-		return $o;
+		return $args;
 	}
-}
-?>
+
+	function shandora_remove_attachment_comment() {
+		remove_post_type_support( 'attachment', 'comments' );
+	}
+
+	add_action( 'init', 'shandora_remove_attachment_comment' );
+
+	function shandora_get_idx_options( $type = '', $r_array = false ) {
+
+		if ( empty( $type ) ) {
+			return;
+		}
+
+
+		$return = false;
+		$limit = bon_get_option( 'idx_search_option_limit', 100 );
+		$options = get_option( DSIDXPRESS_OPTION_NAME );
+		$setup_id = $options['SearchSetupID'];
+
+		$url = 'http://api-c.idx.diversesolutions.com/api/';
+
+		$results = wp_remote_get( $url . 'LocationsByType?searchSetupID=' . $setup_id . '&type=' . $type . '&minListingCount=1', array( 'decompress' => false ) );
+
+		if ( is_wp_error( $results ) ) {
+
+			$error_message = $results->get_error_message();
+			return false;
+		}
+
+		$return = $results["response"]["code"] == "200" ? array_slice( json_decode( $results["body"] ), 0, $limit ) : null;
+
+		if ( $return ) {
+			if ( $r_array ) {
+				$new_return = array();
+				foreach ( $return as $r ) {
+					$new_return[] = $r->Name;
+				}
+				return $new_return;
+			} else {
+				return $return;
+			}
+		} else {
+			return;
+		}
+	}
+
+	function shandora_get_country_selection() {
+		$languages = icl_get_languages( 'skip_missing=0&orderby=code' );
+		if ( !empty( $languages ) ) {
+			$o = '';
+			foreach ( $languages as $l ) {
+				$o .= '<li class="language-selector">';
+				if ( !$l['active'] ) {
+					$o .= '<a href="' . $l['url'] . '">';
+				} else {
+					$o .= '<a>';
+				}
+				$o .= '<img src="' . $l['country_flag_url'] . '" height="12" alt="' . $l['language_code'] . '" width="18" />';
+				$o .= '</a>';
+				$o .= '</li>';
+			}
+			return $o;
+		}
+	}
+
+	function get_thumbnail_src() {
+
+		$img = get_the_image(array(
+			'link_to_post' => false,
+			'meta_key' => false,
+			'size' => 'post-featured',
+			'format' => 'array'
+			)
+		);
+
+		return $img['src'];
+	}
+	?>

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
 "POT-Creation-Date: 2015-01-16 17:20+0100\n"
-"PO-Revision-Date: 2015-02-17 15:20+0100\n"
+"PO-Revision-Date: 2015-03-02 13:22+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: pl\n"
@@ -1484,6 +1484,18 @@ msgstr "Cena"
 msgid "Services"
 msgstr "Usługi"
 
+#: includes/post-types/property.php:162
+msgid "Ground floor"
+msgstr "Parter"
+
+#: includes/post-types/property.php:163
+msgid "First floor"
+msgstr "Pierwsze piętro"
+
+#: includes/post-types/property.php:164
+msgid "Second floor"
+msgstr "Drugie piętro"
+
 #: includes/post-types/property.php:351
 msgctxt "products category url slug"
 msgid "type"
@@ -1648,8 +1660,8 @@ msgid "We succesfully received your request. Our representative will contact you
 msgstr "Pomyślnie otrzymaliśmy Twoje zapytanie. Nasz przedstawiciel skontaktuje się z Tobą w ciągu jednej godziny."
 
 #: includes/theme-actions.php:1224 includes/theme-actions.php:1353 templates/woocommerce/email-template.php:58
-msgid "All the best"
-msgstr "Wszystkiego dobrego"
+msgid "Kind regards"
+msgstr "Serdeczne pozdrowienia"
 
 #: includes/theme-actions.php:1227 includes/theme-actions.php:1234 includes/theme-actions.php:1230
 msgid "Thank you for contacting us"
