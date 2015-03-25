@@ -34,6 +34,8 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_loop", "shandora_close_main_content_row", 10 );
 
+		add_action( "{$prefix}before_home", "shandora_home_promotion", 4 );
+
 		add_action( "{$prefix}before_home", "shandora_home_toolsection", 5 );
 
 		add_action( "{$prefix}before_home", "shandora_home_we_are", 10 );
@@ -1328,12 +1330,26 @@ function shandora_listing_toolsection() {
 }
 
 /**
+ * Get Promotion Section Home
+ * Added by Lech Dutkiewicz
+ * @since 1.3.7
+ * @return void
+ *
+ */
+
+function shandora_home_promotion() {
+	if ( bon_get_option( 'home_promotion' ) )
+		bon_get_template_part( 'block', 'block-promotion-home' );
+}
+
+/**
  * Get Tool Section Home
  * Added by Lech Dutkiewicz
  * @since 1.3.6
  * @return void
  *
  */
+
 function shandora_home_toolsection() {
 	bon_get_template_part( 'block', 'block-toolsection-home' );
 }

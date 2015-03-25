@@ -1593,6 +1593,12 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'type' => 'text' );
 
 		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Display promotion', 'bon' ),
+			'desc' => __( 'Check if there is a promotion running', 'bon' ),
+			'id' => 'home_promotion',
+			'type' => 'checkbox' );
+
+		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Home call to action', 'bon' ),
 			'desc' => __( 'Add call to action', 'bon' ),
 			'id' => 'home_cta',
