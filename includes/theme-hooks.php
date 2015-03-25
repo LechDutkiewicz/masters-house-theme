@@ -224,9 +224,9 @@ function shandora_setup_theme_hook() {
 
 			}
 
-			if ( !function_exists( 'shandora_woo_template_part' ) ) {
+			if ( !function_exists( 'shandora_woo_after_template_part' ) ) {
 
-				function shandora_woo_template_part( $template_name, $template_path, $located, $args ) {
+				function shandora_woo_after_template_part( $template_name, $template_path, $located, $args ) {
 
 					if ( 'loop/no-products-found.php' == $template_name ) {
 						echo '</div></div>';
