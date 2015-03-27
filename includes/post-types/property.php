@@ -314,45 +314,49 @@ array(
 
 /* Add options for all packages defined in theme listing options */
 
-foreach (get_packages_list() as $package) {
-	$prop_options[] = array(
-		'label' => $package['package_name'],
-		'id' => $prefix . $suffix . $package['package_name'],
-		'type' => 'info',
-		'class' => $package['package_color'] . ' bg hidden'
-		);
-	$prop_options[] = array(
-		'label' => __( 'Price', 'bon' ),
-		'id' => $prefix . $suffix . $package['package_name'] . '_price',
-		'type' => 'number',
-		'class' => 'hidden'
-		);
-	$prop_options[] = array(
-		'label' => __( 'Wall material', 'bon' ),
-		'id' => $prefix . $suffix . $package['package_name'] . '_material',
-		'type' => 'text',
-		'class' => 'hidden'
-		);
-	$prop_options[] = array(
-		'label' => __( 'Wall thickness', 'bon' ),
-		'desc' => __( 'Product wall thickness in milimeters, without unit', 'bon' ),
-		'id' => $prefix . $suffix . $package['package_name'] . '_wall_thickness',
-		'type' => 'number',
-		'class' => 'hidden'
-		);
-	$prop_options[] = array(
-		'label' => __( 'Windows and doors thickness', 'bon' ),
-		'desc' => __( 'Product windows and door thickness in milimeters, without unit', 'bon' ),
-		'id' => $prefix . $suffix . $package['package_name'] . '_windows_thickness',
-		'type' => 'number',
-		'class' => 'hidden'
-		);
-	$prop_options[] = array(
-		'label' => __( 'Package description', 'bon' ),
-		'id' => $prefix . $suffix . $package['package_name'] . '_content',
-		'type' => 'editor',
-		'class' => 'hidden'
-		);
+if ( $packages = get_packages_list() ) {
+	
+	foreach ( $packages as $package ) {
+		$prop_options[] = array(
+			'label' => $package['package_name'],
+			'id' => $prefix . $suffix . $package['package_name'],
+			'type' => 'info',
+			'class' => $package['package_color'] . ' bg hidden'
+			);
+		$prop_options[] = array(
+			'label' => __( 'Price', 'bon' ),
+			'id' => $prefix . $suffix . $package['package_name'] . '_price',
+			'type' => 'number',
+			'class' => 'hidden'
+			);
+		$prop_options[] = array(
+			'label' => __( 'Wall material', 'bon' ),
+			'id' => $prefix . $suffix . $package['package_name'] . '_material',
+			'type' => 'text',
+			'class' => 'hidden'
+			);
+		$prop_options[] = array(
+			'label' => __( 'Wall thickness', 'bon' ),
+			'desc' => __( 'Product wall thickness in milimeters, without unit', 'bon' ),
+			'id' => $prefix . $suffix . $package['package_name'] . '_wall_thickness',
+			'type' => 'number',
+			'class' => 'hidden'
+			);
+		$prop_options[] = array(
+			'label' => __( 'Windows and doors thickness', 'bon' ),
+			'desc' => __( 'Product windows and door thickness in milimeters, without unit', 'bon' ),
+			'id' => $prefix . $suffix . $package['package_name'] . '_windows_thickness',
+			'type' => 'number',
+			'class' => 'hidden'
+			);
+		$prop_options[] = array(
+			'label' => __( 'Package description', 'bon' ),
+			'id' => $prefix . $suffix . $package['package_name'] . '_content',
+			'type' => 'editor',
+			'class' => 'hidden'
+			);
+	}
+
 }
 
 

@@ -181,13 +181,8 @@ if( !function_exists('shandora_setup_theme_supports') ) {
 
 			
 		));
-	
 
-		if (WP_ENV === 'development') {
 			$color = 'orange';
-		} else if (WP_ENV === 'production') {
-			$color = 'orange.min';
-		}
 		
 		$theme_supports['dynamic-style'] = apply_filters('shandora_dynamic_style', array(
 
