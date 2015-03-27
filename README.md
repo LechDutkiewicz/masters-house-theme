@@ -1,4 +1,15 @@
-# [Roots Starter Theme](http://roots.io/)
-[![devDependency Status](https://david-dm.org/roots/roots/dev-status.svg)](https://david-dm.org/roots/roots#info=devDependencies)
+# 27 III 2015 Update
 
-Roots is a WordPress starter theme based on [HTML5 Boilerplate](http://html5boilerplate.com/) & [Bootstrap](http://getbootstrap.com/) that will help you make better themes.
+Please add in your wp-config.php below line define('WP_DEBUG', false);
+
+if (!defined('WP_ENV')) {
+	define('WP_ENV', 'production');
+}
+
+# Shandora Real Estate WordPress Theme by Bonfirelab
+
+Documentation can be found in http://support.bonfirelab.com/docs/shandora-real-estate-wordpress-theme
+
+Support through forum
+support.bonfirelab.com/forums/forum/shandora-real-estate-wordpress-theme
+
