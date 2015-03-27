@@ -433,6 +433,55 @@ $('#search-listing-form').submit(function () {
 	})
 });
 
+$('.package-form select').change(function(){
+
+	var form = $('.package-form');
+	var send_data = form.serialize();
+	//alert(send_data);
+	$.post(bon_toolkit_ajax.url, 'action=process-package&' + send_data, function (data) {
+		if (data.success === '1') {
+			var priceContainer = $('.price-box .price'),
+				priceSpan = $('span[itemprop="price"]'),
+				wallContainer = $('.entry-meta .wall'),
+				wallSpan = $('span[data-meta="thickness"');
+
+				priceContainer.fadeOut(300, 'easeInOutSine', function() {
+					priceSpan.html(data.price);
+					priceContainer.fadeIn(300, 'easeInOutSine');
+				});
+				wallContainer.fadeOut(300, 'easeInOutSine', function() {
+					wallSpan.html(data.wall);
+					wallContainer.fadeIn(300, 'easeInOutSine');
+				});
+				
+		}
+	}, 'json');
+	/*$.post(bon_toolkit_ajax.url, 'action=process-' + formID + '&' + send_data, function (data) {
+		$t.find('.contact-loader').fadeOut();
+		if (data.success == '1') {
+			$t.find('input[type="text"], textarea').val('');
+			$t.find('.sending-result div.bon-toolkit-alert').each(function () {
+				$(this).html(data.value);
+				$(this).removeClass('red').addClass('green').css({
+					'margin-top': '10px',
+					'display': 'block'
+				});
+				$(this).parent().fadeIn(200)
+			})
+		} else {
+			$t.find('.sending-result div.bon-toolkit-alert').each(function () {
+				$(this).html(data.value);
+				$(this).removeClass('green').addClass('red').css({
+					'margin-top': '10px',
+					'display': 'block'
+				});
+				$(this).parent().fadeIn(200)
+			})
+		}
+	}, 'json');*/
+
+});
+
 $('#backtop').click(function () {
 	jQuery('body,html').animate({
 		scrollTop: 0
@@ -798,7 +847,7 @@ if ($('.format-video').length > 0) {
 		$('.format-video').fitVids()
 	}
 }
-$('#detail-tab .tab-nav a').click(function (e) {
+$('.tabs-container .tab-nav a').click(function (e) {
 	e.preventDefault();
 	$(this).siblings().removeClass('active');
 	$(this).addClass('active');
@@ -1406,7 +1455,7 @@ var launchGoogleEvents = function() {
 
 };
 
-$(launchGoogleEvents);
+/*$(launchGoogleEvents);*/
 
 
 
