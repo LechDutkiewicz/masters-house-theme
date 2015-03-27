@@ -80,7 +80,11 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}before_single_entry_content", "shandora_listing_gallery", 5 );
 
+		add_action( "{$prefix}before_single_entry_content", "shandora_listing_meta", 10 );
+
 		// removed by Lech Dutkiewicz add_action("{$prefix}after_single_entry_content", "shandora_listing_meta", 5);
+
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 9 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_services", 10 );
 
@@ -847,15 +851,42 @@ function shandora_listing_gallery() {
  *
  */
 function shandora_listing_meta() {
-	?>
 
-	<div class="entry-meta" itemprop="description">
-		<?php
-		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'meta' );
+	if ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) ) {
+
 		?>
-	</div>
 
-	<?php
+		<div class="entry-meta" itemprop="description">
+			<?php
+			bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'meta' );
+			?>
+		</div>
+
+		<?php
+	}
+}
+
+/**
+ * Get Listing Packages
+ * Added by Lech Dutkiewicz
+ * @since 1.4.0
+ * @return void
+ *
+ */
+function shandora_listing_packages() {
+
+	if ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) ) {
+
+		?>
+
+		<section class="row entry-specification">
+			<?php
+			bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'packages' );
+			?>
+		</section>
+
+		<?php
+	}
 }
 
 /**
@@ -956,7 +987,7 @@ function shandora_listing_detail_tabs() {
 		$detail_class = "large-12";
 	}
 	?>
-	<div id="detail-tab" class="column <?php echo $detail_class; ?>">
+	<div id="detail-tab" class="column tabs-container <?php echo $detail_class; ?>">
 		<?php
 		//bon_get_template_part('block', ( is_singular( 'product' ) ? 'carlistingtab' : 'listingtab' ) ); 
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'tab' );
@@ -2116,4 +2147,46 @@ function pippin_get_image_id( $image_url ) {
 	global $wpdb;
 	$attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ) );
 	return $attachment[0];
+}
+
+function get_package_details( $id, $package_prefix ) {
+
+	$output = array(
+		shandora_get_meta($id, $package_prefix . '_price', true) => __( 'Price', 'bon' ),
+		shandora_get_meta($id, $package_prefix . '_material') => __( 'Wall material', 'bon' ),
+		shandora_get_meta($id, $package_prefix . '_wall_thickness', true) => __( 'Wall thickness', 'bon' ),
+		shandora_get_meta($id, $package_prefix . '_windows_thickness', true) => __( 'Windows thickness', 'bon' )
+		);
+
+	return ($output);
+}
+
+function package_details( $id, $package_prefix ) {
+
+	$details = get_package_details( $id, $package_prefix );
+
+	foreach ( $details as $key => $value ) {
+		if ( !empty( $key ) ) { ?>
+		<li>
+			<strong><?php echo $value; ?> </strong>
+			<span>
+				<?php
+				echo $key;
+
+				if ( $key == 'lotsize' || $key == 'terracesqmt' ) {
+
+					echo ' ' . $sizemeasurement;
+
+				}
+
+				if ( $key == 'price' || $key == 'monprice' ) {
+
+					echo ' ' . $currency;
+
+				} ?>
+			</span>
+		</li>
+		<?php }
+	}
+
 }

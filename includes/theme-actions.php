@@ -1134,6 +1134,45 @@ function shandora_block_grid_column_class( $echo = true ) {
 	}
 }
 
+add_action( 'wp_ajax_process-package', 'shandora_process_packageform' );
+add_action( 'wp_ajax_nopriv_process-package', 'shandora_process_packageform' );
+
+function shandora_process_packageform() {
+
+	if ( !isset( $_POST ) || empty( $_POST ) ) {
+		$return_data['value'] = __( 'Cannot update package values. No parameter receive form AJAX call.', 'bon' );
+		die( json_encode( $return_data ) );
+	} else {	
+
+		$return_data['success'] = '1';
+
+		$suffix = SHANDORA_MB_SUFFIX;
+
+		$package = esc_html( $_POST['package_form'] );
+
+		if ( empty( $package ) ) {
+			$return_data['value'] = __( 'Cannot update package values. No parameter receive form AJAX call.', 'bon' );
+			die( json_encode( $return_data ) );
+		} else {
+			$package_prefix = $suffix . $package;
+		}
+
+		$postID = esc_html( $_POST['post_id'] );
+
+		if ( empty( $postID ) ) {
+			$return_data['value'] = __( 'Cannot update package values. No parameter receive form AJAX call.', 'bon' );
+			die( json_encode( $return_data ) );
+		} else {
+			$return_data['price'] = shandora_get_meta( $postID, $package_prefix . '_price', true);
+			$return_data['wall'] = shandora_get_meta( $postID, $package_prefix . '_wall_thickness', true);
+		}
+
+		die( json_encode( $return_data ) );
+
+	}
+
+}
+
 add_action( 'wp_ajax_process-agent-contactform', 'shandora_process_contactform' );
 add_action( 'wp_ajax_nopriv_process-agent-contactform', 'shandora_process_contactform' );
 add_action( 'wp_ajax_process-contact-requestform', 'shandora_process_contactform' );

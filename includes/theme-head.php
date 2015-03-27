@@ -51,14 +51,18 @@ if(!function_exists('shandora_print_tracking_code')) {
 
 	function shandora_print_tracking_code() {
 
-		$scripts = bon_get_option('google_analytics');
-		
-		if(!empty($scripts)) { ?>
+		if (WP_ENV === 'production') {
+
+			$scripts = bon_get_option('google_analytics');
 			
-				<?php echo $scripts; ?>
+			if(!empty($scripts)) { ?>
+				
+					<?php echo $scripts; ?>
 
 
-			<?php 
+				<?php 
+			}
+
 		}
 
 	}
