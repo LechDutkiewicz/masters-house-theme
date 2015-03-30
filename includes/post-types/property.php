@@ -353,7 +353,10 @@ if ( $packages = get_packages_list() ) {
 			'label' => __( 'Package description', 'bon' ),
 			'id' => $prefix . $suffix . $package['package_name'] . '_content',
 			'type' => 'editor',
-			'class' => 'hidden'
+			'class' => 'hidden',
+			'settings' => array(
+				'textarea_rows' => 20
+				),
 			);
 	}
 
