@@ -1,1 +1,0 @@
-<h3 style="background: #FF6633">PAPARARA</h3>

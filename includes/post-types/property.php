@@ -355,7 +355,11 @@ if ( $packages = get_packages_list() ) {
 			'type' => 'editor',
 			'class' => 'hidden',
 			'settings' => array(
-				'textarea_rows' => 20
+				'media_buttons' => false,
+				'tinymce' => true,
+				'teeny' => false,
+				'wpautop' => true,
+				'textarea_rows' => 30
 				),
 			);
 	}
@@ -542,6 +546,18 @@ if ( !function_exists( 'shandora_setup_addon_post_type' ) ) {
 
 
 		$cpt->create( 'Addon', array( 'supports' => array( 'title', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 75, 'menu_icon' => 'dashicons-welcome-add-page' ), array(), $name, $plural );
+
+		$addon_opt1 = array(
+			array(
+				'label' => __( 'Enable only for big houses', 'bon'),
+				'id' => $prefix . 'enabled',
+				'type' => 'checkbox'
+				),
+			);
+
+		$cpt->add_meta_box(
+			'addon-options', 'Addon Options', $addon_opt1
+			);
 	}
 
 }

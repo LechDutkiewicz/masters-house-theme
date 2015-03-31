@@ -635,7 +635,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 					'id' => 'package_color',
 					'type' => 'radio-img',
 					'std' => 'carrot',
-				)
+				),
 			) );
 
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Template Options', 'bon' ),

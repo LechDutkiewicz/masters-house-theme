@@ -212,8 +212,8 @@ function shandora_setup_theme_hook() {
 			add_action( 'woocommerce_checkout_shipping', 'shandora_column_close', 15 );
 
 			// Title removal:
-			add_filter( 'woocommerce_show_page_title', false );
-			add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+			add_filter( 'woocommerce_show_page_title', 'override_page_title' );
+			add_filter( 'woocommerce_enqueue_styles', 'override_page_title' );
 			add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
 
 			/* WOOCOMMERCE OVERRIDE FUNCTIONS */
@@ -2189,4 +2189,14 @@ function package_details( $id, $package_prefix ) {
 		<?php }
 	}
 
+}
+
+if ( !function_exists( 'override_page_title' ) ) {
+
+	function override_page_title() {
+
+		return false;
+
+	}
+	
 }
