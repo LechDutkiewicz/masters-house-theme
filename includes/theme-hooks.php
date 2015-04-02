@@ -2161,9 +2161,28 @@ function get_package_details( $id, $package_prefix ) {
 	return ($output);
 }
 
-function package_details( $id, $package_prefix ) {
+function get_packages_details( $id, $package_prefix, $package ) {
+
+	$heightmeasurement = bon_get_option( 'height_measure' );
+
+	$output = array(
+		shandora_get_meta($id, sanitize_title( $package_prefix ) . '_price', true) => __( 'Price', 'bon' ),
+		$package['package_material'] => __( 'Wall material', 'bon' ),
+		$package['package_wall_thickness'] . ' ' . strtolower($heightmeasurement) => __( 'Wall thickness', 'bon' ),
+		$package['package_windows_thickness'] . ' ' . strtolower($heightmeasurement) => __( 'Windows thickness', 'bon' )
+		);
+
+	return $output;
+
+}
+
+// Uncomment this if each product would have it's own package descriptions
+
+/*function package_details( $id, $package_prefix ) {
 
 	$details = get_package_details( $id, $package_prefix );
+
+	var_dump($details);
 
 	foreach ( $details as $key => $value ) {
 		if ( !empty( $key ) ) { ?>
@@ -2187,6 +2206,33 @@ function package_details( $id, $package_prefix ) {
 			</span>
 		</li>
 		<?php }
+	}
+
+}*/
+
+function packages_details( $id, $package_prefix, $name = NULL ) {
+
+	if ( $name !== NULL ) {
+
+		$details = bon_get_option( 'cottage_packages' );
+		
+		foreach ( $details as $key => $detail ) {
+
+			if ( $detail['package_name'] !== $name )
+				continue;
+
+			$detailMeta = get_packages_details( $id, $package_prefix, $detail );
+			
+			foreach ( $detailMeta as $value => $name ) { ?>
+
+			<li>
+				<strong><?php echo $name; ?></strong>
+				<span><?php echo $value; ?></span>
+			</li>
+
+			<?php }
+		}
+
 	}
 
 }

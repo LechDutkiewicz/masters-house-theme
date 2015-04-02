@@ -1148,9 +1148,23 @@ function shandora_process_packageform() {
 
 		$suffix = SHANDORA_MB_SUFFIX;
 
-		$package = esc_html( $_POST['package_form'] );
+		// Uncomment this if each product would have it's own package descriptions
 
-		if ( empty( $package ) ) {
+		/*$package = esc_html( $_POST['package_form'] );*/
+
+		$chosenPackage = esc_html( $_POST['package_form'] );
+
+		$packages = get_packages_list();
+
+		foreach ( $packages as $key => $package ) {
+			if ( $package['package_name'] !== $chosenPackage )
+				continue;
+			$thickness = $packages[$key]['package_wall_thickness'];
+		}
+
+		// Uncomment this if each product would have it's own package descriptions
+
+		/*if ( empty( $package ) ) {
 			$return_data['value'] = __( 'Cannot update package values. No parameter receive form AJAX call.', 'bon' );
 			die( json_encode( $return_data ) );
 		} else {
@@ -1165,6 +1179,23 @@ function shandora_process_packageform() {
 		} else {
 			$return_data['price'] = shandora_get_meta( $postID, $package_prefix . '_price', true);
 			$return_data['wall'] = shandora_get_meta( $postID, $package_prefix . '_wall_thickness', true);
+		}*/
+
+		if ( empty( $chosenPackage ) ) {
+			$return_data['value'] = __( 'Cannot update package values. No parameter receive form AJAX call.', 'bon' );
+			die( json_encode( $return_data ) );
+		} else {
+			$package_prefix = $suffix . $chosenPackage;
+		}
+
+		$postID = esc_html( $_POST['post_id'] );
+
+		if ( empty( $postID ) ) {
+			$return_data['value'] = __( 'Cannot update package values. No parameter receive form AJAX call.', 'bon' );
+			die( json_encode( $return_data ) );
+		} else {
+			$return_data['price'] = shandora_get_meta( $postID, sanitize_title( $package_prefix ) . '_price', true);
+			$return_data['wall'] = $thickness;
 		}
 
 		die( json_encode( $return_data ) );

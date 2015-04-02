@@ -319,17 +319,22 @@ if ( $packages = get_packages_list() ) {
 	foreach ( $packages as $package ) {
 		$prop_options[] = array(
 			'label' => $package['package_name'],
-			'id' => $prefix . $suffix . $package['package_name'],
+			'id' => $prefix . $suffix . sanitize_title($package['package_name']),
 			'type' => 'info',
 			'class' => $package['package_color'] . ' bg hidden'
 			);
 		$prop_options[] = array(
 			'label' => __( 'Price', 'bon' ),
-			'id' => $prefix . $suffix . $package['package_name'] . '_price',
+			'id' => $prefix . $suffix . sanitize_title($package['package_name']) . '_price',
 			'type' => 'number',
 			'class' => 'hidden'
 			);
-		$prop_options[] = array(
+
+
+
+		// Uncomment this if each product would have it's own package descriptions
+
+		/*$prop_options[] = array(
 			'label' => __( 'Wall material', 'bon' ),
 			'id' => $prefix . $suffix . $package['package_name'] . '_material',
 			'type' => 'text',
@@ -361,7 +366,7 @@ if ( $packages = get_packages_list() ) {
 				'wpautop' => true,
 				'textarea_rows' => 30
 				),
-			);
+			);*/
 	}
 
 }

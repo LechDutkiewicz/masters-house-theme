@@ -35,8 +35,8 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 		  'purple' => __( 'Purple', 'bon' ),
 		  ) ); */
 
-		$search_fields = apply_filters( 'bon_search_field_options', array(
-			'none' => __( 'Disable', 'bon' ),
+$search_fields = apply_filters( 'bon_search_field_options', array(
+	'none' => __( 'Disable', 'bon' ),
 			/* 'title' => __('Post Title Field (Real Estate / Car Dealer)', 'bon'),
 			  'mls' => __('MLS Text Field', 'bon'),
 			  'zip' => __('Zip Text Field', 'bon'),
@@ -46,7 +46,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			  'location_level2' => __('Level 2 Location Only', 'bon'),
 			  'location_level3' => __('Level 3 Location Only', 'bon'),
 			  'feature' => __('Feature Dropdown', 'bon'), */
-			'lotsize' => __( 'Lot Size Slider', 'bon' ),
+			  'lotsize' => __( 'Lot Size Slider', 'bon' ),
 			/* 'buildingsize' => __('Building Size Slider', 'bon'),
 			  'floor' => __('Floor Slider', 'bon'),
 			  'agent' => __('Agent Dropdown', 'bon'),
@@ -54,212 +54,212 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			  'basement' => __('Basement Slider', 'bon'),
 			  'mortgage' => __('Mortgage Availability Dropdown', 'bon'),
 			  'type' => __('Property Type Dropdown', 'bon'), */
-			'price' => __( 'Price Range Slider', 'bon' ),
+			  'price' => __( 'Price Range Slider', 'bon' ),
 			/* 'size' => __('Size Range Slider', 'bon'),
 			  'bed' => __('Beds Slider', 'bon'),
 			  'bath' => __('Baths Slider', 'bon'), */
-			'type' => __( 'Product category', 'bon' )
-				) );
+			  'type' => __( 'Product category', 'bon' )
+			  ) );
 
-		$car_search_fields = apply_filters( 'bon_car_search_field_options', array(
-			'reg' => __( 'Reg Number Field **Car Listing**', 'bon' ),
-			'car_status' => __( 'Car Status Dropdown **Car Listing**', 'bon' ),
-			'mileage' => __( 'Mileage Slider **Car Listing**', 'bon' ),
-			'exterior_color' => __( 'Exterior Color Field **Car Listing**', 'bon' ),
-			'interior_color' => __( 'Interior Color Field **Car Listing**', 'bon' ),
-			'fuel_type' => __( 'Fuel Type Field **Car Listing**', 'bon' ),
-			'transmission' => __( 'Transmission Dropdown **Car Listing**', 'bon' ),
-			'car_price' => __( 'Price Range Slider **Car Listing**', 'bon' ),
-			'ancap' => __( 'ANCAP or Safety Slider **Car Listing**', 'bon' ),
-			'dealer_location' => __( 'Dealer Location Dropdown **Car Listing**', 'bon' ),
-			'car_feature' => __( 'Car Feature Dropdown **Car Listing**', 'bon' ),
-			'body_type' => __( 'Body Type Dropdown **Car Listing**', 'bon' ),
-			'manufacturer' => __( 'Manufacturer Dropdown **Car Listing**', 'bon' ),
-			'manufacturer_level1' => __( 'Manufacturer Dropdown Level 1 **Car Listing**', 'bon' ),
-			'manufacturer_level2' => __( 'Manufacturer Dropdown Level 2 **Car Listing**', 'bon' ),
-			'manufacturer_level3' => __( 'Manufacturer Dropdown Level 3 **Car Listing**', 'bon' ),
-			'dealer_location_level1' => __( 'Level 1 Dealer Location Only **Car Listing**', 'bon' ),
-			'dealer_location_level2' => __( 'Level 2 Dealer Location Only **Car Listing**', 'bon' ),
-			'dealer_location_level3' => __( 'Level 3 Dealer Location Only **Car Listing**', 'bon' ),
-			'yearbuilt' => __( 'Year Built', 'bon' ),
-				) );
+$car_search_fields = apply_filters( 'bon_car_search_field_options', array(
+	'reg' => __( 'Reg Number Field **Car Listing**', 'bon' ),
+	'car_status' => __( 'Car Status Dropdown **Car Listing**', 'bon' ),
+	'mileage' => __( 'Mileage Slider **Car Listing**', 'bon' ),
+	'exterior_color' => __( 'Exterior Color Field **Car Listing**', 'bon' ),
+	'interior_color' => __( 'Interior Color Field **Car Listing**', 'bon' ),
+	'fuel_type' => __( 'Fuel Type Field **Car Listing**', 'bon' ),
+	'transmission' => __( 'Transmission Dropdown **Car Listing**', 'bon' ),
+	'car_price' => __( 'Price Range Slider **Car Listing**', 'bon' ),
+	'ancap' => __( 'ANCAP or Safety Slider **Car Listing**', 'bon' ),
+	'dealer_location' => __( 'Dealer Location Dropdown **Car Listing**', 'bon' ),
+	'car_feature' => __( 'Car Feature Dropdown **Car Listing**', 'bon' ),
+	'body_type' => __( 'Body Type Dropdown **Car Listing**', 'bon' ),
+	'manufacturer' => __( 'Manufacturer Dropdown **Car Listing**', 'bon' ),
+	'manufacturer_level1' => __( 'Manufacturer Dropdown Level 1 **Car Listing**', 'bon' ),
+	'manufacturer_level2' => __( 'Manufacturer Dropdown Level 2 **Car Listing**', 'bon' ),
+	'manufacturer_level3' => __( 'Manufacturer Dropdown Level 3 **Car Listing**', 'bon' ),
+	'dealer_location_level1' => __( 'Level 1 Dealer Location Only **Car Listing**', 'bon' ),
+	'dealer_location_level2' => __( 'Level 2 Dealer Location Only **Car Listing**', 'bon' ),
+	'dealer_location_level3' => __( 'Level 3 Dealer Location Only **Car Listing**', 'bon' ),
+	'yearbuilt' => __( 'Year Built', 'bon' ),
+	) );
 
-		$boat_search_fields = apply_filters( 'bon_boat_search_field_options', array(
-			'reg' => __( 'Reg Number Field', 'bon' ),
-			'boat_status' => __( 'Boat Condition Dropdown', 'bon' ),
-			'boat_make' => __( 'Make', 'bon' ),
-			'boat_model' => __( 'Model', 'bon' ),
-			'boat_submodel' => __( 'Sub Model', 'bon' ),
-			'boat_engine_make' => __( 'Engine Make', 'bon' ),
-			'boat_engine_model' => __( 'Engine Model', 'bon' ),
-			'boat_engine_submodel' => __( 'Engine Sub Model', 'bon' ),
-			'boat_location' => __( 'Dealer Location Dropdown ', 'bon' ),
-			'boat_location_level1' => __( 'Level 1 Dealer Location Only ', 'bon' ),
-			'boat_location_level2' => __( 'Level 2 Dealer Location Only ', 'bon' ),
-			'boat_location_level3' => __( 'Level 3 Dealer Location Only ', 'bon' ),
-			'boat_feature' => __( 'Boat Feature Dropdown', 'bon' ),
-			'yearbuilt' => __( 'Year Built', 'bon' ),
-			'fuel_capacity' => __( 'Fuel Capacity', 'bon' ),
-			'price' => __( 'Price Range Slider', 'bon' ),
-				) );
+$boat_search_fields = apply_filters( 'bon_boat_search_field_options', array(
+	'reg' => __( 'Reg Number Field', 'bon' ),
+	'boat_status' => __( 'Boat Condition Dropdown', 'bon' ),
+	'boat_make' => __( 'Make', 'bon' ),
+	'boat_model' => __( 'Model', 'bon' ),
+	'boat_submodel' => __( 'Sub Model', 'bon' ),
+	'boat_engine_make' => __( 'Engine Make', 'bon' ),
+	'boat_engine_model' => __( 'Engine Model', 'bon' ),
+	'boat_engine_submodel' => __( 'Engine Sub Model', 'bon' ),
+	'boat_location' => __( 'Dealer Location Dropdown ', 'bon' ),
+	'boat_location_level1' => __( 'Level 1 Dealer Location Only ', 'bon' ),
+	'boat_location_level2' => __( 'Level 2 Dealer Location Only ', 'bon' ),
+	'boat_location_level3' => __( 'Level 3 Dealer Location Only ', 'bon' ),
+	'boat_feature' => __( 'Boat Feature Dropdown', 'bon' ),
+	'yearbuilt' => __( 'Year Built', 'bon' ),
+	'fuel_capacity' => __( 'Fuel Capacity', 'bon' ),
+	'price' => __( 'Price Range Slider', 'bon' ),
+	) );
 
-		$orderby_options = apply_filters( 'bon_orderby_options', array(
-			/* 'date' => __('Date', 'bon'), */
-			'price' => __( 'Price', 'bon' ),
-			/* 'title' => __('Title', 'bon'), */
-			'lotsize' => __( 'Size', 'bon' ),
-				) );
+$orderby_options = apply_filters( 'bon_orderby_options', array(
+	/* 'date' => __('Date', 'bon'), */
+	'price' => __( 'Price', 'bon' ),
+	/* 'title' => __('Title', 'bon'), */
+	'lotsize' => __( 'Size', 'bon' ),
+	) );
 
-		$order_options = array(
-			'ASC' => __( 'Ascending', 'bon' ),
-			'DESC' => __( 'Descending', 'bon' )
-		);
+$order_options = array(
+	'ASC' => __( 'Ascending', 'bon' ),
+	'DESC' => __( 'Descending', 'bon' )
+	);
 
-		if ( bon_get_option( 'enable_car_listing' ) == 'yes' ) {
-			$search_fields = array_merge( $search_fields, $car_search_fields );
-		}
+if ( bon_get_option( 'enable_car_listing' ) == 'yes' ) {
+	$search_fields = array_merge( $search_fields, $car_search_fields );
+}
 
 
-		$layouts = get_theme_support( 'theme-layouts' );
-		$args = theme_layouts_get_args();
+$layouts = get_theme_support( 'theme-layouts' );
+$args = theme_layouts_get_args();
 
-		/* Set up an array for the layout choices and add in the 'default' layout. */
-		$layout_choices = array();
+/* Set up an array for the layout choices and add in the 'default' layout. */
+$layout_choices = array();
 
-		/* Only add 'default' if it's the actual default layout. */
-		if ( 'default' == $args['default'] )
-			$layout_choices['default'] = theme_layouts_get_string( 'default' );
+/* Only add 'default' if it's the actual default layout. */
+if ( 'default' == $args['default'] )
+	$layout_choices['default'] = theme_layouts_get_string( 'default' );
 
-		/* Loop through each of the layouts and add it to the choices array with proper key/value pairs. */
-		foreach ( $layouts[0] as $layout ) {
-			$layout_choices[$layout] = theme_layouts_get_image_string( $layout );
-			if ( $layout != '1c' ) {
-				$layout_choices_2[$layout] = theme_layouts_get_image_string( $layout );
-			}
-		}
+/* Loop through each of the layouts and add it to the choices array with proper key/value pairs. */
+foreach ( $layouts[0] as $layout ) {
+	$layout_choices[$layout] = theme_layouts_get_image_string( $layout );
+	if ( $layout != '1c' ) {
+		$layout_choices_2[$layout] = theme_layouts_get_image_string( $layout );
+	}
+}
 
 
 
 		// More Options
-		$slide_options = array();
-		$total_possible_slides = 10;
-		for ( $i = 1; $i <= $total_possible_slides; $i++ ) {
-			$slide_options[] = $i;
-		}
+$slide_options = array();
+$total_possible_slides = 10;
+for ( $i = 1; $i <= $total_possible_slides; $i++ ) {
+	$slide_options[] = $i;
+}
 
 		// Setup an array of numbers.
-		$numbers = array();
-		for ( $i = 1; $i <= 20; $i++ ) {
-			$numbers[$i] = $i;
-		}
+$numbers = array();
+for ( $i = 1; $i <= 20; $i++ ) {
+	$numbers[$i] = $i;
+}
 
 
-		$options = array();
-		/* General */
+$options = array();
+/* General */
 
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'General Settings', 'bon' ),
-			'type' => 'heading',
-			'icon' => 'dashicons-admin-generic' );
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'General Settings', 'bon' ),
+	'type' => 'heading',
+	'icon' => 'dashicons-admin-generic' );
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Quick Start', 'bon' ),
-			'type' => 'subheading' );
-
-
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Logo', 'bon' ),
-			'desc' => __( 'Upload a logo for your theme, or specify an image URL directly. The best size is <strong>140x60 px</strong>', 'bon' ),
-			'id' => 'logo',
-			'std' => '',
-			'type' => 'upload' );
-
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Logo for emails (dark version)', 'bon' ),
-			'desc' => __( 'Upload a logo for your theme, or specify an image URL directly. The best size is <strong>140x60 px</strong>', 'bon' ),
-			'id' => 'logo_dark',
-			'std' => '',
-			'type' => 'upload' );
-
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Favicon', 'bon' ),
-			'desc' => __( 'Upload a Favicon', 'bon' ),
-			'id' => 'favicon',
-			'std' => '',
-			'type' => 'upload' );
-
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Slider Posts Limit', 'bon' ),
-			'desc' => __( 'How many slideshow to show?', 'bon' ),
-			'id' => 'slider_post_per_page',
-			'std' => '',
-			'type' => 'text' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Slider Interval', 'bon' ),
-			'desc' => __( 'Slideshow Interval for each auto slide', 'bon' ),
-			'id' => 'slider_interval',
-			'type' => 'text' );
-
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Show BreadCrumb', 'bon' ),
-			'desc' => __( 'Show or hide breadcrumb page header', 'bon' ),
-			'id' => 'show_page_header',
-			'std' => 'show',
-			'options' => array(
-				'show' => __( 'Show', 'bon' ),
-				'hide' => __( 'Hide', 'bon' )
-			),
-			'type' => 'select' );
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Quick Start', 'bon' ),
+	'type' => 'subheading' );
 
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Show Image Slider in Home', 'bon' ),
-			'desc' => __( 'Show or hide image slider in home page template', 'bon' ),
-			'id' => 'show_slider',
-			'std' => 'show',
-			'options' => array(
-				'show' => __( 'Show', 'bon' ),
-				'hide' => __( 'Hide', 'bon' )
-			),
-			'type' => 'select' );
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Logo', 'bon' ),
+	'desc' => __( 'Upload a logo for your theme, or specify an image URL directly. The best size is <strong>140x60 px</strong>', 'bon' ),
+	'id' => 'logo',
+	'std' => '',
+	'type' => 'upload' );
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Logo for emails (dark version)', 'bon' ),
+	'desc' => __( 'Upload a logo for your theme, or specify an image URL directly. The best size is <strong>140x60 px</strong>', 'bon' ),
+	'id' => 'logo_dark',
+	'std' => '',
+	'type' => 'upload' );
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Favicon', 'bon' ),
+	'desc' => __( 'Upload a Favicon', 'bon' ),
+	'id' => 'favicon',
+	'std' => '',
+	'type' => 'upload' );
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Slider Posts Limit', 'bon' ),
+	'desc' => __( 'How many slideshow to show?', 'bon' ),
+	'id' => 'slider_post_per_page',
+	'std' => '',
+	'type' => 'text' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Slider Interval', 'bon' ),
+	'desc' => __( 'Slideshow Interval for each auto slide', 'bon' ),
+	'id' => 'slider_interval',
+	'type' => 'text' );
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Show BreadCrumb', 'bon' ),
+	'desc' => __( 'Show or hide breadcrumb page header', 'bon' ),
+	'id' => 'show_page_header',
+	'std' => 'show',
+	'options' => array(
+		'show' => __( 'Show', 'bon' ),
+		'hide' => __( 'Hide', 'bon' )
+		),
+	'type' => 'select' );
 
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Tracking Code', 'bon' ),
-			'desc' => __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'bon' ),
-			'id' => 'google_analytics',
-			'std' => '',
-			'class' => 'code_mirror',
-			'type' => 'textarea' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Google Map center point latitude', 'bon' ),
-			'desc' => __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
-			'id' => 'global_latitude',
-			'type' => 'text' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Google Map center point longitude', 'bon' ),
-			'desc'	=> __('The Map Longitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
-			'id' => 'global_longitude',
-			'type' => 'text' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Google Map starting zoom level', 'bon' ),
-			'id' => 'global_zoom',
-			'type' => 'number',
-			'std' => '6' );
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Show Image Slider in Home', 'bon' ),
+	'desc' => __( 'Show or hide image slider in home page template', 'bon' ),
+	'id' => 'show_slider',
+	'std' => 'show',
+	'options' => array(
+		'show' => __( 'Show', 'bon' ),
+		'hide' => __( 'Hide', 'bon' )
+		),
+	'type' => 'select' );
 
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Display Options', 'bon' ),
-			'type' => 'subheading' );
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Tracking Code', 'bon' ),
+	'desc' => __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'bon' ),
+	'id' => 'google_analytics',
+	'std' => '',
+	'class' => 'code_mirror',
+	'type' => 'textarea' );
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom CSS', 'bon' ),
-			'desc' => __( 'Quickly add some CSS to your theme by adding it to this block. Do not use &lt;style&gt; tag', 'bon' ),
-			'id' => 'custom_css',
-			'std' => '',
-			'class' => 'code_mirror',
-			'type' => 'textarea' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Google Map center point latitude', 'bon' ),
+	'desc' => __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
+	'id' => 'global_latitude',
+	'type' => 'text' );
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom JS', 'bon' ),
-			'desc' => __( 'Quickly add some Javascript to your theme by adding it to this block. Do not use &lt;script&gt; tag ', 'bon' ),
-			'id' => 'custom_js',
-			'std' => '',
-			'class' => 'code_mirror',
-			'type' => 'textarea' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Google Map center point longitude', 'bon' ),
+	'desc'	=> __('The Map Longitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
+	'id' => 'global_longitude',
+	'type' => 'text' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Google Map starting zoom level', 'bon' ),
+	'id' => 'global_zoom',
+	'type' => 'number',
+	'std' => '6' );
+
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Display Options', 'bon' ),
+	'type' => 'subheading' );
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom CSS', 'bon' ),
+	'desc' => __( 'Quickly add some CSS to your theme by adding it to this block. Do not use &lt;style&gt; tag', 'bon' ),
+	'id' => 'custom_css',
+	'std' => '',
+	'class' => 'code_mirror',
+	'type' => 'textarea' );
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom JS', 'bon' ),
+	'desc' => __( 'Quickly add some Javascript to your theme by adding it to this block. Do not use &lt;script&gt; tag ', 'bon' ),
+	'id' => 'custom_js',
+	'std' => '',
+	'class' => 'code_mirror',
+	'type' => 'textarea' );
 
 		/**
 		 * =====================================================================================================
@@ -282,7 +282,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'options' => array(
 				'show' => __( 'Show', 'bon' ),
 				'hide' => __( 'Hide', 'bon' )
-			),
+				),
 			'type' => 'select' );
 
 		$options[] = array( 'slug' => 'bon_options',
@@ -347,33 +347,33 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 		  'class' => 'hidden last',
 		  'type' => 'text' ); */
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => sprintf( __( 'Centering Logo', 'bon' ), $i ),
-			'desc' => __( 'Centering the logo if both the header column is disabled.', 'bon' ),
-			'id' => 'centering_logo',
-			'std' => 0,
-			'type' => 'checkbox' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => sprintf( __( 'Centering Logo', 'bon' ), $i ),
+	'desc' => __( 'Centering the logo if both the header column is disabled.', 'bon' ),
+	'id' => 'centering_logo',
+	'std' => 0,
+	'type' => 'checkbox' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Show Header Search Field', 'bon' ),
-			'desc' => __( 'Show the search field in the header / menu.', 'bon' ),
-			'id' => 'show_header_search',
-			'std' => 'yes',
-			'options' => array(
-				'yes' => __( 'Yes', 'bon' ),
-				'no' => __( 'No', 'bon' ),
-			),
-			'type' => 'select' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Show Header Search Field', 'bon' ),
+	'desc' => __( 'Show the search field in the header / menu.', 'bon' ),
+	'id' => 'show_header_search',
+	'std' => 'yes',
+	'options' => array(
+		'yes' => __( 'Yes', 'bon' ),
+		'no' => __( 'No', 'bon' ),
+		),
+	'type' => 'select' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Header Default State', 'bon' ),
-			'desc' => __( 'Set the header default state to hide or show the main header. Note: this setting will be overriden by cookie setting if header already toggled.', 'bon' ),
-			'id' => 'show_main_header',
-			'options' => array(
-				'show' => __( 'Show', 'bon' ),
-				'hide' => __( 'Hide', 'bon' ),
-			),
-			'type' => 'select' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Header Default State', 'bon' ),
+	'desc' => __( 'Set the header default state to hide or show the main header. Note: this setting will be overriden by cookie setting if header already toggled.', 'bon' ),
+	'id' => 'show_main_header',
+	'options' => array(
+		'show' => __( 'Show', 'bon' ),
+		'hide' => __( 'Hide', 'bon' ),
+		),
+	'type' => 'select' );
 
 
 		/**
@@ -397,43 +397,43 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'std' => 'blue',
 			'type' => 'radio-img',
 			'options' => $alt_stylesheets,
-		);*/
+			);*/
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Main header color Style', 'bon' ),
-			'desc' => __( 'Choose main header style.', 'bon' ),
-			'id' => 'main_header_style',
-			'type' => 'select',
-			'options' => array(
-				'dark' => __( 'Dark', 'bon' ),
-				'light' => __( 'Light', 'bon' )
-			),
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Main header color Style', 'bon' ),
+	'desc' => __( 'Choose main header style.', 'bon' ),
+	'id' => 'main_header_style',
+	'type' => 'select',
+	'options' => array(
+		'dark' => __( 'Dark', 'bon' ),
+		'light' => __( 'Light', 'bon' )
+		),
+	);
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Main header navigation color Style', 'bon' ),
-			'desc' => __( 'Choose main header navigation style.', 'bon' ),
-			'id' => 'main_header_nav_style',
-			'type' => 'select',
-			'theme_customizer' => array(
-				'customizer_section' => 'nav',
-				'customizer_section_title' => __( 'Navigation Color', 'bon' ),
-				'customizer_section_priority' => 100,
-				'customizer_section_theme' => false,
-			),
-			'options' => array(
-				'dark' => __( 'Dark', 'bon' ),
-				'light' => __( 'Light', 'bon' )
-			),
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Main header navigation color Style', 'bon' ),
+	'desc' => __( 'Choose main header navigation style.', 'bon' ),
+	'id' => 'main_header_nav_style',
+	'type' => 'select',
+	'theme_customizer' => array(
+		'customizer_section' => 'nav',
+		'customizer_section_title' => __( 'Navigation Color', 'bon' ),
+		'customizer_section_priority' => 100,
+		'customizer_section_theme' => false,
+		),
+	'options' => array(
+		'dark' => __( 'Dark', 'bon' ),
+		'light' => __( 'Light', 'bon' )
+		),
+	);
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Search Listing Button Color', 'bon' ),
-			'desc' => __( 'Choose colorization stylesheet.', 'bon' ),
-			'id' => 'search_button_color',
-			'type' => 'radio-img',
-			'options' => get_colors_list()
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Search Listing Button Color', 'bon' ),
+	'desc' => __( 'Choose colorization stylesheet.', 'bon' ),
+	'id' => 'search_button_color',
+	'type' => 'radio-img',
+	'options' => get_colors_list()
+	);
 
 
 		/**
@@ -463,8 +463,8 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'options' => array(
 				'yes' => __( 'Yes', 'bon' ),
 				'no' => __( 'No', 'bon' )
-			),
-		);
+				),
+			);
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Multi Search Panel', 'bon' ),
@@ -481,18 +481,18 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'car' => __( 'Car Dealer', 'bon' ),
 				'boat' => __( 'Boat Dealer', 'bon' )
 			)
-		);*/
+);*/
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Enable Real Estate Listing', 'bon' ),
-			'desc' => __( 'If enable there will be new menu in admin', 'bon' ),
-			'id' => 'enable_property_listing',
-			'type' => 'select',
-			'options' => array(
-				'yes' => __( 'Yes', 'bon' ),
-				'no' => __( 'No', 'bon' )
-			),
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Enable Real Estate Listing', 'bon' ),
+	'desc' => __( 'If enable there will be new menu in admin', 'bon' ),
+	'id' => 'enable_property_listing',
+	'type' => 'select',
+	'options' => array(
+		'yes' => __( 'Yes', 'bon' ),
+		'no' => __( 'No', 'bon' )
+		),
+	);
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Enable Car Dealership Listing', 'bon' ),
@@ -503,24 +503,24 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'yes' => __( 'Yes', 'bon' ),
 				'no' => __( 'No', 'bon' )
 			),
-		);*/
+);*/
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Default Order By', 'bon' ),
-			'desc' => __( 'Select default listing order by', 'bon' ),
-			'id' => 'listing_orderby',
-			'type' => 'select',
-			'options' => $orderby_options
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Default Order By', 'bon' ),
+	'desc' => __( 'Select default listing order by', 'bon' ),
+	'id' => 'listing_orderby',
+	'type' => 'select',
+	'options' => $orderby_options
+	);
 
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Default Order', 'bon' ),
-			'desc' => __( 'Select default listing order', 'bon' ),
-			'id' => 'listing_order',
-			'type' => 'select',
-			'options' => $order_options
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Default Order', 'bon' ),
+	'desc' => __( 'Select default listing order', 'bon' ),
+	'id' => 'listing_order',
+	'type' => 'select',
+	'options' => $order_options
+	);
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Exclude sold / rented listing', 'bon' ),
@@ -531,21 +531,21 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'no' => __( 'No', 'bon' ),
 				'yes' => __( 'Yes', 'bon' ),
 			),
-		);*/
+);*/
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Front End Post Page', 'bon' ),
 			'desc' => __( 'The page that hold the front end editor shortcode <code>[bon-fee]</code>. This page will be use as the edit and add new post container.', 'bon' ),
 			'id' => 'fee_post_page',
 			'type' => 'page_select',
-		);*/
+			);*/
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'My Account Page', 'bon' ),
 			'desc' => __( 'The page that hold the myaccount shortcode <code>[bon-account]</code>.', 'bon' ),
 			'id' => 'my_account_page',
 			'type' => 'page_select',
-		);*/
+			);*/
 
 
 		/*$options[] = array( 'slug' => 'bon_options',
@@ -553,228 +553,257 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'desc' => __( 'Page where the listing compare result will be.', 'bon' ),
 			'id' => 'compare_page',
 			'type' => 'page_select',
-		);*/
+			);*/
 
 
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Search Result Page', 'bon' ),
-			'desc' => __( 'Page where the listing search result will be.', 'bon' ),
-			'id' => 'search_listing_page',
-			'type' => 'page_select',
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Search Result Page', 'bon' ),
+	'desc' => __( 'Page where the listing search result will be.', 'bon' ),
+	'id' => 'search_listing_page',
+	'type' => 'page_select',
+	);
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Number of Listings to Show', 'bon' ),
-			'desc' => __( 'How many of listing you want to show for search listing page and browse listing page.', 'bon' ),
-			'id' => 'listing_per_page',
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Number of Listings to Show', 'bon' ),
+	'desc' => __( 'How many of listing you want to show for search listing page and browse listing page.', 'bon' ),
+	'id' => 'listing_per_page',
+	'type' => 'text',
+	'std' => '8',
+	);
+
+
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Price As Text Label', 'bon' ),
+	'desc' => __( 'Use this as text placeholder for place you want to set as text only', 'bon' ),
+	'id' => 'price_text',
+	'std' => __( 'Call For Quote', 'bon' ),
+	'type' => 'text',
+	);
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Price Currency', 'bon' ),
+	'desc' => __( 'Input the size currency that will be used in listing price.', 'bon' ),
+	'id' => 'currency',
+	'type' => 'text',
+	'std' => '$'
+	);
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Currency symbol placement', 'bon' ),
+	'desc' => __( 'Choose which format of the currency symbol placement.', 'bon' ),
+	'id' => 'currency_placement',
+	'type' => 'select',
+	'options' => array(
+		'left' => '$1,234,567',
+		'left-space' => '$ 1,234,567 (with space)',
+		'right' => '1,234,567$',
+		'right-space' => '1,234,567 $ (with space)'
+		)
+	);
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Price Format', 'bon' ),
+	'desc' => __( 'Choose the price format.', 'bon' ),
+	'id' => 'price_format',
+	'type' => 'select',
+	'options' => array(
+		'comma' => '$1,234,567.00 (with comma)',
+		'dot' => '$1.234.567.00 (with dot)',
+		)
+	);
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Cottage package types', 'bon' ),
+	'desc' => __( 'Add package for cottages', 'bon' ),
+	'id' => 'cottage_packages',
+	'type' => 'repeatable',
+	'sanitize' => array(
+		'name' => 'sanitize_text_field',
+		),
+	'repeatable_fields' => array(
+		array(
+			'label' => __( 'Package name', 'bon' ),
+			'id' => 'package_name',
 			'type' => 'text',
-			'std' => '8',
-		);
-
-
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Price As Text Label', 'bon' ),
-			'desc' => __( 'Use this as text placeholder for place you want to set as text only', 'bon' ),
-			'id' => 'price_text',
-			'std' => __( 'Call For Quote', 'bon' ),
-			'type' => 'text',
-		);
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Price Currency', 'bon' ),
-			'desc' => __( 'Input the size currency that will be used in listing price.', 'bon' ),
-			'id' => 'currency',
-			'type' => 'text',
-			'std' => '$'
-		);
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Currency symbol placement', 'bon' ),
-			'desc' => __( 'Choose which format of the currency symbol placement.', 'bon' ),
-			'id' => 'currency_placement',
-			'type' => 'select',
-			'options' => array(
-				'left' => '$1,234,567',
-				'left-space' => '$ 1,234,567 (with space)',
-				'right' => '1,234,567$',
-				'right-space' => '1,234,567 $ (with space)'
-			)
-		);
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Price Format', 'bon' ),
-			'desc' => __( 'Choose the price format.', 'bon' ),
-			'id' => 'price_format',
-			'type' => 'select',
-			'options' => array(
-				'comma' => '$1,234,567.00 (with comma)',
-				'dot' => '$1.234.567.00 (with dot)',
-			)
-		);
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Cottage package types', 'bon' ),
-			'desc' => __( 'Add package for cottages', 'bon' ),
-			'id' => 'cottage_packages',
-			'type' => 'repeatable',
-			'sanitize' => array(
-				'name' => 'sanitize_text_field',
+			'std' => '',
 			),
-			'repeatable_fields' => array(
-				array(
-					'label' => __( 'Package name', 'bon' ),
-					'id' => 'package_name',
-					'type' => 'text',
-					'std' => '',
-				),
-				array(
-					'options' => get_colors_list(),
-					'label' => __( 'Color', 'bon' ),
-					'id' => 'package_color',
-					'type' => 'radio-img',
-					'std' => 'carrot',
-				),
-			) );
-
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Template Options', 'bon' ),
-			'type' => 'subheading' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => '',
-			'desc' => '',
-			'std' => __( 'The section below will handle the listing map view for the listing generated by page template or the archive and category page for listing.', 'bon' ),
-			'type' => 'info' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Show Listing Count in Listing Page', 'bon' ),
-			'desc' => __( 'Show the listing count before the listing list', 'bon' ),
-			'id' => 'show_listing_count',
-			'type' => 'select',
-			'options' => array(
-				'yes' => __( 'Yes', 'bon' ),
-				'no' => __( 'No', 'bon' ),
-			)
-		);
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => '',
-			'desc' => '',
-			'std' => __( 'The section below will handle the listing details view.', 'bon' ),
-			'type' => 'info' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Show Listing Gallery Thumbnail', 'bon' ),
-			'desc' => __( 'Show the listing gallery thumbnail', 'bon' ),
-			'id' => 'listing_gallery_thumbnail',
-			'type' => 'select',
-			'std' => 'yes',
-			'options' => array(
-				'yes' => __( 'Thumbnail Only', 'bon' ),
-				'no' => __( 'Controller Only', 'bon' ),
-				'both' => __( 'Both Controller and Thumbnail', 'bon' )
-			) );
-
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Show Image Caption in Gallery', 'bon' ),
-			'desc' => __( 'Show the image caption in gallery image slider.', 'bon' ),
-			'id' => 'show_gallery_caption',
-			'type' => 'select',
-			'options' => array(
-				'yes' => __( 'Yes', 'bon' ),
-				'no' => __( 'No', 'bon' ),
-			)
-		);
-
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Show Related Listings', 'bon' ),
-			'desc' => __( 'Show Related Listings in Single Listing Detail Page', 'bon' ),
-			'id' => 'show_related',
-			'type' => 'select',
-			'options' => array(
-				'no' => __( 'No', 'bon' ),
-				'yes' => __( 'Yes', 'bon' ),
-			)
-		);
-
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Show Agent Detail', 'bon' ),
-			'desc' => __( 'Show the agent details in the listing footer / beside the contact form.', 'bon' ),
-			'id' => 'show_agent_details',
-			'type' => 'select',
-			'options' => array(
-				'yes' => __( 'Yes', 'bon' ),
-				'no' => __( 'No', 'bon' ),
-			)
-		);
-
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Show Contact Form', 'bon' ),
-			'desc' => __( 'Show the contact form in the listing footer.', 'bon' ),
-			'id' => 'show_contact_form',
-			'type' => 'select',
-			'std' => 'yes',
-			'options' => array(
-				'yes' => __( 'Yes', 'bon' ),
-				'no' => __( 'No', 'bon' ),
-			)
-		);
-
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => '',
-			'desc' => '',
-			'std' => __( 'The section below will handle the view of the listing lists.', 'bon' ),
-			'type' => 'info' );
-
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Show Mouse Hover overlay', 'bon' ),
-			'desc' => __( 'Show the overlay ( the stuff with permalink, gallery, compare button ) on mouse over ', 'bon' ),
-			'id' => 'show_overlay',
-			'type' => 'select',
-			'std' => 'yes',
-			'options' => array(
-				'yes' => __( 'Yes', 'bon' ),
-				'no' => __( 'No', 'bon' ),
-			)
-		);
-
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Mouse Overlay button', 'bon' ),
-			'desc' => __( 'Choose which one of the button you want to show in the listing overlay if enabled.', 'bon' ),
-			'id' => 'overlay_buttons',
-			'std' => array(
-				'link' => true,
-				'gallery' => true,
-				'compare' => true
+		array(
+			'options' => get_colors_list(),
+			'label' => __( 'Color', 'bon' ),
+			'id' => 'package_color',
+			'type' => 'radio-img',
+			'std' => 'carrot',
 			),
-			'type' => 'multicheck',
-			'options' => array(
-				'link' => __( 'Permalink Button', 'bon' ),
-				'gallery' => __( 'Gallery Button', 'bon' ),
-				'compare' => __( 'Compare Button', 'bon' ),
-			)
-		);
-
-
-
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Measurement Options', 'bon' ),
-			'type' => 'subheading' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Size Measurement', 'bon' ),
-			'desc' => __( 'The size measurement that will be used in lot size and building size.', 'bon' ),
-			'id' => 'measurement',
+		array(
+			'label' => __( 'Wall material', 'bon' ),
+			'id' => 'package_material',
 			'type' => 'text',
-			'std' => 'Sq Ft'
-		);
+			),
+		array(
+			'label' => __( 'Wall thickness', 'bon' ),
+			'desc' => __( 'Product wall thickness in milimeters, without unit', 'bon' ),
+			'id' => 'package_wall_thickness',
+			'type' => 'number',
+			),
+		array(
+			'label' => __( 'Windows and doors thickness', 'bon' ),
+			'desc' => __( 'Product windows and door thickness in milimeters, without unit', 'bon' ),
+			'id' => 'package_windows_thickness',
+			'type' => 'number',
+			),
+		array(
+			'label' => __( 'Package description', 'bon' ),
+			'id' => 'package_desc',
+			'type' => 'editor',
+			'settings' => array(
+				'media_buttons' => false,
+				'tinymce' => true,
+				'teeny' => false,
+				'wpautop' => true,
+				'textarea_rows' => 30
+				),
+			),
+		) );
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Template Options', 'bon' ),
+	'type' => 'subheading' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => '',
+	'desc' => '',
+	'std' => __( 'The section below will handle the listing map view for the listing generated by page template or the archive and category page for listing.', 'bon' ),
+	'type' => 'info' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Show Listing Count in Listing Page', 'bon' ),
+	'desc' => __( 'Show the listing count before the listing list', 'bon' ),
+	'id' => 'show_listing_count',
+	'type' => 'select',
+	'options' => array(
+		'yes' => __( 'Yes', 'bon' ),
+		'no' => __( 'No', 'bon' ),
+		)
+	);
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => '',
+	'desc' => '',
+	'std' => __( 'The section below will handle the listing details view.', 'bon' ),
+	'type' => 'info' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Show Listing Gallery Thumbnail', 'bon' ),
+	'desc' => __( 'Show the listing gallery thumbnail', 'bon' ),
+	'id' => 'listing_gallery_thumbnail',
+	'type' => 'select',
+	'std' => 'yes',
+	'options' => array(
+		'yes' => __( 'Thumbnail Only', 'bon' ),
+		'no' => __( 'Controller Only', 'bon' ),
+		'both' => __( 'Both Controller and Thumbnail', 'bon' )
+		) );
+
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Show Image Caption in Gallery', 'bon' ),
+	'desc' => __( 'Show the image caption in gallery image slider.', 'bon' ),
+	'id' => 'show_gallery_caption',
+	'type' => 'select',
+	'options' => array(
+		'yes' => __( 'Yes', 'bon' ),
+		'no' => __( 'No', 'bon' ),
+		)
+	);
+
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Show Related Listings', 'bon' ),
+	'desc' => __( 'Show Related Listings in Single Listing Detail Page', 'bon' ),
+	'id' => 'show_related',
+	'type' => 'select',
+	'options' => array(
+		'no' => __( 'No', 'bon' ),
+		'yes' => __( 'Yes', 'bon' ),
+		)
+	);
+
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Show Agent Detail', 'bon' ),
+	'desc' => __( 'Show the agent details in the listing footer / beside the contact form.', 'bon' ),
+	'id' => 'show_agent_details',
+	'type' => 'select',
+	'options' => array(
+		'yes' => __( 'Yes', 'bon' ),
+		'no' => __( 'No', 'bon' ),
+		)
+	);
+
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Show Contact Form', 'bon' ),
+	'desc' => __( 'Show the contact form in the listing footer.', 'bon' ),
+	'id' => 'show_contact_form',
+	'type' => 'select',
+	'std' => 'yes',
+	'options' => array(
+		'yes' => __( 'Yes', 'bon' ),
+		'no' => __( 'No', 'bon' ),
+		)
+	);
+
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => '',
+	'desc' => '',
+	'std' => __( 'The section below will handle the view of the listing lists.', 'bon' ),
+	'type' => 'info' );
+
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Show Mouse Hover overlay', 'bon' ),
+	'desc' => __( 'Show the overlay ( the stuff with permalink, gallery, compare button ) on mouse over ', 'bon' ),
+	'id' => 'show_overlay',
+	'type' => 'select',
+	'std' => 'yes',
+	'options' => array(
+		'yes' => __( 'Yes', 'bon' ),
+		'no' => __( 'No', 'bon' ),
+		)
+	);
+
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Mouse Overlay button', 'bon' ),
+	'desc' => __( 'Choose which one of the button you want to show in the listing overlay if enabled.', 'bon' ),
+	'id' => 'overlay_buttons',
+	'std' => array(
+		'link' => true,
+		'gallery' => true,
+		'compare' => true
+		),
+	'type' => 'multicheck',
+	'options' => array(
+		'link' => __( 'Permalink Button', 'bon' ),
+		'gallery' => __( 'Gallery Button', 'bon' ),
+		'compare' => __( 'Compare Button', 'bon' ),
+		)
+	);
+
+
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Measurement Options', 'bon' ),
+	'type' => 'subheading' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Size Measurement', 'bon' ),
+	'desc' => __( 'The size measurement that will be used in lot size and building size.', 'bon' ),
+	'id' => 'measurement',
+	'type' => 'text',
+	'std' => 'Sq Ft'
+	);
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Volume Measurement', 'bon' ),
@@ -782,7 +811,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'id' => 'volume_measure',
 			'type' => 'text',
 			'std' => 'litres'
-		);*/
+			);*/
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Speed Measurement', 'bon' ),
@@ -790,33 +819,33 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'id' => 'speed_measure',
 			'type' => 'text',
 			'std' => 'knots'
-		);*/
+			);*/
 
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Height Measurement', 'bon' ),
-			'desc' => __( 'The height measurement that will be used in dimension.', 'bon' ),
-			'id' => 'height_measure',
-			'type' => 'text',
-			'std' => 'feet'
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Height Measurement', 'bon' ),
+	'desc' => __( 'The height measurement that will be used in dimension.', 'bon' ),
+	'id' => 'height_measure',
+	'type' => 'text',
+	'std' => 'feet'
+	);
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Width Measurement', 'bon' ),
-			'desc' => __( 'The width measurement that will be used in dimension.', 'bon' ),
-			'id' => 'width_measure',
-			'type' => 'text',
-			'std' => 'feet'
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Width Measurement', 'bon' ),
+	'desc' => __( 'The width measurement that will be used in dimension.', 'bon' ),
+	'id' => 'width_measure',
+	'type' => 'text',
+	'std' => 'feet'
+	);
 
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Length Measurement', 'bon' ),
-			'desc' => __( 'The length measurement that will be used in dimension.', 'bon' ),
-			'id' => 'length_measure',
-			'type' => 'text',
-			'std' => 'in.'
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Length Measurement', 'bon' ),
+	'desc' => __( 'The length measurement that will be used in dimension.', 'bon' ),
+	'id' => 'length_measure',
+	'type' => 'text',
+	'std' => 'in.'
+	);
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Mileage Measurement', 'bon' ),
@@ -824,25 +853,25 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'id' => 'mileage_measure',
 			'type' => 'text',
 			'std' => 'miles'
-		);*/
+			);*/
 
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Search Panel Options', 'bon' ),
-			'type' => 'subheading' );
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Search Panel Options', 'bon' ),
+	'type' => 'subheading' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Price Slider Minimum Value', 'bon' ),
-			'desc' => __( 'Minimum Value for the Price Range slider in the Search Listing Options', 'bon' ),
-			'id' => 'price_range_min',
-			'std' => '0',
-			'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Price Slider Minimum Value', 'bon' ),
+	'desc' => __( 'Minimum Value for the Price Range slider in the Search Listing Options', 'bon' ),
+	'id' => 'price_range_min',
+	'std' => '0',
+	'type' => 'text' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Price Slider Maximum Value', 'bon' ),
-			'desc' => __( 'Maximum Value for the Price Range slider in the Search Listing Options', 'bon' ),
-			'id' => 'price_range_max',
-			'std' => '1000000',
-			'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Price Slider Maximum Value', 'bon' ),
+	'desc' => __( 'Maximum Value for the Price Range slider in the Search Listing Options', 'bon' ),
+	'id' => 'price_range_max',
+	'std' => '1000000',
+	'type' => 'text' );
 
 		/* $options[] = array( 'slug' => 'bon_options',
 		  'label' => __( 'Price Slider Minimum Value (Rent Only)', 'bon' ),
@@ -858,12 +887,12 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 		  'std' =>  '10000',
 		  'type' => 'text' ); */
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Price Slider Step Value', 'bon' ),
-			'desc' => __( 'Step Value for the Price Range slider when the Slide Event fired', 'bon' ),
-			'id' => 'price_range_step',
-			'std' => '5000',
-			'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Price Slider Step Value', 'bon' ),
+	'desc' => __( 'Step Value for the Price Range slider when the Slide Event fired', 'bon' ),
+	'id' => 'price_range_step',
+	'std' => '5000',
+	'type' => 'text' );
 
 		/* $options[] = array( 'slug' => 'bon_options',
 		  'label' => __( 'Size Slider Minimum Value', 'bon' ),
@@ -906,26 +935,26 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 		  'id' => 'maximum_bath',
 		  'type' => 'text' ); */
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Size Slider Minimum Value', 'bon' ),
-			'desc' => __( 'The minimum lot size available for user to select', 'bon' ),
-			'id' => 'minimum_lotsize',
-			'std' => '0',
-			'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Size Slider Minimum Value', 'bon' ),
+	'desc' => __( 'The minimum lot size available for user to select', 'bon' ),
+	'id' => 'minimum_lotsize',
+	'std' => '0',
+	'type' => 'text' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Size Slider Maximum Value', 'bon' ),
-			'desc' => __( 'The maximum lot size available for user to select', 'bon' ),
-			'id' => 'maximum_lotsize',
-			'std' => '10000',
-			'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Size Slider Maximum Value', 'bon' ),
+	'desc' => __( 'The maximum lot size available for user to select', 'bon' ),
+	'id' => 'maximum_lotsize',
+	'std' => '10000',
+	'type' => 'text' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Size Slider Step', 'bon' ),
-			'desc' => __( 'The step for lot size slider', 'bon' ),
-			'id' => 'step_lotsize',
-			'std' => '100',
-			'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Size Slider Step', 'bon' ),
+	'desc' => __( 'The step for lot size slider', 'bon' ),
+	'id' => 'step_lotsize',
+	'std' => '100',
+	'type' => 'text' );
 
 		/* $options[] = array( 'slug' => 'bon_options',
 		  'label' => __( 'Minimum Building Size Options', 'bon' ),
@@ -998,42 +1027,42 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 		  'std' =>  '2011',
 		  'type' => 'text' ); */
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Search Button Label', 'bon' ),
-			'desc' => __( 'The search button label', 'bon' ),
-			'id' => 'search_button_label',
-			'std' => 'Find Property',
-			'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Search Button Label', 'bon' ),
+	'desc' => __( 'The search button label', 'bon' ),
+	'id' => 'search_button_label',
+	'std' => 'Find Property',
+	'type' => 'text' );
 
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Search Field', 'bon' ),
-			'type' => 'subheading' );
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Search Field', 'bon' ),
+	'type' => 'subheading' );
 
-		for ( $i = 1; $i < 4; $i++ ) {
-			$std = 0;
-			$options[] = array( 'slug' => 'bon_options',
-				'label' => sprintf( __( 'Enable Search Row %s', 'bon' ), $i ),
-				'desc' => __( 'Enable the search row', 'bon' ),
-				'id' => 'search_row_' . $i,
-				'std' => $std,
-				'class' => 'collapsed',
-				'type' => 'checkbox' );
+for ( $i = 1; $i < 4; $i++ ) {
+	$std = 0;
+	$options[] = array( 'slug' => 'bon_options',
+		'label' => sprintf( __( 'Enable Search Row %s', 'bon' ), $i ),
+		'desc' => __( 'Enable the search row', 'bon' ),
+		'id' => 'search_row_' . $i,
+		'std' => $std,
+		'class' => 'collapsed',
+		'type' => 'checkbox' );
 
-			for ( $j = 1; $j < 4; $j++ ) {
-				$class = 'hidden';
-				if ( $j == 3 ) {
-					$class = 'hidden last';
-				}
-				$options[] = array( 'slug' => 'bon_options',
-					'label' => sprintf( __( 'Row %1s Column %2s Field', 'bon' ), $i, $j ),
-					'desc' => __( 'Choose the field for the search panel', 'bon' ),
-					'id' => 'search_row_' . $i . '_col_' . $j,
-					'type' => 'select',
-					'class' => $class,
-					'options' => $search_fields
-				);
-			}
+	for ( $j = 1; $j < 4; $j++ ) {
+		$class = 'hidden';
+		if ( $j == 3 ) {
+			$class = 'hidden last';
 		}
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => sprintf( __( 'Row %1s Column %2s Field', 'bon' ), $i, $j ),
+			'desc' => __( 'Choose the field for the search panel', 'bon' ),
+			'id' => 'search_row_' . $i . '_col_' . $j,
+			'type' => 'select',
+			'class' => $class,
+			'options' => $search_fields
+			);
+	}
+}
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Location Level 1 Label', 'bon' ),
@@ -1129,8 +1158,8 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'type' => 'textarea' );*/
 
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Agent Options', 'bon' ),
-			'type' => 'subheading' );
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Agent Options', 'bon' ),
+	'type' => 'subheading' );
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Show Contact Form in Agent Page', 'bon' ),
@@ -1152,15 +1181,15 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'yes' => __( 'Yes', 'bon' ),
 				'no' => __( 'No', 'bon' ),
 			)
-		);*/
+);*/
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Set 1 agent for all Products', 'bon' ),
-			'desc' => __( 'Set a global agent to connected in all Products', 'bon' ),
-			'id' => 'global_agent',
-			'type' => 'old_post_select',
-			'post_type' => 'agent',
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Set 1 agent for all Products', 'bon' ),
+	'desc' => __( 'Set a global agent to connected in all Products', 'bon' ),
+	'id' => 'global_agent',
+	'type' => 'old_post_select',
+	'post_type' => 'agent',
+	);
 
 
 		/*$options[] = array( 'slug' => 'bon_options',
@@ -1169,7 +1198,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'id' => 'global_sales_rep',
 			'type' => 'old_post_select',
 			'post_type' => 'sales-representative'
-		);*/
+			);*/
 
 
 		/**
@@ -1195,8 +1224,8 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'options' => array(
 				'1' => '1',
 				'2' => '2',
-			),
-		);
+				),
+			);
 
 
 
@@ -1213,7 +1242,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'std' => '2c-l',
 			'type' => 'radio-img',
 			'options' => $layout_choices,
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Category Layout', 'bon' ),
@@ -1222,7 +1251,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'std' => '2c-l',
 			'type' => 'radio-img',
 			'options' => $layout_choices,
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Search Layout', 'bon' ),
@@ -1231,7 +1260,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'std' => '2c-l',
 			'type' => 'radio-img',
 			'options' => $layout_choices,
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Tags Archive Layout', 'bon' ),
@@ -1240,7 +1269,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'std' => '2c-l',
 			'type' => 'radio-img',
 			'options' => $layout_choices,
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Property Type Archive Layout', 'bon' ),
@@ -1249,7 +1278,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'std' => '2c-l',
 			'type' => 'radio-img',
 			'options' => $layout_choices,
-		);
+			);
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Property Location Archive Layout', 'bon' ),
@@ -1285,16 +1314,16 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'std' => '2c-l',
 			'type' => 'radio-img',
 			'options' => $layout_choices,
-		);*/
+			);*/
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Body Type Archive Layout', 'bon' ),
-			'desc' => __( 'Layout for body-type listing archive page.', 'bon' ),
-			'id' => 'body_type_layout',
-			'std' => '2c-l',
-			'type' => 'radio-img',
-			'options' => $layout_choices,
-		);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Body Type Archive Layout', 'bon' ),
+	'desc' => __( 'Layout for body-type listing archive page.', 'bon' ),
+	'id' => 'body_type_layout',
+	'std' => '2c-l',
+	'type' => 'radio-img',
+	'options' => $layout_choices,
+	);
 
 		/*$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Manufactuere Archive Layout', 'bon' ),
@@ -1321,7 +1350,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'std' => '2c-l',
 			'type' => 'radio-img',
 			'options' => $layout_choices_2,
-		);*/
+			);*/
 
 
 
@@ -1355,7 +1384,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'teeny' => false,
 				'wpautop' => false,
 				'textarea_rows' => 30
-			),
+				),
 			'type' => 'editor' );
 		
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Advantages section heading', 'bon' ),
@@ -1368,15 +1397,15 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'type' => 'repeatable',
 			'sanitize' => array(
 				'name' => 'sanitize_text_field',
-			),
+				),
 			'repeatable_fields' => array(
 				array(
 					'type' => 'text',
 					'label' => __( 'Advantage name', 'bon' ),
 					'id' => 'advantage_name',
 					'std' => '',
-				)
-			) );
+					)
+				) );
 
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Second section heading', 'bon' ),
 			'desc' => __( 'Type in text displayed in the second section heading', 'bon' ),
@@ -1392,7 +1421,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'tinymce' => true,
 				'teeny' => false,
 				'wpautop' => false
-			),
+				),
 			'type' => 'editor' );
 
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Second section image', 'bon' ),
@@ -1414,7 +1443,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'tinymce' => true,
 				'teeny' => false,
 				'wpautop' => false
-			),
+				),
 			'type' => 'editor' );
 
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Contact us heading', 'bon' ),
@@ -1431,7 +1460,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'tinymce' => true,
 				'teeny' => false,
 				'wpautop' => false
-			),
+				),
 			'type' => 'editor' );
 
 
@@ -1475,7 +1504,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'tinymce' => true,
 				'teeny' => false,
 				'wpautop' => false
-			),
+				),
 			'type' => 'editor' );
 
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'CTA', 'bon' ),
@@ -1504,7 +1533,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'tinymce' => true,
 				'teeny' => false,
 				'wpautop' => false
-			),
+				),
 			'type' => 'editor' );
 
 		$options[] = array( 'slug' => 'bon_options',
@@ -1522,16 +1551,16 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'2' => __( 'Product page and home page', 'bon' ),
 				'3' => __( 'Home page only', 'bon' ),
 				'4' => __( 'Neither home, nor product page', 'bon' )
-			),
+				),
 			'id' => 'tool_section_contact_display'
-		);
+			);
 
 		$options[] = array(
 			'type' => 'text',
 			'label' => __( 'Tool link', 'bon' ),
 			'desc' => __( 'Type your own link to the tool', 'bon' ),
 			'id' => 'tool_section_cta_link_url'
-		);
+			);
 
 		$options[] = array(
 			'options' => get_colors_list(),
@@ -1539,7 +1568,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'label' => __( 'Cta color', 'bon' ),
 			'desc' => __( 'Pick cta color', 'bon' ),
 			'id' => 'tool_section_cta_color'
-		);
+			);
 
 
 		/**
@@ -1581,100 +1610,100 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'type' => 'repeatable',
 			'sanitize' => array(
 				'name' => 'sanitize_text_field',
-			),
+				),
 			'repeatable_fields' => array(
 				array(
 					'type' => 'text',
 					'label' => __( 'Call to action text', 'bon' ),
 					'id' => 'home_cta_text',
 					'std' => '',
-				),
+					),
 				array(
 					'slug' => 'bon_options',
 					'label' => sprintf( __( 'Link to build your house tool', 'bon' ), $i ),
 					'id' => 'enable_home_cta_tool',
 					'type' => 'checkbox'
-				),
+					),
 				array(
 					'slug' => 'bon_options',
 					'label' => sprintf( __( 'Link to one of the pages', 'bon' ), $i ),
 					'id' => 'enable_home_cta_page',
 					'class' => 'collapsed',
 					'type' => 'checkbox'
-				),
+					),
 				array(
 					'type' => 'page_select',
 					'label' => __( 'Call to action link', 'bon' ),
 					'desc' => __( 'Choose page', 'bon' ),
 					'class' => 'hidden last',
 					'id' => 'home_cta_link_page'
-				),
+					),
 				array(
 					'slug' => 'bon_options',
 					'label' => sprintf( __( 'Link to one of the blog posts', 'bon' ), $i ),
 					'id' => 'enable_home_cta_post',
 					'class' => 'collapsed',
 					'type' => 'checkbox'
-				),
+					),
 				array(
 					'type' => 'post_select',
 					'label' => __( 'Call to action link', 'bon' ),
 					'desc' => __( 'Choose post', 'bon' ),
 					'class' => 'hidden last',
 					'id' => 'home_cta_link_post'
-				),
+					),
 				array(
 					'slug' => 'bon_options',
 					'label' => sprintf( __( 'Link to custom URL', 'bon' ), $i ),
 					'id' => 'enable_home_cta_url',
 					'class' => 'collapsed',
 					'type' => 'checkbox'
-				),
+					),
 				array(
 					'type' => 'text',
 					'label' => __( 'Custom link', 'bon' ),
 					'desc' => __( 'Or type your own link', 'bon' ),
 					'class' => 'hidden last',
 					'id' => 'home_cta_link_url'
-				),
+					),
 				array(
 					'options' => get_colors_list(),
 					'type' => 'radio-img',
 					'label' => __( 'Color', 'bon' ),
 					'id' => 'home_cta_color',
 					'std' => 'carrot',
-				)
-			) );
+					)
+				) );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Slogan for returning users', 'bon' ),
-			'desc' => __( 'Type in text displayed in home screen slogan for returning users screen', 'bon' ),
-			'id' => 'home_slogan_returning',
-			'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Slogan for returning users', 'bon' ),
+	'desc' => __( 'Type in text displayed in home screen slogan for returning users screen', 'bon' ),
+	'id' => 'home_slogan_returning',
+	'type' => 'text' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Home call to action for returning users screen', 'bon' ),
-			'desc' => __( 'Add call to action', 'bon' ),
-			'id' => 'home_cta_returning',
-			'type' => 'repeatable',
-			'sanitize' => array(
-				'name' => 'sanitize_text_field',
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Home call to action for returning users screen', 'bon' ),
+	'desc' => __( 'Add call to action', 'bon' ),
+	'id' => 'home_cta_returning',
+	'type' => 'repeatable',
+	'sanitize' => array(
+		'name' => 'sanitize_text_field',
+		),
+	'repeatable_fields' => array(
+		array(
+			'type' => 'text',
+			'label' => __( 'Call to action text', 'bon' ),
+			'id' => 'home_cta_text',
+			'std' => '',
 			),
-			'repeatable_fields' => array(
-				array(
-					'type' => 'text',
-					'label' => __( 'Call to action text', 'bon' ),
-					'id' => 'home_cta_text',
-					'std' => '',
-				),
-				array(
-					'options' => get_colors_list(),
-					'type' => 'radio-img',
-					'label' => __( 'Color', 'bon' ),
-					'id' => 'home_cta_color',
-					'std' => 'carrot',
-				)
-			) );
+		array(
+			'options' => get_colors_list(),
+			'type' => 'radio-img',
+			'label' => __( 'Color', 'bon' ),
+			'id' => 'home_cta_color',
+			'std' => 'carrot',
+			)
+		) );
 
 		/* $options[] = array( 'slug' => 'bon_options',
 		  'label' => __( 'We are heading', 'bon' ),
@@ -1714,7 +1743,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 		  'id' => 'we_are_feature_content',
 		  'std' => '',
 		  )
-		  ) ); */
+) ); */
 
 		/* $options[] = array( 'slug' => 'bon_options',
 		  'label' => __( 'Listing call to action icon', 'bon' ),
@@ -1777,7 +1806,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'options' => array(
 				'show' => __( 'Show', 'bon' ),
 				'hide' => __( 'Hide', 'bon' )
-			),
+				),
 			'type' => 'select' );
 
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Show Footer Copyright', 'bon' ),
@@ -1787,7 +1816,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'options' => array(
 				'show' => __( 'Show', 'bon' ),
 				'hide' => __( 'Hide', 'bon' )
-			),
+				),
 			'type' => 'select' );
 
 
@@ -1801,7 +1830,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 				'tinymce' => true,
 				'teeny' => false,
 				'wpautop' => false
-			),
+				),
 			'type' => 'editor' );
 
 
@@ -1825,7 +1854,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'options' => array(
 				'yes' => __( 'Yes', 'bon' ),
 				'no' => __( 'No', 'bon' )
-			),
+				),
 			'type' => 'select' );
 
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Enable Footer Social', 'bon' ),
@@ -1834,7 +1863,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'options' => array(
 				'yes' => __( 'Yes', 'bon' ),
 				'no' => __( 'No', 'bon' )
-			),
+				),
 			'type' => 'select' );
 
 		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Facebook Username', 'bon' ),
@@ -1897,21 +1926,21 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'sanitize' => array(
 				'sidebar_name' => 'sanitize_text_field',
 				'is_menu' => 'sanitize_checkbox',
-			),
+				),
 			'repeatable_fields' => array(
 				array(
 					'type' => 'text',
 					'label' => __( 'Sidebar Name', 'bon' ),
 					'id' => 'sidebar_name',
 					'std' => '',
-				),
+					),
 				array(
 					'type' => 'checkbox',
 					'label' => __( 'Use in Menu', 'bon' ),
 					'id' => 'is_menu',
 					'std' => 0,
-				)
-			) );
+					)
+				) );
 
 
 		$options[] = array( 'slug' => 'bon_options',
@@ -1938,43 +1967,43 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'options' => array(
 				'no' => __( 'No', 'bon' ),
 				'yes' => __( 'Yes', 'bon' ),
-			)
-		);
+				)
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Rewrite Root', 'bon' ),
 			'id' => 'rewrite_root',
 			'type' => 'text',
 			'desc' => __( 'The Global listing URL base /listing/real-estate/ (non-required), if not empty will use %rewrite_root%/%real_estate_or_car_base%', 'bon' )
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Real Estate Listing Base', 'bon' ),
 			'id' => 'realestate_root',
 			'type' => 'text',
 			'desc' => __( 'The Property Feature URL base /listing/ (required)', 'bon' )
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Real Estate Property Type Base', 'bon' ),
 			'id' => 'realestate_property_type_root',
 			'type' => 'text',
 			'desc' => __( 'The Property Type URL base /property-type/ (required)', 'bon' )
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Real Estate Property Location Base', 'bon' ),
 			'id' => 'realestate_property_location_root',
 			'type' => 'text',
 			'desc' => __( 'The Property Location URL base /property-location/ (required)', 'bon' )
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Real Estate Property Feature Base', 'bon' ),
 			'id' => 'realestate_property_feature_root',
 			'type' => 'text',
 			'desc' => __( 'The Property Feature URL base /property-feature/ (required)', 'bon' )
-		);
+			);
 
 
 		$options[] = array( 'slug' => 'bon_options',
@@ -1982,7 +2011,7 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'id' => 'car_root',
 			'type' => 'text',
 			'desc' => __( 'The Global Car Listing URL base /car-listing/ (required)', 'bon' )
-		);
+			);
 
 
 		$options[] = array( 'slug' => 'bon_options',
@@ -1990,28 +2019,28 @@ if ( !function_exists( 'bon_set_theme_options' ) ) {
 			'id' => 'car_manufacturer_root',
 			'type' => 'text',
 			'desc' => __( 'The Manufacturer URL base /manufacturer/ (required)', 'bon' )
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Car Body Type Base', 'bon' ),
 			'id' => 'car_body_type_root',
 			'type' => 'text',
 			'desc' => __( 'The Body Type URL base /body-type/ (required)', 'bon' )
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Car Dealer Location Base', 'bon' ),
 			'id' => 'car_dealer_location_root',
 			'type' => 'text',
 			'desc' => __( 'The Dealer Location URL base /dealer-location/ (required)', 'bon' )
-		);
+			);
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Car Feature Base', 'bon' ),
 			'id' => 'car_feature_root',
 			'type' => 'text',
 			'desc' => __( 'The Car Feature URL base /car-feature/ (required)', 'bon' )
-		);
+			);
 
 		return apply_filters( 'bon_theme_options', $options );
 	}
