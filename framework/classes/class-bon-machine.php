@@ -315,6 +315,7 @@ if ( !class_exists( 'BON_Machine' ) ) {
 					$default_editor_settings = array(
 						'textarea_name' => $name,
 						'media_buttons' => false,
+						'wpautop' => true,
 						'tinymce' => array( 'plugins' => 'wordpress' )
 					);
 

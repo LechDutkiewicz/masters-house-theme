@@ -163,11 +163,14 @@ function bon_sanitize( $string, $function = 'sanitize_text_field' ) {
 			return bon_sanitize_boolean( $string );
 		case 'sanitize_textarea' :
 			return bon_sanitize_textarea( $string );
+		case 'sanitize_editor' :
+			return bon_sanitize_editor( $string );
 		case 'sanitize_checkbox' :
 			return bon_sanitize_checkbox( $string );
 		case 'sanitize_text_field':
-		default:
 			return sanitize_text_field( $string );
+		default:
+			return bon_sanitize_editor( $string );
 	}
 }
 
