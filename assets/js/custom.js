@@ -442,19 +442,19 @@ $('.package-form select').change(function(){
 		if (data.success === '1') {
 			console.log(data);
 			var priceContainer = $('.price-box .price'),
-				priceSpan = $('span[itemprop="price"]'),
-				wallContainer = $('.entry-meta .wall'),
-				wallSpan = $('span[data-meta="thickness"');
+			priceSpan = $('span[itemprop="price"]'),
+			wallContainer = $('.entry-meta .wall'),
+			wallSpan = $('span[data-meta="thickness"');
 
-				priceContainer.fadeOut(300, 'easeInOutSine', function() {
-					priceSpan.html(data.price);
-					priceContainer.fadeIn(300, 'easeInOutSine');
-				});
-				wallContainer.fadeOut(300, 'easeInOutSine', function() {
-					wallSpan.html(data.wall);
-					wallContainer.fadeIn(300, 'easeInOutSine');
-				});
-				
+			priceContainer.fadeOut(300, 'easeInOutSine', function() {
+				priceSpan.html(data.price);
+				priceContainer.fadeIn(300, 'easeInOutSine');
+			});
+			wallContainer.fadeOut(300, 'easeInOutSine', function() {
+				wallSpan.html(data.wall);
+				wallContainer.fadeIn(300, 'easeInOutSine');
+			});
+
 		}
 	}, 'json');
 
@@ -1265,7 +1265,7 @@ var launchGoogleEvents = function() {
 		4: {
 			name: 'Home_CTA',
 			label: 'bottom_open_tool',
-			selector: $('.home-ctas-container.bottom a[data-function="open-tool"'),
+			selector: $('.home-ctas-container.bottom a[data-function="open-tool"]'),
 		},
 		5: {
 			name: 'Home_products',
@@ -1399,22 +1399,26 @@ var launchGoogleEvents = function() {
 
 	$.each(googleElements, function() {
 		var event = this;
-		if ( event.name === 'Contact_form' ) {
-			$(event.selector.selector).submit(function() {
-				if (event.value) {
-					ga( 'send', 'event', event.name, event.label, event.value );	
-				} else {
-					ga( 'send', 'event', event.name, event.label );			
-				}
-			});
-		} else {
-			$(event.selector.selector).bind( 'click', function() {
-				if (event.value) {
-					ga( 'send', 'event', event.name, event.label, event.value );	
-				} else {
-					ga( 'send', 'event', event.name, event.label );			
-				}
-			});
+		if ( event.selector ) {
+
+			if ( event.name === 'Contact_form' ) {
+				$(event.selector.selector).submit(function() {
+					if (event.value) {
+						ga( 'send', 'event', event.name, event.label, event.value );	
+					} else {
+						ga( 'send', 'event', event.name, event.label );			
+					}
+				});
+			} else {
+				$(event.selector.selector).bind( 'click', function() {
+					if (event.value) {
+						ga( 'send', 'event', event.name, event.label, event.value );	
+					} else {
+						ga( 'send', 'event', event.name, event.label );			
+					}
+				});
+			}
+
 		}
 	});
 
