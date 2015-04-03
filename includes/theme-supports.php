@@ -46,7 +46,7 @@ function shandora_option_pages( $option_pages ) {
 		'option_key' => 'bon_optionsframework',
 		'customizer' => true,
 		'option_set' => bon_set_theme_options()
-	);
+		);
 
 	array_unshift( $option_pages, $shandora_pages );
 
@@ -83,79 +83,79 @@ if( !function_exists('shandora_setup_theme_supports') ) {
 		$theme_supports['bon-accounts'] = '';
 		$theme_supports['bon-breadcrumb-trail'] = '';
 		$theme_supports['post-formats'] = array(
-										    'gallery',
-										    'link',
-										    'image',
-										    'quote',
-										    'video',
-						 					);
+			'gallery',
+			'link',
+			'image',
+			'quote',
+			'video',
+			);
 		$theme_supports['bon-fee'] = '';
 		$theme_supports['get-the-image'] = '';
 		$theme_supports['theme-fonts'] = array( 'callback' => 'shandora_custom_typo','customizer' => true );
 		$theme_supports['bon-core-sidebars'] = array( 
-												array(
-													'name' => __('Sidebar Primary','bon'),
-													'id' => 'primary'
-												),
-												array(
-													'name' => __('Sidebar Listing', 'bon'),
-													'id' => 'secondary'
-												), 
+			array(
+				'name' => __('Sidebar Primary','bon'),
+				'id' => 'primary'
+				),
+			array(
+				'name' => __('Sidebar Listing', 'bon'),
+				'id' => 'secondary'
+				), 
 			// added by Lech Dutkiewicz
-												array(
-													'name' => __('Sidebar About Us', 'bon'),
-													'id' => 'about-us'
-												), 
-												array(
-													'name' => __('Footer 1', 'bon'),
-													'id' => 'footer1'
-												),
-												array(
-													'name' => __('Footer 2', 'bon'),
-													'id' => 'footer2'
-												),
-												array(
-													'name' => __('Footer 3', 'bon'),
-													'id' => 'footer3'
-												),
-												array(
-													'name' => __('Footer 4', 'bon'),
-													'id' => 'footer4'
-												),
+			array(
+				'name' => __('Sidebar About Us', 'bon'),
+				'id' => 'about-us'
+				), 
+			array(
+				'name' => __('Footer 1', 'bon'),
+				'id' => 'footer1'
+				),
+			array(
+				'name' => __('Footer 2', 'bon'),
+				'id' => 'footer2'
+				),
+			array(
+				'name' => __('Footer 3', 'bon'),
+				'id' => 'footer3'
+				),
+			array(
+				'name' => __('Footer 4', 'bon'),
+				'id' => 'footer4'
+				),
 			// added by Lech Dutkiewicz
-												array(
-													'name' => __('Woocommerce', 'bon'),
-													'id' => 'woocommerce'
-												), 
+			array(
+				'name' => __('Woocommerce', 'bon'),
+				'id' => 'woocommerce'
+				), 
 
-											);
+			);
 		$theme_supports['bon-featured-slider'] = '';
 		$theme_supports['bon-poll'] = '';
 		$theme_supports['bon-page-builder'] = array(
-				'post',
-				'page'
+			'post',
+			'page'
 			);
 		$theme_supports['bon-quiz'] = '';
 		$theme_supports['bon-core-menus'] = array(
-									'menus' => array(
-										array(
-											'id' => 'primary',
-											'name' => __('Primary', 'bon' ),
-											'advanced' => true,
-										),
-										array(
-											'id' => 'topbar',
-											'name' => __('Top Bar Menu', 'bon' ),
-										),
-									),
-									'advanced_menu' => true,
-								);
+			'menus' => array(
+				array(
+					'id' => 'primary',
+					'name' => __('Primary', 'bon' ),
+					'advanced' => true,
+					),
+				array(
+					'id' => 'topbar',
+					'name' => __('Top Bar Menu', 'bon' ),
+					),
+				),
+			'advanced_menu' => true,
+			);
 		$theme_supports['cleaner-gallery'] = '';
 		$theme_supports['mobile-detect'] = '';
 		$theme_supports['woocommerce'] = '';
 		$theme_supports['zurb-foundation'] = array(
-				'foundation',
-		);
+			'foundation',
+			);
 
 		$theme_supports['dynamic-script'] = apply_filters('shandora_dynamic_script', array(
 			
@@ -167,54 +167,83 @@ if( !function_exists('shandora_setup_theme_supports') ) {
 				'in_footer' => true,
 				'folder' => 'libs/',
 				'filename' => 'calculator.min'
-			),*/
+				),*/
 
 
-			'selecttoui' => array(
-					'name' => 'selecttoui',
-					'version' => '2.0.0',
-					'dep' => array( 'jquery', 'jquery-ui-slider'),
-					'in_footer' => true,
-					'folder' => 'libs/',
-					'filename' => 'jquery.selecttoui.min'
-				),
+		'selecttoui' => array(
+			'name' => 'selecttoui',
+			'version' => '2.0.0',
+			'dep' => array( 'jquery', 'jquery-ui-slider'),
+			'in_footer' => true,
+			'folder' => 'libs/',
+			'filename' => 'jquery.selecttoui.min'
+			),
 
-			
+
 		));
 
-			$color = 'orange';
-		
-		$theme_supports['dynamic-style'] = apply_filters('shandora_dynamic_style', array(
+		$color = 'orange';
 
-					
-						'app' => array(
-								'name' => 'app',
-								'version' => '',
-								'dep' => '',
-								'media' => 'all',
-								'folder' => 'colors/',
-								'filename' => $color,
-							),
-						
-						
-						'all' => array(
-								'name' => 'all',
-								'version' => '',
-								'dep' => '',
-								'media' => 'all',
-								'folder' => '',
-								'filename' => 'all'
-							),
-						'print' => array(
-								'name' => 'print',
-								'version' => '',
-								'dep' => '',
-								'media' => 'print',
-								'folder' => '',
-								'filename' => 'print'
-							),
 
-						));
+
+		if (WP_ENV !== 'production') {
+
+			$theme_supports['dynamic-style'] = apply_filters('shandora_dynamic_style', array(
+
+
+				'app' => array(
+					'name' => 'app',
+					'version' => false,
+					'dep' => false,
+					'media' => 'all',
+					'folder' => '/assets/css/colors/',
+					'filename' => $color,
+					),
+
+
+				'all' => array(
+					'name' => 'all',
+					'version' => false,
+					'dep' => false,
+					'media' => 'all',
+					'folder' => '/assets/css/',
+					'filename' => 'all'
+					),
+				'print' => array(
+					'name' => 'print',
+					'version' => false,
+					'dep' => false,
+					'media' => 'print',
+					'folder' => '/assets/css/',
+					'filename' => 'print'
+					),
+				'bonicons' => array(
+					'name' => 'bonicons',
+					'version' => false,
+					'dep' => false,
+					'media' => 'all',
+					'folder' => '/framework/assets/css/frontend/',
+					'filename' => 'bonicons'
+					),
+
+				));
+
+		} else {
+
+			$theme_supports['dynamic-style'] = apply_filters('shandora_dynamic_style', array(
+
+				'style' => array(
+					'name' => 'style',
+					'version' => false,
+					'dep' => false,
+					'media' => 'all',
+					'folder' => '/',
+					'filename' => 'style'
+					)
+
+				));
+
+		}
 		
 		$theme_supports = apply_filters('shandora_default_theme_supports', $theme_supports);
 
@@ -298,15 +327,15 @@ if( !function_exists('shandora_setup_theme_thumbnails') ) {
 			/* E-BOOK */
 			
 			'blog_small' => array('width' => 270, 'height' => 270, 'crop' => true),
-		);
+			);
 
-		foreach($theme_thumbnails as $key => $args) {
-			add_image_size( $key, $args['width'], $args['height'], $args['crop'] );
-		}
-	}
+foreach($theme_thumbnails as $key => $args) {
+	add_image_size( $key, $args['width'], $args['height'], $args['crop'] );
+}
+}
 
 
-	add_action('init', 'shandora_setup_theme_thumbnails');
+add_action('init', 'shandora_setup_theme_thumbnails');
 }
 
 
@@ -320,15 +349,15 @@ function shandora_custom_typo( $theme_fonts ) {
 			'label'     => __( 'Primary Font', 'example' ),
 			'default'   => 'titilium-stack',
 			'selectors' => 'body, p, ul, ol, dl, .subheader, #slider-container .slider-inner-container .flex-caption .secondary-title, #slider-container .slider-inner-container .flex-caption .caption-content, .featured-listing-carousel h2, #main-navigation nav ul > li > ul li a,
-							.bon-toolkit-posts-widget .item-title,
-							article.listing .price,
-							footer .widget-title,
-							.bon-builder-element-calltoaction .panel.callaction h1,
-							.bon-builder-element-calltoaction .panel.callaction h2,
-							.bon-builder-element-calltoaction .panel.callaction h3,
-							.bon-builder-element-calltoaction .panel.callaction h4',
-		)
-	);
+			.bon-toolkit-posts-widget .item-title,
+			article.listing .price,
+			footer .widget-title,
+			.bon-builder-element-calltoaction .panel.callaction h1,
+			.bon-builder-element-calltoaction .panel.callaction h2,
+			.bon-builder-element-calltoaction .panel.callaction h3,
+			.bon-builder-element-calltoaction .panel.callaction h4',
+			)
+		);
 
 	$theme_fonts->add_setting(
 		array(
@@ -336,8 +365,8 @@ function shandora_custom_typo( $theme_fonts ) {
 			'label'     => __( 'Heading & Menu Font', 'bon' ),
 			'default'   => 'bebeas-neue-stack',
 			'selectors' => 'h1, h2, h3, h4, h5, h6, #main-navigation nav > ul, .entry-header .badge, #comparison-table td.title nav > ul > li > a',
-		)
-	);
+			)
+		);
 
 	$theme_fonts->add_font(
 		array(
@@ -346,24 +375,24 @@ function shandora_custom_typo( $theme_fonts ) {
 			'family' => 'Lato',
 			'stack'  => "Lato, sans-serif",
 			'type'   => 'google'
-		)
-	);
+			)
+		);
 
 	$theme_fonts->add_font(
 		array(
 			'handle' => 'titilium-stack',
 			'label'  => __( 'Titilium Web (font stack)', 'bon' ),
 			'stack'  => '"Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
-		)
-	);
+			)
+		);
 
 	$theme_fonts->add_font(
 		array(
 			'handle' => 'helvetica-neue-stack',
 			'label'  => __( 'Helvetica Neue (font stack)', 'bon' ),
 			'stack'  => '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
-		)
-	);
+			)
+		);
 
 	$theme_fonts->add_font(
 		array(
@@ -372,8 +401,8 @@ function shandora_custom_typo( $theme_fonts ) {
 			'family' => 'Muli',
 			'stack'  => "Muli, sans-serif",
 			'type'   => 'google'
-		)
-	);
+			)
+		);
 
 	$theme_fonts->add_font(
 		array(
@@ -381,8 +410,8 @@ function shandora_custom_typo( $theme_fonts ) {
 			'label' => 'Bebas Neue',
 			'stack' => '"BebasNeue", sans-serif',
 
-		)
-	);
+			)
+		);
 
 
 }

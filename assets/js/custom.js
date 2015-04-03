@@ -1165,6 +1165,16 @@ $('.gallery-link-file a').magnificPopup({
 	}
 });
 
+$('.post .gallery').each(function() {
+	$(this).magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		gallery: {
+			enabled: true
+		}
+	});
+});
+
 $('#loancalculator_cars button').click(function () {
 	var LoanAmount = $('#LoanAmount').val();
 	var DownPayment = $('#DownPayment').val();
@@ -1248,151 +1258,154 @@ var launchGoogleEvents = function() {
 
 	var googleElements = {
 		1: {
-			name: 'Home_CTA',
-			label: 'top_browse_all',
+			category: 'Home_CTA',
+			action: 'top_browse_all',
 			selector: $('.home-ctas-container.top a[data-function="browse-all"]'),
 		},
 		2: {
-			name: 'Home_CTA',
-			label: 'top_open_tool',
+			category: 'Home_CTA',
+			action: 'top_open_tool',
 			selector: $('.home-ctas-container.top a[data-function="open-tool"]'),
 		},
 		3: {
-			name: 'Home_CTA',
-			label: 'bottom_browse_all',
+			category: 'Home_CTA',
+			action: 'bottom_browse_all',
 			selector: $('.home-ctas-container.bottom a[data-function="browse-all"]'),
 		},
 		4: {
-			name: 'Home_CTA',
-			label: 'bottom_open_tool',
+			category: 'Home_CTA',
+			action: 'bottom_open_tool',
 			selector: $('.home-ctas-container.bottom a[data-function="open-tool"]'),
 		},
 		5: {
-			name: 'Home_products',
-			label: 'click',
+			category: 'Home_products',
+			action: 'click',
 			selector: $('#featured-listing-slider a.product-link'),
 		},
 		6: {
-			name: 'Home_products_navi',
-			label: 'click',
+			category: 'Home_products_navi',
+			action: 'click',
 			selector: $('#featured-listing-slider .bx-controls-direction a'),
 		},
 		7: {
-			name: 'Header_click',
-			label: 'request_a_visit',
+			category: 'Header_click',
+			action: 'request_a_visit',
 			selector: $('#main-header .phone.visit'),
-			value: document.title
+			label: document.title
 		},
 		8: {
-			name: 'Header_click',
-			label: 'phone',
+			category: 'Header_click',
+			action: 'phone',
 			selector: $('#main-header .phone.phone-1'),
-			value: document.title
+			label: document.title
 		},
 		/* Category pages */
 		9: {
-			name: 'Category_list',
-			label: 'switch_view',
+			category: 'Category_list',
+			action: 'switch_view',
 			selector: $('a.view-grid, a.view-list'),
 		},
 		10: {
-			name: 'Category_list',
-			label: 'filter',
+			category: 'Category_list',
+			action: 'filter',
 			selector: $('.search-order ul li'),
 		},
 		11: {
-			name: 'Sidebar',
-			label: 'search_cottages',
+			category: 'Sidebar',
+			action: 'search_cottages',
 			selector: $('#search-listing-form input[type="submit"]'),
 		},
 		12: {
-			name: 'Sidebar',
-			label: 'click_social_media_profile',
+			category: 'Sidebar',
+			action: 'click_social_media_profile',
 			selector: $('.bon-toolkit-social-widget a'),
-			value: $('.bon-toolkit-social-widget a').attr('title')
+			label: $('.bon-toolkit-social-widget a').attr('title')
 		},
 		13: {
-			name: 'Sidebar',
-			label: 'click_featured_listing',
+			category: 'Sidebar',
+			action: 'click_featured_listing',
 			selector: $('.widget.featured-listing .featured-item a'),
 		},
 		/* Single product pages */
 		14: {
-			name: 'Buy_cottage',
-			label: 'click_top_cta',
+			category: 'Buy_cottage',
+			action: 'click_top_cta',
 			selector: $('.top-cta a'),
-			value: $('h1.entry-title').html(),
+			label: $('h1.entry-title').html(),
+			value: $('span[itemprop="price"]'),
 		},
 		15: {
-			name: 'Buy_cottage',
-			label: 'click_bottom_cta',
+			category: 'Buy_cottage',
+			action: 'click_bottom_cta',
 			selector: $('.bottom-cta a'),
-			value: $('h1.entry-title').html(),
+			label: $('h1.entry-title').html(),
+			value: $('span[itemprop="price"]'),
 		},
 		16: {
-			name: 'Contact_form',
-			label: 'from_product_page',
+			category: 'Contact_form',
+			action: 'from_product_page',
 			selector: $('.listing-contact form, #contact-modal form'),
-			value: $('h1.entry-title').html(),
+			label: $('h1.entry-title').html(),
+			value: $('span[itemprop="price"]'),
 		},
 		17: {
-			name: 'Open_faq',
-			label: 'on_product_page',
+			category: 'Open_faq',
+			action: 'on_product_page',
 			selector: $('a[aria-controls="faqCollapse"]'),
 		},
 		18: {
-			name: 'Product_page_related',
-			label: 'click',
+			category: 'Product_page_related',
+			action: 'click',
 			selector: $('.listings.related .product-link'),
 		},
 		19: {
-			name: 'Product_page_additional_information',
-			label: 'switch_specification_tabs',
+			category: 'Product_page_additional_information',
+			action: 'switch_specification_tabs',
 			selector: $('.entry-specification .tab-nav a'),
 		},
 		20: {
-			name: 'Product_page_additional_information',
-			label: 'click_additional_services',
+			category: 'Product_page_additional_information',
+			action: 'click_additional_services',
 			selector: $('.entry-specification #accordion-services .accordion-section-title'),
 		},
 		21: {
-			name: 'Contact_form',
-			label: 'from_about_us_page',
+			category: 'Contact_form',
+			action: 'from_about_us_page',
 			selector: $('#tab-target-contact form'),
 		},
 		22: {
-			name: 'Open_faq',
-			label: 'on_about_us_page',
+			category: 'Open_faq',
+			action: 'on_about_us_page',
 			selector: $('#detail-tab .tab-nav a[href="#tab-target-faq"]'),
 		},
 		23: {
-			name: 'Blog_page',
-			label: 'use_gallery_nav',
+			category: 'Blog_page',
+			action: 'use_gallery_nav',
 			selector: $('.blog article .carousel-control'),
 		},
 		24: {
-			name: 'Blog_page',
-			label: 'launch_video',
+			category: 'Blog_page',
+			action: 'launch_video',
 			selector: $('.blog article iframe .html5-video-content'),
 		},
 		25: {
-			name: 'Blog_page',
-			label: 'choose_category',
+			category: 'Blog_page',
+			action: 'choose_category',
 			selector: $('.blog article .entry-post-meta a[ref="category"]'),
 		},
 		26: {
-			name: 'Blog_page',
-			label: 'choose_category_from_sidebar',
+			category: 'Blog_page',
+			action: 'choose_category_from_sidebar',
 			selector: $('.blog .sidebar .widget_categories .cat-item a'),
 		},
 		27: {
-			name: 'Blog_page',
-			label: 'choose_tag',
+			category: 'Blog_page',
+			action: 'choose_tag',
 			selector: $('.blog article .entry-footer .entry-tag a'),
 		},
 		28: {
-			name: 'Blog_page',
-			label: 'single_post_navigation',
+			category: 'Blog_page',
+			action: 'single_post_navigation',
 			selector: $('.blog .loop-nav a'),
 		},
 	};
@@ -1401,20 +1414,36 @@ var launchGoogleEvents = function() {
 		var event = this;
 		if ( event.selector ) {
 
-			if ( event.name === 'Contact_form' ) {
+			if ( event.category === 'Contact_form' ) {
 				$(event.selector.selector).submit(function() {
-					if (event.value) {
-						ga( 'send', 'event', event.name, event.label, event.value );	
+					if (event.label) {
+						if (event.value) {
+							ga( 'send', 'event', event.category, event.action, event.label, event.value );	
+						} else {
+							ga( 'send', 'event', event.category, event.action, event.label );	
+						}
 					} else {
-						ga( 'send', 'event', event.name, event.label );			
+						if (event.value) {
+							ga( 'send', 'event', event.category, event.action, NULL, event.value );	
+						} else {
+							ga( 'send', 'event', event.category, event.action );	
+						}		
 					}
 				});
 			} else {
 				$(event.selector.selector).bind( 'click', function() {
-					if (event.value) {
-						ga( 'send', 'event', event.name, event.label, event.value );	
+					if (event.label) {
+						if (event.value) {
+							ga( 'send', 'event', event.category, event.action, event.label, event.value );	
+						} else {
+							ga( 'send', 'event', event.category, event.action, event.label );	
+						}
 					} else {
-						ga( 'send', 'event', event.name, event.label );			
+						if (event.value) {
+							ga( 'send', 'event', event.category, event.action, NULL, event.value );	
+						} else {
+							ga( 'send', 'event', event.category, event.action );	
+						}			
 					}
 				});
 			}
@@ -1422,7 +1451,7 @@ var launchGoogleEvents = function() {
 		}
 	});
 
-	setTimeout("ga( 'send', 'event', '40_seconds', 'read' )", 40000);
+setTimeout("ga( 'send', 'event', '40_seconds', 'read' )", 40000);
 
 };
 

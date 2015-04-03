@@ -1631,7 +1631,7 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			$args['size'] = 'blog_small';
 		}
 		$args['columns'] = 2;
-		$args['links'] = 'attachment_page';
+		$args['link'] = 'file';
 
 		return $args;
 	}
