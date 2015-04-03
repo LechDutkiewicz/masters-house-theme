@@ -169,11 +169,11 @@ function bon_locate_template( $template_name, $template_path = '', $default_path
 
 	// Look within passed path within the theme - this is priority
 	$template = locate_template(
-			array(
-				trailingslashit( $template_path ) . $template_name,
-				$template_name
+		array(
+			trailingslashit( $template_path ) . $template_name,
+			$template_name
 			)
-	);
+		);
 
 	// Get default template
 	if ( !$template ) {
@@ -325,17 +325,17 @@ if ( !function_exists( 'bon_color_mod' ) ) {
 				if ( $shade == 'lighter' ) {
 					switch ( $char ) {
 						case 9: $char = 'a';
-							break;
+						break;
 						case 'f': $char = 'f';
-							break;
+						break;
 						default: $char++;
 					}
 				} else if ( $shade == 'darker' ) {
 					switch ( $char ) {
 						case 'a': $char = '9';
-							break;
+						break;
 						case '0': $char = '0';
-							break;
+						break;
 						default: $char = chr( ord( $char ) - 1 );
 					}
 				}
@@ -358,12 +358,12 @@ function bon_author_rewrite_rules() {
 		'author',
 		'editor',
 		'administrator',
-	);
+		);
 
 	foreach ( $rules as $rule ) {
 		add_rewrite_rule(
-				$rule . '/([^/]+)/?$', 'index.php?author_name=$matches[1]', 'top'
-		);
+			$rule . '/([^/]+)/?$', 'index.php?author_name=$matches[1]', 'top'
+			);
 	}
 }
 
@@ -377,7 +377,7 @@ function bon_custom_author_link( $link, $author_id, $author_nicename ) {
 		'author',
 		'editor',
 		'administrator',
-	);
+		);
 
 
 	foreach ( $rules as $rule ) {
@@ -453,16 +453,21 @@ add_action( 'wp_ajax_nopriv_bon_icon_selection', 'bon_get_icon_modal' );
 
 function bon_enqueue_utility_script() {
 	if ( !is_admin() )
-		return;
+		return;	
 
-	wp_enqueue_style( 'bonicons', trailingslashit( BON_CSS ) . 'frontend/bonicons.css' );
+	if (WP_ENV !== 'production') {
+
+		wp_enqueue_style( 'bonicons', trailingslashit( BON_CSS ) . 'frontend/bonicons.css' );
+
+	}
+	
 	wp_enqueue_script( 'bon-admin-util', trailingslashit( BON_JS ) . 'utility.js', array( 'jquery' ), '1.0.0', true );
 
 	wp_localize_script( 'bon-admin-util', 'bon_util_ajax', array(
 		'url' => admin_url( 'admin-ajax.php' ),
 		'choose_icon' => __( 'Choose Icon', 'bon' ),
 		'remove_icon' => __( 'Remove Icon', 'bon' )
-	) );
+		) );
 }
 
 add_action( 'admin_enqueue_scripts', 'bon_enqueue_utility_script', 1000 );
@@ -530,13 +535,13 @@ function bon_generate_meta_keys( $post_type = 'post' ) {
 	global $wpdb;
 
 	$query = "SELECT DISTINCT($wpdb->postmeta.meta_key) 
-	        FROM $wpdb->posts 
-	        LEFT JOIN $wpdb->postmeta 
-	        ON $wpdb->posts.ID = $wpdb->postmeta.post_id 
-	        WHERE $wpdb->posts.post_type = '%s' 
-	        AND $wpdb->postmeta.meta_key != '' 
-	        AND $wpdb->postmeta.meta_key NOT RegExp '(^[_0-9].+$)' 
-	        AND $wpdb->postmeta.meta_key NOT RegExp '(^[0-9]+$)'";
+	FROM $wpdb->posts 
+	LEFT JOIN $wpdb->postmeta 
+	ON $wpdb->posts.ID = $wpdb->postmeta.post_id 
+	WHERE $wpdb->posts.post_type = '%s' 
+	AND $wpdb->postmeta.meta_key != '' 
+	AND $wpdb->postmeta.meta_key NOT RegExp '(^[_0-9].+$)' 
+	AND $wpdb->postmeta.meta_key NOT RegExp '(^[0-9]+$)'";
 
 	$meta_keys = $wpdb->get_col( $wpdb->prepare( $query, $post_type ) );
 

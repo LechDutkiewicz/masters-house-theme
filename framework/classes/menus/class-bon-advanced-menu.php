@@ -90,9 +90,9 @@ class BON_Advanced_Menu {
 		$sidebars_opt = bon_get_option('sidebars_generator');
 
 		if(!empty($sidebars_opt) && is_array($sidebars_opt)) {
-		
-			foreach( $sidebars_opt as $sidebar ) {
 			
+			foreach( $sidebars_opt as $sidebar ) {
+				
 				if( !empty($sidebar['sidebar_name'] ) && isset( $sidebar['is_menu'] ) ) {
 
 					$id = strtolower(str_replace(" ", "-", $sidebar['sidebar_name']));
@@ -116,7 +116,7 @@ class BON_Advanced_Menu {
 				'label' => __( 'Use As Divider' , 'bon' ), 
 				'type' 	=> 'checkbox',
 				'std' => 0
-			),
+				),
 			'ismega' => array(
 				'id' => 'ismega',
 				'level'	=> '0', 
@@ -124,7 +124,7 @@ class BON_Advanced_Menu {
 				'label' => __( 'Activate Mega Menu' , 'bon' ), 
 				'type' 	=> 'checkbox',
 				'std' => 1
-			),
+				),
 			'fullwidth' => array(
 				'id' => 'fullwidth',
 				'level'	=> '0', 
@@ -132,7 +132,7 @@ class BON_Advanced_Menu {
 				'label' => __( 'Full Width Submenu' , 'bon' ), 
 				'type' 	=> 'checkbox',
 				'std' => 0
-			),
+				),
 			'notext' => array(
 				'id' => 'notext',
 				'level'	=> '0-plus', 
@@ -140,7 +140,7 @@ class BON_Advanced_Menu {
 				'label' => __( 'Disable Text' , 'bon' ), 
 				'type' 	=> 'checkbox',
 				'std' => 0
-			),
+				),
 			'nolink' =>  array(
 				'id' => 'nolink',
 				'level'	=> '0-plus', 
@@ -148,7 +148,7 @@ class BON_Advanced_Menu {
 				'label' => __( 'Disable Link' , 'bon' ), 
 				'type' 	=> 'checkbox',
 				'std' => 0
-			),
+				),
 			'newrow' => array(
 				'id' => 'newrow',
 				'level'	=> '1', 
@@ -156,7 +156,7 @@ class BON_Advanced_Menu {
 				'label' => __( 'New Row' , 'bon' ), 
 				'type' 	=> 'checkbox',
 				'std' => 0
-			),
+				),
 
 			'align' => array(
 				'id' => 'align',
@@ -169,8 +169,8 @@ class BON_Advanced_Menu {
 					'left' => __('Left', 'bon'),
 					'center' => __('Center', 'bon'),
 					'right' => __('Right', 'bon'),
-				)
-			),
+					)
+				),
 
 			'trigger' => array(
 				'id' => 'trigger',
@@ -181,9 +181,9 @@ class BON_Advanced_Menu {
 				'options' => array(
 					'hover' => __('On Hover', 'bon'),
 					'click' => __('On Click', 'bon'),
-				),
+					),
 				'std' => 'hover'
-			),
+				),
 
 			'numcols' => array(
 				'id' => 'numcols',
@@ -201,9 +201,9 @@ class BON_Advanced_Menu {
 					'6' => '6',
 					'7' => '7',
 					'8' => '8'
-				),
+					),
 				'std' => 'auto'
-			),
+				),
 			
 			'icon' => array(
 				'id' => 'icon',
@@ -212,7 +212,7 @@ class BON_Advanced_Menu {
 				'desc' => __( 'Set a predefined icon from icon lists.' , 'bon' ), 
 				'type' 	=> 'icon',
 				'std' => ''
-			),
+				),
 			'iconsize' => array(
 				'id' => 'iconsize',
 				'level'	=> '0-plus', 
@@ -233,8 +233,8 @@ class BON_Advanced_Menu {
 					'8x' => '8x',
 					'9x' => '9x',
 					'10x' => '10x'
-				)
-			),
+					)
+				),
 			'thumbnail' => array(
 				'id' => 'thumbnail',
 				'level'	=> '0-plus', 
@@ -242,7 +242,7 @@ class BON_Advanced_Menu {
 				'label' => __( 'Set Thumbnail' , 'bon' ), 
 				'type' 	=> 'upload',
 				'std' => ''
-			),
+				),
 			'thumbpos' => array(
 				'id' => 'thumbpos',
 				'level'	=> '0-plus', 
@@ -255,8 +255,8 @@ class BON_Advanced_Menu {
 					'top' => __('Above Text', 'bon'),
 					'bottom' => __('Below Text', 'bon'),
 					'right' => __('After Text', 'bon'),
-				)
-			),
+					)
+				),
 
 			'widget' => array(
 				'id' => 'widget',
@@ -266,7 +266,7 @@ class BON_Advanced_Menu {
 				'type' 	=> 'select',
 				'options' => $widget_options,
 				'std' => ''
-			),
+				),
 
 			'widgetcol' => array(
 				'id' => 'widgetcol',
@@ -289,9 +289,9 @@ class BON_Advanced_Menu {
 					'10' => '10',
 					'11' => '11',
 					'12' => '12'
-				),
+					),
 				'std' => ''
-			),
+				),
 
 			'content' => array(
 				'id' => 'content',
@@ -300,12 +300,12 @@ class BON_Advanced_Menu {
 				'label' => __( 'Custom Content' , 'bon' ), 
 				'type' 	=> 'editor',
 				'std' => '',
-			),
-		);
+				),
+			);
 
 
-		$this->default_keys = apply_filters( 'bon_nav_menu_option_key_defaults' , $this->default_keys );
-	}
+$this->default_keys = apply_filters( 'bon_nav_menu_option_key_defaults' , $this->default_keys );
+}
 
 	/**
 	 * This method basically serves as a wrapper on 'init' to allow themes to know when to 
@@ -359,16 +359,16 @@ class BON_Advanced_Menu {
 	 * @return void
 	 */
 	function menu_options_start( $item ) { ?>
-		<div class="clear"></div>
-		<div class="bon-nav-menu-edit">
-			<strong class="bon-nav-menu-handle">
-				<i class="dashicons dashicons-admin-generic"></i> <?php _e('Show/Hide Advance Options' ,'bon'); ?>
-				<a class="bon-nav-menu-action"></a>
-			</strong>
-			<div class="bon-nav-menu-inside hide">
+	<div class="clear"></div>
+	<div class="bon-nav-menu-edit">
+		<strong class="bon-nav-menu-handle">
+			<i class="dashicons dashicons-admin-generic"></i> <?php _e('Show/Hide Advance Options' ,'bon'); ?>
+			<a class="bon-nav-menu-action"></a>
+		</strong>
+		<div class="bon-nav-menu-inside hide">
 
-	<?php 	}
-	
+			<?php 	}
+			
 
 	/**
 	 * Rendering the menu options wrapper end
@@ -400,7 +400,7 @@ class BON_Advanced_Menu {
 			'type'	=> 'text',
 			'options'	=>	array(),
 			'std'=> '',
-		);
+			);
 
 		apply_filters( 'bon_nav_menu_option_defaults', $defaults );
 
@@ -421,33 +421,33 @@ class BON_Advanced_Menu {
 
 		
 		<div class="bon-nav-menu-field description description-wide level-<?php echo $level; ?>">
-            <label for="<?php echo $id; ?>">
+			<label for="<?php echo $id; ?>">
 
-        <?php
-	               
-					
-		switch( $type ) {
-
-			case 'text':
+				<?php
 				
-				echo $desc;
-				echo '<input class="widefat bon-edit-menu-item" type="text" value="'.esc_attr( $val ).'" id="'.$id.'" name="'.$name.'" />';
+				
+				switch( $type ) {
 
-			break;
+					case 'text':
+					
+					echo $desc;
+					echo '<input class="widefat bon-edit-menu-item" type="text" value="'.esc_attr( $val ).'" id="'.$id.'" name="'.$name.'" />';
 
-			case 'textarea':
+					break;
 
-				echo $desc;
+					case 'textarea':
 
-				echo '<textarea class="widefat bon-edit-menu-item" id="'.$id.'" name="'.$name.'">'. wp_kses_data( $val ) . '</textarea>';
+					echo $desc;
 
-			break;
+					echo '<textarea class="widefat bon-edit-menu-item" id="'.$id.'" name="'.$name.'">'. wp_kses_data( $val ) . '</textarea>';
 
-			case 'select':
+					break;
 
-				echo $desc;
+					case 'select':
 
-				echo '<select class="widefat bon-edit-menu-item" id="'.$id.'" name="'.$name.'">';
+					echo $desc;
+
+					echo '<select class="widefat bon-edit-menu-item" id="'.$id.'" name="'.$name.'">';
 
 					foreach( $options as $opt_key => $opt_label ):
 						
@@ -455,80 +455,80 @@ class BON_Advanced_Menu {
 
 					endforeach;
 
-				echo '</select>';
-			break;
+					echo '</select>';
+					break;
 
-			case 'checkbox':
+					case 'checkbox':
 
-				echo '<input type="checkbox" class="bon-edit-menu-item" id="'.$id.'" name="'.$name.'" value="1" ' . checked( $val, 1, false ) . '/>';
-				echo $desc;
+					echo '<input type="checkbox" class="bon-edit-menu-item" id="'.$id.'" name="'.$name.'" value="1" ' . checked( $val, 1, false ) . '/>';
+					echo $desc;
 
-			break;
+					break;
 
-			case 'upload' :
+					case 'upload' :
 
-				echo $desc;
+					echo $desc;
 
-				$class = '';
+					$class = '';
 
-				if ( $val ) {
-					$class = ' has-file';
-				}
-
-				echo '<span class="bon-edit-menu-fieldset">';
-				echo '<input type="text" class="bon-edit-menu-item bon-edit-menu-upload'.$class.'" value="'.esc_attr( $val ).'" id="'.$id.'" placeholder="' . __('No file chosen', 'bon') .'" name="'.$name.'" />';
-
-				if ( function_exists( 'wp_enqueue_media' ) ) {
-					if ( ( $val == '' ) ) {
-						echo '<input data-choose="'.__('Choose an image','bon').'" data-update="'.__('Use this image','bon').'" id="upload-'.$id.'" class="upload-button button" type="button" value="' . __( 'Upload', 'bon' ) . '" />' . "\n";
-					} else {
-						echo '<input id="remove-edit-menu-item-' . $item->ID . '" class="remove-file button" type="button" value="' . __( 'Remove', 'bon' ) . '" />' . "\n";
+					if ( $val ) {
+						$class = ' has-file';
 					}
+
+					echo '<span class="bon-edit-menu-fieldset">';
+					echo '<input type="text" class="bon-edit-menu-item bon-edit-menu-upload'.$class.'" value="'.esc_attr( $val ).'" id="'.$id.'" placeholder="' . __('No file chosen', 'bon') .'" name="'.$name.'" />';
+
+					if ( function_exists( 'wp_enqueue_media' ) ) {
+						if ( ( $val == '' ) ) {
+							echo '<input data-choose="'.__('Choose an image','bon').'" data-update="'.__('Use this image','bon').'" id="upload-'.$id.'" class="upload-button button" type="button" value="' . __( 'Upload', 'bon' ) . '" />' . "\n";
+						} else {
+							echo '<input id="remove-edit-menu-item-' . $item->ID . '" class="remove-file button" type="button" value="' . __( 'Remove', 'bon' ) . '" />' . "\n";
+						}
+					}
+
+					echo '<span class="bon-edit-menu-screenshot" id="edit-menu-item-' . $item->ID . '-image">' . "\n";
+
+					
+					$image = preg_match( '/(^.*\.jpg|jpeg|png|gif|ico*)/i', $val );
+					$img_cls = '';
+
+					if( $val == '' ) {
+						$img_cls = 'no-image';
+					}
+					$remove = '<a class="remove-image '.$img_cls.'"><i class="dashicons dashicons-no"></i></a>';
+					echo '<img class="'.$img_cls.'" src="' . $val . '" alt="" />'.$remove.'';
+
+					echo '</span>' . "\n";
+					echo '</span>';
+
+					break;
+
+					case 'icon' :
+
+					echo $desc;
+
+					echo bon_icon_select_field( $id, $name, 'li#menu-item-'.$item->ID, esc_attr( $val ), array('bon-edit-menu-fieldset'), array( 'bon-edit-menu-item', 'bon-edit-menu-icon' ) );
+
+					break;
+
+					case 'editor':
+
+					echo $desc;
+
+					echo '<input type="button" class="button bon-menu-open-editor" data-button-submit="'.__('Save Content','bon').'" data-dialog-title="'.__('Edit Custom Content','bon').'" data-id="'.$item->ID.'" value="'.__('Edit Custom Content','bon').'"/>';
+
+					echo '<textarea class="widefat bon-edit-menu-item bon-textarea-editor" id="'.$id.'" name="'.$name.'">'. $val . '</textarea>';
+
+					break;
+
 				}
 
-				echo '<span class="bon-edit-menu-screenshot" id="edit-menu-item-' . $item->ID . '-image">' . "\n";
+				?>
 
-				
-				$image = preg_match( '/(^.*\.jpg|jpeg|png|gif|ico*)/i', $val );
-				$img_cls = '';
+			</label></div>
 
-				if( $val == '' ) {
-					$img_cls = 'no-image';
-				}
-				$remove = '<a class="remove-image '.$img_cls.'"><i class="dashicons dashicons-no"></i></a>';
-				echo '<img class="'.$img_cls.'" src="' . $val . '" alt="" />'.$remove.'';
-
-				echo '</span>' . "\n";
-				echo '</span>';
-
-			break;
-
-			case 'icon' :
-
-				echo $desc;
-
-				echo bon_icon_select_field( $id, $name, 'li#menu-item-'.$item->ID, esc_attr( $val ), array('bon-edit-menu-fieldset'), array( 'bon-edit-menu-item', 'bon-edit-menu-icon' ) );
-
-			break;
-
-			case 'editor':
-
-				echo $desc;
-
-				echo '<input type="button" class="button bon-menu-open-editor" data-button-submit="'.__('Save Content','bon').'" data-dialog-title="'.__('Edit Custom Content','bon').'" data-id="'.$item->ID.'" value="'.__('Edit Custom Content','bon').'"/>';
-
-				echo '<textarea class="widefat bon-edit-menu-item bon-textarea-editor" id="'.$id.'" name="'.$name.'">'. $val . '</textarea>';
-
-			break;
-
+			<?php
 		}
-
-		?>
-
-		</label></div>
-
-		<?php
-	}
 
 	/**
 	 * Get Option description
@@ -582,10 +582,10 @@ class BON_Advanced_Menu {
 	 */
 	function add_field( $menu_item ) {
 
-	    $menu_item->bon_nav_options = get_post_meta( $menu_item->ID, BON_ADVANCED_MENU_KEY , true );
-	    
-	    return $menu_item;
-	    
+		$menu_item->bon_nav_options = get_post_meta( $menu_item->ID, BON_ADVANCED_MENU_KEY , true );
+		
+		return $menu_item;
+		
 	}
 
 	/**
@@ -647,8 +647,8 @@ class BON_Advanced_Menu {
 	 */
 	function edit_walker( $walker ) {
 		
-	    return 'BON_Walker_Nav_Menu_Edit';
-	    
+		return 'BON_Walker_Nav_Menu_Edit';
+		
 	}
 
 	/**
@@ -670,7 +670,7 @@ class BON_Advanced_Menu {
 				'url' => admin_url('admin-ajax.php'),
 				'upload' => __( 'Upload', 'bon' ),
 				'remove' => __( 'Remove', 'bon' ),
-			) );
+				) );
 		}
 	}
 	
@@ -720,7 +720,7 @@ class BON_Advanced_Menu {
 					$color_mod = '';
 
 					if (strpos($this->menu_color_mod,'bon-menu-') === false) {
-					    $color_mod = 'bon-menu-'.$this->menu_color_mod;
+						$color_mod = 'bon-menu-'.$this->menu_color_mod;
 					}
 					
 					if( isset( $menu['advanced'] ) && $menu['advanced'] == true ) {
@@ -750,8 +750,12 @@ class BON_Advanced_Menu {
 	 */
 	function frontend_scripts() {
 
-		wp_register_style( 'bon-advanced-menu', trailingslashit( BON_CSS ) . 'frontend/menu.css', '', '1.0', 'screen' );
-		wp_enqueue_style( 'bon-advanced-menu' );
+		if (WP_ENV !== 'production') {
+
+			wp_register_style( 'bon-advanced-menu', trailingslashit( BON_CSS ) . 'frontend/menu.css', '', '1.0', 'screen' );
+			wp_enqueue_style( 'bon-advanced-menu' );
+
+		}
 
 		wp_register_script( 'bon-advanced-menu', trailingslashit( BON_JS ) . 'frontend/menu.js', array('jquery', 'hoverIntent'), '1.0', true );
 		wp_enqueue_script( 'bon-advanced-menu' );
@@ -787,8 +791,8 @@ class BON_Advanced_Menu {
 					'toolbar2' => 'formatselect, underline, forecolor, pastetext, removeformat, charmap, outdent, indent, undo, redo, wp_help',
 					'toolbar3' => '',
 					'toolbar4' => '',
-				)
-			);
+					)
+				);
 
 			$settings = apply_filters( 'bon_advanced_menu_editor_dialog_settings', $settings );
 
@@ -838,17 +842,17 @@ class BON_Advanced_Menu {
 
 				if ( get_option( BON_ADVANCED_MENU_KEY ) !== false ) {
 				    // The option already exists, so we just update it.
-				    update_option( BON_ADVANCED_MENU_KEY, $data );
+					update_option( BON_ADVANCED_MENU_KEY, $data );
 
-				    echo '<div class="updated"><p>' . __('Data Saved.','bon') . '</p></div>';
+					echo '<div class="updated"><p>' . __('Data Saved.','bon') . '</p></div>';
 
 				} else {
 				    // The option hasn't been added yet. We'll add it with $autoload set to 'no'.
-				    $deprecated = null;
-				    $autoload = 'no';
-				    add_option( BON_ADVANCED_MENU_KEY, $data, $deprecated, $autoload );
+					$deprecated = null;
+					$autoload = 'no';
+					add_option( BON_ADVANCED_MENU_KEY, $data, $deprecated, $autoload );
 
-				    echo '<div class="updated"><p>' . __('Data Saved.','bon') . '</p></div>';
+					echo '<div class="updated"><p>' . __('Data Saved.','bon') . '</p></div>';
 				}
 
 			}
@@ -866,31 +870,31 @@ class BON_Advanced_Menu {
 		<div class="bon-advanced-menu-metabox">
 			<p class="bon-advanced-menu-info"><?php _e('Select the menu to activate the advanced menu.', 'bon' ); ?></p>
 
-				<?php wp_nonce_field( $nonce_action, $nonce_name ); ?>
+			<?php wp_nonce_field( $nonce_action, $nonce_name ); ?>
 
-				<?php foreach( (array) $nav_menus as $key => $_nav_menu ) : ?>
-					<div class="bon-advanced-menu-checkbox">
-					<label class="menu-item-title">
-						<input id="bon-activate-advanced-menu-<?php echo $_nav_menu->term_id; ?>" type="checkbox" <?php checked( in_array( $_nav_menu->term_id, $active ), true ); ?> value="<?php echo $_nav_menu->term_id; ?>" name="bon_activate_advanced_menu[]" class="menu-item-checkbox"/> <?php echo $_nav_menu->name; ?>
-					</label>
-					</div>
-				
-				<?php endforeach; ?>
+			<?php foreach( (array) $nav_menus as $key => $_nav_menu ) : ?>
+			<div class="bon-advanced-menu-checkbox">
+				<label class="menu-item-title">
+					<input id="bon-activate-advanced-menu-<?php echo $_nav_menu->term_id; ?>" type="checkbox" <?php checked( in_array( $_nav_menu->term_id, $active ), true ); ?> value="<?php echo $_nav_menu->term_id; ?>" name="bon_activate_advanced_menu[]" class="menu-item-checkbox"/> <?php echo $_nav_menu->name; ?>
+				</label>
+			</div>
+			
+		<?php endforeach; ?>
 
-				<p class="button-controls">
-					<span class="list-controls">
-						<a class="bon-activate-advanced-menu-all" href="#"><?php _e('Select All','bon'); ?></a>
-					</span>
-					<span class="add-to-menu">
-						<input type="submit" id="submit-bon-activate-advanced-menu" name="submit_bon_activate_advanced_menu" value="<?php echo __('Save','bon'); ?>" class="button-primary right">
-						<span class="spinner"></span>
-					</span>
-				</p>
+		<p class="button-controls">
+			<span class="list-controls">
+				<a class="bon-activate-advanced-menu-all" href="#"><?php _e('Select All','bon'); ?></a>
+			</span>
+			<span class="add-to-menu">
+				<input type="submit" id="submit-bon-activate-advanced-menu" name="submit_bon_activate_advanced_menu" value="<?php echo __('Save','bon'); ?>" class="button-primary right">
+				<span class="spinner"></span>
+			</span>
+		</p>
 
-		</div>
-		<?php
-		
-	}
+	</div>
+	<?php
+	
+}
 
 
 	/**
@@ -915,17 +919,17 @@ class BON_Advanced_Menu {
 
 				if ( get_option( BON_ADVANCED_MENU_KEY ) !== false ) {
 				    // The option already exists, so we just update it.
-				    update_option( BON_ADVANCED_MENU_KEY, $data );
+					update_option( BON_ADVANCED_MENU_KEY, $data );
 
-				    die( __('Data Saved.','bon') );
+					die( __('Data Saved.','bon') );
 
 				} else {
 				    // The option hasn't been added yet. We'll add it with $autoload set to 'no'.
-				    $deprecated = null;
-				    $autoload = 'no';
-				    add_option( BON_ADVANCED_MENU_KEY, $data, $deprecated, $autoload );
+					$deprecated = null;
+					$autoload = 'no';
+					add_option( BON_ADVANCED_MENU_KEY, $data, $deprecated, $autoload );
 
-				    die( __('Data Saved.','bon') );
+					die( __('Data Saved.','bon') );
 				}
 
 			}
@@ -980,10 +984,10 @@ class BON_Advanced_Menu {
 	function shortcode_video( $attr, $content = null) {
 
 		extract( shortcode_atts( array(
-            'width' => '',
-            'height' => '',
-            'flexible' => 'yes',
-        ), $attr ) );
+			'width' => '',
+			'height' => '',
+			'flexible' => 'yes',
+			), $attr ) );
 
 		$url = esc_url( $content );
 
@@ -1008,22 +1012,22 @@ class BON_Advanced_Menu {
 
 
 		extract( shortcode_atts( array(
-            'numberposts' => 4,
-            'post_type' => 'post',
-            'term_slug' => '',
-            'taxonomy_slug' => '',
-            'orderby' => 'date',
-            'order' => 'DESC',
-            'show_excerpt' => 'no',
-            'show_thumbnail' => 'yes',
-        ), $attr ) );
+			'numberposts' => 4,
+			'post_type' => 'post',
+			'term_slug' => '',
+			'taxonomy_slug' => '',
+			'orderby' => 'date',
+			'order' => 'DESC',
+			'show_excerpt' => 'no',
+			'show_thumbnail' => 'yes',
+			), $attr ) );
 
 		$o = apply_filters( 'bon_advanced_menu_recent_post_shortcode', '', $attr );
 
 		if( !empty( $o ) )
 			return $o;
 
-	    static $instance = 0;
+		static $instance = 0;
 		$instance++;
 
 		$tq = array();
@@ -1035,7 +1039,7 @@ class BON_Advanced_Menu {
 			'order' => !empty( $order ) ? $order : 'DESC',
 			'ignore_sticky_posts' => true,
 			'post_status' => 'publish'
-		);
+			);
 
 
 
@@ -1057,7 +1061,7 @@ class BON_Advanced_Menu {
 						'terms' => $new_term_slug,
 						'taxonomy' => $new_tax_slug[$i],
 						'field' => 'slug',
-					);
+						);
 
 					$i++;
 				}
@@ -1070,7 +1074,7 @@ class BON_Advanced_Menu {
 					'terms' => $term_slug,
 					'taxonomy' => $taxonomy_slug,
 					'field' => 'slug',
-				);
+					);
 
 			}
 
@@ -1088,29 +1092,29 @@ class BON_Advanced_Menu {
 
 			$o .= '<div id="bon-menu-post-'.$instance.'" class="bt-col-row bon-menu-post" >';
 
-			foreach( $menu_posts as $menu_post ) :
+		foreach( $menu_posts as $menu_post ) :
 
-				$o .= '<div class="bon-menu-post-content bt-col bt-col-lg-'.( 12 / $numberposts ).' bt-col-sm-12">';
+			$o .= '<div class="bon-menu-post-content bt-col bt-col-lg-'.( 12 / $numberposts ).' bt-col-sm-12">';
 
-					if( $show_thumbnail == 'yes' && has_post_thumbnail( $menu_post->ID ) ) {
-						$o .= '<div class="bon-menu-post-thumbnail">';
-						$o .= get_the_post_thumbnail( $menu_post->ID, 'medium' );
-						$o .= '</div>';
-					}
-
-					$o .= '<h3 class="bon-menu-post-title"><a href="'.get_permalink( $menu_post->ID ).'" title="'.__('Read More', 'bon').'">'.get_the_title( $menu_post->ID ).'</a></h3>';
-					
-					if( $show_excerpt == 'yes' ) {
-						$o .= '<div class="bon-menu-post-excerpt">'. ( ( $menu_post->post_excerpt != '' ) ? $menu_post->post_excerpt : bon_trim_excerpt( $menu_post->post_content, 25 ) ) .'</div>';
-					}
-				
-				$o .= '</div>';
-
-			endforeach; 
-
-			wp_reset_postdata();
-			
+		if( $show_thumbnail == 'yes' && has_post_thumbnail( $menu_post->ID ) ) {
+			$o .= '<div class="bon-menu-post-thumbnail">';
+			$o .= get_the_post_thumbnail( $menu_post->ID, 'medium' );
 			$o .= '</div>';
+		}
+
+		$o .= '<h3 class="bon-menu-post-title"><a href="'.get_permalink( $menu_post->ID ).'" title="'.__('Read More', 'bon').'">'.get_the_title( $menu_post->ID ).'</a></h3>';
+		
+		if( $show_excerpt == 'yes' ) {
+			$o .= '<div class="bon-menu-post-excerpt">'. ( ( $menu_post->post_excerpt != '' ) ? $menu_post->post_excerpt : bon_trim_excerpt( $menu_post->post_content, 25 ) ) .'</div>';
+		}
+		
+		$o .= '</div>';
+
+		endforeach; 
+
+		wp_reset_postdata();
+		
+		$o .= '</div>';
 
 		endif; 
 

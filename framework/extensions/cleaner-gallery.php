@@ -22,7 +22,13 @@ add_action( 'wp_enqueue_scripts', 'cleaner_gallery_style' );
 function cleaner_gallery_style() {
 
 	if(!is_admin()) {
-		wp_enqueue_style( 'cleaner-gallery', trailingslashit( BON_CSS ) . 'frontend/gallery.css' , array(), false, 'all' );
+
+		if (WP_ENV !== 'production') {
+
+			wp_enqueue_style( 'cleaner-gallery', trailingslashit( BON_CSS ) . 'frontend/gallery.css' , array(), false, 'all' );
+
+		}
+		
 	}
 }
 /**
@@ -70,7 +76,7 @@ function cleaner_gallery( $output, $attr ) {
 		'exclude'     => '',
 		'numberposts' => -1,
 		'offset'      => ''
-	);
+		);
 
 	/* Apply filters to the default arguments. */
 	$defaults = apply_filters( 'cleaner_gallery_defaults', $defaults );
@@ -95,7 +101,7 @@ function cleaner_gallery( $output, $attr ) {
 		'numberposts'      => $numberposts,
 		'offset'           => $offset,
 		'suppress_filters' => true
-	);
+		);
 
 	/* Get image attachments. If none, return. */
 	if ( empty( $include ) )
