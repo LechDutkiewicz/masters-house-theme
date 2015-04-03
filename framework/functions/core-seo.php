@@ -38,7 +38,11 @@ function bon_meta_robots() {
 		return;
 
 	/* Create the HTML for the robots meta tag. */
-	$robots = '<meta name="robots" content="index,follow" />' . "\n";
+	if ( is_attachment() ) {
+		$robots = '<meta name="robots" content="noindex,follow" />' . "\n";
+	} else {
+		$robots = '<meta name="robots" content="index,follow" />' . "\n";
+	}
 
 	echo apply_atomic( 'meta_robots', $robots );
 }

@@ -39,8 +39,8 @@ function bon_head_cleanup() {
 	remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
 	remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
 	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
-	add_filter( 'style_loader_src', 'bon_remove_wp_ver_css_js', 9999 );
-	add_filter( 'script_loader_src', 'bon_remove_wp_ver_css_js', 9999 );
+	//add_filter( 'style_loader_src', 'bon_remove_wp_ver_css_js', 9999 );
+	//add_filter( 'script_loader_src', 'bon_remove_wp_ver_css_js', 9999 );
 	add_filter( 'wp_head', 'bon_remove_wp_widget_recent_comments_style', 1 );
   add_action( 'wp_head', 'bon_remove_recent_comments_style', 1);
   add_filter ( 'wp_tag_cloud', 'bon_no_inline_style_tag_cloud' ); 
