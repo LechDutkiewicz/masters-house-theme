@@ -433,6 +433,26 @@ $('#search-listing-form').submit(function () {
 	})
 });
 
+$('#orderform .search-orderby select').change(function(){
+	var form = $('#orderform'),
+	target = form.find('.order-text'),
+	value = $(this).val();
+
+	if ( target.length === 0 ) {
+		var targetPlaces = form.find('.search-order a.current, .search-order ul li');
+		targetPlaces.each(function(){
+			$(this).html( '<span class="order-text"></span> ' + $(this).html().toLowerCase() );
+		})
+		target = form.find('.order-text');
+	}
+
+	target.each(function(){
+		var capitalizedValue = value.charAt(0).toUpperCase() + value.substring(1);
+		$(this).html( capitalizedValue );
+	});
+
+});
+
 $('.package-form select').change(function(){
 
 	var form = $('.package-form');
