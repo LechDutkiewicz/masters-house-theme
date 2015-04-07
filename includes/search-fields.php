@@ -886,7 +886,7 @@ function shandora_search_lotsize_field($value = array(), $class) {
 	global $bon;
 	$form = $bon->form();
 
-	$range_opt = shandora_get_size_range('lotsize');
+	$range_opt = shandora_get_cottagesize_range('lotsize');
 
 	$slider = '<div class="price-slider-wrapper"><div class="range-slider" data-type="lotsize" data-step="'.$range_opt['step'].'" data-min="'.$range_opt['min'].'" data-max="'.$range_opt['max'].'" id="lotsize-slider-range"></div></div>';
 

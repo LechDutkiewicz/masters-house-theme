@@ -1664,7 +1664,7 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 
 				<?php
 				if ( $show_listing_count ) {
-					echo '<div class="column large-6"><h3 id="listed-property"></h3></div>';
+					echo '<div class="column large-5"><h3 id="listed-property"></h3></div>';
 				}
 				?>
 
@@ -1673,7 +1673,7 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 				$search_orderby = isset( $_GET['search_orderby'] ) ? $_GET['search_orderby'] : bon_get_option( 'listing_orderby', 'date' );
 				?>
 
-				<div class="column large-6 right">
+				<div class="column large-7 right">
 
 					<div class="row">
 						<div class="column large-3">
@@ -1701,17 +1701,17 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 							<form class="custom" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="get" id="orderform" name="orderform">
 
 								<div class="row">
-									<div class="column large-6 search-order">
+									<div class="column large-7 search-order">
 										<select class="no-mbot" name="search_order" onChange="document.forms['orderform'].submit()">
 											<option value="ASC" <?php selected( $search_order, 'ASC' ); ?> ><?php _e( 'Ascending', 'bon' ); ?></option>
 											<option value="DESC" <?php selected( $search_order, 'DESC' ); ?> ><?php _e( 'Descending', 'bon' ); ?></option>
 										</select>
 									</div>
-									<div class="column large-6 search-order">
-										<select class="no-mbot" name="search_orderby" onChange="document.forms['orderform'].submit()">
-											<option value="price" <?php selected( $search_orderby, 'price' ); ?> ><?php _e( 'Price', 'bon' ); ?></option>
+									<div class="column large-5 search-orderby">
+										<select class="no-mbot" name="search_orderby">
+											<option value="<?php _e( 'Price', 'bon' ); ?>" <?php selected( $search_orderby, 'price' ); ?> ><?php _e( 'Price', 'bon' ); ?></option>
 											<?php // edited by Lech Dutkiewicz           ?>
-											<option value="size" <?php selected( $search_orderby, 'size' ); ?> >
+											<option value="<?php _e( 'Size', 'bon' ); ?>" <?php selected( $search_orderby, 'size' ); ?> >
 												<?php
 												if ( get_post_type() == 'listing' || is_page_template( 'page-templates/page-template-search-listings.php' ) || is_page_template( 'page-templates/page-template-all-listings.php' ) ) {
 													echo __( 'Size', 'bon' );
