@@ -186,7 +186,7 @@ if( !function_exists('shandora_setup_theme_supports') ) {
 
 
 
-		if (WP_ENV !== 'production') {
+		/*if (WP_ENV !== 'production') {
 
 			$theme_supports['dynamic-style'] = apply_filters('shandora_dynamic_style', array(
 
@@ -228,7 +228,7 @@ if( !function_exists('shandora_setup_theme_supports') ) {
 
 				));
 
-		} else {
+		} else {*/
 
 			$theme_supports['dynamic-style'] = apply_filters('shandora_dynamic_style', array(
 
@@ -243,7 +243,7 @@ if( !function_exists('shandora_setup_theme_supports') ) {
 
 				));
 
-		}
+		/*}*/
 		
 		$theme_supports = apply_filters('shandora_default_theme_supports', $theme_supports);
 
