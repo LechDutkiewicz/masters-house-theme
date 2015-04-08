@@ -257,6 +257,12 @@ array(
 			'id' => $prefix . $suffix . 'windowamount',
 			'type' => 'number',
 			),
+		array(
+			'label' => __( 'Windows type', 'bon' ),
+			'desc' => __( 'Single or double', 'bon' ),
+			'id' => $prefix . $suffix . 'windowtype',
+			'type' => 'text',
+			),
 		),
 	),
 			/* array(
@@ -291,6 +297,12 @@ array(
 			'desc' => __( 'Amount of doors of the chosen size', 'bon' ),
 			'id' => $prefix . $suffix . 'dooramount',
 			'type' => 'number',
+			),
+		array(
+			'label' => __( 'Door type', 'bon' ),
+			'desc' => __( 'Single or double', 'bon' ),
+			'id' => $prefix . $suffix . 'doortype',
+			'type' => 'text',
 			),
 		),
 	),
@@ -366,8 +378,8 @@ if ( $packages = get_packages_list() ) {
 				'wpautop' => true,
 				'textarea_rows' => 30
 				),
-			);*/
-	}
+);*/
+}
 
 }
 
