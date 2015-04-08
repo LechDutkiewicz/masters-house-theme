@@ -1581,25 +1581,30 @@ if ( !function_exists( 'shandora_get_left_sidebar' ) ) {
 			$layout = get_post_layout( get_queried_object_id() );
 		}
 		if ( $layout == '2c-r' ) {
+
 			if ( get_post_type() == 'listing' || get_post_type() == 'product' || get_post_type() == 'promotions' ||
 				is_page_template( 'page-templates/page-template-all-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-all-car-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-search-car-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-property-status.php' ) ||
 				is_page_template( 'page-templates/page-template-car-status.php' ) ||
-				is_page_template( 'page-templates/page-template-all-boats.php' ) ||
-				is_page_template( 'page-templates/page-template-search-boat.php' ) ||
 				is_page_template( 'page-templates/page-template-search-listings.php' ) ||
-				is_page_template( 'page-templates/page-template-testimonials.php' ) ) {
+				is_page_template( 'page-templates/page-template-testimonials.php' )  ) {
+
 				get_sidebar( 'secondary' );
+
 		} else if ( is_page_template( 'page-templates/page-template-about-us.php' ) ) {
+
 			get_sidebar( 'about-us' );
-		} else if ( shandora_woocommerce_plugin_active() ) {
-			if ( is_woocommerce_page() ) {
-				get_sidebar( 'woocommerce' );
-			}
+
+		} else if ( shandora_woocommerce_plugin_active() && is_woocommerce_page() ) {
+
+			get_sidebar( 'woocommerce' );
+
 		} else {
+
 			get_sidebar( 'primary' );
+
 		}
 	}
 }
@@ -1799,7 +1804,9 @@ if ( !function_exists( 'shandora_get_right_sidebar' ) ) {
 		if ( empty( $layout ) ) {
 			$layout = get_post_layout( get_queried_object_id() );
 		}
+
 		if ( $layout == '2c-l' ) {
+
 			if ( get_post_type() == 'listing' || get_post_type() == 'product' || get_post_type() == 'promotions' ||
 				is_page_template( 'page-templates/page-template-all-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-all-car-listings.php' ) ||
@@ -1808,16 +1815,21 @@ if ( !function_exists( 'shandora_get_right_sidebar' ) ) {
 				is_page_template( 'page-templates/page-template-car-status.php' ) ||
 				is_page_template( 'page-templates/page-template-search-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-testimonials.php' )  ) {
+
 				get_sidebar( 'secondary' );
+
 		} else if ( is_page_template( 'page-templates/page-template-about-us.php' ) ) {
+
 			get_sidebar( 'about-us' );
-		} else if ( shandora_woocommerce_plugin_active() ) {
-			if ( is_woocommerce_page() ) {
-				get_sidebar( 'woocommerce' );
-			}
-		}
-		else {
+
+		} else if ( shandora_woocommerce_plugin_active() && is_woocommerce_page() ) {
+
+			get_sidebar( 'woocommerce' );
+
+		} else {
+
 			get_sidebar( 'primary' );
+
 		}
 	}
 }
