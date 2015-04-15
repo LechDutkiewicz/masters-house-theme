@@ -4,13 +4,17 @@ function shandora_get_listing_price( $echo = true, $total = true ) {
 	global $post;
 	$currency = bon_get_option( 'currency' );
 	$placement = bon_get_option( 'currency_placement' );
+	$prefix = bon_get_prefix();
+
 	if ( $total ) {
 // edited by Lech Dutkiewicz
 		$price = shandora_get_meta( $post->ID, 'listing_price', true );
+		$data_price = get_post_meta( $post->ID, $prefix . 'listing_price', true );
 	} else {
 		$price = shandora_get_meta( $post->ID, 'listing_monprice', true );
+		$data_price = get_post_meta( $post->ID, $prefix . 'listing_monprice', true );
 	}
-	$price = '<span itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">' . $price . '</span>';
+	$price = '<span itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price" data-value="' . $data_price . '">' . $price . '</span>';
 	$price .= '<meta itemprop="priceCurrency" content="' . $currency . '" /></span>';
 	$o = '';
 

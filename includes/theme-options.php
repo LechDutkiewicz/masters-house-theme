@@ -243,6 +243,18 @@ $options[] = array( 'slug' => 'bon_options',
 	'type' => 'number',
 	'std' => '6' );
 
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Enable Disqus Comments. You can easily find how to menage it <a href="https://disqus.com/">here</a>.', 'bon' ),
+	'id' => 'enable_disqus',
+	'type' => 'checkbox',
+	'class' => 'collapsed',
+	'std' => '0' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Disqus shortname', 'bon' ),
+	'id' => 'disqus_shortname',
+	'type' => 'text',
+	'class' => 'hidden last' );
 
 $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Display Options', 'bon' ),
 	'type' => 'subheading' );

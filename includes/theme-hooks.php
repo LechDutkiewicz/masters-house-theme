@@ -82,7 +82,7 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}before_single_entry_content", "shandora_listing_meta", 10 );
 
-		// removed by Lech Dutkiewicz add_action("{$prefix}after_single_entry_content", "shandora_listing_meta", 5);
+	// removed by Lech Dutkiewicz add_action("{$prefix}after_single_entry_content", "shandora_listing_meta", 5);
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 9 );
 
@@ -96,11 +96,11 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_spec_close", 30 );
 
-		//add_action("{$prefix}after_single_entry_content", "shandora_car_listing_video", 30);
+	//add_action("{$prefix}after_single_entry_content", "shandora_car_listing_video", 30);
 
-		//add_action( "{$prefix}after_single_entry_content", "shandora_listing_dpe_ges", 32 );
+	//add_action( "{$prefix}after_single_entry_content", "shandora_listing_dpe_ges", 32 );
 
-		//add_action("{$prefix}after_single_entry_content", "shandora_listing_map", 35);
+	//add_action("{$prefix}after_single_entry_content", "shandora_listing_map", 35);
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 45 );
 
@@ -115,6 +115,10 @@ function shandora_setup_theme_hook() {
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_cta", 60 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_modal", 65 );
+
+		add_action( "{$prefix}after_single_post_content", "shandora_post_comments", 3 );
+
+		add_action( "{$prefix}after_single_post_entry", "shandora_post_related", 5 );
 
 		add_action( "{$prefix}entry_summary", "shandora_listing_entry_title", 5 );
 
@@ -138,44 +142,44 @@ function shandora_setup_theme_hook() {
 
 			/* REMOVE ACTIONS THAT WILL GET OVERRIDDEN */
 
-			// Sidebar
+		// Sidebar
 			remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
-			// Main Content Structure
+		// Main Content Structure
 			remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 			remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
-			//Products & Tax content wrapper
+		//Products & Tax content wrapper
 			remove_action( 'woocommerce_archive_description', 'woocommerce_product_archive_description', 10 );
 			remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
-			// Demo Store
+		// Demo Store
 			remove_action( 'wp_footer', 'woocommerce_demo_store' );
-			// Breadcrumbs
+		// Breadcrumbs
 			remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
-			// Shop Loop
+		// Shop Loop
 			remove_action( 'woocommerce_before_shop_loop', 'wc_print_notices', 10 );
 			remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 			remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
 			remove_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
-			// Shop Loop Item
+		// Shop Loop Item
 			remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
 			remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_show_product_loop_sale_flash', 10 );
 			remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10 );
 			remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
-			// Single Product
+		// Single Product
 			remove_action( 'woocommerce_before_single_product', 'wc_print_notices', 10 );
 			remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 			remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
-			// Cart
+		// Cart
 			remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
 
 			/* ADD OVERRIDES TO WOOCOMMERCE ACTIONS */
 
-			// Main Content Structure
+		// Main Content Structure
 			add_action( 'woocommerce_before_template_part', 'shandora_woo_before_template_part', 10, 4 );
 			add_action( 'woocommerce_after_template_part', 'shandora_woo_after_template_part', 10, 4 );
 			add_action( 'woocommerce_before_main_content', 'shandora_woo_wrapper_start', 10 );
 			add_action( 'woocommerce_before_main_content', 'shandora_woo_breadcrumbs_bar', 15 );
 			add_action( 'woocommerce_after_main_content', 'shandora_woo_wrapper_end', 10 );
-			// Shop Loop
+		// Shop Loop
 			add_action( 'woocommerce_before_shop_loop', 'shandora_woo_before_shop_loop', 10 );
 			add_action( 'woocommerce_before_shop_loop', 'shandora_woo_open_result_header', 15 );
 			add_action( 'woocommerce_before_shop_loop', 'shandora_woo_result_count', 20 );
@@ -183,7 +187,7 @@ function shandora_setup_theme_hook() {
 			add_action( 'woocommerce_before_shop_loop', 'shandora_woo_close_result_header', 35 );
 			add_action( 'woocommerce_after_shop_loop', 'shandora_woo_pagination', 10 );
 			add_action( 'woocommerce_after_shop_loop', 'shandora_woo_after_shop_loop', 10 );
-			// Shop Loop Item
+		// Shop Loop Item
 			add_action( 'woocommerce_before_shop_loop_item', 'shandora_woo_product_open', 10 );
 			add_action( 'woocommerce_after_shop_loop_item', 'shandora_before_add_to_cart', 5 );
 			add_action( 'woocommerce_after_shop_loop_item', 'shandora_woo_template_loop_price', 10 );
@@ -192,7 +196,7 @@ function shandora_setup_theme_hook() {
 			add_action( 'woocommerce_before_shop_loop_item_title', 'shandora_woo_get_product_thumbnail', 10 );
 			add_action( 'woocommerce_before_shop_loop_item_title', 'shandora_woo_product_summary_open', 20 );
 			add_action( 'woocommerce_after_shop_loop_item_title', 'shandora_woo_product_summary_close', 10 );
-			// Single Product
+		// Single Product
 			add_action( 'woocommerce_before_single_product', 'shandora_woo_before_shop_loop', 10 );
 			add_action( 'woocommerce_after_single_product', 'shandora_woo_after_shop_loop', 10 );
 			add_action( 'woocommerce_before_single_product_summary', 'shandora_row_open', 10 );
@@ -202,7 +206,7 @@ function shandora_setup_theme_hook() {
 			add_action( 'woocommerce_after_single_product_summary', 'shandora_column_close', 10 );
 			add_action( 'woocommerce_after_single_product_summary', 'shandora_row_close', 10 );
 			add_action( 'woocommerce_after_single_product_summary', 'shandora_woo_product_data_tabs', 11 );
-			// Cart
+		// Cart
 			add_action( 'woocommerce_after_shipping_calculator', 'woocommerce_cross_sell_display', 10 );
 			add_action( 'woocommerce_checkout_before_customer_details', 'shandora_row_open', 10 );
 			add_action( 'woocommerce_checkout_after_customer_details', 'shandora_row_close', 10 );
@@ -211,14 +215,14 @@ function shandora_setup_theme_hook() {
 			add_action( 'woocommerce_checkout_shipping', 'shandora_column_medium_open', 5 );
 			add_action( 'woocommerce_checkout_shipping', 'shandora_column_close', 15 );
 
-			// Title removal:
+		// Title removal:
 			add_filter( 'woocommerce_show_page_title', 'override_page_title' );
 			add_filter( 'woocommerce_enqueue_styles', 'override_page_title' );
 			add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 9;' ), 20 );
 
 			/* WOOCOMMERCE OVERRIDE FUNCTIONS */
 
-			// Main Content Structure
+		// Main Content Structure
 
 			if ( !function_exists( 'shandora_woo_before_template_part' ) ) {
 
@@ -292,7 +296,7 @@ function shandora_setup_theme_hook() {
 
 				}
 
-				// Shop Loop
+			// Shop Loop
 
 				if ( !function_exists( 'shandora_woo_before_shop_loop' ) ) {
 
@@ -358,7 +362,7 @@ function shandora_setup_theme_hook() {
 
 				}
 
-				// Shop Loop Item
+			// Shop Loop Item
 
 				if ( !function_exists( 'shandora_woo_product_open	' ) ) {
 
@@ -423,7 +427,7 @@ function shandora_setup_theme_hook() {
 
 				}
 
-				// Single Product
+			// Single Product
 
 				if ( !function_exists( 'shandora_row_open' ) ) {
 
@@ -496,89 +500,89 @@ function shandora_setup_theme_hook() {
 
 				}
 
-				//
+			//
 
-				/* if ( !function_exists( 'shandora_woo_add_to_cart' ) ) {
+			/* if ( !function_exists( 'shandora_woo_add_to_cart' ) ) {
 
-				  function shandora_woo_add_to_cart( $message ) {
-				  return '<div class="wpb_row vc_row-fluid shandora-row-notfull shandora-row_notsection"><div class="shandora-vc_row_inner">' . $message . '</div></div>';
-				  }
+			  function shandora_woo_add_to_cart( $message ) {
+			  return '<div class="wpb_row vc_row-fluid shandora-row-notfull shandora-row_notsection"><div class="shandora-vc_row_inner">' . $message . '</div></div>';
+			  }
 
-				} */
+			} */
 
-				/* function shandora_woo_product_archive_description() {
-				  if ( is_post_type_archive( 'product' ) && get_query_var( 'paged' ) == 0 ) {
-				  $shop_page = get_post( wc_get_page_id( 'shop' ) );
-				  if ( $shop_page ) {
-				  $description = apply_filters( 'the_content', $shop_page->post_content );
-				  if ( $description ) {
-				  echo $description;
-				  }
-				  }
-				  }
-				} */
+			/* function shandora_woo_product_archive_description() {
+			  if ( is_post_type_archive( 'product' ) && get_query_var( 'paged' ) == 0 ) {
+			  $shop_page = get_post( wc_get_page_id( 'shop' ) );
+			  if ( $shop_page ) {
+			  $description = apply_filters( 'the_content', $shop_page->post_content );
+			  if ( $description ) {
+			  echo $description;
+			  }
+			  }
+			  }
+			} */
 
-				/* if ( !function_exists( 'shandora_woo_taglines' ) ) {
+			/* if ( !function_exists( 'shandora_woo_taglines' ) ) {
 
-				  function shandora_woo_taglines() {
+			  function shandora_woo_taglines() {
 
-				  $shop_page_id = null;
+			  $shop_page_id = null;
 
-				  if ( is_shop() ) {
-				  $shop_page_id = woocommerce_get_page_id( 'shop' );
-				  $page_title = get_the_title( $shop_page_id );
-				  $shandora_woo_id = $shop_page_id;
-				  } else {
-				  $shandora_woo_id = get_the_ID();
-				  }
+			  if ( is_shop() ) {
+			  $shop_page_id = woocommerce_get_page_id( 'shop' );
+			  $page_title = get_the_title( $shop_page_id );
+			  $shandora_woo_id = $shop_page_id;
+			  } else {
+			  $shandora_woo_id = get_the_ID();
+			  }
 
-				  shandora_get_part_tagline( $shop_page_id );
-				  }
+			  shandora_get_part_tagline( $shop_page_id );
+			  }
 
-				  }
-				} */
+			  }
+			} */
 
-				/* if ( !function_exists( 'shandora_woo_hide_title' ) ) {
+			/* if ( !function_exists( 'shandora_woo_hide_title' ) ) {
 
-				  function shandora_woo_hide_title( $show ) {
-				  return false;
-				  }
+			  function shandora_woo_hide_title( $show ) {
+			  return false;
+			  }
 
-				} */
+			} */
 
-				/* if ( !function_exists( 'shandora_woocommerce_demo_store' ) ) {
+			/* if ( !function_exists( 'shandora_woocommerce_demo_store' ) ) {
 
-				  function shandora_woocommerce_demo_store() {
-				  if ( function_exists( 'is_woocommerce' ) && ( is_woocommerce() || is_woocommerce_page() ) ) {
-				  woocommerce_demo_store();
-				  }
-				  }
+			  function shandora_woocommerce_demo_store() {
+			  if ( function_exists( 'is_woocommerce' ) && ( is_woocommerce() || is_woocommerce_page() ) ) {
+			  woocommerce_demo_store();
+			  }
+			  }
 
-				} */
+			} */
 
-				/* if ( !function_exists( 'shandora_woo_loop_add_to_cart' ) ) {
+			/* if ( !function_exists( 'shandora_woo_loop_add_to_cart' ) ) {
 
-				  function shandora_woo_loop_add_to_cart( $args = array() ) {
-				  bon_get_template_part( 'woocommerce', 'add-to-cart' );
-				  }
+			  function shandora_woo_loop_add_to_cart( $args = array() ) {
+			  bon_get_template_part( 'woocommerce', 'add-to-cart' );
+			  }
 
-				} */
+			} */
 
-				if ( !function_exists( 'is_woocommerce_page' ) ) {
+			if ( !function_exists( 'is_woocommerce_page' ) ) {
 
-					function is_woocommerce_page() {
+				function is_woocommerce_page() {
 
-						if ( !function_exists( 'is_woocommerce' ) ) {
-							return false;
-						}
-
-						return ( is_cart() || is_checkout() || is_account_page() || is_order_received_page() || is_product_category() || is_product_tag() || is_product() ) ? true : false;
+					if ( !function_exists( 'is_woocommerce' ) ) {
+						return false;
 					}
 
+					return ( is_cart() || is_checkout() || is_account_page() || is_order_received_page() || is_product_category() || is_product_tag() || is_product() ) ? true : false;
 				}
+
 			}
 		}
 	}
+}
 }
 
 add_action( 'after_setup_theme', 'shandora_setup_theme_hook', 100 );
@@ -634,173 +638,173 @@ function shandora_entry_meta() {
 	if ( get_post_type() === 'listing' ) {
 
 		$sizemeasurement = bon_get_option( 'measurement' );
-		/* $bed = shandora_get_meta( $post->ID, 'listing_bed' );
-		$bath = shandora_get_meta( $post->ID, 'listing_bath' ); */
-		$lotsize = shandora_get_meta( $post->ID, 'listing_lotsize' );
-		$rooms = shandora_get_meta( $post->ID, 'listing_rooms' );
-		/* $garage = shandora_get_meta( $post->ID, 'listing_garage' ); */
+	/* $bed = shandora_get_meta( $post->ID, 'listing_bed' );
+	$bath = shandora_get_meta( $post->ID, 'listing_bath' ); */
+	$lotsize = shandora_get_meta( $post->ID, 'listing_lotsize' );
+	$rooms = shandora_get_meta( $post->ID, 'listing_rooms' );
+	/* $garage = shandora_get_meta( $post->ID, 'listing_garage' ); */
 
+
+	$html = '<div class="entry-meta">';
+
+	if ( $bed ) {
+
+		$html .= '<div class="icon bed"><i class="' . apply_atomic( 'bed_icon', 'sha-bed' ) . '"></i>';
+		$html .= '<span>';
+		$html .= sprintf( _n( '%s Bed', '%s Beds', $bed, 'bon' ), $bed );
+		$html .= '</span>';
+		$html .= '</div>';
+	}
+
+	if ( $bath ) {
+		$html .= '<div class="icon bath"><i class="' . apply_atomic( 'bath_icon', 'sha-bath' ) . '"></i>';
+		$html .= '<span>';
+		$html .= sprintf( _n( '%s Bath', '%s Baths', $bath, 'bon' ), $bath );
+		$html .= '</span>';
+		$html .= '</div>';
+	}
+
+	/* if ( $view == 'list' ) { */
+
+		if ( $garage ) {
+			$html .= '<div class="icon garage"><i class="' . apply_atomic( 'garage_icon', 'sha-car' ) . '"></i>';
+			$html .= '<span>';
+			$html .= sprintf( _n( '%s Garage', '%s Garages', $garage, 'bon' ), $garage );
+			$html .= '</span>';
+			$html .= '</div>';
+		}
+
+		if ( $rooms ) {
+			$html .= '<div class="icon room"><i class="' . apply_atomic( 'room_icon', 'sha-bed-2' ) . '"></i>';
+			$html .= '<span>';
+			$html .= sprintf( _n( '%s Room', '%s Rooms', $rooms, 'bon' ), $rooms );
+			$html .= '</span>';
+			$html .= '</div>';
+		}
+		/* } */
+
+		if ( $lotsize ) {
+
+			$html .= '<div class="icon size"><i class="' . apply_atomic( 'size_icon', 'sha-ruler' ) . '"></i>';
+			$html .= '<span>';
+			$html .= ($lotsize) ? $lotsize . ' ' . $sizemeasurement : __( 'Unspecified', 'bon' );
+			$html .= '</span>';
+			$html .= '</div>';
+		}
+
+		$html .= '</div>';
+	} else if ( get_post_type() == 'product' ) {
+
+		$transmission = shandora_get_meta( $post->ID, $suffix . 'transmission' );
+		$engine = shandora_get_meta( $post->ID, $suffix . 'enginesize' );
+		$mileage = shandora_get_meta( $post->ID, $suffix . 'mileage' );
+
+		$trans_opt = shandora_get_car_search_option( 'transmission' );
+		if ( array_key_exists( $transmission, $trans_opt ) ) {
+			$transmission = $trans_opt[$transmission];
+		}
 
 		$html = '<div class="entry-meta">';
 
-		if ( $bed ) {
+		$html .= '<div class="icon engine"><i class="' . apply_atomic( 'engine_icon', 'sha-engine' ) . '"></i>';
+		$html .= '<span>';
+		$html .= ($engine) ? $engine : __( 'Unspecified', 'bon' );
+		$html .= '</span>';
+		$html .= '</div>';
 
-			$html .= '<div class="icon bed"><i class="' . apply_atomic( 'bed_icon', 'sha-bed' ) . '"></i>';
+		$html .= '<div class="icon transmission"><i class="' . apply_atomic( 'transmission_icon', 'sha-gear-shifter' ) . '"></i>';
+		$html .= '<span>';
+		$html .= ($transmission) ? $transmission : __( 'Unspecified', 'bon' );
+		$html .= '</span>';
+		$html .= '</div>';
+
+		$html .= '<div class="icon mileage"><i class="' . apply_atomic( 'mileage_icon', 'bonicons bi-dashboard' ) . '"></i>';
+		$html .= '<span>';
+		$html .= ($mileage) ? $mileage : __( 'Unspecified', 'bon' );
+		$html .= '</span>';
+		$html .= '</div>';
+
+		$html .= '</div>';
+	} else if ( get_post_type() == 'boat-listing' ) {
+
+		$length = shandora_get_meta( $post->ID, 'listing_length' );
+		$speed = shandora_get_meta( $post->ID, 'listing_speed' );
+		$fuel = shandora_get_meta( $post->ID, 'listing_fuelcaps' );
+		$people = shandora_get_meta( $post->ID, 'listing_people_cap' );
+		$terms = get_the_terms( $post->ID, 'boat-engine' );
+		$engine_types = array();
+		$engine_type = '';
+		if ( $terms && !is_wp_error( $terms ) ) {
+			foreach ( $terms as $term ) {
+				$engine_types[] = $term->name;
+				break;
+			}
+		}
+
+		if ( count( $engine_types ) > 0 ) {
+			$engine_type = join( ' ', $engine_types );
+		}
+
+		$html = '<div class="entry-meta">';
+
+		if ( $engine_type ) {
+
+			$html .= '<div class="icon engine"><i class="' . apply_atomic( 'engine_icon', 'sha-engine' ) . '"></i> ';
 			$html .= '<span>';
-			$html .= sprintf( _n( '%s Bed', '%s Beds', $bed, 'bon' ), $bed );
+			$html .= $engine_type;
 			$html .= '</span>';
 			$html .= '</div>';
 		}
 
-		if ( $bath ) {
-			$html .= '<div class="icon bath"><i class="' . apply_atomic( 'bath_icon', 'sha-bath' ) . '"></i>';
+		if ( $length ) {
+			$html .= '<div class="icon transmission"><i class="' . apply_atomic( 'length_icon', 'sha-ruler' ) . '"></i> ';
 			$html .= '<span>';
-			$html .= sprintf( _n( '%s Bath', '%s Baths', $bath, 'bon' ), $bath );
+			$html .= $length . ' ' . bon_get_option( 'length_measure' );
 			$html .= '</span>';
 			$html .= '</div>';
 		}
 
-		/* if ( $view == 'list' ) { */
+		if ( $speed ) {
 
-			if ( $garage ) {
-				$html .= '<div class="icon garage"><i class="' . apply_atomic( 'garage_icon', 'sha-car' ) . '"></i>';
-				$html .= '<span>';
-				$html .= sprintf( _n( '%s Garage', '%s Garages', $garage, 'bon' ), $garage );
-				$html .= '</span>';
-				$html .= '</div>';
-			}
-
-			if ( $rooms ) {
-				$html .= '<div class="icon room"><i class="' . apply_atomic( 'room_icon', 'sha-bed-2' ) . '"></i>';
-				$html .= '<span>';
-				$html .= sprintf( _n( '%s Room', '%s Rooms', $rooms, 'bon' ), $rooms );
-				$html .= '</span>';
-				$html .= '</div>';
-			}
-			/* } */
-
-			if ( $lotsize ) {
-
-				$html .= '<div class="icon size"><i class="' . apply_atomic( 'size_icon', 'sha-ruler' ) . '"></i>';
-				$html .= '<span>';
-				$html .= ($lotsize) ? $lotsize . ' ' . $sizemeasurement : __( 'Unspecified', 'bon' );
-				$html .= '</span>';
-				$html .= '</div>';
-			}
-
-			$html .= '</div>';
-		} else if ( get_post_type() == 'product' ) {
-
-			$transmission = shandora_get_meta( $post->ID, $suffix . 'transmission' );
-			$engine = shandora_get_meta( $post->ID, $suffix . 'enginesize' );
-			$mileage = shandora_get_meta( $post->ID, $suffix . 'mileage' );
-
-			$trans_opt = shandora_get_car_search_option( 'transmission' );
-			if ( array_key_exists( $transmission, $trans_opt ) ) {
-				$transmission = $trans_opt[$transmission];
-			}
-
-			$html = '<div class="entry-meta">';
-
-			$html .= '<div class="icon engine"><i class="' . apply_atomic( 'engine_icon', 'sha-engine' ) . '"></i>';
+			$html .= '<div class="icon speed"><i class="' . apply_atomic( 'speed_icon', 'bonicons bi-dashboard' ) . '"></i>';
 			$html .= '<span>';
-			$html .= ($engine) ? $engine : __( 'Unspecified', 'bon' );
+			$html .= $speed . ' ' . bon_get_option( 'speed_measure' );
 			$html .= '</span>';
-			$html .= '</div>';
-
-			$html .= '<div class="icon transmission"><i class="' . apply_atomic( 'transmission_icon', 'sha-gear-shifter' ) . '"></i>';
-			$html .= '<span>';
-			$html .= ($transmission) ? $transmission : __( 'Unspecified', 'bon' );
-			$html .= '</span>';
-			$html .= '</div>';
-
-			$html .= '<div class="icon mileage"><i class="' . apply_atomic( 'mileage_icon', 'bonicons bi-dashboard' ) . '"></i>';
-			$html .= '<span>';
-			$html .= ($mileage) ? $mileage : __( 'Unspecified', 'bon' );
-			$html .= '</span>';
-			$html .= '</div>';
-
-			$html .= '</div>';
-		} else if ( get_post_type() == 'boat-listing' ) {
-
-			$length = shandora_get_meta( $post->ID, 'listing_length' );
-			$speed = shandora_get_meta( $post->ID, 'listing_speed' );
-			$fuel = shandora_get_meta( $post->ID, 'listing_fuelcaps' );
-			$people = shandora_get_meta( $post->ID, 'listing_people_cap' );
-			$terms = get_the_terms( $post->ID, 'boat-engine' );
-			$engine_types = array();
-			$engine_type = '';
-			if ( $terms && !is_wp_error( $terms ) ) {
-				foreach ( $terms as $term ) {
-					$engine_types[] = $term->name;
-					break;
-				}
-			}
-
-			if ( count( $engine_types ) > 0 ) {
-				$engine_type = join( ' ', $engine_types );
-			}
-
-			$html = '<div class="entry-meta">';
-
-			if ( $engine_type ) {
-
-				$html .= '<div class="icon engine"><i class="' . apply_atomic( 'engine_icon', 'sha-engine' ) . '"></i> ';
-				$html .= '<span>';
-				$html .= $engine_type;
-				$html .= '</span>';
-				$html .= '</div>';
-			}
-
-			if ( $length ) {
-				$html .= '<div class="icon transmission"><i class="' . apply_atomic( 'length_icon', 'sha-ruler' ) . '"></i> ';
-				$html .= '<span>';
-				$html .= $length . ' ' . bon_get_option( 'length_measure' );
-				$html .= '</span>';
-				$html .= '</div>';
-			}
-
-			if ( $speed ) {
-
-				$html .= '<div class="icon speed"><i class="' . apply_atomic( 'speed_icon', 'bonicons bi-dashboard' ) . '"></i>';
-				$html .= '<span>';
-				$html .= $speed . ' ' . bon_get_option( 'speed_measure' );
-				$html .= '</span>';
-				$html .= '</div>';
-			}
-
-			if ( $view == 'list' ) {
-
-				if ( $people ) {
-					$html .= '<div class="icon people"><i class="' . apply_atomic( 'people_icon', 'sha-users' ) . '"></i>';
-					$html .= '<span>';
-					$html .= $people . ' ' . __( 'People', 'bon' );
-					$html .= '</span>';
-					$html .= '</div>';
-				}
-
-				if ( $fuel ) {
-					$html .= '<div class="icon room"><i class="' . apply_atomic( 'fuel_icon', 'sha-tint' ) . '"></i>';
-					$html .= '<span>';
-					$html .= $fuel . ' ' . bon_get_option( 'volume_measure' );
-					$html .= '</span>';
-					$html .= '</div>';
-				}
-			}
-
 			$html .= '</div>';
 		}
 
-		return $html;
+		if ( $view == 'list' ) {
+
+			if ( $people ) {
+				$html .= '<div class="icon people"><i class="' . apply_atomic( 'people_icon', 'sha-users' ) . '"></i>';
+				$html .= '<span>';
+				$html .= $people . ' ' . __( 'People', 'bon' );
+				$html .= '</span>';
+				$html .= '</div>';
+			}
+
+			if ( $fuel ) {
+				$html .= '<div class="icon room"><i class="' . apply_atomic( 'fuel_icon', 'sha-tint' ) . '"></i>';
+				$html .= '<span>';
+				$html .= $fuel . ' ' . bon_get_option( 'volume_measure' );
+				$html .= '</span>';
+				$html .= '</div>';
+			}
+		}
+
+		$html .= '</div>';
 	}
 
+	return $html;
+}
+
 /**
- * Get Entry Title
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Entry Title
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_entry_title() {
 
 	global $post;
@@ -815,12 +819,12 @@ function shandora_listing_entry_title() {
 }
 
 /**
- * Get Entry Meta
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Entry Meta
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_entry_meta() {
 	if ( isset( $_GET['view'] ) && $_GET['view'] == 'list' ) {
 		return '';
@@ -833,23 +837,23 @@ function shandora_listing_entry_meta() {
 }
 
 /**
- * Get Gallery Template
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Gallery Template
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_gallery() {
 	bon_get_template_part( 'block', 'listinggallery' );
 }
 
 /**
- * Get Listing Meta Icons
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Listing Meta Icons
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_meta() {
 
 	if ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) ) {
@@ -867,12 +871,12 @@ function shandora_listing_meta() {
 }
 
 /**
- * Get Listing Packages
- * Added by Lech Dutkiewicz
- * @since 1.4.0
- * @return void
- *
- */
+* Get Listing Packages
+* Added by Lech Dutkiewicz
+* @since 1.4.0
+* @return void
+*
+*/
 function shandora_listing_packages() {
 
 	if ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) ) {
@@ -890,12 +894,12 @@ function shandora_listing_packages() {
 }
 
 /**
- * Get Listing Meta Services
- * Added by Lech Dutkiewicz
- * @since 1.4.0
- * @return void
- *
- */
+* Get Listing Meta Services
+* Added by Lech Dutkiewicz
+* @since 1.4.0
+* @return void
+*
+*/
 function shandora_listing_services() {
 	?>
 
@@ -909,18 +913,18 @@ function shandora_listing_services() {
 }
 
 /**
- * Get Listing Meta Services
- * Added by Lech Dutkiewicz
- * @since 1.4.0
- * @return void
- *
- */
+* Get Listing Meta Services
+* Added by Lech Dutkiewicz
+* @since 1.4.0
+* @return void
+*
+*/
 function shandora_listing_addon() {
 	?>
 
 	<div class="price-included row">
 		<?php
-		//bon_get_template_part('block',  ( is_singular( 'product' ) ? 'carlistingmeta' : 'listingmeta' ) ); 
+	//bon_get_template_part('block',  ( is_singular( 'product' ) ? 'carlistingmeta' : 'listingmeta' ) ); 
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'addon' );
 		?>
 	</div>
@@ -929,12 +933,12 @@ function shandora_listing_addon() {
 }
 
 /**
- * Get Listing Video
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Listing Video
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_video() {
 	$vid = shandora_get_video();
 	?>
@@ -949,12 +953,12 @@ function shandora_listing_video() {
 }
 
 /**
- * Get Listing Video
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Listing Video
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_car_listing_video() {
 	?>
 
@@ -973,12 +977,12 @@ function shandora_car_listing_video() {
 }
 
 /**
- * Get Details Tab
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Details Tab
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_detail_tabs() {
 
 	$vid = shandora_get_video();
@@ -989,7 +993,7 @@ function shandora_listing_detail_tabs() {
 	?>
 	<div id="detail-tab" class="column tabs-container <?php echo $detail_class; ?>">
 		<?php
-		//bon_get_template_part('block', ( is_singular( 'product' ) ? 'carlistingtab' : 'listingtab' ) ); 
+	//bon_get_template_part('block', ( is_singular( 'product' ) ? 'carlistingtab' : 'listingtab' ) ); 
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'tab' );
 		?>
 	</div>
@@ -997,23 +1001,23 @@ function shandora_listing_detail_tabs() {
 }
 
 /**
- * Get Before Specification open div
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Before Specification open div
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_spec_open() {
 	echo '<section class="row entry-specification">';
 }
 
 /**
- * Close Specification div
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Close Specification div
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_spec_close() {
 	echo '</section>';
 }
@@ -1270,12 +1274,12 @@ if ( $ges >= 80 ) {
 }
 
 /**
- * Get Listing Map
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Listing Map
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_map() {
 	if ( is_singular( 'listing' ) ) {
 
@@ -1296,12 +1300,12 @@ function shandora_listing_map() {
 }
 
 /**
- * Get Related Listing
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Related Listing
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_related() {
 	if ( is_singular( 'listing' ) && bon_get_option( 'show_related', 'yes' ) == 'yes' ) {
 		bon_get_template_part( 'block', 'related' );
@@ -1309,12 +1313,12 @@ function shandora_listing_related() {
 }
 
 /**
- * Get FAQ Listing
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get FAQ Listing
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_listing_faq() {
 	if ( is_singular( 'listing' ) ) {
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'faq' );
@@ -1322,12 +1326,12 @@ function shandora_listing_faq() {
 }
 
 /**
- * Get Listing CTA
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get Listing CTA
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_listing_cta() {
 	if ( is_singular( 'listing' ) ) {
 		bon_get_template_part( 'block', 'block-cta' );
@@ -1335,12 +1339,12 @@ function shandora_listing_cta() {
 }
 
 /**
- * Get Listing CTA
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get Listing CTA
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_listing_modal() {
 	if ( is_singular( 'listing' ) ) {
 		bon_get_template_part( 'block', 'block-modal-contact' );
@@ -1348,12 +1352,122 @@ function shandora_listing_modal() {
 }
 
 /**
- * Get Tool Section
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get comments
+* Added by Lech Dutkiewicz
+* @since 1.3.7
+* @return void
+*
+*/
+function shandora_post_comments() {
+
+// remove comments from WooCommerce pages
+	if ( is_singular() && !is_front_page() && post_type_supports( get_post_type(), 'comments' ) ) {
+		if (shandora_woocommerce_plugin_active()) {
+			if ( is_woocommerce() || is_cart() || is_checkout() ) {
+			} else {
+				shandora_get_comments_template();
+			}
+		} else {
+			shandora_get_comments_template();	
+		}
+
+	} // Loads the comments.php template. 
+
+}
+
+function shandora_get_comments_template() {
+
+	?>
+
+	<section id="comments-section" class="margin-large top">
+
+		<div>
+			<h3><?php _e( 'Comment', 'bon'); ?></h3>
+			<hr>
+		</div>
+
+		<?php
+
+		if ( bon_get_option( 'enable_disqus' ) ) {
+			bon_get_template_part( 'block', 'block-disqus-comments' );
+		} else {
+			comments_template();
+		} ?>
+
+	</section>
+
+	<?php
+
+}
+
+/**
+* Get Related posts for blog post
+* Added by Lech Dutkiewicz
+* @since 1.3.7
+* @return void
+*
+*/
+function shandora_post_related() {
+
+	$orig_post = $post;
+	global $post;
+	$tags = wp_get_post_tags($post->ID);
+
+	if ( $tags && !defined('RELATED_POSTS') ) {
+
+		define('RELATED_POSTS', true);
+
+		$tag_ids = array();
+		foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+		$args=array(
+			'tag__in' => $tag_ids,
+			'post__not_in' => array($post->ID),
+			'caller_get_posts'=>1,
+			'posts_per_page'=>5
+			);
+
+		$my_query = new wp_query( $args );
+
+		if ( $my_query->have_posts() ) {
+
+			?>
+
+			<section id="related-posts" class="margin-large top">
+
+				<header class="post-section-header">
+					<h3><?php _e( 'You may also like', 'bon'); ?></h3>
+					<hr>
+				</header>
+
+				<?php
+
+				while( $my_query->have_posts() ) {
+					$my_query->the_post();
+
+					bon_get_template_part( 'content', ( post_type_supports( get_post_type(), 'post-formats' ) ? get_post_format() : get_post_type() ) );
+
+				} ?>
+
+			</section>
+
+			<?php
+
+		}
+
+	}
+
+	$post = $orig_post;
+	wp_reset_query();
+
+}
+
+/**
+* Get Tool Section
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_listing_toolsection() {
 	if ( is_singular( 'listing' ) ) {
 		bon_get_template_part( 'block', 'block-toolsection' );
@@ -1361,12 +1475,12 @@ function shandora_listing_toolsection() {
 }
 
 /**
- * Get Promotion Section Home
- * Added by Lech Dutkiewicz
- * @since 1.3.7
- * @return void
- *
- */
+* Get Promotion Section Home
+* Added by Lech Dutkiewicz
+* @since 1.3.7
+* @return void
+*
+*/
 
 function shandora_home_promotion() {
 	if ( bon_get_option( 'home_promotion' ) )
@@ -1374,90 +1488,90 @@ function shandora_home_promotion() {
 }
 
 /**
- * Get Tool Section Home
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get Tool Section Home
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 
 function shandora_home_toolsection() {
 	bon_get_template_part( 'block', 'block-toolsection-home' );
 }
 
 /**
- * Get We Are Section
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get We Are Section
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_home_we_are() {
 	bon_get_template_part( 'block', 'listing/home-features' );
 }
 
 /**
- * Get Testimonials Slider
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get Testimonials Slider
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_testimonials_slider() {
 	bon_get_template_part( 'block', 'block-testimonials-slider' );
 }
 
 /**
- * Get Featured Cottages Slider
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get Featured Cottages Slider
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_featured_slider() {
 	bon_get_template_part( 'block', 'block-featured-slider' );
 }
 
 /**
- * Get Ebook Section
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get Ebook Section
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_ebook_section() {
 	bon_get_template_part( 'block', 'block-ebook' );
 }
 
 /**
- * Get Home Bottom CTA
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get Home Bottom CTA
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_home_bottom_cta() {
 	bon_get_template_part( 'block', 'block-home-bottom-cta' );
 }
 
 /**
- * Get Products Slider
- * Added by Lech Dutkiewicz
- * @since 1.3.6
- * @return void
- *
- */
+* Get Products Slider
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
 function shandora_shop_slider() {
 	bon_get_template_part( 'block', 'block-shop-slider' );
 }
 
 /**
- * Get Listing Footer
- *
- * @since 1.3.5
- * @return void
- *
- */
+* Get Listing Footer
+*
+* @since 1.3.5
+* @return void
+*
+*/
 function shandora_listing_agent() {
 
 	$show_agent_details = bon_get_option( 'show_agent_details', 'yes' );
@@ -2012,6 +2126,12 @@ if ( !function_exists( 'shandora_get_main_navigation' ) ) {
 			bon_get_template_part( 'block', 'block-modal-visit-request' );
 			?>
 
+			<?php
+			if ( is_singular() && bon_get_option( 'enable_disqus' ) ) {
+				bon_get_template_part( 'block', 'block-disqus-comment-count' );
+			}
+			?>
+
 		</body>
 		</html>
 		<?php
@@ -2192,33 +2312,33 @@ function get_packages_details( $id, $package_prefix, $package ) {
 
 /*function package_details( $id, $package_prefix ) {
 
-	$details = get_package_details( $id, $package_prefix );
+$details = get_package_details( $id, $package_prefix );
 
-	var_dump($details);
+var_dump($details);
 
-	foreach ( $details as $key => $value ) {
-		if ( !empty( $key ) ) { ?>
-		<li>
-			<strong><?php echo $value; ?> </strong>
-			<span>
-				<?php
-				echo $key;
+foreach ( $details as $key => $value ) {
+	if ( !empty( $key ) ) { ?>
+	<li>
+		<strong><?php echo $value; ?> </strong>
+		<span>
+			<?php
+			echo $key;
 
-				if ( $key == 'lotsize' || $key == 'terracesqmt' ) {
+			if ( $key == 'lotsize' || $key == 'terracesqmt' ) {
 
-					echo ' ' . $sizemeasurement;
+				echo ' ' . $sizemeasurement;
 
-				}
+			}
 
-				if ( $key == 'price' || $key == 'monprice' ) {
+			if ( $key == 'price' || $key == 'monprice' ) {
 
-					echo ' ' . $currency;
+				echo ' ' . $currency;
 
-				} ?>
-			</span>
-		</li>
-		<?php }
-	}
+			} ?>
+		</span>
+	</li>
+	<?php }
+}
 
 }*/
 
@@ -2227,14 +2347,14 @@ function packages_details( $id, $package_prefix, $name = NULL ) {
 	if ( $name !== NULL ) {
 
 		$details = bon_get_option( 'cottage_packages' );
-		
+
 		foreach ( $details as $key => $detail ) {
 
 			if ( $detail['package_name'] !== $name )
 				continue;
 
 			$detailMeta = get_packages_details( $id, $package_prefix, $detail );
-			
+
 			foreach ( $detailMeta as $value => $name ) { ?>
 
 			<li>
@@ -2256,5 +2376,5 @@ if ( !function_exists( 'override_page_title' ) ) {
 		return false;
 
 	}
-	
+
 }
