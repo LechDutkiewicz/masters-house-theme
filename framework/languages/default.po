@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
-"POT-Creation-Date: 2015-03-31 14:37+0100\n"
-"PO-Revision-Date: 2015-03-31 14:37+0100\n"
+"POT-Creation-Date: 2015-04-15 16:12+0100\n"
+"PO-Revision-Date: 2015-04-15 16:16+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: en\n"
@@ -17,6 +17,722 @@ msgstr ""
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ../shandora-child\n"
+"X-Poedit-SearchPathExcluded-0: framework/extensions/color-pallete.php\n"
+"X-Poedit-SearchPathExcluded-1: includes/idx-includes\n"
+"X-Poedit-SearchPathExcluded-2: includes/theme-supports.php\n"
+"X-Poedit-SearchPathExcluded-3: framework/options.php\n"
+"X-Poedit-SearchPathExcluded-4: framework/classes\n"
+"X-Poedit-SearchPathExcluded-5: framework/functions/post-formats.php\n"
+"X-Poedit-SearchPathExcluded-6: framework/functions/shortcodes.php\n"
+"X-Poedit-SearchPathExcluded-7: framework/functions/utility.php\n"
+"X-Poedit-SearchPathExcluded-8: framework/functions/template.php\n"
+"X-Poedit-SearchPathExcluded-9: includes/theme-options.php\n"
+"X-Poedit-SearchPathExcluded-10: includes/custom-header.php\n"
+"X-Poedit-SearchPathExcluded-11: includes/theme-plugins.php\n"
+"X-Poedit-SearchPathExcluded-12: includes/theme-posttypes.php\n"
+"X-Poedit-SearchPathExcluded-13: includes/theme-toolkit-override.php\n"
+"X-Poedit-SearchPathExcluded-14: includes/post-types\n"
+"X-Poedit-SearchPathExcluded-15: includes/widgets/widget-related-listing.php\n"
+"X-Poedit-SearchPathExcluded-16: includes/widgets/widget-calculator.php\n"
+"X-Poedit-SearchPathExcluded-17: includes/widgets/widget-dsidxpress-search."
+"php\n"
+"X-Poedit-SearchPathExcluded-18: includes/widgets/widget-custom-image.php\n"
+"X-Poedit-SearchPathExcluded-19: framework/extensions/get-the-image.php\n"
+"X-Poedit-SearchPathExcluded-20: framework/extensions/featured-header.php\n"
+"X-Poedit-SearchPathExcluded-21: framework/extensions/entry-views.php\n"
+"X-Poedit-SearchPathExcluded-22: framework/extensions/mobile-detect.php\n"
+"X-Poedit-SearchPathExcluded-23: framework/extensions/post-stylesheets.php\n"
+"X-Poedit-SearchPathExcluded-24: framework/extensions/random-custom-"
+"background.php\n"
+"X-Poedit-SearchPathExcluded-25: framework/extensions/seo-metabox.php\n"
+"X-Poedit-SearchPathExcluded-26: framework/extensions/the-janitor.php\n"
+"X-Poedit-SearchPathExcluded-27: framework/extensions/theme-fonts.php\n"
+"X-Poedit-SearchPathExcluded-28: framework/extensions/theme-layouts.php\n"
+"X-Poedit-SearchPathExcluded-29: includes/widgets/widget-custom-numbers.php\n"
+
+#: ../shandora-child/page-templates/page-template-about-us.php:130
+#: ../shandora-child/templates/blocks/block-agent.php:48
+#: ../shandora-child/templates/contents/content-agent.php:150
+#: ../shandora-child/templates/contents/content-sales-representative.php:139
+msgid "Mobile:"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:139
+#: ../shandora-child/templates/blocks/block-agent.php:54
+msgid "Offce:"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:148
+#: ../shandora-child/templates/blocks/block-agent.php:60
+#: ../shandora-child/templates/contents/content-agent.php:162
+#: ../shandora-child/templates/contents/content-sales-representative.php:151
+msgid "Fax:"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:184
+msgid "Contact"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:185
+msgid "FAQ"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:193
+#: ../shandora-child/templates/blocks/block-agent.php:85
+#: ../shandora-child/templates/blocks/block-modal-contact.php:31
+#: ../shandora-child/templates/blocks/block-modal-customize.php:31
+#: ../shandora-child/templates/blocks/block-modal-ebook.php:13
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:31
+#: ../shandora-child/templates/contents/content-agent.php:83
+#: ../shandora-child/templates/contents/content-sales-representative.php:76
+#: comments.php:83
+msgid "Full Name"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:194
+#: ../shandora-child/templates/blocks/block-agent.php:86
+#: ../shandora-child/templates/blocks/block-modal-contact.php:32
+#: ../shandora-child/templates/blocks/block-modal-customize.php:32
+#: ../shandora-child/templates/blocks/block-modal-ebook.php:14
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:32
+#: ../shandora-child/templates/contents/content-agent.php:84
+#: ../shandora-child/templates/contents/content-sales-representative.php:77
+#: includes/theme-actions.php:1371 includes/theme-actions.php:1487
+msgid "Please enter your name."
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:200
+#: ../shandora-child/templates/blocks/block-agent.php:92
+#: ../shandora-child/templates/blocks/block-modal-contact.php:38
+#: ../shandora-child/templates/blocks/block-modal-customize.php:38
+#: ../shandora-child/templates/blocks/block-modal-ebook.php:20
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:38
+#: ../shandora-child/templates/contents/content-agent.php:90
+#: ../shandora-child/templates/contents/content-sales-representative.php:83
+#: comments.php:90
+msgid "Email Address"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:201
+#: ../shandora-child/templates/blocks/block-agent.php:93
+#: ../shandora-child/templates/blocks/block-modal-contact.php:39
+#: ../shandora-child/templates/blocks/block-modal-customize.php:39
+#: ../shandora-child/templates/blocks/block-modal-ebook.php:21
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:39
+#: ../shandora-child/templates/contents/content-agent.php:91
+#: ../shandora-child/templates/contents/content-sales-representative.php:84
+msgid "Please enter your email."
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:207
+#: ../shandora-child/templates/blocks/block-agent.php:99
+#: ../shandora-child/templates/blocks/block-modal-contact.php:45
+#: ../shandora-child/templates/blocks/block-modal-customize.php:45
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:45
+msgid "Phone Number (optional)"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:208
+#: ../shandora-child/templates/blocks/block-agent.php:100
+#: ../shandora-child/templates/blocks/block-modal-contact.php:46
+#: ../shandora-child/templates/blocks/block-modal-customize.php:46
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:46
+#: ../shandora-child/templates/contents/content-agent.php:98
+#: ../shandora-child/templates/contents/content-sales-representative.php:91
+msgid "Please enter your phone number."
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:214
+#: ../shandora-child/templates/blocks/block-agent.php:106
+#: ../shandora-child/templates/blocks/block-modal-customize.php:52
+#: ../shandora-child/templates/contents/content-agent.php:104
+#: ../shandora-child/templates/contents/content-sales-representative.php:97
+msgid "Message"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:215
+#: ../shandora-child/templates/blocks/block-agent.php:107
+#: ../shandora-child/templates/blocks/block-modal-customize.php:53
+#: ../shandora-child/templates/contents/content-agent.php:105
+#: ../shandora-child/templates/contents/content-sales-representative.php:98
+#: includes/theme-actions.php:1390
+msgid "Please enter your messages."
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:219
+msgid "Contact from About us Page"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-about-us.php:222
+#: ../shandora-child/templates/blocks/block-agent.php:114
+#: ../shandora-child/templates/contents/content-agent.php:112
+#: ../shandora-child/templates/contents/content-sales-representative.php:105
+msgid "Submit"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-all-listings.php:36
+#: ../shandora-child/page-templates/page-template-search-listings.php:436
+#: includes/theme-hooks.php:1831 includes/theme-hooks.php:2287
+#: includes/theme-hooks.php:2301
+msgid "Price"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-all-listings.php:40
+#: ../shandora-child/page-templates/page-template-search-listings.php:440
+#: includes/search-fields.php:893 includes/theme-hooks.php:1833
+#: includes/theme-hooks.php:1836
+msgid "Size"
+msgstr ""
+
+#: ../shandora-child/page-templates/page-template-testimonials.php:79
+#: ../shandora-child/templates/blocks/block-promotion-home.php:39
+#: ../shandora-child/templates/contents/content-gallery.php:46
+#: ../shandora-child/templates/contents/content-promotions.php:72
+#: ../shandora-child/templates/contents/content-video.php:40
+#: ../shandora-child/templates/contents/content.php:81
+msgid "Read more"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-agent.php:22
+msgid "Contact our representative"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-agent.php:111
+#, php-format
+msgid "Contact For: %s Property"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-agentlisting.php:67
+#: ../shandora-child/templates/loops/loop-listing.php:48
+#: includes/theme-hooks.php:654
+#, php-format
+msgid "%s Bed"
+msgid_plural "%s Beds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../shandora-child/templates/blocks/block-agentlisting.php:72
+#: ../shandora-child/templates/loops/loop-listing.php:47
+#: includes/theme-hooks.php:662
+#, php-format
+msgid "%s Bath"
+msgid_plural "%s Baths"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../shandora-child/templates/blocks/block-ebook.php:8
+msgid "Learn from our experts"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-ebook.php:30
+msgid "Download"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-featured-slider.php:18
+msgid "Our ready projects"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-featured-slider.php:69
+#: includes/widgets/widget-featured-listing.php:159
+msgid "No property listing were found"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-listing-footer.php:3
+#: ../shandora-child/templates/blocks/block-salesreplisting.php:63
+#: includes/theme-hooks.php:815 includes/theme-hooks.php:818
+msgid "Permalink to "
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:6
+#: ../shandora-child/templates/blocks/block-modal-contact.php:55
+#: ../shandora-child/templates/blocks/block-modal-customize.php:6
+#: ../shandora-child/templates/blocks/block-price.php:58
+#: ../shandora-child/templates/blocks/block-toolsection-home.php:22
+#: ../shandora-child/templates/blocks/block-toolsection.php:20
+msgid "Contact us"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:6
+#: ../shandora-child/templates/blocks/block-price.php:58
+msgid "and order your cottage"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:24
+#: ../shandora-child/templates/blocks/block-modal-customize.php:24
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:24
+msgid "Call us directly at:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:24
+#: ../shandora-child/templates/blocks/block-modal-customize.php:24
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:24
+msgid "or leave us your details data, so our representative can contact you."
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:25
+#: ../shandora-child/templates/blocks/block-modal-customize.php:25
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:25
+msgid ""
+"We work from Monday to Friday 8 am to 4 pm. During this time we contact you "
+"back within one hour"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:50
+#, php-format
+msgid "Email from %s"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:54
+msgid "Buy it request from the website"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-customize.php:57
+#, php-format
+msgid "Customization form from %s"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-customize.php:61
+msgid "Send"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-ebook.php:6
+msgid "Fill out this form to get your free ebook"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-ebook.php:25
+msgid "Ebook from Master's House"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-ebook.php:29
+msgid "Get your ebook by email"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:6
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:53
+msgid "Request a free visit"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:50
+msgid "Free visit request"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:52
+msgid "Visit request"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-pageheader.php:12
+#: framework/extensions/breadcrumb-trail.php:173
+msgid "Home"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-price.php:28
+msgid "includes VAT"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-related.php:105
+#: includes/theme-hooks.php:1438
+msgid "You may also like"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-salesreplisting.php:68
+#: ../shandora-child/templates/blocks/block-salesreplisting.php:73
+#: ../shandora-child/templates/blocks/block-salesreplisting.php:77
+#: includes/theme-hooks.php:690 includes/theme-hooks.php:711
+#: includes/theme-hooks.php:717 includes/theme-hooks.php:723
+msgid "Unspecified"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-shop-slider.php:23
+msgid "Improve your leisure time"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-testimonials-slider.php:15
+msgid "Our clients rock"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-testimonials-slider.php:52
+msgid "Read full story"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/addon.php:39
+msgid "Price includes"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/faq.php:14
+msgid "faq"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/faq.php:41
+msgid "Show more"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/meta.php:41
+#, php-format
+msgid "1 Room"
+msgid_plural "%s Rooms"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../shandora-child/templates/blocks/listing/meta.php:41
+msgid "No Room"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/meta.php:61
+#: includes/theme-hooks.php:2289 includes/theme-hooks.php:2303
+msgid "Wall thickness"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/meta.php:72
+msgid "Insulated"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/meta.php:72
+msgid "roof"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/meta.php:81
+msgid "Assemblage"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/meta.php:81
+msgid "included"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/services.php:4
+msgid "Services"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:41
+msgid "Price:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:42
+msgid "Monthly price:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:43
+msgid "Size:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:44
+msgid "Terrace size:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:45
+msgid "Rooms:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:46
+msgid "Floors:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:50
+msgid "Dimensions:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:51
+msgid "Height:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:52
+msgid "Wall height:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:53
+msgid "Wall thickness:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:54
+msgid "Floor thickness:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:55
+msgid "Roof thickness:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:56
+msgid "Windows:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:57
+msgid "Windows sizes:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:58
+msgid "Doors:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:59
+msgid "Doors sizes:"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:67
+msgid "Details"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:73
+msgid "Specifications"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/tab.php:81
+msgid "Additional services"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:41
+#: ../shandora-child/templates/contents/content-sales-representative.php:39
+msgid "Mobile"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:44
+#: ../shandora-child/templates/contents/content-sales-representative.php:42
+msgid "Office"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:47
+#: ../shandora-child/templates/contents/content-sales-representative.php:45
+msgid "Fax"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:53
+#: ../shandora-child/templates/contents/content-sales-representative.php:50
+msgid "Follow on"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:55
+#: ../shandora-child/templates/contents/content-sales-representative.php:52
+msgid "Facebook"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:58
+#: ../shandora-child/templates/contents/content-sales-representative.php:55
+msgid "LinkedIn"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:61
+#: ../shandora-child/templates/contents/content-sales-representative.php:58
+msgid "Twitter"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:72
+#: ../shandora-child/templates/contents/content-attachment.php:12
+#: ../shandora-child/templates/contents/content-attachment.php:25
+#: ../shandora-child/templates/contents/content-gallery.php:29
+#: ../shandora-child/templates/contents/content-gallery.php:47
+#: ../shandora-child/templates/contents/content-image.php:31
+#: ../shandora-child/templates/contents/content-image.php:47
+#: ../shandora-child/templates/contents/content-listing.php:25
+#: ../shandora-child/templates/contents/content-page.php:21
+#: ../shandora-child/templates/contents/content-page.php:39
+#: ../shandora-child/templates/contents/content-poll.php:18
+#: ../shandora-child/templates/contents/content-poll.php:30
+#: ../shandora-child/templates/contents/content-promotions.php:22
+#: ../shandora-child/templates/contents/content-promotions.php:46
+#: ../shandora-child/templates/contents/content-promotions.php:73
+#: ../shandora-child/templates/contents/content-quiz.php:18
+#: ../shandora-child/templates/contents/content-quiz.php:30
+#: ../shandora-child/templates/contents/content-quote.php:23
+#: ../shandora-child/templates/contents/content-quote.php:39
+#: ../shandora-child/templates/contents/content-sales-representative.php:67
+#: ../shandora-child/templates/contents/content-search.php:20
+#: ../shandora-child/templates/contents/content-search.php:37
+#: ../shandora-child/templates/contents/content-shop-product.php:23
+#: ../shandora-child/templates/contents/content-video.php:23
+#: ../shandora-child/templates/contents/content-video.php:41
+#: ../shandora-child/templates/contents/content.php:22
+#: ../shandora-child/templates/contents/content.php:57
+#: ../shandora-child/templates/contents/content.php:82
+msgid "Pages:"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:97
+#: ../shandora-child/templates/contents/content-sales-representative.php:90
+msgid "Phone Number"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:109
+#: ../shandora-child/templates/contents/content-sales-representative.php:102
+#, php-format
+msgid "Send from: Agent %s Page"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:126
+#: ../shandora-child/templates/contents/content-sales-representative.php:115
+#, php-format
+msgid "Latest Listing by %s"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-agent.php:156
+#: ../shandora-child/templates/contents/content-sales-representative.php:145
+msgid "Office:"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-attachment.php:7
+#: ../shandora-child/templates/contents/content-attachment.php:20
+#: ../shandora-child/templates/contents/content-gallery.php:21
+#: ../shandora-child/templates/contents/content-gallery.php:45
+#: ../shandora-child/templates/contents/content-image.php:23
+#: ../shandora-child/templates/contents/content-image.php:43
+#: ../shandora-child/templates/contents/content-link.php:15
+#: ../shandora-child/templates/contents/content-link.php:33
+#: ../shandora-child/templates/contents/content-promotions.php:17
+#: ../shandora-child/templates/contents/content-promotions.php:41
+#: ../shandora-child/templates/contents/content-promotions.php:70
+#: ../shandora-child/templates/contents/content-quote.php:15
+#: ../shandora-child/templates/contents/content-quote.php:34
+#: ../shandora-child/templates/contents/content-search.php:15
+#: ../shandora-child/templates/contents/content-search.php:32
+#: ../shandora-child/templates/contents/content-video.php:15
+#: ../shandora-child/templates/contents/content-video.php:38
+#: ../shandora-child/templates/contents/content.php:17
+#: ../shandora-child/templates/contents/content.php:49
+#: ../shandora-child/templates/contents/content.php:79
+msgid "Posted on "
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-attachment.php:7
+#: ../shandora-child/templates/contents/content-attachment.php:20
+#: ../shandora-child/templates/contents/content-image.php:23
+#: ../shandora-child/templates/contents/content-image.php:43
+#: ../shandora-child/templates/contents/content-link.php:15
+#: ../shandora-child/templates/contents/content-link.php:33
+#: ../shandora-child/templates/contents/content-quote.php:15
+#: ../shandora-child/templates/contents/content-quote.php:34
+#: ../shandora-child/templates/contents/content-search.php:15
+#: ../shandora-child/templates/contents/content-search.php:32
+msgid ""
+"[entry-icon class=\"show-for-large-up\"] [entry-author] [entry-published "
+"format=\"M, d Y\" text=\""
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-gallery.php:21
+#: ../shandora-child/templates/contents/content-gallery.php:45
+#: ../shandora-child/templates/contents/content-promotions.php:17
+#: ../shandora-child/templates/contents/content-promotions.php:41
+#: ../shandora-child/templates/contents/content-promotions.php:70
+#: ../shandora-child/templates/contents/content-video.php:15
+#: ../shandora-child/templates/contents/content-video.php:38
+#: ../shandora-child/templates/contents/content.php:17
+#: ../shandora-child/templates/contents/content.php:49
+#: ../shandora-child/templates/contents/content.php:79
+msgid ""
+"[entry-icon class=\"show-for-large-up\"] [entry-published format=\"M, d Y\" "
+"text=\""
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-gallery.php:33
+#: ../shandora-child/templates/contents/content-image.php:35
+#: ../shandora-child/templates/contents/content-link.php:26
+#: ../shandora-child/templates/contents/content-promotions.php:26
+#: ../shandora-child/templates/contents/content-quote.php:27
+#: ../shandora-child/templates/contents/content-search.php:24
+#: ../shandora-child/templates/contents/content-video.php:27
+#: ../shandora-child/templates/contents/content.php:26
+#: ../shandora-child/templates/contents/content.php:61
+msgid "Tagged in:"
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-gallery.php:33
+#: ../shandora-child/templates/contents/content-image.php:35
+#: ../shandora-child/templates/contents/content-link.php:26
+#: ../shandora-child/templates/contents/content-promotions.php:26
+#: ../shandora-child/templates/contents/content-quote.php:27
+#: ../shandora-child/templates/contents/content-search.php:24
+#: ../shandora-child/templates/contents/content-video.php:27
+#: ../shandora-child/templates/contents/content.php:26
+#: ../shandora-child/templates/contents/content.php:61
+msgid "[entry-terms text=\""
+msgstr ""
+
+#: ../shandora-child/templates/contents/content-quote.php:38
+msgid "Read more &rarr;"
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-error.php:4
+msgid "Nothing found"
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-error.php:8
+msgid "Apologies, but no entries were found."
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-listing.php:47
+msgid "0 Bath"
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-listing.php:48
+msgid "0 Bed"
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-listing.php:66
+#, php-format
+msgid "%s Item Listed"
+msgid_plural "%s Items Listed"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../shandora-child/templates/loops/loop-nav.php:6
+msgid "<span class=\"meta-nav\">&larr;</span> Return to entry"
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-nav.php:12
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-nav.php:13
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-nav.php:18
+msgid "<span class=\"meta-nav\">&larr;</span> Older Entries"
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-nav.php:18
+msgid "Newer Entries <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../shandora-child/templates/loops/loop-slider.php:57
+msgid "No Slider no entries were found"
+msgstr ""
+
+#: ../shandora-child/templates/woocommerce/email-template.php:52
+#: includes/theme-actions.php:1569
+msgid "Thank you for downloading our ebook."
+msgstr ""
+
+#: ../shandora-child/templates/woocommerce/email-template.php:53
+#: includes/theme-actions.php:1570
+msgid "You can download it here"
+msgstr ""
+
+#: ../shandora-child/templates/woocommerce/email-template.php:54
+#: includes/theme-actions.php:1571
+msgid "We hope you find this helpful!"
+msgstr ""
+
+#: ../shandora-child/templates/woocommerce/email-template.php:58
+#: includes/theme-actions.php:1575
+msgid "All the best"
+msgstr ""
+
+#: ../shandora-child/templates/woocommerce/result-count.php:19
+msgid "Showing the single result"
+msgstr ""
+
+#: ../shandora-child/templates/woocommerce/result-count.php:21
+#, php-format
+msgid "Showing all %d results"
+msgstr ""
+
+#: ../shandora-child/templates/woocommerce/result-count.php:23
+#, php-format
+msgctxt "%1$d = first, %2$d = last, %3$d = total"
+msgid "Showing %1$d&ndash;%2$d of %3$d results"
+msgstr ""
 
 #: comment.php:19
 msgid "Your comment is awaiting moderation."
@@ -81,17 +797,8 @@ msgstr ""
 msgid "Log out of this account"
 msgstr ""
 
-#: comments.php:83 includes/theme-toolkit-override.php:751
-msgid "Full Name"
-msgstr ""
-
-#: comments.php:90 includes/post-types/car.php:437
-#: includes/post-types/property.php:500
-#: includes/theme-toolkit-override.php:758
-msgid "Email Address"
-msgstr ""
-
 #: comments.php:99 framework/functions/comments.php:201
+#: includes/theme-hooks.php:1385
 msgid "Comment"
 msgstr ""
 
@@ -99,1736 +806,19 @@ msgstr ""
 msgid "Submit Comment"
 msgstr ""
 
-#: framework/classes/class-bon-accounts.php:75
-msgctxt "edit-account-slug"
-msgid "edit-account"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:76
-msgctxt "lost-password-slug"
-msgid "lost-password"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:269
-#: includes/theme-actions.php:1195 includes/theme-actions.php:1311
-#: includes/theme-toolkit-override.php:752
-msgid "Please enter your name."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:273
-msgid "Please provide a valid email address."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:275
-msgid "This email address is already registered."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:279
-msgid "Please re-enter your password."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:281
-#: framework/classes/class-bon-accounts.php:534
-msgid "Passwords do not match."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:328
-msgid "Your password has been reset."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:328
-#: framework/classes/class-bon-shortcodes.php:188
-#: framework/functions/shortcodes.php:143
-msgid "Log in"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:349
-msgid "Account details changed successfully."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:383
-msgid "Username is required."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:384
-msgid "Password is required."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:442
-msgid "Username already taken"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:445
-msgid "Invalid username"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:448
-msgid "Please enter a username"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:451
-msgid "Invalid email"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:454
-msgid "Email already registered"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:457
-msgid "Please enter a password"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:460
-msgid "Passwords do not match"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:465
-msgid "Cheatin&#8217; uh?"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:481
-msgid "Your chosen password"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:529
-msgid "Please enter your password."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:568
-msgid "Please enter a username or e-mail address."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:575
-msgid "There is no user registered with that email address."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:591
-msgid "Invalid username or e-mail."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:604
-msgid "Password reset is not allowed for this user"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:626
-msgid "Someone requested that the password be reset for the following account:"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:628
-#, php-format
-msgid "Username: %s"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:629
-msgid "If this was a mistake, just ignore this email and nothing will happen."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:630
-msgid "To reset your password, visit the following address:"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:641
-#, php-format
-msgid "[%s] Password Reset"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:663
-msgid "The e-mail could not be sent."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:663
-msgid "Possible reason: your host may have disabled the mail() function."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:667
-msgid "Check your e-mail for the confirmation link."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:688
-#: framework/classes/class-bon-accounts.php:693
-#: framework/classes/class-bon-accounts.php:700
-msgid "Invalid Key."
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:725
-msgid "Skype Username"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:726
-msgid "Twitter URL"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:727
-msgid "LinkedIn"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:728
-msgid "Google Plus"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:729
-msgid "Facebook URL"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:730
-msgid "YouTube URL"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:731
-msgid "Pinterest URL"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:732
-msgid "Instagram URL"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:733
-msgid "Dribbble URL"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:734
-msgid "Github URL"
-msgstr ""
-
-#: framework/classes/class-bon-accounts.php:735
-msgid "WordPress URL"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:144
-msgid "Default options restored."
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:204
-msgid "Options saved."
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:452
-msgid "Reset Options"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:452
-msgid "Click OK to reset. Any theme settings will be lost!"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:453
-msgid "Save All Changes"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:477
-msgid "View Theme Documentation"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:480
-msgid "Visit Support Forum"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:531
-#: framework/classes/class-bon-machine.php:746
-#: framework/classes/menus/class-bon-advanced-menu.php:483
-#: framework/classes/menus/class-bon-advanced-menu.php:671
-msgid "Upload"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:532
-#: framework/classes/class-bon-machine.php:748
-#: framework/classes/menus/class-bon-advanced-menu.php:485
-#: framework/classes/menus/class-bon-advanced-menu.php:672
-#: framework/classes/menus/class-bon-walker-menu-edit.php:204
-#: framework/functions/utility.php:488
-msgid "Remove"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:545
-#: framework/classes/class-bon-meta-box.php:93
-msgid "Clear"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:546
-#: framework/classes/class-bon-meta-box.php:94
-#: framework/extensions/theme-layouts.php:341
-msgid "Default"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:547
-#: framework/classes/class-bon-meta-box.php:95
-msgid "Select Color"
-msgstr ""
-
-#: framework/classes/class-bon-admin.php:618
-#, php-format
-msgid "BonFramework %s"
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:49
-#: framework/classes/class-bon-backup.php:71
-#: framework/classes/class-bon-backup.php:118
-msgid "Import / Export"
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:74
-msgid "Import Settings"
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:75
-msgid ""
-"If you have Theme settings in a backup file on your computer, the Import / "
-"Export system can import those into this site. To get started, upload your "
-"backup file to import from below."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:79
-#, php-format
-msgid "Upload File: (Maximum Size: %s)"
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:82
-msgid "Upload File and Import"
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:89
-msgid "Export Settings"
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:91
-msgid ""
-"When you click the button below, the Import / Export system will create a "
-"text file for you to save to your computer."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:92
-#, php-format
-msgid ""
-"This text file can be used to restore your settings here on \"%s\", or to "
-"easily setup another website with the same settings\"."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:97
-msgid "Download Export File"
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:119
-msgid "Here are a few notes on using this screen."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:120
-msgid ""
-"The backup manager allows you to backup or restore your \"Theme Options\" "
-"and other settings to or from a text file."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:121
-msgid ""
-"To create a backup, simply select the setting type you'd like to backup (or "
-"\"All Settings\") and hit the \"Download Export File\" button."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:122
-msgid ""
-"To restore your settings from a backup, browse your computer for the file "
-"(under the \"Import Settings\" heading) and hit the \"Upload File and Import"
-"\" button. This will restore only the settings that have changed since the "
-"backup."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:124
-msgid ""
-"Please note that only valid backup files generated through the Backup "
-"Manager should be imported."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:126
-msgid "Looking for assistance?"
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:127
-#, php-format
-msgid ""
-"Please post your query on the %sBonfirelab Support Desk%s where we will do "
-"our best to assist you further."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:148
-#, php-format
-msgid ""
-"Please note that this backup manager backs up only your settings and not "
-"your content. To backup your content, please use the %sWordPress Export Tool"
-"%s."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:151
-msgid "There was a problem importing your settings. Please Try again."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:153
-msgid "There was a problem exporting your settings. Please Try again."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:155
-msgid "The import file you've provided is invalid. Please try again."
-msgstr ""
-
-#: framework/classes/class-bon-backup.php:157
-#, php-format
-msgid "Settings successfully imported. | Return to %sTheme Options%s"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:65
-#: framework/classes/class-bon-cpt.php:136
-#, php-format
-msgid "Add New %s"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:66
-#: framework/classes/class-bon-cpt.php:134
-#, php-format
-msgid "Edit %s"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:67
-#, php-format
-msgid "New %s"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:68
-#: framework/classes/class-bon-cpt.php:131
-#, php-format
-msgid "All %s"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:69
-#, php-format
-msgid "View %s"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:70
-#: framework/classes/class-bon-cpt.php:130
-#, php-format
-msgid "Search %s"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:71
-#, php-format
-msgid "No %s found"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:72
-#, php-format
-msgid "No %s found in Trash"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:132
-#: framework/classes/class-bon-cpt.php:133
-#, php-format
-msgid "Parent %s"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:135
-#, php-format
-msgid "Update %s"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:137
-#, php-format
-msgid "New %s Name"
-msgstr ""
-
-#: framework/classes/class-bon-cpt.php:138
-#: framework/classes/class-bon-shortcodes.php:439
-#: framework/classes/class-tgm-plugin-activation.php:377
-#: framework/classes/class-tgm-plugin-activation.php:505
-#: framework/classes/class-tgm-plugin-activation.php:542
-#: framework/classes/class-tgm-plugin-activation.php:2053
-#: framework/functions/shortcodes.php:403
-#, php-format
-msgid "%s"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:83
-#, php-format
-msgid "Editing %s"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:107
-msgctxt "edit-post-slug"
-msgid "edit-post"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:108
-msgctxt "add-post-slug"
-msgid "add-post"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:305
-msgid "The item you are trying to move to the Trash no longer exists."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:308
-msgid "Unknown post type."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:311
-msgid "You are not allowed to move this item to the Trash."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:315
-#, php-format
-msgid "You cannot move this item to the Trash. %s is currently editing."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:319
-msgid "Error in moving to Trash."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:421
-#: framework/classes/class-bon-front-end-editor.php:562
-#: framework/classes/menus/class-bon-walker-menu-edit.php:205
-msgid "Cancel"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:424
-msgid "LOCKED"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:561
-msgid "OK"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:563
-msgid "Publish on:"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:564
-msgid "Schedule for:"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:565
-msgid "Published on:"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:566
-#, php-format
-msgid "%1$s %2$s, %3$s @ %4$s : %5$s"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:567
-msgid "Show more comments"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:568
-msgid "No more comments found."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:569
-#: framework/classes/class-bon-front-end-editor.php:844
-msgid "Publish"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:570
-msgid "Schedule"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:571
-#: framework/classes/class-bon-front-end-editor.php:599
-msgid "Update"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:572
-msgid "Save as Pending"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:573
-msgid "Save Draft"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:574
-msgid "Private"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:575
-msgid "Public"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:576
-msgid "Public, Sticky"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:577
-msgid "Password Protected"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:578
-msgid "Privately Published"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:579
-msgid "Published"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:580
-msgctxt "tag delimiter"
-msgid ","
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:590
-msgid "Saving Draft&#8230;"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:591
-msgid "The changes you made will be lost if you navigate away from this page."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:598
-msgid "Insert/edit link"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:600
-msgid "Add Link"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:601
-msgid "(no title)"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:602
-msgid "No matches found."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:643
-#: framework/classes/class-bon-front-end-editor.php:655
-msgid ""
-"You attempted to edit an item that doesn&#8217;t exist. Perhaps it was "
-"deleted?"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:660
-msgid "You are not allowed to edit this item."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:665
-#: framework/functions/shortcodes.php:725
-msgid "The post type assigned is not supporting front end post"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:753
-#, php-format
-msgid ""
-"There is an autosave of this post that is more recent than the version "
-"below. <a href=\"%s\">View the autosave</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:782
-#, php-format
-msgid "Post updated. <a href=\"%s\">View post</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:783
-#: framework/classes/class-bon-front-end-editor.php:799
-msgid "Custom field updated."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:784
-#: framework/classes/class-bon-front-end-editor.php:800
-msgid "Custom field deleted."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:785
-msgid "Post updated."
-msgstr ""
-
-#. translators: %s: date and time of the revision
-#: framework/classes/class-bon-front-end-editor.php:787
-#, php-format
-msgid "Post restored to revision from %s"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:788
-#, php-format
-msgid "Post published. <a href=\"%s\">View post</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:789
-msgid "Post saved."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:790
-#, php-format
-msgid "Post submitted. <a target=\"_blank\" href=\"%s\">Preview post</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:791
-#, php-format
-msgid ""
-"Post scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
-"\">Preview post</a>"
-msgstr ""
-
-#. translators: Publish box date format, see http://php.net/date
-#: framework/classes/class-bon-front-end-editor.php:793
-#: framework/classes/class-bon-front-end-editor.php:806
-msgid "M j, Y @ G:i"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:794
-#, php-format
-msgid "Post draft updated. <a target=\"_blank\" href=\"%s\">Preview post</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:798
-#, php-format
-msgid "Page updated. <a href=\"%s\">View page</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:801
-msgid "Page updated."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:802
-#, php-format
-msgid "Page restored to revision from %s"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:803
-#, php-format
-msgid "Page published. <a href=\"%s\">View page</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:804
-msgid "Page saved."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:805
-#, php-format
-msgid "Page submitted. <a target=\"_blank\" href=\"%s\">Preview page</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:806
-#, php-format
-msgid ""
-"Page scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s"
-"\">Preview page</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:807
-#, php-format
-msgid "Page draft updated. <a target=\"_blank\" href=\"%s\">Preview page</a>"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:810
-msgid "Media attachment updated."
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:840
-msgid "Revisions"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:847
-msgctxt "post format"
-msgid "Format"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:864
-msgid "Page Attributes"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:864
-msgid "Attributes"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:867
-msgid "Excerpt"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:870
-msgid "Send Trackbacks"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:873
-msgid "Custom Fields"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:876
-msgid "Discussion"
-msgstr ""
-
-#: framework/classes/class-bon-front-end-editor.php:879
-msgid "Featured Image"
-msgstr ""
-
-#: framework/classes/class-bon-machine.php:370
-#: framework/classes/class-bon-machine.php:398
-#: framework/classes/class-bon-machine.php:538
-#: framework/classes/class-bon-machine.php:539
-#: framework/classes/menus/class-bon-advanced-menu.php:88
-#: framework/extensions/input-filter.php:230
-#: framework/extensions/input-filter.php:265
-#: framework/extensions/input-filter.php:367
-#: framework/extensions/input-filter.php:392
-msgid "Select One"
-msgstr ""
-
-#: framework/classes/class-bon-machine.php:602
-msgid "Delete image"
-msgstr ""
-
-#: framework/classes/class-bon-machine.php:602
-msgid "Delete"
-msgstr ""
-
-#: framework/classes/class-bon-machine.php:611
-msgid "Add gallery images"
-msgstr ""
-
-#: framework/classes/class-bon-machine.php:743
-#: framework/classes/menus/class-bon-advanced-menu.php:479
-msgid "No file chosen"
-msgstr ""
-
-#: framework/classes/class-bon-machine.php:751
-msgid "Upgrade your version of WordPress for full media support."
-msgstr ""
-
-#: framework/classes/class-bon-machine.php:775
-msgid "View File"
-msgstr ""
-
-#: framework/classes/class-bon-main.php:188
-msgid "Framework Settings"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:112
-#: framework/functions/core-seo.php:93 framework/functions/shortcodes.php:77
-msgid "Y"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:135
-#: framework/functions/shortcodes.php:100
-msgid "State-of-the-art semantic personal publishing platform"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:135
-#: framework/functions/shortcodes.php:100
-msgid "WordPress"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:149
-#, php-format
-msgid "%s WordPress Theme"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:186
-#: framework/functions/shortcodes.php:141
-msgid "Log out"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:203
-#: framework/functions/shortcodes.php:158
-#, php-format
-msgid "This page loaded in %1$s seconds with %2$s database queries."
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:255
-#: framework/classes/class-bon-shortcodes.php:536
-#: framework/functions/shortcodes.php:211
-#: framework/functions/shortcodes.php:501
-#, php-format
-msgid "Edit %1$s"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:255
-#: framework/classes/class-bon-shortcodes.php:536
-#: framework/extensions/breadcrumb-trail.php:1129
-#: framework/extensions/breadcrumb-trail.php:1165
-#: framework/extensions/breadcrumb-trail.php:1182
-#: framework/extensions/breadcrumb-trail.php:1213
-#: framework/functions/shortcodes.php:211
-#: framework/functions/shortcodes.php:501
-msgid "Edit"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:267
-#: framework/functions/shortcodes.php:223
-msgid "Posted on:"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:269
-#: framework/classes/class-bon-shortcodes.php:467
-#: framework/functions/core-seo.php:115 framework/functions/shortcodes.php:225
-#: framework/functions/shortcodes.php:431
-msgid "l, F jS, Y, g:i a"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:286
-#: framework/classes/class-bon-shortcodes.php:293
-#: framework/classes/class-bon-shortcodes.php:297
-#: framework/functions/shortcodes.php:241
-msgid "Comment:"
-msgid_plural "Comment:"
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-bon-shortcodes.php:286
-#: framework/functions/shortcodes.php:241
-msgid "Comments:"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:293
-#: framework/functions/shortcodes.php:248
-#: framework/functions/shortcodes.php:250
-#: framework/functions/shortcodes.php:252
-#, php-format
-msgid "Comment on %1$s"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:297
-#, php-format
-msgid "Comments on %1$s"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:311
-#: framework/functions/shortcodes.php:269
-msgid "Author:"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:325
-#: framework/functions/shortcodes.php:283
-#, php-format
-msgid "About %1s"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:339
-#: framework/functions/shortcodes.php:298
-msgid "Category:"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:400
-#: framework/functions/shortcodes.php:363
-msgid "(Untitled)"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:418
-#: framework/functions/shortcodes.php:379
-msgid "Shortlink"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:437
-#: framework/classes/menus/class-bon-advanced-menu.php:1101
-#: framework/functions/shortcodes.php:401 includes/theme-shortcodes.php:197
-msgid "Read More"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:439
-#: framework/classes/class-bon-shortcodes.php:594
-#: framework/functions/shortcodes.php:403
-#: framework/functions/shortcodes.php:551 includes/theme-hooks.php:811
-#: includes/theme-hooks.php:814
-msgid "Permalink to "
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:467
-#: framework/functions/shortcodes.php:431
-#, php-format
-msgid "%1$s at %2$s"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:515
-#: framework/functions/shortcodes.php:480
-#, php-format
-msgid "Permalink to comment %1$s"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:515
-#: framework/functions/shortcodes.php:480
-msgid "Permalink"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:557
-#: framework/functions/shortcodes.php:520
-msgid "Reply"
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:558
-#: framework/functions/shortcodes.php:521
-msgid "Log in to reply."
-msgstr ""
-
-#: framework/classes/class-bon-shortcodes.php:591
-#, php-format
-msgid "View all posts in: %s"
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:40
-#, php-format
-msgid "The %s field is required."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:41
-#, php-format
-msgid "The %s field must have a value."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:42
-#, php-format
-msgid "The %s field must contain a valid email address."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:43
-#, php-format
-msgid "The %s field must contain a valid URL."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:44
-#, php-format
-msgid "The %s field must be at least %s characters in length."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:45
-#, php-format
-msgid "The %s field can not exceed %s characters in length."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:46
-#, php-format
-msgid "The %s field must be exactly %s characters in length."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:47
-#, php-format
-msgid "The %s field may only contain alphabetical characters."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:48
-#, php-format
-msgid "The %s field may only contain alpha-numeric characters."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:49
-#, php-format
-msgid ""
-"The %s field may only contain alpha-numeric characters, underscores, and "
-"dashes."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:50
-#, php-format
-msgid "The %s field must contain only numbers."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:51
-#, php-format
-msgid "The %s field must contain only numeric characters."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:52
-#, php-format
-msgid "The %s field must contain an integer."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:53
-#, php-format
-msgid "The %s field is not in the correct format."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:54
-#, php-format
-msgid "The %s field does not match the %s field."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:55
-#, php-format
-msgid "The %s field must contain only positive numbers."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:56
-#, php-format
-msgid "The %s field must contain a number greater than zero."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:57
-#, php-format
-msgid "The %s field must contain a decimal number."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:58
-#, php-format
-msgid "The %s field must contain a number less than %s."
-msgstr ""
-
-#: framework/classes/class-bon-validation.php:59
-#, php-format
-msgid "The %s field must contain a number greater than %s."
-msgstr ""
-
-#: framework/classes/class-envato-protected-api.php:67
-msgid "Please enter your Envato Marketplace Username."
-msgstr ""
-
-#: framework/classes/class-envato-protected-api.php:71
-msgid "Please enter your Envato Marketplace API Key."
-msgstr ""
-
-#: framework/classes/class-envato-protected-api.php:96
-msgid "The API \"set\" is a required parameter."
-msgstr ""
-
-#: framework/classes/class-envato-protected-api.php:167
-msgid "The Envato Marketplace \"item ID\" is a required parameter."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:164
-#: includes/theme-plugins.php:89
-msgid "Install Required Plugins"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:165
-#: includes/theme-plugins.php:90
-msgid "Install Plugins"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:166
-#: includes/theme-plugins.php:91
-#, php-format
-msgid "Installing Plugin: %s"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:167
-msgid "Something went wrong."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:168
-#: includes/theme-plugins.php:93
-#, php-format
-msgid "This theme requires the following plugin: %1$s."
-msgid_plural "This theme requires the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:169
-#: includes/theme-plugins.php:94
-#, php-format
-msgid "This theme recommends the following plugin: %1$s."
-msgid_plural "This theme recommends the following plugins: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:170
-#: includes/theme-plugins.php:95
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to install the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"installed."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to install the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins installed."
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:171
-#: includes/theme-plugins.php:96
-#, php-format
-msgid "The following required plugin is currently inactive: %1$s."
-msgid_plural "The following required plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:172
-#: includes/theme-plugins.php:97
-#, php-format
-msgid "The following recommended plugin is currently inactive: %1$s."
-msgid_plural "The following recommended plugins are currently inactive: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:173
-#: includes/theme-plugins.php:98
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugin. Contact the administrator of this site for help on getting the "
-"plugin activated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to activate the %s "
-"plugins. Contact the administrator of this site for help on getting the "
-"plugins activated."
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:174
-#: includes/theme-plugins.php:99
-#, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgid_plural ""
-"The following plugins need to be updated to their latest version to ensure "
-"maximum compatibility with this theme: %1$s."
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:175
-#: includes/theme-plugins.php:100
-#, php-format
-msgid ""
-"Sorry, but you do not have the correct permissions to update the %s plugin. "
-"Contact the administrator of this site for help on getting the plugin "
-"updated."
-msgid_plural ""
-"Sorry, but you do not have the correct permissions to update the %s plugins. "
-"Contact the administrator of this site for help on getting the plugins "
-"updated."
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:176
-#: includes/theme-plugins.php:101
-msgid "Begin installing plugin"
-msgid_plural "Begin installing plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:177
-#: includes/theme-plugins.php:102
-msgid "Activate installed plugin"
-msgid_plural "Activate installed plugins"
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:178
-#: framework/classes/class-tgm-plugin-activation.php:493
-#: includes/theme-plugins.php:103
-msgid "Return to Required Plugins Installer"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:179
-#: framework/classes/class-tgm-plugin-activation.php:1856
-#: includes/theme-plugins.php:104
-msgid "Plugin activated successfully."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:180
-#, php-format
-msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:520
-#: framework/classes/class-tgm-plugin-activation.php:2068
-msgid "Return to the Dashboard"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:548
-#, php-format
-msgid "The following plugin was activated successfully: <strong>%s</strong>."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:707
-msgid "Dismiss this notice"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1101
-msgid "External Link"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1106
-msgid "Private Repository"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1109
-msgid "Pre-Packaged"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1113
-msgid "WordPress Repository"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1116
-msgid "Required"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1116
-msgid "Recommended"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1119
-msgid "Not Installed"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1121
-msgid "Installed But Not Activated"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1291
-#, php-format
-msgid ""
-"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
-"Dashboard\">Return to the Dashboard</a>"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1307
-msgid "Plugin"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1308
-msgid "Source"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1309
-#: includes/search-fields.php:1088
-msgid "Type"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1310
-#: includes/search-fields.php:492 includes/search-fields.php:1358
-#: includes/theme-posttypes.php:255 includes/theme-posttypes.php:279
-#: includes/widgets/widget-related-listing.php:337
-msgid "Status"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1328
-msgid "Install"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1329
-msgid "Activate"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1554
-msgid "The following plugin was activated successfully:"
-msgid_plural "The following plugins were activated successfully:"
-msgstr[0] ""
-msgstr[1] ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1839
-msgid "Install package not available."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1840
-#, php-format
-msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1841
-msgid "Unpacking the package&#8230;"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1842
-msgid "Installing the plugin&#8230;"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1843
-msgid "Plugin install failed."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1844
-msgid "Plugin installed successfully."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1855
-msgid "Plugin activation failed."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1965
-msgid ""
-"The installation and activation process is starting. This process may take a "
-"while on some hosts, so please be patient."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1966
-#, php-format
-msgid "%1$s installed and activated successfully."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1966
-#: framework/classes/class-tgm-plugin-activation.php:1975
-msgid "Show Details"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1966
-#: framework/classes/class-tgm-plugin-activation.php:1975
-msgid "Hide Details"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1967
-msgid "All installations and activations have been completed."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1968
-#, php-format
-msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1972
-msgid ""
-"The installation process is starting. This process may take a while on some "
-"hosts, so please be patient."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1973
-#, php-format
-msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1974
-#, php-format
-msgid "The installation of %1$s failed."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1975
-#, php-format
-msgid "%1$s installed successfully."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1976
-msgid "All installations have been completed."
-msgstr ""
-
-#: framework/classes/class-tgm-plugin-activation.php:1977
-#, php-format
-msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:115
-msgid ""
-"Turn this menu into a separator, any options will be ignored, unless there "
-"is a custom content / widget had been set"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:116
-msgid "Use As Divider"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:123
-msgid ""
-"Make this item's submenu a mega menu. Leave unchecked to use a normal menu. "
-"Note: if the menu location doesn't supporting mega menu this setting will be "
-"ignored."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:124
-msgid "Activate Mega Menu"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:131
-msgid "Set the submenu to take full width of the menu bar"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:132
-msgid "Full Width Submenu"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:139
-msgid ""
-"Remove the text/label from the menu item, very useful for image only menu."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:140
-msgid "Disable Text"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:147
-msgid ""
-"Remove link from this menu item, Can be useful when using widget or content."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:148
-msgid "Disable Link"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:155
-msgid ""
-"Start a new row with this item. Always check this for the first item in your "
-"new row. Do not check this on fullwidth with defined number of column"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:156
-msgid "New Row"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:164
-msgid "Set the label alignment."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:165
-msgid "Alignment"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:169
-msgid "Left"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:170
-msgid "Center"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:171
-msgid "Right"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:178
-msgid ""
-"Set which action will trigger submenu display. Note: <strong>On click</"
-"strong> will prevent the link (if exists) to trigger."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:179
-msgid "Event Trigger"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:182
-msgid "On Hover"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:183
-msgid "On Click"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:191
-msgid ""
-"Set number or column to be calculated for each row. Only work if Full Width "
-"Submenu is checked"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:192
-msgid "Submenu Column (Full Width Only)"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:195
-msgid "Auto"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:211
-msgid "Use Icon"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:212
-msgid "Set a predefined icon from icon lists."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:219
-msgid "Icon Size"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:220
-msgid "Set the icon size."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:241
-msgid "Set a thumbnail/image to be displayed."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:242
-msgid "Set Thumbnail"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:249
-msgid "Set the thumbnail/icon position."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:250
-msgid "Thumbnail/Icon Position"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:254
-msgid "Before Text"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:255
-msgid "Above Text"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:256
-msgid "Below Text"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:257
-msgid "After Text"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:264
-msgid "Choose a widget slot to display widget based content."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:265
-msgid "Select Sidebar"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:274
-msgid "Select the widget column."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:275
-msgid "Widget Column"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:278
-msgid "Auto (Depend on widget length)"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:279
-msgid "Same as parent"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:299
-msgid ""
-"Display a custom content. Input accept shortcodes and allowed html tags."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:300
-msgid "Custom Content"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:365
-msgid "Show/Hide Advance Options"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:483
-msgid "Choose an image"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:483
-msgid "Use this image"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:518
-msgid "Save Content"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:518
-msgid "Edit Custom Content"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:813
-msgid "Activate Advanced Menu"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:843
-#: framework/classes/menus/class-bon-advanced-menu.php:851
-#: framework/classes/menus/class-bon-advanced-menu.php:920
-#: framework/classes/menus/class-bon-advanced-menu.php:928
-msgid "Data Saved."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:857
-msgid "Failed saving data due to security trouble."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:867
-msgid "Select the menu to activate the advanced menu."
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:882
-msgid "Select All"
-msgstr ""
-
-#: framework/classes/menus/class-bon-advanced-menu.php:885
-#: framework/templates/accounts/form-lost-password.php:50
-msgid "Save"
-msgstr ""
-
-#. translators: %s: title of menu item which is invalid
-#: framework/classes/menus/class-bon-walker-menu-edit.php:74
-#, php-format
-msgid "%s (Invalid)"
-msgstr ""
-
-#. translators: %s: title of menu item in draft status
-#: framework/classes/menus/class-bon-walker-menu-edit.php:78
-#, php-format
-msgid "%s (Pending)"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:91
-msgid "sub item"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:106
-msgid "Move up"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:119
-msgid "Move down"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:121
-#: framework/classes/menus/class-bon-walker-menu-edit.php:123
-msgid "Edit Menu Item"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:132
-msgid "URL"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:139
-msgid "Navigation Label"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:145
-msgid "Title Attribute"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:152
-msgid "Open link in a new window/tab"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:157
-msgid "CSS Classes (optional)"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:163
-msgid "Link Relationship (XFN)"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:169
-msgid "Description"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:171
-msgid ""
-"The description will be displayed in the menu if the current theme supports "
-"it."
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:177
-msgid "Move"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:178
-msgid "Up one"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:179
-msgid "Down one"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:182
-msgid "To the top"
-msgstr ""
-
-#: framework/classes/menus/class-bon-walker-menu-edit.php:191
-#, php-format
-msgid "Original: %s"
-msgstr ""
-
 #: framework/extensions/breadcrumb-trail.php:172
 msgid "Browse:"
 msgstr ""
 
-#: framework/extensions/breadcrumb-trail.php:173
-msgid "Home"
-msgstr ""
-
 #: framework/extensions/breadcrumb-trail.php:174
-#: framework/functions/template.php:356
 msgid "404 Not Found"
 msgstr ""
 
 #: framework/extensions/breadcrumb-trail.php:175
-#: framework/functions/template.php:201
 msgid "Archives"
 msgstr ""
 
 #: framework/extensions/breadcrumb-trail.php:177
-#: framework/functions/template.php:337
 #, php-format
 msgid "Search results for &#8220;%s&#8221;"
 msgstr ""
@@ -1839,7 +829,6 @@ msgid "Page %s"
 msgstr ""
 
 #: framework/extensions/breadcrumb-trail.php:181
-#: framework/functions/template.php:298
 #, php-format
 msgid "Minute %s"
 msgstr ""
@@ -1850,19 +839,16 @@ msgid "Week %s"
 msgstr ""
 
 #: framework/extensions/breadcrumb-trail.php:710
-#: framework/functions/template.php:317
 msgctxt "minute and hour archives time format"
 msgid "g:i a"
 msgstr ""
 
 #: framework/extensions/breadcrumb-trail.php:727
-#: framework/functions/template.php:298
 msgctxt "minute archives time format"
 msgid "i"
 msgstr ""
 
 #: framework/extensions/breadcrumb-trail.php:744
-#: framework/functions/template.php:278
 msgctxt "hour archives time format"
 msgid "g a"
 msgstr ""
@@ -1872,7 +858,6 @@ msgstr ""
 #: framework/extensions/breadcrumb-trail.php:816
 #: framework/extensions/breadcrumb-trail.php:843
 #: framework/extensions/breadcrumb-trail.php:1030
-#: framework/functions/template.php:220 framework/functions/template.php:240
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
@@ -1891,9 +876,15 @@ msgid "j"
 msgstr ""
 
 #: framework/extensions/breadcrumb-trail.php:790
-#: framework/functions/template.php:240
 msgctxt "weekly archives date format"
 msgid "W"
+msgstr ""
+
+#: framework/extensions/breadcrumb-trail.php:1129
+#: framework/extensions/breadcrumb-trail.php:1165
+#: framework/extensions/breadcrumb-trail.php:1182
+#: framework/extensions/breadcrumb-trail.php:1213
+msgid "Edit"
 msgstr ""
 
 #: framework/extensions/breadcrumb-trail.php:1157
@@ -1904,80 +895,27 @@ msgstr ""
 msgid "Merge"
 msgstr ""
 
-#: framework/extensions/input-filter.php:512
-msgid "No Repeat"
-msgstr ""
-
-#: framework/extensions/input-filter.php:513
-msgid "Repeat Horizontally"
-msgstr ""
-
-#: framework/extensions/input-filter.php:514
-msgid "Repeat Vertically"
+#: framework/extensions/input-filter.php:233
+#: framework/extensions/input-filter.php:268
+#: framework/extensions/input-filter.php:370
+#: framework/extensions/input-filter.php:395
+msgid "Select One"
 msgstr ""
 
 #: framework/extensions/input-filter.php:515
+msgid "No Repeat"
+msgstr ""
+
+#: framework/extensions/input-filter.php:516
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: framework/extensions/input-filter.php:517
+msgid "Repeat Vertically"
+msgstr ""
+
+#: framework/extensions/input-filter.php:518
 msgid "Repeat All"
-msgstr ""
-
-#: framework/extensions/input-filter.php:539
-msgid "Top Left"
-msgstr ""
-
-#: framework/extensions/input-filter.php:540
-msgid "Top Center"
-msgstr ""
-
-#: framework/extensions/input-filter.php:541
-msgid "Top Right"
-msgstr ""
-
-#: framework/extensions/input-filter.php:542
-msgid "Middle Left"
-msgstr ""
-
-#: framework/extensions/input-filter.php:543
-msgid "Middle Center"
-msgstr ""
-
-#: framework/extensions/input-filter.php:544
-msgid "Middle Right"
-msgstr ""
-
-#: framework/extensions/input-filter.php:545
-msgid "Bottom Left"
-msgstr ""
-
-#: framework/extensions/input-filter.php:546
-msgid "Bottom Center"
-msgstr ""
-
-#: framework/extensions/input-filter.php:547
-msgid "Bottom Right"
-msgstr ""
-
-#: framework/extensions/input-filter.php:571
-msgid "Scroll Normally"
-msgstr ""
-
-#: framework/extensions/input-filter.php:572
-msgid "Fixed in Place"
-msgstr ""
-
-#: framework/extensions/input-filter.php:657
-msgid "Normal"
-msgstr ""
-
-#: framework/extensions/input-filter.php:658
-msgid "Italic"
-msgstr ""
-
-#: framework/extensions/input-filter.php:659
-msgid "Bold"
-msgstr ""
-
-#: framework/extensions/input-filter.php:660
-msgid "Bold Italic"
 msgstr ""
 
 #: framework/extensions/pagination.php:82
@@ -1991,87 +929,11 @@ msgstr ""
 
 #: framework/extensions/pagination.php:110
 #: framework/extensions/pagination.php:114
-#: includes/idx-includes/templates/results-pagination.php:43
 msgid "Next"
 msgstr ""
 
 #: framework/extensions/pagination.php:119
 msgid "Last"
-msgstr ""
-
-#: framework/extensions/post-stylesheets.php:271
-msgid "Stylesheet"
-msgstr ""
-
-#: framework/extensions/seo-metabox.php:25
-msgid "SEO"
-msgstr ""
-
-#: framework/extensions/seo-metabox.php:59
-msgid "Document Title:"
-msgstr ""
-
-#: framework/extensions/seo-metabox.php:65
-msgid "Meta Description:"
-msgstr ""
-
-#: framework/extensions/seo-metabox.php:71
-msgid "Meta Keywords:"
-msgstr ""
-
-#: framework/extensions/theme-fonts.php:428
-msgid "Fonts"
-msgstr ""
-
-#: framework/extensions/theme-fonts.php:493
-msgid "Font Subset"
-msgstr ""
-
-#: framework/extensions/theme-fonts.php:498
-msgid "-- Select Subset --"
-msgstr ""
-
-#: framework/extensions/theme-fonts.php:668
-#, php-format
-msgid "Error fetching Google font: %s"
-msgstr ""
-
-#: framework/extensions/theme-layouts.php:342
-msgid "One Column"
-msgstr ""
-
-#: framework/extensions/theme-layouts.php:343
-msgid "Two Columns, Left"
-msgstr ""
-
-#: framework/extensions/theme-layouts.php:344
-msgid "Two Columns, Right"
-msgstr ""
-
-#: framework/extensions/theme-layouts.php:345
-msgid "Three Columns, Left"
-msgstr ""
-
-#: framework/extensions/theme-layouts.php:346
-msgid "Three Columns, Right"
-msgstr ""
-
-#: framework/extensions/theme-layouts.php:347
-msgid "Three Columns, Center"
-msgstr ""
-
-#: framework/extensions/theme-layouts.php:474
-#: framework/extensions/theme-layouts.php:584
-#: framework/extensions/theme-layouts.php:669
-msgid "Layout"
-msgstr ""
-
-#: framework/extensions/theme-layouts.php:500
-msgid "Layout is a theme-specific structure for the single view of the post."
-msgstr ""
-
-#: framework/extensions/theme-layouts.php:702
-msgid "Global Layout"
 msgstr ""
 
 #: framework/functions/attr.php:414
@@ -2126,13 +988,21 @@ msgstr ""
 msgid "Post Comment"
 msgstr ""
 
-#: framework/functions/core-seo.php:89
+#: framework/functions/core-seo.php:93
 msgid "F Y"
 msgstr ""
 
-#: framework/functions/core-seo.php:96
+#: framework/functions/core-seo.php:97
+msgid "Y"
+msgstr ""
+
+#: framework/functions/core-seo.php:100
 #, php-format
 msgid "Copyright (c) %1$s"
+msgstr ""
+
+#: framework/functions/core-seo.php:119
+msgid "l, F jS, Y, g:i a"
 msgstr ""
 
 #: framework/functions/head.php:179
@@ -2150,227 +1020,6 @@ msgstr ""
 
 #: framework/functions/notice.php:46
 msgid "NOTICE"
-msgstr ""
-
-#: framework/functions/post-formats.php:109
-msgid "Asides"
-msgstr ""
-
-#: framework/functions/post-formats.php:110
-msgid "Audio"
-msgstr ""
-
-#: framework/functions/post-formats.php:111
-msgid "Chats"
-msgstr ""
-
-#: framework/functions/post-formats.php:112
-msgid "Images"
-msgstr ""
-
-#: framework/functions/post-formats.php:113
-msgid "Galleries"
-msgstr ""
-
-#: framework/functions/post-formats.php:114
-msgid "Links"
-msgstr ""
-
-#: framework/functions/post-formats.php:115
-msgid "Quotes"
-msgstr ""
-
-#: framework/functions/post-formats.php:116
-msgid "Status Updates"
-msgstr ""
-
-#: framework/functions/post-formats.php:117
-msgid "Videos"
-msgstr ""
-
-#: framework/functions/template.php:167
-#, php-format
-msgid "You are browsing the search results for &#8220;%s&#8221;"
-msgstr ""
-
-#: framework/functions/template.php:173
-msgid "You are browsing the site archives by time."
-msgstr ""
-
-#: framework/functions/template.php:176 framework/functions/template.php:179
-#: framework/functions/template.php:182
-#, php-format
-msgid "You are browsing the site archives for %s."
-msgstr ""
-
-#: framework/functions/template.php:185
-msgid "You are browsing the site archives."
-msgstr ""
-
-#: framework/functions/template.php:240
-#, php-format
-msgid "Week %1$s of %2$s"
-msgstr ""
-
-#: framework/functions/template.php:259
-msgctxt "daily archives date format"
-msgid "F j, Y"
-msgstr ""
-
-#: framework/functions/utility.php:463 framework/functions/utility.php:486
-msgid "Choose Icon"
-msgstr ""
-
-#: framework/functions/utility.php:464
-msgid "Remove Icon"
-msgstr ""
-
-#: framework/functions/utility.php:483
-msgid "No icon chosen"
-msgstr ""
-
-#: framework/options.php:12
-msgid "Admin Settings"
-msgstr ""
-
-#: framework/options.php:16
-msgid "Super User (username)"
-msgstr ""
-
-#: framework/options.php:17
-#, php-format
-msgid ""
-"Enter your %s to hide the Framework Settings and Update Framework from other "
-"users."
-msgstr ""
-
-#: framework/options.php:17 framework/options.php:83
-msgid "username"
-msgstr ""
-
-#: framework/options.php:23
-msgid "Disable Backup Settings Menu Item"
-msgstr ""
-
-#: framework/options.php:24
-#, php-format
-msgid "Disable the %s menu item in the theme menu."
-msgstr ""
-
-#: framework/options.php:24
-msgid "Backup Settings"
-msgstr ""
-
-#: framework/options.php:29
-msgid "Branding"
-msgstr ""
-
-#: framework/options.php:33
-msgid "Options panel header"
-msgstr ""
-
-#: framework/options.php:34
-msgid "Change the header image for the Theme Backend."
-msgstr ""
-
-#: framework/options.php:39
-msgid "Options panel icon"
-msgstr ""
-
-#: framework/options.php:40
-msgid "Change the icon image for the WordPress backend sidebar."
-msgstr ""
-
-#: framework/options.php:45
-msgid "WordPress login logo"
-msgstr ""
-
-#: framework/options.php:46
-msgid "Change the logo image for the WordPress login page."
-msgstr ""
-
-#: framework/options.php:46
-msgid "Optimal logo size is 274x63px"
-msgstr ""
-
-#: framework/options.php:51
-msgid "WordPress login URL"
-msgstr ""
-
-#: framework/options.php:52
-msgid ""
-"Change the URL that the logo image on the WordPress login page links to."
-msgstr ""
-
-#: framework/options.php:58
-msgid "WordPress login logo Title"
-msgstr ""
-
-#: framework/options.php:59
-msgid "Change the title of the logo image on the WordPress login page."
-msgstr ""
-
-#: framework/options.php:65
-msgid "Remove Frontend Admin Bar"
-msgstr ""
-
-#: framework/options.php:66
-msgid "Remove Admin bar from the frontend."
-msgstr ""
-
-#: framework/options.php:77
-msgid "Envato Settings"
-msgstr ""
-
-#: framework/options.php:82
-msgid "Envato Username"
-msgstr ""
-
-#: framework/options.php:83
-#, php-format
-msgid "Enter your Themeforest %s."
-msgstr ""
-
-#: framework/options.php:90
-msgid "Envato API Key"
-msgstr ""
-
-#: framework/options.php:91
-#, php-format
-msgid ""
-"Enter your %s from Themeforest. API Key can be found in your Themeforest "
-"User Settings"
-msgstr ""
-
-#: framework/options.php:91
-msgid "APIKEY"
-msgstr ""
-
-#: framework/options.php:97
-msgid "Theme Update Notification"
-msgstr ""
-
-#: framework/options.php:98
-msgid ""
-"This will enable notices on your theme options page that there is an update "
-"available for your theme."
-msgstr ""
-
-#: framework/options.php:105
-msgid "Google API"
-msgstr ""
-
-#: framework/options.php:110
-msgid "Google API Key"
-msgstr ""
-
-#: framework/options.php:111
-#, php-format
-msgid "Enter your Google API Key. Get your api %s."
-msgstr ""
-
-#: framework/options.php:111
-msgid "here"
 msgstr ""
 
 #: framework/templates/accounts/form-edit-account.php:24
@@ -2467,9 +1116,12 @@ msgstr ""
 msgid "Reset Password"
 msgstr ""
 
+#: framework/templates/accounts/form-lost-password.php:50
+msgid "Save"
+msgstr ""
+
 #: framework/templates/accounts/form-register.php:17
 #: framework/templates/accounts/form-register.php:53
-#: includes/idx-includes/idx-main.php:2283
 msgid "Register"
 msgstr ""
 
@@ -2510,1166 +1162,33 @@ msgstr ""
 msgid "Enter title here"
 msgstr ""
 
-#: includes/custom-header.php:28
-msgctxt "header image description"
-msgid "Silhouette 1"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:417
-msgid "No Results"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:418
-msgid "Sorry, we were unable to find any listings that match your request."
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:1015
-msgid "Save Search"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:1016
-msgid "Save to Favorites"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:2284
-#: includes/idx-includes/templates/results-sorting-control.php:8
-msgid "Sorted by"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:2285
-#, php-format
-msgid "Properties %%start%% - %%end%% of %%total%%"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:2286
-#, php-format
-msgid "Show these %%count%% properties on a map"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:2287
-msgid "Hide map"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:2288
-#, php-format
-msgid ""
-"[if-idx data=\"address\" else=\"MLS #%%mls%%\"]%%address%%[if-idx data=\"city"
-"\"], %%city%%[/if-idx][/if-idx]"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:2289
-#, php-format
-msgid "%%address%%"
-msgstr ""
-
-#: includes/idx-includes/idx-main.php:2291
-#, php-format
-msgid ""
-"%sSorry, the [idx-if data='mls' else='listing']MLS listing #%%%%mls%%%%[/idx-"
-"if] at [idx-if data='address']%%%%address%%%%[/idx-if] [idx-if "
-"data='city']in %%%%city%%%%[/idx-if] is not available on this site.%s%s"
-"%sShowing real estate near the listing.%s"
-msgstr ""
-
-#: includes/idx-includes/templates/results-pagination.php:42
-msgid "Prev"
-msgstr ""
-
-#: includes/idx-includes/templates/results-sorting-control.php:11
-msgid "Time on market, newest first"
-msgstr ""
-
-#: includes/idx-includes/templates/results-sorting-control.php:14
-msgid "Time on market, oldest first"
-msgstr ""
-
-#: includes/idx-includes/templates/results-sorting-control.php:17
-msgid "Price, highest first"
-msgstr ""
-
-#: includes/idx-includes/templates/results-sorting-control.php:20
-msgid "Price, lowest first"
-msgstr ""
-
-#: includes/idx-includes/templates/results-sorting-control.php:23
-msgid "Price drop %, largest first"
-msgstr ""
-
-#: includes/idx-includes/templates/results-sorting-control.php:26
-msgid "Last Updated, newest first"
-msgstr ""
-
-#: includes/idx-includes/templates/results-sorting-control.php:29
-msgid "Walk Score&#0174;, highest first"
-msgstr ""
-
-#: includes/idx-includes/templates/results-sorting-control.php:32
-msgid "Improved size, largest first"
-msgstr ""
-
-#: includes/idx-includes/templates/results-sorting-control.php:35
-msgid "Lot size, largest first"
-msgstr ""
-
-#: includes/post-types/boat.php:55
-msgid "Boat Listing"
-msgstr ""
-
-#: includes/post-types/boat.php:56
-msgid "Boat Listings"
-msgstr ""
-
-#: includes/post-types/boat.php:119 includes/post-types/car.php:355
-msgid "Manufacturers"
-msgstr ""
-
-#: includes/post-types/boat.php:121
-msgid "Engine"
-msgstr ""
-
-#: includes/post-types/boat.php:121
-msgid "Engines"
-msgstr ""
-
-#: includes/post-types/boat.php:123
-msgid "Boat Types"
-msgstr ""
-
-#: includes/post-types/boat.php:125 includes/post-types/car.php:359
-msgid "Dealer Locations"
-msgstr ""
-
-#: includes/post-types/boat.php:127
-msgid "Boat Features"
-msgstr ""
-
-#: includes/post-types/boat.php:127 includes/post-types/boat.php:515
-#: includes/post-types/car.php:361
-msgid "Features"
-msgstr ""
-
-#: includes/post-types/boat.php:132
-msgid "Options"
-msgstr ""
-
-#: includes/post-types/boat.php:150 includes/post-types/car.php:72
-msgid "Reg Number"
-msgstr ""
-
-#: includes/post-types/boat.php:151
-msgid "The Boat Registry Number #"
-msgstr ""
-
-#: includes/post-types/boat.php:157
-msgid "Boat Condition"
-msgstr ""
-
-#: includes/post-types/boat.php:158
-msgid "Boat sale condition"
-msgstr ""
-
-#: includes/post-types/boat.php:166 includes/post-types/boat.php:167
-#: includes/post-types/car.php:119
-msgid "Exterior Color"
-msgstr ""
-
-#: includes/post-types/boat.php:173 includes/post-types/boat.php:174
-#: includes/post-types/car.php:126
-msgid "Interior Color"
-msgstr ""
-
-#: includes/post-types/boat.php:180
-msgid "Hours"
-msgstr ""
-
-#: includes/post-types/boat.php:181
-msgid "The boat used hours."
-msgstr ""
-
-#: includes/post-types/boat.php:187 includes/post-types/boat.php:188
-#: includes/post-types/car.php:133 includes/search-fields.php:1328
-msgid "Fuel Type"
-msgstr ""
-
-#: includes/post-types/boat.php:195
-msgid "Max Speed"
-msgstr ""
-
-#: includes/post-types/boat.php:196
-msgid "Max Speed in knots."
-msgstr ""
-
-#: includes/post-types/boat.php:203
-msgid "People Capacity"
-msgstr ""
-
-#: includes/post-types/boat.php:204
-msgid "How many people can be hold on the boat capacity."
-msgstr ""
-
-#: includes/post-types/boat.php:207 includes/theme-hooks.php:777
-msgid "People"
-msgstr ""
-
-#: includes/post-types/boat.php:211
-msgid "Year"
-msgstr ""
-
-#: includes/post-types/boat.php:212 includes/post-types/car.php:277
-msgid "When is the car year build? eq: 2013"
-msgstr ""
-
-#: includes/post-types/boat.php:218 includes/post-types/boat.php:219
-msgid "Seating"
-msgstr ""
-
-#: includes/post-types/boat.php:226 includes/post-types/boat.php:227
-msgid "Canvas"
-msgstr ""
-
-#: includes/post-types/boat.php:234 includes/post-types/boat.php:235
-msgid "Hull Material"
-msgstr ""
-
-#: includes/post-types/boat.php:242 includes/post-types/boat.php:243
-msgid "Carpet"
-msgstr ""
-
-#: includes/post-types/boat.php:249 includes/post-types/car.php:256
-msgid "Steering Type"
-msgstr ""
-
-#: includes/post-types/boat.php:250
-msgid "The boat steering type"
-msgstr ""
-
-#: includes/post-types/boat.php:259 includes/post-types/car.php:184
-msgid "Overall Height"
-msgstr ""
-
-#: includes/post-types/boat.php:260
-msgid "The overall boat height"
-msgstr ""
-
-#: includes/post-types/boat.php:267 includes/post-types/car.php:193
-msgid "Overall Width"
-msgstr ""
-
-#: includes/post-types/boat.php:268
-msgid "The overall boat width"
-msgstr ""
-
-#: includes/post-types/boat.php:275 includes/post-types/car.php:202
-msgid "Overall Length"
-msgstr ""
-
-#: includes/post-types/boat.php:276
-msgid "The overall boat length"
-msgstr ""
-
-#: includes/post-types/boat.php:283
-msgid "Waterline Length"
-msgstr ""
-
-#: includes/post-types/boat.php:284
-msgid "The boat waterline length"
-msgstr ""
-
-#: includes/post-types/boat.php:291
-msgid "Max Beam"
-msgstr ""
-
-#: includes/post-types/boat.php:292
-msgid "The boat beam width"
-msgstr ""
-
-#: includes/post-types/boat.php:299
-msgid "Max Draft"
-msgstr ""
-
-#: includes/post-types/boat.php:300
-msgid "The boat draft height"
-msgstr ""
-
-#: includes/post-types/boat.php:309 includes/post-types/boat.php:310
-msgid "Fuel Tanks"
-msgstr ""
-
-#: includes/post-types/boat.php:316 includes/post-types/boat.php:317
-msgid "Fresh Water"
-msgstr ""
-
-#: includes/post-types/boat.php:323 includes/post-types/boat.php:324
-msgid "Black Water"
-msgstr ""
-
-#: includes/post-types/boat.php:330 includes/post-types/boat.php:331
-msgid "Bilge Water"
-msgstr ""
-
-#: includes/post-types/boat.php:337 includes/post-types/boat.php:338
-msgid "Grey Water"
-msgstr ""
-
-#: includes/post-types/boat.php:344 includes/post-types/boat.php:345
-msgid "Fuel Overflow"
-msgstr ""
-
-#: includes/post-types/boat.php:351 includes/post-types/boat.php:352
-msgid "Lube Oil"
-msgstr ""
-
-#: includes/post-types/boat.php:358 includes/post-types/boat.php:359
-msgid "Dirty Oil"
-msgstr ""
-
-#: includes/post-types/boat.php:365 includes/post-types/boat.php:366
-msgid "Sludge"
-msgstr ""
-
-#: includes/post-types/boat.php:372 includes/post-types/boat.php:373
-msgid "Watermist"
-msgstr ""
-
-#: includes/post-types/boat.php:382 includes/post-types/car.php:79
-msgid "Badge"
-msgstr ""
-
-#: includes/post-types/boat.php:383 includes/post-types/boat.php:390
-#: includes/post-types/car.php:80 includes/post-types/car.php:87
-msgid "badge text to show in listings view"
-msgstr ""
-
-#: includes/post-types/boat.php:389 includes/post-types/car.php:86
-msgid "Badge color"
-msgstr ""
-
-#: includes/post-types/boat.php:394 includes/post-types/car.php:91
 #: includes/search-fields.php:13
 msgid "None"
-msgstr ""
-
-#: includes/post-types/boat.php:395 includes/post-types/car.php:92
-#: includes/theme-toolkit-override.php:152
-#: includes/theme-toolkit-override.php:234
-#: includes/theme-toolkit-override.php:334
-msgid "Red"
-msgstr ""
-
-#: includes/post-types/boat.php:396 includes/post-types/car.php:93
-#: includes/theme-toolkit-override.php:156
-#: includes/theme-toolkit-override.php:236
-#: includes/theme-toolkit-override.php:336
-msgid "Orange"
-msgstr ""
-
-#: includes/post-types/boat.php:397 includes/post-types/car.php:94
-#: includes/theme-toolkit-override.php:154
-#: includes/theme-toolkit-override.php:235
-#: includes/theme-toolkit-override.php:335
-msgid "Green"
-msgstr ""
-
-#: includes/post-types/boat.php:398 includes/post-types/car.php:95
-#: includes/theme-toolkit-override.php:153
-#: includes/theme-toolkit-override.php:233
-#: includes/theme-toolkit-override.php:333
-msgid "Blue"
-msgstr ""
-
-#: includes/post-types/boat.php:399 includes/post-types/car.php:96
-#: includes/theme-toolkit-override.php:155
-#: includes/theme-toolkit-override.php:238
-msgid "Purple"
-msgstr ""
-
-#: includes/post-types/boat.php:400 includes/post-types/car.php:97
-msgid "Gray"
-msgstr ""
-
-#: includes/post-types/boat.php:405 includes/post-types/car.php:150
-#: includes/post-types/property.php:327 includes/theme-hooks.php:1712
-#: includes/theme-hooks.php:2155 includes/theme-options.php:108
-#: includes/theme-posttypes.php:254 includes/theme-posttypes.php:278
-#: includes/widgets/widget-related-listing.php:340
-msgid "Price"
-msgstr ""
-
-#: includes/post-types/boat.php:406 includes/post-types/car.php:151
-msgid "The Property Price. Fill with numeric only, eq: 123456"
-msgstr ""
-
-#: includes/post-types/boat.php:412 includes/post-types/car.php:159
-msgid "Price as Text"
-msgstr ""
-
-#: includes/post-types/boat.php:413 includes/post-types/car.php:160
-msgid ""
-"Set price to use text. Text Options can be filled in theme Options, Shandora "
-"> Listing Settings > Price as Text."
-msgstr ""
-
-#: includes/post-types/boat.php:420
-msgid "Featured Boat"
-msgstr ""
-
-#: includes/post-types/boat.php:421 includes/post-types/car.php:286
-msgid "Make the listing featured for featured listing widget"
-msgstr ""
-
-#: includes/post-types/boat.php:429
-msgid "Agent for this listing"
-msgstr ""
-
-#: includes/post-types/boat.php:430
-msgid "The sales rep pointed for this boat listing"
-msgstr ""
-
-#: includes/post-types/boat.php:440
-msgid "Gallery"
-msgstr ""
-
-#: includes/post-types/boat.php:445
-msgid "Miscellaneous"
-msgstr ""
-
-#: includes/post-types/boat.php:450
-msgid "Detail"
-msgstr ""
-
-#: includes/post-types/boat.php:455
-msgid "Dimension"
-msgstr ""
-
-#: includes/post-types/boat.php:460
-msgid "Capacity"
-msgstr ""
-
-#: includes/post-types/boat.php:466
-msgid "Video"
-msgstr ""
-
-#: includes/post-types/boat.php:480 includes/theme-options.php:90
-msgid "Make"
-msgstr ""
-
-#: includes/post-types/boat.php:486 includes/theme-options.php:91
-msgid "Model"
-msgstr ""
-
-#: includes/post-types/boat.php:492 includes/theme-options.php:93
-msgid "Engine Make"
-msgstr ""
-
-#: includes/post-types/boat.php:498 includes/theme-options.php:94
-msgid "Engine Model"
-msgstr ""
-
-#: includes/post-types/boat.php:504 includes/search-fields.php:1383
-#: includes/theme-toolkit-override.php:280
-msgid "Dealer Location"
-msgstr ""
-
-#: includes/post-types/car.php:52
-msgid "Car Listing"
-msgstr ""
-
-#: includes/post-types/car.php:53
-msgid "Car Listings"
-msgstr ""
-
-#: includes/post-types/car.php:61 includes/post-types/property.php:94
-#: includes/theme-posttypes.php:67
-msgid "Listings Gallery"
-msgstr ""
-
-#: includes/post-types/car.php:62 includes/post-types/property.php:95
-#: includes/theme-posttypes.php:68
-msgid "Choose image to use in this listing gallery."
-msgstr ""
-
-#: includes/post-types/car.php:73
-msgid "The Car Registry Number #"
-msgstr ""
-
-#: includes/post-types/car.php:103 includes/theme-posttypes.php:236
-msgid "Car Status"
-msgstr ""
-
-#: includes/post-types/car.php:104
-msgid "Car sale status"
-msgstr ""
-
-#: includes/post-types/car.php:112 includes/search-fields.php:1577
-#: includes/theme-hooks.php:1719
-msgid "Mileage"
-msgstr ""
-
-#: includes/post-types/car.php:113
-msgid "Car mileage"
-msgstr ""
-
-#: includes/post-types/car.php:120
-msgid "Car exterior color"
-msgstr ""
-
-#: includes/post-types/car.php:127
-msgid "Car interior color"
-msgstr ""
-
-#: includes/post-types/car.php:134
-msgid "Car fuel type"
-msgstr ""
-
-#: includes/post-types/car.php:141 includes/search-fields.php:1491
-msgid "Transmission"
-msgstr ""
-
-#: includes/post-types/car.php:142
-msgid "Car transmission"
-msgstr ""
-
-#: includes/post-types/car.php:167
-msgid "Engine Type"
-msgstr ""
-
-#: includes/post-types/car.php:168
-msgid "Car engine type"
-msgstr ""
-
-#: includes/post-types/car.php:175
-msgid "Engine Size"
-msgstr ""
-
-#: includes/post-types/car.php:176
-msgid "Car engine size"
-msgstr ""
-
-#: includes/post-types/car.php:185
-msgid "The overall car height"
-msgstr ""
-
-#: includes/post-types/car.php:194
-msgid "The overall car width"
-msgstr ""
-
-#: includes/post-types/car.php:203
-msgid "The overall car length"
-msgstr ""
-
-#: includes/post-types/car.php:211
-msgid "Wheelbase"
-msgstr ""
-
-#: includes/post-types/car.php:212
-msgid "The wheelbase size"
-msgstr ""
-
-#: includes/post-types/car.php:220
-msgid "Track Front"
-msgstr ""
-
-#: includes/post-types/car.php:221 includes/post-types/car.php:230
-msgid "The track front size"
-msgstr ""
-
-#: includes/post-types/car.php:229
-msgid "Track Rear"
-msgstr ""
-
-#: includes/post-types/car.php:238
-msgid "Ground Clearance"
-msgstr ""
-
-#: includes/post-types/car.php:239
-msgid "The ground clearance size"
-msgstr ""
-
-#: includes/post-types/car.php:247
-msgid "Standard Seating"
-msgstr ""
-
-#: includes/post-types/car.php:248
-msgid "How many standard seating available"
-msgstr ""
-
-#: includes/post-types/car.php:257
-msgid "The car steering type"
-msgstr ""
-
-#: includes/post-types/car.php:264
-msgid "ANCAP Rating / Safety Rating"
-msgstr ""
-
-#: includes/post-types/car.php:265
-msgid "Australasian New Car Assessment Program Rating. see http://ancap.com.au"
-msgstr ""
-
-#: includes/post-types/car.php:276 includes/theme-options.php:84
-#: includes/theme-options.php:101 includes/theme-posttypes.php:280
-msgid "Year Built"
-msgstr ""
-
-#: includes/post-types/car.php:285
-msgid "Featured Car"
-msgstr ""
-
-#: includes/post-types/car.php:294
-msgid "Sales Representative for this listing"
-msgstr ""
-
-#: includes/post-types/car.php:295
-msgid "The sales rep pointed for this car listing"
-msgstr ""
-
-#: includes/post-types/car.php:357
-msgid "Body Types"
-msgstr ""
-
-#: includes/post-types/car.php:361
-msgid "Car Features"
-msgstr ""
-
-#: includes/post-types/car.php:393
-msgid "Sales Representative"
-msgstr ""
-
-#: includes/post-types/car.php:394
-msgid "Sales Representatives"
-msgstr ""
-
-#: includes/post-types/car.php:402 includes/post-types/property.php:470
-msgid "Job Title"
-msgstr ""
-
-#: includes/post-types/car.php:409 includes/post-types/property.php:476
-#: includes/theme-options.php:1840
-msgid "Facebook Username"
-msgstr ""
-
-#: includes/post-types/car.php:416 includes/post-types/property.php:482
-#: includes/theme-options.php:1846
-msgid "Twitter Username"
-msgstr ""
-
-#: includes/post-types/car.php:423 includes/post-types/property.php:488
-#: includes/theme-options.php:1882
-msgid "LinkedIn Username"
-msgstr ""
-
-#: includes/post-types/car.php:430 includes/post-types/property.php:494
-msgid "Agent Profile Photo"
-msgstr ""
-
-#: includes/post-types/car.php:444 includes/post-types/property.php:506
-msgid "Office Phone Number"
-msgstr ""
-
-#: includes/post-types/car.php:451 includes/post-types/property.php:512
-msgid "Mobile Phone Number"
-msgstr ""
-
-#: includes/post-types/car.php:458 includes/post-types/property.php:518
-msgid "Fax Number"
-msgstr ""
-
-#: includes/post-types/property.php:76
-msgid "Cottage"
-msgstr ""
-
-#: includes/post-types/property.php:77
-msgid "Cottages"
-msgstr ""
-
-#: includes/post-types/property.php:81
-msgctxt "product url slug"
-msgid "wooden-cottage"
-msgstr ""
-
-#: includes/post-types/property.php:103
-msgid "Featured Property"
-msgstr ""
-
-#: includes/post-types/property.php:104
-msgid "Make the property featured for featured property widget"
-msgstr ""
-
-#: includes/post-types/property.php:109
-msgid "Total price"
-msgstr ""
-
-#: includes/post-types/property.php:110
-msgid "Product total price, without currency"
-msgstr ""
-
-#: includes/post-types/property.php:121 includes/search-fields.php:893
-#: includes/theme-hooks.php:1717 includes/theme-options.php:110
-#: includes/widgets/widget-dsidxpress-search.php:238
-#: includes/widgets/widget-related-listing.php:341
-msgid "Size"
-msgstr ""
-
-#: includes/post-types/property.php:122
-msgid "Product size in square meters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:127
-msgid "Terrace"
-msgstr ""
-
-#: includes/post-types/property.php:128
-msgid "Product terrace size in square meters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:133
-msgid "Floors"
-msgstr ""
-
-#: includes/post-types/property.php:134
-msgid "Number of floors"
-msgstr ""
-
-#: includes/post-types/property.php:139
-msgid "Rooms"
-msgstr ""
-
-#: includes/post-types/property.php:140
-msgid "Total number of rooms"
-msgstr ""
-
-#: includes/post-types/property.php:145
-msgid "Plan dimensions"
-msgstr ""
-
-#: includes/post-types/property.php:146
-msgid "Add floor"
-msgstr ""
-
-#: includes/post-types/property.php:154
-msgid "Plan width"
-msgstr ""
-
-#: includes/post-types/property.php:155
-msgid "Product plan width in meters, ex: 5.5"
-msgstr ""
-
-#: includes/post-types/property.php:160
-msgid "Plan height"
-msgstr ""
-
-#: includes/post-types/property.php:161
-msgid "Product plan height in meters, ex: 5.5"
-msgstr ""
-
-#: includes/post-types/property.php:166 includes/search-fields.php:972
-msgid "Floor"
-msgstr ""
-
-#: includes/post-types/property.php:167
-msgid "Pick which floor dimensions are you describing"
-msgstr ""
-
-#: includes/post-types/property.php:169 includes/post-types/property.php:172
-msgid "Ground floor"
-msgstr ""
-
-#: includes/post-types/property.php:173
-msgid "First floor"
-msgstr ""
-
-#: includes/post-types/property.php:174
-msgid "Second floor"
-msgstr ""
-
-#: includes/post-types/property.php:178
-msgid "Plan total area"
-msgstr ""
-
-#: includes/post-types/property.php:179
-msgid "OR product plan total area in meters, ex: 25.5"
-msgstr ""
-
-#: includes/post-types/property.php:198
-msgid "Total height"
-msgstr ""
-
-#: includes/post-types/property.php:199
-msgid "Product total height in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:204
-msgid "Wall height"
-msgstr ""
-
-#: includes/post-types/property.php:205
-msgid "Product wall height in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:210 includes/post-types/property.php:339
-#: includes/theme-hooks.php:2157
-msgid "Wall thickness"
-msgstr ""
-
-#: includes/post-types/property.php:211 includes/post-types/property.php:340
-msgid "Product wall thickness in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:216
-msgid "Floor thickness"
-msgstr ""
-
-#: includes/post-types/property.php:217
-msgid "Product floor thickness in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:222
-msgid "Roof thickness"
-msgstr ""
-
-#: includes/post-types/property.php:223
-msgid "Product roof thickness in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:234
-msgid "Windows"
-msgstr ""
-
-#: includes/post-types/property.php:235
-msgid "Add windows"
-msgstr ""
-
-#: includes/post-types/property.php:243
-msgid "Window width"
-msgstr ""
-
-#: includes/post-types/property.php:244
-msgid "Window width in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:249
-msgid "Window height"
-msgstr ""
-
-#: includes/post-types/property.php:250
-msgid "Window height in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:255
-msgid "Windows amount"
-msgstr ""
-
-#: includes/post-types/property.php:256
-msgid "Amount of windows of the chosen size"
-msgstr ""
-
-#: includes/post-types/property.php:269
-msgid "Doors"
-msgstr ""
-
-#: includes/post-types/property.php:270
-msgid "Add doors"
-msgstr ""
-
-#: includes/post-types/property.php:278
-msgid "Door width"
-msgstr ""
-
-#: includes/post-types/property.php:279
-msgid "Door width in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:284
-msgid "Door height"
-msgstr ""
-
-#: includes/post-types/property.php:285
-msgid "Door height in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:290
-msgid "Doors amount"
-msgstr ""
-
-#: includes/post-types/property.php:291
-msgid "Amount of doors of the chosen size"
-msgstr ""
-
-#: includes/post-types/property.php:299 includes/theme-posttypes.php:187
-msgid "Property Status"
-msgstr ""
-
-#: includes/post-types/property.php:300
-msgid "The status for the property, used for badge, etc."
-msgstr ""
-
-#: includes/post-types/property.php:306
-msgid "Enable pricing packages"
-msgstr ""
-
-#: includes/post-types/property.php:333 includes/theme-hooks.php:2156
-msgid "Wall material"
-msgstr ""
-
-#: includes/post-types/property.php:346
-msgid "Windows and doors thickness"
-msgstr ""
-
-#: includes/post-types/property.php:347
-msgid "Product windows and door thickness in milimeters, without unit"
-msgstr ""
-
-#: includes/post-types/property.php:353
-msgid "Package description"
-msgstr ""
-
-#: includes/post-types/property.php:375
-msgid "DPE"
-msgstr ""
-
-#: includes/post-types/property.php:376
-msgid "Diagnostic de Performance énergétiqueg"
-msgstr ""
-
-#: includes/post-types/property.php:382
-msgid "GES"
-msgstr ""
-
-#: includes/post-types/property.php:383
-msgid "Gaz à effet de serre"
-msgstr ""
-
-#: includes/post-types/property.php:423
-msgctxt "products category url slug"
-msgid "type"
-msgstr ""
-
-#: includes/post-types/property.php:431
-msgid "Property Types"
-msgstr ""
-
-#: includes/post-types/property.php:431
-msgid "Types"
-msgstr ""
-
-#: includes/post-types/property.php:461 includes/search-fields.php:1219
-msgid "Agent"
-msgstr ""
-
-#: includes/post-types/property.php:462
-msgid "Agents"
-msgstr ""
-
-#: includes/post-types/property.php:544
-msgid "Addon"
-msgstr ""
-
-#: includes/post-types/property.php:545
-msgid "Addons"
-msgstr ""
-
-#: includes/post-types/property.php:552
-msgid "Enable only for big houses"
-msgstr ""
-
-#: includes/post-types/property.php:574
-msgid "Service"
-msgstr ""
-
-#: includes/post-types/property.php:575
-msgid "Services"
-msgstr ""
-
-#: includes/post-types/property.php:583 includes/post-types/property.php:621
-msgid "Font awesome icon"
-msgstr ""
-
-#: includes/post-types/property.php:588 includes/post-types/property.php:626
-msgid "Icon color"
-msgstr ""
-
-#: includes/post-types/property.php:612
-msgid "Home feature"
-msgstr ""
-
-#: includes/post-types/property.php:613
-msgid "Home features"
-msgstr ""
-
-#: includes/post-types/property.php:650
-msgid "Additional service"
-msgstr ""
-
-#: includes/post-types/property.php:651
-msgid "Additional services"
-msgstr ""
-
-#: includes/post-types/property.php:668
-msgid "FAQ"
-msgstr ""
-
-#: includes/post-types/property.php:685
-msgid "Testimonial"
-msgstr ""
-
-#: includes/post-types/property.php:686
-msgid "Testimonials"
-msgstr ""
-
-#: includes/post-types/property.php:693
-msgid "Map Latitude"
-msgstr ""
-
-#: includes/post-types/property.php:694 includes/theme-options.php:230
-msgid ""
-"The Map Latitude. You can easily find it <a href=\"http://www.itouchmap.com/"
-"latlong.html\">here</a>. Copy and paste the latitude value generated there"
-msgstr ""
-
-#: includes/post-types/property.php:699
-msgid "Map Longitude"
-msgstr ""
-
-#: includes/post-types/property.php:700
-msgid ""
-"The Map Longitude. You can easily find it <a href=\"http://www.itouchmap.com/"
-"latlong.html\">here</a>. Copy and paste the longitude value generated there"
-msgstr ""
-
-#: includes/post-types/property.php:705
-msgid "Related post"
-msgstr ""
-
-#: includes/post-types/property.php:706
-msgid "Pick post if theres a related one"
-msgstr ""
-
-#: includes/post-types/property.php:711
-msgid "Related cottage"
-msgstr ""
-
-#: includes/post-types/property.php:712
-msgid "Pick cottage if theres a related one"
-msgstr ""
-
-#: includes/post-types/property.php:718
-msgid "Author image"
-msgstr ""
-
-#: includes/post-types/property.php:719
-msgid "Upload author image to display it on testimonials carousel"
-msgstr ""
-
-#: includes/post-types/property.php:741
-msgid "Ebook"
-msgstr ""
-
-#: includes/post-types/property.php:742
-msgid "Ebooks"
-msgstr ""
-
-#: includes/post-types/property.php:749
-msgid "Cta header"
-msgstr ""
-
-#: includes/post-types/property.php:750
-msgid "Ex: Get your free ebook"
-msgstr ""
-
-#: includes/post-types/property.php:755
-msgid "Cta subheader"
-msgstr ""
-
-#: includes/post-types/property.php:756
-msgid "Ex: And learn more about roofing"
-msgstr ""
-
-#: includes/post-types/property.php:761 includes/post-types/property.php:818
-#: includes/theme-options.php:1539
-msgid "Cta color"
-msgstr ""
-
-#: includes/post-types/property.php:762 includes/post-types/property.php:819
-msgid "Color of cta"
-msgstr ""
-
-#: includes/post-types/property.php:771
-msgid "Ebook file"
-msgstr ""
-
-#: includes/post-types/property.php:772
-msgid "Upload pdf"
-msgstr ""
-
-#: includes/post-types/property.php:798
-msgid "Promotion"
-msgstr ""
-
-#: includes/post-types/property.php:799
-msgid "Promotions"
-msgstr ""
-
-#: includes/post-types/property.php:806
-msgid "Cta text"
-msgstr ""
-
-#: includes/post-types/property.php:807
-msgid "Text displayed on cta button"
-msgstr ""
-
-#: includes/post-types/property.php:812
-msgid "Cta link"
-msgstr ""
-
-#: includes/post-types/property.php:813
-msgid "Where should cta link to"
 msgstr ""
 
 #: includes/search-fields.php:14
 msgid "Top Seller"
 msgstr ""
 
-#: includes/search-fields.php:15 includes/search-fields.php:131
-#: includes/search-fields.php:235
+#: includes/search-fields.php:15
 msgid "New"
 msgstr ""
 
 #: includes/search-fields.php:23 includes/search-fields.php:35
 #: includes/search-fields.php:47 includes/search-fields.php:59
-#: includes/search-fields.php:71 includes/search-fields.php:81
-#: includes/search-fields.php:89 includes/search-fields.php:141
-#: includes/search-fields.php:153 includes/search-fields.php:165
-#: includes/search-fields.php:177 includes/search-fields.php:189
-#: includes/search-fields.php:201 includes/search-fields.php:244
-#: includes/search-fields.php:256 includes/search-fields.php:268
-#: includes/search-fields.php:280 includes/search-fields.php:292
-#: includes/search-fields.php:304 includes/search-fields.php:488
-#: includes/search-fields.php:569 includes/search-fields.php:610
-#: includes/search-fields.php:677 includes/search-fields.php:718
-#: includes/search-fields.php:784 includes/search-fields.php:825
-#: includes/search-fields.php:965 includes/search-fields.php:998
+#: includes/search-fields.php:81 includes/search-fields.php:89
+#: includes/search-fields.php:488 includes/search-fields.php:569
+#: includes/search-fields.php:610 includes/search-fields.php:677
+#: includes/search-fields.php:718 includes/search-fields.php:784
+#: includes/search-fields.php:825 includes/search-fields.php:965
 #: includes/search-fields.php:1031 includes/search-fields.php:1154
 #: includes/search-fields.php:1187 includes/search-fields.php:1324
-#: includes/search-fields.php:1354 includes/search-fields.php:1487
-#: includes/search-fields.php:1517 includes/search-fields.php:1593
+#: includes/search-fields.php:1354 includes/search-fields.php:1593
 #: includes/search-fields.php:1620 includes/search-fields.php:1647
-#: includes/theme-actions.php:478 includes/theme-actions.php:505
-#: includes/theme-actions.php:518 includes/theme-actions.php:535
-#: includes/theme-actions.php:559 includes/theme-actions.php:572
-#: includes/widgets/widget-dsidxpress-search.php:149
-#: includes/widgets/widget-dsidxpress-search.php:168
-#: includes/widgets/widget-dsidxpress-search.php:186
-#: includes/widgets/widget-dsidxpress-search.php:204
-#: includes/widgets/widget-dsidxpress-search.php:247
-#: includes/widgets/widget-dsidxpress-search.php:258
+#: includes/theme-actions.php:482 includes/theme-actions.php:509
+#: includes/theme-actions.php:522 includes/theme-actions.php:539
+#: includes/theme-actions.php:563 includes/theme-actions.php:576
 msgid "Any"
-msgstr ""
-
-#: includes/search-fields.php:72
-msgid "Unfurnished"
-msgstr ""
-
-#: includes/search-fields.php:73
-msgid "Furnished"
 msgstr ""
 
 #: includes/search-fields.php:82 includes/search-fields.php:1063
@@ -3696,142 +1215,7 @@ msgstr ""
 msgid "Per Day"
 msgstr ""
 
-#: includes/search-fields.php:121
-msgid "Automatic"
-msgstr ""
-
-#: includes/search-fields.php:122
-msgid "Manual"
-msgstr ""
-
-#: includes/search-fields.php:123
-msgid "Semi Auto"
-msgstr ""
-
-#: includes/search-fields.php:124 includes/search-fields.php:357
-msgid "Other"
-msgstr ""
-
-#: includes/search-fields.php:132 includes/search-fields.php:236
-msgid "Used"
-msgstr ""
-
-#: includes/search-fields.php:133
-msgid "Certified Pre-Owned"
-msgstr ""
-
-#: includes/search-fields.php:134 includes/search-fields.php:237
-msgid "Sold"
-msgstr ""
-
-#: includes/search-fields.php:213 includes/search-fields.php:316
-msgid "Gasoline"
-msgstr ""
-
-#: includes/search-fields.php:214
-msgid "Flex Fuel (E-85)"
-msgstr ""
-
-#: includes/search-fields.php:215
-msgid "Gasoline Hybrid"
-msgstr ""
-
-#: includes/search-fields.php:216 includes/search-fields.php:317
-msgid "Diesel"
-msgstr ""
-
-#: includes/search-fields.php:217 includes/search-fields.php:318
-msgid "Electric"
-msgstr ""
-
-#: includes/search-fields.php:218
-msgid "Compressed Natural Gas"
-msgstr ""
-
-#: includes/search-fields.php:319
-msgid "Others"
-msgstr ""
-
-#: includes/search-fields.php:327
-msgid "Sport"
-msgstr ""
-
-#: includes/search-fields.php:328
-msgid "Bench"
-msgstr ""
-
-#: includes/search-fields.php:329
-msgid "Dual Bolsters with Flip Up"
-msgstr ""
-
-#: includes/search-fields.php:330
-msgid "Swivel"
-msgstr ""
-
-#: includes/search-fields.php:338
-msgid "Top - Bow Cover"
-msgstr ""
-
-#: includes/search-fields.php:339
-msgid "Bimini Top"
-msgstr ""
-
-#: includes/search-fields.php:340
-msgid "Cockpit Cover"
-msgstr ""
-
-#: includes/search-fields.php:348
-msgid "Aluminum"
-msgstr ""
-
-#: includes/search-fields.php:349
-msgid "Composite"
-msgstr ""
-
-#: includes/search-fields.php:350
-msgid "Ferro Cement"
-msgstr ""
-
-#: includes/search-fields.php:351
-msgid "Fiberglass"
-msgstr ""
-
-#: includes/search-fields.php:352
-msgid "Hypalon"
-msgstr ""
-
-#: includes/search-fields.php:353
-msgid "PVC"
-msgstr ""
-
-#: includes/search-fields.php:354
-msgid "Roplene"
-msgstr ""
-
-#: includes/search-fields.php:355
-msgid "Steel"
-msgstr ""
-
-#: includes/search-fields.php:356
-msgid "Wood"
-msgstr ""
-
-#: includes/search-fields.php:378
-msgid "Year Range"
-msgstr ""
-
-#: includes/search-fields.php:388
-msgid "From"
-msgstr ""
-
-#: includes/search-fields.php:389
-msgid "To"
-msgstr ""
-
-#: includes/search-fields.php:413 includes/theme-toolkit-override.php:132
-#: includes/theme-toolkit-override.php:218
-#: includes/theme-toolkit-override.php:318
-#: includes/widgets/widget-custom-image.php:68
+#: includes/search-fields.php:413
 msgid "Title"
 msgstr ""
 
@@ -3839,8 +1223,7 @@ msgstr ""
 msgid "Type listing title here"
 msgstr ""
 
-#: includes/search-fields.php:437 includes/theme-actions.php:587
-#: includes/widgets/widget-dsidxpress-search.php:218
+#: includes/search-fields.php:437 includes/theme-actions.php:591
 msgid "MLS #"
 msgstr ""
 
@@ -3856,6 +1239,10 @@ msgstr ""
 msgid "Type Zip Code here"
 msgstr ""
 
+#: includes/search-fields.php:492 includes/search-fields.php:1358
+msgid "Status"
+msgstr ""
+
 #: includes/search-fields.php:517
 msgid "Location"
 msgstr ""
@@ -3868,16 +1255,19 @@ msgstr ""
 msgid "Building Size"
 msgstr ""
 
-#: includes/search-fields.php:1005
-msgid "Garage"
+#: includes/search-fields.php:972
+msgid "Floor"
 msgstr ""
 
 #: includes/search-fields.php:1038
 msgid "Basement"
 msgstr ""
 
-#: includes/search-fields.php:1120 includes/theme-actions.php:593
-#: includes/widgets/widget-dsidxpress-search.php:223
+#: includes/search-fields.php:1088
+msgid "Type"
+msgstr ""
+
+#: includes/search-fields.php:1120 includes/theme-actions.php:597
 msgid "Price Range"
 msgstr ""
 
@@ -3889,12 +1279,8 @@ msgstr ""
 msgid "Bath Room"
 msgstr ""
 
-#: includes/search-fields.php:1245
-msgid "Reg. Number #"
-msgstr ""
-
-#: includes/search-fields.php:1246
-msgid "Type Reg. number here"
+#: includes/search-fields.php:1219
+msgid "Agent"
 msgstr ""
 
 #: includes/search-fields.php:1270
@@ -3913,2130 +1299,292 @@ msgstr ""
 msgid "Type interior color here"
 msgstr ""
 
-#: includes/search-fields.php:1409 includes/theme-toolkit-override.php:274
-msgid "Body Type"
+#: includes/search-fields.php:1328
+msgid "Fuel Type"
 msgstr ""
 
-#: includes/search-fields.php:1461 includes/theme-toolkit-override.php:298
+#: includes/search-fields.php:1461
 msgid "Manufacturer"
 msgstr ""
 
-#: includes/search-fields.php:1522
-msgid "ANCAP / Safety"
-msgstr ""
-
-#: includes/theme-actions.php:90
-msgid "day"
+#: includes/search-fields.php:1577 includes/theme-hooks.php:1838
+msgid "Mileage"
 msgstr ""
 
 #: includes/theme-actions.php:94
-msgid "week"
+msgid "day"
 msgstr ""
 
 #: includes/theme-actions.php:98
-msgid "year"
+msgid "week"
 msgstr ""
 
 #: includes/theme-actions.php:102
+msgid "year"
+msgstr ""
+
+#: includes/theme-actions.php:106
 msgid "month"
 msgstr ""
 
-#: includes/theme-actions.php:134
-msgid "Please Activate Your IDX Account."
-msgstr ""
-
-#: includes/theme-actions.php:265
-msgid ""
-"Please setup your search fields in Shandora > Theme Settings > Listing "
-"Settings > Custom Search Field"
-msgstr ""
-
-#: includes/theme-actions.php:358 includes/theme-actions.php:607
+#: includes/theme-actions.php:362 includes/theme-actions.php:611
 msgid "Find Property"
 msgstr ""
 
-#: includes/theme-actions.php:458 includes/theme-toolkit-override.php:179
-#: includes/widgets/widget-dsidxpress-search.php:125
-#: includes/widgets/widget-related-listing.php:342
+#: includes/theme-actions.php:462
 msgid "Property Type"
 msgstr ""
 
-#: includes/theme-actions.php:460
-#: includes/widgets/widget-dsidxpress-search.php:127
+#: includes/theme-actions.php:464
 msgid "All Property Types"
 msgstr ""
 
-#: includes/theme-actions.php:476
-#: includes/widgets/widget-dsidxpress-search.php:146
+#: includes/theme-actions.php:480
 msgid "City"
 msgstr ""
 
-#: includes/theme-actions.php:501
-#: includes/widgets/widget-dsidxpress-search.php:244
+#: includes/theme-actions.php:505
 msgid "Beds"
 msgstr ""
 
-#: includes/theme-actions.php:516
-#: includes/widgets/widget-dsidxpress-search.php:183
+#: includes/theme-actions.php:520
 msgid "Tract"
 msgstr ""
 
-#: includes/theme-actions.php:533
-#: includes/widgets/widget-dsidxpress-search.php:200
+#: includes/theme-actions.php:537
 msgid "Zip"
 msgstr ""
 
-#: includes/theme-actions.php:556
-#: includes/widgets/widget-dsidxpress-search.php:255
+#: includes/theme-actions.php:560
 msgid "Baths"
 msgstr ""
 
-#: includes/theme-actions.php:570
-#: includes/widgets/widget-dsidxpress-search.php:165
+#: includes/theme-actions.php:574
 msgid "Community"
 msgstr ""
 
-#: includes/theme-actions.php:625
+#: includes/theme-actions.php:629
 msgid "Search the Site..."
 msgstr ""
 
-#: includes/theme-actions.php:651
+#: includes/theme-actions.php:655
 msgid "Follow us on Facebook"
 msgstr ""
 
-#: includes/theme-actions.php:654
+#: includes/theme-actions.php:658
 msgid "Follow us on Twitter"
 msgstr ""
 
-#: includes/theme-actions.php:657
+#: includes/theme-actions.php:661
 msgid "Follow us on Google Plus"
 msgstr ""
 
-#: includes/theme-actions.php:660
+#: includes/theme-actions.php:664
 msgid "Follow us on Pinterest"
 msgstr ""
 
-#: includes/theme-actions.php:663
+#: includes/theme-actions.php:667
 msgid "Follow us on Flickr"
 msgstr ""
 
-#: includes/theme-actions.php:666
+#: includes/theme-actions.php:670
 msgid "Find us on Vimeo"
 msgstr ""
 
-#: includes/theme-actions.php:669
+#: includes/theme-actions.php:673
 msgid "Find us on YouTube"
 msgstr ""
 
-#: includes/theme-actions.php:672
+#: includes/theme-actions.php:676
 msgid "Find us on LinkedIn"
 msgstr ""
 
-#: includes/theme-actions.php:1143 includes/theme-actions.php:1154
-#: includes/theme-actions.php:1163
+#: includes/theme-actions.php:1288 includes/theme-actions.php:1330
+#: includes/theme-actions.php:1339
 msgid "Cannot update package values. No parameter receive form AJAX call."
 msgstr ""
 
-#: includes/theme-actions.php:1188 includes/theme-actions.php:1304
+#: includes/theme-actions.php:1364 includes/theme-actions.php:1480
 msgid "Cannot send email to destination. No parameter receive form AJAX call."
 msgstr ""
 
-#: includes/theme-actions.php:1202 includes/theme-actions.php:1318
+#: includes/theme-actions.php:1378 includes/theme-actions.php:1494
 msgid "Please enter a valid email address."
 msgstr ""
 
-#: includes/theme-actions.php:1214 includes/theme-toolkit-override.php:772
-msgid "Please enter your messages."
-msgstr ""
-
-#: includes/theme-actions.php:1235 includes/theme-actions.php:1345
+#: includes/theme-actions.php:1411 includes/theme-actions.php:1521
 msgid "Cheatin Huh?!"
 msgstr ""
 
-#: includes/theme-actions.php:1244
+#: includes/theme-actions.php:1420
 #, php-format
 msgid "You have received a new contact form message via %s \n"
 msgstr ""
 
-#: includes/theme-actions.php:1245
+#: includes/theme-actions.php:1421
 #, php-format
 msgid "Sender Name : %s \n"
 msgstr ""
 
-#: includes/theme-actions.php:1246
+#: includes/theme-actions.php:1422
 #, php-format
 msgid "Sender Email : %s \n"
 msgstr ""
 
-#: includes/theme-actions.php:1247
+#: includes/theme-actions.php:1423
 #, php-format
 msgid "Subject : %s \n"
 msgstr ""
 
-#: includes/theme-actions.php:1248
+#: includes/theme-actions.php:1424
 #, php-format
 msgid "Sender Phone Number : %s \n"
 msgstr ""
 
-#: includes/theme-actions.php:1249
+#: includes/theme-actions.php:1425
 #, php-format
 msgid "Email Send From : %s \n"
 msgstr ""
 
-#: includes/theme-actions.php:1250
+#: includes/theme-actions.php:1426
 #, php-format
 msgid "Message : %s \n"
 msgstr ""
 
-#: includes/theme-actions.php:1252 includes/theme-actions.php:1260
-#: includes/theme-actions.php:1263 includes/theme-actions.php:1272
-#: includes/theme-actions.php:1283 includes/theme-actions.php:1415
-#: includes/theme-actions.php:1423
+#: includes/theme-actions.php:1428 includes/theme-actions.php:1436
+#: includes/theme-actions.php:1439 includes/theme-actions.php:1448
+#: includes/theme-actions.php:1459 includes/theme-actions.php:1591
+#: includes/theme-actions.php:1599
 msgid "Masters House"
 msgstr ""
 
-#: includes/theme-actions.php:1269
+#: includes/theme-actions.php:1445
 msgid ""
 "We succesfully received your request. Our representative will contact you "
 "within one hour."
 msgstr ""
 
-#: includes/theme-actions.php:1270
+#: includes/theme-actions.php:1446
 msgid "Kind regards"
 msgstr ""
 
-#: includes/theme-actions.php:1273 includes/theme-actions.php:1280
-#: includes/theme-actions.php:1416 includes/theme-actions.php:1420
+#: includes/theme-actions.php:1449 includes/theme-actions.php:1456
+#: includes/theme-actions.php:1592 includes/theme-actions.php:1596
 msgid "no-reply@mastershouse.com"
 msgstr ""
 
-#: includes/theme-actions.php:1276
+#: includes/theme-actions.php:1452
 msgid "Thank you for contacting us"
 msgstr ""
 
-#: includes/theme-actions.php:1289 includes/theme-actions.php:1428
+#: includes/theme-actions.php:1465 includes/theme-actions.php:1604
 msgid "Email was sent successfully."
 msgstr ""
 
-#: includes/theme-actions.php:1293 includes/theme-actions.php:1431
+#: includes/theme-actions.php:1469 includes/theme-actions.php:1607
 msgid "There is an error sending email."
 msgstr ""
 
-#: includes/theme-actions.php:1393
-msgid "Thank you for downloading our ebook."
-msgstr ""
-
-#: includes/theme-actions.php:1394
-msgid "You can download it here"
-msgstr ""
-
-#: includes/theme-actions.php:1395
-msgid "We hope you find this helpful!"
-msgstr ""
-
-#: includes/theme-actions.php:1399
-msgid "All the best"
-msgstr ""
-
-#: includes/theme-actions.php:1480
+#: includes/theme-actions.php:1656
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: includes/theme-actions.php:1484
+#: includes/theme-actions.php:1660
 msgid "View Image"
 msgstr ""
 
-#: includes/theme-actions.php:1488
+#: includes/theme-actions.php:1664
 msgid "Compare Listing"
 msgstr ""
 
-#: includes/theme-hooks.php:650
-#, php-format
-msgid "%s Bed"
-msgid_plural "%s Beds"
-msgstr[0] ""
-msgstr[1] ""
+#: includes/theme-actions.php:1693
+msgid "Ground floor"
+msgstr ""
 
-#: includes/theme-hooks.php:658
-#, php-format
-msgid "%s Bath"
-msgid_plural "%s Baths"
-msgstr[0] ""
-msgstr[1] ""
+#: includes/theme-actions.php:1697
+msgid "First floor"
+msgstr ""
 
-#: includes/theme-hooks.php:668
+#: includes/theme-hooks.php:672
 #, php-format
 msgid "%s Garage"
 msgid_plural "%s Garages"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
-#: includes/theme-hooks.php:676
+#: includes/theme-hooks.php:680
 #, php-format
 msgid "%s Room"
 msgid_plural "%s Rooms"
 msgstr[0] ""
 msgstr[1] ""
+msgstr[2] ""
 
-#: includes/theme-hooks.php:686 includes/theme-hooks.php:707
-#: includes/theme-hooks.php:713 includes/theme-hooks.php:719
-msgid "Unspecified"
+#: includes/theme-hooks.php:781
+msgid "People"
 msgstr ""
 
-#: includes/theme-hooks.php:1036
-msgid "Logement économe"
-msgstr ""
-
-#: includes/theme-hooks.php:1146
-msgid "Logement énergivore"
-msgstr ""
-
-#: includes/theme-hooks.php:1153
-msgid "Faible émission de GES"
-msgstr ""
-
-#: includes/theme-hooks.php:1263
-msgid "Forte émission de GES"
-msgstr ""
-
-#: includes/theme-hooks.php:1706 includes/theme-options.php:114
+#: includes/theme-hooks.php:1825
 msgid "Ascending"
 msgstr ""
 
-#: includes/theme-hooks.php:1707 includes/theme-options.php:115
+#: includes/theme-hooks.php:1826
 msgid "Descending"
 msgstr ""
 
-#: includes/theme-hooks.php:1721
+#: includes/theme-hooks.php:1840
 msgid "Length"
 msgstr ""
 
-#: includes/theme-hooks.php:2016
+#: includes/theme-hooks.php:2148
 msgid "Back to Top"
 msgstr ""
 
-#: includes/theme-hooks.php:2047
+#: includes/theme-hooks.php:2179
 msgid "Please activate some Widgets."
 msgstr ""
 
-#: includes/theme-hooks.php:2093
+#: includes/theme-hooks.php:2225
 msgid "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
 msgstr ""
 
-#: includes/theme-hooks.php:2158
+#: includes/theme-hooks.php:2288 includes/theme-hooks.php:2302
+msgid "Wall material"
+msgstr ""
+
+#: includes/theme-hooks.php:2290 includes/theme-hooks.php:2304
 msgid "Windows thickness"
 msgstr ""
 
-#: includes/theme-options.php:39
-msgid "Disable"
+#: includes/theme-shortcodes.php:197
+msgid "Read More"
 msgstr ""
 
-#: includes/theme-options.php:49
-msgid "Lot Size Slider"
-msgstr ""
-
-#: includes/theme-options.php:57 includes/theme-options.php:103
-msgid "Price Range Slider"
-msgstr ""
-
-#: includes/theme-options.php:61
-msgid "Product category"
-msgstr ""
-
-#: includes/theme-options.php:65
-msgid "Reg Number Field **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:66
-msgid "Car Status Dropdown **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:67
-msgid "Mileage Slider **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:68
-msgid "Exterior Color Field **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:69
-msgid "Interior Color Field **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:70
-msgid "Fuel Type Field **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:71
-msgid "Transmission Dropdown **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:72
-msgid "Price Range Slider **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:73
-msgid "ANCAP or Safety Slider **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:74
-msgid "Dealer Location Dropdown **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:75
-msgid "Car Feature Dropdown **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:76
-msgid "Body Type Dropdown **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:77
-msgid "Manufacturer Dropdown **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:78
-msgid "Manufacturer Dropdown Level 1 **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:79
-msgid "Manufacturer Dropdown Level 2 **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:80
-msgid "Manufacturer Dropdown Level 3 **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:81
-msgid "Level 1 Dealer Location Only **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:82
-msgid "Level 2 Dealer Location Only **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:83
-msgid "Level 3 Dealer Location Only **Car Listing**"
-msgstr ""
-
-#: includes/theme-options.php:88
-msgid "Reg Number Field"
-msgstr ""
-
-#: includes/theme-options.php:89
-msgid "Boat Condition Dropdown"
-msgstr ""
-
-#: includes/theme-options.php:92
-msgid "Sub Model"
-msgstr ""
-
-#: includes/theme-options.php:95
-msgid "Engine Sub Model"
-msgstr ""
-
-#: includes/theme-options.php:96
-msgid "Dealer Location Dropdown "
-msgstr ""
-
-#: includes/theme-options.php:97
-msgid "Level 1 Dealer Location Only "
-msgstr ""
-
-#: includes/theme-options.php:98
-msgid "Level 2 Dealer Location Only "
-msgstr ""
-
-#: includes/theme-options.php:99
-msgid "Level 3 Dealer Location Only "
-msgstr ""
-
-#: includes/theme-options.php:100
-msgid "Boat Feature Dropdown"
-msgstr ""
-
-#: includes/theme-options.php:102
-msgid "Fuel Capacity"
-msgstr ""
-
-#: includes/theme-options.php:161
-msgid "General Settings"
-msgstr ""
-
-#: includes/theme-options.php:165
-msgid "Quick Start"
-msgstr ""
-
-#: includes/theme-options.php:169
-msgid "Custom Logo"
-msgstr ""
-
-#: includes/theme-options.php:170 includes/theme-options.php:176
-msgid ""
-"Upload a logo for your theme, or specify an image URL directly. The best "
-"size is <strong>140x60 px</strong>"
-msgstr ""
-
-#: includes/theme-options.php:175
-msgid "Custom Logo for emails (dark version)"
-msgstr ""
-
-#: includes/theme-options.php:181
-msgid "Custom Favicon"
-msgstr ""
-
-#: includes/theme-options.php:182
-msgid "Upload a Favicon"
-msgstr ""
-
-#: includes/theme-options.php:187
-msgid "Slider Posts Limit"
-msgstr ""
-
-#: includes/theme-options.php:188
-msgid "How many slideshow to show?"
-msgstr ""
-
-#: includes/theme-options.php:194
-msgid "Slider Interval"
-msgstr ""
-
-#: includes/theme-options.php:195
-msgid "Slideshow Interval for each auto slide"
-msgstr ""
-
-#: includes/theme-options.php:199
-msgid "Show BreadCrumb"
-msgstr ""
-
-#: includes/theme-options.php:200
-msgid "Show or hide breadcrumb page header"
-msgstr ""
-
-#: includes/theme-options.php:204 includes/theme-options.php:215
-#: includes/theme-options.php:283 includes/theme-options.php:373
-#: includes/theme-options.php:1778 includes/theme-options.php:1788
-msgid "Show"
-msgstr ""
-
-#: includes/theme-options.php:205 includes/theme-options.php:216
-#: includes/theme-options.php:284 includes/theme-options.php:374
-#: includes/theme-options.php:1779 includes/theme-options.php:1789
-msgid "Hide"
-msgstr ""
-
-#: includes/theme-options.php:210
-msgid "Show Image Slider in Home"
-msgstr ""
-
-#: includes/theme-options.php:211
-msgid "Show or hide image slider in home page template"
-msgstr ""
-
-#: includes/theme-options.php:221
-msgid "Tracking Code"
-msgstr ""
-
-#: includes/theme-options.php:222
-msgid ""
-"Paste your Google Analytics (or other) tracking code here. This will be "
-"added into the footer template of your theme."
-msgstr ""
-
-#: includes/theme-options.php:229
-msgid "Google Map center point latitude"
-msgstr ""
-
-#: includes/theme-options.php:235
-msgid "Google Map center point longitude"
-msgstr ""
-
-#: includes/theme-options.php:236
-msgid ""
-"The Map Longitude. You can easily find it <a href=\"http://www.itouchmap.com/"
-"latlong.html\">here</a>. Copy and paste the latitude value generated there"
-msgstr ""
-
-#: includes/theme-options.php:241
-msgid "Google Map starting zoom level"
-msgstr ""
-
-#: includes/theme-options.php:247
-msgid "Display Options"
-msgstr ""
-
-#: includes/theme-options.php:250
-msgid "Custom CSS"
-msgstr ""
-
-#: includes/theme-options.php:251
-msgid ""
-"Quickly add some CSS to your theme by adding it to this block. Do not use "
-"&lt;style&gt; tag"
-msgstr ""
-
-#: includes/theme-options.php:257
-msgid "Custom JS"
-msgstr ""
-
-#: includes/theme-options.php:258
-msgid ""
-"Quickly add some Javascript to your theme by adding it to this block. Do not "
-"use &lt;script&gt; tag "
-msgstr ""
-
-#: includes/theme-options.php:274
-msgid "Header Settings"
-msgstr ""
-
-#: includes/theme-options.php:278
-msgid "Show Top Menu"
-msgstr ""
-
-#: includes/theme-options.php:279
-msgid "Show or hide the top menu navigation"
-msgstr ""
-
-#: includes/theme-options.php:291
-msgid ""
-"This section will handle the columns in the header, the area beside logo. "
-"The \"Phone Number\" Group and the \"Address Group\""
-msgstr ""
-
-#: includes/theme-options.php:295
-msgid "Show Header Col 1"
-msgstr ""
-
-#: includes/theme-options.php:296
-msgid "Enable the the heder column 1"
-msgstr ""
-
-#: includes/theme-options.php:303
-msgid "Header Column 1 Title"
-msgstr ""
-
-#: includes/theme-options.php:304
-msgid ""
-"The title for header group 1. eq. <strong>Need help from us? Feel free to "
-"call us</strong>"
-msgstr ""
-
-#: includes/theme-options.php:311
-msgid "Phone Number"
-msgstr ""
-
-#: includes/theme-options.php:312
-msgid ""
-"The phone number eq. <strong>123-456-789-01</strong>. Separate number by "
-"commas (,) if you have more than 1 number. Maximum supported phone number is "
-"3"
-msgstr ""
-
-#: includes/theme-options.php:319
-msgid "Show Header Col 2"
-msgstr ""
-
-#: includes/theme-options.php:320
-msgid "Enable the the heder column 2"
-msgstr ""
-
-#: includes/theme-options.php:327
-msgid "Header Column 2 Title"
-msgstr ""
-
-#: includes/theme-options.php:328
-msgid ""
-"The title for header group 2. eq. <strong>Want to Meet & Talk Directly? Find "
-"us here</strong>"
-msgstr ""
-
-#: includes/theme-options.php:335
-msgid "Call to action"
-msgstr ""
-
-#: includes/theme-options.php:336
-msgid "Call to action anchor, ex: Request a free visit"
-msgstr ""
-
-#: includes/theme-options.php:351
-msgid "Centering Logo"
-msgstr ""
-
-#: includes/theme-options.php:352
-msgid "Centering the logo if both the header column is disabled."
-msgstr ""
-
-#: includes/theme-options.php:358
-msgid "Show Header Search Field"
-msgstr ""
-
-#: includes/theme-options.php:359
-msgid "Show the search field in the header / menu."
-msgstr ""
-
-#: includes/theme-options.php:363 includes/theme-options.php:464
-#: includes/theme-options.php:492 includes/theme-options.php:656
-#: includes/theme-options.php:686 includes/theme-options.php:699
-#: includes/theme-options.php:710 includes/theme-options.php:723
-#: includes/theme-options.php:743 includes/theme-options.php:1826
-#: includes/theme-options.php:1835 includes/theme-options.php:1940
-msgid "Yes"
-msgstr ""
-
-#: includes/theme-options.php:364 includes/theme-options.php:465
-#: includes/theme-options.php:493 includes/theme-options.php:657
-#: includes/theme-options.php:687 includes/theme-options.php:698
-#: includes/theme-options.php:711 includes/theme-options.php:724
-#: includes/theme-options.php:744 includes/theme-options.php:1827
-#: includes/theme-options.php:1836 includes/theme-options.php:1939
-msgid "No"
-msgstr ""
-
-#: includes/theme-options.php:369
-msgid "Header Default State"
-msgstr ""
-
-#: includes/theme-options.php:370
-msgid ""
-"Set the header default state to hide or show the main header. Note: this "
-"setting will be overriden by cookie setting if header already toggled."
-msgstr ""
-
-#: includes/theme-options.php:389
-msgid "Color Settings"
-msgstr ""
-
-#: includes/theme-options.php:403
-msgid "Main header color Style"
-msgstr ""
-
-#: includes/theme-options.php:404
-msgid "Choose main header style."
-msgstr ""
-
-#: includes/theme-options.php:408 includes/theme-options.php:425
-msgid "Dark"
-msgstr ""
-
-#: includes/theme-options.php:409 includes/theme-options.php:426
-msgid "Light"
-msgstr ""
-
-#: includes/theme-options.php:414
-msgid "Main header navigation color Style"
-msgstr ""
-
-#: includes/theme-options.php:415
-msgid "Choose main header navigation style."
-msgstr ""
-
-#: includes/theme-options.php:420
-msgid "Navigation Color"
-msgstr ""
-
-#: includes/theme-options.php:431
-msgid "Search Listing Button Color"
-msgstr ""
-
-#: includes/theme-options.php:432
-msgid "Choose colorization stylesheet."
-msgstr ""
-
-#: includes/theme-options.php:449
-msgid "Listing Settings"
-msgstr ""
-
-#: includes/theme-options.php:454
-msgid "General Options"
-msgstr ""
-
-#: includes/theme-options.php:459
-msgid "Show Search Panel"
-msgstr ""
-
-#: includes/theme-options.php:460
-msgid ""
-"If enable there will show the main search panel in all listing related page"
-msgstr ""
-
-#: includes/theme-options.php:487
-msgid "Enable Real Estate Listing"
-msgstr ""
-
-#: includes/theme-options.php:488
-msgid "If enable there will be new menu in admin"
-msgstr ""
-
-#: includes/theme-options.php:509
-msgid "Default Order By"
-msgstr ""
-
-#: includes/theme-options.php:510
-msgid "Select default listing order by"
-msgstr ""
-
-#: includes/theme-options.php:518
-msgid "Default Order"
-msgstr ""
-
-#: includes/theme-options.php:519
-msgid "Select default listing order"
-msgstr ""
-
-#: includes/theme-options.php:561
-msgid "Search Result Page"
-msgstr ""
-
-#: includes/theme-options.php:562
-msgid "Page where the listing search result will be."
-msgstr ""
-
-#: includes/theme-options.php:568
-msgid "Number of Listings to Show"
-msgstr ""
-
-#: includes/theme-options.php:569
-msgid ""
-"How many of listing you want to show for search listing page and browse "
-"listing page."
-msgstr ""
-
-#: includes/theme-options.php:578
-msgid "Price As Text Label"
-msgstr ""
-
-#: includes/theme-options.php:579
-msgid "Use this as text placeholder for place you want to set as text only"
-msgstr ""
-
-#: includes/theme-options.php:581
-msgid "Call For Quote"
-msgstr ""
-
-#: includes/theme-options.php:586
-msgid "Price Currency"
-msgstr ""
-
-#: includes/theme-options.php:587
-msgid "Input the size currency that will be used in listing price."
-msgstr ""
-
-#: includes/theme-options.php:594
-msgid "Currency symbol placement"
-msgstr ""
-
-#: includes/theme-options.php:595
-msgid "Choose which format of the currency symbol placement."
-msgstr ""
-
-#: includes/theme-options.php:607
-msgid "Price Format"
-msgstr ""
-
-#: includes/theme-options.php:608
-msgid "Choose the price format."
-msgstr ""
-
-#: includes/theme-options.php:618
-msgid "Cottage package types"
-msgstr ""
-
-#: includes/theme-options.php:619
-msgid "Add package for cottages"
-msgstr ""
-
-#: includes/theme-options.php:627
-msgid "Package name"
-msgstr ""
-
-#: includes/theme-options.php:634 includes/theme-options.php:1643
-#: includes/theme-options.php:1673
-msgid "Color"
-msgstr ""
-
-#: includes/theme-options.php:641
-msgid "Template Options"
-msgstr ""
-
-#: includes/theme-options.php:647
-msgid ""
-"The section below will handle the listing map view for the listing generated "
-"by page template or the archive and category page for listing."
-msgstr ""
-
-#: includes/theme-options.php:651
-msgid "Show Listing Count in Listing Page"
-msgstr ""
-
-#: includes/theme-options.php:652
-msgid "Show the listing count before the listing list"
-msgstr ""
-
-#: includes/theme-options.php:664
-msgid "The section below will handle the listing details view."
-msgstr ""
-
-#: includes/theme-options.php:668
-msgid "Show Listing Gallery Thumbnail"
-msgstr ""
-
-#: includes/theme-options.php:669
-msgid "Show the listing gallery thumbnail"
-msgstr ""
-
-#: includes/theme-options.php:674
-msgid "Thumbnail Only"
-msgstr ""
-
-#: includes/theme-options.php:675
-msgid "Controller Only"
-msgstr ""
-
-#: includes/theme-options.php:676
-msgid "Both Controller and Thumbnail"
-msgstr ""
-
-#: includes/theme-options.php:681
-msgid "Show Image Caption in Gallery"
-msgstr ""
-
-#: includes/theme-options.php:682
-msgid "Show the image caption in gallery image slider."
-msgstr ""
-
-#: includes/theme-options.php:693
-msgid "Show Related Listings"
-msgstr ""
-
-#: includes/theme-options.php:694
-msgid "Show Related Listings in Single Listing Detail Page"
-msgstr ""
-
-#: includes/theme-options.php:705
-msgid "Show Agent Detail"
-msgstr ""
-
-#: includes/theme-options.php:706
-msgid "Show the agent details in the listing footer / beside the contact form."
-msgstr ""
-
-#: includes/theme-options.php:717
-msgid "Show Contact Form"
-msgstr ""
-
-#: includes/theme-options.php:718
-msgid "Show the contact form in the listing footer."
-msgstr ""
-
-#: includes/theme-options.php:732
-msgid "The section below will handle the view of the listing lists."
-msgstr ""
-
-#: includes/theme-options.php:737
-msgid "Show Mouse Hover overlay"
-msgstr ""
-
-#: includes/theme-options.php:738
-msgid ""
-"Show the overlay ( the stuff with permalink, gallery, compare button ) on "
-"mouse over "
-msgstr ""
-
-#: includes/theme-options.php:750
-msgid "Mouse Overlay button"
-msgstr ""
-
-#: includes/theme-options.php:751
-msgid ""
-"Choose which one of the button you want to show in the listing overlay if "
-"enabled."
-msgstr ""
-
-#: includes/theme-options.php:760
-msgid "Permalink Button"
-msgstr ""
-
-#: includes/theme-options.php:761
-msgid "Gallery Button"
-msgstr ""
-
-#: includes/theme-options.php:762
-msgid "Compare Button"
-msgstr ""
-
-#: includes/theme-options.php:768
-msgid "Measurement Options"
-msgstr ""
-
-#: includes/theme-options.php:772
-msgid "Size Measurement"
-msgstr ""
-
-#: includes/theme-options.php:773
-msgid "The size measurement that will be used in lot size and building size."
-msgstr ""
-
-#: includes/theme-options.php:797
-msgid "Height Measurement"
-msgstr ""
-
-#: includes/theme-options.php:798
-msgid "The height measurement that will be used in dimension."
-msgstr ""
-
-#: includes/theme-options.php:805
-msgid "Width Measurement"
-msgstr ""
-
-#: includes/theme-options.php:806
-msgid "The width measurement that will be used in dimension."
-msgstr ""
-
-#: includes/theme-options.php:814
-msgid "Length Measurement"
-msgstr ""
-
-#: includes/theme-options.php:815
-msgid "The length measurement that will be used in dimension."
-msgstr ""
-
-#: includes/theme-options.php:830
-msgid "Search Panel Options"
-msgstr ""
-
-#: includes/theme-options.php:834
-msgid "Price Slider Minimum Value"
-msgstr ""
-
-#: includes/theme-options.php:835
-msgid "Minimum Value for the Price Range slider in the Search Listing Options"
-msgstr ""
-
-#: includes/theme-options.php:841
-msgid "Price Slider Maximum Value"
-msgstr ""
-
-#: includes/theme-options.php:842
-msgid "Maximum Value for the Price Range slider in the Search Listing Options"
-msgstr ""
-
-#: includes/theme-options.php:862
-msgid "Price Slider Step Value"
-msgstr ""
-
-#: includes/theme-options.php:863
-msgid "Step Value for the Price Range slider when the Slide Event fired"
-msgstr ""
-
-#: includes/theme-options.php:910
-msgid "Size Slider Minimum Value"
-msgstr ""
-
-#: includes/theme-options.php:911
-msgid "The minimum lot size available for user to select"
-msgstr ""
-
-#: includes/theme-options.php:917
-msgid "Size Slider Maximum Value"
-msgstr ""
-
-#: includes/theme-options.php:918
-msgid "The maximum lot size available for user to select"
-msgstr ""
-
-#: includes/theme-options.php:924
-msgid "Size Slider Step"
-msgstr ""
-
-#: includes/theme-options.php:925
-msgid "The step for lot size slider"
-msgstr ""
-
-#: includes/theme-options.php:1002
-msgid "Search Button Label"
-msgstr ""
-
-#: includes/theme-options.php:1003
-msgid "The search button label"
-msgstr ""
-
-#: includes/theme-options.php:1009
-msgid "Custom Search Field"
-msgstr ""
-
-#: includes/theme-options.php:1015
-#, php-format
-msgid "Enable Search Row %s"
-msgstr ""
-
-#: includes/theme-options.php:1016
-msgid "Enable the search row"
-msgstr ""
-
-#: includes/theme-options.php:1028
-#, php-format
-msgid "Row %1s Column %2s Field"
-msgstr ""
-
-#: includes/theme-options.php:1029
-msgid "Choose the field for the search panel"
-msgstr ""
-
-#: includes/theme-options.php:1132
-msgid "Agent Options"
-msgstr ""
-
-#: includes/theme-options.php:1158
-msgid "Set 1 agent for all Products"
-msgstr ""
-
-#: includes/theme-options.php:1159
-msgid "Set a global agent to connected in all Products"
-msgstr ""
-
-#: includes/theme-options.php:1185
-msgid "Layout Settings"
-msgstr ""
-
-#: includes/theme-options.php:1190
-msgid "How many listing per row in mobile view?"
-msgstr ""
-
-#: includes/theme-options.php:1191
-msgid "Set the listing per row in mobile view."
-msgstr ""
-
-#: includes/theme-options.php:1206
-msgid ""
-"This section will handle the layout for categories, archives and post type "
-"taxonomy archives layout. Layout for page and single post can be set in the "
-"post/page edit page."
-msgstr ""
-
-#: includes/theme-options.php:1210
-msgid "Archive Layout"
-msgstr ""
-
-#: includes/theme-options.php:1211
-msgid "Layout for archive page."
-msgstr ""
-
-#: includes/theme-options.php:1219
-msgid "Category Layout"
-msgstr ""
-
-#: includes/theme-options.php:1220
-msgid "Layout for category archive page."
-msgstr ""
-
-#: includes/theme-options.php:1228
-msgid "Search Layout"
-msgstr ""
-
-#: includes/theme-options.php:1229
-msgid "Layout for search page."
-msgstr ""
-
-#: includes/theme-options.php:1237
-msgid "Tags Archive Layout"
-msgstr ""
-
-#: includes/theme-options.php:1238
-msgid "Layout for tags archive page."
-msgstr ""
-
-#: includes/theme-options.php:1246
-msgid "Property Type Archive Layout"
-msgstr ""
-
-#: includes/theme-options.php:1247
-msgid "Layout for property-type listing archive page."
-msgstr ""
-
-#: includes/theme-options.php:1291
-msgid "Body Type Archive Layout"
-msgstr ""
-
-#: includes/theme-options.php:1292
-msgid "Layout for body-type listing archive page."
-msgstr ""
-
-#: includes/theme-options.php:1339
-msgid "About us page settings"
-msgstr ""
-
-#: includes/theme-options.php:1343
-msgid "First section heading"
-msgstr ""
-
-#: includes/theme-options.php:1344
-msgid "Type in text displayed in the first section heading"
-msgstr ""
-
-#: includes/theme-options.php:1349
-msgid "First section content"
-msgstr ""
-
-#: includes/theme-options.php:1350
-msgid "Custom HTML and Text that will appear in the first section."
-msgstr ""
-
-#: includes/theme-options.php:1361
-msgid "Advantages section heading"
-msgstr ""
-
-#: includes/theme-options.php:1362
-msgid "Type in text displayed in the advantages section heading"
-msgstr ""
-
-#: includes/theme-options.php:1366
-msgid "Advantages records"
-msgstr ""
-
-#: includes/theme-options.php:1375
-msgid "Advantage name"
-msgstr ""
-
-#: includes/theme-options.php:1381
-msgid "Second section heading"
-msgstr ""
-
-#: includes/theme-options.php:1382
-msgid "Type in text displayed in the second section heading"
-msgstr ""
-
-#: includes/theme-options.php:1387
-msgid "Second section content"
-msgstr ""
-
-#: includes/theme-options.php:1388
-msgid "Custom HTML and Text that will appear in the second section."
-msgstr ""
-
-#: includes/theme-options.php:1398
-msgid "Second section image"
-msgstr ""
-
-#: includes/theme-options.php:1399
-msgid "Image displayed in the second section"
-msgstr ""
-
-#: includes/theme-options.php:1403
-msgid "Our team heading"
-msgstr ""
-
-#: includes/theme-options.php:1404
-msgid "Type in text displayed in the our team section heading"
-msgstr ""
-
-#: includes/theme-options.php:1409
-msgid "Our team content"
-msgstr ""
-
-#: includes/theme-options.php:1410
-msgid "Custom HTML and Text that will appear in the our team section."
-msgstr ""
-
-#: includes/theme-options.php:1420
-msgid "Contact us heading"
-msgstr ""
-
-#: includes/theme-options.php:1421
-msgid "Type in text displayed in the contact us section heading"
-msgstr ""
-
-#: includes/theme-options.php:1426
-msgid "Contact content"
-msgstr ""
-
-#: includes/theme-options.php:1427
-msgid "Custom HTML and Text that will appear in the contact section."
-msgstr ""
-
-#: includes/theme-options.php:1448
-msgid "Tool Section Settings"
-msgstr ""
-
-#: includes/theme-options.php:1452
-msgid "Tool section image"
-msgstr ""
-
-#: includes/theme-options.php:1453
-msgid "Image displayed in tool section"
-msgstr ""
-
-#: includes/theme-options.php:1458
-msgid "Title on product page"
-msgstr ""
-
-#: includes/theme-options.php:1459 includes/theme-options.php:1488
-msgid "Type in text displayed in section title"
-msgstr ""
-
-#: includes/theme-options.php:1464
-msgid "Heading on product page"
-msgstr ""
-
-#: includes/theme-options.php:1465 includes/theme-options.php:1494
-msgid "Type in text displayed in section heading"
-msgstr ""
-
-#: includes/theme-options.php:1470
-msgid "Content on product page"
-msgstr ""
-
-#: includes/theme-options.php:1471 includes/theme-options.php:1500
-msgid "Custom HTML and Text that will appear in the section of your theme."
-msgstr ""
-
-#: includes/theme-options.php:1481 includes/theme-options.php:1511
-msgid "CTA"
-msgstr ""
-
-#: includes/theme-options.php:1482
-msgid "Type in text displayed in section CTA on product page"
-msgstr ""
-
-#: includes/theme-options.php:1487
-msgid "Title on home page"
-msgstr ""
-
-#: includes/theme-options.php:1493
-msgid "Heading on home page"
-msgstr ""
-
-#: includes/theme-options.php:1499
-msgid "Content on home page"
-msgstr ""
-
-#: includes/theme-options.php:1512
-msgid "Type in text displayed in section CTA on home page"
-msgstr ""
-
-#: includes/theme-options.php:1518
-msgid "Contact us button"
-msgstr ""
-
-#: includes/theme-options.php:1519
-msgid "Choose to show or hide it on certaing pages"
-msgstr ""
-
-#: includes/theme-options.php:1521
-msgid "Product page only"
-msgstr ""
-
-#: includes/theme-options.php:1522
-msgid "Product page and home page"
-msgstr ""
-
-#: includes/theme-options.php:1523
-msgid "Home page only"
-msgstr ""
-
-#: includes/theme-options.php:1524
-msgid "Neither home, nor product page"
-msgstr ""
-
-#: includes/theme-options.php:1531
-msgid "Tool link"
-msgstr ""
-
-#: includes/theme-options.php:1532
-msgid "Type your own link to the tool"
-msgstr ""
-
-#: includes/theme-options.php:1540
-msgid "Pick cta color"
-msgstr ""
-
-#: includes/theme-options.php:1555
-msgid "Home Page Settings"
-msgstr ""
-
-#: includes/theme-options.php:1560
-msgid "About us section title"
-msgstr ""
-
-#: includes/theme-options.php:1561
-msgid "Type in text displayed in home screen about us section title"
-msgstr ""
-
-#: includes/theme-options.php:1566
-msgid "Slogan"
-msgstr ""
-
-#: includes/theme-options.php:1567
-msgid "Type in text displayed in home screen slogan"
-msgstr ""
-
-#: includes/theme-options.php:1572
-msgid "Display promotion"
-msgstr ""
-
-#: includes/theme-options.php:1573
-msgid "Check if there is a promotion running"
-msgstr ""
-
-#: includes/theme-options.php:1578
-msgid "Home call to action"
-msgstr ""
-
-#: includes/theme-options.php:1579 includes/theme-options.php:1657
-msgid "Add call to action"
-msgstr ""
-
-#: includes/theme-options.php:1588 includes/theme-options.php:1666
-msgid "Call to action text"
-msgstr ""
-
-#: includes/theme-options.php:1594
-msgid "Link to build your house tool"
-msgstr ""
-
-#: includes/theme-options.php:1600
-msgid "Link to one of the pages"
-msgstr ""
-
-#: includes/theme-options.php:1607 includes/theme-options.php:1621
-msgid "Call to action link"
-msgstr ""
-
-#: includes/theme-options.php:1608
-msgid "Choose page"
-msgstr ""
-
-#: includes/theme-options.php:1614
-msgid "Link to one of the blog posts"
-msgstr ""
-
-#: includes/theme-options.php:1622
-msgid "Choose post"
-msgstr ""
-
-#: includes/theme-options.php:1628
-msgid "Link to custom URL"
-msgstr ""
-
-#: includes/theme-options.php:1635
-msgid "Custom link"
-msgstr ""
-
-#: includes/theme-options.php:1636
-msgid "Or type your own link"
-msgstr ""
-
-#: includes/theme-options.php:1650
-msgid "Slogan for returning users"
-msgstr ""
-
-#: includes/theme-options.php:1651
-msgid "Type in text displayed in home screen slogan for returning users screen"
-msgstr ""
-
-#: includes/theme-options.php:1656
-msgid "Home call to action for returning users screen"
-msgstr ""
-
-#: includes/theme-options.php:1769
-msgid "Footer Settings"
-msgstr ""
-
-#: includes/theme-options.php:1773
-msgid "Show Footer Widgets"
-msgstr ""
-
-#: includes/theme-options.php:1774
-msgid "Show or hide the footer widgets area"
-msgstr ""
-
-#: includes/theme-options.php:1783
-msgid "Show Footer Copyright"
-msgstr ""
-
-#: includes/theme-options.php:1784
-msgid "Show or hide the footer copyright"
-msgstr ""
-
-#: includes/theme-options.php:1795
-msgid "Custom Copyright Text"
-msgstr ""
-
-#: includes/theme-options.php:1796
-msgid "Custom HTML and Text that will appear in the footer of your theme."
-msgstr ""
-
-#: includes/theme-options.php:1818
-msgid "Social Settings"
-msgstr ""
-
-#: includes/theme-options.php:1822
-msgid "Enable Header Social"
-msgstr ""
-
-#: includes/theme-options.php:1823
-msgid "Enable Social Icons in Header."
-msgstr ""
-
-#: includes/theme-options.php:1831
-msgid "Enable Footer Social"
-msgstr ""
-
-#: includes/theme-options.php:1832
-msgid "Enable Social Icons in Footer."
-msgstr ""
-
-#: includes/theme-options.php:1841
-msgid "Your Facebook username."
-msgstr ""
-
-#: includes/theme-options.php:1847
-msgid "Your Twitter username."
-msgstr ""
-
-#: includes/theme-options.php:1852
-msgid "YouTube Username"
-msgstr ""
-
-#: includes/theme-options.php:1853
-msgid "Your YouTube username."
-msgstr ""
-
-#: includes/theme-options.php:1858
-msgid "Vimeo Username"
-msgstr ""
-
-#: includes/theme-options.php:1859
-msgid "Your Vimeo username."
-msgstr ""
-
-#: includes/theme-options.php:1864
-msgid "Google Plus Username"
-msgstr ""
-
-#: includes/theme-options.php:1865
-msgid "Your Google Plus username."
-msgstr ""
-
-#: includes/theme-options.php:1870
-msgid "Flickr Username"
-msgstr ""
-
-#: includes/theme-options.php:1871
-msgid "Your Flickr username."
-msgstr ""
-
-#: includes/theme-options.php:1876
-msgid "Pinterest Username"
-msgstr ""
-
-#: includes/theme-options.php:1877
-msgid "Your Pinterest username."
-msgstr ""
-
-#: includes/theme-options.php:1883
-msgid "Your LinkedIn username."
-msgstr ""
-
-#: includes/theme-options.php:1890
-msgid "Sidebar Generator"
-msgstr ""
-
-#: includes/theme-options.php:1894
-msgid "Generate Custom Sidebar"
-msgstr ""
-
-#: includes/theme-options.php:1904
-msgid "Sidebar Name"
-msgstr ""
-
-#: includes/theme-options.php:1910
-msgid "Use in Menu"
-msgstr ""
-
-#: includes/theme-options.php:1918
-msgid "URL Rewrite"
-msgstr ""
-
-#: includes/theme-options.php:1925
-msgid ""
-"This section will handle Custom URL Rewrite for the Listing. Default url for "
-"real estate is \"http://yourdomain.com/listing/post-title\" and for car "
-"listing is \"http://yourdomain.com/car-listing/post-title\" you can rewrite "
-"it into something else in here."
-msgstr ""
-
-#: includes/theme-options.php:1931
-msgid ""
-"Please note that you are required to flush your permalink after enable this "
-"feature by going to Settings > Permalink and hit save"
-msgstr ""
-
-#: includes/theme-options.php:1935
-msgid "Enable Custom Url Rewrite"
-msgstr ""
-
-#: includes/theme-options.php:1945
-msgid "Rewrite Root"
-msgstr ""
-
-#: includes/theme-options.php:1948
-msgid ""
-"The Global listing URL base /listing/real-estate/ (non-required), if not "
-"empty will use %rewrite_root%/%real_estate_or_car_base%"
-msgstr ""
-
-#: includes/theme-options.php:1952
-msgid "Real Estate Listing Base"
-msgstr ""
-
-#: includes/theme-options.php:1955
-msgid "The Property Feature URL base /listing/ (required)"
-msgstr ""
-
-#: includes/theme-options.php:1959
-msgid "Real Estate Property Type Base"
-msgstr ""
-
-#: includes/theme-options.php:1962
-msgid "The Property Type URL base /property-type/ (required)"
-msgstr ""
-
-#: includes/theme-options.php:1966
-msgid "Real Estate Property Location Base"
-msgstr ""
-
-#: includes/theme-options.php:1969
-msgid "The Property Location URL base /property-location/ (required)"
-msgstr ""
-
-#: includes/theme-options.php:1973
-msgid "Real Estate Property Feature Base"
-msgstr ""
-
-#: includes/theme-options.php:1976
-msgid "The Property Feature URL base /property-feature/ (required)"
-msgstr ""
-
-#: includes/theme-options.php:1981
-msgid "Car Listing Base"
-msgstr ""
-
-#: includes/theme-options.php:1984
-msgid "The Global Car Listing URL base /car-listing/ (required)"
-msgstr ""
-
-#: includes/theme-options.php:1989
-msgid "Car Manufacturer Base"
-msgstr ""
-
-#: includes/theme-options.php:1992
-msgid "The Manufacturer URL base /manufacturer/ (required)"
-msgstr ""
-
-#: includes/theme-options.php:1996
-msgid "Car Body Type Base"
-msgstr ""
-
-#: includes/theme-options.php:1999
-msgid "The Body Type URL base /body-type/ (required)"
-msgstr ""
-
-#: includes/theme-options.php:2003
-msgid "Car Dealer Location Base"
-msgstr ""
-
-#: includes/theme-options.php:2006
-msgid "The Dealer Location URL base /dealer-location/ (required)"
-msgstr ""
-
-#: includes/theme-options.php:2010
-msgid "Car Feature Base"
-msgstr ""
-
-#: includes/theme-options.php:2013
-msgid "The Car Feature URL base /car-feature/ (required)"
-msgstr ""
-
-#: includes/theme-plugins.php:92
-msgid "Something went wrong with the plugin API."
-msgstr ""
-
-#: includes/theme-plugins.php:105
-#, php-format
-msgid "All plugins installed and activated successfully. %s"
-msgstr ""
-
-#: includes/theme-posttypes.php:13
-msgid "Embed Code"
-msgstr ""
-
-#: includes/theme-posttypes.php:14
-msgid "Use the third party URL such Youtube, Vimeo, etc? Please input the URL"
-msgstr ""
-
-#: includes/theme-posttypes.php:21
-msgid "Use Self Hosted Video"
-msgstr ""
-
-#: includes/theme-posttypes.php:22
-msgid "Using self uploaded and hosted video"
-msgstr ""
-
-#: includes/theme-posttypes.php:30
-msgid "M4V Video File"
-msgstr ""
-
-#: includes/theme-posttypes.php:31
-msgid ""
-"The URL to the .m4v video file (required for use both in html5 / flash "
-"player)"
-msgstr ""
-
-#: includes/theme-posttypes.php:38
-msgid "OGV Video File"
-msgstr ""
-
-#: includes/theme-posttypes.php:39
-msgid "The URL to the .ogv video file ( HTML5 Only )"
-msgstr ""
-
-#: includes/theme-posttypes.php:46
-msgid "Video Cover"
-msgstr ""
-
-#: includes/theme-posttypes.php:47
-msgid "The image use for the video thumbnail"
-msgstr ""
-
-#: includes/theme-posttypes.php:129
-msgid "Slide Show Type"
-msgstr ""
-
-#: includes/theme-posttypes.php:131
-msgid "Full"
-msgstr ""
-
-#: includes/theme-posttypes.php:132
-msgid "Boxed"
-msgstr ""
-
-#: includes/theme-posttypes.php:140
-msgid "Slide show IDs to Show (optional)"
-msgstr ""
-
-#: includes/theme-posttypes.php:141
-msgid ""
-"Input the slideshow ids you want to show separated by commas, if empty all "
-"latest slider post will be used."
-msgstr ""
-
-#: includes/theme-posttypes.php:146
-msgid "Slider Options"
-msgstr ""
-
-#: includes/theme-posttypes.php:161 includes/theme-posttypes.php:202
-#: includes/theme-toolkit-override.php:124
-#: includes/theme-toolkit-override.php:263
-msgid "Featured"
-msgstr ""
-
-#: includes/theme-posttypes.php:167
-msgid "Property Status to Query"
-msgstr ""
-
-#: includes/theme-posttypes.php:173
-msgid "Property Location to Query"
-msgstr ""
-
-#: includes/theme-posttypes.php:174 includes/theme-posttypes.php:182
-#: includes/theme-posttypes.php:215 includes/theme-posttypes.php:223
-#: includes/theme-posttypes.php:231
-msgid "Optional - leave empty to not include location"
-msgstr ""
-
-#: includes/theme-posttypes.php:181
-msgid "Property Type to Query"
-msgstr ""
-
-#: includes/theme-posttypes.php:208
-msgid "Car Status to Query"
-msgstr ""
-
-#: includes/theme-posttypes.php:214
-msgid "Dealer Location to Query"
-msgstr ""
-
-#: includes/theme-posttypes.php:222
-msgid "Body Type to Query"
-msgstr ""
-
-#: includes/theme-posttypes.php:230
-msgid "Manufacturer to Query"
-msgstr ""
-
-#: includes/theme-posttypes.php:253 includes/theme-posttypes.php:277
-msgid "Poll Title"
-msgstr ""
-
-#: includes/theme-posttypes.php:256 includes/theme-posttypes.php:281
-msgid "Date"
-msgstr ""
-
-#: includes/theme-supports.php:44
-msgid "Theme Settings"
-msgstr ""
-
-#: includes/theme-supports.php:97
-msgid "Sidebar Primary"
-msgstr ""
-
-#: includes/theme-supports.php:101
-msgid "Sidebar Listing"
-msgstr ""
-
-#: includes/theme-supports.php:106
-msgid "Sidebar About Us"
-msgstr ""
-
-#: includes/theme-supports.php:110
-msgid "Footer 1"
-msgstr ""
-
-#: includes/theme-supports.php:114
-msgid "Footer 2"
-msgstr ""
-
-#: includes/theme-supports.php:118
-msgid "Footer 3"
-msgstr ""
-
-#: includes/theme-supports.php:122
-msgid "Footer 4"
-msgstr ""
-
-#: includes/theme-supports.php:127
-msgid "Woocommerce"
-msgstr ""
-
-#: includes/theme-supports.php:143
-msgid "Primary"
-msgstr ""
-
-#: includes/theme-supports.php:148
-msgid "Top Bar Menu"
-msgstr ""
-
-#: includes/theme-supports.php:320
-msgid "Primary Font"
-msgstr ""
-
-#: includes/theme-supports.php:336
-msgid "Heading & Menu Font"
-msgstr ""
-
-#: includes/theme-supports.php:345
-msgid "Lato"
-msgstr ""
-
-#: includes/theme-supports.php:355
-msgid "Titilium Web (font stack)"
-msgstr ""
-
-#: includes/theme-supports.php:363
-msgid "Helvetica Neue (font stack)"
-msgstr ""
-
-#: includes/theme-supports.php:371
-msgid "Muli"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:81
-msgid "Icon Animation"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:85
-msgid "Bottom to Top"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:86
-msgid "Top to Bottom"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:87
-msgid "Left to Right"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:88
-msgid "Right to Left"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:123
-#: includes/theme-toolkit-override.php:262
-msgid "Latest"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:137
-#: includes/theme-toolkit-override.php:174
-#: includes/theme-toolkit-override.php:269
-msgid "Number of Posts to Fetch"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:142
-msgid "Category"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:148
-msgid "Button Color"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:160
-#: includes/theme-toolkit-override.php:203
-#: includes/theme-toolkit-override.php:242
-#: includes/theme-toolkit-override.php:304
-#: includes/theme-toolkit-override.php:340
-msgid "Bottom Margin"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:185
-#: includes/widgets/widget-related-listing.php:343
-msgid "Property Location"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:191
-#: includes/widgets/widget-related-listing.php:344
-msgid "Property Feature"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:197
-msgid "Property Query"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:223
-msgid "Pick Agent"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:229
-#: includes/theme-toolkit-override.php:329
-msgid "Background Color"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:237
-msgid "Yellow"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:286
-msgid "Car Feature"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:292
-msgid "Car Query"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:323
-msgid "Pick Sales Rep"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:743
-msgid ""
-"Failed rendering contact form. Please provide a correct <strong>Email "
-"Address</strong>."
-msgstr ""
-
-#: includes/theme-toolkit-override.php:759
-msgid "Please enter valid email address."
-msgstr ""
-
-#: includes/theme-toolkit-override.php:765
-msgid "Subject"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:771
-msgid "Messages"
-msgstr ""
-
-#: includes/theme-toolkit-override.php:779
-msgid "Send Message"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:35
-msgid "Show Mortgage Calculator."
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:46
-msgid "Shandora Calculator"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:82
-msgid "Loan Amount"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:87
-msgid "Down Payment"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:92
-msgid "Annual Rate"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:97
-msgid "Loan Terms (Years)"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:101
-msgid "Calculate"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:104
-msgid "Number of Payments"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:109
-msgid "Monthly Payment"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:148
-msgid "Mortgage Calculator"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:158
-#: includes/widgets/widget-custom-numbers.php:138
-#: includes/widgets/widget-featured-car.php:190
-#: includes/widgets/widget-featured-listing.php:208
-#: includes/widgets/widget-related-listing.php:326
-#: includes/widgets/widget-search-listing.php:110
-msgid "Title:"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:162
-#: includes/widgets/widget-related-listing.php:335
-msgid "Related to"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:164
-msgid "Real Estate"
-msgstr ""
-
-#: includes/widgets/widget-calculator.php:165
-msgid "Car"
-msgstr ""
-
-#: includes/widgets/widget-custom-image.php:61
-msgid "Display custom image"
-msgstr ""
-
-#: includes/widgets/widget-custom-image.php:72
-msgid "Image"
-msgstr ""
-
-#: includes/widgets/widget-custom-numbers.php:36
-msgid "Numbers with descriptions to display."
-msgstr ""
-
-#: includes/widgets/widget-custom-numbers.php:46
-msgid "Widget Custom Numbers"
-msgstr ""
-
-#: includes/widgets/widget-custom-numbers.php:129
-msgid "Our Work"
-msgstr ""
-
-#: includes/widgets/widget-dsidxpress-search.php:14
-msgid "Search Listing from MLS dsIDXpress."
-msgstr ""
-
-#: includes/widgets/widget-dsidxpress-search.php:25
-msgid "Shandora Search IDX"
-msgstr ""
-
-#: includes/widgets/widget-dsidxpress-search.php:268
-msgid "Search for Properties"
-msgstr ""
-
-#: includes/widgets/widget-dsidxpress-search.php:272
-msgid "try our "
-msgstr ""
-
-#: includes/widgets/widget-dsidxpress-search.php:272
-msgid "Advanced Search"
-msgstr ""
-
-#: includes/widgets/widget-dsidxpress-search.php:277
-msgid "By searching, you agree to the"
-msgstr ""
-
-#: includes/widgets/widget-dsidxpress-search.php:277
-msgid "EULA"
-msgstr ""
-
-#: includes/widgets/widget-featured-car.php:35
 #: includes/widgets/widget-featured-listing.php:37
 msgid "Show featured property listing."
 msgstr ""
 
-#: includes/widgets/widget-featured-car.php:46
-msgid "Shandora Featured Car Listing"
-msgstr ""
-
-#: includes/widgets/widget-featured-car.php:141
-#: includes/widgets/widget-featured-listing.php:159
-msgid "No property listing were found"
-msgstr ""
-
-#: includes/widgets/widget-featured-car.php:179
 #: includes/widgets/widget-featured-listing.php:197
 msgid "Featured Listing"
 msgstr ""
 
-#: includes/widgets/widget-featured-car.php:194
+#: includes/widgets/widget-featured-listing.php:208
+#: includes/widgets/widget-search-listing.php:110
+msgid "Title:"
+msgstr ""
+
 #: includes/widgets/widget-featured-listing.php:212
-#: includes/widgets/widget-related-listing.php:330
 msgid "Number of Posts"
 msgstr ""
 
-#: includes/widgets/widget-featured-car.php:198
 #: includes/widgets/widget-featured-listing.php:216
 msgid "Post per slide:"
 msgstr ""
 
-#: includes/widgets/widget-featured-listing.php:47
-msgid "Shandora Featured Listing"
-msgstr ""
-
-#: includes/widgets/widget-related-listing.php:37
-msgid "Show related property listing."
-msgstr ""
-
-#: includes/widgets/widget-related-listing.php:47
-msgid "Shandora Related Listing"
-msgstr ""
-
-#: includes/widgets/widget-related-listing.php:277
-msgid "No Related listing were found"
-msgstr ""
-
-#: includes/widgets/widget-related-listing.php:315
-msgid "Related Listing"
-msgstr ""
-
-#: includes/widgets/widget-related-listing.php:338
-msgid "Bed"
-msgstr ""
-
-#: includes/widgets/widget-related-listing.php:339
-msgid "Bath"
-msgstr ""
-
-#: includes/widgets/widget-related-listing.php:347
-msgid "Hold CTRL to select more than 1 options"
-msgstr ""
-
 #: includes/widgets/widget-search-listing.php:35
 msgid "Search listing. Do not use along with main search panel."
-msgstr ""
-
-#: includes/widgets/widget-search-listing.php:46
-msgid "Shandora Search Listing"
 msgstr ""
 
 #: includes/widgets/widget-search-listing.php:101
@@ -6054,3 +1602,771 @@ msgstr ""
 #: searchform.php:9
 msgid "Search"
 msgstr ""
+
+#~ msgid "You are browsing the search results for &#8220;%s&#8221;"
+#~ msgstr "Wyniki wyszukiwania dla &quot;%s&quot;"
+
+#~ msgid "You are browsing the site archives by time."
+#~ msgstr "Przeglądasz archiwa ze względu na czas."
+
+#~ msgid "You are browsing the site archives for %s."
+#~ msgstr "Przeglądasz archiwa witryny w poszukiwaniu %s."
+
+#~ msgid "You are browsing the site archives."
+#~ msgstr "Przeglądasz archiwa witryny."
+
+#~ msgid "Week %1$s of %2$s"
+#~ msgstr "Tydzień %1$s z %2$s"
+
+#~ msgid "Remove"
+#~ msgstr "Usuń"
+
+#~ msgid "WordPress"
+#~ msgstr "WordPress"
+
+#~ msgid "Log out"
+#~ msgstr "Wyloguj"
+
+#~ msgid "Log in"
+#~ msgstr "Zaloguj się"
+
+#~ msgid "This page loaded in %1$s seconds with %2$s database queries."
+#~ msgstr ""
+#~ "Ta strona jest załadowany w %1$ s sekund z kwerendy bazy danych %2$ s."
+
+#~ msgid "Edit %1$s"
+#~ msgstr "Edytuj %1$ s"
+
+#~ msgid "Posted on:"
+#~ msgstr "Zamieszczone:"
+
+#, fuzzy
+#~ msgid "Comment:"
+#~ msgstr "Komentarz:"
+
+#~ msgid "Comments:"
+#~ msgstr "Komentarze:"
+
+#~ msgid "Comment on %1$s"
+#~ msgstr "Skomentuj %1$s"
+
+#~ msgid "Author:"
+#~ msgstr "Autor:"
+
+#~ msgid "About %1s"
+#~ msgstr "O %1s"
+
+#~ msgid "Category:"
+#~ msgstr "Kategoria:"
+
+#~ msgid "(Untitled)"
+#~ msgstr "(Bez tytułu)"
+
+#~ msgid "Shortlink"
+#~ msgstr "Krótki link"
+
+#~ msgid "%s"
+#~ msgstr "%s"
+
+#~ msgid "%1$s at %2$s"
+#~ msgstr "%1$s w %2$s"
+
+#~ msgid "Permalink to comment %1$s"
+#~ msgstr "Link do komentarza %1$s"
+
+#~ msgid "Permalink"
+#~ msgstr "Odnośnik bezpośredni"
+
+#~ msgid "Reply"
+#~ msgstr "Odpowiedz"
+
+#~ msgid "Log in to reply."
+#~ msgstr "Zaloguj się, aby odpowiedzieć."
+
+#~ msgid "Cottage"
+#~ msgstr "Domek drewniany"
+
+#~ msgid "Cottages"
+#~ msgstr "Domki drewniane"
+
+#~ msgctxt "product url slug"
+#~ msgid "wooden-cottage"
+#~ msgstr "domek-drewniany"
+
+#~ msgid "Second floor"
+#~ msgstr "Drugie piętro"
+
+#~ msgctxt "products category url slug"
+#~ msgid "type"
+#~ msgstr "domki-drewniane"
+
+#~ msgid "Color of cta"
+#~ msgstr "Skomentuj"
+
+#~ msgctxt "edit-account-slug"
+#~ msgid "edit-account"
+#~ msgstr "Edytuj konto"
+
+#~ msgctxt "lost-password-slug"
+#~ msgid "lost-password"
+#~ msgstr "Utracone hasło"
+
+#~ msgid "Please provide a valid email address."
+#~ msgstr "Wpisz proszę prawidłowy adres email."
+
+#~ msgid "This email address is already registered."
+#~ msgstr "Ten adres email jest już zarejestrowany."
+
+#~ msgid "Please re-enter your password."
+#~ msgstr "Wprowadź proszę ponownie hasło."
+
+#~ msgid "Passwords do not match."
+#~ msgstr "Hasła się nie zgadzają."
+
+#~ msgid "Your password has been reset."
+#~ msgstr "Twoje hasło zostało zrestartowane."
+
+#~ msgid "Account details changed successfully."
+#~ msgstr "Szczegóły konta zostały zmienione pomyślnie."
+
+#~ msgid "Username is required."
+#~ msgstr "Nazwa użytkownika jest wymagana."
+
+#~ msgid "Password is required."
+#~ msgstr "Hasło jest wymagane."
+
+#~ msgid "Username already taken"
+#~ msgstr "Nazwa użytkownika już istnieje"
+
+#~ msgid "Invalid username"
+#~ msgstr "Nieprawidłowa nazwa użytkownika"
+
+#~ msgid "Please enter a username"
+#~ msgstr "Wpisz proszę nazwę użytkownika"
+
+#~ msgid "Invalid email"
+#~ msgstr "Błędny e-mail"
+
+#~ msgid "Email already registered"
+#~ msgstr "Ten adres już jest zarejestrowany"
+
+#~ msgid "Please enter a password"
+#~ msgstr "Wpisz proszę ponownie hasło"
+
+#~ msgid "Passwords do not match"
+#~ msgstr "Hasła się nie zgadzają"
+
+#~ msgid "Cheatin&#8217; uh?"
+#~ msgstr "Oszukujesz, co?"
+
+#~ msgid "Your chosen password"
+#~ msgstr "Wybrane przez Ciebie hasło"
+
+#~ msgid "Please enter your password."
+#~ msgstr "Wpisz proszę ponownie swoje hasło."
+
+#~ msgid "Please enter a username or e-mail address."
+#~ msgstr "Wpisz proszę nazwę użytkownika lub adres email."
+
+#~ msgid "There is no user registered with that email address."
+#~ msgstr "Nie istnieje użytkownik zarejestrowany na ten adres email."
+
+#~ msgid "Invalid username or e-mail."
+#~ msgstr "Nieprawidłowa nazwa użytkownika lub email."
+
+#~ msgid "Password reset is not allowed for this user"
+#~ msgstr "Restartowanie hasła nie jest dozwolone dla tego użytkownika"
+
+#~ msgid ""
+#~ "Someone requested that the password be reset for the following account:"
+#~ msgstr "Ktos poprosił o reset hasła dla wskazanego konta:"
+
+#~ msgid "Username: %s"
+#~ msgstr "Nazwa użytkownika: %s"
+
+#~ msgid ""
+#~ "If this was a mistake, just ignore this email and nothing will happen."
+#~ msgstr "Jeśli to pomyłka, zignoruj proszę ten email i nic się nie wydarzy."
+
+#~ msgid "To reset your password, visit the following address:"
+#~ msgstr "Aby zrestartować swoje hasło, odwiedź poniższy adres:"
+
+#~ msgid "[%s] Password Reset"
+#~ msgstr "[%s] Reset Hasła"
+
+#~ msgid "The e-mail could not be sent."
+#~ msgstr "Emal nie mógł zostać wysłany."
+
+#~ msgid "Possible reason: your host may have disabled the mail() function."
+#~ msgstr "Możliwy powód: Twój host może blokować funkcję mail()."
+
+#~ msgid "Check your e-mail for the confirmation link."
+#~ msgstr "Sprawdź swój email po link potwierdzający."
+
+#~ msgid "Invalid Key."
+#~ msgstr "Nieprawidłowy klucz."
+
+#~ msgid "Skype Username"
+#~ msgstr "Nazwa użytkownika Skype"
+
+#~ msgid "Twitter URL"
+#~ msgstr "Podaj URL do twitter"
+
+#~ msgid "Google Plus"
+#~ msgstr "Google Plus"
+
+#~ msgid "Facebook URL"
+#~ msgstr "Facebook URL"
+
+#~ msgid "YouTube URL"
+#~ msgstr "YouTube URL"
+
+#~ msgid "Pinterest URL"
+#~ msgstr "Pinterest URL"
+
+#~ msgid "Instagram URL"
+#~ msgstr "Instagram URL"
+
+#~ msgid "Dribbble URL"
+#~ msgstr "Adres URL Dribbble"
+
+#~ msgid "Github URL"
+#~ msgstr "GitHub URL"
+
+#~ msgid "WordPress URL"
+#~ msgstr "WordPress adres URL"
+
+#~ msgid "Default options restored."
+#~ msgstr "Opcje domyślne przywrócone."
+
+#~ msgid "Options saved."
+#~ msgstr "Opcje zapisane."
+
+#~ msgid "Reset Options"
+#~ msgstr "Przywróć poprzednie ustawienia"
+
+#~ msgid "Click OK to reset. Any theme settings will be lost!"
+#~ msgstr ""
+#~ "﻿Kliknij przycisk OK, aby zresetować. Wszelkie ustawienia dla motywu "
+#~ "zostaną utracone!"
+
+#~ msgid "Save All Changes"
+#~ msgstr "Zapisz wszystkie zmiany"
+
+#~ msgid "View Theme Documentation"
+#~ msgstr "Zobacz dokumentację skórki"
+
+#~ msgid "Visit Support Forum"
+#~ msgstr "Odwiedź Forum pomocy"
+
+#~ msgid "Upload"
+#~ msgstr "Wgraj"
+
+#~ msgid "Clear"
+#~ msgstr "Wyczyść"
+
+#~ msgid "Default"
+#~ msgstr "Domyślne"
+
+#~ msgid "Select Color"
+#~ msgstr "Wybierz kolor"
+
+#~ msgid "BonFramework %s"
+#~ msgstr "BonFramework %s"
+
+#~ msgid "Import / Export"
+#~ msgstr "Import/Export"
+
+#~ msgid "Import Settings"
+#~ msgstr "Importuj ustawienia"
+
+#~ msgid ""
+#~ "If you have Theme settings in a backup file on your computer, the "
+#~ "Import / Export system can import those into this site. To get started, "
+#~ "upload your backup file to import from below."
+#~ msgstr ""
+#~ "Jeśli masz ustawienia w pliku kopii zapasowej na komputerze, importu / "
+#~ "eksportu systemu można zaimportować do tej strony. Aby rozpocząć, "
+#~ "prześlij plik kopia zapasowa do importu."
+
+#~ msgid "Upload File: (Maximum Size: %s)"
+#~ msgstr "Upload plików: (maksymalny rozmiar: %s)"
+
+#~ msgid "Upload File and Import"
+#~ msgstr "Wgrywanie pliku"
+
+#~ msgid "Export Settings"
+#~ msgstr "Eksportuj ustawienia"
+
+#~ msgid ""
+#~ "When you click the button below, the Import / Export system will create a "
+#~ "text file for you to save to your computer."
+#~ msgstr ""
+#~ "Naciśnij przycisk Pobierz, aby zapisać raport na swoim komputerze. </cf>"
+
+#~ msgid ""
+#~ "This text file can be used to restore your settings here on \"%s\", or to "
+#~ "easily setup another website with the same settings\"."
+#~ msgstr ""
+#~ "Ten plik tekstowy można przywrócić ustawienia tutaj na \"%s\", lub aby "
+#~ "łatwo wgrać na inną stronę te ustawienia."
+
+#~ msgid "Download Export File"
+#~ msgstr "Pobierz plik"
+
+#~ msgid "Here are a few notes on using this screen."
+#~ msgstr "Oto kilka uwag na temat korzystania z tego ekranu."
+
+#~ msgid ""
+#~ "The backup manager allows you to backup or restore your \"Theme Options\" "
+#~ "and other settings to or from a text file."
+#~ msgstr ""
+#~ "Backup manager umożliwia kopia zapasowa lub przywracanie swoje \"Theme "
+#~ "Options\" i inne ustawienia do lub z pliku tekstowego."
+
+#~ msgid ""
+#~ "To create a backup, simply select the setting type you'd like to backup "
+#~ "(or \"All Settings\") and hit the \"Download Export File\" button."
+#~ msgstr ""
+#~ "Do tworzenia kopii zapasowej, po prostu wybierz typ ustawienia chcesz do "
+#~ "tworzenia kopii zapasowych (lub \"All Settings\") i hit \"Download Export "
+#~ "File\" przycisk."
+
+#~ msgid ""
+#~ "To restore your settings from a backup, browse your computer for the file "
+#~ "(under the \"Import Settings\" heading) and hit the \"Upload File and "
+#~ "Import\" button. This will restore only the settings that have changed "
+#~ "since the backup."
+#~ msgstr ""
+#~ "To restore your settings from a backup, browse your computer for the file "
+#~ "(under the \"Import Settings\" heading) and hit the \"Upload File and "
+#~ "Import\" button. This will restore only the settings that have changed "
+#~ "since the backup."
+
+#~ msgid ""
+#~ "Please note that only valid backup files generated through the Backup "
+#~ "Manager should be imported."
+#~ msgstr ""
+#~ "Należy pamiętać, że tylko kopii zapasowej plików generowanych przez "
+#~ "Backup Manager powinien być przywożone."
+
+#~ msgid "Looking for assistance?"
+#~ msgstr "Szukasz pomocy?"
+
+#~ msgid ""
+#~ "Please note that this backup manager backs up only your settings and not "
+#~ "your content. To backup your content, please use the %sWordPress Export "
+#~ "Tool%s."
+#~ msgstr ""
+#~ "Należy pamiętać, że ten Menedżer kopii zapasowej wykonuje kopię zapasową "
+#~ "tylko ustawienia i nie treści. Aby wykonać kopię zapasową zawartości, "
+#~ "użyj WordPress %s narzędzie do exportu %s."
+
+#~ msgid "There was a problem importing your settings. Please Try again."
+#~ msgstr ""
+#~ "Wystąpił problem podczas importowania ustawień. Proszę spróbować ponownie."
+
+#~ msgid "There was a problem exporting your settings. Please Try again."
+#~ msgstr ""
+#~ "Wystąpił problem podczas eksportowania ustawienia. Proszę spróbować "
+#~ "ponownie."
+
+#~ msgid "The import file you've provided is invalid. Please try again."
+#~ msgstr ""
+#~ "Importuj plik, który podałeś już jest nieprawidłowy. Proszę spróbować "
+#~ "ponownie."
+
+#~ msgid "Settings successfully imported. | Return to %sTheme Options%s"
+#~ msgstr "Ustawienia pomyślnie zaimportował. | Opcje powrotu do % sTheme %s"
+
+#~ msgid "Add New %s"
+#~ msgstr "Dodaj nowy %s"
+
+#~ msgid "Edit %s"
+#~ msgstr "Edytuj %s"
+
+#~ msgid "New %s"
+#~ msgstr "Nowy %s"
+
+#~ msgid "All %s"
+#~ msgstr "Wszystkie %s"
+
+#~ msgid "View %s"
+#~ msgstr "Zobacz %s"
+
+#~ msgid "Search %s"
+#~ msgstr "Szukaj %s"
+
+#~ msgid "No %s found"
+#~ msgstr "Nie znaleziono %s"
+
+#~ msgid "No %s found in Trash"
+#~ msgstr "Nie znaleziono %s w koszu"
+
+#~ msgid "Parent %s"
+#~ msgstr "Kategoria wyżej %s"
+
+#~ msgid "Update %s"
+#~ msgstr "Zaktualizuj %s"
+
+#~ msgid "New %s Name"
+#~ msgstr "Nazwa nowego %s"
+
+#~ msgid "Editing %s"
+#~ msgstr "Edycja %s"
+
+#~ msgctxt "edit-post-slug"
+#~ msgid "edit-post"
+#~ msgstr "Edycja postu"
+
+#~ msgctxt "add-post-slug"
+#~ msgid "add-post"
+#~ msgstr "Dodaj post"
+
+#~ msgid "The item you are trying to move to the Trash no longer exists."
+#~ msgstr "Element, który chcesz wrzucić do kosza już nie istnieje."
+
+#~ msgid "Unknown post type."
+#~ msgstr "Typ nieznany postu."
+
+#~ msgid "You are not allowed to move this item to the Trash."
+#~ msgstr "Nie wolno przenosić ten element do kosza."
+
+#~ msgid "You cannot move this item to the Trash. %s is currently editing."
+#~ msgstr "Nie można przenieść ten element do kosza. %s jest obecnie edycji."
+
+#~ msgid "Error in moving to Trash."
+#~ msgstr "Wystąpił błąd podczas przenoszenia do kosza."
+
+#~ msgid "Cancel"
+#~ msgstr "Anuluj"
+
+#~ msgid "LOCKED"
+#~ msgstr "Zablokowana"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Publish on:"
+#~ msgstr "Opublikuj"
+
+#~ msgid "Schedule for:"
+#~ msgstr "Zaplanuj na:"
+
+#~ msgid "Published on:"
+#~ msgstr "Opublikowane na:"
+
+#~ msgid "%1$s %2$s, %3$s @ %4$s : %5$s"
+#~ msgstr "%1$s %2$s, %3$s @ %4$s : %5$s"
+
+#~ msgid "Show more comments"
+#~ msgstr "Pokaż więcej komentarzy"
+
+#~ msgid "No more comments found."
+#~ msgstr "Nie znaleziono więcej komentarzy."
+
+#~ msgid "Publish"
+#~ msgstr "Opublikuj"
+
+#~ msgid "Schedule"
+#~ msgstr "Harmonogram"
+
+#~ msgid "Update"
+#~ msgstr "Aktualizuj"
+
+#~ msgid "Save as Pending"
+#~ msgstr "Zapisz jako oczekujące"
+
+#~ msgid "Save Draft"
+#~ msgstr "Zapisz jako szkic"
+
+#~ msgid "Private"
+#~ msgstr "Prywatnie"
+
+#~ msgid "Public"
+#~ msgstr "Publiczne"
+
+#~ msgid "Public, Sticky"
+#~ msgstr "Publiczny, Przyklejony"
+
+#~ msgid "Password Protected"
+#~ msgstr "Ochrona hasłem"
+
+#~ msgid "Privately Published"
+#~ msgstr "Prywatnie Publikacja"
+
+#~ msgid "Published"
+#~ msgstr "Opublikowany"
+
+#~ msgctxt "tag delimiter"
+#~ msgid ","
+#~ msgstr ", [tag przecinek]"
+
+#~ msgid "Saving Draft&#8230;"
+#~ msgstr "Zapisywanie projektu &#8230;"
+
+#~ msgid ""
+#~ "The changes you made will be lost if you navigate away from this page."
+#~ msgstr ""
+#~ "Wprowadzone zmiany zostaną utracone, jeśli możesz przejść od tej strony."
+
+#~ msgid "Insert/edit link"
+#~ msgstr "Wstaw/Edytuj łącza"
+
+#~ msgid "Add Link"
+#~ msgstr "Dodaj odnośnik"
+
+#~ msgid "(no title)"
+#~ msgstr "(Brak nazwy)"
+
+#~ msgid "No matches found."
+#~ msgstr "Nie znaleziono dopasowań."
+
+#~ msgid ""
+#~ "You attempted to edit an item that doesn&#8217;t exist. Perhaps it was "
+#~ "deleted?"
+#~ msgstr ""
+#~ "Próbowano edytować element który istnieje. Być może został usunięty?"
+
+#~ msgid "You are not allowed to edit this item."
+#~ msgstr "Nie masz uprawnień do edytowania tej pozycji."
+
+#~ msgid ""
+#~ "There is an autosave of this post that is more recent than the version "
+#~ "below. <a href=\"%s\">View the autosave</a>"
+#~ msgstr ""
+#~ "Istnieje opcja automatycznego zapamiętywania tego postu, który jest "
+#~ "nowsza niż wersja poniżej. <a href=\"%s\">Widok autozapis</a>"
+
+#~ msgid "Post updated. <a href=\"%s\">View post</a>"
+#~ msgstr "zaktualizowane. <a href=\"%s\">Zobacz post</a>."
+
+#~ msgid "Custom field updated."
+#~ msgstr "Dodatkowe pola zaktualizowane."
+
+#~ msgid "Custom field deleted."
+#~ msgstr "Dodatkowe pole usunięte."
+
+#~ msgid "Post updated."
+#~ msgstr "Post zaktualizowany"
+
+#~ msgid "Post restored to revision from %s"
+#~ msgstr "Post przywrócony do wersji z %s"
+
+#~ msgid "Post published. <a href=\"%s\">View post</a>"
+#~ msgstr "Post opublikowany. <a href=\"%s\">Zobacz post</a>"
+
+#~ msgid "Post saved."
+#~ msgstr "Post zapisany."
+
+#~ msgid "Post submitted. <a target=\"_blank\" href=\"%s\">Preview post</a>"
+#~ msgstr ""
+#~ "Wiadomość dodano. <a target=\"\"_blank\"\" href=\"\"%s\"\">Podejrzyj "
+#~ "post</a>"
+
+#~ msgid ""
+#~ "Post scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+#~ "\"%2$s\">Preview post</a>"
+#~ msgstr ""
+#~ "Post zaplanowany na: <strong>%1$ s</strong>. <a target=\"\"_blank\"\" "
+#~ "href=\"\"%2$s\"\">Podejrzyj post</a>"
+
+#~ msgid "M j, Y @ G:i"
+#~ msgstr "M j, Y @ G:i"
+
+#~ msgid ""
+#~ "Post draft updated. <a target=\"_blank\" href=\"%s\">Preview post</a>"
+#~ msgstr ""
+#~ "Szkic posta zaktualizowany. <a target=\"\"_blank\"\" href=\"\"%s"
+#~ "\"\">Podejrzyj post</a>"
+
+#~ msgid "Page updated. <a href=\"%s\">View page</a>"
+#~ msgstr "Strona aktualizowana. <a href=\"%s\">Widok strony</a>"
+
+#~ msgid "Page updated."
+#~ msgstr "Strona aktualizowana."
+
+#~ msgid "Page restored to revision from %s"
+#~ msgstr "Strona przywrócona do wersji z %s"
+
+#~ msgid "Page published. <a href=\"%s\">View page</a>"
+#~ msgstr "Strona opublikowana. <a href=\"%s\">Widok strony</a>"
+
+#~ msgid "Page saved."
+#~ msgstr "Zapisano!"
+
+#~ msgid "Page submitted. <a target=\"_blank\" href=\"%s\">Preview page</a>"
+#~ msgstr "Dodano stronę. <a target=\"_blank\" href=\"%s\">Podgląd strony</a>"
+
+#~ msgid ""
+#~ "Page scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+#~ "\"%2$s\">Preview page</a>"
+#~ msgstr ""
+#~ "Strony planowane: <strong>%1$ s</strong>. <a target=\"_blank\"\" href="
+#~ "\"\"%2$s\">Podgląd strony</a>"
+
+#~ msgid ""
+#~ "Page draft updated. <a target=\"_blank\" href=\"%s\">Preview page</a>"
+#~ msgstr ""
+#~ "Szkic posta zaktualizowany. <a target=\"\"_blank\"\" href=\"\"%s"
+#~ "\"\">Podejrzyj post</a>"
+
+#~ msgid "Media attachment updated."
+#~ msgstr "Załączniki media zaktualizowane."
+
+#~ msgid "Revisions"
+#~ msgstr "Wersje"
+
+#~ msgctxt "post format"
+#~ msgid "Format"
+#~ msgstr "Format"
+
+#~ msgid "Page Attributes"
+#~ msgstr "Zmień atrybuty strony"
+
+#~ msgid "Attributes"
+#~ msgstr "Atrybuty"
+
+#~ msgid "Excerpt"
+#~ msgstr "Skrót"
+
+#~ msgid "Send Trackbacks"
+#~ msgstr "Wyślij Trackbacks"
+
+#~ msgid "Custom Fields"
+#~ msgstr "Dodatkowe pola"
+
+#~ msgid "Discussion"
+#~ msgstr "Dyskusja"
+
+#~ msgid "Featured Image"
+#~ msgstr "Główny obraz"
+
+#~ msgid "Delete image"
+#~ msgstr "Usuń obraz"
+
+#~ msgid "Delete"
+#~ msgstr "Usuń"
+
+#~ msgid "Add gallery images"
+#~ msgstr "﻿Dodaj Galerię / Zdjęcia"
+
+#~ msgid "No file chosen"
+#~ msgstr "Nie wybrano pliku"
+
+#~ msgid "Upgrade your version of WordPress for full media support."
+#~ msgstr "Zmień swoją wersję WordPressa na pełną obsługę multimediów."
+
+#~ msgid "View File"
+#~ msgstr "Zobacz plik"
+
+#~ msgid "Framework Settings"
+#~ msgstr "Ustawienia frameworka"
+
+#~ msgid "%s WordPress Theme"
+#~ msgstr "%s skórka do WordPress"
+
+#~ msgid "Comments on %1$s"
+#~ msgstr "Komentarze o %1$s"
+
+#~ msgid "View all posts in: %s"
+#~ msgstr "Zobacz wszystkie wpisy w %s"
+
+#~ msgid "The %s field is required."
+#~ msgstr "%s jest wymagane."
+
+#~ msgid "The %s field must have a value."
+#~ msgstr "%s pole musi mieć wartość."
+
+#~ msgid "The %s field must contain a valid email address."
+#~ msgstr "%s pole musi zawierać poprawny adres e-mail."
+
+#~ msgid "The %s field must contain a valid URL."
+#~ msgstr "%s pole musi zawierać poprawny adres URL."
+
+#~ msgid "The %s field must be at least %s characters in length."
+#~ msgstr "%s polu musi być co najmniej %s znaków długości."
+
+#~ msgid "The %s field can not exceed %s characters in length."
+#~ msgstr "%s Pole nie może przekroczyć %s znaków długości."
+
+#~ msgid "The %s field must be exactly %s characters in length."
+#~ msgstr "%s pole musi być dokładnie %s znaków."
+
+#~ msgid "The %s field may only contain alphabetical characters."
+#~ msgstr "%s pole może zawierać tylko znaki alfabetu."
+
+#~ msgid "The %s field may only contain alpha-numeric characters."
+#~ msgstr "%s pole może zawierać tylko znaki alfanumeryczne."
+
+#~ msgid ""
+#~ "The %s field may only contain alpha-numeric characters, underscores, and "
+#~ "dashes."
+#~ msgstr ""
+#~ "%s pole może zawierać tylko znaki alfanumeryczne, podkreślenia i kreski."
+
+#~ msgid "The %s field must contain only numbers."
+#~ msgstr "%s pole musi zawierać tylko liczby."
+
+#~ msgid "The %s field must contain only numeric characters."
+#~ msgstr "%s poe musi zawierać tylko cyfry."
+
+#~ msgid "The %s field must contain an integer."
+#~ msgstr "%s pole musi zawierać liczbę całkowitą."
+
+#~ msgid "The %s field is not in the correct format."
+#~ msgstr "Pole %s nie jest w odpowiednim formacie."
+
+#~ msgid "The %s field does not match the %s field."
+#~ msgstr "Pole%s nie pasuje do %s."
+
+#~ msgid "The %s field must contain only positive numbers."
+#~ msgstr "%s pole musi zawierać tylko liczby."
+
+#~ msgid "The %s field must contain a number greater than zero."
+#~ msgstr "%s pole musi zawierać liczbę większą od zera."
+
+#~ msgid "The %s field must contain a decimal number."
+#~ msgstr "%s pole musi zawierać liczbę dziesiętną."
+
+#~ msgid "The %s field must contain a number less than %s."
+#~ msgstr "%s pole musi zawierać liczbę mniejszą niż %s."
+
+#~ msgid "The %s field must contain a number greater than %s."
+#~ msgstr "%s pole musi zawierać liczbę większą od %s,"
+
+#~ msgid "Prev"
+#~ msgstr "Poprzednie"
+
+#~ msgid "Price, highest first"
+#~ msgstr "Cena, od najwyższej"
+
+#~ msgid "Price, lowest first"
+#~ msgstr "Cena, od najniższej"
+
+#~ msgid "Lot size, largest first"
+#~ msgstr "Powierzchnia działki, najpierw największe"
+
+#~ msgid "Dimensions"
+#~ msgstr "Rozmiary"
+
+#~ msgid "Published on "
+#~ msgstr "Opublikowano w dniu"
+
+#~ msgid "Comments"
+#~ msgstr "Skomentuj"
+
+#~ msgid "wall"
+#~ msgstr "ściany"
+
+#~ msgid "thickness"
+#~ msgstr "szerokość"
+
+#~ msgid "It's really simple"
+#~ msgstr "To naprawdę proste"
+
+#~ msgid "Customization"
+#~ msgstr "Dostosowanie"
+
+#~ msgid "We are"
+#~ msgstr "Jesteśmy"
