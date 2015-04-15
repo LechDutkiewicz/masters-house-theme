@@ -44,7 +44,7 @@ class Shandora_Featured_Listing_Widget extends WP_Widget {
 		/* Create the widget. */
 		$this->WP_Widget(
 				'shandora-featured-listing', // $this->id_base
-				__( 'Shandora Featured Listing', 'bon' ), // $this->name
+				'Shandora Featured Listing', // $this->name
 				$widget_options, // $this->widget_options
 				$control_options  // $this->control_options
 		);

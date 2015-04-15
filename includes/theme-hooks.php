@@ -1022,7 +1022,7 @@ function shandora_listing_spec_close() {
 	echo '</section>';
 }
 
-function shandora_listing_dpe_ges() {
+/*function shandora_listing_dpe_ges() {
 	global $post;
 	if ( bon_get_option( 'enable_dpe_ges', false ) == 'yes' ) {
 
@@ -1271,7 +1271,7 @@ if ( $ges >= 80 ) {
 </div>
 <?php
 }
-}
+}*/
 
 /**
 * Get Listing Map

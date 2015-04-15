@@ -464,7 +464,7 @@ $('.package-form select').change(function(){
 			var priceContainer = $('.price-box .price'),
 			priceSpan = $('span[itemprop="price"]'),
 			wallContainer = $('.entry-meta .wall'),
-			wallSpan = $('span[data-meta="thickness"');
+			wallSpan = $('span[data-meta="thickness"]');
 
 			priceContainer.fadeOut(300, 'easeInOutSine', function() {
 				priceSpan.html(data.price);
@@ -1350,23 +1350,23 @@ var launchGoogleEvents = function() {
 		14: {
 			category: 'Buy_cottage',
 			action: 'click_top_cta',
-			selector: $('.top-cta a'),
+			selector: $('.top-cta a.cta'),
 			label: $('h1.entry-title').html(),
-			value: $('span[itemprop="price"]'),
+			value: $('span[itemprop="price"]').attr('data-value'),
 		},
 		15: {
 			category: 'Buy_cottage',
 			action: 'click_bottom_cta',
-			selector: $('.bottom-cta a'),
+			selector: $('.bottom-cta a.cta'),
 			label: $('h1.entry-title').html(),
-			value: $('span[itemprop="price"]'),
+			value: $('span[itemprop="price"]').attr('data-value'),
 		},
 		16: {
 			category: 'Contact_form',
 			action: 'from_product_page',
 			selector: $('.listing-contact form, #contact-modal form'),
 			label: $('h1.entry-title').html(),
-			value: $('span[itemprop="price"]'),
+			value: $('span[itemprop="price"]').attr('data-value'),
 		},
 		17: {
 			category: 'Open_faq',

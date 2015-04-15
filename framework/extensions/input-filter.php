@@ -539,15 +539,15 @@ function bon_sanitize_background_position( $value ) {
  */
 function bon_recognized_background_position() {
 	$default = array(
-		'top left'      => __( 'Top Left', 'bon' ),
-		'top center'    => __( 'Top Center', 'bon' ),
-		'top right'     => __( 'Top Right', 'bon' ),
-		'center left'   => __( 'Middle Left', 'bon' ),
-		'center center' => __( 'Middle Center', 'bon' ),
-		'center right'  => __( 'Middle Right', 'bon' ),
-		'bottom left'   => __( 'Bottom Left', 'bon' ),
-		'bottom center' => __( 'Bottom Center', 'bon' ),
-		'bottom right'  => __( 'Bottom Right', 'bon')
+		'top left'      => 'Top Left',
+		'top center'    => 'Top Center',
+		'top right'     => 'Top Right',
+		'center left'   => 'Middle Left',
+		'center center' => 'Middle Center',
+		'center right'  => 'Middle Right',
+		'bottom left'   => 'Bottom Left',
+		'bottom center' => 'Bottom Center',
+		'bottom right'  => 'Bottom Right'
 		);
 	return apply_filters( 'bon_recognized_background_position', $default );
 }
@@ -571,8 +571,8 @@ function bon_sanitize_background_attachment( $value ) {
  */
 function bon_recognized_background_attachment() {
 	$default = array(
-		'scroll' => __( 'Scroll Normally', 'bon' ),
-		'fixed'  => __( 'Fixed in Place', 'bon')
+		'scroll' => 'Scroll Normally',
+		'fixed'  => 'Fixed in Place'
 		);
 	return apply_filters( 'bon_recognized_background_attachment', $default );
 }
@@ -657,10 +657,10 @@ function bon_sanitize_font_style( $value ) {
  */
 function bon_recognized_font_styles() {
 	$default = array(
-		'normal'      => __( 'Normal', 'bon' ),
-		'italic'      => __( 'Italic', 'bon' ),
-		'bold'        => __( 'Bold', 'bon' ),
-		'bold italic' => __( 'Bold Italic', 'bon' )
+		'normal'      => 'Normal',
+		'italic'      => 'Italic',
+		'bold'        => 'Bold',
+		'bold italic' => 'Bold Italic'
 	);
 	return apply_filters( 'bon_recognized_font_styles', $default );
 }

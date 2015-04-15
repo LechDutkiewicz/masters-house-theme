@@ -43,7 +43,7 @@ class Shandora_Search_Listing_Widget extends WP_Widget {
 		/* Create the widget. */
 		$this->WP_Widget(
 			'shandora-search-listing',               // $this->id_base
-			__( 'Shandora Search Listing', 'bon' ), // $this->name
+			'Shandora Search Listing', // $this->name
 			$widget_options,                 // $this->widget_options
 			$control_options                 // $this->control_options
 		);

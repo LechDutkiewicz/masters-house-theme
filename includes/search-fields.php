@@ -65,13 +65,13 @@ function shandora_get_search_option($option = 'status') {
 
 		break;
 
-		case 'furnishing':
+		/*case 'furnishing':
 
 			$val =  array(
 						'any' => __('Any','bon'),
 						'unfurnished' => __('Unfurnished', 'bon'),
 						'furnished' => __('Furnished', 'bon'),
-					);
+					);*/
 
 		break;
 
@@ -110,7 +110,7 @@ function shandora_get_search_option($option = 'status') {
 	return $val;
 }
 
-function shandora_get_car_search_option($option = 'status') {
+/*function shandora_get_car_search_option($option = 'status') {
 	$val = array();
 
 	switch ($option) {
@@ -397,7 +397,7 @@ function shandora_search_yearbuilt_field($value = array(), $class) {
 	//$o .= $form->form_input('yearbuilt', $value['yearbuilt'], 'placeholder="'.__('Type year built here','bon').'" class="'.$class.'"');
 
 	return apply_atomic( 'search_yearbuilt_field_output', $o );
-}
+}*/
 
 function shandora_search_title_field($value = array(), $class) {
 
@@ -983,7 +983,7 @@ function shandora_search_floor_field($value = array(), $class) {
  * @param string $value
  *
  */
-function shandora_search_garage_field($value = array(), $class) {
+/*function shandora_search_garage_field($value = array(), $class) {
 
 	$o = apply_atomic('search_garage_field', '', $value, $class );
 
@@ -1006,7 +1006,7 @@ function shandora_search_garage_field($value = array(), $class) {
 	$o .= $form->form_dropdown('property_garage', $garage_arr, $value['property_garage'], 'class="no-custom select-slider '.$class.'"');
 
 	return apply_atomic( 'search_garage_field_output', $o );
-}
+}*/
 
 /**
  * Used to output basement field in search panel
@@ -1231,7 +1231,7 @@ function shandora_search_agent_field($value = array(), $class) {
  * @param string $value
  *
  */
-function shandora_search_reg_field($value = array(), $class) {
+/*function shandora_search_reg_field($value = array(), $class) {
 
 	$o = apply_atomic('search_reg_field', '', $value, $class );
 
@@ -1246,7 +1246,7 @@ function shandora_search_reg_field($value = array(), $class) {
 	$o .= $form->form_input('reg_number', $value['reg_number'], 'placeholder="'.__('Type Reg. number here','bon').'" class="'.$class.'"');
 
 	return apply_atomic( 'search_reg_field_output', $o );
-}
+}*/
 
 /**
  * Used to output color field in search panel
@@ -1369,7 +1369,7 @@ function shandora_search_car_status_field($value = array(), $class) {
  * @param string $value
  *
  */
-function shandora_search_dealer_location_field($value = array(), $class) {
+/*function shandora_search_dealer_location_field($value = array(), $class) {
 
 	$o = apply_atomic('search_dealer_location_field', '', $value, $class );
 
@@ -1385,7 +1385,7 @@ function shandora_search_dealer_location_field($value = array(), $class) {
 
 	return apply_atomic( 'search_dealer_location_field_output', $o );
 
-}
+}*/
 
 /**
  * Used to output car dealer location field in search panel
@@ -1395,7 +1395,7 @@ function shandora_search_dealer_location_field($value = array(), $class) {
  * @param string $value
  *
  */
-function shandora_search_body_type_field($value = array(), $class) {
+/*function shandora_search_body_type_field($value = array(), $class) {
 
 	$o = apply_atomic('search_body_type_field', '', $value, $class );
 
@@ -1411,7 +1411,7 @@ function shandora_search_body_type_field($value = array(), $class) {
 
 	return apply_atomic( 'search_body_type_field_output', $o );
 
-}
+}*/
 
 /**
  * Used to output car feature field in search panel
@@ -1472,7 +1472,7 @@ function shandora_search_manufacturer_field($value = array(), $class) {
  * @param string $value
  *
  */
-function shandora_search_transmission_field($value = array(), $class) {
+/*function shandora_search_transmission_field($value = array(), $class) {
 
 	$o = apply_atomic('search_transmission_field', '', $value, $class );
 
@@ -1492,7 +1492,7 @@ function shandora_search_transmission_field($value = array(), $class) {
 	$o .= $form->form_dropdown('transmission', $trans, $value['transmission'], 'class=" '.$class.'"');
 
 	return apply_atomic( 'search_transmission_field_output', $o );
-}
+}*/
 
 /**
  * Used to output ancap field in search panel
@@ -1502,7 +1502,7 @@ function shandora_search_transmission_field($value = array(), $class) {
  * @param string $value
  *
  */
-function shandora_search_ancap_field($value = array(), $class) {
+/*function shandora_search_ancap_field($value = array(), $class) {
 
 	$o = apply_atomic('search_ancap_field', '', $value, $class );
 
@@ -1523,7 +1523,7 @@ function shandora_search_ancap_field($value = array(), $class) {
 	$o .= $form->form_dropdown('ancap', $ancap_arr, $value['ancap'], 'class="no-custom select-slider '.$class.'"');
 
 	return apply_atomic( 'search_ancap_field_output', $o );
-}
+}*/
 
 
 /**

@@ -291,11 +291,11 @@ if ( !class_exists( 'BON_Shortcodes' ) ) {
 					$comments_link = '<span class="' . esc_attr( $attr['css_class'] ) . '">' . sprintf( $attr['none'], number_format_i18n( $number ) ) . '</span>';
 			}
 			elseif ( 0 == $number )
-				$comments_link = '<span class="entry-comment-meta entry-post-meta"><strong class="comment-text entry-meta-title">' . _n('Comment:', 'Comment:', $number, 'bon') . '</strong> <a class="' . esc_attr( $attr['css_class'] ) . '" href="' . get_permalink() . $target .'" title="' . sprintf( esc_attr__( 'Comment on %1$s', 'bon' ), the_title_attribute( 'echo=0' ) ) . '">' . number_format_i18n( $number ) . '</a></span>';
+				$comments_link = '<span class="entry-comment-meta entry-post-meta"><strong class="comment-text entry-meta-title">' . _n('Comment:', 'Comments:', $number, 'bon') . '</strong> <a class="' . esc_attr( $attr['css_class'] ) . '" href="' . get_permalink() . $target .'" title="' . sprintf( esc_attr__( 'Comment on %1$s', 'bon' ), the_title_attribute( 'echo=0' ) ) . '">' . number_format_i18n( $number ) . '</a></span>';
 			//elseif ( 1 == $number )
 				//$comments_link = '<span class="entry-comment-meta entry-post-meta"><strong class="comment-text entry-meta-title">' . $attr['one'] . '</strong> <a class="' . esc_attr( $attr['css_class'] ) . '" href="' . get_comments_link() . '" title="' . sprintf( esc_attr__( 'Comment on %1$s', 'bon' ), the_title_attribute( 'echo=0' ) ) . '">' . number_format_i18n( $number ) . '</a></span>';
 			elseif ( 0 < $number )
-				$comments_link = '<span class="entry-comment-meta entry-post-meta"><strong class="comment-text entry-meta-title">' . _n('Comment:', 'Comment:', $number, 'bon') . '</strong> <a class="' . esc_attr( $attr['css_class'] ) . '" href="' . get_comments_link() . '" title="' . sprintf( esc_attr__( 'Comments on %1$s', 'bon' ), the_title_attribute( 'echo=0' ) ) . '">' . number_format_i18n( $number ) . '</a></span>';
+				$comments_link = '<span class="entry-comment-meta entry-post-meta"><strong class="comment-text entry-meta-title">' . _n('Comment:', 'Comments:', $number, 'bon') . '</strong> <a class="' . esc_attr( $attr['css_class'] ) . '" href="' . get_comments_link() . '" title="' . sprintf( esc_attr__( 'Comments on %1$s', 'bon' ), the_title_attribute( 'echo=0' ) ) . '">' . number_format_i18n( $number ) . '</a></span>';
 
 			return self::render( $comments_link, $attr );
 		}

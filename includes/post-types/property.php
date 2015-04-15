@@ -169,9 +169,8 @@ array(
 			'std' => __( 'Ground floor', 'bon' ),
 			'type' => 'select',
 			'options' => array(
-				__( 'Ground floor', 'bon' ) => __( 'Ground floor', 'bon' ),
-				__( 'First floor', 'bon' ) => __( 'First floor', 'bon' ),
-				__( 'Second floor', 'bon' ) => __( 'Second floor', 'bon' ),
+				'ground_floor' => __( 'Ground floor', 'bon' ),
+				'first_floor' => __( 'First floor', 'bon' ),
 				)
 			),
 		array(

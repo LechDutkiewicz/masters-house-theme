@@ -135,7 +135,7 @@ function shandora_search_listing_form() {
 		if ( $options["Activated"] ) {
 			shandora_get_search_listing_form_idx();
 		} else {
-			echo __( 'Please Activate Your IDX Account.', 'bon' );
+			echo 'Please Activate Your IDX Account.';
 		}
 	} else {
 		echo shandora_get_search_listing_form();
@@ -266,7 +266,7 @@ function shandora_get_search_page_url() {
 	$row_count = 3;
 
 	if ( !$row_1 && !$row_2 && !$row_3 ) {
-		return '<p style="margin-top: 50px">' . __( 'Please setup your search fields in Shandora > Theme Settings > Listing Settings > Custom Search Field', 'bon' ) . '</p>';
+		return '<p style="margin-top: 50px">' . 'Please setup your search fields in Shandora > Theme Settings > Listing Settings > Custom Search Field' . '</p>';
 	}
 
 	$search_permalink = shandora_get_search_page_url();
@@ -1687,11 +1687,25 @@ function shandora_get_dimensions( $args, $lotsize = null ) {
 		$dimensionwidth = $arg[$prefix . $suffix . 'dimensionswidth'];
 		$dimensionheight = $arg[$prefix . $suffix . 'dimensionsheight'];
 
+		switch ( $dimensionfloor ) {
+
+			case 'ground_floor':
+				$dimensionfloor = __( 'Ground floor', 'bon' );
+				break;
+
+			case 'first_floor':
+				$dimensionfloor = __( 'First floor', 'bon' );
+				break;
+
+			default:
+				break;
+		}
+
 		if ( $dimensionarea ) {
 			// when total area is set up
 
 			if ( count( $args[0] ) > 1 )
-				// when there are more than 1 floor
+				// when there is more than 1 floor
 				$string.=$dimensionfloor . ': ';
 
 			$string.=$dimensionarea . " $sizemeasurement";
@@ -1700,7 +1714,7 @@ function shandora_get_dimensions( $args, $lotsize = null ) {
 			// when total area is not set up but there are dimensions
 
 			if ( count( $args[0] ) > 1 )
-				// when there are more than 1 floor
+				// when there is more than 1 floor
 				$string.=$dimensionfloor . ': ';
 
 			$string.=$dimensionwidth . " $measurement x " . $dimensionheight . " $measurement";
@@ -1709,7 +1723,7 @@ function shandora_get_dimensions( $args, $lotsize = null ) {
 			// when total area and dimensions are not set up
 
 			if ( count( $args[0] ) > 1 )
-				// when there are more than 1 floor
+				// when there is more than 1 floor
 				$string.=$dimensionfloor . ': ';
 
 			$string.=$lotsize . " $sizemeasurement";
