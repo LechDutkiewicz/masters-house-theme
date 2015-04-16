@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
-"POT-Creation-Date: 2015-04-16 14:12+0100\n"
-"PO-Revision-Date: 2015-04-16 14:13+0100\n"
+"POT-Creation-Date: 2015-04-16 15:36+0100\n"
+"PO-Revision-Date: 2015-04-16 15:38+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: pl\n"
@@ -1521,9 +1521,22 @@ msgid "First floor"
 msgstr "Pierwsze piętro"
 
 #: includes/theme-actions.php:1927
+msgid "Cottages"
+msgstr "Domki drewniane"
+
+#: includes/theme-actions.php:1927
+msgid "Cottage"
+msgstr "Domek drewniany"
+
+#: includes/theme-actions.php:1934
 msgctxt "product url slug"
 msgid "wooden-cottage"
 msgstr "domek-drewniany"
+
+#: includes/theme-actions.php:1940
+msgctxt "products category url slug"
+msgid "type"
+msgstr "domki-drewniane"
 
 #: includes/theme-hooks.php:672
 #, php-format
@@ -1702,18 +1715,8 @@ msgstr "Szukaj"
 #~ msgid "Log in to reply."
 #~ msgstr "Zaloguj się, aby odpowiedzieć."
 
-#~ msgid "Cottage"
-#~ msgstr "Domek drewniany"
-
-#~ msgid "Cottages"
-#~ msgstr "Domki drewniane"
-
 #~ msgid "Second floor"
 #~ msgstr "Drugie piętro"
-
-#~ msgctxt "products category url slug"
-#~ msgid "type"
-#~ msgstr "domki-drewniane"
 
 #~ msgid "Color of cta"
 #~ msgstr "Skomentuj"
