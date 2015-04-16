@@ -1,3 +1,7 @@
+# 16 IV 2015 Update
+
+1. Added sortable column with cottages category in CMS all cottages view. Now each item's category is displayed and you can sort by it.
+
 # 15 IV 2015 Update
 
 1. Added disqus comments as an alternative to regular WordPress comments below each post. Filters spam better and gives easier login options for visitors.
