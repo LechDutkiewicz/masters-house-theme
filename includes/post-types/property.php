@@ -73,8 +73,8 @@ if ( !function_exists( 'shandora_setup_listing_post_type' ) ) {
 
 
 
-		$name = __( 'Cottage', 'bon' );
-		$plural = __( 'Cottages', 'bon' );
+		$name = get_cottages_name();
+		$plural = get_cottages_name( 'plural' );
 		$args = array(
 			'has_archive' => $has_archive,
 			'rewrite' => array(
@@ -436,7 +436,7 @@ if ( $use_rewrite == 'no' ) {
 
 	$property_feature_rewrite = true;
 	$property_location_rewrite = true;
-	$property_type_rewrite = array( 'slug' => _x( 'type', 'products category url slug', 'bon' ) );
+	$property_type_rewrite = array( 'slug' => get_cottages_category_slug() );
 } else {
 
 	$property_feature_rewrite = $property_feature_rewrite_var;

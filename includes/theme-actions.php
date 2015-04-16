@@ -1922,9 +1922,22 @@ function shandora_home_cta( $args, $visited = 0 ) {
 		return $img['src'];
 	}
 
+	function get_cottages_name( $plural = NULL ) {
+
+		return ( $plural = 'plural' ? __( 'Cottages', 'bon' ) : __( 'Cottage', 'bon' ) );
+
+
+	}
+
 	function get_cottages_slug() {
 
 		return (_x( 'wooden-cottage', 'product url slug', 'bon' ));
 
+	}
+
+	function get_cottages_category_slug() {
+
+		return ( _x( 'type', 'products category url slug', 'bon' ) );
+		
 	}
 	?>

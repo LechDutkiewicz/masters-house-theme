@@ -252,8 +252,9 @@ if( !function_exists('shandora_listing_custom_columns') ) {
 	            "cb" => "<input type=\"checkbox\" />",  
 	            "title" => __( 'Poll Title','bon' ),
 	            "price" => __( 'Price','bon' ),
+	            "type" => __( 'Type', 'bon' ),
 	            "status" => __( 'Status','bon' ),
-	            "date" => __( 'Date','bon' )
+	            "date" => __( 'Date','bon' ),
 	        );  
 	  
 	        return $columns;  
@@ -325,6 +326,36 @@ if( !function_exists('shandora_manage_columns') ) {
 			case 'price':
 				$price = shandora_get_meta( $post->ID, 'listing_price', true);
 				echo $price;
+			break;
+
+			case 'type':
+					/* Get the genres for the post. */
+				$terms = get_the_terms( $post_id, 'property-type' );
+
+				/* If terms were found. */
+				if ( !empty( $terms ) ) {
+
+					$out = array();
+
+					/* Loop through each term, linking to the 'edit posts' page for the specific term. */
+					foreach ( $terms as $term ) {
+						$out[] = sprintf( '<a href="%s">%s</a>',
+							esc_url( add_query_arg( array( 'post_type' => $post->post_type, 'property-type' => $term->slug ), 'edit.php' ) ),
+							esc_html( sanitize_term_field( 'name', $term->name, $term->term_id, 'Property Type', 'display' ) )
+						);
+					}
+
+					/* Join the terms, separating them with a comma. */
+					echo join( ', ', $out );
+
+					//print_r($out);
+				}
+
+				/* If no terms were found, output a default message. */
+				else {
+					_e( 'No category found' );
+				}
+
 			break;
 
 		}
