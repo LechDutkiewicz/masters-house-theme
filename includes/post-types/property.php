@@ -78,7 +78,7 @@ if ( !function_exists( 'shandora_setup_listing_post_type' ) ) {
 		$args = array(
 			'has_archive' => $has_archive,
 			'rewrite' => array(
-				'slug' => _x( 'wooden-cottage', 'product url slug', 'bon' )
+				'slug' => get_cottages_slug(),
 				),
 			'supports' => array( 'editor', 'title', 'excerpt', 'thumbnail', 'front-end-editor' ),
 			// added by Lech Dutkiewicz

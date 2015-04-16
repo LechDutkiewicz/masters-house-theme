@@ -1921,4 +1921,10 @@ function shandora_home_cta( $args, $visited = 0 ) {
 
 		return $img['src'];
 	}
+
+	function get_cottages_slug() {
+
+		return (_x( 'wooden-cottage', 'product url slug', 'bon' ));
+
+	}
 	?>

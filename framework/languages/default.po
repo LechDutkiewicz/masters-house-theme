@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
-"POT-Creation-Date: 2015-04-15 16:12+0100\n"
-"PO-Revision-Date: 2015-04-15 16:16+0100\n"
+"POT-Creation-Date: 2015-04-16 15:00+0100\n"
+"PO-Revision-Date: 2015-04-16 15:00+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: en\n"
@@ -1506,6 +1506,11 @@ msgstr ""
 msgid "First floor"
 msgstr ""
 
+#: includes/theme-actions.php:1927
+msgctxt "product url slug"
+msgid "wooden-cottage"
+msgstr "domek-drewniany"
+
 #: includes/theme-hooks.php:672
 #, php-format
 msgid "%s Garage"
@@ -1688,10 +1693,6 @@ msgstr ""
 
 #~ msgid "Cottages"
 #~ msgstr "Domki drewniane"
-
-#~ msgctxt "product url slug"
-#~ msgid "wooden-cottage"
-#~ msgstr "domek-drewniany"
 
 #~ msgid "Second floor"
 #~ msgstr "Drugie piętro"
