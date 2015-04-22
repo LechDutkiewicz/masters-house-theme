@@ -1,3 +1,8 @@
+# 22 IV 2015 Update
+
+1. Compressed font files
+2. Switched some font face rules for better display
+
 # 16 IV 2015 Update
 
 1. Added sortable column with cottages category in CMS all cottages view. Now each item's category is displayed and you can sort by it.
