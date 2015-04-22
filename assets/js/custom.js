@@ -480,7 +480,7 @@ $('.package-form select').change(function(){
 
 });
 
-$('#backtop').click(function () {
+$('.backtop').click(function () {
 	jQuery('body,html').animate({
 		scrollTop: 0
 	}, 600, "easeInSine");
@@ -853,17 +853,11 @@ var onLoad = {
 
 
 		$(window).scroll(function () {
-			if ($(this).scrollTop() > 800) {
-				$('#scroll-top').fadeIn()
+			if ($(window).scrollTop() < 800) {
+				$('#scroll-top').fadeOut();
 			} else {
-				$('#scroll-top').fadeOut()
+				$('#scroll-top').fadeIn();
 			}
-		});
-		$('#scroll-top').click(function (e) {
-			e.preventDefault();
-			$('body,html').animate({
-				scrollTop: 0
-			}, 800);
 		});
 
 		$.ajax({

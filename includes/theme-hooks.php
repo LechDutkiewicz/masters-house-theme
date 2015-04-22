@@ -106,7 +106,7 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_testimonials_slider", 48 );
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_agent", 50 );
+		//add_action( "{$prefix}after_single_entry_content", "shandora_listing_agent", 50 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_related", 51 );
 
@@ -2269,7 +2269,7 @@ function shandora_is_home() {
 }
 
 function shandora_scroll_top_button() {
-	echo '<a id="scroll-top" href="#totop"><i class="bonicons bi-chevron-up"></i></a>';
+	echo '<a id="scroll-top" href="#totop"><i class="backtop bonicons bi-chevron-up"></i></a>';
 }
 
 // Added by Lech Dutkiewicz

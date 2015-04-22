@@ -91,7 +91,7 @@ if( !function_exists('shandora_setup_theme_supports') ) {
 			);
 		$theme_supports['bon-fee'] = '';
 		$theme_supports['get-the-image'] = '';
-		$theme_supports['theme-fonts'] = array( 'callback' => 'shandora_custom_typo','customizer' => true );
+		//$theme_supports['theme-fonts'] = array( 'callback' => 'shandora_custom_typo','customizer' => true );
 		$theme_supports['bon-core-sidebars'] = array( 
 			array(
 				'name' => __('Sidebar Primary','bon'),
