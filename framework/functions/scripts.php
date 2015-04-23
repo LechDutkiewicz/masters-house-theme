@@ -135,9 +135,9 @@ function bon_scripts() {
 
 
     if (WP_ENV === 'development') {
-      wp_register_script( 'bon-js', BON_THEME_URI . '/assets/js/custom.js', array( 'jquery'), '1.0', true );
+      wp_register_script( 'bon-js', BON_THEME_URI . '/assets/js/scripts.js', array( 'jquery'), '1.0', true );
     } else if (WP_ENV === 'production') {
-      wp_register_script( 'bon-js', BON_THEME_URI . '/assets/js/custom.min.js', array( 'jquery'), '1.0', true );
+      wp_register_script( 'bon-js', BON_THEME_URI . '/assets/js/scripts.min.js', array( 'jquery'), '1.0', true );
     }
     wp_enqueue_script( 'bon-js' );
     wp_localize_script( 'bon-js', 'bon_ajax', apply_filters( 'bon_ajax_param' , array('url' => admin_url('admin-ajax.php'), 'toolkit_url' => plugins_url() . '/bon-toolkit/') ) );

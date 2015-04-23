@@ -1,3 +1,4 @@
 node_modules
-assets/css
-assets/js/custom.js
+assets/css/*main*.css
+assets/js/*custom*.js
+assets/js/framework.js
