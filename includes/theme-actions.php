@@ -1386,6 +1386,10 @@ function shandora_process_contactform() {
 
 	$messages = esc_textarea( $_POST['messages'] );
 
+	if (!$messages) {
+		$messages = isset( $_POST['messages_default'] ) ? esc_attr( $_POST['messages_default'] ) : '';
+	}
+
 	if ( empty( $messages ) ) {
 		$return_data['value'] = __('Please enter your messages.', 'bon');
 		die( json_encode( $return_data ) );
