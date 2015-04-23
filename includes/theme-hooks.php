@@ -2269,7 +2269,7 @@ function shandora_is_home() {
 }
 
 function shandora_scroll_top_button() {
-	echo '<a id="scroll-top" href="#totop"><i class="backtop bonicons bi-chevron-up"></i></a>';
+	echo '<a id="scroll-top" class="backtop" href="#totop"><i class="bonicons bi-chevron-up"></i></a>';
 }
 
 // Added by Lech Dutkiewicz

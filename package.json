@@ -1,0 +1,22 @@
+{
+  "name": "shandora",
+  "version": "1.0.0",
+  "description": "1. Compressed font files\r 2. Switched some font face rules for better display",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LechDutkiewicz/masters-house-theme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LechDutkiewicz/masters-house-theme/issues"
+  },
+  "homepage": "https://github.com/LechDutkiewicz/masters-house-theme",
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
+}
