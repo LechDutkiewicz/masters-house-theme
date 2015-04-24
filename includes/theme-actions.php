@@ -364,11 +364,11 @@ function shandora_get_search_page_url() {
 	if ( !$is_widget ) {
 		$output .= '<div class="column large-2 small-11 large-uncentered small-centered" id="submit-button">';
 		$output .= wp_nonce_field( 'search-panel-submit', 'search_nonce', false, false );
-		$output .= $form->form_submit( '', $search_label, 'class="button expand small flat ' . $button_color . ' radius"' );
+		$output .= $form->form_submit( '', $search_label, 'class="button expand flat ' . $button_color . ' radius"' );
 	} else {
 		$output .= '<div class="column large-12 small-11 large-uncentered small-centered" style="margin-top: 1em;">';
 		$output .= wp_nonce_field( 'search-panel-submit', 'search_nonce', false, false );
-		$output .= $form->form_submit( '', $search_label, 'class="button small flat ' . $button_color . ' radius"' );
+		$output .= $form->form_submit( '', $search_label, 'class="button flat ' . $button_color . ' radius"' );
 	}
 
 	if ( defined( 'ICL_LANGUAGE_CODE' ) ) {
