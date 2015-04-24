@@ -1141,7 +1141,6 @@ var launchGoogleEvents = function() {
 				});
 			} else {
 				$(event.selector.selector).bind( 'click', function() {
-					console.log(event);
 					if (event.label) {
 						if (event.value) {
 							ga( 'send', 'event', event.category, event.action, event.label, event.value );	
