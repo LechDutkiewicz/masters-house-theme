@@ -88,6 +88,8 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_services", 10 );
 
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 12 );
+
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_spec_open", 15 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_detail_tabs", 20 );
@@ -101,8 +103,6 @@ function shandora_setup_theme_hook() {
 	//add_action( "{$prefix}after_single_entry_content", "shandora_listing_dpe_ges", 32 );
 
 	//add_action("{$prefix}after_single_entry_content", "shandora_listing_map", 35);
-
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 45 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_testimonials_slider", 48 );
 
@@ -1469,8 +1469,11 @@ function shandora_post_related() {
 *
 */
 function shandora_listing_toolsection() {
-	if ( is_singular( 'listing' ) ) {
-		bon_get_template_part( 'block', 'block-toolsection' );
+	$display = bon_get_option( 'tool_section_display' );
+	if ( $display === '1' || $display === '2') {
+		if ( is_singular( 'listing' ) ) {
+			bon_get_template_part( 'block', 'block-toolsection' );
+		}
 	}
 }
 
@@ -1496,7 +1499,10 @@ function shandora_home_promotion() {
 */
 
 function shandora_home_toolsection() {
-	bon_get_template_part( 'block', 'block-toolsection-home' );
+	$display = bon_get_option( 'tool_section_display' );
+	if ( $display === '2' || $display === '3') {
+		bon_get_template_part( 'block', 'block-toolsection-home' );
+	}
 }
 
 /**

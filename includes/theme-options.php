@@ -440,8 +440,14 @@ $options[] = array( 'slug' => 'bon_options',
 	);
 
 $options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'CTA Button Color', 'bon' ),
+	'id' => 'cta_button_color',
+	'type' => 'radio-img',
+	'options' => get_colors_list()
+	);
+
+$options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Search Listing Button Color', 'bon' ),
-	'desc' => __( 'Choose colorization stylesheet.', 'bon' ),
 	'id' => 'search_button_color',
 	'type' => 'radio-img',
 	'options' => get_colors_list()
@@ -1553,6 +1559,19 @@ $options[] = array( 'slug' => 'bon_options',
 			'desc' => __( 'Type in text displayed in section CTA on home page', 'bon' ),
 			'id' => 'tool_section_home_cta',
 			'type' => 'text' );
+
+		$options[] = array(
+			'type' => 'select',
+			'label' => __( 'Display on pages', 'bon' ),
+			'desc' => __( 'Choose to show or hide it on certaing pages', 'bon' ),
+			'options' => array(
+				'1' => __( 'Product page only', 'bon' ),
+				'2' => __( 'Product page and home page', 'bon' ),
+				'3' => __( 'Home page only', 'bon' ),
+				'4' => __( 'Neither home, nor product page', 'bon' )
+				),
+			'id' => 'tool_section_display'
+			);
 
 		$options[] = array(
 			'type' => 'select',

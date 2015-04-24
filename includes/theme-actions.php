@@ -1365,12 +1365,12 @@ function shandora_process_contactform() {
 		die( json_encode( $return_data ) );
 	}
 
-	$name = esc_html( $_POST['name'] );
+	/*$name = esc_html( $_POST['name'] );
 
 	if ( empty( $name ) ) {
 		$return_data['value'] = __( 'Please enter your name.', 'bon' );
 		die( json_encode( $return_data ) );
-	}
+	}*/
 
 	$email = sanitize_email( $_POST['email'] );
 
@@ -1399,7 +1399,7 @@ function shandora_process_contactform() {
 		global $akismet_api_host, $akismet_api_port;
 		$c['user_ip'] = preg_replace( '/[^0-9., ]/', '', $_SERVER['REMOTE_ADDR'] );
 		$c['blog'] = home_url();
-		$c['comment_author'] = $name;
+		//$c['comment_author'] = $name;
 		$c['comment_author_email'] = $email;
 		$c['comment_content'] = $messages;
 
@@ -1422,7 +1422,7 @@ function shandora_process_contactform() {
 $receiver = $_POST['receiver'];
 
 $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "You have received a new contact form message via %s \n", "bon" ), get_bloginfo( 'name' ) ) . '</p>';
-$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Name : %s \n", "bon" ), $name ) . '</p>';
+//$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Name : %s \n", "bon" ), $name ) . '</p>';
 $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Email : %s \n", "bon" ), $email ) . '</p>';
 $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Subject : %s \n", "bon" ), $subject ) . '</p>';
 $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Phone Number : %s \n", "bon" ), $phone ) . '</p>';
@@ -1684,63 +1684,65 @@ function shandora_get_dimensions( $args, $lotsize = null ) {
 	$suffix = SHANDORA_MB_SUFFIX;
 
 	$string = '';
-	foreach ( $args[0] as $arg ) {
+	if ( !empty($args) ) {
+		foreach ( $args[0] as $arg ) {
 
-		$dimensionarea = $arg[$prefix . $suffix . 'dimensionsarea'];
-		$dimensionfloor = $arg[$prefix . $suffix . 'dimensionfloor'];
-		$dimensionwidth = $arg[$prefix . $suffix . 'dimensionswidth'];
-		$dimensionheight = $arg[$prefix . $suffix . 'dimensionsheight'];
+			$dimensionarea = $arg[$prefix . $suffix . 'dimensionsarea'];
+			$dimensionfloor = $arg[$prefix . $suffix . 'dimensionfloor'];
+			$dimensionwidth = $arg[$prefix . $suffix . 'dimensionswidth'];
+			$dimensionheight = $arg[$prefix . $suffix . 'dimensionsheight'];
 
-		switch ( $dimensionfloor ) {
+			switch ( $dimensionfloor ) {
 
-			case 'ground_floor':
+				case 'ground_floor':
 				$dimensionfloor = __( 'Ground floor', 'bon' );
 				break;
 
-			case 'first_floor':
+				case 'first_floor':
 				$dimensionfloor = __( 'First floor', 'bon' );
 				break;
 
-			default:
+				default:
 				break;
-		}
+			}
 
-		if ( $dimensionarea ) {
+			if ( $dimensionarea ) {
 			// when total area is set up
 
-			if ( count( $args[0] ) > 1 )
+				if ( count( $args[0] ) > 1 )
 				// when there is more than 1 floor
-				$string.=$dimensionfloor . ': ';
+					$string.=$dimensionfloor . ': ';
 
-			$string.=$dimensionarea . " $sizemeasurement";
+				$string.=$dimensionarea . " $sizemeasurement";
 
-		} else if ( $dimensionwidth && $dimensionheight ) {
+			} else if ( $dimensionwidth && $dimensionheight ) {
 			// when total area is not set up but there are dimensions
 
-			if ( count( $args[0] ) > 1 )
+				if ( count( $args[0] ) > 1 )
 				// when there is more than 1 floor
-				$string.=$dimensionfloor . ': ';
+					$string.=$dimensionfloor . ': ';
 
-			$string.=$dimensionwidth . " $measurement x " . $dimensionheight . " $measurement";
+				$string.=$dimensionwidth . " $measurement x " . $dimensionheight . " $measurement";
 
-		} else if ( $lotsize ) {
+			} else if ( $lotsize ) {
 			// when total area and dimensions are not set up
 
-			if ( count( $args[0] ) > 1 )
+				if ( count( $args[0] ) > 1 )
 				// when there is more than 1 floor
-				$string.=$dimensionfloor . ': ';
+					$string.=$dimensionfloor . ': ';
 
-			$string.=$lotsize . " $sizemeasurement";
+				$string.=$lotsize . " $sizemeasurement";
 
-		} else {
+			} else {
 
-			return;
-			
+				return;
+				
+			}
+
+			if ( $arg !== end( $args[0] ) )
+				$string.= ', ';
+
 		}
-
-		if ( $arg !== end( $args[0] ) )
-			$string.= ', ';
-
 	}
 	return $string;
 }
@@ -1756,29 +1758,31 @@ function shandora_get_doors( $args ) {
 function shandora_get_doors_or_windows( $args, $element ) {
 	$measurement = bon_get_option( 'height_measure' );
 	$string = '';
-	foreach ( $args[0] as $arg ) {
+	if ( !empty($args) ) {
+		foreach ( $args[0] as $arg ) {
 			
 			$amount = $arg['shandora_listing_' . $element . 'amount'];
 
-		if ( $amount > 0 ) {
+			if ( $amount > 0 ) {
 
-			$type = $arg['shandora_listing_' . $element . 'type'];
-			$width = $arg['shandora_listing_' . $element . 'width'];
-			$height = $arg['shandora_listing_' . $element . 'height'];
+				$type = $arg['shandora_listing_' . $element . 'type'];
+				$width = $arg['shandora_listing_' . $element . 'width'];
+				$height = $arg['shandora_listing_' . $element . 'height'];
 
-			if ( $type || $width || $height) {
+				if ( $type || $width || $height) {
 
-			$string.= $amount . 'x ';
+					$string.= $amount . 'x ';
 
-			$string.= ( $type ) ? $type . ' ' : '';
+					$string.= ( $type ) ? $type . ' ' : '';
 
-			$string.= ( $width ) ? $width . " $measurement x " : '';
+					$string.= ( $width ) ? $width . " $measurement x " : '';
 
-			$string.= ( $height ) ? $height . " $measurement" : '';
+					$string.= ( $height ) ? $height . " $measurement" : '';
 
-			if ( $arg !== end( $args[0] ) )
-				$string.= ', ';
+					if ( $arg !== end( $args[0] ) )
+						$string.= ', ';
 
+				}
 			}
 		}
 	}
