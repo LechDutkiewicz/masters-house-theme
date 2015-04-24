@@ -40,7 +40,8 @@ function bon_head_cleanup() {
   remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
   remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
   add_filter( 'style_loader_src', 'bon_change_wp_ver', 9999 );
-	//add_filter( 'script_loader_src', 'bon_remove_wp_ver_css_js', 9999 );
+	add_filter( 'script_loader_src', 'bon_remove_wp_ver_css_js', 9999 );
+  add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1);
   add_filter( 'wp_head', 'bon_remove_wp_widget_recent_comments_style', 1 );
   add_action( 'wp_head', 'bon_remove_recent_comments_style', 1);
   add_filter ( 'wp_tag_cloud', 'bon_no_inline_style_tag_cloud' ); 
@@ -62,9 +63,17 @@ function bon_rss_version() { return ''; }
 
 // remove WP version from scripts
 function bon_remove_wp_ver_css_js( $src ) {
-  if ( strpos( $src, 'ver=' ) )
-    $src = remove_query_arg( 'ver', $src );
+  // keep just customs scripts with ver in query
+  if ( strpos( $src, 'scripts.min.js' ) || strpos( $src, 'scripts.js' ) ) { return bon_change_wp_ver($src); }
+  // remove ver in query from all other script tags
+  if ( strpos( $src, 'ver=' ) ) { $src = remove_query_arg( 'ver', $src ); }
   return $src;
+}
+
+function defer_parsing_of_js( $url ) {
+  if ( FALSE === strpos( $url, '.js' ) ) return $url;
+  if ( strpos( $url, 'jquery.js' ) ) return $url;
+  return "$url' defer='defer";
 }
 
 function bon_change_wp_ver( $src ) {
@@ -80,6 +89,7 @@ function bon_change_wp_ver( $src ) {
   }
 
   if (file_exists($file)) {
+    // change ver value for last file time modification
     $src = add_query_arg( 'ver', filemtime($file), $src);
   } else {
     $src = $temp_src;
