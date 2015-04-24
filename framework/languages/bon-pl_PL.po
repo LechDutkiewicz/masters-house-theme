@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
 "POT-Creation-Date: 2015-04-23 20:44+0100\n"
-"PO-Revision-Date: 2015-04-23 20:45+0100\n"
+"PO-Revision-Date: 2015-04-24 15:43+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: pl\n"
@@ -78,7 +78,7 @@ msgstr "Kontakt"
 
 #: ../shandora-child/page-templates/page-template-about-us.php:185
 msgid "FAQ"
-msgstr "FAQ"
+msgstr "Najczęściej zadawane pytania"
 
 #: ../shandora-child/page-templates/page-template-about-us.php:193
 #: ../shandora-child/templates/blocks/block-agent.php:85
