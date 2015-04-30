@@ -1,5 +1,7 @@
+# exclude node modules
 node_modules
-assets/css/*
+
+# exclude development js files
 assets/js/custom.js
 assets/js/scripts.js
 assets/js/framework.js
