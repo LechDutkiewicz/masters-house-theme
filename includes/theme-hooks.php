@@ -84,11 +84,11 @@ function shandora_setup_theme_hook() {
 
 	// removed by Lech Dutkiewicz add_action("{$prefix}after_single_entry_content", "shandora_listing_meta", 5);
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 9 );
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 35 );
+
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 9 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_services", 10 );
-
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 12 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_spec_open", 15 );
 
@@ -2304,7 +2304,7 @@ function get_packages_details( $id, $package_prefix, $package ) {
 	$heightmeasurement = bon_get_option( 'height_measure' );
 
 	$output = array(
-		shandora_get_meta($id, sanitize_title( $package_prefix ) . '_price', true) => __( 'Price', 'bon' ),
+		shandora_get_price_meta( NULL, shandora_get_meta($id, sanitize_title( $package_prefix ) . '_price', true) ) => __( 'Price', 'bon' ),
 		$package['package_material'] => __( 'Wall material', 'bon' ),
 		$package['package_wall_thickness'] . ' ' . strtolower($heightmeasurement) => __( 'Wall thickness', 'bon' ),
 		$package['package_windows_thickness'] . ' ' . strtolower($heightmeasurement) => __( 'Windows thickness', 'bon' )

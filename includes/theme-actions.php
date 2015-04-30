@@ -46,12 +46,14 @@ function shandora_get_listing_price( $echo = true, $total = true ) {
 	}
 }
 
-function shandora_get_price_meta( $postID ) {
+function shandora_get_price_meta( $postID, $price = NULL ) {
 
 
 	$currency = bon_get_option( 'currency' );
 	$placement = bon_get_option( 'currency_placement' );
-	$price = shandora_get_meta( $postID, 'listing_price', true );
+	if ( $price === NULL ) {
+		$price = shandora_get_meta( $postID, 'listing_price', true );		
+	}
 
 	switch ( $placement ) {
 
