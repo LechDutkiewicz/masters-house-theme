@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
 "POT-Creation-Date: 2015-04-23 20:44+0100\n"
-"PO-Revision-Date: 2015-04-24 15:43+0100\n"
+"PO-Revision-Date: 2015-04-24 16:12+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: pl\n"
@@ -417,7 +417,7 @@ msgstr "w cenie"
 
 #: ../shandora-child/templates/blocks/listing/services.php:4
 msgid "Services"
-msgstr "Usługi"
+msgstr "Z nami możesz"
 
 #: ../shandora-child/templates/blocks/listing/tab.php:41
 msgid "Price:"
