@@ -856,7 +856,7 @@ function shandora_listing_gallery() {
 */
 function shandora_listing_meta() {
 
-	if ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) ) {
+	if ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) || shandora_get_meta( get_the_ID(), 'listing_enable_construction' ) ) {
 
 		?>
 

@@ -1757,6 +1757,14 @@ function shandora_get_doors( $args ) {
 	return shandora_get_doors_or_windows( $args, 'door' );
 }
 
+function shandora_get_columns( $args ) {
+	return shandora_get_doors_or_windows( $args, 'column' );
+}
+
+function shandora_get_rafters( $args ) {
+	return shandora_get_doors_or_windows( $args, 'rafter' );
+}
+
 function shandora_get_doors_or_windows( $args, $element ) {
 	$measurement = bon_get_option( 'height_measure' );
 	$string = '';
@@ -1764,12 +1772,12 @@ function shandora_get_doors_or_windows( $args, $element ) {
 		foreach ( $args[0] as $arg ) {
 			
 			$amount = $arg['shandora_listing_' . $element . 'amount'];
+			$width = $arg['shandora_listing_' . $element . 'width'];
+			$height = $arg['shandora_listing_' . $element . 'height'];
 
 			if ( $amount > 0 ) {
 
 				$type = $arg['shandora_listing_' . $element . 'type'];
-				$width = $arg['shandora_listing_' . $element . 'width'];
-				$height = $arg['shandora_listing_' . $element . 'height'];
 
 				if ( $type || $width || $height) {
 
@@ -1785,6 +1793,15 @@ function shandora_get_doors_or_windows( $args, $element ) {
 						$string.= ', ';
 
 				}
+			} else if ( $width > 0 && $height > 0) {
+
+				$string.= ( $width ) ? $width . " $measurement x " : '';
+
+				$string.= ( $height ) ? $height . " $measurement" : '';
+
+				if ( $arg !== end( $args[0] ) )
+					$string.= ', ';
+
 			}
 		}
 	}

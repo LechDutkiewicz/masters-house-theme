@@ -1,3 +1,8 @@
+# 05 V 2015 Update
+
+1. Added new layout for constructions
+2. Added new icons for constructions layout to shandora font file
+
 # 22 IV 2015 Update
 
 1. Compressed font files

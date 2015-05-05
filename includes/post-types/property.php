@@ -111,75 +111,69 @@ if ( !function_exists( 'shandora_setup_listing_post_type' ) ) {
 				'id' => $prefix . $suffix . 'price',
 				'type' => 'number',
 				),
-			/* array(
-			  'label' => __( 'Monthly price', 'bon' ),
-			  'desc' => __( 'Product monthly price, without currency', 'bon' ),
-			  'id' => $prefix . $suffix . 'monprice',
-			  'type' => 'text',
-			  ), */
-array(
-	'label' => __( 'Size', 'bon' ),
-	'desc' => __( 'Product size in square meters, without unit', 'bon' ),
-	'id' => $prefix . $suffix . 'lotsize',
-	'type' => 'text',
-	),
-array(
-	'label' => __( 'Terrace', 'bon' ),
-	'desc' => __( 'Product terrace size in square meters, without unit', 'bon' ),
-	'id' => $prefix . $suffix . 'terracesqmt',
-	'type' => 'text',
-	),
-array(
-	'label' => __( 'Floors', 'bon' ),
-	'desc' => __( 'Number of floors', 'bon' ),
-	'id' => $prefix . $suffix . 'floors',
-	'type' => 'number',
-	),
-array(
-	'label' => __( 'Rooms', 'bon' ),
-	'desc' => __( 'Total number of rooms', 'bon' ),
-	'id' => $prefix . $suffix . 'rooms',
-	'type' => 'number',
-	),
-array(
-	'label' => __( 'Plan dimensions', 'bon' ),
-	'desc' => __( 'Add floor', 'bon' ),
-	'id' => $prefix . $suffix . 'plandimensions',
-	'type' => 'repeatable',
-	'sanitize' => array(
-		'name' => 'sanitize_text_field',
-		),
-	'repeatable_fields' => array(
-		array(
-			'label' => __( 'Plan width', 'bon' ),
-			'desc' => __( 'Product plan width in meters, ex: 5.5', 'bon' ),
-			'id' => $prefix . $suffix . 'dimensionswidth',
-			'type' => 'text',
-			),
-		array(
-			'label' => __( 'Plan height', 'bon' ),
-			'desc' => __( 'Product plan height in meters, ex: 5.5', 'bon' ),
-			'id' => $prefix . $suffix . 'dimensionsheight',
-			'type' => 'text',
-			),
-		array(
-			'label' => __( 'Floor', 'bon' ),
-			'desc' => __( 'Pick which floor dimensions are you describing', 'bon' ),
-			'id' => $prefix . $suffix . 'dimensionfloor',
-			'std' => __( 'Ground floor', 'bon' ),
-			'type' => 'select',
-			'options' => array(
-				'ground_floor' => __( 'Ground floor', 'bon' ),
-				'first_floor' => __( 'First floor', 'bon' ),
-				)
-			),
-		array(
-			'label' => __( 'Plan total area', 'bon' ),
-			'desc' => __( 'OR product plan total area in meters, ex: 25.5', 'bon' ),
-			'id' => $prefix . $suffix . 'dimensionsarea',
-			'type' => 'text',
-			),
-		),
+			array(
+				'label' => __( 'Size', 'bon' ),
+				'desc' => __( 'Product size in square meters, without unit', 'bon' ),
+				'id' => $prefix . $suffix . 'lotsize',
+				'type' => 'text',
+				),
+			array(
+				'label' => __( 'Terrace', 'bon' ),
+				'desc' => __( 'Product terrace size in square meters, without unit', 'bon' ),
+				'id' => $prefix . $suffix . 'terracesqmt',
+				'type' => 'text',
+				),
+			array(
+				'label' => __( 'Floors', 'bon' ),
+				'desc' => __( 'Number of floors', 'bon' ),
+				'id' => $prefix . $suffix . 'floors',
+				'type' => 'number',
+				),
+			array(
+				'label' => __( 'Rooms', 'bon' ),
+				'desc' => __( 'Total number of rooms', 'bon' ),
+				'id' => $prefix . $suffix . 'rooms',
+				'type' => 'number',
+				),
+			array(
+				'label' => __( 'Plan dimensions', 'bon' ),
+				'desc' => __( 'Add floor', 'bon' ),
+				'id' => $prefix . $suffix . 'plandimensions',
+				'type' => 'repeatable',
+				'sanitize' => array(
+					'name' => 'sanitize_text_field',
+					),
+				'repeatable_fields' => array(
+					array(
+						'label' => __( 'Plan width', 'bon' ),
+						'desc' => __( 'Product plan width in meters, ex: 5.5', 'bon' ),
+						'id' => $prefix . $suffix . 'dimensionswidth',
+						'type' => 'text',
+						),
+					array(
+						'label' => __( 'Plan height', 'bon' ),
+						'desc' => __( 'Product plan height in meters, ex: 5.5', 'bon' ),
+						'id' => $prefix . $suffix . 'dimensionsheight',
+						'type' => 'text',
+						),
+					array(
+						'label' => __( 'Floor', 'bon' ),
+						'desc' => __( 'Pick which floor dimensions are you describing', 'bon' ),
+						'id' => $prefix . $suffix . 'dimensionfloor',
+						'std' => __( 'Ground floor', 'bon' ),
+						'type' => 'select',
+						'options' => array(
+							'ground_floor' => __( 'Ground floor', 'bon' ),
+							'first_floor' => __( 'First floor', 'bon' ),
+							)
+						),
+					array(
+						'label' => __( 'Plan total area', 'bon' ),
+						'desc' => __( 'OR product plan total area in meters, ex: 25.5', 'bon' ),
+						'id' => $prefix . $suffix . 'dimensionsarea',
+						'type' => 'text',
+						),
+					),
 ),
 			/*array(
 				'label' => __( 'Plan width', 'bon' ),
@@ -307,8 +301,67 @@ array(
 	),
 			// old ones
 array(
-	'label' => __( 'Property Status', 'bon' ),
-	'desc' => __( 'The status for the property, used for badge, etc.', 'bon' ),
+	'label' => __( 'Enable construction parameters', 'bon' ),
+	'id' => $prefix . $suffix . 'enable_construction',
+	'std' => 1,
+	'class' => 'collapsed',
+	'type' => 'checkbox'
+	),
+array(
+	'label' => __( 'Roof size', 'bon' ),
+	'desc' => __( 'Product roof size in meters, ex: 5.5', 'bon' ),
+	'id' => $prefix . $suffix . 'constructionroofsize',
+	'type' => 'text',
+	'class' => 'hidden',
+	),
+array(
+	'label' => __( 'Columns size', 'bon' ),
+	'desc' => __( 'Add columns size', 'bon' ),
+	'id' => $prefix . $suffix . 'columnssizes',
+	'type' => 'repeatable',
+	'class' => 'hidden',
+	'sanitize' => array(
+		'name' => 'sanitize_text_field',
+		),
+	'repeatable_fields' => array(
+		array(
+			'label' => __( 'Width', 'bon' ),
+			'id' => $prefix . $suffix . 'columnwidth',
+			'type' => 'number',
+			),
+		array(
+			'label' => __( 'Height', 'bon' ),
+			'id' => $prefix . $suffix . 'columnheight',
+			'type' => 'number',
+			),
+		),
+	),
+array(
+	'label' => __( 'Rafters size', 'bon' ),
+	'desc' => __( 'Add rafters size', 'bon' ),
+	'id' => $prefix . $suffix . 'rafterssizes',
+	'type' => 'repeatable',
+	'class' => 'hidden last',
+	'sanitize' => array(
+		'name' => 'sanitize_text_field',
+		),
+	'repeatable_fields' => array(
+		array(
+			'label' => __( 'Width', 'bon' ),
+			'id' => $prefix . $suffix . 'rafterwidth',
+			'type' => 'number',
+			),
+		array(
+			'label' => __( 'Height', 'bon' ),
+			'id' => $prefix . $suffix . 'rafterheight',
+			'type' => 'number',
+			),
+		),
+	),
+
+array(
+	'label' => __( 'Cottage Status', 'bon' ),
+	'desc' => __( 'The status for the cottage, used for badge, etc.', 'bon' ),
 	'id' => $prefix . $suffix . 'status',
 	'type' => 'select',
 	'options' => shandora_get_search_option()
@@ -327,7 +380,8 @@ array(
 
 if ( $packages = get_packages_list() ) {
 	
-	foreach ( $packages as $package ) {
+	foreach ( $packages as $key => $package ) {
+		$exclass = ( $key + 1 === count( $packages ) ) ? ' last' : '';
 		$prop_options[] = array(
 			'label' => $package['package_name'],
 			'id' => $prefix . $suffix . sanitize_title($package['package_name']),
@@ -338,7 +392,7 @@ if ( $packages = get_packages_list() ) {
 			'label' => __( 'Price', 'bon' ),
 			'id' => $prefix . $suffix . sanitize_title($package['package_name']) . '_price',
 			'type' => 'number',
-			'class' => 'hidden'
+			'class' => 'hidden' . $exclass
 			);
 
 
