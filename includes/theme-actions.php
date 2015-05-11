@@ -1374,14 +1374,19 @@ function shandora_process_contactform() {
 		die( json_encode( $return_data ) );
 	}*/
 
-	$email = sanitize_email( $_POST['email'] );
+	$email = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
 
-	if ( empty( $email ) ) {
+	/*if ( empty( $email ) ) {
 		$return_data['value'] = __( 'Please enter a valid email address.', 'bon' );
 		die( json_encode( $return_data ) );
-	}
+	}*/
 
 	$phone = isset( $_POST['phone'] ) ? esc_attr( $_POST['phone'] ) : '';
+
+	if ( empty( $email ) && empty( $phone ) ) {
+		$return_data['value'] = __( 'Please enter either your email or phone number.', 'bon' );
+		die( json_encode( $return_data ) );		
+	}
 
 	$subject = esc_html( $_POST['subject'] );
 	$listing_id = absint( $_POST['listing_id'] );
@@ -1402,7 +1407,7 @@ function shandora_process_contactform() {
 		$c['user_ip'] = preg_replace( '/[^0-9., ]/', '', $_SERVER['REMOTE_ADDR'] );
 		$c['blog'] = home_url();
 		//$c['comment_author'] = $name;
-		$c['comment_author_email'] = $email;
+		if ( $email ) { $c['comment_author_email'] = $email; }
 		$c['comment_content'] = $messages;
 
 		$query_string = '';
@@ -1425,19 +1430,21 @@ $receiver = $_POST['receiver'];
 
 $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "You have received a new contact form message via %s \n", "bon" ), get_bloginfo( 'name' ) ) . '</p>';
 //$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Name : %s \n", "bon" ), $name ) . '</p>';
-$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Email : %s \n", "bon" ), $email ) . '</p>';
+if ( $email ) { $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Email : %s \n", "bon" ), $email ) . '</p>'; }
+if ( $phone ) { $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Phone Number : %s \n", "bon" ), $phone ) . '</p>'; }
 $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Subject : %s \n", "bon" ), $subject ) . '</p>';
-$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Phone Number : %s \n", "bon" ), $phone ) . '</p>';
-$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Email Send From : %s \n", "bon" ), get_permalink( $listing_id ) ) . '</p>';
+if ( $listing_id) { $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Email Send From : %s \n", "bon" ), get_permalink( $listing_id ) ) . '</p>'; }
 $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Message : %s \n", "bon" ), $messages ) . '</p>';
 
 $headers[] = "From: " . __( "Masters House", "bon" );
-$headers[] = "Reply-To: " . $email;
+if ( $email ) { $headers[] = "Reply-To: " . $email; }
 $headers[] = "Content-Type: text/html";
 
-add_filter( 'wp_mail_from', function() {
-	return $email;
-} );
+if ( $email ) {
+	add_filter( 'wp_mail_from', function() {
+		return $email;
+	} );
+}
 add_filter( 'wp_mail_from_name', function() {
 	return __( "Masters House", 'bon' );
 } );
@@ -1446,16 +1453,20 @@ $subject = sprintf( "%s %s", $subject, __( "Masters House", 'bon' ) );
 
 /* Responsne email configuration */
 
-$response_receiver = $email;
+if ( $email ) {
 
-$response_body = '<p style = "margin-bottom:1em">' . __( 'We succesfully received your request. Our representative will contact you within one hour.', 'bon' ) . '</p>';
-$response_body .= '<p style = "margin-bottom:1em">' . __( 'Kind regards', 'bon' ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
+	$response_receiver = $email;
 
-$response_headers[] = "From: " . __( "Masters House", "bon" );
-$response_headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
-$response_headers[] = "Content-Type: text/html";
+	$response_body = '<p style = "margin-bottom:1em">' . __( 'We succesfully received your request. Our representative will contact you within one hour.', 'bon' ) . '</p>';
+	$response_body .= '<p style = "margin-bottom:1em">' . __( 'Kind regards', 'bon' ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
 
-$response_subject = __( 'Thank you for contacting us', 'bon' );
+	$response_headers[] = "From: " . __( "Masters House", "bon" );
+	$response_headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
+	$response_headers[] = "Content-Type: text/html";
+
+	$response_subject = __( 'Thank you for contacting us', 'bon' );
+
+}
 
 if ( wp_mail( $receiver, $subject, $body, $headers ) ) {
 	add_filter( 'wp_mail_from', function() {
@@ -1465,7 +1476,7 @@ if ( wp_mail( $receiver, $subject, $body, $headers ) ) {
 		return __( "Masters House", 'bon' );
 	} );
 
-	wp_mail( $response_receiver, $response_subject, $response_body, $response_headers );
+	if ( $email ) { wp_mail( $response_receiver, $response_subject, $response_body, $response_headers ); }
 
 	$return_data['success'] = '1';
 	$return_data['value'] = __( 'Email was sent successfully.', 'bon' );
@@ -1809,7 +1820,7 @@ function shandora_get_doors_or_windows( $args, $element ) {
 }
 
 function shandora_home_cta( $args, $visited = 0 ) {
-	foreach ( $args as $cta ) :
+	foreach ( $args as $cta ) {
 		if ( $visited != 3 ) {
 			$onClick = '';
 			$show = TRUE;
@@ -1838,133 +1849,164 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			$onClick = "role='button' data-toggle='modal'";
 			$show = TRUE;
 		}
-		if ( $show ) :
+		if ( $show ) {
 			echo "<a href='$link' data-function='" . $destination . "' class='flat button large " . $cta['home_cta_color'] . " radius' $onClick>" . $cta['home_cta_text'] . "</a>";
-		endif;
-		endforeach;
+		}
+	}
+}
+
+function extra_class( $id ) {
+	$term_meta = wp_get_post_terms( $id, 'property-type' );
+	return $term_meta[0]->slug;
+}
+
+function get_cat_color( $id ) {
+	$property_taxonomies = get_terms( 'property-type', array( 'slug' => extra_class( $id ) ) );
+	$color = $property_taxonomies[0]->term_id;
+	$color = get_option( "taxonomy_$color" );
+	return $color['color'];
+}
+
+add_filter( 'cleaner_gallery_defaults', 'shandora_cleaner_gallery_defaults', 10 );
+
+function shandora_cleaner_gallery_defaults( $args ) {
+
+	$detect = new Mobile_Detect;
+	if ( $detect->isMobile() && !$detect->isTablet() ) {
+		$args['size'] = 'thumbnail';
+	} else {
+		$args['size'] = 'blog_small';
+	}
+	$args['columns'] = 2;
+	$args['link'] = 'file';
+
+	return $args;
+}
+
+function shandora_remove_attachment_comment() {
+	remove_post_type_support( 'attachment', 'comments' );
+}
+
+add_action( 'init', 'shandora_remove_attachment_comment' );
+
+function shandora_get_idx_options( $type = '', $r_array = false ) {
+
+	if ( empty( $type ) ) {
+		return;
 	}
 
-	function extra_class( $id ) {
-		$term_meta = wp_get_post_terms( $id, 'property-type' );
-		return $term_meta[0]->slug;
+
+	$return = false;
+	$limit = bon_get_option( 'idx_search_option_limit', 100 );
+	$options = get_option( DSIDXPRESS_OPTION_NAME );
+	$setup_id = $options['SearchSetupID'];
+
+	$url = 'http://api-c.idx.diversesolutions.com/api/';
+
+	$results = wp_remote_get( $url . 'LocationsByType?searchSetupID=' . $setup_id . '&type=' . $type . '&minListingCount=1', array( 'decompress' => false ) );
+
+	if ( is_wp_error( $results ) ) {
+
+		$error_message = $results->get_error_message();
+		return false;
 	}
 
-	function get_cat_color( $id ) {
-		$property_taxonomies = get_terms( 'property-type', array( 'slug' => extra_class( $id ) ) );
-		$color = $property_taxonomies[0]->term_id;
-		$color = get_option( "taxonomy_$color" );
-		return $color['color'];
-	}
+	$return = $results["response"]["code"] == "200" ? array_slice( json_decode( $results["body"] ), 0, $limit ) : null;
 
-	add_filter( 'cleaner_gallery_defaults', 'shandora_cleaner_gallery_defaults', 10 );
-
-	function shandora_cleaner_gallery_defaults( $args ) {
-
-		$detect = new Mobile_Detect;
-		if ( $detect->isMobile() && !$detect->isTablet() ) {
-			$args['size'] = 'thumbnail';
+	if ( $return ) {
+		if ( $r_array ) {
+			$new_return = array();
+			foreach ( $return as $r ) {
+				$new_return[] = $r->Name;
+			}
+			return $new_return;
 		} else {
-			$args['size'] = 'blog_small';
+			return $return;
 		}
-		$args['columns'] = 2;
-		$args['link'] = 'file';
-
-		return $args;
+	} else {
+		return;
 	}
+}
 
-	function shandora_remove_attachment_comment() {
-		remove_post_type_support( 'attachment', 'comments' );
-	}
-
-	add_action( 'init', 'shandora_remove_attachment_comment' );
-
-	function shandora_get_idx_options( $type = '', $r_array = false ) {
-
-		if ( empty( $type ) ) {
-			return;
-		}
-
-
-		$return = false;
-		$limit = bon_get_option( 'idx_search_option_limit', 100 );
-		$options = get_option( DSIDXPRESS_OPTION_NAME );
-		$setup_id = $options['SearchSetupID'];
-
-		$url = 'http://api-c.idx.diversesolutions.com/api/';
-
-		$results = wp_remote_get( $url . 'LocationsByType?searchSetupID=' . $setup_id . '&type=' . $type . '&minListingCount=1', array( 'decompress' => false ) );
-
-		if ( is_wp_error( $results ) ) {
-
-			$error_message = $results->get_error_message();
-			return false;
-		}
-
-		$return = $results["response"]["code"] == "200" ? array_slice( json_decode( $results["body"] ), 0, $limit ) : null;
-
-		if ( $return ) {
-			if ( $r_array ) {
-				$new_return = array();
-				foreach ( $return as $r ) {
-					$new_return[] = $r->Name;
-				}
-				return $new_return;
+function shandora_get_country_selection() {
+	$languages = icl_get_languages( 'skip_missing=0&orderby=code' );
+	if ( !empty( $languages ) ) {
+		$o = '';
+		foreach ( $languages as $l ) {
+			$o .= '<li class="language-selector">';
+			if ( !$l['active'] ) {
+				$o .= '<a href="' . $l['url'] . '">';
 			} else {
-				return $return;
+				$o .= '<a>';
 			}
-		} else {
-			return;
+			$o .= '<img src="' . $l['country_flag_url'] . '" height="12" alt="' . $l['language_code'] . '" width="18" />';
+			$o .= '</a>';
+			$o .= '</li>';
 		}
+		return $o;
 	}
+}
 
-	function shandora_get_country_selection() {
-		$languages = icl_get_languages( 'skip_missing=0&orderby=code' );
-		if ( !empty( $languages ) ) {
-			$o = '';
-			foreach ( $languages as $l ) {
-				$o .= '<li class="language-selector">';
-				if ( !$l['active'] ) {
-					$o .= '<a href="' . $l['url'] . '">';
-				} else {
-					$o .= '<a>';
-				}
-				$o .= '<img src="' . $l['country_flag_url'] . '" height="12" alt="' . $l['language_code'] . '" width="18" />';
-				$o .= '</a>';
-				$o .= '</li>';
-			}
-			return $o;
-		}
-	}
+function get_thumbnail_src() {
 
-	function get_thumbnail_src() {
+	$img = get_the_image(array(
+		'link_to_post' => false,
+		'meta_key' => false,
+		'size' => 'post-featured',
+		'format' => 'array'
+		)
+	);
 
-		$img = get_the_image(array(
-			'link_to_post' => false,
-			'meta_key' => false,
-			'size' => 'post-featured',
-			'format' => 'array'
-			)
-		);
+	return $img['src'];
+}
 
-		return $img['src'];
-	}
+function get_cottages_name( $plural = NULL ) {
 
-	function get_cottages_name( $plural = NULL ) {
-
-		return ( $plural = 'plural' ? __( 'Cottages', 'bon' ) : __( 'Cottage', 'bon' ) );
+	return ( $plural = 'plural' ? __( 'Cottages', 'bon' ) : __( 'Cottage', 'bon' ) );
 
 
-	}
+}
 
-	function get_cottages_slug() {
+function get_cottages_slug() {
 
-		return (_x( 'wooden-cottage', 'product url slug', 'bon' ));
+	return (_x( 'wooden-cottage', 'product url slug', 'bon' ));
 
-	}
+}
 
-	function get_cottages_category_slug() {
+function get_cottages_category_slug() {
 
-		return ( _x( 'type', 'products category url slug', 'bon' ) );
-		
-	}
-	?>
+	return ( _x( 'type', 'products category url slug', 'bon' ) );
+
+}
+
+function the_badge() {
+	// prints item's badge for it's status
+	global $post;
+
+	// setup variables
+	$status = shandora_get_meta( $post->ID, 'listing_status' );
+	$badge = shandora_get_meta( $post->ID, 'listing_badge' );
+	$badgeclr = shandora_get_meta( $post->ID, 'listing_badge_color' );
+	$size = ( isset( $_GET['view'] ) && $_GET['view'] == 'list' ) ? 'listing_list' : 'listing_small';
+	$status_opt = shandora_get_search_option( 'status' );
+
+	if ( get_post_type() == 'listing' ) { ?>
+	<div class="badge <?php echo $status; echo ($size == 'listing_list') ? ' hide-for-small' : '';?>">
+		<span>
+			<?php if ( $status != 'none' ) { ?>
+			<?php if ( array_key_exists( $status, $status_opt ) ) { ?>
+			<?php echo $status_opt[$status]; ?>
+			<?php } ?>
+			<?php } ?>
+		</span>
+	</div>
+	<?php } else { ?>
+	<div class="badge <?php echo $badgeclr; echo ($size == 'listing_list') ? ' hide-for-small' : '';?>">
+		<span>
+			<?php if ( $badgeclr != 'none' && !empty( $badge ) ) { ?>
+			<?php echo $badge; ?>
+			<?php }	?>
+		</span>
+	</div>
+	<?php } ?>
+	<?php }
