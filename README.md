@@ -1,3 +1,9 @@
+# 11 V 2015 Update
+
+1. Added new and top seller badges for gallery view, related products and bottom call to action section.
+2. Sending contact form now requires just either email or phone number.
+3. Different addons for constructions, big houses and regular cottages. Now you can manage in cms which ones display where in "included in price" section.
+
 # 05 V 2015 Update
 
 1. Added new layout for constructions
