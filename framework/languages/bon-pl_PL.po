@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
-"POT-Creation-Date: 2015-05-05 15:45+0100\n"
-"PO-Revision-Date: 2015-05-05 15:47+0100\n"
+"POT-Creation-Date: 2015-05-11 12:43+0100\n"
+"PO-Revision-Date: 2015-05-11 12:43+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: pl\n"
@@ -101,7 +101,7 @@ msgstr "Imię i nazwisko"
 #: ../shandora-child/templates/blocks/block-modal-visit-request.php:31
 #: ../shandora-child/templates/contents/content-agent.php:84
 #: ../shandora-child/templates/contents/content-sales-representative.php:77
-#: includes/theme-actions.php:1493
+#: includes/theme-actions.php:1504
 msgid "Please enter your name."
 msgstr "Wpisz proszę swoje imię i nazwisko."
 
@@ -119,10 +119,7 @@ msgstr "Adres e-mail"
 
 #: ../shandora-child/page-templates/page-template-about-us.php:197
 #: ../shandora-child/templates/blocks/block-agent.php:93
-#: ../shandora-child/templates/blocks/block-modal-contact.php:37
-#: ../shandora-child/templates/blocks/block-modal-customize.php:37
 #: ../shandora-child/templates/blocks/block-modal-ebook.php:21
-#: ../shandora-child/templates/blocks/block-modal-visit-request.php:37
 #: ../shandora-child/templates/contents/content-agent.php:91
 #: ../shandora-child/templates/contents/content-sales-representative.php:84
 msgid "Please enter your email."
@@ -130,16 +127,11 @@ msgstr "Podaj proszę adres email."
 
 #: ../shandora-child/page-templates/page-template-about-us.php:203
 #: ../shandora-child/templates/blocks/block-agent.php:99
-#: ../shandora-child/templates/blocks/block-modal-contact.php:42
-#: ../shandora-child/templates/blocks/block-modal-customize.php:42
-#: ../shandora-child/templates/blocks/block-modal-visit-request.php:42
 msgid "Phone Number (optional)"
 msgstr "Numer telefonu (opcjonalnie)"
 
 #: ../shandora-child/page-templates/page-template-about-us.php:204
 #: ../shandora-child/templates/blocks/block-agent.php:100
-#: ../shandora-child/templates/blocks/block-modal-customize.php:43
-#: ../shandora-child/templates/blocks/block-modal-visit-request.php:43
 #: ../shandora-child/templates/contents/content-agent.php:98
 #: ../shandora-child/templates/contents/content-sales-representative.php:91
 msgid "Please enter your phone number."
@@ -157,7 +149,7 @@ msgstr "Wiadomość"
 #: ../shandora-child/templates/blocks/block-modal-customize.php:49
 #: ../shandora-child/templates/contents/content-agent.php:105
 #: ../shandora-child/templates/contents/content-sales-representative.php:98
-#: includes/theme-actions.php:1396
+#: includes/theme-actions.php:1401
 msgid "Please enter your messages."
 msgstr "Podaj proszę wiadomość."
 
@@ -284,7 +276,34 @@ msgstr ""
 "Pracujemy od poniedziałku do piątku od 8 do 16. W tym czasie odpowiemy w "
 "ciągu godziny."
 
-#: ../shandora-child/templates/blocks/block-modal-contact.php:47
+#: ../shandora-child/templates/blocks/block-modal-contact.php:36
+#: ../shandora-child/templates/blocks/block-modal-contact.php:42
+#: ../shandora-child/templates/blocks/block-modal-customize.php:36
+#: ../shandora-child/templates/blocks/block-modal-customize.php:42
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:36
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:42
+msgid "optional"
+msgstr "opcjonalnie"
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:37
+#: ../shandora-child/templates/blocks/block-modal-contact.php:43
+#: ../shandora-child/templates/blocks/block-modal-customize.php:37
+#: ../shandora-child/templates/blocks/block-modal-customize.php:43
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:37
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:43
+#: includes/theme-actions.php:1387
+msgid "Please enter either your email or phone number."
+msgstr ""
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:42
+#: ../shandora-child/templates/blocks/block-modal-customize.php:42
+#: ../shandora-child/templates/blocks/block-modal-visit-request.php:42
+#: ../shandora-child/templates/contents/content-agent.php:97
+#: ../shandora-child/templates/contents/content-sales-representative.php:90
+msgid "Phone Number"
+msgstr "Numer telefonu"
+
+#: ../shandora-child/templates/blocks/block-modal-contact.php:48
 #: ../shandora-child/templates/blocks/block-modal-customize.php:48
 msgid ""
 "In case you want to ask us about something, type it here. You can also leave "
@@ -293,16 +312,16 @@ msgstr ""
 "Wpisz tutaj swoje pytania. Możesz również pozostawić to pole puste, "
 "oddzwonimy niebawem."
 
-#: ../shandora-child/templates/blocks/block-modal-contact.php:51
+#: ../shandora-child/templates/blocks/block-modal-contact.php:52
 #, php-format
 msgid "Email from %s"
 msgstr "E-mail wysłany z : %s"
 
-#: ../shandora-child/templates/blocks/block-modal-contact.php:55
+#: ../shandora-child/templates/blocks/block-modal-contact.php:56
 msgid "Buy it request from the website"
 msgstr "Pytanie o zakup ze strony internetowej."
 
-#: ../shandora-child/templates/blocks/block-modal-contact.php:56
+#: ../shandora-child/templates/blocks/block-modal-contact.php:57
 #: ../shandora-child/templates/blocks/block-modal-customize.php:57
 msgid "Send"
 msgstr "WYŚLIJ"
@@ -371,7 +390,7 @@ msgstr "Nasi klienci już znaleźli"
 msgid "Read full story"
 msgstr "Przeczytaj całą historię"
 
-#: ../shandora-child/templates/blocks/listing/addon.php:39
+#: ../shandora-child/templates/blocks/listing/addon.php:41
 msgid "Price includes"
 msgstr "Cena zawiera"
 
@@ -379,7 +398,7 @@ msgstr "Cena zawiera"
 msgid "Show more"
 msgstr "Pokaż więcej"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:27
+#: ../shandora-child/templates/blocks/listing/meta.php:25
 #, php-format
 msgid "1 Room"
 msgid_plural "%s Rooms"
@@ -387,40 +406,40 @@ msgstr[0] "1 Pokój"
 msgstr[1] "%s Pokoje"
 msgstr[2] "%s Pokoi"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:27
+#: ../shandora-child/templates/blocks/listing/meta.php:25
 msgid "No Room"
 msgstr "Brak pomieszczeń"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:50
+#: ../shandora-child/templates/blocks/listing/meta.php:48
 #: includes/theme-hooks.php:2295 includes/theme-hooks.php:2309
 msgid "Wall thickness"
 msgstr "Grubość ściany"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:62
+#: ../shandora-child/templates/blocks/listing/meta.php:60
 msgid "Insulated"
 msgstr "Ocieplony"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:62
+#: ../shandora-child/templates/blocks/listing/meta.php:60
 msgid "roof"
 msgstr "dach"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:73
+#: ../shandora-child/templates/blocks/listing/meta.php:71
 msgid "Assemblage"
 msgstr "Montaż"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:73
+#: ../shandora-child/templates/blocks/listing/meta.php:71
 msgid "included"
 msgstr "w cenie"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:88
+#: ../shandora-child/templates/blocks/listing/meta.php:86
 msgid "Quick assemblage"
 msgstr "Szybki montaż"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:95
+#: ../shandora-child/templates/blocks/listing/meta.php:93
 msgid "Robust construction"
 msgstr "Wytrzymała konstrukcja"
 
-#: ../shandora-child/templates/blocks/listing/meta.php:102
+#: ../shandora-child/templates/blocks/listing/meta.php:100
 msgid "Glued wood"
 msgstr "Klejone drewno"
 
@@ -582,11 +601,6 @@ msgstr "Twitter"
 msgid "Pages:"
 msgstr "Stron:"
 
-#: ../shandora-child/templates/contents/content-agent.php:97
-#: ../shandora-child/templates/contents/content-sales-representative.php:90
-msgid "Phone Number"
-msgstr ""
-
 #: ../shandora-child/templates/contents/content-agent.php:109
 #: ../shandora-child/templates/contents/content-sales-representative.php:102
 #, php-format
@@ -734,22 +748,22 @@ msgid "No Slider no entries were found"
 msgstr ""
 
 #: ../shandora-child/templates/woocommerce/email-template.php:52
-#: includes/theme-actions.php:1575
+#: includes/theme-actions.php:1586
 msgid "Thank you for downloading our ebook."
 msgstr "Dziękujemy za pobranie e-booka."
 
 #: ../shandora-child/templates/woocommerce/email-template.php:53
-#: includes/theme-actions.php:1576
+#: includes/theme-actions.php:1587
 msgid "You can download it here"
 msgstr "Pobierz tutaj"
 
 #: ../shandora-child/templates/woocommerce/email-template.php:54
-#: includes/theme-actions.php:1577
+#: includes/theme-actions.php:1588
 msgid "We hope you find this helpful!"
 msgstr "Mamy nadzieję, że to pomocne!"
 
 #: ../shandora-child/templates/woocommerce/email-template.php:58
-#: includes/theme-actions.php:1581
+#: includes/theme-actions.php:1592
 msgid "All the best"
 msgstr ""
 
@@ -1445,56 +1459,52 @@ msgstr "Znajdź nas na LinkedIn"
 msgid "Cannot update package values. No parameter receive form AJAX call."
 msgstr ""
 
-#: includes/theme-actions.php:1366 includes/theme-actions.php:1486
+#: includes/theme-actions.php:1366 includes/theme-actions.php:1497
 msgid "Cannot send email to destination. No parameter receive form AJAX call."
 msgstr "Nie można wysłać e-mail do miejsca przeznaczenia."
 
-#: includes/theme-actions.php:1380 includes/theme-actions.php:1500
-msgid "Please enter a valid email address."
-msgstr "Wpisz proszę prawidłowy adres email."
-
-#: includes/theme-actions.php:1417 includes/theme-actions.php:1527
+#: includes/theme-actions.php:1422 includes/theme-actions.php:1538
 msgid "Cheatin Huh?!"
 msgstr "Oszukujesz, co?"
 
-#: includes/theme-actions.php:1426
+#: includes/theme-actions.php:1431
 #, php-format
 msgid "You have received a new contact form message via %s \n"
 msgstr "Odebrano nową wiadomość poprzez formularz kontaktowy %s \n"
 
-#: includes/theme-actions.php:1428
+#: includes/theme-actions.php:1433
 #, php-format
 msgid "Sender Email : %s \n"
 msgstr "Nadawca e-mail: %s \n"
 
-#: includes/theme-actions.php:1429
-#, php-format
-msgid "Subject : %s \n"
-msgstr "Temat: %s \n"
-
-#: includes/theme-actions.php:1430
+#: includes/theme-actions.php:1434
 #, php-format
 msgid "Sender Phone Number : %s \n"
 msgstr "Nr tel : %s \n"
 
-#: includes/theme-actions.php:1431
+#: includes/theme-actions.php:1435
+#, php-format
+msgid "Subject : %s \n"
+msgstr "Temat: %s \n"
+
+#: includes/theme-actions.php:1436
 #, php-format
 msgid "Email Send From : %s \n"
 msgstr "E-mail wysłany z : %s \n"
 
-#: includes/theme-actions.php:1432
+#: includes/theme-actions.php:1437
 #, php-format
 msgid "Message : %s \n"
 msgstr "Wiadomość : %s \n"
 
-#: includes/theme-actions.php:1434 includes/theme-actions.php:1442
-#: includes/theme-actions.php:1445 includes/theme-actions.php:1454
-#: includes/theme-actions.php:1465 includes/theme-actions.php:1597
-#: includes/theme-actions.php:1605
+#: includes/theme-actions.php:1439 includes/theme-actions.php:1449
+#: includes/theme-actions.php:1452 includes/theme-actions.php:1463
+#: includes/theme-actions.php:1476 includes/theme-actions.php:1608
+#: includes/theme-actions.php:1616
 msgid "Masters House"
 msgstr "Dom Mistrza"
 
-#: includes/theme-actions.php:1451
+#: includes/theme-actions.php:1460
 msgid ""
 "We succesfully received your request. Our representative will contact you "
 "within one hour."
@@ -1502,62 +1512,66 @@ msgstr ""
 "Pomyślnie otrzymaliśmy Twoje zapytanie. Nasz przedstawiciel skontaktuje się "
 "z Tobą w ciągu jednej godziny."
 
-#: includes/theme-actions.php:1452
+#: includes/theme-actions.php:1461
 msgid "Kind regards"
 msgstr "Serdeczne pozdrowienia"
 
-#: includes/theme-actions.php:1455 includes/theme-actions.php:1462
-#: includes/theme-actions.php:1598 includes/theme-actions.php:1602
+#: includes/theme-actions.php:1464 includes/theme-actions.php:1473
+#: includes/theme-actions.php:1609 includes/theme-actions.php:1613
 msgid "no-reply@mastershouse.com"
 msgstr ""
 
-#: includes/theme-actions.php:1458
+#: includes/theme-actions.php:1467
 msgid "Thank you for contacting us"
 msgstr "Dziękujemy za skontaktowanie się z nami."
 
-#: includes/theme-actions.php:1471 includes/theme-actions.php:1610
+#: includes/theme-actions.php:1482 includes/theme-actions.php:1621
 msgid "Email was sent successfully."
 msgstr "E-mail został wysłany."
 
-#: includes/theme-actions.php:1475 includes/theme-actions.php:1613
+#: includes/theme-actions.php:1486 includes/theme-actions.php:1624
 msgid "There is an error sending email."
 msgstr "Wystąpił błąd podczas wysyłania poczty."
 
-#: includes/theme-actions.php:1662
+#: includes/theme-actions.php:1511
+msgid "Please enter a valid email address."
+msgstr "Wpisz proszę prawidłowy adres email."
+
+#: includes/theme-actions.php:1673
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: includes/theme-actions.php:1666
+#: includes/theme-actions.php:1677
 msgid "View Image"
 msgstr "Zobacz zdjęcie"
 
-#: includes/theme-actions.php:1670
+#: includes/theme-actions.php:1681
 msgid "Compare Listing"
 msgstr ""
 
-#: includes/theme-actions.php:1700
+#: includes/theme-actions.php:1711
 msgid "Ground floor"
 msgstr "Parter"
 
-#: includes/theme-actions.php:1704
+#: includes/theme-actions.php:1715
 msgid "First floor"
 msgstr "Pierwsze piętro"
 
-#: includes/theme-actions.php:1954
+#: includes/theme-actions.php:1965
 msgid "Cottages"
 msgstr "Domki drewniane"
 
-#: includes/theme-actions.php:1954
+#: includes/theme-actions.php:1965
 msgid "Cottage"
 msgstr "Domek drewniany"
 
-#: includes/theme-actions.php:1961
+#: includes/theme-actions.php:1972
 msgctxt "product url slug"
 msgid "wooden-cottage"
 msgstr "domek-drewniany"
 
-#: includes/theme-actions.php:1967
+#: includes/theme-actions.php:1978
 msgctxt "products category url slug"
 msgid "type"
 msgstr "domki-drewniane"
