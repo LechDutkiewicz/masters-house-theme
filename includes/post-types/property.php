@@ -619,9 +619,19 @@ if ( !function_exists( 'shandora_setup_addon_post_type' ) ) {
 
 		$addon_opt1 = array(
 			array(
-				'label' => __( 'Enable only for big houses', 'bon'),
-				'id' => $prefix . 'enabled',
-				'type' => 'checkbox'
+				'label' => __( 'Enable for', 'bon') . ' ' . __( 'Constructions', 'bon' ),
+				'id' => $prefix . 'enabled_construction',
+				'type' => 'checkbox',
+				),
+			array(
+				'label' => __( 'Enable for', 'bon') . ' ' . __( 'Cottages', 'bon' ),
+				'id' => $prefix . 'enabled_cottage',
+				'type' => 'checkbox',
+				),
+			array(
+				'label' => __( 'Enable for', 'bon') . ' ' . __( 'Big houses', 'bon' ),
+				'id' => $prefix . 'enabled_big',
+				'type' => 'checkbox',
 				),
 			);
 
