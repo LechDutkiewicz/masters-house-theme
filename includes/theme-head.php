@@ -51,7 +51,7 @@ if(!function_exists('shandora_print_tracking_code')) {
 
 	function shandora_print_tracking_code() {
 
-		if (WP_ENV === 'production') {
+		if ( WP_ENV === 'production' && !is_user_logged_in() ) {
 
 			$scripts = bon_get_option('google_analytics');
 			
