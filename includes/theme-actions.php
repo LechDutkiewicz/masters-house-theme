@@ -1424,9 +1424,17 @@ function shandora_process_contactform() {
 	}
 }
 
-/* Email configuration */
+
+
+/************************
+*						*
+* Email configuration	*
+*						*
+************************/
 
 $receiver = $_POST['receiver'];
+
+// setup email to admin body
 
 $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "You have received a new contact form message via %s \n", "bon" ), get_bloginfo( 'name' ) ) . '</p>';
 //$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Name : %s \n", "bon" ), $name ) . '</p>';
@@ -1436,13 +1444,25 @@ $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Subject : %s \n", "bo
 if ( $listing_id) { $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Email Send From : %s \n", "bon" ), get_permalink( $listing_id ) ) . '</p>'; }
 $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Message : %s \n", "bon" ), $messages ) . '</p>';
 
+
+
+// setup email to admin headers
+
+// set from header
 $headers[] = "From: " . __( "Masters House", "bon" );
-if ( $email ) { $headers[] = "Reply-To: " . $email; }
+// set email reply to header to admin if contact form was filled without email
+if ( $email ) {
+	$reply_email = $email;
+} else {
+	$reply_email = get_bloginfo( 'admin_email' );
+}
+// set content type header
 $headers[] = "Content-Type: text/html";
 
-if ( $email ) {
+// add WP filters for correct email headers
+if ( $reply_email ) {
 	add_filter( 'wp_mail_from', function() {
-		return $email;
+		return $reply_email;
 	} );
 }
 add_filter( 'wp_mail_from_name', function() {
@@ -1451,8 +1471,16 @@ add_filter( 'wp_mail_from_name', function() {
 
 $subject = sprintf( "%s %s", $subject, __( "Masters House", 'bon' ) );
 
-/* Responsne email configuration */
 
+
+/********************************
+*								*
+* Responsne email configuration	*
+*								*
+********************************/
+
+
+// setup response email body if email was filled in contact form
 if ( $email ) {
 
 	$response_receiver = $email;
@@ -1468,7 +1496,12 @@ if ( $email ) {
 
 }
 
+
+
+// send email to admin
 if ( wp_mail( $receiver, $subject, $body, $headers ) ) {
+
+	// add necessary WP filters
 	add_filter( 'wp_mail_from', function() {
 		return __( 'no-reply@mastershouse.com', 'bon' );
 	} );
@@ -1476,15 +1509,20 @@ if ( wp_mail( $receiver, $subject, $body, $headers ) ) {
 		return __( "Masters House", 'bon' );
 	} );
 
+	// send response if email to admin was sent succesfully
 	if ( $email ) { wp_mail( $response_receiver, $response_subject, $response_body, $response_headers ); }
 
+	// set return data if email was sent successfully
 	$return_data['success'] = '1';
 	$return_data['value'] = __( 'Email was sent successfully.', 'bon' );
 	die( json_encode( $return_data ) );
+
 } else {
 
+	// set return data if there was an error with sending email
 	$return_data['value'] = __( 'There is an error sending email.', 'bon' );
 	die( json_encode( $return_data ) );
+
 }
 }
 
@@ -2009,4 +2047,59 @@ function the_badge() {
 		</span>
 	</div>
 	<?php } ?>
-	<?php }
+	<?php
+}
+
+function the_contact_form_content() {
+
+	$phone_html = '';
+	$phone = explode( ',', esc_attr( bon_get_option( 'hgroup1_content' ) ) );
+
+		// check how many phone numbers are set
+	$phone_count = count( $phone );
+
+	if ( $phone_count > 1 ) {
+		foreach ( $phone as $number ) {
+			$phone_html .= '<strong>' . $number . '</strong>';
+		}
+	} else {
+		$phone_html = '<strong><a href="tel:' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '">' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '</a></strong>';
+	}
+	?>
+	<p><?php _e( 'Call us directly at:', 'bon' ); ?><span class="phone phone-<?php echo $phone_count; ?>"> <?php echo $phone_html; ?> </span><?php _e( 'or leave us your details data, so our representative can contact you.', 'bon' ); ?></p>
+	<p><?php _e( 'We work from Monday to Friday 8 am to 4 pm. During this time we contact you back within one hour', 'bon' ); ?></p>
+
+	<?php
+}
+
+// function to render email input for contact forms
+function the_email_input( $required=NULL ) { ?>
+
+<div class='column large-12 small-11 input-container-inner mail'>
+	<input class="attached-input email<?php echo $required ? ' ' . $required : ''; ?>" type="email" placeholder="<?php echo __( 'Email Address', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="email" id="email" autocomplete="email" vcard_name="vCard.Email" size="22" tabindex="2" />
+	<div class="contact-form-error" ><?php _e( 'Please enter either your email or phone number.', 'bon' ); ?></div>
+</div>
+
+<?php
+}
+
+// function to render phone input for contact forms
+function the_phone_input( $required=NULL ) { ?>
+
+<div class='column large-12 small-11 input-container-inner phone'>
+	<input class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" type="tel" placeholder="<?php echo __( 'Phone Number', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="phone" id="phone" autocomplete="tel" vcard_name="vCard.Home.Phone" size="22" tabindex="1" />
+	<div class="contact-form-error" ><?php _e( 'Please enter either your email or phone number.', 'bon' ); ?></div>
+</div>
+
+<?php
+}
+
+// function to render textarea for contact forms
+function the_textarea( $required=NULL ) { ?>
+
+<div class='column large-12 small-11 input-container-inner pencil'>
+	<textarea class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" placeholder="<?php _e( "In case you want to ask us about something, type it here. You can also leave it empty and we'll contact you soon.", 'bon' ); ?>"  name="messages" id="messages" value="" cols="58" rows="10" tabindex="4" /></textarea>
+</div>
+
+<?php
+}
