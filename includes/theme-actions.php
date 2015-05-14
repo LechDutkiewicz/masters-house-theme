@@ -14,26 +14,31 @@ function shandora_get_listing_price( $echo = true, $total = true ) {
 		$price = shandora_get_meta( $post->ID, 'listing_monprice', true );
 		$data_price = get_post_meta( $post->ID, $prefix . 'listing_monprice', true );
 	}
-	$price = '<span itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price" data-value="' . $data_price . '">' . $price . '</span>';
-	$price .= '<meta itemprop="priceCurrency" content="' . $currency . '" /></span>';
+	
+	$priceBegin = '<span itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price" data-value="' . $data_price . '">' . $price . '</span>';
+	$priceBegin .= '<meta itemprop="priceCurrency" content="' . $currency . '" />';
+
+	$priceEnd = '</span>';
+
+
 	$o = '';
 
 	switch ( $placement ) {
 
 		case 'left-space':
-		$format = $currency . ' ' . $price;
+		$format = $currency . ' ' . $priceBegin . $priceEnd;
 		break;
 
 		case 'right':
-		$format = $price . $currency;
+		$format = $priceBegin . $currency . $priceEnd;
 		break;
 
 		case 'right-space':
-		$format = $price . ' ' . $currency;
+		$format = $priceBegin . ' ' . $currency . $priceEnd;
 		break;
 
 		default:
-		$format = $currency . $price;
+		$format = $currency . $priceBegin . $priceEnd;
 		break;
 	}
 
