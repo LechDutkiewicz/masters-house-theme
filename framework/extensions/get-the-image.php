@@ -65,6 +65,7 @@ function get_the_image( $args = array() ) {
 		'echo' => true,
 		'custom_key' => null, // @deprecated 0.6. Use 'meta_key'.
 		'default_size' => null, // @deprecated 0.5.  Use 'size'.
+		'itemprop' => null
 	);
 
 	/* Allow plugins/themes to filter the arguments. */
@@ -413,8 +414,14 @@ function get_the_image_format( $args = array(), $image = false ) {
 	/* Join all the classes into a single string and make sure there are no duplicates. */
 	$class = join( ' ', array_unique( $classes ) );
 
+	if ( !is_null( $args['itemprop'] ) ) {
+		
+		$itemprop = 'itemprop="image" ';
+
+	}
+
 	/* Add the image attributes to the <img /> element. */
-	$html = '<img itemprop="image" src="' . $image['src'] . '" alt="' . esc_attr( strip_tags( $image_alt ) ) . '" class="' . esc_attr( $class ) . '"' . $width . $height . ' />';
+	$html = '<img ' . $itemprop . 'src="' . $image['src'] . '" alt="' . esc_attr( strip_tags( $image_alt ) ) . '" class="' . esc_attr( $class ) . '"' . $width . $height . ' />';
 
 	/* If $link_to_post is set to true, link the image to its post. */
 	if ( $link_to_post )

@@ -17,6 +17,7 @@
 
 ?>
 <body data-spy="scroll" data-target=".affix-nav-container"  id="totop" <?php body_class( $class ); ?>>
+	<a href="#main-content" class="sr-only sr-only-focusable"><?php _e( 'Skip to main content', 'bon'); ?></a>
 	<div id="outer-wrap">
 
 	<!-- BEGIN Header -->

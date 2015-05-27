@@ -71,4 +71,29 @@ if(!function_exists('shandora_print_tracking_code')) {
 
 }
 
+
+if(!function_exists('shandora_print_site_verification')) {
+
+	function shandora_print_site_verification() {
+
+		if ( WP_ENV === 'production' ) {
+
+			$code = bon_get_option('site_verification');
+			
+			if(!empty($code)) { ?>
+				
+					<?php echo '<meta name="google-site-verification" content="' . $code . '" />'; ?>
+
+
+				<?php 
+			}
+
+		}
+
+	}
+
+	add_action('wp_head', 'shandora_print_site_verification', 102);
+
+}
+
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-function shandora_get_listing_price( $echo = true, $total = true ) {
+function shandora_get_listing_price( $echo = true, $total = true, $itemprop = false ) {
 	global $post;
 	$currency = bon_get_option( 'currency' );
 	$placement = bon_get_option( 'currency_placement' );
@@ -14,9 +14,20 @@ function shandora_get_listing_price( $echo = true, $total = true ) {
 		$price = shandora_get_meta( $post->ID, 'listing_monprice', true );
 		$data_price = get_post_meta( $post->ID, $prefix . 'listing_monprice', true );
 	}
+
+	if ( $itemprop ) {
+		// setup microdata parameters
+		$itemprop_1 = ' itemprop="offers" itemscope itemtype="http://schema.org/Offer"';
+		$itemprop_2 = ' itemprop="price"';
+		$itemprop_3 = '<meta itemprop="priceCurrency" content="' . $currency . '" />';
+	} else {
+		$itemprop_1 = '';
+		$itemprop_2 = '';
+		$itemprop_3 = '';
+	}
 	
-	$priceBegin = '<span itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price" data-value="' . $data_price . '">' . $price . '</span>';
-	$priceBegin .= '<meta itemprop="priceCurrency" content="' . $currency . '" />';
+	$priceBegin = '<span class="item-price"' . $itemprop_1 . '><span' . $itemprop_2 . ' data-value="' . $data_price . '">' . $price . '</span>';
+	$priceBegin .= $itemprop_3;
 
 	$priceEnd = '</span>';
 

@@ -32,7 +32,7 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: [jsFileList],
-				tasks: ['jshint', 'concat'],
+				tasks: ['jshint', 'concat', 'uglify'],
 			},
 		},
 	});

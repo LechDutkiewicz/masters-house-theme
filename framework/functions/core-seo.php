@@ -150,7 +150,7 @@ function bon_meta_description() {
 
 		/* For all other singular views, get the post excerpt. */
 		elseif ( empty( $description ) )
-			$description = get_post_field( 'post_excerpt', get_queried_object_id() );
+			$description = get_post_field( 'post_content', get_queried_object_id() );
 	}
 
 	/* If viewing an archive page. */

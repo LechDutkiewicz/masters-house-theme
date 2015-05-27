@@ -74,7 +74,16 @@ function bon_meta_charset() {
 * @return void
 */
 function bon_doctitle() {
+
+    if ( !shandora_is_home() ) {
+
+        printf( "<title>%s | %s</title>\n", wp_title( ':', false ), get_bloginfo( 'name' ) );
+
+    } else {
+        
         printf( "<title>%s</title>\n", wp_title( ':', false ) );
+
+    }
 }
 
 /**
