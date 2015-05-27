@@ -84,8 +84,6 @@ function shandora_setup_theme_hook() {
 
 	// removed by Lech Dutkiewicz add_action("{$prefix}after_single_entry_content", "shandora_listing_meta", 5);
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 35 );
-
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 9 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_services", 10 );
@@ -97,6 +95,8 @@ function shandora_setup_theme_hook() {
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_video", 25 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_spec_close", 30 );
+
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 35 );
 
 	//add_action("{$prefix}after_single_entry_content", "shandora_car_listing_video", 30);
 
@@ -113,6 +113,8 @@ function shandora_setup_theme_hook() {
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_faq", 55 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_cta", 60 );
+
+		add_action( "{$prefix}after_single_entry_content", "shandora_social_counter", 61 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_modal", 65 );
 
@@ -815,7 +817,7 @@ function shandora_listing_entry_title() {
 		$price = '<a href="' . get_permalink( $post->ID ) . '" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '"><span class="price">' . shandora_get_listing_price( false ) . '</span></a>';
 	}
 
-	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title" itemprop="name"><a href="' . get_permalink() . '" class="product-link" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '">', '</a>' . $price . '</h3>', false ) );
+	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title"><a href="' . get_permalink() . '" class="product-link" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '">', '</a>' . $price . '</h3>', false ) );
 }
 
 /**
@@ -974,6 +976,12 @@ function shandora_car_listing_video() {
 	<?php } ?>
 
 	<?php
+}
+
+function shandora_social_counter() {
+
+	bon_toolkit_render_social_counter( true );
+
 }
 
 /**
@@ -1470,7 +1478,7 @@ function shandora_post_related() {
 */
 function shandora_listing_toolsection() {
 	$display = bon_get_option( 'tool_section_display' );
-	if ( $display === '1' || $display === '2') {
+	if ( $display === '1' ) {
 		if ( is_singular( 'listing' ) ) {
 			bon_get_template_part( 'block', 'block-toolsection' );
 		}

@@ -225,6 +225,14 @@ $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Tracking Code', 'bo
 	'class' => 'code_mirror',
 	'type' => 'textarea' );
 
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Google Webmasters Center verification code', 'bon' ),
+	'desc' => __( 'Paste your Google Webmasters Center verification code.', 'bon' ),
+	'id' => 'site_verification',
+	'std' => '',
+	'class' => 'code_mirror',
+	'type' => 'text' );
+
 $options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Google Map center point latitude', 'bon' ),
 	'desc' => __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
@@ -1496,7 +1504,104 @@ $options[] = array( 'slug' => 'bon_options',
 			'type' => 'heading',
 			'icon' => 'dashicons-image-crop' );
 
-		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Tool section image', 'bon' ),
+		$options[] = array(
+			'type' => 'checkbox',
+			'label' => __( 'Display on pages', 'bon' ),
+			'desc' => __( 'Choose to show or hide it', 'bon' ),
+			'id' => 'tool_section_display'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'label' => __( 'Text displayed as customization section title', 'bon' ),
+			'id' => 'customize_section_title',
+			'type' => 'text'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'label' => __( 'Customization section images', 'bon' ),
+			'desc' => __( 'Image displayed in customization section', 'bon' ),
+			'id' => 'customize_section_img_1',
+			'type' => 'upload'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Image displayed in customization section', 'bon' ),
+			'id' => 'customize_section_img_2',
+			'type' => 'upload'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Image displayed in customization section', 'bon' ),
+			'id' => 'customize_section_img_3',
+			'type' => 'upload'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'label' => __( 'Texts displayed in customization section', 'bon' ),
+			'desc' => __( 'First section header', 'bon' ),
+			'id' => 'customize_section_header_1',
+			'type' => 'text'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'First section content', 'bon' ),
+			'id' => 'customize_section_content_1',
+			'settings' => array(
+				'media_buttons' => false,
+				'tinymce' => true,
+				'teeny' => false,
+				'wpautop' => false
+				),
+			'type' => 'editor'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Second section header', 'bon' ),
+			'id' => 'customize_section_header_2',
+			'type' => 'text'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Second section content', 'bon' ),
+			'id' => 'customize_section_content_2',
+			'settings' => array(
+				'media_buttons' => false,
+				'tinymce' => true,
+				'teeny' => false,
+				'wpautop' => false
+				),
+			'type' => 'editor'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Third section header', 'bon' ),
+			'id' => 'customize_section_header_3',
+			'type' => 'text'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Third section content', 'bon' ),
+			'id' => 'customize_section_content_3',
+			'settings' => array(
+				'media_buttons' => false,
+				'tinymce' => true,
+				'teeny' => false,
+				'wpautop' => false
+				),
+			'type' => 'editor'
+			);
+
+		/*$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Tool section image', 'bon' ),
 			'desc' => __( 'Image displayed in tool section', 'bon' ),
 			'id' => 'tool_section_img',
 			'type' => 'upload' );
@@ -1599,7 +1704,7 @@ $options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Cta color', 'bon' ),
 			'desc' => __( 'Pick cta color', 'bon' ),
 			'id' => 'tool_section_cta_color'
-			);
+			);*/
 
 
 		/**
