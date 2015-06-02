@@ -1576,7 +1576,8 @@ function shandora_home_bottom_cta() {
 *
 */
 function shandora_shop_slider() {
-	bon_get_template_part( 'block', 'block-shop-slider' );
+	if ( bon_get_option( 'home_eshop' ) )
+		bon_get_template_part( 'block', 'block-shop-slider' );
 }
 
 /**
