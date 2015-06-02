@@ -1,3 +1,7 @@
+# 2 VI 2015 Update
+
+1. Home page slider with e-shop items is optional
+
 # 11 V 2015 Update
 
 1. Added new and top seller badges for gallery view, related products and bottom call to action section.
