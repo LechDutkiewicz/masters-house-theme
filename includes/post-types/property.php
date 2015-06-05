@@ -14,6 +14,8 @@ function get_colors_list() {
 	return($alt_colors);
 }
 
+/* Function to get list of all available packages */
+
 function get_packages_list( $to_lower = false ) {
 	$packages = bon_get_option('cottage_packages', false);
 	if ($to_lower) {
@@ -22,6 +24,43 @@ function get_packages_list( $to_lower = false ) {
 		}
 	}
 	return ($packages);
+}
+
+/* Function to get list of all available addons for buildings (items included in price) */
+
+function get_addons_list() {
+
+	if ( $addons = get_addons() ) {
+
+		$addons_names_and_ids = array();
+
+		while ( $addons->have_posts() ) : $addons->the_post();
+
+		$addons_names_and_ids[get_the_ID()] = get_the_title();
+
+		endwhile;
+
+	}
+
+	return $addons_names_and_ids;
+
+}
+
+function get_addons() {
+
+	$args = array(
+		'post_type' => 'addon',
+		'posts_per_page' => -1,
+		'orderby' => 'menu_order',
+		'order' => 'ASC',
+		);
+
+	$loop = new WP_Query( $args );
+
+	return $loop;
+
+	wp_reset_query();
+
 }
 
 if ( !function_exists( 'shandora_setup_listing_post_type' ) ) {
@@ -89,104 +128,198 @@ if ( !function_exists( 'shandora_setup_listing_post_type' ) ) {
 
 		$cpt->create( 'Listing', $args, array(), $name, $plural );
 
-		$gallery_opts = array(
-			array(
-				'label' => __( 'Listings Gallery', 'bon' ),
-				'desc' => __( 'Choose image to use in this listing gallery.', 'bon' ),
-				'id' => $prefix . $suffix . 'gallery',
-				'type' => 'gallery',
-				),
-			);
+/********************************
+*								*
+* Gallery options 				*
+*								*
+********************************/
 
-		$prop_options = array(
+$build_gallery_options = array(
+	array(
+		'label' => __( 'Listings Gallery', 'bon' ),
+		'desc' => __( 'Choose image to use in this listing gallery.', 'bon' ),
+		'id' => $prefix . $suffix . 'gallery',
+		'type' => 'gallery',
+		),
+	);
+
+/********************************
+*								*
+* Basic options 				*
+*								*
+********************************/
+
+$build_options = array(
+	array(
+		'label' => __( 'Featured Property', 'bon' ),
+		'desc' => __( 'Make the property featured for featured property widget', 'bon' ),
+		'id' => $prefix . $suffix . 'featured',
+		'type' => 'checkbox'
+		),
+	array(
+		'label' => __( 'Total price', 'bon' ),
+		'desc' => __( 'Product total price, without currency', 'bon' ),
+		'id' => $prefix . $suffix . 'price',
+		'type' => 'number',
+		),
+
+	array(
+		'label' => __( 'Cottage Status', 'bon' ),
+		'desc' => __( 'The status for the cottage, used for badge, etc.', 'bon' ),
+		'id' => $prefix . $suffix . 'status',
+		'type' => 'select',
+		'options' => shandora_get_search_option()
+		),
+	);
+
+/********************************
+*								*
+* Options for constructions 	*
+*								*
+********************************/
+
+$build_constructions_options = array(
+	array(
+		'label' => __( 'Enable construction parameters', 'bon' ),
+		'id' => $prefix . $suffix . 'enable_construction',
+		'std' => 1,
+		'class' => 'collapsed',
+		'type' => 'checkbox'
+		),
+	array(
+		'label' => __( 'Roof size', 'bon' ),
+		'desc' => __( 'Product roof size in meters, ex: 5.5', 'bon' ),
+		'id' => $prefix . $suffix . 'constructionroofsize',
+		'type' => 'text',
+		'class' => 'hidden',
+		),
+	array(
+		'label' => __( 'Columns size', 'bon' ),
+		'desc' => __( 'Add columns size', 'bon' ),
+		'id' => $prefix . $suffix . 'columnssizes',
+		'type' => 'repeatable',
+		'class' => 'hidden',
+		'sanitize' => array(
+			'name' => 'sanitize_text_field',
+			),
+		'repeatable_fields' => array(
 			array(
-				'label' => __( 'Featured Property', 'bon' ),
-				'desc' => __( 'Make the property featured for featured property widget', 'bon' ),
-				'id' => $prefix . $suffix . 'featured',
-				'type' => 'checkbox'
-				),
-			array(
-				'label' => __( 'Total price', 'bon' ),
-				'desc' => __( 'Product total price, without currency', 'bon' ),
-				'id' => $prefix . $suffix . 'price',
+				'label' => __( 'Width', 'bon' ),
+				'id' => $prefix . $suffix . 'columnwidth',
 				'type' => 'number',
 				),
 			array(
-				'label' => __( 'Size', 'bon' ),
-				'desc' => __( 'Product size in square meters, without unit', 'bon' ),
-				'id' => $prefix . $suffix . 'lotsize',
-				'type' => 'text',
+				'label' => __( 'Height', 'bon' ),
+				'id' => $prefix . $suffix . 'columnheight',
+				'type' => 'number',
 				),
+			),
+		),
+	array(
+		'label' => __( 'Rafters size', 'bon' ),
+		'desc' => __( 'Add rafters size', 'bon' ),
+		'id' => $prefix . $suffix . 'rafterssizes',
+		'type' => 'repeatable',
+		'class' => 'hidden last',
+		'sanitize' => array(
+			'name' => 'sanitize_text_field',
+			),
+		'repeatable_fields' => array(
 			array(
-				'label' => __( 'Terrace', 'bon' ),
-				'desc' => __( 'Product terrace size in square meters, without unit', 'bon' ),
-				'id' => $prefix . $suffix . 'terracesqmt',
-				'type' => 'text',
-				),
-			array(
-				'label' => __( 'Floors', 'bon' ),
-				'desc' => __( 'Number of floors', 'bon' ),
-				'id' => $prefix . $suffix . 'floors',
+				'label' => __( 'Width', 'bon' ),
+				'id' => $prefix . $suffix . 'rafterwidth',
 				'type' => 'number',
 				),
 			array(
-				'label' => __( 'Rooms', 'bon' ),
-				'desc' => __( 'Total number of rooms', 'bon' ),
-				'id' => $prefix . $suffix . 'rooms',
+				'label' => __( 'Height', 'bon' ),
+				'id' => $prefix . $suffix . 'rafterheight',
 				'type' => 'number',
 				),
+			),
+		),
+	);
+
+/********************************
+*								*
+* Options for big houses 		*
+*								*
+********************************/
+
+$build_big_size_options = array(
+	array(
+		'label' => __( 'Enable pricing packages', 'bon' ),
+		'id' => $prefix . $suffix . 'enable_packages',
+		'std' => 1,
+		'class' => 'collapsed',
+		'type' => 'checkbox'
+		),
+	);
+
+/********************************
+*								*
+* Options for size parameters	*
+*								*
+********************************/
+
+$build_size_options = array(
+	array(
+		'label' => __( 'Size', 'bon' ),
+		'desc' => __( 'Product size in square meters, without unit', 'bon' ),
+		'id' => $prefix . $suffix . 'lotsize',
+		'type' => 'text',
+		),
+	array(
+		'label' => __( 'Terrace', 'bon' ),
+		'desc' => __( 'Product terrace size in square meters, without unit', 'bon' ),
+		'id' => $prefix . $suffix . 'terracesqmt',
+		'type' => 'text',
+		),
+	array(
+		'label' => __( 'Floors', 'bon' ),
+		'desc' => __( 'Number of floors', 'bon' ),
+		'id' => $prefix . $suffix . 'floors',
+		'type' => 'number',
+		),
+	array(
+		'label' => __( 'Rooms', 'bon' ),
+		'desc' => __( 'Total number of rooms', 'bon' ),
+		'id' => $prefix . $suffix . 'rooms',
+		'type' => 'number',
+		),
+	array(
+		'label' => __( 'Plan dimensions', 'bon' ),
+		'desc' => __( 'Add floor', 'bon' ),
+		'id' => $prefix . $suffix . 'plandimensions',
+		'sanitize' => array(
+			'name' => 'sanitize_text_field',
+			),
+		'repeatable_fields' => array(
 			array(
-				'label' => __( 'Plan dimensions', 'bon' ),
-				'desc' => __( 'Add floor', 'bon' ),
-				'id' => $prefix . $suffix . 'plandimensions',
-				'type' => 'repeatable',
-				'sanitize' => array(
-					'name' => 'sanitize_text_field',
-					),
-				'repeatable_fields' => array(
-					array(
-						'label' => __( 'Plan width', 'bon' ),
-						'desc' => __( 'Product plan width in meters, ex: 5.5', 'bon' ),
-						'id' => $prefix . $suffix . 'dimensionswidth',
-						'type' => 'text',
-						),
-					array(
-						'label' => __( 'Plan height', 'bon' ),
-						'desc' => __( 'Product plan height in meters, ex: 5.5', 'bon' ),
-						'id' => $prefix . $suffix . 'dimensionsheight',
-						'type' => 'text',
-						),
-					array(
-						'label' => __( 'Floor', 'bon' ),
-						'desc' => __( 'Pick which floor dimensions are you describing', 'bon' ),
-						'id' => $prefix . $suffix . 'dimensionfloor',
-						'std' => __( 'Ground floor', 'bon' ),
-						'type' => 'select',
-						'options' => array(
-							'ground_floor' => __( 'Ground floor', 'bon' ),
-							'first_floor' => __( 'First floor', 'bon' ),
-							)
-						),
-					array(
-						'label' => __( 'Plan total area', 'bon' ),
-						'desc' => __( 'OR product plan total area in meters, ex: 25.5', 'bon' ),
-						'id' => $prefix . $suffix . 'dimensionsarea',
-						'type' => 'text',
-						),
-					),
-),
-			/*array(
 				'label' => __( 'Plan width', 'bon' ),
 				'desc' => __( 'Product plan width in meters, ex: 5.5', 'bon' ),
 				'id' => $prefix . $suffix . 'dimensionswidth',
 				'type' => 'text',
-				),*/
-			/*array(
+				),
+			array(
 				'label' => __( 'Plan height', 'bon' ),
 				'desc' => __( 'Product plan height in meters, ex: 5.5', 'bon' ),
 				'id' => $prefix . $suffix . 'dimensionsheight',
 				'type' => 'text',
-				),*/
+				),
+			array(
+				'label' => __( 'Floor', 'bon' ),
+				'desc' => __( 'Pick which floor dimensions are you describing', 'bon' ),
+				'id' => $prefix . $suffix . 'dimensionfloor',
+				'std' => __( 'Ground floor', 'bon' ),
+				'options' => array(
+					'ground_floor' => __( 'Ground floor', 'bon' ),
+					'first_floor' => __( 'First floor', 'bon' ),
+					),
+				'type' => 'select',
+				),
+			),
+		'type' => 'repeatable',
+		),
 array(
 	'label' => __( 'Total height', 'bon' ),
 	'desc' => __( 'Product total height in milimeters, without unit', 'bon' ),
@@ -217,58 +350,54 @@ array(
 	'id' => $prefix . $suffix . 'roofthickness',
 	'type' => 'number',
 	),
-			/* array(
-			  'label' => __( 'Windows', 'bon' ),
-			  'desc' => __( 'Number of windows', 'bon' ),
-			  'id' => $prefix . $suffix . 'windows',
-			  'type' => 'number',
-			  ), */
-array(
-	'label' => __( 'Windows', 'bon' ),
-	'desc' => __( 'Add windows', 'bon' ),
-	'id' => $prefix . $suffix . 'windowssizes',
-	'type' => 'repeatable',
-	'sanitize' => array(
-		'name' => 'sanitize_text_field',
+);
+
+/********************************
+*								*
+* Options for doors and windows *
+*								*
+********************************/
+
+$build_doors_options = array(
+	array(
+		'label' => __( 'Windows', 'bon' ),
+		'desc' => __( 'Add windows', 'bon' ),
+		'id' => $prefix . $suffix . 'windowssizes',
+		'sanitize' => array(
+			'name' => 'sanitize_text_field',
+			),
+		'repeatable_fields' => array(
+			array(
+				'label' => __( 'Window width', 'bon' ),
+				'desc' => __( 'Window width in milimeters, without unit', 'bon' ),
+				'id' => $prefix . $suffix . 'windowwidth',
+				'type' => 'number',
+				),
+			array(
+				'label' => __( 'Window height', 'bon' ),
+				'desc' => __( 'Window height in milimeters, without unit', 'bon' ),
+				'id' => $prefix . $suffix . 'windowheight',
+				'type' => 'number',
+				),
+			array(
+				'label' => __( 'Windows amount', 'bon' ),
+				'desc' => __( 'Amount of windows of the chosen size', 'bon' ),
+				'id' => $prefix . $suffix . 'windowamount',
+				'type' => 'number',
+				),
+			array(
+				'label' => __( 'Windows type', 'bon' ),
+				'desc' => __( 'Single or double', 'bon' ),
+				'id' => $prefix . $suffix . 'windowtype',
+				'type' => 'text',
+				),
+			),
+		'type' => 'repeatable',
 		),
-	'repeatable_fields' => array(
-		array(
-			'label' => __( 'Window width', 'bon' ),
-			'desc' => __( 'Window width in milimeters, without unit', 'bon' ),
-			'id' => $prefix . $suffix . 'windowwidth',
-			'type' => 'number',
-			),
-		array(
-			'label' => __( 'Window height', 'bon' ),
-			'desc' => __( 'Window height in milimeters, without unit', 'bon' ),
-			'id' => $prefix . $suffix . 'windowheight',
-			'type' => 'number',
-			),
-		array(
-			'label' => __( 'Windows amount', 'bon' ),
-			'desc' => __( 'Amount of windows of the chosen size', 'bon' ),
-			'id' => $prefix . $suffix . 'windowamount',
-			'type' => 'number',
-			),
-		array(
-			'label' => __( 'Windows type', 'bon' ),
-			'desc' => __( 'Single or double', 'bon' ),
-			'id' => $prefix . $suffix . 'windowtype',
-			'type' => 'text',
-			),
-		),
-	),
-			/* array(
-			  'label' => __( 'Doors', 'bon' ),
-			  'desc' => __( 'Number of doors', 'bon' ),
-			  'id' => $prefix . $suffix . 'doors',
-			  'type' => 'number',
-			  ), */
 array(
 	'label' => __( 'Doors', 'bon' ),
 	'desc' => __( 'Add doors', 'bon' ),
 	'id' => $prefix . $suffix . 'doorssizes',
-	'type' => 'repeatable',
 	'sanitize' => array(
 		'name' => 'sanitize_text_field',
 		),
@@ -298,83 +427,13 @@ array(
 			'type' => 'text',
 			),
 		),
-	),
-			// old ones
-array(
-	'label' => __( 'Enable construction parameters', 'bon' ),
-	'id' => $prefix . $suffix . 'enable_construction',
-	'std' => 1,
-	'class' => 'collapsed',
-	'type' => 'checkbox'
-	),
-array(
-	'label' => __( 'Roof size', 'bon' ),
-	'desc' => __( 'Product roof size in meters, ex: 5.5', 'bon' ),
-	'id' => $prefix . $suffix . 'constructionroofsize',
-	'type' => 'text',
-	'class' => 'hidden',
-	),
-array(
-	'label' => __( 'Columns size', 'bon' ),
-	'desc' => __( 'Add columns size', 'bon' ),
-	'id' => $prefix . $suffix . 'columnssizes',
 	'type' => 'repeatable',
-	'class' => 'hidden',
-	'sanitize' => array(
-		'name' => 'sanitize_text_field',
-		),
-	'repeatable_fields' => array(
-		array(
-			'label' => __( 'Width', 'bon' ),
-			'id' => $prefix . $suffix . 'columnwidth',
-			'type' => 'number',
-			),
-		array(
-			'label' => __( 'Height', 'bon' ),
-			'id' => $prefix . $suffix . 'columnheight',
-			'type' => 'number',
-			),
-		),
 	),
-array(
-	'label' => __( 'Rafters size', 'bon' ),
-	'desc' => __( 'Add rafters size', 'bon' ),
-	'id' => $prefix . $suffix . 'rafterssizes',
-	'type' => 'repeatable',
-	'class' => 'hidden last',
-	'sanitize' => array(
-		'name' => 'sanitize_text_field',
-		),
-	'repeatable_fields' => array(
-		array(
-			'label' => __( 'Width', 'bon' ),
-			'id' => $prefix . $suffix . 'rafterwidth',
-			'type' => 'number',
-			),
-		array(
-			'label' => __( 'Height', 'bon' ),
-			'id' => $prefix . $suffix . 'rafterheight',
-			'type' => 'number',
-			),
-		),
-	),
-
-array(
-	'label' => __( 'Cottage Status', 'bon' ),
-	'desc' => __( 'The status for the cottage, used for badge, etc.', 'bon' ),
-	'id' => $prefix . $suffix . 'status',
-	'type' => 'select',
-	'options' => shandora_get_search_option()
-	),
-array(
-	'label' => __( 'Enable pricing packages', 'bon' ),
-	'id' => $prefix . $suffix . 'enable_packages',
-	'std' => 1,
-	'class' => 'collapsed',
-	'type' => 'checkbox'
-	),
-
 );
+
+$prop_options = array(
+
+	);
 
 /* Add options for all packages defined in theme listing options */
 
@@ -382,13 +441,13 @@ if ( $packages = get_packages_list() ) {
 	
 	foreach ( $packages as $key => $package ) {
 		$exclass = ( $key + 1 === count( $packages ) ) ? ' last' : '';
-		$prop_options[] = array(
+		$build_big_size_options[] = array(
 			'label' => $package['package_name'],
 			'id' => $prefix . $suffix . sanitize_title($package['package_name']),
 			'type' => 'info',
 			'class' => $package['package_color'] . ' bg hidden'
 			);
-		$prop_options[] = array(
+		$build_big_size_options[] = array(
 			'label' => __( 'Price', 'bon' ),
 			'id' => $prefix . $suffix . sanitize_title($package['package_name']) . '_price',
 			'type' => 'number',
@@ -436,8 +495,29 @@ if ( $packages = get_packages_list() ) {
 
 }
 
+$build_addon_options = array(
+	array(
+		'desc' => __( 'Exclude another item', 'bon' ),
+		'id' => $prefix . $suffix . 'excluded_addons',
+		'sanitize' => array(
+			'name' => 'sanitize_text_field',
+			),
+		'repeatable_fields' => array(
+			array(
+				'label' => __( 'Item to exclude', 'bon' ),
+				'id' => $prefix . $suffix . 'exclude',
+				'type' => 'select',
+				'options' => get_addons_list()
+				),
+			),
+		'type' => 'repeatable'
+		),
+	);
 
-$fr_opt = array();
+
+
+
+/*$fr_opt = array();
 
 if ( bon_get_option( 'enable_dpe_ges', false ) == 'yes' ) {
 
@@ -456,7 +536,7 @@ if ( bon_get_option( 'enable_dpe_ges', false ) == 'yes' ) {
 		);
 }
 
-$prop_options = array_merge( $fr_opt, $prop_options );
+$prop_options = array_merge( $fr_opt, $prop_options );*/
 
 
 
@@ -505,11 +585,31 @@ $cpt->add_taxonomy( "Property Type", array( 'rewrite' => $property_type_rewrite,
 		$cpt->add_taxonomy( "Property Feature", array( 'rewrite' => $property_feature_rewrite, 'label' => __( 'Property Features', 'bon' ), 'labels' => array( 'menu_name' => __( 'Features', 'bon' ) ) ) ); */
 
 		$cpt->add_meta_box(
-			'gallery-options', 'Gallery Options', $gallery_opts
+			'gallery-options', 'Gallery Options', $build_gallery_options
 			);
 
 		$cpt->add_meta_box(
-			'property-options', 'Property Options', $prop_options
+			'building-options', 'Building options', $build_options
+			);
+
+		$cpt->add_meta_box(
+			'constructions-options', 'Options for constructions', $build_constructions_options
+			);
+
+		$cpt->add_meta_box(
+			'big-building-options', 'Options for big houses with packages', $build_big_size_options
+			);
+
+		$cpt->add_meta_box(
+			'building-size', 'Building size', $build_size_options
+			);
+
+		$cpt->add_meta_box(
+			'building-doors-and-windows', 'Building doors and windows', $build_doors_options
+			);
+
+		$cpt->add_meta_box(
+			'building-remove-addons', 'Manage what is included in price', $build_addon_options
 			);
 
 		/* $cpt->add_meta_box(
@@ -672,9 +772,33 @@ if ( !function_exists( 'shandora_setup_service_post_type' ) ) {
 				),
 			);
 
+		$service_opt2 = array(
+			array(
+				'label' => __( 'Title', 'bon' ),
+				'id' => $prefix . 'service_more_title',
+				'type' => 'text',
+				),
+			array(
+				'label' => __( 'Content', 'bon' ),
+				'id' => $prefix . 'service_more_content',
+				'type' => 'editor',
+				'settings' => array(
+					'media_buttons' => true,
+					/*'tinymce' => true,
+					'teeny' => true,
+					'wpautop' => true,
+					'textarea_rows' => 30*/
+					),
+				),
+			);
+
 
 		$cpt->add_meta_box(
-			'service-options', 'Service Options', $service_opt1
+			'service-options', 'Icon options', $service_opt1
+			);
+
+		$cpt->add_meta_box(
+			'service-more', 'Extended information', $service_opt2
 			);
 	}
 

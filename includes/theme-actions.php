@@ -1873,6 +1873,36 @@ function shandora_get_doors_or_windows( $args, $element ) {
 	return $string;
 }
 
+/* get ids of addons excluded from single building */
+
+function shandora_get_excluded_addons( $id = NULL ) {
+
+	/* use current post id if no id was passed */
+	if ( !$id ) {
+		$id = get_the_ID();
+	}
+
+	$excluded_addons = get_post_meta( $id, bon_get_prefix() . 'listing_excluded_addons' );
+
+	/* setup array for ids of excluded addons */
+	$ids = array();
+
+	foreach ( $excluded_addons as $addons_array ) {
+
+		foreach ( $addons_array as $addons ) {
+
+			foreach ( $addons as $addon ) {
+
+					$ids[] = $addon;
+			}
+
+		}
+	}
+
+	return($ids);
+
+}
+
 function shandora_home_cta( $args, $visited = 0 ) {
 	foreach ( $args as $cta ) {
 		if ( $visited != 3 ) {
