@@ -1740,6 +1740,12 @@ $options[] = array( 'slug' => 'bon_options',
 			'type' => 'checkbox' );
 
 		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Display e-shop slider', 'bon' ),
+			'desc' => __( 'Check if you want to enable e-shop slider', 'bon' ),
+			'id' => 'home_eshop',
+			'type' => 'checkbox' );
+
+		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Home call to action', 'bon' ),
 			'desc' => __( 'Add call to action', 'bon' ),
 			'id' => 'home_cta',
