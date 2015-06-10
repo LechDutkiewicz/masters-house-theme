@@ -1033,3 +1033,30 @@ if ( !function_exists( 'shandora_setup_promotions_post_type' ) ) {
 	}
 
 }
+
+if ( !function_exists( 'shandora_setup_regular_post_type' ) ) {
+
+	function shandora_setup_regular_post_type() {
+		global $bon;
+
+		$prefix = bon_get_prefix();
+
+		$mb = new BON_Metabox();
+
+		$page = 'Post';
+
+		$fields = array(
+			array(
+				'label' => __( 'Related cottage', 'bon' ),
+				'desc' => __( 'Pick cottage if theres a related one', 'bon' ),
+				'id' => $prefix . $suffix . 'related_cottage',
+				'post_type' => 'Listing',
+				'type' => 'post_chosen'
+				),
+			);
+
+		$mb->create_box( 'related-post', 'Related post', $fields, $page, $context = 'normal', $priority = 'high' );
+
+	}
+
+}

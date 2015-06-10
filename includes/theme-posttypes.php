@@ -102,6 +102,7 @@ function shandora_add_post_type(){
 		add_action('init', 'shandora_setup_testimonials_post_type', 1);
 		add_action('init', 'shandora_setup_ebooks_post_type', 1);
 		add_action('init', 'shandora_setup_promotions_post_type', 1);
+		add_action('init', 'shandora_setup_regular_post_type', 1);
 	}
 	
 }
