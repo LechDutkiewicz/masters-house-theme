@@ -894,6 +894,25 @@ if ( !function_exists( 'shandora_setup_testimonials_post_type' ) ) {
 
 		$prop_options = array(
 			array( 
+				'label'	=> __('Testimonial', 'bon'),
+				'id'	=> $prefix . $suffix .'testimonial',
+				'type'	=> 'text',				
+				),
+			array( 
+				'label'	=> __('Full name of client', 'bon'),
+				'id'	=> $prefix . $suffix .'full_name',
+				'type'	=> 'text',				
+				),
+			array(
+				'label' => __( 'Author image', 'bon' ),
+				'desc' => __( 'Upload author image to display it on testimonials carousel', 'bon' ),
+				'id' => $prefix . $suffix . 'user_img',
+				'type' => 'image'
+				),
+			);
+
+		$prop_options_2 = array(
+			array( 
 				'label'	=> __('Map Latitude', 'bon'),
 				'desc'	=> __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
 				'id'	=> $prefix . $suffix .'maplatitude',
@@ -906,10 +925,10 @@ if ( !function_exists( 'shandora_setup_testimonials_post_type' ) ) {
 				'type'	=> 'text',				
 				),
 			array(
-				'label' => __( 'Related post', 'bon' ),
-				'desc' => __( 'Pick post if theres a related one', 'bon' ),
-				'id' => $prefix . $suffix . 'related_post',
-				'type' => 'post_chosen'
+				'label' => __( 'Building image', 'bon' ),
+				'desc' => __( 'Image that will be used on page with map of all buildings', 'bon' ),
+				'id' => $prefix . $suffix . 'map_img',
+				'type' => 'image'
 				),
 			array(
 				'label' => __( 'Related cottage', 'bon' ),
@@ -918,16 +937,14 @@ if ( !function_exists( 'shandora_setup_testimonials_post_type' ) ) {
 				'post_type' => 'Listing',
 				'type' => 'post_chosen'
 				),
-			array(
-				'label' => __( 'Author image', 'bon' ),
-				'desc' => __( 'Upload author image to display it on testimonials carousel', 'bon' ),
-				'id' => $prefix . $suffix . 'user_img',
-				'type' => 'image'
-				),
 			);
 
 $cpt->add_meta_box(
-	'related post', 'Related Post', $prop_options
+	'building', 'Building', $prop_options_2
+	);
+
+$cpt->add_meta_box(
+	'author', 'Author', $prop_options
 	);
 }
 

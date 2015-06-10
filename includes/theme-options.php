@@ -1740,6 +1740,12 @@ $options[] = array( 'slug' => 'bon_options',
 			'type' => 'checkbox' );
 
 		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Display testimonials', 'bon' ),
+			'desc' => __( 'Check if you want to enable testimonials slider', 'bon' ),
+			'id' => 'home_testimonials',
+			'type' => 'checkbox' );
+
+		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Display e-shop slider', 'bon' ),
 			'desc' => __( 'Check if you want to enable e-shop slider', 'bon' ),
 			'id' => 'home_eshop',

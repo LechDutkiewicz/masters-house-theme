@@ -1,6 +1,13 @@
+# 8 VI 2015 Update
+
+1. Added event tracking for social media share buttons in Google Analytics reports.
+2. You can add related product to single post now.
+3. Repositioned meta boxes in CMS for single product for better UX.
+4. Update for page with map of built products.
+
 # 2 VI 2015 Update
 
-1. Home page slider with e-shop items is optional
+1. Home page slider with e-shop items is optional.
 
 # 11 V 2015 Update
 

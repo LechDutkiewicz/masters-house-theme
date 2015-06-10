@@ -1532,7 +1532,8 @@ function shandora_home_we_are() {
 *
 */
 function shandora_testimonials_slider() {
-	bon_get_template_part( 'block', 'block-testimonials-slider' );
+	if ( bon_get_option( 'home_testimonials' ) )
+		bon_get_template_part( 'block', 'block-testimonials-slider' );
 }
 
 /**
@@ -2393,3 +2394,86 @@ if ( !function_exists( 'override_page_title' ) ) {
 	}
 
 }
+
+if ( !function_exists( 'open_testimonials_slider' ) ) {
+
+	function open_testimonials_slider( $loop ) { ?>
+
+	<div class="row entry-row">
+		<div class="padding-<?php echo shandora_is_home() ? 'large' : 'medium'; ?> clearfix">
+			<div class="column large-12 testimonials-slider-container">
+				<div id="testimonials-slider">
+					<ul class="slides testimonial-slides <?php if ( $loop->post_count > 1 ) { echo 'bxslider-no-thumb-no-controls autostart'; } ?>">
+
+						<?php }
+
+					}
+
+					if ( !function_exists( 'close_testimonials_slider' ) ) {
+
+						function close_testimonials_slider() { ?>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?php }
+
+}
+
+if ( !function_exists( 'render_single_testimonial' ) ) {
+
+	function render_single_testimonial( $post ) { ?>
+
+	<li>
+		<div class="testimonial-container">
+			<div class="row">
+				<?php if ( shandora_is_home() ) : ?>
+				<div class="column large-2 blank"></div>
+			<?php endif; ?>
+			<div class="testimonial column large-<?php echo shandora_is_home() ? '8' : '12'; ?> text-center">
+				<i class="bonicons bi-quote-left"></i><span><?php echo shandora_get_meta( $post->ID, 'testimonial' ); ?></span><i class="bonicons bi-quote-right"></i>
+			</div>	
+			<?php if ( shandora_is_home() ) : ?>
+			<div class="column large-2 blank"></div>
+		<?php endif; ?>
+	</div>
+	<div class="row">			
+		<?php if ( shandora_is_home() ) : ?>				
+		<div class="column large-2 blank"></div>
+	<?php endif; ?>
+	<div class="testimonial-author column large-<?php echo shandora_is_home() ? '8' : '12'; ?> text-right">
+		<span><?php echo shandora_get_meta( $post->ID, 'full_name' ); ?><?php if ( current_theme_supports( 'get-the-image' ) && $imgID = shandora_get_meta( $post->ID, 'user_img' ) ) get_the_image( array( 'post_id' => $imgID, 'size' => 'user_small', 'link_to_post' => false, 'image_class' => array( 'circle', 'auto' ) ) ); ?></span>
+		<?php
+		if ( $post->post_content != "" && !is_singular( 'testimonial' ) ) {
+			?>
+			<div class="testimonial-link">
+				<a href="<?php echo get_permalink(); ?>"><?php _e( 'Read full story', 'bon' ); ?></a>
+			</div>
+			<?php } ?>
+		</div>
+		<?php if ( shandora_is_home() ) : ?>
+		<div class="column large-2 blank"></div>
+	<?php endif; ?>
+</div>
+</div>
+</li>
+
+<?php }
+
+}
+
+if ( !function_exists( 'shandora_get_testimonial' ) ) {
+
+	function shandora_get_testimonial( $loop, $post ) {
+
+		open_testimonials_slider( $loop );
+		render_single_testimonial( $post );
+		close_testimonials_slider();
+
+	}
+
+}
+
