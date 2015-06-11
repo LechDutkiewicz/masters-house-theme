@@ -1911,9 +1911,10 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			$onClick = '';
 			$show = TRUE;
 			if ( $cta['enable_home_cta_tool'] ) {
+				$button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
 				$subline = $cta['home_cta_subline'];
 				if ( $subline != "" ) {
-					$cta['home_cta_text'] = "<span class='cta-headline'>" . $cta['home_cta_text'] . "</span><span class='cta-subline'>" . $subline . "</span>";
+					$cta['home_cta_text'] = $cta['home_cta_text'] . "</span><span class='cta-subline'>" . $subline;
 				}
 				$destination = 'open-tool';
 				$link = bon_get_option( 'tool_section_cta_link_url' );
@@ -1922,14 +1923,17 @@ function shandora_home_cta( $args, $visited = 0 ) {
 					$show = FALSE;
 			}
 			if ( $cta['enable_home_cta_page'] ) {
+				$button_color = bon_get_option( 'cta_button_color', 'emerald' );
 				$destination = 'browse-all';
 				$link = get_permalink( $cta['home_cta_link_page'] );
 			}
 			if ( $cta['enable_home_cta_post'] ) {
+				$button_color = bon_get_option( 'cta_button_color', 'emerald' );
 				$destination = 'open-post';
 				$link = get_permalink( $cta['home_cta_link_post'] );
 			}
 			if ( $cta['enable_home_cta_url'] ) {
+				$button_color = bon_get_option( 'cta_button_color', 'emerald' );
 				$destination = 'custom-url';
 				$link = $cta['home_cta_link_link_url'];
 			}
@@ -1940,7 +1944,7 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			$show = TRUE;
 		}
 		if ( $show ) {
-			$output = "<a href='$link' data-function='" . $destination . "' class='table-cell align-middle cta flat button large " . $cta['home_cta_color'] . " radius' $onClick>" . $cta['home_cta_text'] . "</a>";
+			$output = "<a href='$link' data-function='" . $destination . "' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick><span class='cta-headline'>" . $cta['home_cta_text'] . "</span></a>";
 			
 
 			echo $output;

@@ -1,3 +1,8 @@
+# 11 VI 2015 Update
+
+1. Fixed buttons leading to build your house tool.
+2. Added extended descriptions for services post type.
+
 # 8 VI 2015 Update
 
 1. Added event tracking for social media share buttons in Google Analytics reports.
