@@ -784,14 +784,13 @@ if ( !function_exists( 'shandora_setup_service_post_type' ) ) {
 				'type' => 'editor',
 				'settings' => array(
 					'media_buttons' => true,
-					/*'tinymce' => true,
-					'teeny' => true,
+					'tinymce' => true,
+					'teeny' => false,
 					'wpautop' => true,
-					'textarea_rows' => 30*/
+					'textarea_rows' => 30
 					),
 				),
 			);
-
 
 		$cpt->add_meta_box(
 			'service-options', 'Icon options', $service_opt1

@@ -709,7 +709,7 @@ function shandora_get_search_listing_form_idx() {
  *
  * ======================================================================================================
  */
-function shandora_get_meta( $postID, $args, $is_number = false ) {
+function shandora_get_meta( $postID, $args, $is_number = false, $esc_attr = true ) {
 	$prefix = bon_get_prefix();
 
 	$price_format = bon_get_option( 'price_format', 'comma' );
@@ -732,8 +732,10 @@ function shandora_get_meta( $postID, $args, $is_number = false ) {
 				$meta = esc_attr( number_format( (double) $m, 0, ',', '.' ) );
 			}
 		}
-	} else {
+	} elseif ( $esc_attr === true ) {
 		$meta = esc_attr( get_post_meta( $postID, $prefix . $args, true ) );
+	} elseif ( $esc_attr === false ) {
+		$meta = get_post_meta( $postID, $prefix . $args, true );
 	}
 
 	return $meta;
@@ -1911,7 +1913,7 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			if ( $cta['enable_home_cta_tool'] ) {
 				$destination = 'open-tool';
 				$link = bon_get_option( 'tool_section_cta_link_url' );
-				$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1035,height=690,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
+				$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
 				if ( $_SESSION['layoutType'] === 'mobile' )
 					$show = FALSE;
 			}
@@ -1937,6 +1939,19 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			echo "<a href='$link' data-function='" . $destination . "' class='flat button large " . $cta['home_cta_color'] . " radius' $onClick>" . $cta['home_cta_text'] . "</a>";
 		}
 	}
+}
+
+/*
+* Function to render call to action button for build your house tool. Tool opens in new window.
+*/
+function shandora_tool_cta() {
+
+	$link = bon_get_option( 'tool_section_cta_link_url' );
+	$button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
+	$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
+
+	echo "<a href='$link' data-function='open-tool' class='flat button " . $button_color . " radius' $onClick>" . __( 'Use our free tool', 'bon' ) . "</a>";
+
 }
 
 function extra_class( $id ) {

@@ -905,7 +905,7 @@ function shandora_listing_packages() {
 function shandora_listing_services() {
 	?>
 
-	<section class="entry-meta" itemprop="description">
+	<section itemprop="description">
 		<?php
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'services' );
 		?>
@@ -2472,6 +2472,18 @@ if ( !function_exists( 'shandora_get_testimonial' ) ) {
 		open_testimonials_slider( $loop );
 		render_single_testimonial( $post );
 		close_testimonials_slider();
+
+	}
+
+}
+
+if ( !function_exists( 'shandora_sanitize_content' ) ) {
+
+	function shandora_sanitize_content( $content ) {
+
+		$content = apply_filters( 'the_content', $content );
+		$content = str_replace( ']]>', ']]&gt;', $content );
+		echo $content;
 
 	}
 

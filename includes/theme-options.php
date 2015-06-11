@@ -455,6 +455,13 @@ $options[] = array( 'slug' => 'bon_options',
 	);
 
 $options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Build your house tool button color', 'bon' ),
+	'id' => 'tool_button_color',
+	'type' => 'radio-img',
+	'options' => get_colors_list()
+	);
+
+$options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Search Listing Button Color', 'bon' ),
 	'id' => 'search_button_color',
 	'type' => 'radio-img',
@@ -1689,7 +1696,7 @@ $options[] = array( 'slug' => 'bon_options',
 				'4' => __( 'Neither home, nor product page', 'bon' )
 				),
 			'id' => 'tool_section_contact_display'
-			);
+			);*/
 
 		$options[] = array(
 			'type' => 'text',
@@ -1698,7 +1705,7 @@ $options[] = array( 'slug' => 'bon_options',
 			'id' => 'tool_section_cta_link_url'
 			);
 
-		$options[] = array(
+		/*$options[] = array(
 			'options' => get_colors_list(),
 			'type' => 'radio-img',
 			'label' => __( 'Cta color', 'bon' ),
