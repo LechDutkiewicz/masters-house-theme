@@ -1895,7 +1895,7 @@ function shandora_get_excluded_addons( $id = NULL ) {
 
 			foreach ( $addons as $addon ) {
 
-					$ids[] = $addon;
+				$ids[] = $addon;
 			}
 
 		}
@@ -1911,6 +1911,10 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			$onClick = '';
 			$show = TRUE;
 			if ( $cta['enable_home_cta_tool'] ) {
+				$subline = $cta['home_cta_subline'];
+				if ( $subline != "" ) {
+					$cta['home_cta_text'] = "<span class='cta-headline'>" . $cta['home_cta_text'] . "</span><span class='cta-subline'>" . $subline . "</span>";
+				}
 				$destination = 'open-tool';
 				$link = bon_get_option( 'tool_section_cta_link_url' );
 				$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
@@ -1936,7 +1940,10 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			$show = TRUE;
 		}
 		if ( $show ) {
-			echo "<a href='$link' data-function='" . $destination . "' class='flat button large " . $cta['home_cta_color'] . " radius' $onClick>" . $cta['home_cta_text'] . "</a>";
+			$output = "<a href='$link' data-function='" . $destination . "' class='table-cell align-middle cta flat button large " . $cta['home_cta_color'] . " radius' $onClick>" . $cta['home_cta_text'] . "</a>";
+			
+
+			echo $output;
 		}
 	}
 }
@@ -1947,11 +1954,15 @@ function shandora_home_cta( $args, $visited = 0 ) {
 function shandora_tool_cta() {
 
 	$link = bon_get_option( 'tool_section_cta_link_url' );
-	$button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
-	$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
 
-	echo "<a href='$link' data-function='open-tool' class='flat button " . $button_color . " radius' $onClick>" . __( 'Use our free tool', 'bon' ) . "</a>";
+	if ( $link != "" ) {
 
+		$button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
+		$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
+		echo "<a href='$link' data-function='open-tool' class='flat button " . $button_color . " radius' $onClick>" . __( 'Build your own', 'bon' ) . "</a>";
+
+	}
+	
 }
 
 function extra_class( $id ) {

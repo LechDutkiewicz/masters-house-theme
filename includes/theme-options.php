@@ -1777,7 +1777,14 @@ $options[] = array( 'slug' => 'bon_options',
 					'slug' => 'bon_options',
 					'label' => sprintf( __( 'Link to build your house tool', 'bon' ), $i ),
 					'id' => 'enable_home_cta_tool',
+					'class' => 'collapsed',
 					'type' => 'checkbox'
+					),
+				array(
+					'type' => 'text',
+					'label' => __( 'Additional information in call to action text', 'bon' ),
+					'class' => 'hidden last',
+					'id' => 'home_cta_subline'
 					),
 				array(
 					'slug' => 'bon_options',
