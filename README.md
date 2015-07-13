@@ -1,3 +1,22 @@
+# 13 VII 2015 Update
+
+1. Added rotating banners for home page.
+2. Added animations for services icons section.
+3. Minor styling updates for tabs.
+4. Added quality section with modal detailed description.
+
+# 6 VII 2015 Update
+
+1. Added canonical links for category pages.
+2. Removed comment counts for archive, category and tag pages for each post.
+3. Fixed sorting by price and size for category pages.
+
+# 1 VII 2015 Update
+
+1. Added section for drawing tool to the home page.
+2. Minor updates in event tracking for Google Analytics.
+3. Phone number is visible in navigation bar on mobile devices.
+
 # 11 VI 2015 Update
 
 1. Fixed buttons leading to build your house tool.

@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 
 	var jsFileList = [
 	'assets/js/framework.js',
+	'node_modules/waypoints/lib/jquery.waypoints.js',
 	'assets/js/custom.js',
 	];
 
