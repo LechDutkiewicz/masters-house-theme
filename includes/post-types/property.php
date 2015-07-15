@@ -790,16 +790,41 @@ if ( !function_exists( 'shandora_setup_service_post_type' ) ) {
 					'textarea_rows' => 30
 					),
 				),
+			array(
+				'label' => __( 'Content', 'bon' ),
+				'id' => $prefix . 'service_more_paragraphs',
+				'type' => 'repeatable',
+				'sanitize' => array(
+					'name' => 'sanitize_text_field',
+					),
+				'repeatable_fields' => array(
+					array(
+						'label' => __( 'Header', 'bon' ),
+						'id' => $prefix . 'header',
+						'type' => 'text',
+						),
+					array(
+						'label' => __( 'Subeader', 'bon' ),
+						'id' => $prefix . 'subheader',
+						'type' => 'text',
+						),
+					array(
+						'label' => __( 'Image', 'bon' ),
+						'id' => $prefix . 'img',
+						'type' => 'upload',
+						),
+					),
+				),
 			);
 
-		$cpt->add_meta_box(
-			'service-options', 'Icon options', $service_opt1
-			);
+$cpt->add_meta_box(
+	'service-options', 'Icon options', $service_opt1
+	);
 
-		$cpt->add_meta_box(
-			'service-more', 'Extended information', $service_opt2
-			);
-	}
+$cpt->add_meta_box(
+	'service-more', 'Extended information', $service_opt2
+	);
+}
 
 }
 
@@ -831,8 +856,12 @@ if ( !function_exists( 'shandora_setup_home_feature_post_type' ) ) {
 				'type' => 'radio-img',
 				'options' => get_colors_list()
 				),
+			array(
+				'label' => __( 'Scroll to FAQ?', 'bon' ),
+				'id' => $prefix . 'feature_scroll_to',
+				'type' => 'checkbox',
+				),
 			);
-
 
 		$cpt->add_meta_box(
 			'Feature-options', 'Feature Options', $service_opt1

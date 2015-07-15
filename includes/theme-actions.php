@@ -749,12 +749,12 @@ function shandora_get_price_range( $type = '' ) {
 
 	/*if ( empty( $type ) && $type != 'rent' ) {
 
-		$min_val = bon_get_option( 'price_range_min', '0' );
+		$min_val = bon_get_option( 'price_range_min', '000' );
 		$max_val = bon_get_option( 'price_range_max', '2000000' );
 		$step = bon_get_option( 'price_range_step', '5000' );
 	} else {
 
-		$min_val = bon_get_option( 'price_range_min_rent', '0' );
+		$min_val = bon_get_option( 'price_range_min_rent', '000' );
 		$max_val = bon_get_option( 'price_range_max_rent', '1000' );
 		$step = bon_get_option( 'price_range_step_rent', '50' );
 	}*/
@@ -842,7 +842,7 @@ function shandora_get_cottagesize_range() {
 
 	$step = bon_get_option( 'size_range_step', '5' );
 
-	/*$min_val = bon_get_option( 'size_range_min', '0' );
+	/*$min_val = bon_get_option( 'size_range_min', '000' );
 	$max_val = bon_get_option( 'size_range_max', '2000000' );
 	$step = bon_get_option( 'size_range_step', '5000' );*/
 
@@ -927,7 +927,7 @@ function shandora_get_idx_price_range() {
 
 	$o = array();
 
-	$min_val = bon_get_option( 'price_range_min', '0' );
+	$min_val = bon_get_option( 'price_range_min', '000' );
 	$max_val = bon_get_option( 'price_range_max', '2000000' );
 	$step = bon_get_option( 'price_range_step', '5000' );
 
@@ -942,7 +942,7 @@ function shandora_get_size_range( $type = 'lotsize' ) {
 
 	$o = array();
 
-	$min_val = bon_get_option( 'minimum_' . $type, '0' );
+	$min_val = bon_get_option( 'minimum_' . $type, '000' );
 	$max_val = bon_get_option( 'maximum_' . $type, '10000' );
 	$step = bon_get_option( 'step_' . $type, '100' );
 
@@ -1905,23 +1905,44 @@ function shandora_get_excluded_addons( $id = NULL ) {
 
 }
 
-function shandora_home_cta( $args, $visited = 0 ) {
+/*
+*
+*	Function to print home call to action button
+*	Parameters:
+*	show - wheather show or hide button, depending on device type ( it mostly receives show for desktop and tablet, hide for mobile )
+*	link - href for link
+*	destination - element ID if it's a link that triggers modal window to show
+*	button_color - color of element
+*	onClick - url if it should open desired url in new window after click
+*	text - anchor
+*
+*/
+
+function shandora_print_home_cta ( $show, $link, $destination, $button_color, $onClick, $text ) {
+
+	if ( $show ) {
+		$output = "<a href='$link' data-function='" . $destination . "' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick><span class='cta-headline'>" . $text . "</span></a>";
+		echo $output;
+	}
+
+}
+
+/*
+*
+*	Function to get and setup home call to action buttons
+*	Parameters:
+*	args - array of buttons parameters
+*	tool - array of button for drawing tool parameters
+*	visited - true or false determining if it's a returning users or new visitor
+*
+*/
+
+function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
+
 	foreach ( $args as $cta ) {
 		if ( $visited != 3 ) {
-			$onClick = '';
+			//$onClick = '';
 			$show = TRUE;
-			if ( $cta['enable_home_cta_tool'] ) {
-				$button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
-				$subline = $cta['home_cta_subline'];
-				if ( $subline != "" ) {
-					$cta['home_cta_text'] = $cta['home_cta_text'] . "</span><span class='cta-subline'>" . $subline;
-				}
-				$destination = 'open-tool';
-				$link = bon_get_option( 'tool_section_cta_link_url' );
-				$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
-				if ( $_SESSION['layoutType'] === 'mobile' )
-					$show = FALSE;
-			}
 			if ( $cta['enable_home_cta_page'] ) {
 				$button_color = bon_get_option( 'cta_button_color', 'emerald' );
 				$destination = 'browse-all';
@@ -1943,12 +1964,32 @@ function shandora_home_cta( $args, $visited = 0 ) {
 			$onClick = "role='button' data-toggle='modal'";
 			$show = TRUE;
 		}
-		if ( $show ) {
-			$output = "<a href='$link' data-function='" . $destination . "' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick><span class='cta-headline'>" . $cta['home_cta_text'] . "</span></a>";
-			
 
-			echo $output;
+		// echo call to action
+		shandora_print_home_cta( $show, $link, $destination, $button_color, $onClick, $cta['home_cta_text'] );
+
+	}
+
+	if ( $tool ) {
+
+		foreach ( $tool as $cta ) {
+
+			$button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
+			$subline = $cta['home_cta_subline'];
+			if ( $subline != "" ) {
+				$cta['home_cta_text'] = $cta['home_cta_text'] . "</span><span class='cta-subline'>" . $subline;
+			}
+			$destination = 'open-tool';
+			$link = bon_get_option( 'tool_section_cta_link_url' );
+			$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
+			if ( $_SESSION['layoutType'] === 'mobile' )
+				$show = FALSE;
+
+		// echo call to action
+			shandora_print_home_cta( $show, $link, $destination, $button_color, $onClick, $cta['home_cta_text'] );
+
 		}
+
 	}
 }
 
@@ -2061,17 +2102,114 @@ function shandora_get_country_selection() {
 	}
 }
 
-function get_thumbnail_src() {
+function get_thumbnail_src( $id = null, $size = 'listing_large' ) {
 
-	$img = get_the_image(array(
-		'link_to_post' => false,
-		'meta_key' => false,
-		'size' => 'post-featured',
-		'format' => 'array'
-		)
-	);
+	if ( $id ) {
+		
+		$img = get_the_image(array(
+			'post_id' => $id,
+			'link_to_post' => false,
+			'meta_key' => false,
+			'size' => $size,
+			'format' => 'array'
+			)
+		);
+
+	} else {
+
+		$img = get_the_image(array(
+			'link_to_post' => false,
+			'meta_key' => false,
+			'size' => 'post-featured',
+			'format' => 'array'
+			)
+		);
+
+	}
 
 	return $img['src'];
+}
+
+function get_open_graph_title() {
+
+	if ( is_page() ) {
+
+		global $post;
+		return get_the_title( $post->ID );
+
+	} elseif ( is_tax() || is_category() ) {
+
+		return single_cat_title() . ' | ' . get_bloginfo( 'name' );
+
+	} elseif ( is_tag() ) {
+
+		return single_tag_title() . ' | ' . get_bloginfo( 'name' );
+
+	} else {
+
+		return get_bloginfo( 'name' );
+
+	}
+
+}
+
+function get_open_graph_description() {	
+
+	/* Set an empty $description variable. */
+	$description = '';
+
+	/* If viewing the home/posts page, get the site's description. */
+	if ( is_home() ) {
+		$description = get_bloginfo( 'description' );
+	}
+
+	/* If viewing a singular post. */
+	elseif ( is_singular() ) {
+
+		/* Get the meta value for the 'Description' meta key. */
+		$description = get_post_meta( get_queried_object_id(), 'Description', true );
+
+		/* If no description was found and viewing the site's front page, use the site's description. */
+		if ( empty( $description ) && is_front_page() )
+			$description = get_bloginfo( 'description' );
+
+		/* For all other singular views, get the post excerpt. */
+		elseif ( empty( $description ) )
+			$description = get_post_field( 'post_content', get_queried_object_id() );
+	}
+
+	/* If viewing an archive page. */
+	elseif ( is_archive() ) {
+
+		/* If viewing a user/author archive. */
+		if ( is_author() ) {
+
+			/* Get the meta value for the 'Description' user meta key. */
+			$description = get_user_meta( get_query_var( 'author' ), 'Description', true );
+
+			/* If no description was found, get the user's description (biographical info). */
+			if ( empty( $description ) )
+				$description = get_the_author_meta( 'description', get_query_var( 'author' ) );
+		}
+
+		/* If viewing a taxonomy term archive, get the term's description. */
+		elseif ( is_category() || is_tag() || is_tax() )
+			$description = term_description( '', get_query_var( 'taxonomy' ) );
+
+		/* If viewing a custom post type archive. */
+		elseif ( is_post_type_archive() ) {
+
+			/* Get the post type object. */
+			$post_type = get_post_type_object( get_query_var( 'post_type' ) );
+
+			/* If a description was set for the post type, use it. */
+			if ( isset( $post_type->description ) )
+				$description = $post_type->description;
+		}
+	}
+
+	return str_replace( array( "\r", "\n", "\t" ), '', esc_attr( strip_tags( $description ) ) );
+
 }
 
 function get_cottages_name( $plural = NULL ) {
@@ -2152,7 +2290,7 @@ function the_contact_form_content() {
 function the_email_input( $required=NULL ) { ?>
 
 <div class='column large-12 small-11 input-container-inner mail'>
-	<input class="attached-input email<?php echo $required ? ' ' . $required : ''; ?>" type="email" placeholder="<?php echo __( 'Email Address', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="email" id="email" autocomplete="email" vcard_name="vCard.Email" size="22" tabindex="2" />
+	<input class="attached-input email<?php echo $required ? ' ' . $required : ''; ?>" type="email" placeholder="<?php echo __( 'Your email address', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="email" id="email" value="" />
 	<div class="contact-form-error" ><?php _e( 'Please enter either your email or phone number.', 'bon' ); ?></div>
 </div>
 
@@ -2163,7 +2301,7 @@ function the_email_input( $required=NULL ) { ?>
 function the_phone_input( $required=NULL ) { ?>
 
 <div class='column large-12 small-11 input-container-inner phone'>
-	<input class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" type="tel" placeholder="<?php echo __( 'Phone Number', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="phone" id="phone" autocomplete="tel" vcard_name="vCard.Home.Phone" size="22" tabindex="1" />
+	<input class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" type="text" placeholder="<?php echo __( 'Your phone number', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="phone" id="phone" value="" />
 	<div class="contact-form-error" ><?php _e( 'Please enter either your email or phone number.', 'bon' ); ?></div>
 </div>
 
@@ -2174,8 +2312,82 @@ function the_phone_input( $required=NULL ) { ?>
 function the_textarea( $required=NULL ) { ?>
 
 <div class='column large-12 small-11 input-container-inner pencil'>
-	<textarea class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" placeholder="<?php _e( "In case you want to ask us about something, type it here. You can also leave it empty and we'll contact you soon.", 'bon' ); ?>"  name="messages" id="messages" value="" cols="58" rows="10" tabindex="4" /></textarea>
+	<textarea class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" placeholder="<?php _e( "In case you want to ask us about something, type it here. You can also leave it empty and we'll contact you soon.", 'bon' ); ?>"  name="messages" id="messages" value="" cols="58" rows="10" /></textarea>
 </div>
 
 <?php
+}
+
+// function to get array with quality items descriptions for quality section
+function get_qualities() {
+
+		$quality_items = array(
+			array(
+				'name' 			=> 'wooden profile around the door',
+				'top'			=> '275',
+				'left'			=> '550',
+				'tablet-top'	=> '175',
+				'tablet-left'	=> '350'
+				),
+			array(
+				'name' 			=> 'roof beams splines',
+				'top'			=> '75',
+				'left'			=> '600',
+				'tablet-top'	=> '25',
+				'tablet-left'	=> '375'
+				),
+			array(
+				'name' 			=> 'impregnated floor joints',
+				'top'			=> '325',
+				'left'			=> '450',
+				'tablet-top'	=> '225',
+				'tablet-left'	=> '300'
+				),
+			array(
+				'name' 			=> 'pins on the joints',
+				'top'			=> '250',
+				'left'			=> '350',
+				'tablet-top'	=> '200',
+				'tablet-left'	=> '225'
+				),
+			array(
+				'name'			=> 'roof boards',
+				'top'			=> '90',
+				'left'			=> '375',
+				'tablet-top'	=> '50',
+				'tablet-left'	=> '200'
+				),
+			array(
+				'name' 			=> 'three-point lock',
+				'top'			=> '225',
+				'left'			=> '450',
+				'tablet-top'	=> '150',
+				'tablet-left'	=> '275'
+				),
+			array(
+				'name' 			=> 'doors and windows',
+				'top'			=> '175',
+				'left'			=> '625',
+				'tablet-top'	=> '100',
+				'tablet-left'	=> '400'
+				),
+			array(
+				'name' 			=> 'glued wood',
+				'top'			=> '175',
+				'left'			=> '250',
+				'tablet-top'	=> '100',
+				'tablet-left'	=> '150',
+				'arrow'			=> true
+				),
+			array(
+				'name' 			=> 'glass packages',
+				'top'			=> '275',
+				'left'			=> '275',
+				'tablet-top'	=> '175',
+				'tablet-left'	=> '150'
+				),
+			);
+
+		return $quality_items;
+
 }

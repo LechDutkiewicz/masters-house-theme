@@ -1698,12 +1698,12 @@ $options[] = array( 'slug' => 'bon_options',
 			'id' => 'tool_section_contact_display'
 			);*/
 
-		$options[] = array(
-			'type' => 'text',
-			'label' => __( 'Tool link', 'bon' ),
-			'desc' => __( 'Type your own link to the tool', 'bon' ),
-			'id' => 'tool_section_cta_link_url'
-			);
+$options[] = array(
+	'type' => 'text',
+	'label' => __( 'Tool link', 'bon' ),
+	'desc' => __( 'Type your own link to the tool', 'bon' ),
+	'id' => 'tool_section_cta_link_url'
+	);
 
 		/*$options[] = array(
 			'options' => get_colors_list(),
@@ -1734,29 +1734,13 @@ $options[] = array( 'slug' => 'bon_options',
 			'id' => 'home_features_title',
 			'type' => 'text' );
 
+		/* CALL TO ACTION SETUP */
+
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Slogan', 'bon' ),
 			'desc' => __( 'Type in text displayed in home screen slogan', 'bon' ),
 			'id' => 'home_slogan',
 			'type' => 'text' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Display promotion', 'bon' ),
-			'desc' => __( 'Check if there is a promotion running', 'bon' ),
-			'id' => 'home_promotion',
-			'type' => 'checkbox' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Display testimonials', 'bon' ),
-			'desc' => __( 'Check if you want to enable testimonials slider', 'bon' ),
-			'id' => 'home_testimonials',
-			'type' => 'checkbox' );
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Display e-shop slider', 'bon' ),
-			'desc' => __( 'Check if you want to enable e-shop slider', 'bon' ),
-			'id' => 'home_eshop',
-			'type' => 'checkbox' );
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Home call to action', 'bon' ),
@@ -1773,7 +1757,7 @@ $options[] = array( 'slug' => 'bon_options',
 					'id' => 'home_cta_text',
 					'std' => '',
 					),
-				array(
+				/*array(
 					'slug' => 'bon_options',
 					'label' => sprintf( __( 'Link to build your house tool', 'bon' ), $i ),
 					'id' => 'enable_home_cta_tool',
@@ -1785,63 +1769,96 @@ $options[] = array( 'slug' => 'bon_options',
 					'label' => __( 'Additional information in call to action text', 'bon' ),
 					'class' => 'hidden last',
 					'id' => 'home_cta_subline'
-					),
-				array(
-					'slug' => 'bon_options',
-					'label' => sprintf( __( 'Link to one of the pages', 'bon' ), $i ),
-					'id' => 'enable_home_cta_page',
-					'class' => 'collapsed',
-					'type' => 'checkbox'
-					),
-				array(
-					'type' => 'page_select',
-					'label' => __( 'Call to action link', 'bon' ),
-					'desc' => __( 'Choose page', 'bon' ),
-					'class' => 'hidden last',
-					'id' => 'home_cta_link_page'
-					),
-				array(
-					'slug' => 'bon_options',
-					'label' => sprintf( __( 'Link to one of the blog posts', 'bon' ), $i ),
-					'id' => 'enable_home_cta_post',
-					'class' => 'collapsed',
-					'type' => 'checkbox'
-					),
-				array(
-					'type' => 'post_select',
-					'label' => __( 'Call to action link', 'bon' ),
-					'desc' => __( 'Choose post', 'bon' ),
-					'class' => 'hidden last',
-					'id' => 'home_cta_link_post'
-					),
-				array(
-					'slug' => 'bon_options',
-					'label' => sprintf( __( 'Link to custom URL', 'bon' ), $i ),
-					'id' => 'enable_home_cta_url',
-					'class' => 'collapsed',
-					'type' => 'checkbox'
-					),
-				array(
-					'type' => 'text',
-					'label' => __( 'Custom link', 'bon' ),
-					'desc' => __( 'Or type your own link', 'bon' ),
-					'class' => 'hidden last',
-					'id' => 'home_cta_link_url'
-					),
-				array(
-					'options' => get_colors_list(),
-					'type' => 'radio-img',
-					'label' => __( 'Color', 'bon' ),
-					'id' => 'home_cta_color',
-					'std' => 'carrot',
-					)
-				) );
+					),*/
+array(
+	'slug' => 'bon_options',
+	'label' => sprintf( __( 'Link to one of the pages', 'bon' ), $i ),
+	'id' => 'enable_home_cta_page',
+	'class' => 'collapsed',
+	'type' => 'checkbox'
+	),
+array(
+	'type' => 'page_select',
+	'label' => __( 'Call to action link', 'bon' ),
+	'desc' => __( 'Choose page', 'bon' ),
+	'class' => 'hidden last',
+	'id' => 'home_cta_link_page'
+	),
+array(
+	'slug' => 'bon_options',
+	'label' => sprintf( __( 'Link to one of the blog posts', 'bon' ), $i ),
+	'id' => 'enable_home_cta_post',
+	'class' => 'collapsed',
+	'type' => 'checkbox'
+	),
+array(
+	'type' => 'post_select',
+	'label' => __( 'Call to action link', 'bon' ),
+	'desc' => __( 'Choose post', 'bon' ),
+	'class' => 'hidden last',
+	'id' => 'home_cta_link_post'
+	),
+array(
+	'slug' => 'bon_options',
+	'label' => sprintf( __( 'Link to custom URL', 'bon' ), $i ),
+	'id' => 'enable_home_cta_url',
+	'class' => 'collapsed',
+	'type' => 'checkbox'
+	),
+array(
+	'type' => 'text',
+	'label' => __( 'Custom link', 'bon' ),
+	'desc' => __( 'Or type your own link', 'bon' ),
+	'class' => 'hidden last',
+	'id' => 'home_cta_link_url'
+	),
+array(
+	'options' => get_colors_list(),
+	'type' => 'radio-img',
+	'label' => __( 'Color', 'bon' ),
+	'id' => 'home_cta_color',
+	'std' => 'carrot',
+	)
+) );
+
+/* CALL TO ACTION SETUP FOR DRAWING TOOL */
 
 $options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Slogan for returning users', 'bon' ),
 	'desc' => __( 'Type in text displayed in home screen slogan for returning users screen', 'bon' ),
 	'id' => 'home_slogan_returning',
 	'type' => 'text' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Home call to action that opens drawing tool', 'bon' ),
+	'desc' => __( 'Add call to action', 'bon' ),
+	'id' => 'home_cta_tool',
+	'type' => 'repeatable',
+	'sanitize' => array(
+		'name' => 'sanitize_text_field',
+		),
+	'repeatable_fields' => array(
+		array(
+			'type' => 'text',
+			'label' => __( 'Call to action text', 'bon' ),
+			'id' => 'home_cta_text',
+			'std' => '',
+			),
+		array(
+			'type' => 'text',
+			'label' => __( 'Additional information in call to action text', 'bon' ),
+			'id' => 'home_cta_subline'
+			),
+		array(
+			'options' => get_colors_list(),
+			'type' => 'radio-img',
+			'label' => __( 'Color', 'bon' ),
+			'id' => 'home_cta_color',
+			'std' => 'carrot',
+			),
+		) );
+
+/* CALL TO ACTION SETUP FOR RETURNING USERS */
 
 $options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Home call to action for returning users screen', 'bon' ),
@@ -1864,85 +1881,299 @@ $options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Color', 'bon' ),
 			'id' => 'home_cta_color',
 			'std' => 'carrot',
-			)
+			),
 		) );
 
-		/* $options[] = array( 'slug' => 'bon_options',
-		  'label' => __( 'We are heading', 'bon' ),
-		  'desc' => __( 'Type in text displayed in section heading', 'bon' ),
-		  'id' => 'we_are_heading',
-		  'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Display rotating banners', 'bon' ),
+	'desc' => __( 'Check if you want to display rotating banners', 'bon' ),
+	'id' => 'home_banners',
+	'type' => 'checkbox' );
 
-		  $options[] = array( 'slug' => 'bon_options',
-		  'label' => __( 'We are content', 'bon' ),
-		  'id' => 'we_are_features',
-		  'type' => 'repeatable',
-		  'sanitize' => array(
-		  'name' => 'sanitize_text_field',
-		  ),
-		  'repeatable_fields' => array(
-		  array(
-		  'type' => 'color',
-		  'label' => __( 'Feature color', 'bon' ),
-		  'id' => 'we_are_feature_color',
-		  'std' => '',
-		  ),
-		  array(
-		  'type' => 'icon',
-		  'label' => __( 'Feature icon', 'bon' ),
-		  'id' => 'we_are_feature_icon',
-		  'std' => '',
-		  ),
-		  array(
-		  'type' => 'text',
-		  'label' => __( 'Feature name', 'bon' ),
-		  'id' => 'we_are_feature_name',
-		  'std' => '',
-		  ),
-		  array(
-		  'type' => 'text',
-		  'label' => __( 'Feature content', 'bon' ),
-		  'id' => 'we_are_feature_content',
-		  'std' => '',
-		  )
-) ); */
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Display promotion', 'bon' ),
+	'desc' => __( 'Check if there is a promotion running', 'bon' ),
+	'id' => 'home_promotion',
+	'type' => 'checkbox' );
 
-		/* $options[] = array( 'slug' => 'bon_options',
-		  'label' => __( 'Listing call to action icon', 'bon' ),
-		  'desc' => __( 'Icon displayed in listing call to action', 'bon' ),
-		  'id' => 'listing_cta_icon',
-		  'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Display tool section', 'bon' ),
+	'desc' => __( 'Choose to show or hide it', 'bon' ),
+	'id' => 'tool_section_display_home',
+	'type' => 'checkbox',
+	'class' => 'collapsed',
+	'std' => '0' );
 
-		  $options[] = array( 'slug' => 'bon_options',
-		  'label' => __( 'Listing call to action title', 'bon' ),
-		  'desc' => __( 'Title displayed in listing call to action', 'bon' ),
-		  'id' => 'listing_cta_title',
-		  'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Text displayed as customization section title', 'bon' ),
+	'id' => 'customize_section_title_home',
+	'type' => 'text',
+	'class' => 'hidden' );
 
-		  $options[] = array( 'slug' => 'bon_options',
-		  'label' => __( 'Listing call to action subtitle', 'bon' ),
-		  'desc' => __( 'Subtitle displayed in listing call to action', 'bon' ),
-		  'id' => 'listing_cta_subtitle',
-		  'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Text displayed as customization section header', 'bon' ),
+	'id' => 'customize_section_header_home',
+	'type' => 'text',
+	'class' => 'hidden' );
 
-		  $options[] = array( 'slug' => 'bon_options',
-		  'label' => __( 'Listing call to action link', 'bon' ),
-		  'desc' => __( 'Page, which listing call to action links to.', 'bon' ),
-		  'id' => 'listing_cta_link',
-		  'type' => 'text' );
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Text displayed in customization section', 'bon' ),
+	'id' => 'customize_section_content_home',
+	'settings' => array(
+		'media_buttons' => false,
+		'tinymce' => true,
+		'teeny' => false,
+		'wpautop' => false
+		),
+	'type' => 'editor',
+	'class' => 'hidden' );
 
-		  $options[] = array( 'slug' => 'bon_options',
-		  'label' => __( 'Listing call to action link anchor', 'bon' ),
-		  'desc' => __( 'Text displayed below icon in listing call to action', 'bon' ),
-		  'id' => 'listing_cta_anchor',
-		  'type' => 'text' ); */
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Customization section images', 'bon' ),
+	'id' => 'customize_section_img_4',
+	'type' => 'upload',
+	'class' => 'hidden last' );
 
-		/* $options[] = array( 'slug' => 'bon_options',
-		  'label' => __( 'Bottom call to action header', 'bon' ),
-		  'desc' => __( 'Type in header displayed in bottom CTA.', 'bon' ),
-		  'id' => 'bottom_cta_head',
-		  'type' => 'text' ); */
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Display testimonials', 'bon' ),
+	'desc' => __( 'Check if you want to enable testimonials slider', 'bon' ),
+	'id' => 'home_testimonials',
+	'type' => 'checkbox' );
 
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Display e-shop slider', 'bon' ),
+	'desc' => __( 'Check if you want to enable e-shop slider', 'bon' ),
+	'id' => 'home_eshop',
+	'type' => 'checkbox' );
+
+
+		/**
+		 * =====================================================================================================
+		 *
+		 * Banners settings
+		 * 
+		 * @category Banners
+		 *
+		 * ======================================================================================================
+		 */
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Banners Settings', 'bon' ),
+			'type' => 'heading',
+			'icon' => 'dashicons-format-image' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Banners', 'bon' ),
+			'type' => 'subheading',
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'label' => __( '1st slide image', 'bon' ),
+			'desc' => __( 'Opens FAQ, image also displayed in services section', 'bon' ),
+			'id' => 'features_section_image',
+			'type' => 'upload'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Redirect to a page', 'bon' ),
+			'id' => 'features_section_image_page',
+			'type' => 'checkbox',
+			'class' => 'collapsed',
+			'std' => '0' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Pick a page', 'bon' ),
+			'id' => 'features_section_image_page_destination',
+			'type' => 'page_select',
+			'class' => 'hidden last' );
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Redirect to drawing tool', 'bon' ),
+			'id' => 'features_section_image_tool',
+			'type' => 'checkbox',
+			'std' => '0' );
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Open modal window', 'bon' ),
+			'id' => 'features_section_image_modal',
+			'type' => 'checkbox',
+			'class' => 'collapsed',
+			'std' => '0' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Pick a modal', 'bon' ),
+			'id' => 'feautres_section_image_modal_destination',
+			'type' => 'select',
+			'options' => array(
+				'quality' => __( 'Modal with quality images', 'bon' ),
+				'contact' => __( 'Modal with contact form', 'bon' ),
+				'visit' => __( 'Modal with visit request', 'bon' ),
+				),
+			'class' => 'hidden last' );
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'label' => __( '2nd slide image', 'bon' ),
+			'desc' => __( 'Opens drawing Tool', 'bon' ),
+			'id' => 'tool_section_image',
+			'type' => 'upload'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Redirect to a page', 'bon' ),
+			'id' => 'tool_section_image_page',
+			'type' => 'checkbox',
+			'class' => 'collapsed',
+			'std' => '0' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Pick a page', 'bon' ),
+			'id' => 'tool_section_image_page_destination',
+			'type' => 'page_select',
+			'class' => 'hidden last' );
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Redirect to drawing tool', 'bon' ),
+			'id' => 'tool_section_image_tool',
+			'type' => 'checkbox',
+			'std' => '0' );
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Open modal window', 'bon' ),
+			'id' => 'tool_section_image_modal',
+			'type' => 'checkbox',
+			'class' => 'collapsed',
+			'std' => '0' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Pick a modal', 'bon' ),
+			'id' => 'tool_section_image_modal_destination',
+			'type' => 'select',
+			'options' => array(
+				'quality' => __( 'Modal with quality images', 'bon' ),
+				'contact' => __( 'Modal with contact form', 'bon' ),
+				'visit' => __( 'Modal with visit request', 'bon' ),
+				),
+			'class' => 'hidden last' );
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'label' => __( '3rd slide image', 'bon' ),
+			'desc' => __( 'Opens quality modal window, also displayed in quality section', 'bon' ),
+			'id' => 'quality_section_image',
+			'type' => 'upload'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Redirect to a page', 'bon' ),
+			'id' => 'quality_section_image_page',
+			'type' => 'checkbox',
+			'class' => 'collapsed',
+			'std' => '0' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Pick a page', 'bon' ),
+			'id' => 'quality_section_image_page_destination',
+			'type' => 'page_select',
+			'class' => 'hidden last' );
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Redirect to drawing tool', 'bon' ),
+			'id' => 'quality_section_image_tool',
+			'type' => 'checkbox',
+			'std' => '0' );
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'desc' => __( 'Open modal window', 'bon' ),
+			'id' => 'quality_section_image_modal',
+			'type' => 'checkbox',
+			'class' => 'collapsed',
+			'std' => '0' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Pick a modal', 'bon' ),
+			'id' => 'quality_section_image_modal_destination',
+			'type' => 'select',
+			'options' => array(
+				'quality' => __( 'Modal with quality images', 'bon' ),
+				'contact' => __( 'Modal with contact form', 'bon' ),
+				'visit' => __( 'Modal with visit request', 'bon' ),
+				),
+			'class' => 'hidden last' );
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'label' => __( 'Quality section house image', 'bon' ),
+			'desc' => __( 'Image displayed in quality section', 'bon' ),
+			'id' => 'quality_section_house_image',
+			'type' => 'upload'
+			);
+
+		$options[] = array(
+			'slug' => 'bon_options',
+			'label' => __( 'Quality section modal window title', 'bon' ),
+			'desc' => __( 'Title displayed in top of modal window with quality description', 'bon' ),
+			'id' => 'quality_section_title',
+			'type' => 'text'
+			);
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Quality section items', 'bon' ),
+			'type' => 'subheading',
+			);
+
+		$options[] = array(
+			'std' => 'main paragraph',
+			'type' => 'info',
+			);
+
+		$options[] = array(
+			'desc' => 'main paragraph title',
+			'id' => 'main_name',
+			'type' => 'text',
+			);
+
+		$options[] = array(
+			'desc' => 'main paragraph detailed description',
+			'id' => 'main_desc',
+			'type' => 'text',
+			);
+
+		$options[] = array(
+			'desc' => 'main paragraph img',
+			'id' => 'main_img',
+			'type' => 'upload',
+			);
+
+		foreach ( get_qualities() as $quality_item ) {
+
+			$options[] = array(
+				'label' => $quality_item['name'],
+				'type' => 'info-img',
+				);
+
+			$options[] = array(
+				'desc' => $quality_item['name'] . ' name',
+				'id' => sanitize_title( $quality_item['name'] ) . '_name',
+				'type' => 'text',
+				);
+
+			$options[] = array(
+				'desc' => $quality_item['name'] . ' short description',
+				'id' => sanitize_title( $quality_item['name'] ) . '_desc',
+				'type' => 'text',
+				);
+
+		}
 
 
 

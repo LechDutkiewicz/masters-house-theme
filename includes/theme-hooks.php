@@ -34,6 +34,8 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_loop", "shandora_close_main_content_row", 10 );
 
+		add_action( "{$prefix}before_home", "shandora_home_banners_slider", 3 );
+
 		add_action( "{$prefix}before_home", "shandora_home_promotion", 4 );
 
 		add_action( "{$prefix}before_home", "shandora_home_toolsection", 5 );
@@ -98,11 +100,13 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 35 );
 
-	//add_action("{$prefix}after_single_entry_content", "shandora_car_listing_video", 30);
+		add_action("{$prefix}after_single_entry_content", "shandora_car_listing_video", 30);
 
 	//add_action( "{$prefix}after_single_entry_content", "shandora_listing_dpe_ges", 32 );
 
 	//add_action("{$prefix}after_single_entry_content", "shandora_listing_map", 35);
+
+		add_action( "{$prefix}after_single_entry_content", "shandora_quality_section", 45 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_testimonials_slider", 48 );
 
@@ -885,7 +889,7 @@ function shandora_listing_packages() {
 
 		?>
 
-		<section class="row entry-specification">
+		<section class="row padding-large top bottom">
 			<?php
 			bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'packages' );
 			?>
@@ -905,7 +909,7 @@ function shandora_listing_packages() {
 function shandora_listing_services() {
 	?>
 
-	<section itemprop="description">
+	<section itemprop="description" class="padding-large bottom">
 		<?php
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'services' );
 		?>
@@ -924,7 +928,7 @@ function shandora_listing_services() {
 function shandora_listing_addon() {
 	?>
 
-	<div class="price-included row">
+	<div class="price-included row padding-medium top bottom">
 		<?php
 	//bon_get_template_part('block',  ( is_singular( 'product' ) ? 'carlistingmeta' : 'listingmeta' ) ); 
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'addon' );
@@ -1001,7 +1005,6 @@ function shandora_listing_detail_tabs() {
 	?>
 	<div id="detail-tab" class="column tabs-container <?php echo $detail_class; ?>">
 		<?php
-	//bon_get_template_part('block', ( is_singular( 'product' ) ? 'carlistingtab' : 'listingtab' ) ); 
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'tab' );
 		?>
 	</div>
@@ -1016,7 +1019,7 @@ function shandora_listing_detail_tabs() {
 *
 */
 function shandora_listing_spec_open() {
-	echo '<section class="row entry-specification">';
+	echo '<section class="row padding-large top bottom">';
 }
 
 /**
@@ -1486,6 +1489,19 @@ function shandora_listing_toolsection() {
 }
 
 /**
+* Get Banners Slider Home
+* Added by Lech Dutkiewicz
+* @since 1.3.7
+* @return void
+*
+*/
+
+function shandora_home_banners_slider() {
+	if ( bon_get_option( 'home_banners' ) )
+		bon_get_template_part( 'block', 'block-banners-slider' );
+}
+
+/**
 * Get Promotion Section Home
 * Added by Lech Dutkiewicz
 * @since 1.3.7
@@ -1507,9 +1523,10 @@ function shandora_home_promotion() {
 */
 
 function shandora_home_toolsection() {
-	$display = bon_get_option( 'tool_section_display' );
-	if ( $display === '2' || $display === '3') {
-		bon_get_template_part( 'block', 'block-toolsection-home' );
+	if ( bon_get_option( 'tool_section_display_home' ) ) {
+		if ( shandora_is_home() ) {
+			bon_get_template_part( 'block', 'block-toolsection-home' );
+		}
 	}
 }
 
@@ -1520,8 +1537,28 @@ function shandora_home_toolsection() {
 * @return void
 *
 */
-function shandora_home_we_are() {
-	bon_get_template_part( 'block', 'listing/home-features' );
+function shandora_home_we_are() { ?>
+
+<section>
+	<?php if (shandora_is_home()) { ?>
+	<header class="section-header">
+		<h2 class="home-section-header"><?php echo bon_get_option( 'home_features_title', 'yes' ); ?></h2>
+	</header>
+	<?php } ?>
+	<?php bon_get_template_part( 'block', 'listing/services' ); ?>
+</section>
+
+<?php }
+
+/**
+* Get Quality Section
+* Added by Lech Dutkiewicz
+* @since 1.3.7
+* @return void
+*
+*/
+function shandora_quality_section() {
+	bon_get_template_part( 'block', 'block-quality-section' );
 }
 
 /**
@@ -1610,10 +1647,11 @@ if ( !function_exists( 'shandora_document_info' ) ) {
 		<html <?php language_attributes(); ?>>
 		<head>
 
-			<?php if ( is_singular() && !is_singular( 'page' ) ) : ?>
+			<?php if ( is_singular() && !is_singular( 'page' ) ) { ?>
+			<!-- setup open graph for single post page -->
 			<?php
 			global $post;
-			$img = get_the_image( array( 'post_id' => $post->ID, 'attachment' => true, 'image_scan' => true, 'size' => 'thumbnail', 'format' => 'array', 'echo' => false ) );
+			//$img = get_the_image( array( 'post_id' => $post->ID, 'attachment' => true, 'image_scan' => true, 'size' => 'thumbnail', 'format' => 'array', 'echo' => false ) );
 			$content = wp_trim_words( $post->post_content, $num_words = 50, $more = null );
 			$title = $post->post_title;
 			if ( $post->post_type == 'listing' ) {
@@ -1627,17 +1665,61 @@ if ( !function_exists( 'shandora_document_info' ) ) {
 			<meta property="og:image" content="<?php echo get_thumbnail_src(); ?>" />
 			<meta property="og:url" content="<?php the_permalink(); ?>" />
 			<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
-		<?php endif; ?>
-		<?php bon_doctitle(); ?>
-		<link rel="profile" href="http://gmpg.org/xfn/11" />
-		<?php $favico = bon_get_option( 'favicon', trailingslashit( BON_THEME_URI ) . 'assets/images/icon.png' ); ?>
-		<link rel="shortcut icon" href="<?php echo $favico; ?>" type="image/x-icon" />
 
-		<?php wp_head(); // wp_head           ?>
+			<?php } else { ?>
+			<!-- setup open graph for single page and category, taxonomy and archive pages -->
+			<?php global $wp_query; ?>
+			<meta property="og:type" content="website" />
+			<meta property="og:title" content="<?php echo get_open_graph_title(); ?>" />
+			<meta property="og:description" content="<?php echo get_open_graph_description(); ?>" />
 
-	</head>
-	<?php
-}
+			<?php if ( is_tax() || is_category() ) { ?>
+			<!-- additional parameters for taxonomy and category pages -->
+
+			<!-- fetch more images for open graph from posts loop -->
+			<?php foreach ( $wp_query->posts as $featured_post ) { ?>
+			<meta property="og:image" content="<?php echo get_thumbnail_src($featured_post->ID, 'listing_large'); ?>" />
+
+			<?php } ?>
+
+			<meta property="og:url" content="<?php echo shandora_get_site_url() . strtok( $_SERVER["REQUEST_URI"], '?' ); ?>" />
+
+			<?php } else { ?>
+			<!-- additional parameters for all other pages -->
+
+			<meta property="og:image" content="<?php echo get_thumbnail_src(); ?>" />
+			<meta property="og:url" content="<?php the_permalink(); ?>" />
+
+			<?php } ?>
+
+			<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
+
+			<?php } ?>
+
+			<!-- END opengraph -->
+
+			<?php bon_doctitle(); ?>
+			<link rel="profile" href="http://gmpg.org/xfn/11" />
+
+			<!-- favicon -->
+			<?php $favico = bon_get_option( 'favicon', trailingslashit( BON_THEME_URI ) . 'assets/images/icon.png' ); ?>
+			<link rel="shortcut icon" href="<?php echo $favico; ?>" type="image/x-icon" />
+
+			<?php if ( !is_singular() || is_page() ) { ?>
+			<!-- share link image -->
+			<link rel="image_src" href="<?php echo get_thumbnail_src(); ?>" />
+			<?php } ?>
+
+			<?php if ( !is_singular() ) { ?>
+			<!-- canonical link for category pages -->
+			<link rel="canonical" href="<?php echo shandora_get_site_url() . strtok( $_SERVER["REQUEST_URI"], '?' ); ?>" />
+			<?php } ?>
+
+			<?php wp_head(); // wp_head           ?>
+
+		</head>
+		<?php
+	}
 
 }
 
@@ -1844,9 +1926,9 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 									</div>
 									<div class="column large-5 search-orderby">
 										<select class="no-mbot" name="search_orderby">
-											<option value="<?php _e( 'Price', 'bon' ); ?>" <?php selected( $search_orderby, 'price' ); ?> ><?php _e( 'Price', 'bon' ); ?></option>
+											<option value="<?php _e( 'Price', 'bon' ); ?>" <?php selected( $search_orderby, 'Price' ); ?> ><?php _e( 'Price', 'bon' ); ?></option>
 											<?php // edited by Lech Dutkiewicz           ?>
-											<option value="<?php _e( 'Size', 'bon' ); ?>" <?php selected( $search_orderby, 'size' ); ?> >
+											<option value="<?php _e( 'Size', 'bon' ); ?>" <?php selected( $search_orderby, 'Size' ); ?> >
 												<?php
 												if ( get_post_type() == 'listing' || is_page_template( 'page-templates/page-template-search-listings.php' ) || is_page_template( 'page-templates/page-template-all-listings.php' ) ) {
 													echo __( 'Size', 'bon' );
@@ -1999,13 +2081,13 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 		$logo_class = 'uncentered';
 		$logo_col_class = 'large-3';
 		if ( $header_col_1 == true && $header_col_2 == true ) {
-			$header_col_class = 'large-9';
-			$col_class = 'large-6';
+			$header_col_class = 'large-9 small-12';
+			$col_class = 'large-6 small-12';
 		} else if ( $header_col_1 == true && $header_col_2 == false ) {
-			$header_col_class = 'large-5';
+			$header_col_class = 'large-5 small-12';
 			$col_class = 'large-12';
 		} else if ( $header_col_1 == false && $header_col_2 == true ) {
-			$header_col_class = 'large-5';
+			$header_col_class = 'large-5 small-12';
 			$col_class = 'large-12';
 		} else {
 
@@ -2038,11 +2120,11 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 			</div>
 
 			<?php if ( $header_col_1 == true || $header_col_2 == true ) : ?>
-			<div class="<?php echo $header_col_class; ?> column hide-for-desktop hide-for-small" id="company-info">
+			<div class="<?php echo $header_col_class; ?> column" id="company-info">
 				<div class="row">
 					<?php if ( $header_col_1 ) : ?>
-					<div class="<?php echo $col_class; ?> column">
-						<div class="icon">
+					<div class="<?php echo $col_class; ?> column small-text-center small-margin medium bottom">
+						<div class="icon hide-for-small">
 							<span class="sha-phone"></span>
 						</div>
 						<span class="info-title"><?php echo esc_attr( bon_get_option( 'hgroup1_title' ) ); ?></span>
@@ -2062,7 +2144,7 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 					</div>
 				<?php endif; ?>
 				<?php if ( $header_col_2 ) : ?>
-				<div class="<?php echo $col_class; ?> column">
+				<div class="<?php echo $col_class; ?> column hide-for-small small-text-center">
 					<div class="icon">
 						<span class="sha-calendar"></span>
 					</div>
@@ -2399,11 +2481,11 @@ if ( !function_exists( 'open_testimonials_slider' ) ) {
 
 	function open_testimonials_slider( $loop ) { ?>
 
-	<div class="row entry-row">
-		<div class="padding-<?php echo shandora_is_home() ? 'large' : 'medium'; ?> clearfix">
+	<div class="row">
+		<div class="padding-<?php echo shandora_is_home() ? 'large' : 'medium'; ?> top bottom clearfix">
 			<div class="column large-12 testimonials-slider-container">
 				<div id="testimonials-slider">
-					<ul class="slides testimonial-slides <?php if ( $loop->post_count > 1 ) { echo 'bxslider-no-thumb-no-controls autostart'; } ?>">
+					<ul class="slides testimonial-slides <?php if ( $loop->post_count > 1 ) { echo 'bxslider-no-thumb-no-controls autostart'; } ?>"<?php if ( $loop->post_count > 1 ) { echo 'data-pause="8000"'; } ?>>
 
 						<?php }
 
@@ -2484,6 +2566,85 @@ if ( !function_exists( 'shandora_sanitize_content' ) ) {
 		$content = apply_filters( 'the_content', $content );
 		$content = str_replace( ']]>', ']]&gt;', $content );
 		echo $content;
+
+	}
+
+}
+
+if ( !function_exists( 'shandora_get_banner_opening_tag' ) ) {
+
+	function shandora_get_banner_opening_tag( $name ) {
+
+		$page = bon_get_option( $name . '_section_image_page' );
+		$destination_page = bon_get_option( $name . '_section_image_page_destination' );
+		$tool = bon_get_option( $name . '_section_image_tool' );
+		$modal = bon_get_option( $name . '_section_image_modal' );
+		$destination_modal = bon_get_option( $name . '_section_image_modal_destination' );
+		$output = '';
+
+		if ( $page && $destination_page ) {
+			$output .= '<a href="' . get_the_permalink( $destination_page ) . '" class="hover-mask" title="' . __( 'Link to ', 'bon') . get_the_title( $destination_page) . '" data-analytics-category="home-banners" data-analytics-action="click-faq-banner" data-analytics-selector="faq-banner">';
+			return $output;
+		}
+
+		if ( $tool ) {
+
+			$link = bon_get_option( 'tool_section_cta_link_url' );
+
+			if ( $link != "" ) {
+
+				$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
+
+				$output .= "<a href='$link' data-function='open-tool' class='hover-mask' $onClick data-analytics-category='home-banners' data-analytics-action='click-tool-banner' data-analytics-selector='tool-banner'>";
+				return $output;
+			}
+
+		}
+
+		if ( $modal && $destination_modal ) {
+
+			$output .= "<a href='#" . $destination_modal . "-modal' role='button' data-toggle='modal' class='hover-mask' title='" . __( 'Open window with more information', 'bon') . "' data-analytics-category='home-banners' data-analytics-action='click-quality-banner' data-analytics-selector='quality-banner'>";
+			return $output;
+
+		}
+
+	}
+
+	if ( !function_exists( 'shandora_get_banner_closing_tag' ) ) {
+
+		function shandora_get_banner_closing_tag( $name ) {
+
+			$page = bon_get_option( $name . '_section_image_page');
+			$destination_page = bon_get_option( $name . '_section_image_page_destination');
+			$tool = bon_get_option( $name . '_section_image_tool');
+			$modal = bon_get_option( $name . '_section_image_modal');
+			$destination_modal = bon_get_option( $name . '_section_image_modal_destination');
+			$output = '';
+
+			if ( ( bon_get_option( $name . '_section_image_page') && $destination_page ) || $tool || ( $modal && $destination_modal ) ) {
+				$output .= '</a>';
+				echo $output;
+			}
+
+		}
+
+	}
+
+	if ( !function_exists( 'get_modal' ) ) {
+
+		function get_modal( $name ) {
+
+			$modal = bon_get_option( $name . '_section_image_modal');
+			$destination_modal = bon_get_option( $name . '_section_image_modal_destination');
+			$output = '';
+
+			if ( $modal && $destination_modal ) {
+
+				bon_get_template_part( 'block', 'block-modal-' . $destination_modal );
+
+			}
+
+		}
 
 	}
 

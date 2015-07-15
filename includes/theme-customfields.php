@@ -16,6 +16,7 @@ function pippin_taxonomy_add_new_meta_field() {
 								</li>';
 	}
 	$output .= '</ul>';
+	
 	echo $output;
 }
 

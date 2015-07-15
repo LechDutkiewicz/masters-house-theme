@@ -95,7 +95,7 @@ function shandora_add_post_type(){
 		add_action('init', 'shandora_setup_agent_post_type', 1);
 		// Added by Lech Dutkiewicz
 		add_action('init', 'shandora_setup_addon_post_type', 1);
-		add_action('init', 'shandora_setup_service_post_type', 1);
+		//add_action('init', 'shandora_setup_service_post_type', 1);
 		add_action('init', 'shandora_setup_home_feature_post_type', 1);
 		add_action('init', 'shandora_setup_additional_service_post_type', 1);
 		add_action('init', 'shandora_setup_faq_post_type', 1);
