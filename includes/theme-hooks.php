@@ -821,7 +821,7 @@ function shandora_listing_entry_title() {
 		$price = '<a href="' . get_permalink( $post->ID ) . '" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '"><span class="price">' . shandora_get_listing_price( false ) . '</span></a>';
 	}
 
-	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title"><a href="' . get_permalink() . '" class="product-link" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '">', '</a>' . $price . '</h3>', false ) );
+	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title"><a href="' . get_permalink() . '" class="product-link" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '" data-analytics-category="pick a cottage" data-analytics-action="click title link" data-analytics-selector="listing_title_link">', '</a>' . $price . '</h3>', false ) );
 }
 
 /**
