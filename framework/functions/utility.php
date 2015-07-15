@@ -455,11 +455,11 @@ function bon_enqueue_utility_script() {
 	if ( !is_admin() )
 		return;	
 
-	if (WP_ENV !== 'production') {
+	/*if (WP_ENV !== 'production') {*/
 
 		wp_enqueue_style( 'bonicons', trailingslashit( BON_CSS ) . 'frontend/bonicons.css' );
 
-	}
+	/*}*/
 	
 	wp_enqueue_script( 'bon-admin-util', trailingslashit( BON_JS ) . 'utility.js', array( 'jquery' ), '1.0.0', true );
 

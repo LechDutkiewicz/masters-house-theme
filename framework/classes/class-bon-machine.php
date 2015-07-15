@@ -175,6 +175,9 @@ if ( !class_exists( 'BON_Machine' ) ) {
 						}
 						if ( $value['type'] == 'editor' ) {
 							$output .= '<div class="option">' . "\n" . '<div class="controls with-editor">' . "\n";
+						} elseif ( $value['type'] == 'info-img' ) {
+							$output .= '<div class="option">' . "\n" . '<div class="controls not-with-editor">' . "\n";
+							$output .= '<img class="admin-thumb" src="' . trailingslashit( BON_THEME_URI ) . '/assets/images/qualities/' . sanitize_title( esc_attr( $value['label'] ) ) . '.jpg">';
 						} else {
 							$output .= '<div class="option">' . "\n" . '<div class="controls not-with-editor">' . "\n";
 						}
@@ -698,6 +701,10 @@ if ( !class_exists( 'BON_Machine' ) ) {
 					break;
 
 				case 'info':
+					$output .= $std;
+					break;
+
+				case 'info-img':
 					$output .= $std;
 					break;
 
