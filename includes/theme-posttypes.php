@@ -14,7 +14,7 @@ function shandora_video_metabox_args() {
 			'desc'	=> __('Use the third party URL such Youtube, Vimeo, etc? Please input the URL', 'bon'), 
 			'id'	=> $prefix.'videoembed',
 			'type'	=> 'textarea',
-		),
+			),
 
 		array( 
 
@@ -23,7 +23,7 @@ function shandora_video_metabox_args() {
 			'id'	=> $prefix.'videoself',
 			'type'	=> 'checkbox',
 			'class' => 'collapsed',
-		),
+			),
 
 
 		array(
@@ -32,7 +32,7 @@ function shandora_video_metabox_args() {
 			'type' => 'file',
 			'id' => $prefix . 'videom4v',
 			'class' => 'hidden',
-		),
+			),
 
 		array(
 			'label' => __('OGV Video File', 'framework'),
@@ -40,7 +40,7 @@ function shandora_video_metabox_args() {
 			'type' => 'file',
 			'id' => $prefix . 'videoogv',
 			'class' => 'hidden',
-		),
+			),
 
 		array(
 			'label' => __('Video Cover', 'framework'),
@@ -48,12 +48,12 @@ function shandora_video_metabox_args() {
 			'type' => 'image',
 			'id' => $prefix . 'videocover',
 			'class' => 'hidden last',
-		),
+			),
 
 		
-	);
+		);
 
-	return $video_opts;
+return $video_opts;
 
 }
 
@@ -68,8 +68,8 @@ function shandora_gallery_metabox_args() {
 			'desc'	=> __('Choose image to use in this listing gallery.', 'bon'), 
 			'id'	=> $prefix . $suffix . 'gallery',
 			'type'	=> 'gallery',
-		),
-	);
+			),
+		);
 
 	return $gallery_options;
 }
@@ -96,6 +96,7 @@ function shandora_add_post_type(){
 		// Added by Lech Dutkiewicz
 		add_action('init', 'shandora_setup_addon_post_type', 1);
 		//add_action('init', 'shandora_setup_service_post_type', 1);
+		add_action('init', 'shandora_setup_slidebox_post_type', 1);
 		add_action('init', 'shandora_setup_home_feature_post_type', 1);
 		add_action('init', 'shandora_setup_additional_service_post_type', 1);
 		add_action('init', 'shandora_setup_faq_post_type', 1);
@@ -131,8 +132,8 @@ if( !function_exists('shandora_page_meta') ) {
 					'options' => array(
 						'full' => __('Full', 'bon'),
 						'boxed' => __('Boxed', 'bon')
-					)
-				),
+						)
+					),
 
 
 				array(
@@ -140,9 +141,9 @@ if( !function_exists('shandora_page_meta') ) {
 					'type' => 'text',
 					'label' => __('Slide show IDs to Show (optional)', 'bon'),
 					'desc' => __('Input the slideshow ids you want to show separated by commas, if empty all latest slider post will be used.', 'bon')
-				),
+					),
 
-			);
+				);
 
 			$mb->create_box('slider-opt', __('Slider Options', 'bon'), $fields, array('page'));
 		}
@@ -167,14 +168,14 @@ if( !function_exists( 'shandora_property_page_meta' ) ) {
 					'type' => 'select',
 					'label' => __('Property Status to Query','bon'),
 					'options' => $opts
-				),
+					),
 				array(
 					'id' => 'shandora_location_query',
 					'type' => 'select',
 					'label' => __('Property Location to Query','bon'),
 					'desc' => __( 'Optional - leave empty to not include location' ,'bon'),
 					'options' => shandora_get_search_option('location'),
-				),
+					),
 
 				array(
 					'id' => 'shandora_type_query',
@@ -182,8 +183,8 @@ if( !function_exists( 'shandora_property_page_meta' ) ) {
 					'label' => __('Property Type to Query','bon'),
 					'desc' => __( 'Optional - leave empty to not include location' ,'bon'),
 					'options' => shandora_get_search_option('type'),
-				),
-			);
+					),
+				);
 
 			$mb->create_box('status-opt', __('Property Status', 'bon'), $fields, array('page'));
 
@@ -208,14 +209,14 @@ if( !function_exists('shandora_car_page_meta') ) {
 					'type' => 'select',
 					'label' => __('Car Status to Query','bon'),
 					'options' => $opts
-				),
+					),
 				array(
 					'id' => 'shandora_dealer_location_query',
 					'type' => 'select',
 					'label' => __('Dealer Location to Query','bon'),
 					'desc' => __( 'Optional - leave empty to not include location' ,'bon'),
 					'options' => shandora_get_car_search_option('dealer_location'),
-				),
+					),
 
 				array(
 					'id' => 'shandora_body_type_query',
@@ -223,7 +224,7 @@ if( !function_exists('shandora_car_page_meta') ) {
 					'label' => __('Body Type to Query','bon'),
 					'desc' => __( 'Optional - leave empty to not include location' ,'bon'),
 					'options' => shandora_get_car_search_option('body_type'),
-				),
+					),
 
 				array(
 					'id' => 'shandora_manufacturer_query',
@@ -231,12 +232,12 @@ if( !function_exists('shandora_car_page_meta') ) {
 					'label' => __('Manufacturer to Query','bon'),
 					'desc' => __( 'Optional - leave empty to not include location' ,'bon'),
 					'options' => shandora_get_car_search_option('manufacturer'),
-				),
-			);
+					),
+				);
 
-			$mb->create_box('car-status-opt', __('Car Status', 'bon'), $fields, array('page'));
-		}
-	}
+$mb->create_box('car-status-opt', __('Car Status', 'bon'), $fields, array('page'));
+}
+}
 }
 
 
@@ -249,21 +250,82 @@ if( !function_exists('shandora_listing_custom_columns') ) {
 
 	function shandora_listing_custom_columns($columns){  
 
-	        $columns = array(  
-	            "cb" => "<input type=\"checkbox\" />",  
-	            "title" => __( 'Poll Title','bon' ),
-	            "price" => __( 'Price','bon' ),
-	            "type" => __( 'Type', 'bon' ),
-	            "status" => __( 'Status','bon' ),
-	            "date" => __( 'Date','bon' ),
-	        );  
-	  
-	        return $columns;  
+		$columns = array(  
+			"cb" => "<input type=\"checkbox\" />",  
+			"title" => __( 'Poll Title','bon' ),
+			"price" => __( 'Price','bon' ),
+			"type" => __( 'Type', 'bon' ),
+			"status" => __( 'Status','bon' ),
+			"date" => __( 'Date','bon' ),
+			);  
+
+		return $columns;  
 	}   
 
 	add_filter("manage_edit-listing_columns", "shandora_listing_custom_columns");
 
 }
+
+
+/**
+ * 
+ * Defining new table column in All Polls View
+ * 
+ **/
+if( !function_exists('shandora_faq_custom_columns') ) {
+
+	function shandora_faq_custom_columns($columns){  
+
+		$columns = array(  
+			"cb" => "<input type=\"checkbox\" />",  
+			"title" => __( 'Poll Title','bon' ),
+			"order" => __( 'Order', 'bon' ),
+			);  
+
+		return $columns;  
+	}   
+
+	add_filter("manage_edit-faq_columns", "shandora_faq_custom_columns");
+
+}
+
+function faq_sortable_columns( $columns ) {
+
+	$columns['order'] = 'menu_order';
+
+	return $columns;
+}
+
+/* Sorts the movies. */
+function shandora_sort_faq( $vars ) {
+
+	/* Check if we're viewing the 'movie' post type. */
+	if ( isset( $vars['post_type'] ) && 'faq' == $vars['post_type'] ) {
+
+		/* Check if 'orderby' is set to 'duration'. */
+		if ( isset( $vars['orderby'] ) && 'menu_order' == $vars['orderby'] ) {
+
+			/* Merge the query vars with our custom variables. */
+			$vars = array_merge(
+				$vars,
+				array(
+					'orderby' => 'menu_order'
+				)
+			);
+		}
+	}
+
+	return $vars;
+}
+
+/* Only run our customization on the 'edit.php' page in the admin. */
+add_action( 'load-edit.php', 'shandora_faq_custom_columns' );
+
+function my_edit_faq_load() {
+	add_filter( 'request', 'shandora_sort_faq' );
+}
+
+add_filter( 'manage_edit-faq_sortable_columns', 'faq_sortable_columns' );
 
 /**
  * 
@@ -274,16 +336,16 @@ if( !function_exists('shandora_car_custom_columns') ) {
 
 	function shandora_car_custom_columns($columns){  
 
-	        $columns = array(  
-	            "cb" => "<input type=\"checkbox\" />",  
-	            "title" => __( 'Poll Title','bon' ),
-	            "price" => __( 'Price','bon' ),
-	            "car_status" => __( 'Status','bon' ),
-	            "yearbuilt" => __( 'Year Built','bon' ),
-	            "date" => __( 'Date','bon' )
-	        );  
-	  
-	        return $columns;  
+		$columns = array(  
+			"cb" => "<input type=\"checkbox\" />",  
+			"title" => __( 'Poll Title','bon' ),
+			"price" => __( 'Price','bon' ),
+			"car_status" => __( 'Status','bon' ),
+			"yearbuilt" => __( 'Year Built','bon' ),
+			"date" => __( 'Date','bon' )
+			);  
+
+		return $columns;  
 	}   
 
 	add_filter("manage_edit-car-listing_columns", "shandora_car_custom_columns");
@@ -302,60 +364,65 @@ if( !function_exists('shandora_manage_columns') ) {
 
 		switch ($name) {
 			case 'status':
-				$s_opt = shandora_get_search_option( 'status' );
-				$status = shandora_get_meta( $post->ID, 'listing_status' );
-				if( array_key_exists( $status, $s_opt) ) {
-					$status = $s_opt[$status];
-				}
-				echo $status;
+			$s_opt = shandora_get_search_option( 'status' );
+			$status = shandora_get_meta( $post->ID, 'listing_status' );
+			if( array_key_exists( $status, $s_opt) ) {
+				$status = $s_opt[$status];
+			}
+			echo $status;
 			break;
 
 			case 'car_status':
-				$s_opt = shandora_get_car_search_option( 'status' );
-				$status = shandora_get_meta( $post->ID, 'listing_status' );
-				if( array_key_exists( $status, $s_opt) ) {
-					$status = $s_opt[$status];
-				}
-				echo $status;
+			$s_opt = shandora_get_car_search_option( 'status' );
+			$status = shandora_get_meta( $post->ID, 'listing_status' );
+			if( array_key_exists( $status, $s_opt) ) {
+				$status = $s_opt[$status];
+			}
+			echo $status;
 			break;
 
 			case 'yearbuilt':
-				$year = shandora_get_meta( $post->ID, 'listing_yearbuild' );
-				echo $year;
+			$year = shandora_get_meta( $post->ID, 'listing_yearbuild' );
+			echo $year;
 			break;
 
 			case 'price':
-				$price = shandora_get_meta( $post->ID, 'listing_price', true);
-				echo $price;
+			$price = shandora_get_meta( $post->ID, 'listing_price', true);
+			echo $price;
+			break;
+
+			case 'order':
+			$order = $post->menu_order;
+			echo $order;
 			break;
 
 			case 'type':
-					/* Get the genres for the post. */
-				$terms = get_the_terms( $post_id, 'property-type' );
+			/* Get the genres for the post. */
+			$terms = get_the_terms( $post_id, 'property-type' );
 
-				/* If terms were found. */
-				if ( !empty( $terms ) ) {
+			/* If terms were found. */
+			if ( !empty( $terms ) ) {
 
-					$out = array();
+				$out = array();
 
-					/* Loop through each term, linking to the 'edit posts' page for the specific term. */
-					foreach ( $terms as $term ) {
-						$out[] = sprintf( '<a href="%s">%s</a>',
-							esc_url( add_query_arg( array( 'post_type' => $post->post_type, 'property-type' => $term->slug ), 'edit.php' ) ),
-							esc_html( sanitize_term_field( 'name', $term->name, $term->term_id, 'Property Type', 'display' ) )
+				/* Loop through each term, linking to the 'edit posts' page for the specific term. */
+				foreach ( $terms as $term ) {
+					$out[] = sprintf( '<a href="%s">%s</a>',
+						esc_url( add_query_arg( array( 'post_type' => $post->post_type, 'property-type' => $term->slug ), 'edit.php' ) ),
+						esc_html( sanitize_term_field( 'name', $term->name, $term->term_id, 'Property Type', 'display' ) )
 						);
-					}
+				}
 
-					/* Join the terms, separating them with a comma. */
-					echo join( ', ', $out );
+				/* Join the terms, separating them with a comma. */
+				echo join( ', ', $out );
 
 					//print_r($out);
-				}
+			}
 
-				/* If no terms were found, output a default message. */
-				else {
-					_e( 'No category found' );
-				}
+			/* If no terms were found, output a default message. */
+			else {
+				_e( 'No category found' );
+			}
 
 			break;
 
