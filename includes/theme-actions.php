@@ -1921,7 +1921,15 @@ function shandora_get_excluded_addons( $id = NULL ) {
 function shandora_print_home_cta ( $show, $link, $destination, $button_color, $onClick, $text ) {
 
 	if ( $show ) {
-		$output = "<a href='$link' data-function='" . $destination . "' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick><span class='cta-headline'>" . $text . "</span></a>";
+
+		if ( $destination === 'open-tool' ) {
+			$exClass = " class='cta-headline'";
+			$arrow = NULL;
+		} else {
+			$exClass = NULL;
+			$arrow = "<i class='bonicons bi-chevron-right'></i>";
+		}
+		$output = "<a href='$link' data-function='" . $destination . "' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick><span" . $exClass . ">" . $text . "</span>" . $arrow . "</a>";
 		echo $output;
 	}
 
@@ -1945,20 +1953,22 @@ function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
 
 		if ( !$cta['disable_home_cta'] ) {
 
+			$button_color = $cta['home_cta_color'];
+
 			if ( $visited != 3 ) {
 			//$onClick = '';
 				if ( $cta['enable_home_cta_page'] ) {
-					$button_color = bon_get_option( 'cta_button_color', 'emerald' );
+					//$button_color = bon_get_option( 'cta_button_color', 'emerald' );
 					$destination = 'browse-all';
 					$link = get_permalink( $cta['home_cta_link_page'] );
 				}
 				if ( $cta['enable_home_cta_post'] ) {
-					$button_color = bon_get_option( 'cta_button_color', 'emerald' );
+					//$button_color = bon_get_option( 'cta_button_color', 'emerald' );
 					$destination = 'open-post';
 					$link = get_permalink( $cta['home_cta_link_post'] );
 				}
 				if ( $cta['enable_home_cta_url'] ) {
-					$button_color = bon_get_option( 'cta_button_color', 'emerald' );
+					//$button_color = bon_get_option( 'cta_button_color', 'emerald' );
 					$destination = 'custom-url';
 					$link = $cta['home_cta_link_link_url'];
 				}
@@ -2335,66 +2345,66 @@ function get_qualities() {
 	$quality_items = array(
 		array(
 			'name' 			=> 'wooden profile around the door',
-			'top'			=> '275',
+			'top'			=> '225',
 			'left'			=> '550',
-			'tablet-top'	=> '175',
+			'tablet-top'	=> '150',
 			'tablet-left'	=> '350'
 			),
 		array(
 			'name' 			=> 'roof beams splines',
-			'top'			=> '75',
+			'top'			=> '25',
 			'left'			=> '600',
-			'tablet-top'	=> '25',
+			'tablet-top'	=> '0',
 			'tablet-left'	=> '375'
 			),
 		array(
 			'name' 			=> 'impregnated floor joints',
-			'top'			=> '325',
+			'top'			=> '275',
 			'left'			=> '450',
-			'tablet-top'	=> '225',
+			'tablet-top'	=> '200',
 			'tablet-left'	=> '300'
 			),
 		array(
 			'name' 			=> 'pins on the joints',
-			'top'			=> '250',
+			'top'			=> '200',
 			'left'			=> '350',
-			'tablet-top'	=> '200',
+			'tablet-top'	=> '175',
 			'tablet-left'	=> '225'
 			),
 		array(
 			'name'			=> 'roof boards',
-			'top'			=> '90',
+			'top'			=> '40',
 			'left'			=> '375',
-			'tablet-top'	=> '50',
+			'tablet-top'	=> '25',
 			'tablet-left'	=> '200'
 			),
 		array(
 			'name' 			=> 'three-point lock',
-			'top'			=> '225',
+			'top'			=> '175',
 			'left'			=> '450',
-			'tablet-top'	=> '150',
+			'tablet-top'	=> '125',
 			'tablet-left'	=> '275'
 			),
 		array(
 			'name' 			=> 'doors and windows',
-			'top'			=> '175',
+			'top'			=> '125',
 			'left'			=> '625',
-			'tablet-top'	=> '100',
+			'tablet-top'	=> '75',
 			'tablet-left'	=> '400'
 			),
 		array(
 			'name' 			=> 'glued wood',
-			'top'			=> '175',
+			'top'			=> '125',
 			'left'			=> '250',
-			'tablet-top'	=> '100',
+			'tablet-top'	=> '75',
 			'tablet-left'	=> '150',
 			'arrow'			=> true
 			),
 		array(
 			'name' 			=> 'glass packages',
-			'top'			=> '275',
+			'top'			=> '225',
 			'left'			=> '275',
-			'tablet-top'	=> '175',
+			'tablet-top'	=> '150',
 			'tablet-left'	=> '150'
 			),
 		);

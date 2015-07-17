@@ -1851,13 +1851,13 @@ $options[] = array(
 			'label' => __( 'Additional information in call to action text', 'bon' ),
 			'id' => 'home_cta_subline'
 			),
-		array(
+		/*array(
 			'options' => get_colors_list(),
 			'type' => 'radio-img',
 			'label' => __( 'Color', 'bon' ),
 			'id' => 'home_cta_color',
 			'std' => 'carrot',
-			),
+			),*/
 		array(
 			'slug' => 'bon_options',
 			'label' => sprintf( __( 'Make unactive', 'bon' ), $i ),

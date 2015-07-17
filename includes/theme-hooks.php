@@ -34,6 +34,8 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_loop", "shandora_close_main_content_row", 10 );
 
+		add_action( "{$prefix}after_loop", "shandora_add_slidebox", 15 );
+
 		add_action( "{$prefix}before_home", "shandora_home_banners_slider", 3 );
 
 		add_action( "{$prefix}before_home", "shandora_home_promotion", 4 );
@@ -1813,7 +1815,7 @@ if ( !function_exists( 'shandora_get_left_sidebar' ) ) {
 
 			get_sidebar( 'woocommerce' );
 
-		} else {
+		} else if ( !is_page_template( 'page-templates/page-template-village-map.php' ) ) {
 
 			get_sidebar( 'primary' );
 
@@ -1828,7 +1830,8 @@ if ( !function_exists( 'shandora_open_main_content_column' ) ) {
 
 	function shandora_open_main_content_column() {
 
-		if ( is_page_template( 'page-templates/page-template-home.php' ) ) {
+		if ( is_page_template( 'page-templates/page-template-home.php' ) ||
+			is_page_template( 'page-templates/page-template-village-map.php' ) ) {
 			echo '<div class="column large-12">';
 		} else {
 
@@ -2038,7 +2041,7 @@ if ( !function_exists( 'shandora_get_right_sidebar' ) ) {
 
 			get_sidebar( 'woocommerce' );
 
-		} else {
+		} else if ( !is_page_template( 'page-templates/page-template-village-map.php' ) ) {
 
 			get_sidebar( 'primary' );
 
@@ -2053,6 +2056,20 @@ if ( !function_exists( 'shandora_close_main_content_row' ) ) {
 	function shandora_close_main_content_row() {
 
 		echo '</div><!-- close row -->';
+	}
+
+}
+
+if ( !function_exists( 'shandora_add_slidebox' ) ) {
+
+	function shandora_add_slidebox() {
+
+		if ( $_SESSION['layoutType'] !== 'mobile' ) {
+			// show slidebox just for tablets and desktops
+
+			bon_get_template_part( 'block', 'block-slidebox' );
+
+		}
 	}
 
 }
@@ -2481,8 +2498,7 @@ if ( !function_exists( 'open_testimonials_slider' ) ) {
 
 	function open_testimonials_slider( $loop ) { ?>
 
-	<div class="row">
-		<div class="padding-<?php echo shandora_is_home() ? 'large' : 'medium'; ?> top bottom clearfix">
+	<div class="row padding-large top bottom clearfix">
 			<div class="column large-12 testimonials-slider-container">
 				<div id="testimonials-slider">
 					<ul class="slides testimonial-slides <?php if ( $loop->post_count > 1 ) { echo 'bxslider-no-thumb-no-controls autostart'; } ?>"<?php if ( $loop->post_count > 1 ) { echo 'data-pause="8000"'; } ?>>
@@ -2498,7 +2514,6 @@ if ( !function_exists( 'open_testimonials_slider' ) ) {
 					</ul>
 				</div>
 			</div>
-		</div>
 	</div>
 
 	<?php }
