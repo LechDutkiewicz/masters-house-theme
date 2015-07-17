@@ -828,6 +828,65 @@ $cpt->add_meta_box(
 
 }
 
+if ( !function_exists( 'shandora_setup_slidebox_post_type' ) ) {
+
+	function shandora_setup_slidebox_post_type() {
+		global $bon;
+
+		$prefix = bon_get_prefix();
+
+		$cpt = $bon->cpt();
+
+		$name = __( 'Slidebox', 'bon' );
+		$plural = __( 'Slideboxes', 'bon' );
+
+
+		$cpt->create( 'Slidebox', array( 'supports' => array( 'title', 'thumbnail', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 80, 'menu_icon' => 'dashicons-images-alt2' ), array(), $name, $plural );
+
+
+		$service_opt1 = array(
+			array(
+				'label' => __( 'Title', 'bon' ),
+				'id' => $prefix . 'slidebox_title',
+				'type' => 'text',
+				),
+			array(
+				'label' => __( 'Title 2nd line', 'bon' ),
+				'id' => $prefix . 'slidebox_subtitle',
+				'type' => 'text',
+				),
+			);
+
+		$service_opt2 = array(
+			array(
+				'label' => __( 'Button text', 'bon' ),
+				'id' => $prefix . 'slidebox_anchor',
+				'type' => 'text'
+				),
+			array(
+				'label' => __( 'Button color', 'bon' ),
+				'id' => $prefix . 'slidebox_color',
+				'type' => 'radio-img',
+				'options' => get_colors_list()
+				),
+			array(
+				'label' => __( 'Destination page', 'bon' ),
+				'id' => $prefix . 'slidebox_link',			
+				'type' => 'page_chosen'
+				),
+			);
+
+$cpt->add_meta_box(
+	'service-options', 'Banner text options', $service_opt1
+	);
+
+$cpt->add_meta_box(
+	'service-more', 'Button options', $service_opt2
+	);
+}
+
+}
+
 if ( !function_exists( 'shandora_setup_home_feature_post_type' ) ) {
 
 	function shandora_setup_home_feature_post_type() {
