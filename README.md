@@ -1,3 +1,9 @@
+# 17 VII 2015 Update
+
+1. Added slidebox for bottom side of page.
+2. Added Google Events tracking for testimonials.
+3. Improved structure of js code.
+
 # 13 VII 2015 Update
 
 1. Added rotating banners for home page.

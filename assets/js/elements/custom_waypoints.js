@@ -32,7 +32,7 @@
 					}, k * 1000 );
 				});
 			},
-			offset: $(window).height() / 4
+			offset: $(window).height() / 2
 		});
 
 	};

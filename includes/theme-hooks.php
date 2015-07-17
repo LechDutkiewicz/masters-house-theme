@@ -2590,11 +2590,11 @@ if ( !function_exists( 'shandora_get_banner_opening_tag' ) ) {
 
 	function shandora_get_banner_opening_tag( $name ) {
 
-		$page = bon_get_option( $name . '_section_image_page' );
-		$destination_page = bon_get_option( $name . '_section_image_page_destination' );
-		$tool = bon_get_option( $name . '_section_image_tool' );
-		$modal = bon_get_option( $name . '_section_image_modal' );
-		$destination_modal = bon_get_option( $name . '_section_image_modal_destination' );
+		$page = bon_get_option( $name . '_slide_page' );
+		$destination_page = bon_get_option( $name . '_slide_page_destination' );
+		$tool = bon_get_option( $name . '_slide_tool' );
+		$modal = bon_get_option( $name . '_slide_modal' );
+		$destination_modal = bon_get_option( $name . '_slide_modal_destination' );
 		$output = '';
 
 		if ( $page && $destination_page ) {
@@ -2629,14 +2629,14 @@ if ( !function_exists( 'shandora_get_banner_opening_tag' ) ) {
 
 		function shandora_get_banner_closing_tag( $name ) {
 
-			$page = bon_get_option( $name . '_section_image_page');
-			$destination_page = bon_get_option( $name . '_section_image_page_destination');
-			$tool = bon_get_option( $name . '_section_image_tool');
-			$modal = bon_get_option( $name . '_section_image_modal');
-			$destination_modal = bon_get_option( $name . '_section_image_modal_destination');
+			$page = bon_get_option( $name . '_slide_page');
+			$destination_page = bon_get_option( $name . '_slide_page_destination');
+			$tool = bon_get_option( $name . '_slide_tool');
+			$modal = bon_get_option( $name . '_slide_modal');
+			$destination_modal = bon_get_option( $name . '_slide_modal_destination');
 			$output = '';
 
-			if ( ( bon_get_option( $name . '_section_image_page') && $destination_page ) || $tool || ( $modal && $destination_modal ) ) {
+			if ( ( bon_get_option( $name . '_slide_page') && $destination_page ) || $tool || ( $modal && $destination_modal ) ) {
 				$output .= '</a>';
 				echo $output;
 			}
@@ -2649,9 +2649,8 @@ if ( !function_exists( 'shandora_get_banner_opening_tag' ) ) {
 
 		function get_modal( $name ) {
 
-			$modal = bon_get_option( $name . '_section_image_modal');
-			$destination_modal = bon_get_option( $name . '_section_image_modal_destination');
-			$output = '';
+			$modal = bon_get_option( $name . '_slide_modal');
+			$destination_modal = bon_get_option( $name . '_slide_modal_destination');
 
 			if ( $modal && $destination_modal ) {
 

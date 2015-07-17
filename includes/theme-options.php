@@ -752,6 +752,20 @@ $options[] = array( 'slug' => 'bon_options',
 
 
 $options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Banner displayed for features section', 'bon' ),
+	'id' => 'features_section_image',
+	'type' => 'upload',
+	);
+
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Banner displayed for quality section', 'bon' ),
+	'id' => 'quality_section_image',
+	'type' => 'upload',
+	);
+
+
+$options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Show Related Listings', 'bon' ),
 	'desc' => __( 'Show Related Listings in Single Listing Detail Page', 'bon' ),
 	'id' => 'show_related',
@@ -1986,43 +2000,43 @@ $options[] = array( 'slug' => 'bon_options',
 		$options[] = array(
 			'slug' => 'bon_options',
 			'label' => __( '1st slide image', 'bon' ),
-			'desc' => __( 'Opens FAQ, image also displayed in services section', 'bon' ),
-			'id' => 'features_section_image',
+			//'desc' => __( 'Opens FAQ, image also displayed in services section', 'bon' ),
+			'id' => '1_slide',
 			'type' => 'upload'
 			);
 
 		$options[] = array(
 			'slug' => 'bon_options',
 			'desc' => __( 'Redirect to a page', 'bon' ),
-			'id' => 'features_section_image_page',
+			'id' => '1_slide_page',
 			'type' => 'checkbox',
 			'class' => 'collapsed',
 			'std' => '0' );
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Pick a page', 'bon' ),
-			'id' => 'features_section_image_page_destination',
+			'id' => '1_slide_page_destination',
 			'type' => 'page_select',
 			'class' => 'hidden last' );
 
 		$options[] = array(
 			'slug' => 'bon_options',
 			'desc' => __( 'Redirect to drawing tool', 'bon' ),
-			'id' => 'features_section_image_tool',
+			'id' => '1_slide_tool',
 			'type' => 'checkbox',
 			'std' => '0' );
 
 		$options[] = array(
 			'slug' => 'bon_options',
 			'desc' => __( 'Open modal window', 'bon' ),
-			'id' => 'features_section_image_modal',
+			'id' => '1_slide_modal',
 			'type' => 'checkbox',
 			'class' => 'collapsed',
 			'std' => '0' );
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Pick a modal', 'bon' ),
-			'id' => 'feautres_section_image_modal_destination',
+			'id' => '1_slide_modal_destination',
 			'type' => 'select',
 			'options' => array(
 				'quality' => __( 'Modal with quality images', 'bon' ),
@@ -2035,42 +2049,42 @@ $options[] = array( 'slug' => 'bon_options',
 			'slug' => 'bon_options',
 			'label' => __( '2nd slide image', 'bon' ),
 			'desc' => __( 'Opens drawing Tool', 'bon' ),
-			'id' => 'tool_section_image',
+			'id' => '2_slide',
 			'type' => 'upload'
 			);
 
 		$options[] = array(
 			'slug' => 'bon_options',
 			'desc' => __( 'Redirect to a page', 'bon' ),
-			'id' => 'tool_section_image_page',
+			'id' => '2_slide_page',
 			'type' => 'checkbox',
 			'class' => 'collapsed',
 			'std' => '0' );
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Pick a page', 'bon' ),
-			'id' => 'tool_section_image_page_destination',
+			'id' => '2_slide_page_destination',
 			'type' => 'page_select',
 			'class' => 'hidden last' );
 
 		$options[] = array(
 			'slug' => 'bon_options',
 			'desc' => __( 'Redirect to drawing tool', 'bon' ),
-			'id' => 'tool_section_image_tool',
+			'id' => '2_slide_tool',
 			'type' => 'checkbox',
 			'std' => '0' );
 
 		$options[] = array(
 			'slug' => 'bon_options',
 			'desc' => __( 'Open modal window', 'bon' ),
-			'id' => 'tool_section_image_modal',
+			'id' => '2_slide_modal',
 			'type' => 'checkbox',
 			'class' => 'collapsed',
 			'std' => '0' );
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Pick a modal', 'bon' ),
-			'id' => 'tool_section_image_modal_destination',
+			'id' => '2_slide_modal_destination',
 			'type' => 'select',
 			'options' => array(
 				'quality' => __( 'Modal with quality images', 'bon' ),
@@ -2083,42 +2097,42 @@ $options[] = array( 'slug' => 'bon_options',
 			'slug' => 'bon_options',
 			'label' => __( '3rd slide image', 'bon' ),
 			'desc' => __( 'Opens quality modal window, also displayed in quality section', 'bon' ),
-			'id' => 'quality_section_image',
+			'id' => '3_slide',
 			'type' => 'upload'
 			);
 
 		$options[] = array(
 			'slug' => 'bon_options',
 			'desc' => __( 'Redirect to a page', 'bon' ),
-			'id' => 'quality_section_image_page',
+			'id' => '3_slide_page',
 			'type' => 'checkbox',
 			'class' => 'collapsed',
 			'std' => '0' );
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Pick a page', 'bon' ),
-			'id' => 'quality_section_image_page_destination',
+			'id' => '3_slide_page_destination',
 			'type' => 'page_select',
 			'class' => 'hidden last' );
 
 		$options[] = array(
 			'slug' => 'bon_options',
 			'desc' => __( 'Redirect to drawing tool', 'bon' ),
-			'id' => 'quality_section_image_tool',
+			'id' => '3_slide_tool',
 			'type' => 'checkbox',
 			'std' => '0' );
 
 		$options[] = array(
 			'slug' => 'bon_options',
 			'desc' => __( 'Open modal window', 'bon' ),
-			'id' => 'quality_section_image_modal',
+			'id' => '3_slide_modal',
 			'type' => 'checkbox',
 			'class' => 'collapsed',
 			'std' => '0' );
 
 		$options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'Pick a modal', 'bon' ),
-			'id' => 'quality_section_image_modal_destination',
+			'id' => '3_slide_modal_destination',
 			'type' => 'select',
 			'options' => array(
 				'quality' => __( 'Modal with quality images', 'bon' ),
@@ -2127,12 +2141,17 @@ $options[] = array( 'slug' => 'bon_options',
 				),
 			'class' => 'hidden last' );
 
-		$options[] = array(
+		/*$options[] = array(
 			'slug' => 'bon_options',
 			'label' => __( 'Quality section house image', 'bon' ),
 			'desc' => __( 'Image displayed in quality section', 'bon' ),
 			'id' => 'quality_section_house_image',
 			'type' => 'upload'
+			);*/
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Quality section items', 'bon' ),
+			'type' => 'subheading',
 			);
 
 		$options[] = array(
@@ -2141,11 +2160,6 @@ $options[] = array( 'slug' => 'bon_options',
 			'desc' => __( 'Title displayed in top of modal window with quality description', 'bon' ),
 			'id' => 'quality_section_title',
 			'type' => 'text'
-			);
-
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Quality section items', 'bon' ),
-			'type' => 'subheading',
 			);
 
 		$options[] = array(
