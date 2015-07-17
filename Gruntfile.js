@@ -3,7 +3,9 @@ module.exports = function(grunt) {
 	var jsFileList = [
 	'assets/js/framework.js',
 	'node_modules/waypoints/lib/jquery.waypoints.js',
+	'assets/js/libs/jquery.ba-dotimeout.js',
 	'assets/js/custom.js',
+	'assets/js/elements/*.js'
 	];
 
 	// Project configuration.
