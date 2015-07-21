@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
-"POT-Creation-Date: 2015-07-17 14:27+0200\n"
-"PO-Revision-Date: 2015-07-17 14:27+0200\n"
+"POT-Creation-Date: 2015-07-20 11:16+0200\n"
+"PO-Revision-Date: 2015-07-21 12:44+0200\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: pl\n"
@@ -172,9 +172,9 @@ msgstr "Wyślij"
 #: shandora-child/page-templates/page-template-all-listings.php:36
 #: shandora-child/page-templates/page-template-search-listings.php:436
 #: shandora-child/templates/loops/loop-listing.php:13
-#: shandora/includes/theme-hooks.php:1932
-#: shandora/includes/theme-hooks.php:2402
-#: shandora/includes/theme-hooks.php:2416
+#: shandora/includes/theme-hooks.php:1933
+#: shandora/includes/theme-hooks.php:2403
+#: shandora/includes/theme-hooks.php:2417
 msgid "Price"
 msgstr "Cena"
 
@@ -182,8 +182,8 @@ msgstr "Cena"
 #: shandora-child/page-templates/page-template-search-listings.php:440
 #: shandora-child/templates/loops/loop-listing.php:17
 #: shandora/includes/search-fields.php:893
-#: shandora/includes/theme-hooks.php:1934
-#: shandora/includes/theme-hooks.php:1937
+#: shandora/includes/theme-hooks.php:1935
+#: shandora/includes/theme-hooks.php:1938
 msgid "Size"
 msgstr "Rozmiar"
 
@@ -233,6 +233,7 @@ msgid "Learn from our experts"
 msgstr "Dowiedz się od naszych ekspertów"
 
 #: shandora-child/templates/blocks/block-ebook.php:30
+#: shandora/includes/theme-actions.php:1625
 msgid "Download"
 msgstr "Pobierz"
 
@@ -308,9 +309,9 @@ msgstr "E-book z Domu Mistrza"
 msgid "Get your ebook by email"
 msgstr "Pobierz ebook e-mailem"
 
-#: shandora-child/templates/blocks/block-modal-quality.php:47
+#: shandora-child/templates/blocks/block-modal-quality.php:37
 msgid "Click here"
-msgstr ""
+msgstr "Kliknij tutaj"
 
 #: shandora-child/templates/blocks/block-modal-visit-request.php:6
 #: shandora-child/templates/blocks/block-modal-visit-request.php:25
@@ -398,8 +399,8 @@ msgid "No Room"
 msgstr "Brak pomieszczeń"
 
 #: shandora-child/templates/blocks/listing/meta.php:48
-#: shandora/includes/theme-hooks.php:2404
-#: shandora/includes/theme-hooks.php:2418
+#: shandora/includes/theme-hooks.php:2405
+#: shandora/includes/theme-hooks.php:2419
 msgid "Wall thickness"
 msgstr "Grubość ściany"
 
@@ -756,24 +757,22 @@ msgid "No Slider no entries were found"
 msgstr ""
 
 #: shandora-child/templates/woocommerce/email-template.php:52
-#: shandora/includes/theme-actions.php:1642
+#: shandora/includes/theme-actions.php:1621
 msgid "Thank you for downloading our ebook."
 msgstr "Dziękujemy za pobranie e-booka."
 
 #: shandora-child/templates/woocommerce/email-template.php:53
-#: shandora/includes/theme-actions.php:1643
 msgid "You can download it here"
 msgstr "Pobierz tutaj"
 
 #: shandora-child/templates/woocommerce/email-template.php:54
-#: shandora/includes/theme-actions.php:1644
 msgid "We hope you find this helpful!"
 msgstr "Mamy nadzieję, że to pomocne!"
 
 #: shandora-child/templates/woocommerce/email-template.php:58
-#: shandora/includes/theme-actions.php:1648
+#: shandora/includes/theme-actions.php:1627
 msgid "All the best"
-msgstr ""
+msgstr "Wszystkiego dobrego"
 
 #: shandora-child/templates/woocommerce/result-count.php:19
 msgid "Showing the single result"
@@ -3089,7 +3088,7 @@ msgid "Manufacturer"
 msgstr ""
 
 #: shandora/includes/search-fields.php:1577
-#: shandora/includes/theme-hooks.php:1939
+#: shandora/includes/theme-hooks.php:1940
 msgid "Mileage"
 msgstr ""
 
@@ -3194,13 +3193,12 @@ msgid "Cannot send email to destination. No parameter receive form AJAX call."
 msgstr "Nie można wysłać e-mail do miejsca przeznaczenia."
 
 #: shandora/includes/theme-actions.php:1405
-#: shandora/includes/theme-actions.php:2315
-#: shandora/includes/theme-actions.php:2326
+#: shandora/includes/theme-actions.php:2297
+#: shandora/includes/theme-actions.php:2308
 msgid "Please enter either your email or phone number."
 msgstr ""
 
 #: shandora/includes/theme-actions.php:1440
-#: shandora/includes/theme-actions.php:1594
 msgid "Cheatin Huh?!"
 msgstr "Oszukujesz, co?"
 
@@ -3239,8 +3237,8 @@ msgstr "Wiadomość : %s \n"
 #: shandora/includes/theme-actions.php:1490
 #: shandora/includes/theme-actions.php:1509
 #: shandora/includes/theme-actions.php:1527
-#: shandora/includes/theme-actions.php:1664
-#: shandora/includes/theme-actions.php:1672
+#: shandora/includes/theme-actions.php:1646
+#: shandora/includes/theme-actions.php:1654
 msgid "Masters House"
 msgstr "Dom Mistrza"
 
@@ -3258,8 +3256,8 @@ msgstr "Serdeczne pozdrowienia"
 
 #: shandora/includes/theme-actions.php:1510
 #: shandora/includes/theme-actions.php:1524
-#: shandora/includes/theme-actions.php:1665
-#: shandora/includes/theme-actions.php:1669
+#: shandora/includes/theme-actions.php:1647
+#: shandora/includes/theme-actions.php:1651
 msgid "no-reply@mastershouse.com"
 msgstr ""
 
@@ -3268,12 +3266,12 @@ msgid "Thank you for contacting us"
 msgstr "Dziękujemy za skontaktowanie się z nami."
 
 #: shandora/includes/theme-actions.php:1535
-#: shandora/includes/theme-actions.php:1677
+#: shandora/includes/theme-actions.php:1659
 msgid "Email was sent successfully."
 msgstr "E-mail został wysłany."
 
 #: shandora/includes/theme-actions.php:1541
-#: shandora/includes/theme-actions.php:1680
+#: shandora/includes/theme-actions.php:1662
 msgid "There is an error sending email."
 msgstr "Wystąpił błąd podczas wysyłania poczty."
 
@@ -3281,60 +3279,72 @@ msgstr "Wystąpił błąd podczas wysyłania poczty."
 msgid "Please enter a valid email address."
 msgstr "Wpisz proszę prawidłowy adres email."
 
-#: shandora/includes/theme-actions.php:1729
+#: shandora/includes/theme-actions.php:1620
+msgid "Hi"
+msgstr "Witaj"
+
+#: shandora/includes/theme-actions.php:1622
+msgid "You can download it with this link"
+msgstr "Możesz otworzyć go klikając w ten link"
+
+#: shandora/includes/theme-actions.php:1623
+msgid "We wish you a pleasant read!"
+msgstr "Życzymy udanej lektury!"
+
+#: shandora/includes/theme-actions.php:1711
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: shandora/includes/theme-actions.php:1733
+#: shandora/includes/theme-actions.php:1715
 msgid "View Image"
 msgstr "Zobacz zdjęcie"
 
-#: shandora/includes/theme-actions.php:1737
+#: shandora/includes/theme-actions.php:1719
 msgid "Compare Listing"
 msgstr ""
 
-#: shandora/includes/theme-actions.php:1767
+#: shandora/includes/theme-actions.php:1749
 msgid "Ground floor"
 msgstr "Parter"
 
-#: shandora/includes/theme-actions.php:1771
+#: shandora/includes/theme-actions.php:1753
 msgid "First floor"
 msgstr "Pierwsze piętro"
 
-#: shandora/includes/theme-actions.php:2028
+#: shandora/includes/theme-actions.php:2010
 msgid "Build your own"
 msgstr "Zbuduj swój własny"
 
-#: shandora/includes/theme-actions.php:2238
+#: shandora/includes/theme-actions.php:2220
 msgid "Cottages"
 msgstr "Domki drewniane"
 
-#: shandora/includes/theme-actions.php:2238
+#: shandora/includes/theme-actions.php:2220
 msgid "Cottage"
 msgstr "Domek drewniany"
 
-#: shandora/includes/theme-actions.php:2245
+#: shandora/includes/theme-actions.php:2227
 msgctxt "product url slug"
 msgid "wooden-cottage"
 msgstr "domek-drewniany"
 
-#: shandora/includes/theme-actions.php:2251
+#: shandora/includes/theme-actions.php:2233
 msgctxt "products category url slug"
 msgid "type"
 msgstr "domki-drewniane"
 
-#: shandora/includes/theme-actions.php:2304
+#: shandora/includes/theme-actions.php:2286
 msgid "Call us directly at:"
 msgstr "Zadzwoń do nas na:"
 
-#: shandora/includes/theme-actions.php:2304
+#: shandora/includes/theme-actions.php:2286
 msgid "or leave us your details data, so our representative can contact you."
 msgstr ""
 "lub pozostaw nam swoje dane kontaktowe, aby mógł się z Tobą skontaktować "
 "nasz przedstawiciel."
 
-#: shandora/includes/theme-actions.php:2305
+#: shandora/includes/theme-actions.php:2287
 msgid ""
 "We work from Monday to Friday 8 am to 4 pm. During this time we contact you "
 "back within one hour"
@@ -3342,20 +3352,20 @@ msgstr ""
 "Pracujemy od poniedziałku do piątku od 8 do 16. W tym czasie odpowiemy w "
 "ciągu godziny."
 
-#: shandora/includes/theme-actions.php:2314
+#: shandora/includes/theme-actions.php:2296
 msgid "Your email address"
 msgstr "Twój adres email"
 
-#: shandora/includes/theme-actions.php:2314
-#: shandora/includes/theme-actions.php:2325
+#: shandora/includes/theme-actions.php:2296
+#: shandora/includes/theme-actions.php:2307
 msgid "optional"
 msgstr "opcjonalnie"
 
-#: shandora/includes/theme-actions.php:2325
+#: shandora/includes/theme-actions.php:2307
 msgid "Your phone number"
 msgstr "Twój numer telefonu"
 
-#: shandora/includes/theme-actions.php:2336
+#: shandora/includes/theme-actions.php:2318
 msgid ""
 "In case you want to ask us about something, type it here. You can also leave "
 "it empty and we'll contact you soon."
@@ -3383,49 +3393,49 @@ msgstr[2] "%s Pokoi"
 msgid "People"
 msgstr ""
 
-#: shandora/includes/theme-hooks.php:1926
+#: shandora/includes/theme-hooks.php:1927
 msgid "Ascending"
 msgstr "Rosnąco"
 
-#: shandora/includes/theme-hooks.php:1927
+#: shandora/includes/theme-hooks.php:1928
 msgid "Descending"
 msgstr "Malejąco"
 
-#: shandora/includes/theme-hooks.php:1941
+#: shandora/includes/theme-hooks.php:1942
 msgid "Length"
 msgstr ""
 
-#: shandora/includes/theme-hooks.php:2263
+#: shandora/includes/theme-hooks.php:2264
 msgid "Back to Top"
 msgstr "Wróć na początek"
 
-#: shandora/includes/theme-hooks.php:2294
+#: shandora/includes/theme-hooks.php:2295
 msgid "Please activate some Widgets."
 msgstr ""
 
-#: shandora/includes/theme-hooks.php:2340
+#: shandora/includes/theme-hooks.php:2341
 msgid "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
 msgstr "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
 
-#: shandora/includes/theme-hooks.php:2403
-#: shandora/includes/theme-hooks.php:2417
+#: shandora/includes/theme-hooks.php:2404
+#: shandora/includes/theme-hooks.php:2418
 msgid "Wall material"
 msgstr "Materiał wykonania ściany"
 
-#: shandora/includes/theme-hooks.php:2405
-#: shandora/includes/theme-hooks.php:2419
+#: shandora/includes/theme-hooks.php:2406
+#: shandora/includes/theme-hooks.php:2420
 msgid "Windows thickness"
 msgstr "Gruność okien"
 
-#: shandora/includes/theme-hooks.php:2550
+#: shandora/includes/theme-hooks.php:2551
 msgid "Read full story"
 msgstr "Przeczytaj całą historię"
 
-#: shandora/includes/theme-hooks.php:2601
+#: shandora/includes/theme-hooks.php:2602
 msgid "Link to "
 msgstr "Odnośnik do"
 
-#: shandora/includes/theme-hooks.php:2621
+#: shandora/includes/theme-hooks.php:2622
 msgid "Open window with more information"
 msgstr ""
 
