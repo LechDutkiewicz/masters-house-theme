@@ -1594,7 +1594,8 @@ function shandora_featured_slider() {
 *
 */
 function shandora_ebook_section() {
-	bon_get_template_part( 'block', 'block-ebook' );
+	if ( bon_get_option( 'home_ebook' ) && is_user_logged_in() )
+		bon_get_template_part( 'block', 'block-ebook' );
 }
 
 /**

@@ -1574,112 +1574,94 @@ function shandora_process_ebook_downloadform() {
 
 	$anchor = esc_html( $_POST['anchor'] );
 
-	if ( function_exists( 'akismet_http_post' ) && trim( get_option( 'wordpress_api_key' ) ) != '' ) {
-		global $akismet_api_host, $akismet_api_port;
-		$c['user_ip'] = preg_replace( '/[^0-9., ]/', '', $_SERVER['REMOTE_ADDR'] );
-		$c['blog'] = home_url();
-		$c['comment_author'] = $name;
-		$c['comment_author_email'] = $email;
-		$c['comment_content'] = $messages;
+	$body .= '<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate!important;border-radius:4px;background-color:#ffffff;padding:30px;border:1px solid #ffffff;border-bottom:1px solid #acacac" bgcolor="#ffffff">';
+	$body .= '<tbody>';
+	$body .= '<tr>';
+	$body .= '<td align="center" valign="top">';
+	$body .= '<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse!important;width:600px" width="600">';
+	$body .= '<tbody>';
+	$body .= '<tr>';
+	$body .= '<td align="left" valign="top" width="100%" colspan="12" style="color:#444444;font-family:sans-serif;font-size:15px;line-height:150%;text-align:left">';
+	$body .= '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse!important">';
+	$body .= '<tbody>';
+	$body .= '<tr>';
+	$body .= '<td align="left" valign="top" colspan="12" width="100.0%" style="text-align:left;font-family:sans-serif;font-size:15px;line-height:1.5em;color:#444444">';
+	$body .= '<div>';
+	$body .= '<div>';
+	$body .= '<div style="color:inherit;font-size:inherit;line-height:inherit;margin:inherit;padding:inherit">';
+	$body .= '<p style="margin-bottom:1em">';
+	$body .= '<a href="' . get_home_url() . '" title="' . esc_attr( get_bloginfo( "name", "display" ) ) . '">';
 
-		$query_string = '';
-		foreach ( $c as $key => $data ) {
-			if ( is_string( $data ) )
-				$query_string .= $key . '=' . urlencode( stripslashes( $data ) ) . '&';
-		}
+	if ( bon_get_option( 'logo' ) ) {
+		$body .= '<img src = "' . (bon_get_option( 'logo_dark', get_template_directory_uri() . "/assets/images/logo.png" )) . '" alt = "' . esc_attr( get_bloginfo( "name", "display" ) ) . '"/>';
+	} else {
+		$body .= esc_attr( get_bloginfo( 'name' ) );
+	}
 
-		$response = akismet_http_post( $query_string, $akismet_api_host, '/1.1/comment-check', $akismet_api_port );
+	$body .= '</a>';
+	$body .= '</p>';
+	$body.='</div>';
+	$body.='</div>';
+	$body.='</div>';
+	$body.='</td>';
+	$body.='</tr>';
+	$body.='</tbody>';
+	$body.='</table>';
+	$body.='</td>';
+	$body.='</tr>';
+	$body .= '<tr>';
+	$body .= '<td align = "left" valign = "top" width = "100%" colspan = "12" style = "color:#444444;font-family:sans-serif;font-size:15px;line-height:150%;text-align:left">';
+	$body .= '<table cellpadding = "0" cellspacing = "0" border = "0" width = "100%" style = "border-collapse:collapse!important">';
+	$body .= '<tbody>';
+	$body .= '<tr>';
+	$body .= '<td align = "left" valign = "top" colspan = "12" width = "100.0%" style = "text-align:left;font-family:sans-serif;font-size:15px;line-height:1.5em;color:#444444">';
+	$body .= '<div>';
+	$body .= '<div style = "color:inherit;font-size:inherit;line-height:inherit;margin:inherit;padding:inherit">';
+	$body .= '<p style = "margin-bottom:1em" >'. __( 'Hi', 'bon') . '&nbsp;' . $name . ',</p>';
+	$body .= '<p style = "margin-bottom:1em">' . __( "Thank you for downloading our ebook.", "bon" ) . '</p>';
+	$body .= '<p style = "margin-bottom:1em">' . __( "You can download it with this link", "bon" ) . '&nbsp;-' . '&nbsp;<a href = "' . $link . '" target = "_blank">' . $anchor . '</a></p>';
+	$body .= '<p style = "margin-bottom:1em">' . __( "We wish you a pleasant read!", "bon" ) . '</p>';
+	$body .= '<p style = "margin:4em 0;">';
+	$body .= '<a style = "display:inline-block;padding-top:0.86667em;padding-right:1.2em;padding-bottom:0.86667em;padding-left:1.2em;font-size:1.06667em;background-color: #27AE60;border-color: #0E9547;border-radius:5px;border-style:solid;border-width:0 0 5px;color:#FFF;text-decoration:none" href = "' . $link . '">' . __( 'Download', 'bon') . ' ' . $anchor . '</a>';
+	$body .= '</p>';
+	$body .= '<p style = "margin-bottom:1em">' . __( "All the best", "bon" ) . ', <br></p>';
+	$body .= '<a href="' . get_home_url() . '" title="' . esc_attr( get_bloginfo( "name", "display" ) ) . '">';
+	$body .= '<small>' . esc_attr( get_bloginfo( 'name' ) ) . '</small>';
+	$body .= '</a>';
+	$body .= '</div>';
+	$body .= '</div>';
+	$body .= '</td>';
+	$body .= '</tr>';
+	$body .= '</tbody>';
+	$body .= '</table>';
+	$body .= '</td>';
+	$body .= '</tr>';
+	$body .= '</tbody>';
+	$body .= '</table>';
+	$body .= '</td>';
+	$body .= '</tr>';
+	$body .= '</tbody>';
+	$body .= '</table>';
 
-		if ( 'true' == $response[1] ) { // Akismet says it's SPAM
-		$return_data['value'] = __( 'Cheatin Huh?!', 'bon' );
+	$headers[] = "From: " . __( "Masters House", 'bon' );
+	$headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
+	$headers[] = "Content-Type: text/html";
+
+	add_filter( 'wp_mail_from', function() {
+		return __( 'no-reply@mastershouse.com', 'bon' );
+	} );
+	add_filter( 'wp_mail_from_name', function() {
+		return __( "Masters House", 'bon' );
+	} );
+
+	if ( wp_mail( $email, $subject, $body, $headers ) ) {
+		$return_data['success'] = '1';
+		$return_data['value'] = __( 'Email was sent successfully.', 'bon' );
+		die( json_encode( $return_data ) );
+	} else {
+		$return_data['value'] = __( 'There is an error sending email.', 'bon' );
 		die( json_encode( $return_data ) );
 	}
-}
-
-$body .= '<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate!important;border-radius:4px;background-color:#ffffff;padding:30px;border:1px solid #ffffff;border-bottom:1px solid #acacac" bgcolor="#ffffff">';
-$body .= '<tbody>';
-$body .= '<tr>';
-$body .= '<td align="center" valign="top">';
-$body .= '<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse!important;width:600px" width="600">';
-$body .= '<tbody>';
-$body .= '<tr>';
-$body .= '<td align="left" valign="top" width="100%" colspan="12" style="color:#444444;font-family:sans-serif;font-size:15px;line-height:150%;text-align:left">';
-$body .= '<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse!important">';
-$body .= '<tbody>';
-$body .= '<tr>';
-$body .= '<td align="left" valign="top" colspan="12" width="100.0%" style="text-align:left;font-family:sans-serif;font-size:15px;line-height:1.5em;color:#444444">';
-$body .= '<div>';
-$body .= '<div>';
-$body .= '<div style="color:inherit;font-size:inherit;line-height:inherit;margin:inherit;padding:inherit">';
-$body .= '<p style="margin-bottom:1em">';
-$body .= '<a href="' . get_home_url() . '" title="' . esc_attr( get_bloginfo( "name", "display" ) ) . '">';
-
-if ( bon_get_option( 'logo' ) ) {
-	$body .= '<img src = "' . (bon_get_option( 'logo_dark', get_template_directory_uri() . "/assets/images/logo.png" )) . '" alt = "' . esc_attr( get_bloginfo( "name", "display" ) ) . '"/>';
-} else {
-	$body .= esc_attr( get_bloginfo( 'name' ) );
-}
-$body .= '</a>';
-$body .= '</p>';
-$body.='</div>';
-$body.='</div>';
-$body.='</div>';
-$body.='</td>';
-$body.='</tr>';
-$body.='</tbody>';
-$body.='</table>';
-$body.='</td>';
-$body.='</tr>';
-$body .= '<tr>';
-$body .= '<td align = "left" valign = "top" width = "100%" colspan = "12" style = "color:#444444;font-family:sans-serif;font-size:15px;line-height:150%;text-align:left">';
-$body .= '<table cellpadding = "0" cellspacing = "0" border = "0" width = "100%" style = "border-collapse:collapse!important">';
-$body .= '<tbody>';
-$body .= '<tr>';
-$body .= '<td align = "left" valign = "top" colspan = "12" width = "100.0%" style = "text-align:left;font-family:sans-serif;font-size:15px;line-height:1.5em;color:#444444">';
-$body .= '<div>';
-$body .= '<div style = "color:inherit;font-size:inherit;line-height:inherit;margin:inherit;padding:inherit">';
-$body .= '<p style = "margin-bottom:1em" >Hi&nbsp;' . $name . ',</p>';
-$body .= '<p style = "margin-bottom:1em">' . __( "Thank you for downloading our ebook.", "bon" ) . ' ' . $subject . '</p>';
-$body .= '<p style = "margin-bottom:1em">' . __( "You can download it here", "bon" ) . '-' . '&nbsp;<a href = "' . $link . '" target = "_blank">' . $anchor . '</a></p>';
-$body .= '<p style = "margin-bottom:1em">' . __( "We hope you find this helpful!", "bon" ) . '</p>';
-$body .= '<p style = "margin-bottom:1em;">';
-$body .= '<a style = "display:inline-block;padding-top:0.86667em;padding-right:1.2em;padding-bottom:0.86667em;padding-left:1.2em;font-size:1.06667em;background-color: #27AE60;border-color: #0E9547;border-radius:5px;border-style:solid;border-width:0 0 5px;color:#FFF;text-decoration:none" href = "' . $link . '">' . $anchor . '</a>';
-$body .= '</p>';
-$body .= '<p style = "margin-bottom:1em">' . __( "All the best", "bon" ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
-$body .= '</div>';
-$body .= '</div>';
-$body .= '</td>';
-$body .= '</tr>';
-$body .= '</tbody>';
-$body .= '</table>';
-$body .= '</td>';
-$body .= '</tr>';
-$body .= '</tbody>';
-$body .= '</table>';
-$body .= '</td>';
-$body .= '</tr>';
-$body .= '</tbody>';
-$body .= '</table>';
-
-$headers[] = "From: " . __( "Masters House", 'bon' );
-$headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
-$headers[] = "Content-Type: text/html";
-
-add_filter( 'wp_mail_from', function() {
-	return __( 'no-reply@mastershouse.com', 'bon' );
-} );
-add_filter( 'wp_mail_from_name', function() {
-	return __( "Masters House", 'bon' );
-} );
-
-if ( wp_mail( $email, $subject, $body, $headers ) ) {
-	$return_data['success'] = '1';
-	$return_data['value'] = __( 'Email was sent successfully.', 'bon' );
-	die( json_encode( $return_data ) );
-} else {
-	$return_data['value'] = __( 'There is an error sending email.', 'bon' );
-	die( json_encode( $return_data ) );
-}
 }
 
 function shandora_get_listing_hover_action( $post_id = '' ) {

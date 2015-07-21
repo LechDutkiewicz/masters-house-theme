@@ -252,7 +252,7 @@ $options[] = array( 'slug' => 'bon_options',
 	'std' => '6' );
 
 $options[] = array( 'slug' => 'bon_options',
-	'label' => __( 'Enable Disqus Comments. You can easily find how to menage it <a href="https://disqus.com/">here</a>.', 'bon' ),
+	'label' => __( 'Enable Disqus Comments. You can easily find how to menage it at https://disqus.com/', 'bon' ),
 	'id' => 'enable_disqus',
 	'type' => 'checkbox',
 	'class' => 'collapsed',
@@ -1969,6 +1969,12 @@ $options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Display testimonials', 'bon' ),
 	'desc' => __( 'Check if you want to enable testimonials slider', 'bon' ),
 	'id' => 'home_testimonials',
+	'type' => 'checkbox' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Display ebook download', 'bon' ),
+	'desc' => __( 'Check if you want to enable ebook download section', 'bon' ),
+	'id' => 'home_ebook',
 	'type' => 'checkbox' );
 
 $options[] = array( 'slug' => 'bon_options',
