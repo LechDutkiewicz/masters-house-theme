@@ -850,11 +850,6 @@ if ( !function_exists( 'shandora_setup_slidebox_post_type' ) ) {
 				'id' => $prefix . 'slidebox_title',
 				'type' => 'text',
 				),
-			array(
-				'label' => __( 'Title 2nd line', 'bon' ),
-				'id' => $prefix . 'slidebox_subtitle',
-				'type' => 'text',
-				),
 			);
 
 		$service_opt2 = array(
