@@ -36,9 +36,9 @@ function bon_meta_robots() {
 	/* If the blog is set to private, don't show anything. */
 	if ( !get_option( 'blog_public' ) )
 		return;
-
+ 
 	/* Create the HTML for the robots meta tag. */
-	if ( is_attachment() ) {
+	if ( is_attachment() || is_search() || is_page_template( 'page-templates/page-template-search-listings.php' ) ) {
 		$robots = '<meta name="robots" content="noindex,follow" />' . "\n";
 	} else {
 		$robots = '<meta name="robots" content="index,follow" />' . "\n";
