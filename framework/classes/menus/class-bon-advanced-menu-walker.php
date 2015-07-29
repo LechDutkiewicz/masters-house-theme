@@ -393,7 +393,7 @@ class BON_Advanced_Menu_Walker extends Walker_Nav_Menu {
 	 */
 	function end_text() {
 
-		extract( $this->navopt );
+		/*extract( $this->navopt );
 
 		$desc  = !empty( $this->navopt['desc'] ) ? '<span class="bon-menu-desc">'. $this->navopt['desc'] .'</span>' : '';
 
@@ -402,7 +402,8 @@ class BON_Advanced_Menu_Walker extends Walker_Nav_Menu {
 			return '</span>'.$desc.'</span>' . $this->process_icon_thumb();
 		}
 
-		return '</span>'.$desc.'</span>';
+		return '</span>'.$desc.'</span>';*/
+		return '</span></span>';
 	}
 
 	function display_icon() {
