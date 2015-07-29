@@ -14,7 +14,7 @@ function shandora_custom_background_setup() {
 
 
 }
-add_action( 'after_setup_theme', 'shandora_custom_background_setup' );
+// add_action( 'after_setup_theme', 'shandora_custom_background_setup' );
 
 function shandora_background_style() {
 
