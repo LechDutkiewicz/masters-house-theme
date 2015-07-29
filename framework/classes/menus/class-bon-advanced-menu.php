@@ -723,7 +723,7 @@ $this->default_keys = apply_filters( 'bon_nav_menu_option_key_defaults' , $this-
 						$color_mod = 'bon-menu-'.$this->menu_color_mod;
 					}
 					
-					if( isset( $menu['advanced'] ) && $menu['advanced'] == true ) {
+					// if( isset( $menu['advanced'] ) && $menu['advanced'] == true ) {
 						if( $menu['id'] == $args['theme_location'] ) {
 							$args['walker'] 			= new BON_Advanced_Menu_Walker();
 							$args['container_id'] 		= 'bon-mega-menu-'. $menu['id'];
@@ -731,7 +731,7 @@ $this->default_keys = apply_filters( 'bon_nav_menu_option_key_defaults' , $this-
 							$args['menu_class']			= ' bon-mega-menu-items clearfix '.$color_mod.' ';
 							$args['items_wrap']			= '<ul id="%1$s" class="%2$s">%3$s</ul>';
 						}
-					}
+					// }
 				}
 			}
 		}
