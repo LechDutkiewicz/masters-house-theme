@@ -1320,7 +1320,7 @@ function shandora_listing_map() {
 *
 */
 function shandora_listing_related() {
-	if ( is_singular( 'listing' ) && bon_get_option( 'show_related', 'yes' ) == 'yes' ) {
+	if ( is_singular( 'listing' ) ) {
 		bon_get_template_part( 'block', 'related' );
 	}
 }
