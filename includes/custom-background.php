@@ -3,7 +3,7 @@
 function shandora_custom_background_setup() {
 	$args = array(
 		'default-color'          => '#ffffff',
-		'default-image'          => '%s/assets/images/patterns/darkwood.png',
+		'default-image'          => BON_THEME_URI . '/assets/images/patterns/darkwood.jpg',
 
 		'wp-head-callback'       => 'shandora_background_style',
 		'admin-head-callback'    => '',
@@ -14,7 +14,7 @@ function shandora_custom_background_setup() {
 
 
 }
-// add_action( 'after_setup_theme', 'shandora_custom_background_setup' );
+add_action( 'after_setup_theme', 'shandora_custom_background_setup' );
 
 function shandora_background_style() {
 
@@ -26,7 +26,7 @@ function shandora_background_style() {
 	
 	$image = $background_image ? " background-image: url('$background_image');" : '';
 
-    $repeat = get_theme_mod( 'background_repeat', 'repeat' );
+    $repeat = get_theme_mod( 'background_repeat', 'no-repeat' );
     if ( ! in_array( $repeat, array( 'no-repeat', 'repeat-x', 'repeat-y', 'repeat' ) ) )
         $repeat = 'repeat';
     $repeat = " background-repeat: $repeat;";
