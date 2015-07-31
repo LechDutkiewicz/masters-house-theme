@@ -1834,19 +1834,19 @@ if ( !function_exists( 'shandora_open_main_content_column' ) ) {
 		if ( is_page_template( 'page-templates/page-template-home.php' ) ||
 			is_page_template( 'page-templates/page-template-village-map.php' ) ) {
 			echo '<div class="column large-12">';
-		} else {
+	} else {
 
-			$layout = get_theme_mod( 'theme_layout' );
-			if ( empty( $layout ) ) {
-				$layout = get_post_layout( get_queried_object_id() );
-			}
-			if ( $layout == '1c' ) {
-				echo '<div class="' . shandora_column_class() . '">';
-			} else {
-				echo '<div class="' . shandora_column_class( 'large-8' ) . '">';
-			}
+		$layout = get_theme_mod( 'theme_layout' );
+		if ( empty( $layout ) ) {
+			$layout = get_post_layout( get_queried_object_id() );
+		}
+		if ( $layout == '1c' ) {
+			echo '<div class="' . shandora_column_class() . '">';
+		} else {
+			echo '<div class="' . shandora_column_class( 'large-8' ) . '">';
 		}
 	}
+}
 
 }
 
@@ -2495,26 +2495,58 @@ if ( !function_exists( 'override_page_title' ) ) {
 
 }
 
-if ( !function_exists( 'open_testimonials_slider' ) ) {
+if ( !function_exists( 'get_slider_thumbnails' ) ) {
 
-	function open_testimonials_slider( $loop ) { ?>
+	function get_slider_thumbnails( $loop ) { ?>
+
+	<div id="testimonials-pager">
+		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+		<a href="#" data-slide-index="<?php echo $loop->current_post; ?>"><?php echo $loop->current_post + 1; ?></a>
+	<?php endwhile; ?>
+</div>
+
+<?php }
+
+}
+
+if ( !function_exists( 'open_testimonials_slider_container' ) ) {
+
+	function open_testimonials_slider_container() { ?>
 
 	<div class="row padding-large top bottom clearfix">
-			<div class="column large-12 testimonials-slider-container">
-				<div id="testimonials-slider">
-					<ul class="slides testimonial-slides <?php if ( $loop->post_count > 1 ) { echo 'bxslider-no-thumb-no-controls autostart'; } ?>"<?php if ( $loop->post_count > 1 ) { echo 'data-pause="8000"'; } ?>>
+		<div class="column large-12 testimonials-slider-container">
+			<div id="testimonials-slider">
 
-						<?php }
+				<?php }
 
-					}
+			}
 
-					if ( !function_exists( 'close_testimonials_slider' ) ) {
+			if ( !function_exists( 'open_testimonials_slider' ) ) {
 
-						function close_testimonials_slider() { ?>
+				function open_testimonials_slider( $loop ) { ?>
 
-					</ul>
-				</div>
+				<ul class="slides testimonial-slides <?php if ( $loop->post_count > 1 ) { echo 'bxslider-thumbs-only autostart'; } ?>"<?php if ( $loop->post_count > 1 ) { echo 'data-pause="8000" data-pager="testimonials-pager"'; } ?>>
+
+					<?php }
+
+				}
+
+				if ( !function_exists( 'close_testimonials_slider' ) ) {
+
+					function close_testimonials_slider() { ?>
+
+				</ul>
+
+				<?php }
+
+			}
+
+			if ( !function_exists( 'close_testimonials_slider_container' ) ) {
+
+				function close_testimonials_slider_container() { ?>
+
 			</div>
+		</div>
 	</div>
 
 	<?php }
