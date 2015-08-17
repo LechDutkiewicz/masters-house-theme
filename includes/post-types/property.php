@@ -507,7 +507,7 @@ $build_addon_options = array(
 				'label' => __( 'Item to exclude', 'bon' ),
 				'id' => $prefix . $suffix . 'exclude',
 				'type' => 'select',
-				'options' => get_addons_list()
+				'options' => array_merge( array( '' => __( 'Select One', 'bon' ) ), get_addons_list() )
 				),
 			),
 		'type' => 'repeatable'
