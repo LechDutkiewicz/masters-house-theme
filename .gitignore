@@ -1,3 +1,6 @@
+# exclude old versions modules
+*.old.*
+
 # exclude node modules
 node_modules
 

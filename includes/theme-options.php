@@ -1987,6 +1987,39 @@ $options[] = array( 'slug' => 'bon_options',
 		/**
 		 * =====================================================================================================
 		 *
+		 * All Categories Page Settings
+		 * 
+		 * @category Tool
+		 *
+		 * ======================================================================================================
+		 */
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Our Cottages Page', 'bon' ),
+			'type' => 'heading',
+			'icon' => 'dashicons-grid-view' );
+
+		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Choose categories order', 'bon' ),
+			'id' => 'cats_order',
+			'type' => 'repeatable',
+			'sanitize' => array(
+				'sidebar_name' => 'sanitize_text_field',
+				'is_menu' => 'sanitize_checkbox',
+				),
+			'repeatable_fields' => array(
+				array(
+					'type' => 'tax_select',
+					'label' => __( 'Category Name', 'bon' ),
+					'id' => 'cat_name',
+					'std' => '',
+					'tax_type' => 'property-type'
+					),
+				) );
+
+
+		/**
+		 * =====================================================================================================
+		 *
 		 * Banners settings
 		 * 
 		 * @category Banners

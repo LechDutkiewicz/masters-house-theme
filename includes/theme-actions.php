@@ -1289,7 +1289,7 @@ function shandora_block_grid_column_class( $echo = true ) {
 	if ( $layout == '1c' ) {
 		$class = 'small-block-grid-' . $mobile . ' medium-block-grid-2 large-block-grid-4';
 	} else {
-		$class = 'small-block-grid-' . $mobile . ' medium-block-grid-2 large-block-grid-3';
+		$class = 'small-block-grid-' . $mobile . ' medium-block-grid-2 large-block-grid-2 extra-large-block-grid-3';
 	}
 
 	if ( $echo ) {

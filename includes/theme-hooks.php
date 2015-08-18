@@ -1862,16 +1862,28 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 
 
 	function shandora_listing_open_ul() {
+
 		$compare_page = bon_get_option( 'compare_page' );
 
-		if ( ( is_page_template( 'page-templates/page-template-property-status.php' ) ||
-			is_page_template( 'page-templates/page-template-car-status.php' ) || get_post_type() == 'listing' || get_post_type() == 'boat-listing' ||
-			get_post_type() == 'product' || is_page_template( 'page-templates/page-template-all-listings.php' ) ||
-			is_page_template( 'page-templates/page-template-all-car-listings.php' ) ||
-			is_page_template( 'page-templates/page-template-search-listings.php' ) ||
-			is_page_template( 'page-templates/page-template-search-boat.php' ) ||
-			is_page_template( 'page-templates/page-template-all-boats.php' ) ||
-			is_page_template( 'page-templates/page-template-search-car-listings.php' )) && !is_singular( 'listing' ) && !is_singular( 'product' ) && !is_singular( 'boat-listing' ) && !is_search() ) {
+		if (
+			(
+				is_page_template( 'page-templates/page-template-property-status.php' ) ||
+				is_page_template( 'page-templates/page-template-car-status.php' ) ||
+				get_post_type() == 'listing'||
+				get_post_type() == 'boat-listing'||
+				get_post_type() == 'product'||
+				is_page_template( 'page-templates/page-template-all-listings.php' ) ||
+				is_page_template( 'page-templates/page-template-all-car-listings.php' ) ||
+				is_page_template( 'page-templates/page-template-search-listings.php' ) ||
+				is_page_template( 'page-templates/page-template-search-boat.php' ) ||
+				is_page_template( 'page-templates/page-template-all-boats.php' ) ||
+				is_page_template( 'page-templates/page-template-search-car-listings.php' )
+				) &&
+			!is_singular( 'listing' ) &&
+			!is_singular( 'product' ) &&
+			!is_singular( 'boat-listing' ) &&
+			!is_search()
+			) {
 
 			$show_map = 'no';
 		$show_listing_count = bon_get_option( 'show_listing_count', 'no' );
@@ -1879,102 +1891,107 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 		if ( ( is_page_template( 'page-templates/page-template-property-status.php' ) || get_post_type() == 'listing' || is_page_template( 'page-templates/page-template-all-listings.php' ) || is_page_template( 'page-templates/page-template-search-listings.php' )) && !is_singular( 'listing' ) && !is_singular( 'product' ) && !is_singular( 'boat-listing' ) ) {
 			$show_map = bon_get_option( 'show_listings_map' );
 		}
-		?>
-		<div class="listing-header">
-			<div class="row">
 
-				<?php
-				if ( $show_listing_count ) {
-					echo '<div class="column large-5"><h3 id="listed-property"></h3></div>';
-				}
-				?>
+		if ( !is_page_template( 'page-templates/page-template-all-listings.php' ) ) {
+			// don't display listing header for all listings page
+			?>
+			<div class="listing-header">
+				<div class="row">
 
-				<?php
-				$search_order = isset( $_GET['search_order'] ) ? $_GET['search_order'] : bon_get_option( 'listing_order', 'DESC' );
-				$search_orderby = isset( $_GET['search_orderby'] ) ? $_GET['search_orderby'] : bon_get_option( 'listing_orderby', 'date' );
-				?>
+					<?php
+					if ( $show_listing_count ) {
+						echo '<div class="column large-5"><h3 id="listed-property"></h3></div>';
+					}
+					?>
 
-				<div class="column large-7 right">
+					<?php
+					$search_order = isset( $_GET['search_order'] ) ? $_GET['search_order'] : bon_get_option( 'listing_order', 'DESC' );
+					$search_orderby = isset( $_GET['search_orderby'] ) ? $_GET['search_orderby'] : bon_get_option( 'listing_orderby', 'date' );
+					?>
 
-					<div class="row">
-						<div class="column large-3">
-							<?php
-							$view = isset( $_GET['view'] ) ? $_GET['view'] : 'grid';
-							$newurl = '';
-							foreach ( $_GET as $variable => $value ) {
-								if ( $variable != 'view' ) {
-									$newurl .= $variable . '=' . $value . '&';
-								}
-							}
-							$newurl = rtrim( $newurl, '&' );
-							if ( empty( $newurl ) ) {
-								$uri = shandora_get_site_url() . strtok( $_SERVER["REQUEST_URI"], '?' );
-								$newurl = $uri . '?view=';
-							} else {
-								$uri = shandora_get_site_url() . strtok( $_SERVER["REQUEST_URI"], '?' );
-								$newurl = $uri . '?' . $newurl . '&view=';
-							}
-							?>
-							<a class="view-button button blue flat view-grid <?php echo ( $view == 'grid' ) ? 'selected' : ''; ?> " href="<?php echo $newurl . 'grid'; ?>"><i class="bonicons bi-th"></i></a>
-							<a class="view-button button blue flat view-list <?php echo ( $view == 'list' ) ? 'selected' : ''; ?>" href="<?php echo $newurl . 'list'; ?>"><i class="bonicons bi-list"></i></a>
-						</div>
-						<div class="column large-9">
-							<form class="custom" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="get" id="orderform" name="orderform">
+					<div class="column large-7 right">
 
-								<div class="row">
-									<div class="column large-7 search-order">
-										<select class="no-mbot" name="search_order" onChange="document.forms['orderform'].submit()">
-											<option value="ASC" <?php selected( $search_order, 'ASC' ); ?> ><?php _e( 'Ascending', 'bon' ); ?></option>
-											<option value="DESC" <?php selected( $search_order, 'DESC' ); ?> ><?php _e( 'Descending', 'bon' ); ?></option>
-										</select>
-									</div>
-									<div class="column large-5 search-orderby">
-										<select class="no-mbot" name="search_orderby">
-											<option value="<?php _e( 'Price', 'bon' ); ?>" <?php selected( $search_orderby, 'Price' ); ?> ><?php _e( 'Price', 'bon' ); ?></option>
-											<?php // edited by Lech Dutkiewicz           ?>
-											<option value="<?php _e( 'Size', 'bon' ); ?>" <?php selected( $search_orderby, 'Size' ); ?> >
-												<?php
-												if ( get_post_type() == 'listing' || is_page_template( 'page-templates/page-template-search-listings.php' ) || is_page_template( 'page-templates/page-template-all-listings.php' ) ) {
-													echo __( 'Size', 'bon' );
-												} else if ( get_post_type() == 'product' || is_page_template( 'page-templates/page-template-search-car-listings.php' ) || is_page_template( 'page-templates/page-template-all-car-listings.php' ) ) {
-													echo __( 'Mileage', 'bon' );
-												} else if ( get_post_type() == 'boat-listing' || is_page_template( 'page-templates/page-template-search-boat.php' ) || is_page_template( 'page-templates/page-template-all-boats.php' ) ) {
-													echo __( 'Length', 'bon' );
-												}
-												?>
-											</option>
-										</select>
-									</div>
-									<?php
-									foreach ( $_GET as $name => $value ) {
-										if ( $name != 'search_order' && $name != 'search_orderby' ) {
-											$name = htmlspecialchars( $name );
-											$value = htmlspecialchars( $value );
-											echo '<input type="hidden" name="' . $name . '" value="' . $value . '">';
-										}
+						<div class="row">
+							<div class="column large-3">
+								<?php
+								$view = isset( $_GET['view'] ) ? $_GET['view'] : 'grid';
+								$newurl = '';
+								foreach ( $_GET as $variable => $value ) {
+									if ( $variable != 'view' ) {
+										$newurl .= $variable . '=' . $value . '&';
 									}
-									?>
-								</div>
-							</form>
+								}
+								$newurl = rtrim( $newurl, '&' );
+								if ( empty( $newurl ) ) {
+									$uri = shandora_get_site_url() . strtok( $_SERVER["REQUEST_URI"], '?' );
+									$newurl = $uri . '?view=';
+								} else {
+									$uri = shandora_get_site_url() . strtok( $_SERVER["REQUEST_URI"], '?' );
+									$newurl = $uri . '?' . $newurl . '&view=';
+								}
+								?>
+								<a class="view-button button blue flat view-grid <?php echo ( $view == 'grid' ) ? 'selected' : ''; ?> " href="<?php echo $newurl . 'grid'; ?>"><i class="bonicons bi-th"></i></a>
+								<a class="view-button button blue flat view-list <?php echo ( $view == 'list' ) ? 'selected' : ''; ?>" href="<?php echo $newurl . 'list'; ?>"><i class="bonicons bi-list"></i></a>
+							</div>
+							<div class="column large-9">
+								<form class="custom" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="get" id="orderform" name="orderform">
+
+									<div class="row">
+										<div class="column large-7 search-order">
+											<select class="no-mbot" name="search_order" onChange="document.forms['orderform'].submit()">
+												<option value="ASC" <?php selected( $search_order, 'ASC' ); ?> ><?php _e( 'Ascending', 'bon' ); ?></option>
+												<option value="DESC" <?php selected( $search_order, 'DESC' ); ?> ><?php _e( 'Descending', 'bon' ); ?></option>
+											</select>
+										</div>
+										<div class="column large-5 search-orderby">
+											<select class="no-mbot" name="search_orderby">
+												<option value="<?php _e( 'Price', 'bon' ); ?>" <?php selected( $search_orderby, 'Price' ); ?> ><?php _e( 'Price', 'bon' ); ?></option>
+												<?php // edited by Lech Dutkiewicz           ?>
+												<option value="<?php _e( 'Size', 'bon' ); ?>" <?php selected( $search_orderby, 'Size' ); ?> >
+													<?php
+													if ( get_post_type() == 'listing' || is_page_template( 'page-templates/page-template-search-listings.php' ) || is_page_template( 'page-templates/page-template-all-listings.php' ) ) {
+														echo __( 'Size', 'bon' );
+													} else if ( get_post_type() == 'product' || is_page_template( 'page-templates/page-template-search-car-listings.php' ) || is_page_template( 'page-templates/page-template-all-car-listings.php' ) ) {
+														echo __( 'Mileage', 'bon' );
+													} else if ( get_post_type() == 'boat-listing' || is_page_template( 'page-templates/page-template-search-boat.php' ) || is_page_template( 'page-templates/page-template-all-boats.php' ) ) {
+														echo __( 'Length', 'bon' );
+													}
+													?>
+												</option>
+											</select>
+										</div>
+										<?php
+										foreach ( $_GET as $name => $value ) {
+											if ( $name != 'search_order' && $name != 'search_orderby' ) {
+												$name = htmlspecialchars( $name );
+												$value = htmlspecialchars( $value );
+												echo '<input type="hidden" name="' . $name . '" value="' . $value . '">';
+											}
+										}
+										?>
+									</div>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<?php
-		if ( $show_map == 'show' ) {
-			$show_zoom = bon_get_option( 'show_listings_map_zoom', 'false' );
-			if ( $show_zoom == 'show' ) {
-				$show_zoom = 'true';
-			}
+			<?php
+			if ( $show_map == 'show' ) {
+				$show_zoom = bon_get_option( 'show_listings_map_zoom', 'false' );
+				if ( $show_zoom == 'show' ) {
+					$show_zoom = 'true';
+				}
 
-			$show_type = bon_get_option( 'show_listings_map_type', 'false' );
-			if ( $show_type == 'show' ) {
-				$show_type = 'true';
-			}
+				$show_type = bon_get_option( 'show_listings_map_type', 'false' );
+				if ( $show_type == 'show' ) {
+					$show_type = 'true';
+				}
 
-			echo '<div id="listings-map" data-show-zoom="' . $show_zoom . '" data-show-map-type="' . $show_type . '"></div>';
+				echo '<div id="listings-map" data-show-zoom="' . $show_zoom . '" data-show-map-type="' . $show_type . '"></div>';
+			}
 		}
+	// end of don't display listing header for all listings page
 		?>
 		<ul class="listings <?php echo ( isset( $_GET['view'] ) && $_GET['view'] == 'list' ) ? 'list-view' : shandora_block_grid_column_class( false ); ?>" data-compareurl="<?php echo trailingslashit( get_permalink( $compare_page ) ); ?>">
 			<?php
@@ -2574,7 +2591,7 @@ if ( !function_exists( 'render_single_testimonial' ) ) {
 		<?php if ( shandora_is_home() ) : ?>				
 		<div class="column large-2 blank"></div>
 	<?php endif; ?>
-	<div class="testimonial-author column large-<?php echo shandora_is_home() ? '8' : '12'; ?> text-right">
+	<div class="testimonial-author column large-<?php echo shandora_is_home() ? '8' : '12'; ?> text-right<?php if ( current_theme_supports( 'get-the-image' ) && $imgID = shandora_get_meta( $post->ID, 'user_img' ) ) echo ' has-img'; ?>">
 		<span><?php echo shandora_get_meta( $post->ID, 'full_name' ); ?><?php if ( current_theme_supports( 'get-the-image' ) && $imgID = shandora_get_meta( $post->ID, 'user_img' ) ) get_the_image( array( 'post_id' => $imgID, 'size' => 'user_small', 'link_to_post' => false, 'image_class' => array( 'circle', 'auto' ) ) ); ?></span>
 		<?php
 		if ( $post->post_content != "" && !is_singular( 'testimonial' ) ) {
