@@ -2172,7 +2172,19 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 								$phone_html .= '<strong>' . $number . '</strong>';
 							}
 						} else {
-							$phone_html = '<strong><a href="tel:' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '">' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '</a></strong>';
+							$phone_html = '<strong>';
+
+							if ( $_SESSION['layoutType'] == 'mobile' ) {
+								$phone_html .= '<a href="tel:' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '">';
+							}
+
+							$phone_html .= esc_attr( bon_get_option( 'hgroup1_content' ) );
+							
+							if ( $_SESSION['layoutType'] == 'mobile' ) {
+								$phone_html .='</a>';
+							}
+
+							$phone_html .='</strong>';
 						}
 						?>
 						<span class="phone phone-<?php echo $phone_count; ?>"><?php echo $phone_html; ?></span>
