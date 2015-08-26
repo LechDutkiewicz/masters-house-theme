@@ -3,36 +3,36 @@
 var launchGoogleEvents = function() {
 
 	var googleElements = {
-		5: {
-			category: 'Home_CTA',
-			action: 'top_browse_all',
-			selector: $('.home-ctas-container.top a[data-function="browse-all"]'),
-		},
-		10: {
-			category: 'Home_CTA',
-			action: 'top_open_tool',
-			selector: $('.home-ctas-container.top a[data-function="open-tool"]'),
-		},
-		11: {
-			category: 'Home_CTA',
-			action: 'top_request_visit',
-			selector: $('.home-ctas-container.top a[data-function="request-visit"]'),
-		},
-		15: {
-			category: 'Home_CTA',
-			action: 'bottom_browse_all',
-			selector: $('.home-ctas-container.bottom a[data-function="browse-all"]'),
-		},
-		20: {
-			category: 'Home_CTA',
-			action: 'bottom_open_tool',
-			selector: $('.home-ctas-container.bottom a[data-function="open-tool"]'),
-		},
-		21: {
-			category: 'Home_CTA',
-			action: 'bottom_request_visit',
-			selector: $('.home-ctas-container.bottom a[data-function="request-visit"]'),
-		},
+		// 5: {
+		// 	category: 'Home_CTA',
+		// 	action: 'top_browse_all',
+		// 	selector: $('.home-ctas-container.top a[data-function="browse-all"]'),
+		// },
+		// 10: {
+		// 	category: 'Home_CTA',
+		// 	action: 'top_open_tool',
+		// 	selector: $('.home-ctas-container.top a[data-function="open-tool"]'),
+		// },
+		// 11: {
+		// 	category: 'Home_CTA',
+		// 	action: 'top_request_visit',
+		// 	selector: $('.home-ctas-container.top a[data-function="request-visit"]'),
+		// },
+		// 15: {
+		// 	category: 'Home_CTA',
+		// 	action: 'bottom_browse_all',
+		// 	selector: $('.home-ctas-container.bottom a[data-function="browse-all"]'),
+		// },
+		// 20: {
+		// 	category: 'Home_CTA',
+		// 	action: 'bottom_open_tool',
+		// 	selector: $('.home-ctas-container.bottom a[data-function="open-tool"]'),
+		// },
+		// 21: {
+		// 	category: 'Home_CTA',
+		// 	action: 'bottom_request_visit',
+		// 	selector: $('.home-ctas-container.bottom a[data-function="request-visit"]'),
+		// },
 		25: {
 			category: 'Home_products',
 			action: 'click',

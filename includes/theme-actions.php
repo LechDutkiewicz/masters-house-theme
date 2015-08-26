@@ -1911,7 +1911,7 @@ function shandora_print_home_cta ( $show, $link, $destination, $button_color, $o
 			$exClass = NULL;
 			$arrow = "<i class='bonicons bi-chevron-right'></i>";
 		}
-		$output = "<a href='$link' data-function='" . $destination . "' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick><span" . $exClass . ">" . $text . "</span>" . $arrow . "</a>";
+		$output = "<a href='$link' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick data-analytics-category='Home_CTA' data-analytics-action='" . $destination . "' data-analytics-selector='" . $destination . "'><span" . $exClass . ">" . $text . "</span>" . $arrow . "</a>";
 		echo $output;
 	}
 
