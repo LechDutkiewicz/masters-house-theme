@@ -131,8 +131,8 @@ function bon_find_repeatable( $needle = 'repeatable', $haystack ) {
 	foreach ( $haystack as $h )
 		if ( isset( $h['type'] ) && $h['type'] == $needle )
 			return true;
-	return false;
-}
+		return false;
+	}
 
 /**
  * outputs properly sanitized data
@@ -146,31 +146,31 @@ function bon_sanitize( $string, $function = 'sanitize_text_field' ) {
 	
 	switch ( $function ) {
 		case 'intval':
-			return intval( $string );
+		return intval( $string );
 		case 'absint':
-			return absint( $string );
+		return absint( $string );
 		case 'wp_kses_post':
-			return wp_kses_post( $string );
+		return wp_kses_post( $string );
 		case 'wp_kses_data':
-			return wp_kses_data( $string );
+		return wp_kses_data( $string );
 		case 'esc_url_raw':
-			return esc_url_raw( $string );
+		return esc_url_raw( $string );
 		case 'is_email':
-			return is_email( $string );
+		return is_email( $string );
 		case 'sanitize_title':
-			return sanitize_title( $string );
+		return sanitize_title( $string );
 		case 'sanitize_boolean':
-			return bon_sanitize_boolean( $string );
+		return bon_sanitize_boolean( $string );
 		case 'sanitize_textarea' :
-			return bon_sanitize_textarea( $string );
+		return bon_sanitize_textarea( $string );
 		case 'sanitize_editor' :
-			return bon_sanitize_editor( $string );
+		return bon_sanitize_editor( $string );
 		case 'sanitize_checkbox' :
-			return bon_sanitize_checkbox( $string );
+		return bon_sanitize_checkbox( $string );
 		case 'sanitize_text_field':
-			return sanitize_text_field( $string );
+		return sanitize_text_field( $string );
 		default:
-			return bon_sanitize_editor( $string );
+		return bon_sanitize_editor( $string );
 	}
 }
 
@@ -184,7 +184,7 @@ function bon_sanitize( $string, $function = 'sanitize_text_field' ) {
  * @return	array				new array, fully mapped with the provided arrays
  */
 function bon_array_map_r( $func, $meta, $sanitizer ) {
-		
+
 	$newMeta = array();
 	$meta = array_values( $meta );
 	
@@ -217,75 +217,75 @@ function bon_array_map_r( $func, $meta, $sanitizer ) {
 		foreach( $array as $arrayKey => $arrayValue )
 			if ( is_array( $arrayValue ) )
 				$array[$arrayKey] = bon_array_map_r( $func, $arrayValue, $newSanitizer[$arrayKey] );
-		
-
-		$array = array_map( $func, $array, $newSanitizer );
-		$newMeta[$key] = array_combine( $keys, array_values( $array ) );
-	}
-	return $newMeta;
-}
 
 
-function bon_sanitize_select_post( $input, $option ) {
-
-	$post_type = $option['post_type'];
-
-	$post_opts = array( '' => __('Select One', 'bon') );
-
-	$q = array( 
-		'post_type' => $option['post_type'], 
-		'posts_per_page' => -1, 
-		'orderby' => 'name', 
-		'order' => 'ASC',
-		'post_status' => array( 'publish', 'pending' ),
-	);
-	if( isset($option['filter_author']) && $option['filter_author'] === true ) {
-		$user_ID = get_current_user_id();
-		if($user_ID > 0 ) {
-			$q['author'] = $user_ID;
+			$array = array_map( $func, $array, $newSanitizer );
+			$newMeta[$key] = array_combine( $keys, array_values( $array ) );
 		}
+		return $newMeta;
 	}
-	$post_opts_obj = get_posts($q);
-	if( !is_wp_error( $post_opts_obj ) ) {
-		foreach ($post_opts_obj as $opt) {
-			$post_opts[$opt->ID] = $opt->post_title;
+
+
+	function bon_sanitize_select_post( $input, $option ) {
+
+		$post_type = $option['post_type'];
+
+		$post_opts = array( '' => __('Select One', 'bon') );
+
+		$q = array( 
+			'post_type' => $option['post_type'], 
+			'posts_per_page' => -1, 
+			'orderby' => 'name', 
+			'order' => 'ASC',
+			'post_status' => array( 'publish', 'pending' ),
+			);
+		if( isset($option['filter_author']) && $option['filter_author'] === true ) {
+			$user_ID = get_current_user_id();
+			if($user_ID > 0 ) {
+				$q['author'] = $user_ID;
+			}
 		}
+		$post_opts_obj = get_posts($q);
+		if( !is_wp_error( $post_opts_obj ) ) {
+			foreach ($post_opts_obj as $opt) {
+				$post_opts[$opt->ID] = $opt->post_title;
+			}
+		}
+
+		$option['options'] = $post_opts;
+
+		return bon_sanitize_select( $input, $option );
 	}
 
-	$option['options'] = $post_opts;
-
-	return bon_sanitize_select( $input, $option );
-}
-
-function bon_sanitize_select_page( $input, $option ) {
-	$option['post_type'] = 'page';
-	return bon_sanitize_select_post( $input, $option );
-}
-
-function bon_sanitize_select_tax( $input, $option ) {
-
-	$tax_type = $option['tax_type'];
-	$tax_opts = array( '' => __('Select One', 'bon' ) );
-
-	$tx_obj = get_terms( $tax_type, array( 'get' => 'all' ) );
-	if( !is_wp_error( $tx_obj ) ) {
-		foreach ( $tx_obj as $tx ) { $tax_opts[$tx->term_id] = $tx->name; }
+	function bon_sanitize_select_page( $input, $option ) {
+		$option['post_type'] = 'page';
+		return bon_sanitize_select_post( $input, $option );
 	}
 
-	$option['options'] = $tax_opts;
+	function bon_sanitize_select_tax( $input, $option ) {
 
-	return bon_sanitize_select( $input, $option );
-}
+		$tax_type = $option['tax_type'];
+		$tax_opts = array( '' => __('Select One', 'bon' ) );
 
-function bon_sanitize_select_cat( $input, $option ) {
-	$option['tax_type'] = 'category';
-	return bon_sanitize_select_tax( $input, $option );
-}
+		$tx_obj = get_terms( $tax_type, array( 'get' => 'all' ) );
+		if( !is_wp_error( $tx_obj ) ) {
+			foreach ( $tx_obj as $tx ) { $tax_opts[$tx->term_id] = $tx->name; }
+		}
 
-function bon_sanitize_select_tag( $input, $option ) {
-	$option['tax_type'] = 'post_tag';
-	return bon_sanitize_select_tax( $input, $option );
-}
+		$option['options'] = $tax_opts;
+
+		return bon_sanitize_select( $input, $option );
+	}
+
+	function bon_sanitize_select_cat( $input, $option ) {
+		$option['tax_type'] = 'category';
+		return bon_sanitize_select_tax( $input, $option );
+	}
+
+	function bon_sanitize_select_tag( $input, $option ) {
+		$option['tax_type'] = 'post_tag';
+		return bon_sanitize_select_tax( $input, $option );
+	}
 
 /**
  * sanitize text url input
@@ -310,20 +310,26 @@ function bon_sanitize_boolean( $string ) {
 function bon_sanitize_textarea( $input ) {
 	global $allowedposttags, $allowedtags;
 
-    $custom_allowedtags["embed"] = array(
-      "src" => array(),
-      "type" => array(),
-      "allowfullscreen" => array(),
-      "allowscriptaccess" => array(),
-      "height" => array(),
-          "width" => array()
-      );
+	$custom_allowedtags["embed"] = array(
+		"src" => array(),
+		"type" => array(),
+		"allowfullscreen" => array(),
+		"allowscriptaccess" => array(),
+		"height" => array(),
+		"width" => array()
+		);
 
-     $custom_allowedtags["script"] = array();
- 
-     $custom_allowedtags = array_merge($custom_allowedtags, $allowedposttags);
-      
+	$custom_allowedtags["script"] = array(
+		"type"	=> array(),
+		"src"	=> array()
+		);
+
+	$custom_allowedtags["noscript"] = array();
+
+	$custom_allowedtags = array_merge($custom_allowedtags, $allowedposttags);
+
 	$output = wp_kses( $input, $custom_allowedtags);
+	// $output = print_r($custom_allowedtags);
 	return $output;
 }
 
@@ -374,7 +380,7 @@ function bon_sanitize_multicheck( $input, $option ) {
 				'orderby' => 'name', 
 				'order' => 'ASC',
 				'post_status' => array( 'publish', 'pending' ),
-			);
+				);
 			if( isset($option['filter_author']) && $option['filter_author'] === true ) {
 				$user_ID = get_current_user_id();
 				if($user_ID > 0 ) {
@@ -481,7 +487,7 @@ function bon_sanitize_background( $input ) {
 		'repeat'  => 'repeat',
 		'position' => 'top center',
 		'attachment' => 'scroll'
-	) );
+		) );
 
 	$output['color'] = apply_filters( 'bon_sanitize_hex', $input['color'] );
 	$output['image'] = apply_filters( 'bon_sanitize_upload', $input['image'] );
@@ -587,7 +593,7 @@ function bon_sanitize_typography( $input, $option ) {
 		'face'  => '',
 		'style' => '',
 		'color' => ''
-	) );
+		) );
 
 	if ( isset( $option['options']['faces'] ) && isset( $input['face'] ) ) {
 		if ( !( array_key_exists( $input['face'], $option['options']['faces'] ) ) ) {
@@ -661,7 +667,7 @@ function bon_recognized_font_styles() {
 		'italic'      => 'Italic',
 		'bold'        => 'Bold',
 		'bold italic' => 'Bold Italic'
-	);
+		);
 	return apply_filters( 'bon_recognized_font_styles', $default );
 }
 
@@ -696,7 +702,7 @@ function bon_recognized_font_faces() {
 		'tahoma'    => 'Tahoma, Geneva',
 		'palatino'  => 'Palatino',
 		'helvetica' => 'Helvetica*'
-	);
+		);
 	return apply_filters( 'bon_recognized_font_faces', $default );
 }
 

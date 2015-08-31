@@ -457,6 +457,17 @@
 				     mode : 'text/javascript'
 				});
 			}
+			if($('#conversion_code').length > 0) {
+				/* JS */
+				var conversion_code = CodeMirror.fromTextArea(document.getElementById('conversion_code'), {
+					 lineNumbers : true,
+					 matchBrackets: true,
+					 autoClearEmptyLines : false,
+					 onBlur : function() { conversion_code.save();},
+					 theme : 'default',
+				     mode : 'htmlmixed'
+				});
+			}
 
 			// repeatable fields
 		$('.meta_box_repeatable').on('click', 'a.meta_box_repeatable_add', function( event ) {
