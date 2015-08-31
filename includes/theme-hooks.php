@@ -122,7 +122,7 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_social_counter", 61 );
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_modal", 65 );
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_modal", 8 );
 
 		add_action( "{$prefix}after_single_post_content", "shandora_post_comments", 3 );
 
