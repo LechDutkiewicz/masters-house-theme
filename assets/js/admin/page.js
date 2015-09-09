@@ -32,6 +32,20 @@ jQuery(document).ready(function($){
 		}
 	});
 
+	if($('select#page_template').val() == 'page-templates/page-template-village-map.php') {
+		$('#cottage-map-opt').show();
+	} else {
+		$('#cottage-map-opt').hide();
+	}
+
+	$('select#page_template').change(function(){
+		if($('select#page_template').val() == 'page-templates/page-template-village-map.php') {
+			$('#cottage-map-opt').show();
+		} else {
+			$('#cottage-map-opt').hide();
+		}
+	});
+
 
 	if($('select#page_template').val() == 'page-templates/page-template-car-status.php') {
 		$('#car-status-opt').show();

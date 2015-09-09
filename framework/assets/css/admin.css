@@ -615,3 +615,6 @@ img.admin-thumb {
     height: auto;
     border: 1px solid black;
 }
+img.admin-thumb.auto {
+    max-width: 100%;
+}
