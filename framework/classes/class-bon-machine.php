@@ -177,7 +177,9 @@ if ( !class_exists( 'BON_Machine' ) ) {
 							$output .= '<div class="option">' . "\n" . '<div class="controls with-editor">' . "\n";
 						} elseif ( $value['type'] == 'info-img' ) {
 							$output .= '<div class="option">' . "\n" . '<div class="controls not-with-editor">' . "\n";
-							$output .= '<img class="admin-thumb" src="' . trailingslashit( BON_THEME_URI ) . '/assets/images/qualities/' . sanitize_title( esc_attr( $value['label'] ) ) . '.jpg">';
+							$output .= '<img class="admin-thumb" src="' . trailingslashit( BON_THEME_URI ) . 'assets/images/';
+							$output .= $value['subfolder'] ? esc_attr( $value['subfolder'] ) . "/" : "";
+							$output .= sanitize_title( esc_attr( $value['label'] ) ) . '.' . esc_attr( $value['file-type'] ) .'">';
 						} else {
 							$output .= '<div class="option">' . "\n" . '<div class="controls not-with-editor">' . "\n";
 						}
@@ -188,9 +190,16 @@ if ( !class_exists( 'BON_Machine' ) ) {
 					if ( $value['type'] == 'section' ) {
 						$output .= '<tr><td colspan="2"><h2>' . $value['label'] . '</h2></td></tr>';
 					}
-					if ( $value['type'] == 'repeatable' ) {
+					elseif ( $value['type'] == 'info-img' ) {
+						$output .= '<div class="option">' . "\n" . '<div class="controls not-with-editor">' . "\n";
+						$output .= '<img class="admin-thumb auto" src="' . trailingslashit( BON_THEME_URI ) . 'assets/images/';
+						$output .= $value['subfolder'] ? esc_attr( $value['subfolder'] ) . "/" : "";
+						$output .= sanitize_title( esc_attr( $value['label'] ) ) . '.' . esc_attr( $value['file-type'] ) .'">';
+					}
+					elseif ( $value['type'] == 'repeatable' ) {
 						$output .= '<tr class="' . ( isset( $value['class'] ) ? $class = ' ' . $value['class'] : '' ) . '"><td colspan="2">';
-					} else {
+					}
+					else {
 						$output .= '<tr class="' . ( isset( $value['class'] ) ? $class = ' ' . $value['class'] : '' ) . '"><th><label for="' . $value['id'] . '">' . $value['label'] . '</label></th><td>';
 					}
 				} else {
@@ -261,7 +270,7 @@ if ( !class_exists( 'BON_Machine' ) ) {
 				'cols' => 10,
 				'rows' => 4,
 				'tax_type' => null,
-			);
+				);
 
 			$defaults = wp_parse_args( $field, $defaults );
 
@@ -298,51 +307,51 @@ if ( !class_exists( 'BON_Machine' ) ) {
 				case 'url':
 				case 'password':
 				default:
-					if ( method_exists( $f, $method = 'form_' . $type ) ) {
+				if ( method_exists( $f, $method = 'form_' . $type ) ) {
 
-						$output .= $f->$method( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ) ), esc_attr( $meta ), 'class="bon-input" size="30"' );
-						$output .= $desc;
-					} else {
-						$output .= $f->form_input( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ) ), esc_attr( $meta ), 'class="bon-input" size="30"' );
-						$output .= $desc;
-					}
-					break;
+					$output .= $f->$method( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ) ), esc_attr( $meta ), 'class="bon-input" size="30"' );
+					$output .= $desc;
+				} else {
+					$output .= $f->form_input( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ) ), esc_attr( $meta ), 'class="bon-input" size="30"' );
+					$output .= $desc;
+				}
+				break;
 
 				case 'textarea':
-					$output .= $f->form_textarea( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ), 'cols' => $cols, 'rows' => $rows ), $meta );
-					$output .= $desc;
-					break;
+				$output .= $f->form_textarea( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ), 'cols' => $cols, 'rows' => $rows ), $meta );
+				$output .= $desc;
+				break;
 
 				case 'editor':
-					$output .= '<div class="wp_editor_wrapper">';
-					$default_editor_settings = array(
-						'textarea_name' => $name,
-						'media_buttons' => false,
-						'wpautop' => true,
-						'tinymce' => array( 'plugins' => 'wordpress' )
+				$output .= '<div class="wp_editor_wrapper">';
+				$default_editor_settings = array(
+					'textarea_name' => $name,
+					'media_buttons' => false,
+					'wpautop' => true,
+					'tinymce' => array( 'plugins' => 'wordpress' )
 					);
 
-					$settings = array_merge( $default_editor_settings, $settings );
+				$settings = array_merge( $default_editor_settings, $settings );
 
-					ob_start();
+				ob_start();
 
-					wp_editor( $meta, $id, $settings );
+				wp_editor( $meta, $id, $settings );
 
-					$output .= ob_get_clean();
-					$output .= '</div><div class="clear"></div><br />' . $desc . '';
-					break;
+				$output .= ob_get_clean();
+				$output .= '</div><div class="clear"></div><br />' . $desc . '';
+				break;
 
 				case 'checkbox':
-					$checked = false;
-					if ( checked( $meta, 1, false ) ) {
-						$checked = 'checked';
-					}
+				$checked = false;
+				if ( checked( $meta, 1, false ) ) {
+					$checked = 'checked';
+				}
 
-					$output .= $f->form_checkbox( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ), 'checked' => $checked ), 1, $meta );
-					if ( isset( $field['desc'] ) ) {
-						$output .= '<label for="' . esc_attr( $id ) . '">' . $field['desc'] . '</label>';
-					}
-					break;
+				$output .= $f->form_checkbox( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ), 'checked' => $checked ), 1, $meta );
+				if ( isset( $field['desc'] ) ) {
+					$output .= '<label for="' . esc_attr( $id ) . '">' . $field['desc'] . '</label>';
+				}
+				break;
 
 				case 'select':
 				case 'chosen':
@@ -362,192 +371,24 @@ if ( !class_exists( 'BON_Machine' ) ) {
 				case 'cat_list':
 				case 'tag_list':
 
-					$multiple = '';
-					$s_name = esc_attr( $name );
+				$multiple = '';
+				$s_name = esc_attr( $name );
 
-					$substr = substr( $type, 0, 5 );
-					$substr_tax = substr( $type, 0, 4 );
+				$substr = substr( $type, 0, 5 );
+				$substr_tax = substr( $type, 0, 4 );
 
-					if ( $substr == 'post_' || $substr == 'page_' ) {
+				if ( $substr == 'post_' || $substr == 'page_' ) {
 
-						$type = str_replace( $substr, '', $type );
-						$post_opts = array( '' => __( 'Select One', 'bon' ) );
+					$type = str_replace( $substr, '', $type );
+					$post_opts = array( '' => __( 'Select One', 'bon' ) );
 
-						$q = array(
-							'post_type' => $substr == 'page_' ? 'page' : $post_type,
-							'posts_per_page' => isset( $max ) ? $max : -1,
-							'orderby' => 'name',
-							'order' => 'ASC',
-							'post_status' => array( 'publish', 'pending' ),
-						);
-
-						if ( isset( $field['filter_author'] ) && $field['filter_author'] === true ) {
-							$user_ID = get_current_user_id();
-
-							if ( $user_ID > 0 ) {
-								$q['author'] = $user_ID;
-							}
-						}
-
-						$post_opts_obj = get_posts( $q );
-						if ( !is_wp_error( $post_opts_obj ) ) {
-							foreach ( $post_opts_obj as $opt ) {
-								$post_opts[$opt->ID] = $opt->post_title;
-							}
-						}
-						$options = $post_opts;
-					} else if ( $substr_tax == 'tax_' || $substr_tax == 'cat_' || $substr_tax == 'tag_' ) {
-
-						$type = str_replace( $substr_tax, '', $type );
-						$tax_opts = array( '' => __( 'Select One', 'bon' ) );
-
-						if ( $substr_tax == 'cat_' ) {
-							$c_obj = get_categories();
-							foreach ( $c_obj as $c ) {
-								$tax_opts[$c->cat_ID] = $c->cat_name;
-							}
-							$options = $tax_opts;
-						} else if ( $substr_tax == 'tag_' ) {
-							$t_obj = get_tags();
-							foreach ( $t_obj as $t ) {
-								$tax_opts[$t->term_id] = $t->name;
-							}
-							$options = $tax_opts;
-						} else {
-							$tx_obj = get_terms( $tax_type, array( 'get' => 'all' ) );
-							if ( !is_wp_error( $tx_obj ) ) {
-								foreach ( $tx_obj as $tx ) {
-									$tax_opts[$tx->term_id] = $tx->name;
-								}
-							}
-							$options = $tax_opts;
-						}
-					}
-
-					$class = 'bon-input ';
-
-					if ( isset( $field['multiple'] ) && $field['multiple'] == true ) {
-						$multiple = 'multiple="multiple"';
-						$s_name = esc_attr( $name ) . '[]';
-						$class .= 'multiple';
-					}
-					if ( $type == 'chosen' ) {
-						$class .= ' chosen';
-					}
-					$output .= $f->form_select( array( 'name' => $s_name, 'id' => esc_attr( $id ) ), $options, $meta, 'class="' . $class . '" ' . $multiple );
-					$output .= $desc;
-
-					break;
-
-				case 'radio':
-					$output .= '<ul class="meta_box_items">';
-					foreach ( $options as $val => $option ) :
-						$checked = false;
-						if ( checked( $meta, $val, false ) ) {
-							$checked = 'checked';
-						}
-						$output .= '<li>';
-						$output .= $f->form_radio( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ) . '-' . $val, 'checked' => $checked ), $val, $meta );
-						$output .= '<label for="' . esc_attr( $id ) . '-' . $val . '">' . $option . '</label>';
-						$output .= '</li>';
-					endforeach;
-					$output .= '</ul>' . $desc;
-					break;
-
-				case 'post_checkboxes':
-				case 'tax_checkboxes':
-				case 'multicheck':
-
-					if ( $type == 'post_checkboxes' ) {
-						$post_opts = array();
-						$q = array(
-							'post_type' => $post_type,
-							'posts_per_page' => isset( $max ) ? $max : -1,
-							'orderby' => 'name',
-							'order' => 'ASC',
-							'post_status' => array( 'publish', 'pending' ),
-						);
-
-						if ( isset( $field['filter_author'] ) && $field['filter_author'] === true ) {
-							$user_ID = get_current_user_id();
-
-							if ( $user_ID > 0 ) {
-								$q['author'] = $user_ID;
-							}
-						}
-
-						$post_opts_obj = get_posts( $q );
-						if ( !is_wp_error( $post_opts_obj ) ) {
-							foreach ( $post_opts_obj as $opt ) {
-								$post_opts[$opt->ID] = $opt->post_title;
-							}
-						}
-						$options = $post_opts;
-					} else if ( $type == 'tax_checkboxes' ) {
-						$tax_opts = array();
-						$tx_obj = get_terms( $tax_type, array( 'get' => 'all' ) );
-						if ( !is_wp_error( $tx_obj ) ) {
-							foreach ( $tx_obj as $tx ) {
-								$tax_opts[$tx->term_id] = $tx->name;
-							}
-						}
-						$options = $tax_opts;
-					}
-
-					$output .= '<ul class="meta_box_items">';
-					foreach ( $options as $val => $option ) {
-						$checked = false;
-						$c_name = esc_attr( $name ) . '[' . $val . ']';
-						if ( isset( $meta[$val] ) && $meta[$val] == true ) {
-							$checked = true;
-						}
-						$output .= '<li>';
-						$output .= $f->form_checkbox( array( 'name' => $c_name, 'id' => esc_attr( $id ) . '-' . $val ), $val, $checked );
-						$output .= '<label for="' . esc_attr( $id ) . '-' . $val . '">' . $option . '</label>';
-						$output .= '</li>';
-					}
-					$output .= '</ul>' . $desc;
-					break;
-
-				case 'color':
-					$default_color = '';
-					if ( isset( $field['std'] ) ) {
-						if ( $meta != $field['std'] )
-							$default_color = ' data-default-color="' . $field['std'] . '" ';
-					}
-					$output .= '<input name="' . esc_attr( $name ) . '" id="' . esc_attr( $id ) . '" class="bon-color"  type="text" value="' . esc_attr( $meta ) . '"' . $default_color . ' />';
-					break;
-
-				case 'radio-img':
-					$output .= '<ul class="meta_box_items">';
-
-					foreach ( $options as $val => $option ) {
-
-						$selected = '';
-						if ( $meta != '' && $meta == $val ) {
-							$selected = ' radio-img-selected';
-						}
-						$output .= '<li class="radio-img"><input class="radio-img-radio" type="radio" name="' . esc_attr( $name ) . '" id="' . esc_attr( $id ) . '-' . $val . '" value="' . $val . '" ' . checked( $meta, $val, false ) . ' />
-							<label class="radio-img-label" for="' . esc_attr( $id ) . '-' . $val . '">' . $val . '</label>
-							<img src="' . esc_url( $option ) . '" alt="' . $val . '" class="radio-img-img ' . $selected . '" onclick="document.getElementById(\'' . esc_attr( $id ) . '-' . $val . '\').checked=true;" />
-								</li>';
-					}
-					$output .= '</ul>' . $desc;
-					break;
-
-				// post_select, post_chosen will be deleted in next theme
-				case 'old_post_select':
-				case 'old_post_list':
-				case 'old_post_chosen':
-					$output .= '<select data-placeholder="' . __( 'Select One', 'bon' ) . '" name="' . esc_attr( $name ) . '[]" id="' . esc_attr( $id ) . '"' . ( $type == 'post_chosen' ? ' class="chosen"' : '' ) . ( isset( $multiple ) && $multiple == true ? ' multiple="multiple"' : '' ) . '>
-							<option value="">' . __( 'Select One', 'bon' ) . '</option>'; // Select One
 					$q = array(
-						'post_type' => $post_type,
-						'posts_per_page' => -1,
+						'post_type' => $substr == 'page_' ? 'page' : $post_type,
+						'posts_per_page' => isset( $max ) ? $max : -1,
 						'orderby' => 'name',
 						'order' => 'ASC',
 						'post_status' => array( 'publish', 'pending' ),
-					);
+						);
 
 					if ( isset( $field['filter_author'] ) && $field['filter_author'] === true ) {
 						$user_ID = get_current_user_id();
@@ -557,130 +398,298 @@ if ( !class_exists( 'BON_Machine' ) ) {
 						}
 					}
 
-					$posts = get_posts( $q );
-
-					foreach ( $posts as $item )
-						$output .= '<option value="' . $item->ID . '"' . selected( is_array( $meta ) && in_array( $item->ID, $meta ), true, false ) . '>' . $item->post_title . '</option>';
-
-					$output .= '</select><br />' . $desc;
-					break;
-
-				case 'date':
-					$output .= '<input type="text" class="datepicker" name="' . esc_attr( $name ) . '" id="' . esc_attr( $id ) . '" value="' . $meta . '" size="30" />
-							<br />' . $desc;
-					break;
-
-				case 'slider':
-					$value = $meta != '' ? intval( $meta ) : '0';
-					$output .= '<div id="' . esc_attr( $id ) . '-slider" class="ui-slide" data-min="' . $min . '" data-max="' . $max . '" data-step="' . $step . '"></div>';
-					$output .= $f->form_input( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ) ), esc_attr( $value ), 'class="bon-small-input slider-input" size="5"' );
-					$output .= $desc;
-					break;
-
-				case 'image':
-					$image = BON_IMAGES . '/image.png';
-					$output .= '<div class="meta_box_image"><span class="meta_box_default_image" style="display:none">' . $image . '</span>';
-					if ( $meta ) {
-						$image = wp_get_attachment_image_src( intval( $meta ), 'medium' );
-						$image = $image[0];
-					}
-					$output .= '<input name="' . esc_attr( $name ) . '" type="hidden" class="meta_box_upload_image" value="' . intval( $meta ) . '" />
-								<img src="' . esc_attr( $image ) . '" class="meta_box_preview_image" alt="" />
-									<a href="#" class="meta_box_upload_image_button button" rel="' . get_the_ID() . '">Choose Image</a>
-									<small>&nbsp;<a href="#" class="meta_box_clear_image_button">Remove Image</a></small></div>
-									<br clear="all" />' . $desc;
-					break;
-
-				case 'gallery':
-					$output .= '<div class="gallery-images-container">
-						<ul class="gallery-images">';
-
-					if ( $meta ) {
-						$attachments = array_filter( explode( ',', $meta ) );
-						foreach ( $attachments as $attachment_id ) {
-							$src = wp_get_attachment_image_src( $attachment_id, 'thumbnail' );
-							$src = $src[0];
-							$output .= '<li class="image" data-attachment_id="' . $attachment_id . '">
-										<img src="' . esc_attr( $src ) . '" alt="image" />
-										<ul class="actions">
-											<li><a href="#" class="delete" title="' . __( 'Delete image', 'bon' ) . '">' . __( 'Delete', 'bon' ) . '</a></li>
-										</ul>
-									</li>';
+					$post_opts_obj = get_posts( $q );
+					if ( !is_wp_error( $post_opts_obj ) ) {
+						foreach ( $post_opts_obj as $opt ) {
+							$post_opts[$opt->ID] = $opt->post_title;
 						}
 					}
-					$output .= '</ul>
-						<input type="hidden" class="image-gallery-input" id="' . esc_attr( $name ) . '" name="' . esc_attr( $name ) . '" value="' . esc_attr( $meta ) . '" />
-					</div>';
+					$options = $post_opts;
+				} else if ( $substr_tax == 'tax_' || $substr_tax == 'cat_' || $substr_tax == 'tag_' ) {
 
-					$output .= '<p class="add-gallery-images hide-if-no-js"><a href="#">' . __( 'Add gallery images', 'bon' ) . '</a></p>';
-					break;
+					$type = str_replace( $substr_tax, '', $type );
+					$tax_opts = array( '' => __( 'Select One', 'bon' ) );
 
-				case 'file':
-					$iconClass = 'meta_box_file';
-					if ( $meta )
-						$iconClass .= ' checked';
-					$output .= '<div class="meta_box_file_stuff"><input name="' . esc_attr( $name ) . '" type="hidden" class="meta_box_upload_file" value="' . esc_url( $meta ) . '" />
-								<span class="' . $iconClass . '"></span>
-								<span class="meta_box_filename">' . esc_url( $meta ) . '</span>
-									<a href="#" class="meta_box_upload_file_button button" rel="' . get_the_ID() . '">Choose File</a>
-									<small>&nbsp;<a href="#" class="meta_box_clear_file_button">Remove File</a></small></div>
-									<br clear="all" />' . $desc;
-					break;
+					if ( $substr_tax == 'cat_' ) {
+						$c_obj = get_categories();
+						foreach ( $c_obj as $c ) {
+							$tax_opts[$c->cat_ID] = $c->cat_name;
+						}
+						$options = $tax_opts;
+					} else if ( $substr_tax == 'tag_' ) {
+						$t_obj = get_tags();
+						foreach ( $t_obj as $t ) {
+							$tax_opts[$t->term_id] = $t->name;
+						}
+						$options = $tax_opts;
+					} else {
+						$tx_obj = get_terms( $tax_type, array( 'get' => 'all' ) );
+						if ( !is_wp_error( $tx_obj ) ) {
+							foreach ( $tx_obj as $tx ) {
+								$tax_opts[$tx->term_id] = $tx->name;
+							}
+						}
+						$options = $tax_opts;
+					}
+				}
 
-				case 'upload':
-					$output .= $this->options_uploader( $id, $meta, null );
-					break;
+				$class = 'bon-input ';
+
+				if ( isset( $field['multiple'] ) && $field['multiple'] == true ) {
+					$multiple = 'multiple="multiple"';
+					$s_name = esc_attr( $name ) . '[]';
+					$class .= 'multiple';
+				}
+				if ( $type == 'chosen' ) {
+					$class .= ' chosen';
+				}
+				$output .= $f->form_select( array( 'name' => $s_name, 'id' => esc_attr( $id ) ), $options, $meta, 'class="' . $class . '" ' . $multiple );
+				$output .= $desc;
+
+				break;
+
+				case 'radio':
+				$output .= '<ul class="meta_box_items">';
+				foreach ( $options as $val => $option ) :
+					$checked = false;
+				if ( checked( $meta, $val, false ) ) {
+					$checked = 'checked';
+				}
+				$output .= '<li>';
+				$output .= $f->form_radio( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ) . '-' . $val, 'checked' => $checked ), $val, $meta );
+				$output .= '<label for="' . esc_attr( $id ) . '-' . $val . '">' . $option . '</label>';
+				$output .= '</li>';
+				endforeach;
+				$output .= '</ul>' . $desc;
+				break;
+
+				case 'post_checkboxes':
+				case 'tax_checkboxes':
+				case 'multicheck':
+
+				if ( $type == 'post_checkboxes' ) {
+					$post_opts = array();
+					$q = array(
+						'post_type' => $post_type,
+						'posts_per_page' => isset( $max ) ? $max : -1,
+						'orderby' => 'name',
+						'order' => 'ASC',
+						'post_status' => array( 'publish', 'pending' ),
+						);
+
+					if ( isset( $field['filter_author'] ) && $field['filter_author'] === true ) {
+						$user_ID = get_current_user_id();
+
+						if ( $user_ID > 0 ) {
+							$q['author'] = $user_ID;
+						}
+					}
+
+					$post_opts_obj = get_posts( $q );
+					if ( !is_wp_error( $post_opts_obj ) ) {
+						foreach ( $post_opts_obj as $opt ) {
+							$post_opts[$opt->ID] = $opt->post_title;
+						}
+					}
+					$options = $post_opts;
+				} else if ( $type == 'tax_checkboxes' ) {
+					$tax_opts = array();
+					$tx_obj = get_terms( $tax_type, array( 'get' => 'all' ) );
+					if ( !is_wp_error( $tx_obj ) ) {
+						foreach ( $tx_obj as $tx ) {
+							$tax_opts[$tx->term_id] = $tx->name;
+						}
+					}
+					$options = $tax_opts;
+				}
+
+				$output .= '<ul class="meta_box_items">';
+				foreach ( $options as $val => $option ) {
+					$checked = false;
+					$c_name = esc_attr( $name ) . '[' . $val . ']';
+					if ( isset( $meta[$val] ) && $meta[$val] == true ) {
+						$checked = true;
+					}
+					$output .= '<li>';
+					$output .= $f->form_checkbox( array( 'name' => $c_name, 'id' => esc_attr( $id ) . '-' . $val ), $val, $checked );
+					$output .= '<label for="' . esc_attr( $id ) . '-' . $val . '">' . $option . '</label>';
+					$output .= '</li>';
+				}
+				$output .= '</ul>' . $desc;
+				break;
+
+				case 'color':
+				$default_color = '';
+				if ( isset( $field['std'] ) ) {
+					if ( $meta != $field['std'] )
+						$default_color = ' data-default-color="' . $field['std'] . '" ';
+				}
+				$output .= '<input name="' . esc_attr( $name ) . '" id="' . esc_attr( $id ) . '" class="bon-color"  type="text" value="' . esc_attr( $meta ) . '"' . $default_color . ' />';
+				break;
+
+				case 'radio-img':
+				$output .= '<ul class="meta_box_items">';
+
+				foreach ( $options as $val => $option ) {
+
+					$selected = '';
+					if ( $meta != '' && $meta == $val ) {
+						$selected = ' radio-img-selected';
+					}
+					$output .= '<li class="radio-img"><input class="radio-img-radio" type="radio" name="' . esc_attr( $name ) . '" id="' . esc_attr( $id ) . '-' . $val . '" value="' . $val . '" ' . checked( $meta, $val, false ) . ' />
+					<label class="radio-img-label" for="' . esc_attr( $id ) . '-' . $val . '">' . $val . '</label>
+					<img src="' . esc_url( $option ) . '" alt="' . $val . '" class="radio-img-img ' . $selected . '" onclick="document.getElementById(\'' . esc_attr( $id ) . '-' . $val . '\').checked=true;" />
+					</li>';
+				}
+				$output .= '</ul>' . $desc;
+				break;
+
+				// post_select, post_chosen will be deleted in next theme
+				case 'old_post_select':
+				case 'old_post_list':
+				case 'old_post_chosen':
+				$output .= '<select data-placeholder="' . __( 'Select One', 'bon' ) . '" name="' . esc_attr( $name ) . '[]" id="' . esc_attr( $id ) . '"' . ( $type == 'post_chosen' ? ' class="chosen"' : '' ) . ( isset( $multiple ) && $multiple == true ? ' multiple="multiple"' : '' ) . '>
+							<option value="">' . __( 'Select One', 'bon' ) . '</option>'; // Select One
+							$q = array(
+								'post_type' => $post_type,
+								'posts_per_page' => -1,
+								'orderby' => 'name',
+								'order' => 'ASC',
+								'post_status' => array( 'publish', 'pending' ),
+								);
+
+							if ( isset( $field['filter_author'] ) && $field['filter_author'] === true ) {
+								$user_ID = get_current_user_id();
+
+								if ( $user_ID > 0 ) {
+									$q['author'] = $user_ID;
+								}
+							}
+
+							$posts = get_posts( $q );
+
+							foreach ( $posts as $item )
+								$output .= '<option value="' . $item->ID . '"' . selected( is_array( $meta ) && in_array( $item->ID, $meta ), true, false ) . '>' . $item->post_title . '</option>';
+
+							$output .= '</select><br />' . $desc;
+							break;
+
+							case 'date':
+							$output .= '<input type="text" class="datepicker" name="' . esc_attr( $name ) . '" id="' . esc_attr( $id ) . '" value="' . $meta . '" size="30" />
+							<br />' . $desc;
+							break;
+
+							case 'slider':
+							$value = $meta != '' ? intval( $meta ) : '0';
+							$output .= '<div id="' . esc_attr( $id ) . '-slider" class="ui-slide" data-min="' . $min . '" data-max="' . $max . '" data-step="' . $step . '"></div>';
+							$output .= $f->form_input( array( 'name' => esc_attr( $name ), 'id' => esc_attr( $id ) ), esc_attr( $value ), 'class="bon-small-input slider-input" size="5"' );
+							$output .= $desc;
+							break;
+
+							case 'image':
+							$image = BON_IMAGES . '/image.png';
+							$output .= '<div class="meta_box_image"><span class="meta_box_default_image" style="display:none">' . $image . '</span>';
+							if ( $meta ) {
+								$image = wp_get_attachment_image_src( intval( $meta ), 'medium' );
+								$image = $image[0];
+							}
+							$output .= '<input name="' . esc_attr( $name ) . '" type="hidden" class="meta_box_upload_image" value="' . intval( $meta ) . '" />
+							<img src="' . esc_attr( $image ) . '" class="meta_box_preview_image" alt="" />
+							<a href="#" class="meta_box_upload_image_button button" rel="' . get_the_ID() . '">Choose Image</a>
+							<small>&nbsp;<a href="#" class="meta_box_clear_image_button">Remove Image</a></small></div>
+							<br clear="all" />' . $desc;
+							break;
+
+							case 'gallery':
+							$output .= '<div class="gallery-images-container">
+							<ul class="gallery-images">';
+
+							if ( $meta ) {
+								$attachments = array_filter( explode( ',', $meta ) );
+								foreach ( $attachments as $attachment_id ) {
+									$src = wp_get_attachment_image_src( $attachment_id, 'thumbnail' );
+									$src = $src[0];
+									$output .= '<li class="image" data-attachment_id="' . $attachment_id . '">
+									<img src="' . esc_attr( $src ) . '" alt="image" />
+									<ul class="actions">
+									<li><a href="#" class="delete" title="' . __( 'Delete image', 'bon' ) . '">' . __( 'Delete', 'bon' ) . '</a></li>
+									</ul>
+									</li>';
+								}
+							}
+							$output .= '</ul>
+							<input type="hidden" class="image-gallery-input" id="' . esc_attr( $name ) . '" name="' . esc_attr( $name ) . '" value="' . esc_attr( $meta ) . '" />
+							</div>';
+
+							$output .= '<p class="add-gallery-images hide-if-no-js"><a href="#">' . __( 'Add gallery images', 'bon' ) . '</a></p>';
+							break;
+
+							case 'file':
+							$iconClass = 'meta_box_file';
+							if ( $meta )
+								$iconClass .= ' checked';
+							$output .= '<div class="meta_box_file_stuff"><input name="' . esc_attr( $name ) . '" type="hidden" class="meta_box_upload_file" value="' . esc_url( $meta ) . '" />
+							<span class="' . $iconClass . '"></span>
+							<span class="meta_box_filename">' . esc_url( $meta ) . '</span>
+							<a href="#" class="meta_box_upload_file_button button" rel="' . get_the_ID() . '">Choose File</a>
+							<small>&nbsp;<a href="#" class="meta_box_clear_file_button">Remove File</a></small></div>
+							<br clear="all" />' . $desc;
+							break;
+
+							case 'upload':
+							$output .= $this->options_uploader( $id, $meta, null );
+							break;
 
 				// repeatable
-				case 'repeatable':
+							case 'repeatable':
 
-					$output .= '<table id="' . esc_attr( $id ) . '-repeatable" class="meta_box_repeatable meta_box" cellspacing="0">';
+							$output .= '<table id="' . esc_attr( $id ) . '-repeatable" class="meta_box_repeatable meta_box" cellspacing="0">';
 
-					$repeatable_fields = $field['repeatable_fields'];
+							$repeatable_fields = $field['repeatable_fields'];
 
-					$i = 0;
+							$i = 0;
 					// create an empty array
-					if ( $meta == '' || $meta == array() ) {
-						$keys = wp_list_pluck( $repeatable_fields, 'id' );
-						$meta = array( array_fill_keys( $keys, null ) );
-					}
-					$meta = array_values( $meta );
-
-
-					foreach ( $meta as $row ) {
-						$output .= '<tr>
-								<td>';
-						foreach ( $repeatable_fields as $repeatable_field ) {
-
-							if ( !isset( $meta[$i] ) || !array_key_exists( $repeatable_field['id'], $meta[$i] ) )
-								$meta[$i][$repeatable_field['id']] = null;
-
-							$output .= '<fieldset';
-							if ($repeatable_field['class']) {
-								$output .= ' class="' . $repeatable_field['class'] . '"';
+							if ( $meta == '' || $meta == array() ) {
+								$keys = wp_list_pluck( $repeatable_fields, 'id' );
+								$meta = array( array_fill_keys( $keys, null ) );
 							}
-							$output .= '><div>';
-							$output .= ( isset( $repeatable_field['label'] ) && $repeatable_field['label'] != '' ) ? '<label>' . $repeatable_field['label'] . '</label>' : '';
-							$output .= '<div class="meta_box_field_wrap">';
-							$repeated_field = $this->render_element( $repeatable_field, $meta[$i][$repeatable_field['id']], array( $id, $i ) );
-							$output .= $repeated_field;
-							$output .= '</div></div></fieldset>';
+							$meta = array_values( $meta );
+
+
+							foreach ( $meta as $row ) {
+								$output .= '<tr>
+								<td>';
+								foreach ( $repeatable_fields as $repeatable_field ) {
+
+									if ( !isset( $meta[$i] ) || !array_key_exists( $repeatable_field['id'], $meta[$i] ) )
+										$meta[$i][$repeatable_field['id']] = null;
+
+									$output .= '<fieldset';
+									if ($repeatable_field['class']) {
+										$output .= ' class="' . $repeatable_field['class'] . '"';
+									}
+									$output .= '><div>';
+									$output .= ( isset( $repeatable_field['label'] ) && $repeatable_field['label'] != '' ) ? '<label>' . $repeatable_field['label'] . '</label>' : '';
+									$output .= '<div class="meta_box_field_wrap">';
+									$repeated_field = $this->render_element( $repeatable_field, $meta[$i][$repeatable_field['id']], array( $id, $i ) );
+									$output .= $repeated_field;
+									$output .= '</div></div></fieldset>';
 						} // end each field
 						$output .= '</td><td><span class="sort hndle"><i class="dashicons dashicons-menu"></i></span><a class="meta_box_repeatable_remove" href="#"><i class="dashicons dashicons-dismiss"></i></a></td></tr>';
 						$i++;
 					} // end each row
 					$output .= '</tbody>';
 					$output .= '
-						<tfoot>
-							<tr>
-								<th><a class="meta_box_repeatable_add" href="#"><i class="dashicons dashicons-plus-alt"></i></a></th>
-							</tr>
-						</tfoot>';
+					<tfoot>
+					<tr>
+					<th><a class="meta_box_repeatable_add" href="#"><i class="dashicons dashicons-plus-alt"></i></a></th>
+					</tr>
+					</tfoot>';
 					$output .= '</table>
-						' . $desc;
+					' . $desc;
 					break;
 
-				case 'heading':
+					case 'heading':
 					if ( $this->counter >= 2 ) {
 						$output .= '</div>' . "\n";
 					}
@@ -690,7 +699,7 @@ if ( !class_exists( 'BON_Machine' ) ) {
 					$output .= '<div class="group" id="' . esc_attr( $jquery_click_hook ) . '"><h1 class="subtitle">' . esc_html( $label ) . '</h1>' . "\n";
 					break;
 
-				case 'subheading':
+					case 'subheading':
 					if ( $this->counter >= 2 ) {
 						$output .= '</div>' . "\n";
 					}
@@ -700,16 +709,16 @@ if ( !class_exists( 'BON_Machine' ) ) {
 					$output .= '<div class="group" id="' . esc_attr( $jquery_click_hook ) . '"><h1 class="subtitle">' . esc_html( $label ) . '</h1>' . "\n";
 					break;
 
-				case 'info':
+					case 'info':
 					$output .= $std;
 					break;
 
-				case 'info-img':
+					case 'info-img':
 					$output .= $std;
 					break;
 
 				// added by Lech Dutkiewicz
-				case 'icon' :
+					case 'icon' :
 					$output .= $desc;
 					$output .= "<div id='$id'>";
 					$output .= bon_icon_select_field( $id, $name, '#' . $id, esc_attr( $meta ), array( 'bon-edit-menu-fieldset' ), array( 'bon-edit-menu-item', 'bon-edit-menu-icon' ) );
