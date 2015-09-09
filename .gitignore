@@ -8,3 +8,4 @@ node_modules
 assets/js/custom.js
 assets/js/scripts.js
 assets/js/framework.js
+assets/js/elements/*

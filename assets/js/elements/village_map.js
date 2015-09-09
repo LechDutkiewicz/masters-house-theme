@@ -1,28 +1,44 @@
 (function($) {
 
 	$(document).ready(function(){
-		var plots = $('.plot');
+		if (cottages)
+		{
+			$('html, body').animate({
+				scrollTop: $("#village-map").offset().top
+			}, 2000);
 
-		Object.keys(cottages).forEach(function(key) {
-			var plot = $('#plot-' + key),
-			cottage = $('#cottage-' + key),
-			link = cottage.find('.cottage-link'),
-			fence = plot.find('.fence'),
-			camera = cottage.find('.camera-holder');
+			var plots = $('.plot');
 
-			camera.attr('class', 'camera-holder ' + cottages[key]['format']);
+			Object.keys(cottages).forEach(function(key) {
 
-			setTimeout(function () {
-				fence.fadeIn(500, 'easeInQuart');						
-			}, key * 200 + 600 );
+				// var plot = $('#plot-' + key),
+				// cottage = $('#cottage-' + key),
+				// link = cottage.find('.cottage-link'),
+				// fence = plot.find('.fence'),
+				// camera = cottage.find('.camera-holder');
+				
+				var plot = $('[id="plot-' + key + '"]'),
+				cottage = $('[id="cottage-' + key + '"]'),
+				title = cottage.find('title'),
+				link = cottage.find('[class="cottage-link"]'),
+				fence = plot.find('[class^="fence"]'),
+				camera = cottage.find('[class="camera-holder"]');
 
-			setTimeout(function () {
-				cottage.fadeIn(500, 'easeInQuart');						
-			}, key * 200 + 600 );
+				camera.attr('class', 'camera-holder ' + cottages[key]['format']);
 
-			link.attr('xlink:href', cottages[key]['url']);
-			camera.addClass(cottages[key]['format']);
-		});
+				setTimeout(function () {
+					fence.fadeIn(500, 'easeInQuart');						
+				}, key * 200 + 600 );
+
+				setTimeout(function () {
+					cottage.fadeIn(500, 'easeInQuart');						
+				}, key * 200 + 600 );
+
+				title.html(cottages[key]['title']);
+				link.attr('xlink:href', cottages[key]['url']);
+				camera.addClass(cottages[key]['format']);
+			});
+		}
 	});
 
 })(jQuery);

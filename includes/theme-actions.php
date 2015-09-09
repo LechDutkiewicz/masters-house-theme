@@ -2408,6 +2408,7 @@ function get_village_map() {
 				"id"		=> shandora_get_meta( $post->ID, 'cottage_' . $i ),
 				"format"	=> get_post_format( shandora_get_meta( $post->ID, 'cottage_' . $i ) ),
 				"url"		=> get_the_permalink( shandora_get_meta( $post->ID, 'cottage_' . $i ) ),
+				"title"		=> get_the_title( shandora_get_meta( $post->ID, 'cottage_' . $i ) )
 				);
 		}
 	}
