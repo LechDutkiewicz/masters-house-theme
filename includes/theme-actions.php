@@ -1436,11 +1436,11 @@ function shandora_process_contactform() {
 
 		$response = akismet_http_post( $query_string, $akismet_api_host, '/1.1/comment-check', $akismet_api_port );
 
-		if ( 'true' == $response[1] ) { // Akismet says it's SPAM
-		$return_data['value'] = __( 'Cheatin Huh?!', 'bon' );
-		die( json_encode( $return_data ) );
+		if ( 'true' == $response[1] ) {
+			$return_data['value'] = __( 'Cheatin Huh?!', 'bon' );
+			die( json_encode( $return_data ) );
+		}
 	}
-}
 
 
 
@@ -2392,5 +2392,26 @@ function get_qualities() {
 		);
 
 return $quality_items;
+
+}
+
+// function to get array with data of single cottages drawn on cottage village svg for page template village-map.
+function get_village_map() {
+	global $post;
+
+	$cottages = array();
+	for ( $i = 1; $i <=11; $i++ )
+	{
+		if ( shandora_get_meta( $post->ID, 'cottage_' . $i ) )
+		{
+			$cottages[$i] = array(
+				"id"		=> shandora_get_meta( $post->ID, 'cottage_' . $i ),
+				"format"	=> get_post_format( shandora_get_meta( $post->ID, 'cottage_' . $i ) ),
+				"url"		=> get_the_permalink( shandora_get_meta( $post->ID, 'cottage_' . $i ) ),
+				);
+		}
+	}
+
+	return $cottages;
 
 }

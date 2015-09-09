@@ -226,12 +226,12 @@ $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Tracking Code', 'bo
 	'type' => 'textarea' );
 
 
-$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Conversion Code', 'bon' ),
-	'desc' => __( 'Paste your conversion tracking code here. This will be added into the footer template of your theme.', 'bon' ),
-	'id' => 'conversion_code',
-	'std' => '',
-	'class' => 'code_mirror',
-	'type' => 'textarea' );
+// $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Conversion Code', 'bon' ),
+// 	'desc' => __( 'Paste your conversion tracking code here. This will be added into the footer template of your theme.', 'bon' ),
+// 	'id' => 'conversion_code',
+// 	'std' => '',
+// 	'class' => 'code_mirror',
+// 	'type' => 'textarea' );
 
 
 $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Google Webmasters Center verification code', 'bon' ),
@@ -2237,6 +2237,8 @@ $options[] = array( 'slug' => 'bon_options',
 			$options[] = array(
 				'label' => $quality_item['name'],
 				'type' => 'info-img',
+				'subfolder' => 'qualities',
+				'file-type' => 'jpg',
 				);
 
 			$options[] = array(

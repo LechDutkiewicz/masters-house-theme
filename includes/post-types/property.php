@@ -324,8 +324,8 @@ $build_size_options = array(
 				'type' => 'select',
 				),
 			),
-		'type' => 'repeatable',
-		),
+'type' => 'repeatable',
+),
 array(
 	'label' => __( 'Total height', 'bon_admin' ),
 	'desc' => __( 'Product total height in milimeters, without unit', 'bon_admin' ),
@@ -877,14 +877,14 @@ if ( !function_exists( 'shandora_setup_slidebox_post_type' ) ) {
 				),
 			);
 
-$cpt->add_meta_box(
-	'service-options', 'Banner text options', $service_opt1
-	);
+		$cpt->add_meta_box(
+			'service-options', 'Banner text options', $service_opt1
+			);
 
-$cpt->add_meta_box(
-	'service-more', 'Button options', $service_opt2
-	);
-}
+		$cpt->add_meta_box(
+			'service-more', 'Button options', $service_opt2
+			);
+	}
 
 }
 
@@ -978,7 +978,7 @@ if ( !function_exists( 'shandora_setup_testimonials_post_type' ) ) {
 		$plural = __( 'Testimonials', 'bon_admin' );
 
 
-		$cpt->create( 'Testimonial', array( 'supports' => array( 'editor', 'title', 'thumbnail', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 15, 'menu_icon' => 'dashicons-smiley' ), array(), $name, $plural );
+		$cpt->create( 'Testimonial', array( 'supports' => array( 'editor', 'title', 'thumbnail', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 15, 'menu_icon' => 'dashicons-format-status' ), array(), $name, $plural );
 
 		$prop_options = array(
 			array( 
@@ -1001,29 +1001,29 @@ if ( !function_exists( 'shandora_setup_testimonials_post_type' ) ) {
 
 		$prop_options_2 = array(
 			array( 
-				'label'	=> __('Map Latitude', 'bon'),
-				'desc'	=> __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
-				'id'	=> $prefix . $suffix .'maplatitude',
-				'type'	=> 'text',				
+				'label'		=> __('Map Latitude', 'bon'),
+				'desc'		=> __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
+				'id'		=> $prefix . $suffix .'maplatitude',
+				'type'		=> 'text',				
 				),
 			array( 
-				'label'	=> __('Map Longitude', 'bon'),
-				'desc'	=> __('The Map Longitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the longitude value generated there', 'bon'), 
-				'id'	=> $prefix . $suffix .'maplongitude',
-				'type'	=> 'text',				
+				'label'		=> __('Map Longitude', 'bon'),
+				'desc'		=> __('The Map Longitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the longitude value generated there', 'bon'), 
+				'id'		=> $prefix . $suffix .'maplongitude',
+				'type'		=> 'text',				
 				),
 			array(
-				'label' => __( 'Building image', 'bon_admin' ),
-				'desc' => __( 'Image that will be used on page with map of all buildings', 'bon_admin' ),
-				'id' => $prefix . $suffix . 'map_img',
-				'type' => 'image'
+				'label'		=> __('Building image', 'bon_admin'),
+				'desc'		=> __('Image that will be used on page with map of all buildings', 'bon_admin'),
+				'id'		=> $prefix . $suffix . 'map_img',
+				'type'		=> 'image',
 				),
 			array(
-				'label' => __( 'Related cottage', 'bon_admin' ),
-				'desc' => __( 'Pick cottage if theres a related one', 'bon_admin' ),
-				'id' => $prefix . $suffix . 'related_cottage',
-				'post_type' => 'Listing',
-				'type' => 'post_chosen'
+				'label'		=> __('Related cottage', 'bon_admin'),
+				'desc'		=> __('Pick cottage if theres a related one', 'bon_admin'),
+				'id'		=> $prefix . $suffix . 'related_cottage',
+				'type'		=> 'post_chosen',
+				'post_type'	=> 'Listing',
 				),
 			);
 
@@ -1035,6 +1035,61 @@ $cpt->add_meta_box(
 	'author', 'Author', $prop_options
 	);
 }
+
+}
+
+if ( !function_exists( 'shandora_setup_casestudy_post_type' ) ) {
+
+	function shandora_setup_casestudy_post_type() {
+		global $bon;
+
+		$prefix = bon_get_prefix();
+
+		$cpt = $bon->cpt();
+
+		$name = __( 'Village cottage', 'bon_admin' );
+		$plural = __( 'Village cottages', 'bon_admin' );
+
+
+		$cpt->create( 'portfolio', array( 'supports' => array( 'editor', 'title', 'thumbnail', 'page-attributes', 'post-formats' ), 'exclude_from_search' => true, 'menu_position' => 15, 'menu_icon' => 'dashicons-welcome-view-site' ), array(), $name, $plural );
+
+		// $prop_options = array(
+		// 	array( 
+		// 		'label'	=> __('Case study', 'bon'),
+		// 		'id'	=> $prefix . $suffix .'case_study',
+		// 		'type'	=> 'text',				
+		// 		),
+		// 	array( 
+		// 		'label'	=> __('Full name of client', 'bon'),
+		// 		'id'	=> $prefix . $suffix .'full_name',
+		// 		'type'	=> 'text',				
+		// 		),
+		// 	array(
+		// 		'label' => __( 'Author image', 'bon_admin' ),
+		// 		'desc' => __( 'Upload author image to display it on testimonials carousel', 'bon_admin' ),
+		// 		'id' => $prefix . $suffix . 'user_img',
+		// 		'type' => 'image'
+		// 		),
+		// 	);
+
+		$prop_options_2 = array(
+			array(
+				'label' => __( 'Related cottage', 'bon_admin' ),
+				'desc' => __( 'Pick cottage if theres a related one', 'bon_admin' ),
+				'id' => $prefix . $suffix . 'related_cottage',
+				'post_type' => 'Listing',
+				'type' => 'post_chosen'
+				),
+			);
+
+		$cpt->add_meta_box(
+			'building', 'Building', $prop_options_2
+			);
+
+		// $cpt->add_meta_box(
+		// 	'author', 'Author', $prop_options
+		// 	);
+	}
 
 }
 
