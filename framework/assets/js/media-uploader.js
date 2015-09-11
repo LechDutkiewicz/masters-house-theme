@@ -2,7 +2,7 @@
     $(document).ready(function() {
         function optionsframework_add_file(event, selector) {
             var upload = $(".uploaded-file"),
-                frame;
+            frame;
             var $el = $(this);
             event.preventDefault();
             if (frame) {
@@ -16,6 +16,7 @@
                     close: false
                 }
             });
+            
             frame.on('select', function() {
                 var attachment = frame.state().get('selection').first();
                 frame.close();
@@ -25,7 +26,9 @@
                 }
                 selector.find('.upload-button').unbind().addClass('remove-file').removeClass('upload-button').val(optionsframework_l10n.remove);
                 selector.find('.of-background-properties').slideDown();
-                optionsframework_file_bindings()
+
+                // bind remove file to button after new image was chosen
+                optionsframework_file_bindings( 'add', selector.find('.remove-file') );
             });
             frame.open()
         }
@@ -39,17 +42,39 @@
             if ($('.section-upload .upload-notice').length > 0) {
                 $('.upload-button').remove()
             }
-            optionsframework_file_bindings()
+
+            // bind upload image to button after current image was deleted
+            optionsframework_file_bindings( 'remove', selector.find('.upload-button') )
         }
 
-        function optionsframework_file_bindings() {
-            $('.remove-image, .remove-file').on('click', function() {
-                optionsframework_remove_file($(this).parents('.section'))
-            });
-            $('.upload-button').click(function(event) {
-            	console.log('aa');
-                optionsframework_add_file(event, $(this).parents('.section'))
-            })
+        function optionsframework_file_bindings(event, selector) {
+
+            if ( event === "add" && selector )
+            {
+
+                selector.on('click', function() {
+
+                    optionsframework_remove_file($(this).parents('.section'))
+                });
+
+            } else if ( event === "remove" && selector )
+            {
+
+                selector.on('click', function(event) {
+                    optionsframework_add_file(event, $(this).parents('.section'));
+                });
+
+            } else
+            {
+
+                $('.remove-image, .remove-file').on('click', function() {
+                    optionsframework_remove_file($(this).parents('.section'))
+                });
+                $('.upload-button').click(function(event) {
+                    optionsframework_add_file(event, $(this).parents('.section'))
+                });
+
+            }
         }
         optionsframework_file_bindings()
     })
