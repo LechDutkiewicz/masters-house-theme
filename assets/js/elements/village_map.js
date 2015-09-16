@@ -1,7 +1,7 @@
 (function($) {
 
 	$(document).ready(function(){
-		if (cottages)
+		if (typeof cottages !== 'undefined')
 		{
 			$('html, body').animate({
 				scrollTop: $("#village-map").offset().top
