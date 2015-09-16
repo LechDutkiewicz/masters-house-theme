@@ -1,5 +1,133 @@
 <?php
 
+function get_ga_keys()
+{
+
+	$keys = array('cat', 'act', 'lbl', 'val');
+	return $keys;
+
+}
+
+function get_formatted_event($event)
+{
+
+	$keys = get_ga_keys();
+	$temp = array();
+
+	foreach ( $event as $key => $description )
+	{
+
+		$temp[$keys[$key]] = $description;
+
+	}
+
+	$event = $temp;
+	unset($temp);
+
+	return $event;
+
+}
+
+function get_ga_event() {
+
+	$args = func_get_args();
+
+	// remove unnecessary array outside array with args from the_ga_event() call
+	if ( is_array($args) && count($args) === 1 )
+	{
+		$args = $args[0];
+	}
+	
+	// get analytics keys for event description
+	$keys = get_ga_keys();
+
+	// check if there are multiple events assigned to single DOM element
+	if ( is_array($args[0]) )
+	{
+
+		// variable to hold highest amount of attributes
+		$attr_amount = 0;
+
+		// assign event keys for each array element with single event
+		foreach ( $args as $key => $arg )
+		{
+
+			$args[$key] = get_formatted_event($args[$key]);
+			$attr_amount = count($args[$key]) > $attr_amount ? count($args[$key]) : $attr_amount;
+
+		}
+
+		// create array which will contain multiple events
+		$combined_events = array();
+
+		for ( $i = 0; $i < $attr_amount; $i++ )
+		{
+
+			// create adequate keys
+			$combined_events[$keys[$i]] = array();
+
+		}
+
+	} else
+	{
+
+		$args = get_formatted_event($args);
+
+	}
+
+	// create an empty output varialbe
+	$output = '';
+
+	foreach ( $args as $key => $arg )
+	{
+
+		// check if there is array with multiple events to run
+		if ( is_array($arg) )
+		{
+
+			foreach ( $arg as $arg_key => $single_arg )
+			{
+				
+				array_push( $combined_events[$arg_key], $single_arg );
+
+			}
+
+		} else if ( $arg !== '' )
+		{
+
+			$output .= 'data-ga-' . $key . '="' . $arg . '" ';
+
+		}
+
+	}
+
+	if ( is_array($combined_events) )
+	{
+		foreach ( $combined_events as $key => $event )
+		{
+
+			if ( $event !== '' )
+			{
+
+				$output .= 'data-ga-' . $key . '=\'' . json_encode( $event ) . '\' ';
+
+			}
+
+		}
+	}
+
+	
+	return $output;
+
+}
+
+function the_ga_event() {
+
+	$args = func_get_args();
+	echo get_ga_event( $args );
+
+}
+
 function shandora_get_listing_price( $echo = true, $total = true, $itemprop = false ) {
 	global $post;
 	$currency = bon_get_option( 'currency' );
@@ -386,7 +514,7 @@ function shandora_get_search_page_url() {
 	} else {
 		$output .= '<div class="column large-12 small-11 large-uncentered small-centered" style="margin-top: 1em;">';
 		$output .= wp_nonce_field( 'search-panel-submit', 'search_nonce', false, false );
-		$output .= $form->form_submit( '', $search_label, 'class="button flat ' . $button_color . ' radius"' );
+		$output .= $form->form_submit( '', $search_label, 'class="button flat ' . $button_color . ' radius"' . get_ga_event( "Sidebar", "Search Products" ) );
 	}
 
 	if ( defined( 'ICL_LANGUAGE_CODE' ) ) {
@@ -1904,14 +2032,23 @@ function shandora_print_home_cta ( $show, $link, $destination, $button_color, $o
 
 	if ( $show ) {
 
-		if ( $destination === 'open-tool' ) {
+		if ( $destination === 'Open drawing tool' ) {
 			$exClass = " class='cta-headline'";
 			$arrow = NULL;
+			$ga_event_args = get_ga_event( array( 'CTA', 'Click on Home Page', $destination ), array( "Customize", "Open Tool" ) );
 		} else {
 			$exClass = NULL;
 			$arrow = "<i class='bonicons bi-chevron-right'></i>";
+
+			if ( $destination === 'Request a visit' )
+			{
+				$ga_event_args = get_ga_event( array( 'CTA', 'Click on Home Page', $destination ), array( "Contact", "Open Visit Request", "Home CTA" ) );
+			} else
+			{
+				$ga_event_args = get_ga_event( 'CTA', 'Click on Home Page', $destination );
+			}
 		}
-		$output = "<a href='$link' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick data-analytics-category='Home_CTA' data-analytics-action='" . $destination . "' data-analytics-selector='" . $destination . "'><span" . $exClass . ">" . $text . "</span>" . $arrow . "</a>";
+		$output = "<a href='$link' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick " . $ga_event_args . "><span" . $exClass . ">" . $text . "</span>" . $arrow . "</a>";
 		echo $output;
 	}
 
@@ -1937,25 +2074,24 @@ function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
 
 			$button_color = $cta['home_cta_color'];
 
-			if ( $visited != 3 ) {
-			//$onClick = '';
-				if ( $cta['enable_home_cta_page'] ) {
-					//$button_color = bon_get_option( 'cta_button_color', 'emerald' );
-					$destination = 'browse-all';
+			if ( $visited != 3 )
+			{
+				if ( $cta['enable_home_cta_page'] )
+				{
+					$destination = 'Browse all Cottages';
 					$link = get_permalink( $cta['home_cta_link_page'] );
-				}
-				if ( $cta['enable_home_cta_post'] ) {
-					//$button_color = bon_get_option( 'cta_button_color', 'emerald' );
-					$destination = 'open-post';
+				} else if ( $cta['enable_home_cta_post'] )
+				{
+					$destination = 'Open Post';
 					$link = get_permalink( $cta['home_cta_link_post'] );
-				}
-				if ( $cta['enable_home_cta_url'] ) {
-					//$button_color = bon_get_option( 'cta_button_color', 'emerald' );
-					$destination = 'custom-url';
+				} else if ( $cta['enable_home_cta_url'] )
+				{
+					$destination = 'Custom Link';
 					$link = $cta['home_cta_link_link_url'];
 				}
-			} else {
-				$destination = 'request-visit';
+			} else
+			{
+				$destination = 'Request a visit';
 				$link = '#visit-modal';
 				$onClick = "role='button' data-toggle='modal'";
 			}
@@ -1966,8 +2102,6 @@ function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
 		}
 
 	}
-
-	//var_dump($tool);
 
 	if ( $tool ) {
 
@@ -1980,7 +2114,7 @@ function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
 				if ( $subline != "" ) {
 					$cta['home_cta_text'] = $cta['home_cta_text'] . "</span><span class='cta-subline'>" . $subline;
 				}
-				$destination = 'open-tool';
+				$destination = 'Open drawing tool';
 				$link = bon_get_option( 'tool_section_cta_link_url' );
 				$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
 				if ( $_SESSION['layoutType'] === 'mobile' )
@@ -2007,7 +2141,7 @@ function shandora_tool_cta() {
 
 		$button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
 		$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
-		echo "<a href='$link' data-function='open-tool' class='flat button " . $button_color . " radius' $onClick>" . __( 'Build your own', 'bon' ) . "</a>";
+		echo "<a href='$link' data-function='open-tool' class='flat button " . $button_color . " radius' $onClick ". get_ga_event( "Customize", "Open Tool" ) . ">" . __( 'Build your own', 'bon' ) . "</a>";
 
 	}
 	

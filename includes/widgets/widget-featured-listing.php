@@ -35,11 +35,11 @@ class Shandora_Featured_Listing_Widget extends WP_Widget {
 		$widget_options = array(
 			'classname' => 'featured-listing',
 			'description' => esc_html__( 'Show featured property listing.', 'bon' )
-		);
+			);
 
 		/* Set up the widget control options. */
 		$control_options = array(
-		);
+			);
 
 		/* Create the widget. */
 		$this->WP_Widget(
@@ -47,7 +47,7 @@ class Shandora_Featured_Listing_Widget extends WP_Widget {
 				'Shandora Featured Listing', // $this->name
 				$widget_options, // $this->widget_options
 				$control_options  // $this->control_options
-		);
+				);
 	}
 
 	/**
@@ -84,90 +84,95 @@ class Shandora_Featured_Listing_Widget extends WP_Widget {
 							'key' => $prefix . 'listing_featured',
 							'value' => true,
 							'compare' => '=',
+							)
 						)
-					)
-				);
+					);
 				$featured_query = new WP_Query( $query );
 
 				if ( $featured_query->have_posts() ) : $i = 0;
-					?>
+				?>
 
-					<script>
-						jQuery(document).ready(function($) {
-							$('#<?php echo $this->id; ?>-slider').flexslider({
-								animation: "slide",
-								controlNav: false,
-								controlsContainer: "#<?php echo $this->id; ?>-nav"
-							});
-						});
-					</script>
-					<div id="<?php echo $this->id; ?>-nav" class="featured-listing-nav">
-					</div>
-					<div id="<?php echo $this->id; ?>-slider">
+				<script>
+				jQuery(document).ready(function($) {
+					$('#<?php echo $this->id; ?>-slider').flexslider({
+						animation: "slide",
+						controlNav: false,
+						controlsContainer: "#<?php echo $this->id; ?>-nav"
+					});
+				});
+				</script>
+				<div id="<?php echo $this->id; ?>-nav" class="featured-listing-nav">
+				</div>
+				<div id="<?php echo $this->id; ?>-slider">
 
-						<ul class="slides">
+					<ul class="slides">
 
-							<?php while ( $featured_query->have_posts() ) : $featured_query->the_post();
-								?>
-								<?php if ( $i == 0 ) : ?>
-									<li>
-									<?php endif; ?>
+						<?php while ( $featured_query->have_posts() ) : $featured_query->the_post();
+						?>
+						<?php if ( $i == 0 ) : ?>
+						<li>
+						<?php endif; ?>
 
-									<div class="featured-item">
-										<?php
-										if ( current_theme_supports( 'get-the-image' ) ) {
-											if ( $_SESSION['layoutType'] === 'mobile' ) {
-												$src = get_the_image( array( 'size' => 'mobile_regular', 'before' => '<div class="featured-image">', 'after' => '</div>' ) );
-											} else {
-												$src = get_the_image( array( 'size' => 'listing_medium', 'before' => '<div class="featured-image">', 'after' => '</div>' ) );
-											}
-										}
-										?>
-										<?php
-										// edited by Lech Dutkiewicz
-										$lotsize = shandora_get_meta( get_the_ID(), 'listing_lotsize' );
-										$sizemeasurement = bon_get_option( 'measurement' );
-										$price = shandora_get_meta( get_the_ID(), 'listing_price' );
-										$currency = bon_get_option( 'currency' );
-										?>
-										<span class="featured-item-meta hide-for-medium lotsize"><?php echo $lotsize . ' ' . $sizemeasurement; ?></span>
-										<span class="featured-item-meta hide-for-medium price"><?php echo $price . ' ' . $currency; ?></span>
-										<div class="featured-item-title">
-											<h2 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_title(); ?></a></h2>
-										</div>
-									</div>
-
-									<?php
-									$i++;
-									if ( $i == $args['per_slide'] ) : $i = 0;
-										?>
-									</li>
-								<?php endif; ?>
+						<div class="featured-item">
+							<?php
+							if ( current_theme_supports( 'get-the-image' ) ) { ?>
+							<a href="<?php echo get_the_permalink(); ?>" title="<?php the_title_attribute( array('before' => __('Permalink to ','bon') ) ); ?>" <?php the_ga_event( 'Cottage List', 'Pick single cottage', 'Featured' ); ?>>
 								<?php
-							endwhile;
-							?>
-							<?php if ( $i > 0 ) : ?>
-								</li>
-							<?php endif; ?>
-						</ul>
-
+								if ( $_SESSION['layoutType'] === 'mobile' ) {
+									$src = get_the_image( array( 'size' => 'mobile_regular', 'before' => '<div class="featured-image">', 'after' => '</div>', 'link_to_post' => false ) );
+								} else {
+									$src = get_the_image( array( 'size' => 'listing_medium', 'before' => '<div class="featured-image">', 'after' => '</div>', 'link_to_post' => false ) );
+								}
+								?>
+							</a>
+							<?php
+						}
+						?>
+						<?php
+										// edited by Lech Dutkiewicz
+						$lotsize = shandora_get_meta( get_the_ID(), 'listing_lotsize' );
+						$sizemeasurement = bon_get_option( 'measurement' );
+						$price = shandora_get_meta( get_the_ID(), 'listing_price' );
+						$currency = bon_get_option( 'currency' );
+						?>
+						<span class="featured-item-meta hide-for-small lotsize"><?php echo $lotsize . ' ' . $sizemeasurement; ?></span>
+						<span class="featured-item-meta hide-for-small price"><?php echo $price . ' ' . $currency; ?></span>
+						<div class="featured-item-title">
+							<h2 class="title"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_title(); ?></a></h2>
+						</div>
 					</div>
 
 					<?php
-				else:
+					$i++;
+					if ( $i == $args['per_slide'] ) : $i = 0;
+					?>
+				</li>
+			<?php endif; ?>
+			<?php
+			endwhile;
+			?>
+			<?php if ( $i > 0 ) : ?>
+		</li>
+	<?php endif; ?>
+</ul>
 
-					echo '<p>' . __( 'No property listing were found', 'bon' ) . '</p>';
+</div>
 
-				endif;
-				wp_reset_query();
-				?>
-			</div>
-		</div>
+<?php
+else:
 
-		<?php
-		/* Close the theme's widget wrapper. */
-		echo $after_widget;
-	}
+	echo '<p>' . __( 'No property listing were found', 'bon' ) . '</p>';
+
+endif;
+wp_reset_query();
+?>
+</div>
+</div>
+
+<?php
+/* Close the theme's widget wrapper. */
+echo $after_widget;
+}
 
 	/**
 	 * Updates the widget control options for the particular instance of the widget.
@@ -197,7 +202,7 @@ class Shandora_Featured_Listing_Widget extends WP_Widget {
 			'title' => esc_attr__( 'Featured Listing', 'bon' ),
 			'limit' => 10,
 			'per_slide' => 3,
-		);
+			);
 
 		/* Merge the user-selected arguments with the defaults. */
 		$instance = wp_parse_args( (array) $instance, $defaults );

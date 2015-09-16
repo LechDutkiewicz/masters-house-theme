@@ -823,7 +823,7 @@ function shandora_listing_entry_title() {
 		$price = '<a href="' . get_permalink( $post->ID ) . '" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '"><span class="price">' . shandora_get_listing_price( false ) . '</span></a>';
 	}
 
-	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title"><a href="' . get_permalink() . '" class="product-link" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '" data-analytics-category="pick a cottage" data-analytics-action="click title link" data-analytics-selector="listing_title_link">', '</a>' . $price . '</h3>', false ) );
+	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title"><a href="' . get_permalink() . '" class="product-link" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '" ' . get_ga_event( 'Cottage List', 'Pick single cottage', 'Title' ) . '>', '</a>' . $price . '</h3>', false ) );
 }
 
 /**
@@ -1930,8 +1930,8 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 									$newurl = $uri . '?' . $newurl . '&view=';
 								}
 								?>
-								<a class="view-button button blue flat view-grid <?php echo ( $view == 'grid' ) ? 'selected' : ''; ?> " href="<?php echo $newurl . 'grid'; ?>"><i class="bonicons bi-th"></i></a>
-								<a class="view-button button blue flat view-list <?php echo ( $view == 'list' ) ? 'selected' : ''; ?>" href="<?php echo $newurl . 'list'; ?>"><i class="bonicons bi-list"></i></a>
+								<a class="view-button button blue flat view-grid <?php echo ( $view == 'grid' ) ? 'selected' : ''; ?> " href="<?php echo $newurl . 'grid'; ?>" data-analytics-category="Cottage List" data-analytics-action="Switch View" data-analytics-label="grid"><i class="bonicons bi-th"></i></a>
+								<a class="view-button button blue flat view-list <?php echo ( $view == 'list' ) ? 'selected' : ''; ?>" href="<?php echo $newurl . 'list'; ?>" data-analytics-category="Cottage List" data-analytics-action="Switch View" data-analytics-label="list"><i class="bonicons bi-list"></i></a>
 							</div>
 							<div class="column large-9">
 								<form class="custom" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="get" id="orderform" name="orderform">
@@ -2175,7 +2175,7 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 							$phone_html = '<strong>';
 
 							if ( $_SESSION['layoutType'] == 'mobile' ) {
-								$phone_html .= '<a href="tel:' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '">';
+								$phone_html .= '<a href="tel:' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '"' . get_ga_event( "Contact", "Call", "Menu Bar" ) . '>';
 							}
 
 							$phone_html .= esc_attr( bon_get_option( 'hgroup1_content' ) );
@@ -2196,7 +2196,7 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 						<span class="sha-calendar"></span>
 					</div>
 					<span class="info-title"><?php echo bon_get_option( 'hgroup2_title' ); ?></span>
-					<span class="phone visit"><strong><a href='#visit-modal' role='button' data-toggle='modal' title="<?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?>"><?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?></a></strong></span>
+					<span class="phone visit"><strong><a href='#visit-modal' role='button' data-toggle='modal' title="<?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?>" <?php the_ga_event( "Contact", "Open Visit Request", "Menu Bar" ); ?>><?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?></a></strong></span>
 				</div>
 			<?php endif; ?>
 		</div>
@@ -2660,7 +2660,7 @@ if ( !function_exists( 'shandora_get_banner_opening_tag' ) ) {
 		$output = '';
 
 		if ( $page && $destination_page ) {
-			$output .= '<a href="' . get_the_permalink( $destination_page ) . '" class="hover-mask" title="' . __( 'Link to ', 'bon') . get_the_title( $destination_page) . '" data-analytics-category="home-banners" data-analytics-action="click-faq-banner" data-analytics-selector="faq-banner">';
+			$output .= '<a href="' . get_the_permalink( $destination_page ) . '" class="hover-mask" title="' . __( 'Link to ', 'bon') . get_the_title( $destination_page) . '"' . get_ga_event( "Banners", "Click", "FAQ Banner" ) . '>';
 			return $output;
 		}
 
@@ -2672,7 +2672,7 @@ if ( !function_exists( 'shandora_get_banner_opening_tag' ) ) {
 
 				$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
 
-				$output .= "<a href='$link' data-function='open-tool' class='hover-mask' $onClick data-analytics-category='home-banners' data-analytics-action='click-tool-banner' data-analytics-selector='tool-banner'>";
+				$output .= "<a href='$link' data-function='open-tool' class='hover-mask' $onClick " . get_ga_event( array( "Banners", "Click", "Tool Banner" ), array( "Customize", "Open Tool" ) ) . ">";
 				return $output;
 			}
 
@@ -2680,7 +2680,7 @@ if ( !function_exists( 'shandora_get_banner_opening_tag' ) ) {
 
 		if ( $modal && $destination_modal ) {
 
-			$output .= "<a href='#" . $destination_modal . "-modal' role='button' data-toggle='modal' class='hover-mask' title='" . __( 'Open window with more information', 'bon') . "' data-analytics-category='home-banners' data-analytics-action='click-quality-banner' data-analytics-selector='quality-banner'>";
+			$output .= "<a href='#" . $destination_modal . "-modal' role='button' data-toggle='modal' class='hover-mask' title='" . __( 'Open window with more information', 'bon') . "'" . get_ga_event( "Banners", "Click", "Quality Banner" ) . ">";
 			return $output;
 
 		}
