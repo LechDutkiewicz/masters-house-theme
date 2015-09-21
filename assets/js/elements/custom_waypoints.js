@@ -8,40 +8,40 @@
 
 	var startWaypoint = function(selector) {
 
+		var bannersSlider = $("#banners-slider");
+		var difference = 0;
+
+		if ( bannersSlider )
+		{
+			// fix offset position of there is banners slider on the page, which affects window height
+			var imgHeight = bannersSlider.find('img').height(),
+			sliderHeight = bannersSlider.height();
+			difference = sliderHeight - imgHeight;
+		}
+
 		var waypoint = new Waypoint({
 			element: selector,
 			handler: function() {
 				$('.service-container').each(function(k){
-					var el = $(this),
-					animation;
-
-					if ( k%2 === 1) {
-						animation = 'bounceInRight';
-					} else {
-						animation = 'bounceInLeft';
-					}
+					var el = $(this);
 
 					setTimeout(function () {
-						el.addClass('animated ' + animation).css({
+						el.find('.like-h4').addClass('animated bounceIn').css({
 							'opacity': 1
-						}, 1000).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-							el.find('.like-h4').addClass('animated zoomIn').css({
-								'opacity': 1
-							});
 						});
 					}, k * 1000 );
 				});
 			},
-			offset: $(window).height() / 2
+			offset: $(window).height() / 1.5 + difference
 		});
 
 	};
 
 // Animation for services container
 
-var servicesContainer = document.getElementsByClassName('services-container');
+var servicesContainer = document.getElementById('services-container');
 
-if ( servicesContainer.length > 0 ) {
+if ( servicesContainer ) {
 
 	startWaypoint( servicesContainer );
 
