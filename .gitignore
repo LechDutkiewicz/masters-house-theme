@@ -1,12 +1,14 @@
 # exclude old versions modules
 *.old.*
 
-# exclude node modules
+# exclude node modules and bower components
 node_modules
+bower_components
 
 # exclude development js files
 assets/js/custom.js
 assets/js/scripts.js
 assets/js/framework.js
+assets/js/_old/*
 assets/js/elements/*
 assets/js/foundation/*
