@@ -91,19 +91,10 @@ class Shandora_Featured_Listing_Widget extends WP_Widget {
 
 				if ( $featured_query->have_posts() ) : $i = 0;
 				?>
-
-				<script>
-				jQuery(document).ready(function($) {
-					$('#<?php echo $this->id; ?>-slider').flexslider({
-						animation: "slide",
-						controlNav: false,
-						controlsContainer: "#<?php echo $this->id; ?>-nav"
-					});
-				});
-				</script>
+				
 				<div id="<?php echo $this->id; ?>-nav" class="featured-listing-nav">
 				</div>
-				<div id="<?php echo $this->id; ?>-slider">
+				<div id="<?php echo $this->id; ?>-slider" class="flexslider" data-animation="slide" data-control-nav="false" data-controls-container="<?php echo $this->id; ?>-nav">
 
 					<ul class="slides">
 

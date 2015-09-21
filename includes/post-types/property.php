@@ -1045,6 +1045,8 @@ if ( !function_exists( 'shandora_setup_casestudy_post_type' ) ) {
 
 		$prefix = bon_get_prefix();
 
+		$suffix = SHANDORA_MB_SUFFIX;
+
 		$cpt = $bon->cpt();
 
 		$name = __( 'Village cottage', 'bon_admin' );
@@ -1073,6 +1075,12 @@ if ( !function_exists( 'shandora_setup_casestudy_post_type' ) ) {
 		// 	);
 
 		$prop_options_2 = array(
+			array(
+				'label' => __( 'Listings Gallery', 'bon_admin' ),
+				'desc' => __( 'Choose image to use in this listing gallery.', 'bon_admin' ),
+				'id' => $prefix . $suffix . 'gallery',
+				'type' => 'gallery',
+				),
 			array(
 				'label' => __( 'Related cottage', 'bon_admin' ),
 				'desc' => __( 'Pick cottage if theres a related one', 'bon_admin' ),

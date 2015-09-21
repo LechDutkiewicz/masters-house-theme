@@ -88,6 +88,8 @@ function shandora_setup_theme_hook() {
 
 	// removed by Lech Dutkiewicz add_action("{$prefix}after_single_entry_content", "shandora_listing_meta", 5);
 
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_addon", 8 );
+
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 9 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_services", 10 );
@@ -864,7 +866,7 @@ function shandora_listing_gallery() {
 */
 function shandora_listing_meta() {
 
-	if ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) || shandora_get_meta( get_the_ID(), 'listing_enable_construction' ) ) {
+	if ( $_SESSION['layoutType'] !== 'mobile' && ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) || shandora_get_meta( get_the_ID(), 'listing_enable_construction' ) ) ) {
 
 		?>
 
@@ -887,7 +889,7 @@ function shandora_listing_meta() {
 */
 function shandora_listing_packages() {
 
-	if ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) ) {
+	if ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) && $_SESSION['layoutType'] !== 'mobile' ) {
 
 		?>
 
@@ -931,10 +933,7 @@ function shandora_listing_addon() {
 	?>
 
 	<div class="price-included row padding-medium top bottom">
-		<?php
-	//bon_get_template_part('block',  ( is_singular( 'product' ) ? 'carlistingmeta' : 'listingmeta' ) ); 
-		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'addon' );
-		?>
+		<?php bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'addon' ); ?>
 	</div>
 
 	<?php
@@ -1333,9 +1332,13 @@ function shandora_listing_related() {
 *
 */
 function shandora_listing_faq() {
-	if ( is_singular( 'listing' ) ) {
+
+	if ( is_singular( 'listing' ) && $_SESSION['layoutType'] !== 'mobile' ) {
+
 		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'faq' );
+
 	}
+
 }
 
 /**
@@ -1346,9 +1349,13 @@ function shandora_listing_faq() {
 *
 */
 function shandora_listing_cta() {
-	if ( is_singular( 'listing' ) ) {
+
+	if ( is_singular( 'listing' ) && $_SESSION['layoutType'] !== 'mobile' ) {
+
 		bon_get_template_part( 'block', 'block-cta' );
+
 	}
+	
 }
 
 /**
@@ -1482,12 +1489,15 @@ function shandora_post_related() {
 *
 */
 function shandora_listing_toolsection() {
+
 	$display = bon_get_option( 'tool_section_display' );
-	if ( $display === '1' ) {
+
+	if ( $display === '1' && $_SESSION['layoutType'] !== 'mobile' ) {
 		if ( is_singular( 'listing' ) ) {
 			bon_get_template_part( 'block', 'block-toolsection' );
 		}
 	}
+
 }
 
 /**
@@ -1499,8 +1509,10 @@ function shandora_listing_toolsection() {
 */
 
 function shandora_home_banners_slider() {
-	if ( bon_get_option( 'home_banners' ) )
+
+	if ( bon_get_option( 'home_banners' ) && $_SESSION['layoutType'] !== 'mobile' )
 		bon_get_template_part( 'block', 'block-banners-slider' );
+
 }
 
 /**
@@ -1560,7 +1572,11 @@ function shandora_home_we_are() { ?>
 *
 */
 function shandora_quality_section() {
-	bon_get_template_part( 'block', 'block-quality-section' );
+
+	if ( $_SESSION['layoutType'] !== 'mobile' ) {
+		bon_get_template_part( 'block', 'block-quality-section' );
+	}
+
 }
 
 /**
@@ -1644,6 +1660,9 @@ if ( !function_exists( 'shandora_document_info' ) ) {
 	function shandora_document_info() {
 		?>
 		<!DOCTYPE html>
+		<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="<?php echo trailingslashit( BON_JS ) . 'frontend/jquery.selectivizr.min.js'; ?>"></script>
+		<![endif]-->
 		<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 		<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 		<!--[if (gte IE 9)|!(IE)]><!-->
@@ -2554,7 +2573,7 @@ if ( !function_exists( 'open_testimonials_slider_container' ) ) {
 
 				function open_testimonials_slider( $loop ) { ?>
 
-				<ul class="slides testimonial-slides <?php if ( $loop->post_count > 1 ) { echo 'bxslider-thumbs-only autostart'; } ?>"<?php if ( $loop->post_count > 1 ) { echo 'data-pause="8000" data-pager="testimonials-pager"'; } ?>>
+				<ul class="slides testimonial-slides <?php if ( $loop->post_count > 1 ) { echo $_SESSION['layoutType'] !== 'mobile' ? 'bxslider-thumbs-only autostart' : 'bxslider-no-thumb-no-controls autostart'; } ?>"<?php if ( $loop->post_count > 1 ) { echo 'data-pause="8000" data-pager="testimonials-pager"'; } ?>>
 
 					<?php }
 
