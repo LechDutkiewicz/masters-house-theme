@@ -1,0 +1,24 @@
+{
+  "name": "Shandora",
+  "version": "1.0.0",
+  "authors": [
+    "Lech Dutkiewicz <lechdutkiewicz@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor"
+  ],
+  "dependencies": {
+    "modernizr": "2.6.2",
+    "waypoints": "3.1.1",
+    "flexslider": "2.5.0",
+    "bxslider-4": "4.2.5",
+    "bootstrap": "3.3.2",
+    "jquery-easing": "",
+    "jqueryui-touch-punch": "",
+    "jquery-dotimeout": ""
+  }
+}
