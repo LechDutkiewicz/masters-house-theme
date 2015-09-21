@@ -19,28 +19,28 @@ function bon_scripts() {
   if (!is_admin()) {
 
     $bon_frontend_scripts = apply_filters( 'bon_frontend_scripts', array(
-      'modernizr'        => array(
-                              'src' => 'frontend/modernizr.min.js',
-                              'version' => '2.6.2',
-                              'footer' => false,
-                            ),
-      'easing'           => array(
-                              'src' => 'frontend/jquery.easing.min.js',
-                              'dep' => array( 'jquery' ),
-                              'footer' => false,
-                            ),
-      'fitvids'          => array(
-                              'src' => 'frontend/jquery.fitvids.min.js',
-                              'dep' => array( 'jquery' ),
-                            ),
-      'gallery-carousel' => array(
-							  'src' => 'frontend/gallery-carousel.min.js',
-                              'dep' => array( 'jquery' ),
-                              'enqueue' => false,
-                            ),
-      'selectivizr'      => array(
-                              'src' => 'frontend/selectivizr.min.js',
-                            ),
+      // 'modernizr'        => array(
+      //                         'src' => 'frontend/modernizr.min.js',
+      //                         'version' => '2.6.2',
+      //                         'footer' => false,
+      //                       ),
+      // 'easing'           => array(
+      //                         'src' => 'frontend/jquery.easing.min.js',
+      //                         'dep' => array( 'jquery' ),
+      //                         'footer' => false,
+      //                       ),
+      // 'fitvids'          => array(
+      //                         'src' => 'frontend/jquery.fitvids.min.js',
+      //                         'dep' => array( 'jquery' ),
+      //                       ),
+      // 'gallery-carousel' => array(
+						// 	  'src' => 'frontend/gallery-carousel.min.js',
+      //                         'dep' => array( 'jquery' ),
+      //                         'enqueue' => false,
+      //                       ),
+      // 'selectivizr'      => array(
+      //                         'src' => 'frontend/selectivizr.min.js',
+      //                       ),
 
     ));
 
@@ -50,20 +50,20 @@ function bon_scripts() {
        wp_enqueue_script('bootstrap');
     }
 
-    if( current_theme_supports('zurb-foundation') ) {
-      $zurb = get_theme_support('zurb-foundation');
-      if(isset($zurb[0]) && is_array($zurb[0])) {
-        foreach($zurb[0] as $zurb_part) {
-          if($zurb_part == 'foundation') {
-            wp_register_script( 'zf-'.$zurb_part, BON_THEME_URI . '/assets/js/foundation/'.$zurb_part.'.js', array('jquery'), '5', true );
-          }
-          else {
-            wp_register_script( 'zf-'.$zurb_part, BON_THEME_URI . '/assets/js/foundation/foundation.'.$zurb_part.'.js', array('jquery'), '5', true );
-          }
-          wp_enqueue_script('zf-'.$zurb_part);
-        }
-      }
-    }
+    // if( current_theme_supports('zurb-foundation') ) {
+    //   $zurb = get_theme_support('zurb-foundation');
+    //   if(isset($zurb[0]) && is_array($zurb[0])) {
+    //     foreach($zurb[0] as $zurb_part) {
+    //       if($zurb_part == 'foundation') {
+    //         wp_register_script( 'zf-'.$zurb_part, BON_THEME_URI . '/assets/js/foundation/'.$zurb_part.'.js', array('jquery'), '5', true );
+    //       }
+    //       else {
+    //         wp_register_script( 'zf-'.$zurb_part, BON_THEME_URI . '/assets/js/foundation/foundation.'.$zurb_part.'.js', array('jquery'), '5', true );
+    //       }
+    //       wp_enqueue_script('zf-'.$zurb_part);
+    //     }
+    //   }
+    // }
 
     // comment reply script for threaded comments
     if ( is_singular() AND !is_front_page() AND comments_open() AND (get_option('thread_comments') == 1)) {
