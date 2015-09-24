@@ -600,7 +600,6 @@ jQuery(document).ready( function($) {
 		});
 
 		if ( getUserSetting( settingName ) ) {
-			console.log("hola datevid");
 			$('a[href="#' + taxonomy + '-pop"]', '#' + taxonomy + '-tabs').click();
 		}
 

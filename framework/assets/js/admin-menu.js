@@ -155,7 +155,6 @@ jQuery(document).ready(function($){
                     click: function(e){
                         var mceContent = tinymce.activeEditor.getContent();
 
-                        console.log(mceContent);
                         textarea.val(mceContent);
                         $(this).dialog('close');
                     } 

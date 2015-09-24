@@ -79,9 +79,22 @@ class BON_Metabox {
 				bon_find_field_type( 'chosen', $this->fields ),
 				bon_find_field_type( 'post_chosen', $this->fields )
 			) ) ) {
-				wp_register_script( 'bon-chosen', BON_JS . '/chosen.js', array( 'jquery' ) );
+				wp_register_script( 'bon-chosen', BON_JS . '/chosen.min.js', array( 'jquery' ) );
 				$deps[] = 'bon-chosen';
 				wp_enqueue_style( 'bon-chosen', BON_CSS . '/chosen.css' );
+			}
+			if ( bon_find_field_type( 'upload', $this->fields ) ) {
+				if ( function_exists( 'wp_enqueue_media' ) )
+					wp_enqueue_media();
+					wp_register_script( 'bon-media-uploader', BON_JS . '/media-uploader.js', array( 'jquery' ) );
+
+					wp_enqueue_script( 'bon-media-uploader' );
+
+					wp_localize_script( 'bon-media-uploader', 'optionsframework_l10n', array(
+					'upload' => __( 'Upload', 'bon' ),
+					'remove' => __( 'Remove', 'bon' )
+				) );
+				$deps[] = 'bon-media-uploader';
 			}
 			if ( bon_find_field_type( 'color', $this->fields ) ) {
 
@@ -156,7 +169,8 @@ class BON_Metabox {
 			}
 			
 			wp_enqueue_style( 'bon-jqueryui' );
-			wp_enqueue_style( 'bon-meta-box', BON_CSS . '/metabox.css', $css_deps, '1.0', 'all' ); 
+			wp_enqueue_style( 'bon-meta-box', BON_CSS . '/metabox.css', $css_deps, '1.0', 'all' );
+			wp_enqueue_style( 'bon-admin', BON_CSS . '/admin.css' );
 		}
 	}
 	

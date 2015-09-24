@@ -1,6 +1,7 @@
 (function($) {
     $(document).ready(function() {
         function optionsframework_add_file(event, selector) {
+
             var upload = $(".uploaded-file"),
             frame;
             var $el = $(this);
@@ -34,6 +35,7 @@
         }
 
         function optionsframework_remove_file(selector) {
+            
             selector.find('.remove-image').hide();
             selector.find('.upload').val('');
             selector.find('.of-background-properties').hide();
@@ -48,30 +50,41 @@
         }
 
         function optionsframework_file_bindings(event, selector) {
-
+            
             if ( event === "add" && selector )
             {
 
                 selector.on('click', function() {
 
-                    optionsframework_remove_file($(this).parents('.section'))
+                    var selector = $(this).parents('.section').length > 0 ? $(this).parents('.section') : $(this).parents('td');
+                    optionsframework_remove_file(selector);
+
                 });
 
             } else if ( event === "remove" && selector )
             {
 
                 selector.on('click', function(event) {
-                    optionsframework_add_file(event, $(this).parents('.section'));
+
+                    var selector = $(this).parents('.section').length > 0 ? $(this).parents('.section') : $(this).parents('td');
+                    optionsframework_add_file(event, selector);
+
                 });
 
             } else
             {
 
                 $('.remove-image, .remove-file').on('click', function() {
-                    optionsframework_remove_file($(this).parents('.section'))
+                    
+                    var selector = $(this).parents('.section').length > 0 ? $(this).parents('.section') : $(this).parents('td');
+                    optionsframework_remove_file(selector);
+
                 });
                 $('.upload-button').click(function(event) {
-                    optionsframework_add_file(event, $(this).parents('.section'))
+                    
+                    var selector = $(this).parents('.section').length > 0 ? $(this).parents('.section') : $(this).parents('td');
+                    optionsframework_add_file(event, selector);
+
                 });
 
             }

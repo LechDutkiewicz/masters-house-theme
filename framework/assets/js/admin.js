@@ -387,7 +387,6 @@
 				
 				// loop through the selected files
 				selection.each( function( attachment ) {
-					console.log(attachment);
 					var src = attachment.attributes.url;
 					var id = attachment.id;
 					
@@ -431,7 +430,6 @@
 					 theme : 'default',
 				     mode : 'text/css'
 				});
-				console.log(css_editor);
 			}
 			
 
