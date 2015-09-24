@@ -2615,3 +2615,60 @@ function get_image_sizes( $size = '' ) {
 
 	return $sizes;
 }
+
+// function to list all 360 view items list
+function get_360_view_items() {	
+
+// create empty array
+	$output = array();
+
+	if (WP_ENV === 'production') {
+
+		$handle = opendir( $_SERVER['DOCUMENT_ROOT'] . '/360-view' );
+		
+	}
+	if ($handle) {
+
+		while (false !== ($file = readdir($handle))) {
+			$folder_path = $_SERVER['DOCUMENT_ROOT'] . '/360-view/' . $file;
+			if ( $file != "." && $file != ".." && is_dir($folder_path)) {
+				$folder = array(
+					$file => $folder_path
+					);
+				$output[$file] = $file;
+			}
+		}
+
+		closedir($handle);
+	}
+
+	return $output;
+
+}
+
+// Rotate 13 encrypting emails
+
+function encrypt_email( $email = null ) { ?>
+
+<script type="text/javascript">
+document.write("<?php coded_email($email); ?>".replace(/[a-zA-Z]/g, function(c){
+	return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);
+})
+);
+</script>
+
+<?php }
+
+function coded_email( $email = null ) {
+	echo get_coded_email ($email);
+
+}
+
+function get_coded_email( $email = null ) {
+
+	$email = $email ? $email : get_field('blog_root_email', 'options');
+
+	$output = str_rot13("<a href='mailto: " . $email . "'>" . $email . "</a><br />");
+
+	return $output;
+}

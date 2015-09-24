@@ -638,7 +638,7 @@ if ( !function_exists( 'shandora_setup_agent_post_type' ) ) {
 		$plural = __( 'Agents', 'bon_admin' );
 
 
-		$cpt->create( 'Agent', array( 'supports' => array( 'editor', 'title' ), 'exclude_from_search' => true, 'menu_position' => 20, 'menu_icon' => 'dashicons-businessman' ), array(), $name, $plural );
+		$cpt->create( 'Agent', array( 'supports' => array( 'title', 'page-attributes', 'thumbnail' ), 'exclude_from_search' => true, 'menu_position' => 20, 'menu_icon' => 'dashicons-businessman' ), array(), $name, $plural );
 
 
 		$agent_opt1 = array(
@@ -649,29 +649,35 @@ if ( !function_exists( 'shandora_setup_agent_post_type' ) ) {
 				'type' => 'text',
 				),
 			array(
-				'label' => __( 'Facebook Username', 'bon_admin' ),
+				'label' => __( 'Area of representation', 'bon_admin' ),
 				'desc' => '',
-				'id' => $prefix . 'agentfb',
+				'id' => $prefix . 'agentarea',
 				'type' => 'text',
 				),
-			array(
-				'label' => __( 'Twitter Username', 'bon_admin' ),
-				'desc' => '',
-				'id' => $prefix . 'agenttw',
-				'type' => 'text',
-				),
-			array(
-				'label' => __( 'LinkedIn Username', 'bon_admin' ),
-				'desc' => '',
-				'id' => $prefix . 'agentlinkedin',
-				'type' => 'text',
-				),
-			array(
-				'label' => __( 'Agent Profile Photo', 'bon_admin' ),
-				'desc' => '',
-				'id' => $prefix . 'agentpic',
-				'type' => 'image',
-				),
+			// array(
+			// 	'label' => __( 'Facebook Username', 'bon_admin' ),
+			// 	'desc' => '',
+			// 	'id' => $prefix . 'agentfb',
+			// 	'type' => 'text',
+			// 	),
+			// array(
+			// 	'label' => __( 'Twitter Username', 'bon_admin' ),
+			// 	'desc' => '',
+			// 	'id' => $prefix . 'agenttw',
+			// 	'type' => 'text',
+			// 	),
+			// array(
+			// 	'label' => __( 'LinkedIn Username', 'bon_admin' ),
+			// 	'desc' => '',
+			// 	'id' => $prefix . 'agentlinkedin',
+			// 	'type' => 'text',
+			// 	),
+			// array(
+			// 	'label' => __( 'Agent Profile Photo', 'bon_admin' ),
+			// 	'desc' => '',
+			// 	'id' => $prefix . 'agentpic',
+			// 	'type' => 'image',
+			// 	),
 			array(
 				'label' => __( 'Email Address', 'bon_admin' ),
 				'desc' => '',
@@ -690,12 +696,12 @@ if ( !function_exists( 'shandora_setup_agent_post_type' ) ) {
 				'id' => $prefix . 'agentmobilephone',
 				'type' => 'text',
 				),
-			array(
-				'label' => __( 'Fax Number', 'bon_admin' ),
-				'desc' => '',
-				'id' => $prefix . 'agentfax',
-				'type' => 'text',
-				),
+			// array(
+			// 	'label' => __( 'Fax Number', 'bon_admin' ),
+			// 	'desc' => '',
+			// 	'id' => $prefix . 'agentfax',
+			// 	'type' => 'text',
+			// 	),
 			);
 
 
@@ -1089,6 +1095,16 @@ if ( !function_exists( 'shandora_setup_casestudy_post_type' ) ) {
 				'type' => 'post_chosen'
 				),
 			);
+
+		if (WP_ENV === 'production') {
+			$prop_options_2[] = array(
+				'label' => __( '360 view', 'bon_admin' ),
+				'desc' => __( 'Upload files and folders', 'bon_admin' ),
+				'id' => $prefix . $suffix . '360_view',
+				'type' => 'chosen',
+				'options' => array_merge( array( '' => __( 'Select One', 'bon_admin' ) ), get_360_view_items() )
+				);
+		}
 
 		$cpt->add_meta_box(
 			'building', 'Building', $prop_options_2

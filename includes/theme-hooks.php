@@ -20,6 +20,8 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}before_loop", "shandora_open_main_content_row", 5 );
 
+		add_action( "{$prefix}before_loop", "shandora_open_360_iframe", 7 );
+
 		add_action( "{$prefix}before_loop", "shandora_get_left_sidebar", 10 );
 
 		add_action( "{$prefix}before_loop", "shandora_open_main_content_column", 15 );
@@ -1806,6 +1808,18 @@ if ( !function_exists( 'shandora_open_main_content_row' ) ) {
 
 }
 
+if ( !function_exists( 'shandora_open_360_iframe' ) ) {
+
+	function shandora_open_360_iframe() {
+
+		$virtual_tour = shandora_get_meta( get_the_ID(), 'listing_360_view' );
+		if ($virtual_tour) {
+			bon_get_template_part( 'block', 'virtual-tour');
+		}
+	}
+
+}
+
 if ( !function_exists( 'shandora_get_left_sidebar' ) ) {
 
 
@@ -1816,7 +1830,7 @@ if ( !function_exists( 'shandora_get_left_sidebar' ) ) {
 		}
 		if ( $layout == '2c-r' ) {
 
-			if ( get_post_type() == 'listing' || get_post_type() == 'product' || get_post_type() == 'promotions' ||
+			if ( get_post_type() == 'listing' || get_post_type() == 'product' || get_post_type() == 'promotions' || get_post_type() == 'portfolio' ||
 				is_page_template( 'page-templates/page-template-all-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-all-car-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-search-car-listings.php' ) ||
@@ -2059,14 +2073,15 @@ if ( !function_exists( 'shandora_get_right_sidebar' ) ) {
 
 		if ( $layout == '2c-l' ) {
 
-			if ( get_post_type() == 'listing' || get_post_type() == 'product' || get_post_type() == 'promotions' ||
+			if ( get_post_type() == 'listing' || get_post_type() == 'product' || get_post_type() == 'promotions' || get_post_type() == 'portfolio' ||
 				is_page_template( 'page-templates/page-template-all-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-all-car-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-search-car-listings.php' ) ||
 				is_page_template( 'page-templates/page-template-property-status.php' ) ||
 				is_page_template( 'page-templates/page-template-car-status.php' ) ||
 				is_page_template( 'page-templates/page-template-search-listings.php' ) ||
-				is_page_template( 'page-templates/page-template-testimonials.php' )  ) {
+				is_page_template( 'page-templates/page-template-testimonials.php' ) ||
+				is_page_template( 'page-templates/page-template-team.php' ) ) {
 
 				get_sidebar( 'secondary' );
 
@@ -2078,7 +2093,7 @@ if ( !function_exists( 'shandora_get_right_sidebar' ) ) {
 
 			get_sidebar( 'woocommerce' );
 
-		} else if ( !is_page_template( 'page-templates/page-template-village-map.php' ) ) {
+		} else if ( !is_page_template( 'page-templates/page-template-village-map.php' ) && get_post_type() != 'portfolio' ) {
 
 			get_sidebar( 'primary' );
 

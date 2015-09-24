@@ -311,25 +311,30 @@ if (!function_exists('shandora_listing_custom_columns')) {
  * Defining new table column in All Polls View
  * 
  **/
-if (!function_exists('shandora_faq_custom_columns')) {
+if (!function_exists('shandora_custom_order_columns')) {
 
-	function shandora_faq_custom_columns($columns)
+	function shandora_custom_order_columns($columns)
 	{
 
 		$columns = array(
 			"cb" => "<input type=\"checkbox\" />",
-			"title" => __('Poll Title', 'bon'),
+			"title" => __('Title', 'bon'),
 			"order" => __('Order', 'bon')
 			);
 
 		return $columns;
 	}
 
-	add_filter("manage_edit-faq_columns", "shandora_faq_custom_columns");
+	add_filter("manage_edit-faq_columns", "shandora_custom_order_columns");
+	add_filter("manage_edit-additional-service_columns", "shandora_custom_order_columns");
+	add_filter("manage_edit-agent_columns", "shandora_custom_order_columns");
+	add_filter("manage_edit-addon_columns", "shandora_custom_order_columns");
+	add_filter("manage_edit-home-feature_columns", "shandora_custom_order_columns");
+	add_filter("manage_edit-testimonial_columns", "shandora_custom_order_columns");
 
 }
 
-function faq_sortable_columns($columns)
+function order_sortable_columns($columns)
 {
 
 	$columns['order'] = 'menu_order';
@@ -338,11 +343,11 @@ function faq_sortable_columns($columns)
 }
 
 /* Sorts the movies. */
-function shandora_sort_faq($vars)
+function shandora_sort_order($vars)
 {
 
-	/* Check if we're viewing the 'movie' post type. */
-	if (isset($vars['post_type']) && 'faq' == $vars['post_type']) {
+	/* Check if we're viewing the correct post type. */
+	if (isset($vars['post_type'])) {
 
 		/* Check if 'orderby' is set to 'duration'. */
 		if (isset($vars['orderby']) && 'menu_order' == $vars['orderby']) {
@@ -358,14 +363,19 @@ function shandora_sort_faq($vars)
 }
 
 /* Only run our customization on the 'edit.php' page in the admin. */
-add_action('load-edit.php', 'shandora_faq_custom_columns');
+add_action('load-edit.php', 'my_edit_order_load');
 
-function my_edit_faq_load()
+function my_edit_order_load()
 {
-	add_filter('request', 'shandora_sort_faq');
+	add_filter('request', 'shandora_sort_order');
 }
 
-add_filter('manage_edit-faq_sortable_columns', 'faq_sortable_columns');
+add_filter('manage_edit-faq_sortable_columns', 'order_sortable_columns');
+add_filter('manage_edit-additional-service_sortable_columns', 'order_sortable_columns');
+add_filter('manage_edit-agent_sortable_columns', 'order_sortable_columns');
+add_filter('manage_edit-addon_sortable_columns', 'order_sortable_columns');
+add_filter('manage_edit-home-feature_sortable_columns', 'order_sortable_columns');
+add_filter('manage_edit-testimonial_sortable_columns', 'order_sortable_columns');
 
 /**
  * 
