@@ -6,7 +6,7 @@
 
 		$.doTimeout( 'scroll', 250, function(){
 
-			var distanceTop = ( $(document).height() / 2 ),
+			var distanceTop = ( $(document).height() / 4 ) - $(window).height(),
 			slideboxHeight = slidebox.outerHeight();
 
 			if ($(window).scrollTop() > distanceTop)
