@@ -750,15 +750,15 @@ $this->default_keys = apply_filters( 'bon_nav_menu_option_key_defaults' , $this-
 	 */
 	function frontend_scripts() {
 
-		if (WP_ENV !== 'production') {
+		// if (WP_ENV !== 'production') {
 
-			wp_register_style( 'bon-advanced-menu', trailingslashit( BON_CSS ) . 'frontend/menu.css', '', '1.0', 'screen' );
-			wp_enqueue_style( 'bon-advanced-menu' );
+		// 	wp_register_style( 'bon-advanced-menu', trailingslashit( BON_CSS ) . 'frontend/menu.css', '', '1.0', 'screen' );
+		// 	wp_enqueue_style( 'bon-advanced-menu' );
 
-		}
+		// }
 
-		wp_register_script( 'bon-advanced-menu', trailingslashit( BON_JS ) . 'frontend/menu.js', array('jquery', 'hoverIntent'), '1.0', true );
-		wp_enqueue_script( 'bon-advanced-menu' );
+		// wp_register_script( 'bon-advanced-menu', trailingslashit( BON_JS ) . 'frontend/menu.js', array('jquery', 'hoverIntent'), '1.0', true );
+		// wp_enqueue_script( 'bon-advanced-menu' );
 
 	}
 
