@@ -2624,11 +2624,13 @@ function get_360_view_items() {
 
 	if (WP_ENV === 'production') {
 
-		if ( file_exists( $_SERVER['DOCUMENT_ROOT'] . '/360-view' ) ) {
+		if ( file_exists( $_SERVER['DOCUMENT_ROOT'] . '/360-view' ) )
+		{
 
 			$handle = opendir( $_SERVER['DOCUMENT_ROOT'] . '/360-view' );
 
-		} else {
+		} else
+		{
 
 			mkdir( $_SERVER['DOCUMENT_ROOT'] . '/360-view' );
 
