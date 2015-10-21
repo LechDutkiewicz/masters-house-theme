@@ -1274,7 +1274,7 @@ $options[] = array( 'slug' => 'bon_options',
 			'label' => __( 'How many listing per row in mobile view?', 'bon' ),
 			'desc' => __( 'Set the listing per row in mobile view.', 'bon' ),
 			'id' => 'mobile_layout',
-			'std' => '2',
+			'std' => '1',
 			'type' => 'select',
 			'options' => array(
 				'1' => '1',
