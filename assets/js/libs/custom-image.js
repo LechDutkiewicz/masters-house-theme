@@ -1,13 +1,17 @@
 var image_field;
-jQuery(function($) {
+(function($) {
     $(document).on('click', 'input.select-img', function(evt) {
         image_field = $(this).siblings('.img');
         tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
         return false;
     });
+
     window.send_to_editor = function(html) {
-        imgurl = $('img', html).attr('src');
+        console.log(html);
+        imgurl = $(html).attr('src');
+        console.log(imgurl);
+        console.log('dzialam');
         image_field.val(imgurl);
         tb_remove();
     }
-});
+})(jQuery);
