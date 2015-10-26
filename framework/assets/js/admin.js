@@ -445,7 +445,6 @@
 				});
 			}
 			if($('#google_analytics').length > 0) {
-				/* JS */
 				var analytics = CodeMirror.fromTextArea(document.getElementById('google_analytics'), {
 					 lineNumbers : true,
 					 matchBrackets: true,
@@ -453,6 +452,16 @@
 					 onBlur : function() { analytics.save();},
 					 theme : 'default',
 				     mode : 'text/javascript'
+				});
+			}
+			if($('#google_adwords').length > 0) {
+				var adwords = CodeMirror.fromTextArea(document.getElementById('google_adwords'), {
+					 lineNumbers : true,
+					 matchBrackets: true,
+					 autoClearEmptyLines : false,
+					 onBlur : function() { adwords.save();},
+					 theme : 'default',
+				     mode : 'htmlmixed'
 				});
 			}
 			if($('#conversion_code').length > 0) {

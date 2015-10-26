@@ -2206,19 +2206,7 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 								$phone_html .= '<strong>' . $number . '</strong>';
 							}
 						} else {
-							$phone_html = '<strong>';
-
-							if ( $_SESSION['layoutType'] == 'mobile' ) {
-								$phone_html .= '<a href="tel:' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '"' . get_ga_event( "Contact", "Call", "Menu Bar" ) . '>';
-							}
-
-							$phone_html .= esc_attr( bon_get_option( 'hgroup1_content' ) );
-							
-							if ( $_SESSION['layoutType'] == 'mobile' ) {
-								$phone_html .='</a>';
-							}
-
-							$phone_html .='</strong>';
+							$phone_html .= get_formatted_phone_number();
 						}
 						?>
 						<span class="phone phone-<?php echo $phone_count; ?>"><?php echo $phone_html; ?></span>
@@ -2626,7 +2614,7 @@ if ( !function_exists( 'render_single_testimonial' ) ) {
 				<?php if ( shandora_is_home() ) : ?>
 				<div class="column large-2 blank"></div>
 			<?php endif; ?>
-			<div class="testimonial column large-<?php echo shandora_is_home() ? '8' : '12'; ?> text-center">
+			<div class="testimonial column large-<?php echo shandora_is_home() ? '8' : '12'; ?><?php echo $_SESSION['layoutType'] !== 'mobile' ? ' text-center' : ''; ?>">
 				<i class="bonicons bi-quote-left"></i><span><?php echo shandora_get_meta( $post->ID, 'testimonial' ); ?></span><i class="bonicons bi-quote-right"></i>
 			</div>	
 			<?php if ( shandora_is_home() ) : ?>

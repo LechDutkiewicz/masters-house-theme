@@ -2433,10 +2433,10 @@ function the_contact_form_content() {
 
 	if ( $phone_count > 1 ) {
 		foreach ( $phone as $number ) {
-			$phone_html .= '<strong>' . $number . '</strong>';
+			$phone_html .= get_formatted_phone_number();
 		}
 	} else {
-		$phone_html = '<strong><a href="tel:' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '">' . esc_attr( bon_get_option( 'hgroup1_content' ) ) . '</a></strong>';
+		$phone_html = get_formatted_phone_number();
 	}
 	?>
 	<p><?php _e( 'Call us directly at:', 'bon' ); ?><span class="phone phone-<?php echo $phone_count; ?>"> <?php echo $phone_html; ?> </span><?php _e( 'or leave us your details data, so our representative can contact you.', 'bon' ); ?></p>

@@ -226,6 +226,14 @@ $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Tracking Code', 'bo
 	'type' => 'textarea' );
 
 
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'AdWords', 'bon' ) . ' ' . __( 'Tracking Code', 'bon' ),
+	'desc' => __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'bon' ),
+	'id' => 'google_adwords',
+	'std' => '',
+	'class' => 'code_mirror',
+	'type' => 'textarea' );
+
+
 // $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Conversion Code', 'bon' ),
 // 	'desc' => __( 'Paste your conversion tracking code here. This will be added into the footer template of your theme.', 'bon' ),
 // 	'id' => 'conversion_code',
@@ -238,7 +246,6 @@ $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Google Webmasters C
 	'desc' => __( 'Paste your Google Webmasters Center verification code.', 'bon' ),
 	'id' => 'site_verification',
 	'std' => '',
-	'class' => 'code_mirror',
 	'type' => 'text' );
 
 $options[] = array( 'slug' => 'bon_options',
