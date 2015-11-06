@@ -1535,19 +1535,7 @@ function shandora_process_contactform() {
 		die( json_encode( $return_data ) );
 	}
 
-	/*$name = esc_html( $_POST['name'] );
-
-	if ( empty( $name ) ) {
-		$return_data['value'] = __( 'Please enter your name.', 'bon' );
-		die( json_encode( $return_data ) );
-	}*/
-
 	$email = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
-
-	/*if ( empty( $email ) ) {
-		$return_data['value'] = __( 'Please enter a valid email address.', 'bon' );
-		die( json_encode( $return_data ) );
-	}*/
 
 	$phone = isset( $_POST['phone'] ) ? esc_attr( $_POST['phone'] ) : '';
 
@@ -1574,7 +1562,6 @@ function shandora_process_contactform() {
 		global $akismet_api_host, $akismet_api_port;
 		$c['user_ip'] = preg_replace( '/[^0-9., ]/', '', $_SERVER['REMOTE_ADDR'] );
 		$c['blog'] = home_url();
-		//$c['comment_author'] = $name;
 		if ( $email ) { $c['comment_author_email'] = $email; }
 		$c['comment_content'] = $messages;
 
@@ -1616,8 +1603,6 @@ $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Message : %s \n", "bo
 
 // setup email to admin headers
 
-// set from header
-$headers[] = "From: " . __( "Masters House", "bon" );
 // set email reply to header to admin if contact form was filled without email
 if ( $email ) {
 	$reply_email = $email;
@@ -1628,14 +1613,20 @@ if ( $email ) {
 $headers[] = "Content-Type: text/html";
 
 // add WP filters for correct email headers
-if ( $reply_email ) {
-	add_filter( 'wp_mail_from', function() {
-		return $reply_email;
-	} );
+if ( $email ) {
+// set from header
+	$headers[] = "From: " . __( 'Customer', 'bon' ) . ": " . $reply_email;
+	$headers[] = "Reply-To: " . $reply_email;
+	// add_filter( 'wp_mail_from', function() {
+	// 	return $reply_email;
+	// } );
+} else {
+// set from header
+	$headers[] = "From: " . __( "Customer", "bon" ) . ": " . $reply_email;
 }
-add_filter( 'wp_mail_from_name', function() {
-	return __( "Masters House", 'bon' );
-} );
+// add_filter( 'wp_mail_from_name', function() {
+// 	return __( "Masters House", 'bon' );
+// } );
 
 $subject = sprintf( "%s %s", $subject, __( "Masters House", 'bon' ) );
 
@@ -1657,7 +1648,7 @@ if ( $email ) {
 	$response_body .= '<p style = "margin-bottom:1em">' . __( 'Kind regards', 'bon' ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
 
 	$response_headers[] = "From: " . __( "Masters House", "bon" );
-	$response_headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
+	$response_headers[] = "Reply-To: " . 'no-reply@mastershouse.com';
 	$response_headers[] = "Content-Type: text/html";
 
 	$response_subject = __( 'Thank you for contacting us', 'bon' );
@@ -1671,7 +1662,7 @@ if ( wp_mail( $receiver, $subject, $body, $headers ) ) {
 
 	// add necessary WP filters
 	add_filter( 'wp_mail_from', function() {
-		return __( 'no-reply@mastershouse.com', 'bon' );
+		return 'no-reply@mastershouse.com';
 	} );
 	add_filter( 'wp_mail_from_name', function() {
 		return __( "Masters House", 'bon' );
@@ -1794,11 +1785,11 @@ function shandora_process_ebook_downloadform() {
 	$body .= '</table>';
 
 	$headers[] = "From: " . __( "Masters House", 'bon' );
-	$headers[] = "Reply-To: " . __( 'no-reply@mastershouse.com', 'bon' );
+	$headers[] = "Reply-To: " . 'no-reply@mastershouse.com';
 	$headers[] = "Content-Type: text/html";
 
 	add_filter( 'wp_mail_from', function() {
-		return __( 'no-reply@mastershouse.com', 'bon' );
+		return 'no-reply@mastershouse.com';
 	} );
 	add_filter( 'wp_mail_from_name', function() {
 		return __( "Masters House", 'bon' );
@@ -2191,7 +2182,6 @@ function shandora_cleaner_gallery_defaults( $args ) {
 	} else {
 		$args['size'] = 'blog_small';
 	}
-	$args['columns'] = 2;
 	$args['link'] = 'file';
 
 	return $args;
