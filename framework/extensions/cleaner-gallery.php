@@ -69,7 +69,7 @@ function cleaner_gallery( $output, $attr ) {
 		'itemtag'     => 'figure',
 		'icontag'     => 'div',
 		'captiontag'  => 'figcaption',
-		'columns'     => 2,
+		'columns'     => 3,
 		'size'        => isset( $_wp_additional_image_sizes['blog_small'] ) ? 'blog_small' : 'medium',
 		'ids'         => '',
 		'include'     => '',
