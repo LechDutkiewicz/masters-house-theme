@@ -12,5 +12,6 @@ assets/js/framework.js
 assets/js/_old/*
 assets/js/elements/*
 assets/js/foundation/*
+framework/assets/js/frontend/*
 
 village-map.css
