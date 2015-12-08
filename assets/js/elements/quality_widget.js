@@ -1,57 +1,37 @@
 (function($) {
 
- 	var placeDots = function(dots) {
+	var placeDots = function(dots) {
 
- 		width = container.width();
+		width = container.width();
 
- 		if ( width >= 868 ) {
+		if ( width >= 940 ) {
 
- 			dots.each(function() {
- 				$(this).css({
- 					'top'	:$(this).data('top'),
- 					'left'	:$(this).data('left'),
- 				});
- 			});
+			dots.each(function() {
+				$(this).css({
+					'top'	:$(this).data('top') + "%",
+					'left'	:$(this).data('left') + "%",
+				});
+			});
 
- 		} else if ( width >= 568 ) {
+		} else if ( width >= 520 ) {
 
- 			dots.each(function() {
- 				$(this).css({
- 					'top'	:$(this).data('tablet-top'),
- 					'left'	:$(this).data('tablet-left'),
- 				});
- 			});
+			dots.each(function() {
+				$(this).css({
+					'top'	:$(this).data('top') + "%",
+					'left'	:$(this).data('left') + "%",
+				});
+			});
 
- 		} else {
+		}
 
- 			dots.each(function() {
-
- 				$(this).hide();
-
- 			});
-
- 		}
-
- 		if ( width >= 568 ) {
- 			dots.each(function(k) {
- 				var el = $(this);
-
- 				setTimeout(function () {
- 					el.fadeIn();
- 				}, k * 200 + 600 );
-
- 			});
-
- 		}
-
- 	};
+	};
 
 	/* Modal with quality description */
-	var container = $('#quality-modal .modal-content'),
-	dots = $('.quality-icon'),
-	descriptionsContainer = $('#quality-modal .desc-container');
+	var container = $('#quality-modal'),
+	dots = $('.quality-icon', container),
+	descriptionsContainer = $('.desc-container', container);
 
-	$('#quality-modal').on('shown.bs.modal', function() {
+	$('#quality-modal').on('opened.fndtn.reveal', function() {
 		placeDots(dots);
 	});
 
@@ -59,11 +39,11 @@
 		placeDots(dots);
 	});
 
-	dots.hover(function(){
-		$(this).toggleClass('active').find('.icon-desc-container').fadeIn();
-	}, function(){
-		$(this).toggleClass('active').find('.icon-desc-container').hide();
-	});
+	// dots.hover(function(){
+	// 	$(this).toggleClass('active').find('.icon-desc-container').fadeIn();
+	// }, function(){
+	// 	$(this).toggleClass('active').find('.icon-desc-container').hide();
+	// });
 
 	dots.click(function(){
 		

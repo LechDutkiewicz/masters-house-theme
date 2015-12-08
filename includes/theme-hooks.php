@@ -100,17 +100,17 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_detail_tabs", 20 );
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_video", 25 );
+		// add_action( "{$prefix}after_single_entry_content", "shandora_listing_video", 25 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_spec_close", 30 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 35 );
 
-		add_action("{$prefix}after_single_entry_content", "shandora_car_listing_video", 30);
+		// add_action("{$prefix}after_single_entry_content", "shandora_car_listing_video", 30);
 
-	//add_action( "{$prefix}after_single_entry_content", "shandora_listing_dpe_ges", 32 );
+		//add_action( "{$prefix}after_single_entry_content", "shandora_listing_dpe_ges", 32 );
 
-	//add_action("{$prefix}after_single_entry_content", "shandora_listing_map", 35);
+		//add_action("{$prefix}after_single_entry_content", "shandora_listing_map", 35);
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_quality_section", 45 );
 
@@ -912,16 +912,19 @@ function shandora_listing_packages() {
 * @return void
 *
 */
-function shandora_listing_services() {
-	?>
+function shandora_listing_services() {	
 
-	<section itemprop="description" class="padding-large bottom">
-		<?php
-		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'services' );
+	if ( $_SESSION['layoutType'] !== 'mobile' ) {
 		?>
-	</section>
 
-	<?php
+		<section itemprop="description" class="padding-large bottom">
+			<?php
+			bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'services' );
+			?>
+		</section>
+
+		<?php
+	}
 }
 
 /**
@@ -1035,257 +1038,6 @@ function shandora_listing_spec_open() {
 function shandora_listing_spec_close() {
 	echo '</section>';
 }
-
-/*function shandora_listing_dpe_ges() {
-	global $post;
-	if ( bon_get_option( 'enable_dpe_ges', false ) == 'yes' ) {
-
-		$dpe = shandora_get_meta( $post->ID, 'listing_dpe' );
-		$ges = shandora_get_meta( $post->ID, 'listing_ges' );
-
-		$dpe_output = '<div class="dpe-ges-val"><span class="val">' . $dpe . '</span><span class="val-desc">kWh/m<sup>2</sup>/an</span></div>';
-		$ges_output = '<div class="dpe-ges-val"><span class="val">' . $ges . '</span><span class="val-desc">KgeqCO2/m<sup>2</sup>.an</span></div>';
-		?>
-
-		<div class="row entry-dpe-ges">
-			<?php if ( $dpe ) { ?>
-			<div class="column large-6">
-
-				<h4 class="subheader"><?php _e( 'Logement économe', 'bon' ); ?></h4>
-
-				<div class="dpe-container dpe-ges-container">
-					<div class="base-val-container clear <?php
-					if ( $dpe <= 50 ) {
-						echo 'active';
-					}
-					?>">
-					<div class="dpe-a dpe-ges-grade">
-						<span class="base-val">&le; 50</span>
-						<span class="base-grade">A</span>
-					</div>
-					<?php
-					if ( $dpe <= 50 ) {
-						echo $dpe_output;
-					}
-					?>
-				</div>
-				<div class="base-val-container clear <?php
-				if ( $dpe >= 51 && $dpe <= 90 ) {
-					echo 'active';
-				}
-				?>">
-				<div class="dpe-b dpe-ges-grade">
-					<span class="base-val">51 &aacute; 90</span>
-					<span class="base-grade">B</span>
-				</div>
-				<?php
-				if ( $dpe >= 51 && $dpe <= 90 ) {
-					echo $dpe_output;
-				}
-				?>
-			</div>
-			<div class="base-val-container clear <?php
-			if ( $dpe >= 91 && $dpe <= 150 ) {
-				echo 'active';
-			}
-			?>">
-			<div class="dpe-c dpe-ges-grade">
-				<span class="base-val">91 &aacute; 150</span>
-				<span class="base-grade">C</span>
-			</div>	
-			<?php
-			if ( $dpe >= 91 && $dpe <= 150 ) {
-				echo $dpe_output;
-			}
-			?>
-		</div>
-		<div class="base-val-container clear <?php
-		if ( $dpe >= 151 && $dpe <= 230 ) {
-			echo 'active';
-		}
-		?>">
-		<div class="dpe-d dpe-ges-grade">
-			<span class="base-val">151 &aacute; 230</span>
-			<span class="base-grade">D</span>
-		</div>
-		<?php
-		if ( $dpe >= 151 && $dpe <= 230 ) {
-			echo $dpe_output;
-		}
-		?>	
-	</div>
-	<div class="base-val-container clear <?php
-	if ( $dpe >= 231 && $dpe <= 330 ) {
-		echo 'active';
-	}
-	?>">
-	<div class="dpe-e dpe-ges-grade">
-		<span class="base-val">231 &aacute; 330</span>
-		<span class="base-grade">E</span>
-	</div>
-	<?php
-	if ( $dpe >= 231 && $dpe <= 330 ) {
-		echo $dpe_output;
-	}
-	?>	
-</div>
-<div class="base-val-container clear <?php
-if ( $dpe >= 331 && $dpe <= 450 ) {
-	echo 'active';
-}
-?>">
-<div class="dpe-f dpe-ges-grade">
-	<span class="base-val">331 &aacute; 450</span>
-	<span class="base-grade">F</span>
-</div>
-<?php
-if ( $dpe >= 331 && $dpe <= 450 ) {
-	echo $dpe_output;
-}
-?>
-</div>
-<div class="base-val-container clear <?php
-if ( $dpe > 451 ) {
-	echo 'active';
-}
-?>">
-<div class="dpe-g dpe-ges-grade">
-	<span class="base-val">&gt; 450</span>
-	<span class="base-grade">G</span>
-</div>
-<?php
-if ( $dpe >= 451 ) {
-	echo $dpe_output;
-}
-?>
-</div>
-</div>
-
-<h4 class="subheader"><?php _e( 'Logement énergivore', 'bon' ); ?></h4>
-
-</div>
-<?php } ?>
-<?php if ( $ges ) { ?>
-<div class="column large-6">
-
-	<h4 class="subheader"><?php _e( 'Faible émission de GES', 'bon' ); ?></h4>
-
-	<div class="ges-container dpe-ges-container">
-		<div class="base-val-container clear <?php
-		if ( $ges <= 5 ) {
-			echo 'active';
-		}
-		?>">
-		<div class="ges-a dpe-ges-grade">
-			<span class="base-val">&le; 5</span>
-			<span class="base-grade">A</span>
-		</div>
-		<?php
-		if ( $ges <= 5 ) {
-			echo $ges_output;
-		}
-		?>
-	</div>
-	<div class="base-val-container clear <?php
-	if ( $ges >= 6 && $ges <= 10 ) {
-		echo 'active';
-	}
-	?>">
-	<div class="ges-b dpe-ges-grade">
-		<span class="base-val">6 &aacute; 10</span>
-		<span class="base-grade">B</span>
-	</div>
-	<?php
-	if ( $ges >= 6 && $ges <= 10 ) {
-		echo $ges_output;
-	}
-	?>
-</div>
-<div class="base-val-container clear <?php
-if ( $ges >= 11 && $ges <= 20 ) {
-	echo 'active';
-}
-?>">
-<div class="ges-c dpe-ges-grade">
-	<span class="base-val">11 &aacute; 20</span>
-	<span class="base-grade">C</span>
-</div>	
-<?php
-if ( $ges >= 11 && $ges <= 20 ) {
-	echo $ges_output;
-}
-?>
-</div>
-<div class="base-val-container clear <?php
-if ( $ges >= 21 && $ges <= 35 ) {
-	echo 'active';
-}
-?>">
-<div class="ges-d dpe-ges-grade">
-	<span class="base-val">21 &aacute; 35</span>
-	<span class="base-grade">D</span>
-</div>
-<?php
-if ( $ges >= 21 && $ges <= 35 ) {
-	echo $ges_output;
-}
-?>	
-</div>
-<div class="base-val-container clear <?php
-if ( $ges >= 36 && $ges <= 55 ) {
-	echo 'active';
-}
-?>">
-<div class="ges-e dpe-ges-grade">
-	<span class="base-val">36 &aacute; 55</span>
-	<span class="base-grade">E</span>
-</div>
-<?php
-if ( $ges >= 36 && $ges <= 55 ) {
-	echo $ges_output;
-}
-?>	
-</div>
-<div class="base-val-container clear <?php
-if ( $ges >= 56 && $ges <= 80 ) {
-	echo 'active';
-}
-?>">
-<div class="ges-f dpe-ges-grade">
-	<span class="base-val">56 &aacute; 80</span>
-	<span class="base-grade">F</span>
-</div>
-<?php
-if ( $ges >= 56 && $ges <= 80 ) {
-	echo $ges_output;
-}
-?>
-</div>
-<div class="base-val-container clear <?php
-if ( $ges > 80 ) {
-	echo 'active';
-}
-?>">
-<div class="ges-g dpe-ges-grade">
-	<span class="base-val">&gt; 80</span>
-	<span class="base-grade">G</span>
-</div>
-<?php
-if ( $ges >= 80 ) {
-	echo $ges_output;
-}
-?>
-</div>
-</div>
-
-<h4 class="subheader"><?php _e( 'Forte émission de GES', 'bon' ); ?></h4>
-
-</div>
-<?php } ?>
-</div>
-<?php
-}
-}*/
 
 /**
 * Get Listing Map
@@ -2218,7 +1970,7 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 						<span class="sha-calendar"></span>
 					</div>
 					<span class="info-title"><?php echo bon_get_option( 'hgroup2_title' ); ?></span>
-					<span class="phone visit"><strong><a href='#visit-modal' role='button' data-toggle='modal' title="<?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?>" <?php the_ga_event( "Contact", "Open Visit Request", "Menu Bar" ); ?>><?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?></a></strong></span>
+					<span class="phone visit"><strong><a href="#" data-reveal-id="visit-modal" title="<?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?>" <?php the_ga_event( "Contact", "Open Visit Request", "Menu Bar" ); ?>><?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?></a></strong></span>
 				</div>
 			<?php endif; ?>
 		</div>
@@ -2285,15 +2037,17 @@ if ( !function_exists( 'shandora_get_main_navigation' ) ) {
 			<div id="action-compare" class="action-compare" data-count="0" data-compare=""></div>
 
 			<?php
+			// scroll to top button
 			shandora_scroll_top_button();
+			// render wordpress footer
 			wp_footer();
-			?>	
-
-			<?php
+			// render modal with visit request
 			bon_get_template_part( 'block', 'block-modal-visit-request' );
-			?>
-
-			<?php
+			// render modal with newsletter
+			if ( bon_get_option( 'newsletter_modal' ) && is_user_logged_in() ) {
+				bon_get_template_part( 'block', 'block-modal-newsletter' );
+			}
+			// render disqus comments count if they are enabled
 			if ( is_singular() && bon_get_option( 'enable_disqus' ) ) {
 				bon_get_template_part( 'block', 'block-disqus-comment-count' );
 			}
@@ -2312,7 +2066,7 @@ if ( !function_exists( 'shandora_get_footer_backtop' ) ) {
 	function shandora_get_footer_backtop() {
 		?>
 
-		<a href="#totop" class="backtop" id="backtop" title="<?php _e( 'Back to Top', 'bon' ); ?>"><i class="icon bonicons bi-chevron-up"></i></a>
+		<a href="#totop" class="backtop circle" id="backtop" title="<?php _e( 'Back to Top', 'bon' ); ?>"><i class="icon bonicons bi-chevron-up"></i></a>
 
 		<?php
 	}

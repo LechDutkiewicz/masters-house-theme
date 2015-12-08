@@ -1519,6 +1519,85 @@ function shandora_process_packageform() {
 
 }
 
+add_action( 'wp_ajax_process-newsletter-subscribe', 'shandora_process_newsletter_subscribe' );
+add_action( 'wp_ajax_nopriv_process-newsletter-subscribe', 'shandora_process_newsletter_subscribe' );
+
+function shandora_process_newsletter_subscribe() {
+
+	if ( !isset( $_POST ) || empty( $_POST ) ) {
+		$return_data['value'] = __( 'Cannot send email to destination. No parameter receive form AJAX call.', 'bon' );
+		die( json_encode( $return_data ) );
+	}
+
+	$name = isset( $_POST['name'] ) ? sanitize_text_field( $_POST['name'] ) : '';
+
+	if ( empty( $name ) ) {
+		$return_data['value'] = __( 'Please enter your name.', 'bon' );
+		die( json_encode( $return_data ) );
+	}
+
+	$email = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
+
+	if ( empty( $email ) ) {
+		$return_data['value'] = __( 'Please enter your email.', 'bon' );
+		die( json_encode( $return_data ) );
+	}
+
+	$receiver = $_POST['receiver'];
+	$country = $_POST['country'];
+
+// setup email to admin body
+
+	$body .= '<p style = "margin-bottom:1em">' . sprintf( "You have received a new newsletter subscription via %s \n", get_bloginfo( 'name' ) ) . '</p>';
+	$body .= '<p style = "margin-bottom:1em">' . sprintf( "Sender Name : %s \n", $name ) . '</p>';
+	$body .= '<p style = "margin-bottom:1em">' . sprintf( "Sender Email : %s \n", $email ) . '</p>';
+	$body .= '<p style = "margin-bottom:1em">' . sprintf( "Country : %s \n", $country ) . '</p>';
+
+// setup email to admin headers
+// set email reply to header to admin if contact form was filled without email
+	$reply_email = 'no-reply@' . __('domainname.com', 'bon');
+	
+// set content type header
+	$headers[] = "Content-Type: text/html";
+
+// add WP filters for correct email headers
+	$headers[] = "From: Newsletter signup <" . $reply_email . ">";
+	$headers[] = "Reply-To: " . $reply_email;
+
+	$subject = sprintf( "%s %s", 'Newsletter signup' . ": [" . $country . "]", "Newsletter signup" );
+
+
+// setup response email body if email was filled in contact form
+	$response_receiver = $email;
+
+	$response_body = '<p style = "margin-bottom:1em">' . __( 'You have successfully subscribed to our newsletter.', 'bon' ) . '</p>';
+	$response_body .= '<p style = "margin-bottom:1em">' . __( 'Kind regards', 'bon' ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
+
+	$response_headers[] = "From: " . __('Newsletter', 'bon') . " <". __('domainname.com', 'bon') . ">";
+	$response_headers[] = "Reply-To: " . $reply_email;
+	$response_headers[] = "Content-Type: text/html";
+
+	$response_subject = __( 'Thank you for subscribing to us', 'bon' );
+
+
+// send email to admin
+	if ( wp_mail( $receiver, $subject, $body, $headers ) && wp_mail( $response_receiver, $response_subject, $response_body, $response_headers ) ) {
+
+	// set return data if email was sent successfully
+		$return_data['success'] = '1';
+		$return_data['value'] = __( 'Thank you for subscribing to us', 'bon' );
+		die( json_encode( $return_data ) );
+
+	} else {
+
+	// set return data if there was an error with sending email
+		$return_data['value'] = __( 'There is an error sending subscription request', 'bon' );
+		die( json_encode( $return_data ) );
+
+	}
+
+}
+
 add_action( 'wp_ajax_process-agent-contactform', 'shandora_process_contactform' );
 add_action( 'wp_ajax_nopriv_process-agent-contactform', 'shandora_process_contactform' );
 add_action( 'wp_ajax_process-contact-requestform', 'shandora_process_contactform' );
@@ -2105,8 +2184,8 @@ function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
 			} else
 			{
 				$destination = 'Request a visit';
-				$link = '#visit-modal';
-				$onClick = "role='button' data-toggle='modal'";
+				$link = '#';
+				$onClick = "data-reveal-id='visit-modal'";
 			}
 
 		// echo call to action
@@ -2473,65 +2552,65 @@ function get_qualities() {
 	$quality_items = array(
 		array(
 			'name' 			=> 'wooden profile around the door',
-			'top'			=> '225',
-			'left'			=> '550',
+			'top'			=> '55',
+			'left'			=> '62',
 			'tablet-top'	=> '150',
 			'tablet-left'	=> '350'
 			),
 		array(
 			'name' 			=> 'roof beams splines',
-			'top'			=> '25',
-			'left'			=> '600',
+			'top'			=> '5',
+			'left'			=> '65',
 			'tablet-top'	=> '0',
 			'tablet-left'	=> '375'
 			),
 		array(
 			'name' 			=> 'impregnated floor joints',
-			'top'			=> '275',
-			'left'			=> '450',
+			'top'			=> '65',
+			'left'			=> '50',
 			'tablet-top'	=> '200',
 			'tablet-left'	=> '300'
 			),
 		array(
 			'name' 			=> 'pins on the joints',
-			'top'			=> '200',
-			'left'			=> '350',
+			'top'			=> '50',
+			'left'			=> '39',
 			'tablet-top'	=> '175',
 			'tablet-left'	=> '225'
 			),
 		array(
 			'name'			=> 'roof boards',
-			'top'			=> '40',
-			'left'			=> '375',
+			'top'			=> '5',
+			'left'			=> '40',
 			'tablet-top'	=> '25',
 			'tablet-left'	=> '200'
 			),
 		array(
 			'name' 			=> 'three-point lock',
-			'top'			=> '175',
-			'left'			=> '450',
+			'top'			=> '40',
+			'left'			=> '50',
 			'tablet-top'	=> '125',
 			'tablet-left'	=> '275'
 			),
 		array(
 			'name' 			=> 'doors and windows',
-			'top'			=> '125',
-			'left'			=> '625',
+			'top'			=> '25',
+			'left'			=> '70',
 			'tablet-top'	=> '75',
 			'tablet-left'	=> '400'
 			),
 		array(
 			'name' 			=> 'glued wood',
-			'top'			=> '125',
-			'left'			=> '250',
+			'top'			=> '25',
+			'left'			=> '30',
 			'tablet-top'	=> '75',
 			'tablet-left'	=> '150',
 			'arrow'			=> true
 			),
 		array(
 			'name' 			=> 'glass packages',
-			'top'			=> '225',
-			'left'			=> '275',
+			'top'			=> '50',
+			'left'			=> '25',
 			'tablet-top'	=> '150',
 			'tablet-left'	=> '150'
 			),

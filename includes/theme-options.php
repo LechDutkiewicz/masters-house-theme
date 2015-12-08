@@ -824,17 +824,17 @@ $options[] = array( 'slug' => 'bon_options',
 	'type' => 'info' );
 
 
-$options[] = array( 'slug' => 'bon_options',
-	'label' => __( 'Show Mouse Hover overlay', 'bon' ),
-	'desc' => __( 'Show the overlay ( the stuff with permalink, gallery, compare button ) on mouse over ', 'bon' ),
-	'id' => 'show_overlay',
-	'type' => 'select',
-	'std' => 'yes',
-	'options' => array(
-		'yes' => __( 'Yes', 'bon' ),
-		'no' => __( 'No', 'bon' ),
-		)
-	);
+// $options[] = array( 'slug' => 'bon_options',
+// 	'label' => __( 'Show Mouse Hover overlay', 'bon' ),
+// 	'desc' => __( 'Show the overlay ( the stuff with permalink, gallery, compare button ) on mouse over ', 'bon' ),
+// 	'id' => 'show_overlay',
+// 	'type' => 'select',
+// 	'std' => 'yes',
+// 	'options' => array(
+// 		'yes' => __( 'Yes', 'bon' ),
+// 		'no' => __( 'No', 'bon' ),
+// 		)
+// 	);
 
 
 $options[] = array( 'slug' => 'bon_options',
@@ -1887,13 +1887,13 @@ $options[] = array(
 			'id' => 'home_cta_color',
 			'std' => 'carrot',
 			),*/
-		array(
-			'slug' => 'bon_options',
-			'label' => sprintf( __( 'Make unactive', 'bon' ), $i ),
-			'id' => 'disable_home_cta',
-			'type' => 'checkbox',
-			),
+	array(
+		'slug' => 'bon_options',
+		'label' => sprintf( __( 'Make unactive', 'bon' ), $i ),
+		'id' => 'disable_home_cta',
+		'type' => 'checkbox',
 		),
+	),
 	);
 
 /* CALL TO ACTION SETUP FOR RETURNING USERS */
@@ -2203,64 +2203,64 @@ $options[] = array( 'slug' => 'bon_options',
 			'type' => 'upload'
 			);*/
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Quality section items', 'bon' ),
-			'type' => 'subheading',
-			);
+$options[] = array( 'slug' => 'bon_options',
+	'label' => __( 'Quality section items', 'bon' ),
+	'type' => 'subheading',
+	);
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'label' => __( 'Quality section modal window title', 'bon' ),
-			'desc' => __( 'Title displayed in top of modal window with quality description', 'bon' ),
-			'id' => 'quality_section_title',
-			'type' => 'text'
-			);
+$options[] = array(
+	'slug' => 'bon_options',
+	'label' => __( 'Quality section modal window title', 'bon' ),
+	'desc' => __( 'Title displayed in top of modal window with quality description', 'bon' ),
+	'id' => 'quality_section_title',
+	'type' => 'text'
+	);
 
-		$options[] = array(
-			'std' => 'main paragraph',
-			'type' => 'info',
-			);
+$options[] = array(
+	'std' => 'main paragraph',
+	'type' => 'info',
+	);
 
-		$options[] = array(
-			'desc' => 'main paragraph title',
-			'id' => 'main_name',
-			'type' => 'text',
-			);
+$options[] = array(
+	'desc' => 'main paragraph title',
+	'id' => 'main_name',
+	'type' => 'text',
+	);
 
-		$options[] = array(
-			'desc' => 'main paragraph detailed description',
-			'id' => 'main_desc',
-			'type' => 'text',
-			);
+$options[] = array(
+	'desc' => 'main paragraph detailed description',
+	'id' => 'main_desc',
+	'type' => 'text',
+	);
 
-		$options[] = array(
-			'desc' => 'main paragraph img',
-			'id' => 'main_img',
-			'type' => 'upload',
-			);
+$options[] = array(
+	'desc' => 'main paragraph img',
+	'id' => 'main_img',
+	'type' => 'upload',
+	);
 
-		foreach ( get_qualities() as $quality_item ) {
+foreach ( get_qualities() as $quality_item ) {
 
-			$options[] = array(
-				'label' => $quality_item['name'],
-				'type' => 'info-img',
-				'subfolder' => 'qualities',
-				'file-type' => 'jpg',
-				);
+	$options[] = array(
+		'label' => $quality_item['name'],
+		'type' => 'info-img',
+		'subfolder' => 'qualities',
+		'file-type' => 'jpg',
+		);
 
-			$options[] = array(
-				'desc' => $quality_item['name'] . ' name',
-				'id' => sanitize_title( $quality_item['name'] ) . '_name',
-				'type' => 'text',
-				);
+	$options[] = array(
+		'desc' => $quality_item['name'] . ' name',
+		'id' => sanitize_title( $quality_item['name'] ) . '_name',
+		'type' => 'text',
+		);
 
-			$options[] = array(
-				'desc' => $quality_item['name'] . ' short description',
-				'id' => sanitize_title( $quality_item['name'] ) . '_desc',
-				'type' => 'text',
-				);
+	$options[] = array(
+		'desc' => $quality_item['name'] . ' short description',
+		'id' => sanitize_title( $quality_item['name'] ) . '_desc',
+		'type' => 'text',
+		);
 
-		}
+}
 
 
 
@@ -2520,6 +2520,38 @@ $options[] = array( 'slug' => 'bon_options',
 			'id' => 'car_feature_root',
 			'type' => 'text',
 			'desc' => __( 'The Car Feature URL base /car-feature/ (required)', 'bon' )
+			);
+
+
+		/**
+		 * =====================================================================================================
+		 *
+		 * Newsletter Settings
+		 * 
+		 * @category Newsletter
+		 *
+		 * ======================================================================================================
+		 */
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Newsletter Settings', 'bon' ),
+			'type' => 'heading',
+			'icon' => 'dashicons-email' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label'	=> __( 'Newsletter popup', 'bon' ),
+			'desc'	=> __( 'Check if you want to enable newsletter popup.', 'bon' ),
+			'id'	=> 'newsletter_modal',
+			'type'	=> 'checkbox',
+			'class'	=> 'collapsed',
+			'std'	=> '0' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label'	=> __( 'Newsletter email', 'bon' ),
+			'desc'	=> __( 'Type email where you want to send all newsletter subscription requests.', 'bon' ),
+			'id'	=> 'newsletter_email',
+			'default'	=> 'newletters@timbercabins.lt',
+			'type'	=> 'email',
+			'class'	=> 'hidden last'
 			);
 
 		return apply_filters( 'bon_theme_options', $options );

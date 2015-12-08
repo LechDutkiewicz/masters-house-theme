@@ -6,17 +6,16 @@
 
 		$.doTimeout( 'scroll', 250, function(){
 
-			var distanceTop = ( $(document).height() / 4 ) - $(window).height(),
-			slideboxHeight = slidebox.outerHeight();
+			var distanceTop = ( $(document).height() / 4 ) - $(window).height();
 
 			if ($(window).scrollTop() > distanceTop)
 				slidebox.animate({
 					'bottom': '0px'
-				}, 400);
+				}, 200, 'easeInOutCirc');
 			else
 				slidebox.stop(true).animate({
-					'bottom': - slideboxHeight
-				}, 400);
+					'bottom': - slidebox.outerHeight()
+				}, 200, 'easeInOutCirc');
 
 		});
 
@@ -36,13 +35,14 @@
 			});
 		}
 		
-		var slideboxHeight = slidebox.outerHeight(),
-		icons = slidebox.find('.bonicons');
+		var icons = slidebox.find('.bonicons');
 
 		slidebox.animate({
-			'bottom': - slideboxHeight
-		}, 400, function(){
-			$(this).toggleClass('hidden');
+			'bottom': - slidebox.outerHeight()
+		}, 200, 'easeInOutCirc', function(){
+			$(this).toggleClass('hidden').css({
+				'bottom': - slidebox.outerHeight()
+			});
 			icons.each(function(){
 				if ( $(this).hasClass('bi-chevron-down') ) {
 					$(this).removeClass('bi-chevron-down').addClass('bi-chevron-up');
@@ -52,7 +52,7 @@
 			});
 			$(this).animate({
 				'bottom': '0px'
-			}, 400);
+			}, 200, 'easeInOutCirc');
 		});
 	});
 
