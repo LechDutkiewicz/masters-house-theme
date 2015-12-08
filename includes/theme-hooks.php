@@ -2044,7 +2044,7 @@ if ( !function_exists( 'shandora_get_main_navigation' ) ) {
 			// render modal with visit request
 			bon_get_template_part( 'block', 'block-modal-visit-request' );
 			// render modal with newsletter
-			if ( bon_get_option( 'newsletter_modal' ) && is_user_logged_in() ) {
+			if ( bon_get_option( 'newsletter_modal' ) ) {
 				bon_get_template_part( 'block', 'block-modal-newsletter' );
 			}
 			// render disqus comments count if they are enabled

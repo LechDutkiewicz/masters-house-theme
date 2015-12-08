@@ -62,7 +62,7 @@ class Newsletter_Form extends WP_Widget {
 		/* Overwrite the $echo argument and set it to false. */
 		$args['echo'] = false;
 
-		if ( is_user_logged_in() && !isset( $_COOKIE["subscribed"] ) ) {
+		if ( !isset( $_COOKIE["subscribed"] ) ) {
 
 			/* Output the theme's $before_widget wrapper. */
 			echo $before_widget;
