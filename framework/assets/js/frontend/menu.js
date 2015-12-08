@@ -12,7 +12,7 @@ var bonMenu;
 		init: function(){
 
 			// check screensize after on window load and do the trigger if meet the requirement
-			//if (Modernizr.mq('only screen and (min-width: 780px)')) { // start modernizr check
+			//if (Modernizr.mq('only screen and (min-width: 768px)')) { // start modernizr check
 				this.clickTrigger();
 				this.hoverTrigger();
 				this.mobileMenuToggle();
@@ -23,7 +23,7 @@ var bonMenu;
 			$('.bon-menu-click.menu-has-children > .bon-menu-label' ).on('click', function(e){
 
 				// check is needed on event bind to prevent the event still triggering when window is resized
-				if ( Modernizr.mq('only screen and (min-width: 780px)') ) { // start modernizr check
+				if ( Modernizr.mq('only screen and (min-width: 768px)') ) { // start modernizr check
 
 					e.preventDefault();
 				
@@ -64,7 +64,7 @@ var bonMenu;
 				$('.bon-menu-hover.menu-has-children' ).hoverIntent(function(e){
 
 					// check is needed on event bind to prevent the event still triggering when window is resized
-					if ( Modernizr.mq('only screen and (min-width: 780px)') ) { // start modernizr check
+					if ( Modernizr.mq('only screen and (min-width: 768px)') ) { // start modernizr check
 
 						var $this = $(this),
 							$toggle = $(this).find('> .menu-toggle');
@@ -88,7 +88,7 @@ var bonMenu;
 				}, function(e){
 
 					// check is needed on event bind to prevent the event still triggering when window is resized
-					if ( Modernizr.mq('only screen and (min-width: 780px)') ) { // start modernizr check
+					if ( Modernizr.mq('only screen and (min-width: 768px)') ) { // start modernizr check
 
 						var $this = $(this),
 							$toggle = $(this).find('> .menu-toggle');
@@ -108,7 +108,7 @@ var bonMenu;
 				$('.bon-menu-hover.menu-has-children' ).hover(function(e){
 
 					// check is needed on event bind to prevent the event still triggering when window is resized
-					if ( Modernizr.mq('only screen and (min-width: 780px)') ) { // start modernizr check
+					if ( Modernizr.mq('only screen and (min-width: 768px)') ) { // start modernizr check
 
 						var $this = $(this),
 							$toggle = $(this).find('> .menu-toggle');
@@ -132,7 +132,7 @@ var bonMenu;
 				}, function(e){
 
 					// check is needed on event bind to prevent the event still triggering when window is resized
-					if ( Modernizr.mq('only screen and (min-width: 780px)') ) { // start modernizr check
+					if ( Modernizr.mq('only screen and (min-width: 768px)') ) { // start modernizr check
 
 						var $this = $(this),
 							$toggle = $(this).find('> .menu-toggle');
