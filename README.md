@@ -1,6 +1,6 @@
 # 8 XII 2015 Update
 
-1. Added modal with newsletter signup
+Added modal with newsletter signup
 it requires additional transiations:
 --------------
 
