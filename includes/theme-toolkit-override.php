@@ -744,7 +744,7 @@ function shandora_override_contact_form_widget( $output, $email, $color = '' ) {
 	}
 
 	$o = '';
-	$o .= '<form class="bon-builder-contact-forms"><div class="contact-form-wrapper">';
+	$o .= '<form class="newsletter-forms"><div class="contact-form-wrapper">';
 
 	$o .= '<div class="contact-form-input row collapse input-container">';
 	$o .= '<div class="column large-12 small-11 input-container-inner user">';
@@ -760,23 +760,24 @@ function shandora_override_contact_form_widget( $output, $email, $color = '' ) {
 	$o .= '</div>';
 	$o .= '</div>';
 
-	$o .= '<div class="contact-form-input row collapse input-container">';
-	$o .= '<div class="column large-12 small-11 input-container-inner subject">';
-	$o .= '<input type="text" value="" name="subject" class="subject" placeholder="' . __( 'Subject', 'bon' ) . '" />';
-	$o .= '</div>';
-	$o .= '</div>';
+	// $o .= '<div class="contact-form-input row collapse input-container">';
+	// $o .= '<div class="column large-12 small-11 input-container-inner subject">';
+	// $o .= '<input type="text" value="" name="subject" class="subject" placeholder="' . __( 'Subject', 'bon' ) . '" />';
+	// $o .= '</div>';
+	// $o .= '</div>';
 
-	$o .= '<div class="contact-form-input row collapse textarea-container input-container">';
-	$o .= '<div class="column large-12 small-11 input-container-inner mail">';
-	$o .= '<textarea name="messages" class="messages required" placeholder="' . __( 'Messages', 'bon' ) . '"></textarea>';
-	$o .= '<div class="contact-form-error">' . __( 'Please enter your messages.', 'bon-toolkit' ) . '</div>';
-	$o .= '</div>';
-	$o .= '</div>';
+	// $o .= '<div class="contact-form-input row collapse textarea-container input-container">';
+	// $o .= '<div class="column large-12 small-11 input-container-inner mail">';
+	// $o .= '<textarea name="messages" class="messages required" placeholder="' . __( 'Messages', 'bon' ) . '"></textarea>';
+	// $o .= '<div class="contact-form-error">' . __( 'Please enter your messages.', 'bon-toolkit' ) . '</div>';
+	// $o .= '</div>';
+	// $o .= '</div>';
 
 	$o .= '<input type="hidden" name="receiver" value="' . $email . '" />';
+	$o .= '<input type="hidden" name="country" value="' . get_locale() . '" />';
 
 	$o .= '<div class="contact-form-input">';
-	$o .= '<button type="submit" class="bon-toolkit-button contact-form-submit flat button ' . $color . ' radius" name="submit">' . __( 'Send Message', 'bon-toolkit' ) . '</button>';
+	$o .= '<button type="submit" class="submit flat button ' . $color . ' radius" name="submit">' . __( 'Subscribe', 'bon' ) . '</button>';
 	$o .= '<span class="contact-form-ajax-loader"><img src="' . trailingslashit( BON_TOOLKIT_IMAGES ) . 'loader.gif" alt="loading..." /></span>';
 	$o .= '</div>';
 
