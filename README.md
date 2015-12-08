@@ -1,3 +1,34 @@
+# 8 XII 2015 Update
+
+1. Added modal with newsletter signup
+it requires additional transiations:
+
+// for subscription form //
+You will be first to know about our news and special offers
+Subscribe to our newsletter
+// for email received by administrator when user subscribes //
+You have received a new newsletter subscription via %s
+Sender Name : %s
+Sender Email : %s
+Country : %s
+// for email auto-received by user after he/she subscribes //
+You have successfully subscribed to our newsletter.
+Thank you for subscribing to us
+There is an error sending subscription request
+
+# 10 XI 2015 Update
+
+1. Added widget with newsletter signup
+it requires additional translations:
+subscribe
+Subscribe to our newsletter
+domainname.com (translates to dommistrza.pl for Poland, maestrocabins.uk for UK, etc.)
+You have successfully subscribed to our newsletter.
+Newsletter
+Thank you for subscribing to us
+There is an error sending subscription request
+
+
 # 17 VII 2015 Update
 
 1. Added slidebox for bottom side of page.
