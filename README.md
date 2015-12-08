@@ -2,16 +2,19 @@
 
 1. Added modal with newsletter signup
 it requires additional transiations:
+-------------
 
-// for subscription form //
+**for subscription form**
 You will be first to know about our news and special offers
 Subscribe to our newsletter
-// for email received by administrator when user subscribes //
+
+**for email received by administrator when user subscribes**
 You have received a new newsletter subscription via %s
 Sender Name : %s
 Sender Email : %s
 Country : %s
-// for email auto-received by user after he/she subscribes //
+
+**for email auto-received by user after he/she subscribes**
 You have successfully subscribed to our newsletter.
 Thank you for subscribing to us
 There is an error sending subscription request
