@@ -18,5 +18,8 @@
   "homepage": "https://github.com/LechDutkiewicz/masters-house-theme",
   "dependencies": {
     "grunt": "^0.4.5"
+  },
+  "devDependencies": {
+    "grunt-bower-concat": "^0.6.0"
   }
 }

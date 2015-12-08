@@ -12,13 +12,16 @@
     "assets/vendor"
   ],
   "dependencies": {
-    "modernizr": "2.6.2",
+    "modernizr": "~2.8.0",
     "waypoints": "3.1.1",
     "flexslider": "2.5.0",
     "bxslider-4": "4.2.5",
-    "bootstrap": "3.3.2",
     "jquery-easing": "",
     "jqueryui-touch-punch": "",
-    "jquery-dotimeout": ""
+    "jquery-dotimeout": "",
+    "magnific-popup": "~1.0.0",
+    "foundation": "~4.3.2",
+    "bootstrap-sass": "~3.3.5",
+    "jquery.cookie": "~1.4.1"
   }
 }

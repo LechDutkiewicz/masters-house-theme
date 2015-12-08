@@ -6,23 +6,33 @@ module.exports = function(grunt) {
 	'bower_components/modernizr/modernizr.js',
 	'bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.js',
 	'bower_components/jquery-easing/jquery.easing.js',
-	'bower_components/bootstrap/js/transition.js',
-	'bower_components/bootstrap/js/collapse.js',
-	'bower_components/bootstrap/js/modal.js',
 	'bower_components/bxslider-4/dist/jquery.bxslider.js',
 	'bower_components/flexslider/jquery.flexslider.js',
 	'bower_components/waypoints/lib/jquery.waypoints.js',
 	'bower_components/jquery-dotimeout/jquery.ba-dotimeout.js',
-	'assets/js/framework.js',
-	'assets/js/foundation/foundation.js',
-	'assets/js/foundation/foundation.carousel.js',
-	'assets/js/foundation/foundation.forms.js',
-	'assets/js/foundation/foundation.magellan.js',
+	'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
+	'bower_components/jquery.cookie/jquery.cookie.js',
+	// 'bower_components/foundation/js/foundation/foundation.reveal.js',
+	// 'bower_components/foundation/js/foundation.js',
+	// 'assets/js/framework.js',
+	// 'assets/js/foundation/foundation.js',
+	'bower_components/foundation/js/foundation/foundation.js',
+	// 'bower_components/foundation/js/vendor/zepto.js',
+	'bower_components/foundation/js/foundation/foundation.reveal.js',
+	// 'bower_components/foundation/js/foundation/foundation.dropdown.js',
+	'bower_components/foundation/js/foundation/foundation.forms.js',
+	// 'bower_components/foundation/js/foundation/foundation.section.js',
+	// 'assets/js/foundation/foundation.carousel.js',
+	// 'assets/js/foundation/foundation.dropdown.js',
+	// 'assets/js/foundation/foundation.forms.js',
+	'framework/assets/js/frontend/menu.js',
+	// 'assets/js/foundation/foundation.magellan.js',
 	'framework/assets/js/frontend/gallery-carousel.js',
+	// 'bower_components/bootstrap/js/transition.js',
+	'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+	'bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+	// 'bower_components/bootstrap/js/modal.js',
 	// 'assets/js/foundation/foundation.joyride.js',
-	// 'node_modules/waypoints/lib/jquery.waypoints.js',
-	// 'node_modules/flexslider/jquery.flexslider.js',
-	// 'assets/js/libs/jquery.ba-dotimeout.js',
 	'assets/js/custom.js',
 	'assets/js/elements/*.js',
 	];
@@ -54,7 +64,7 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: [jsFileList],
-				tasks: ['jshint', 'concat', 'uglify'],
+				tasks: ['scripts'],
 			},
 		},
 	});
@@ -63,6 +73,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.registerTask('scripts', ['jshint', 'concat', 'uglify']);
 	grunt.registerTask('default', ['uglify', 'watch']);
 
 };
