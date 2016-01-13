@@ -2456,7 +2456,7 @@ if ( !function_exists( 'shandora_get_banner_opening_tag' ) ) {
 
 		if ( $modal && $destination_modal ) {
 
-			$output .= "<a href='#" . $destination_modal . "-modal' role='button' data-toggle='modal' class='hover-mask' title='" . __( 'Open window with more information', 'bon') . "'" . get_ga_event( "Banners", "Click", "Quality Banner" ) . ">";
+			$output .= "<a href='#' data-reveal-id='" . $destination_modal . "-modal' class='hover-mask' title='" . __( 'Open window with more information', 'bon') . "'" . get_ga_event( "Banners", "Click", "Quality Banner" ) . ">";
 			return $output;
 
 		}
