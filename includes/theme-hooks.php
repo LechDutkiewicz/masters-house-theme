@@ -2456,45 +2456,45 @@ if ( !function_exists( 'shandora_get_banner_opening_tag' ) ) {
 
 		if ( $modal && $destination_modal ) {
 
-			$output .= "<a href='#' data-reveal-id='" . $destination_modal . "-modal' class='hover-mask' title='" . __( 'Open window with more information', 'bon') . "'" . get_ga_event( "Banners", "Click", "Quality Banner" ) . ">";
+			$output .= "<a href='#" . $destination_modal . "-modal' role='button' data-toggle='modal' class='hover-mask' title='" . __( 'Open window with more information', 'bon') . "'" . get_ga_event( "Banners", "Click", "Quality Banner" ) . ">";
 			return $output;
 
 		}
 
 	}
 
-	if ( !function_exists( 'shandora_get_banner_closing_tag' ) ) {
+}
 
-		function shandora_get_banner_closing_tag( $name ) {
+if ( !function_exists( 'shandora_get_banner_closing_tag' ) ) {
 
-			$page = bon_get_option( $name . '_slide_page');
-			$destination_page = bon_get_option( $name . '_slide_page_destination');
-			$tool = bon_get_option( $name . '_slide_tool');
-			$modal = bon_get_option( $name . '_slide_modal');
-			$destination_modal = bon_get_option( $name . '_slide_modal_destination');
-			$output = '';
+	function shandora_get_banner_closing_tag( $name ) {
 
-			if ( ( bon_get_option( $name . '_slide_page') && $destination_page ) || $tool || ( $modal && $destination_modal ) ) {
-				$output .= '</a>';
-				echo $output;
-			}
+		$page = bon_get_option( $name . '_slide_page');
+		$destination_page = bon_get_option( $name . '_slide_page_destination');
+		$tool = bon_get_option( $name . '_slide_tool');
+		$modal = bon_get_option( $name . '_slide_modal');
+		$destination_modal = bon_get_option( $name . '_slide_modal_destination');
+		$output = '';
 
+		if ( ( bon_get_option( $name . '_slide_page') && $destination_page ) || $tool || ( $modal && $destination_modal ) ) {
+			$output .= '</a>';
+			echo $output;
 		}
 
 	}
 
-	if ( !function_exists( 'get_modal' ) ) {
+}
 
-		function get_modal( $name ) {
+if ( !function_exists( 'get_modal' ) ) {
 
-			$modal = bon_get_option( $name . '_slide_modal');
-			$destination_modal = bon_get_option( $name . '_slide_modal_destination');
+	function get_modal( $name ) {
 
-			if ( $modal && $destination_modal ) {
+		$modal = bon_get_option( $name . '_slide_modal');
+		$destination_modal = bon_get_option( $name . '_slide_modal_destination');
 
-				bon_get_template_part( 'block', 'block-modal-' . $destination_modal );
+		if ( $modal && $destination_modal ) {
 
-			}
+			bon_get_template_part( 'block', 'block-modal-' . $destination_modal );
 
 		}
 
