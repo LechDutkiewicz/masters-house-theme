@@ -88,7 +88,7 @@ function bon_change_wp_ver( $src ) {
     $file = substr( $src, $pos);
   }
 
-  if (file_exists($file)) {
+  if (isset($file) && file_exists($file)) {
     // change ver value for last file time modification
     $src = add_query_arg( 'ver', filemtime($file), $src);
   } else {

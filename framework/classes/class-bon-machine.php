@@ -155,7 +155,7 @@ if ( !class_exists( 'BON_Machine' ) ) {
 					}
 					// If the option is already saved, ovveride $val
 					if ( $value['type'] != 'heading' && $value['type'] != 'subheading' && $value['type'] != 'info' ) {
-						if ( isset( $settings[($value['id'])] ) ) {
+						if ( isset( $value['id'] ) && isset( $settings[($value['id'])] ) ) {
 							$val = $settings[($value['id'])];
 							// Striping slashes of non-array options
 							if ( !is_array( $val ) ) {
@@ -171,7 +171,9 @@ if ( !class_exists( 'BON_Machine' ) ) {
 						}
 						$output .= '<div class="section section-' . esc_attr( $value['type'] ) . esc_attr( $class ) . '">' . "\n";
 						if ( $value['type'] != 'info' ) {
-							$output .= '<h3 class="heading">' . esc_html( $value['label'] ) . '</h3>' . "\n";
+							$output .= '<h3 class="heading">';
+							$output .= isset($value['label']) ? esc_html( $value['label'] ) : '';
+							$output .= '</h3>' . "\n";
 						}
 						if ( $value['type'] == 'editor' ) {
 							$output .= '<div class="option">' . "\n" . '<div class="controls with-editor">' . "\n";
@@ -665,7 +667,7 @@ if ( !class_exists( 'BON_Machine' ) ) {
 										$meta[$i][$repeatable_field['id']] = null;
 
 									$output .= '<fieldset';
-									if ($repeatable_field['class']) {
+									if ( isset($repeatable_field['class']) ) {
 										$output .= ' class="' . $repeatable_field['class'] . '"';
 									}
 									$output .= '><div>';

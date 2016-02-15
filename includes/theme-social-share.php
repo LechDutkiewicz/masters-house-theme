@@ -97,7 +97,12 @@ function bon_toolkit_render_social_counter( $block = false ) {
 		global $bontoolkit;
 		$options = get_option( $bontoolkit->option_name );
 
-		if ( ( !empty( $options['disabled_locations_of_share_button']  ) && !in_array( get_post_type(), $options['disabled_locations_of_share_button'] ) ) || !is_array( $options['disabled_locations_of_share_button'] ) ) {
+		if ( (
+			!empty( $options['disabled_locations_of_share_button'] ) &&
+			!in_array( get_post_type(), $options['disabled_locations_of_share_button'] ) ) ||
+			isset( $options['disabled_locations_of_share_button'] ) &&
+			!is_array( $options['disabled_locations_of_share_button'] )
+			) {
 
 			$defaults = apply_filters('bon_toolkit_render_social_counter_filter',array(
 				'social_buttons' => array(
@@ -112,27 +117,27 @@ function bon_toolkit_render_social_counter( $block = false ) {
 				));
 
 
-			$location = $options['share_button_location'];
+		$location = $options['share_button_location'];
 
-			$social_counter = new BON_Toolkit_Social_Counter($defaults);
+		$social_counter = new BON_Toolkit_Social_Counter($defaults);
 
-			if ( $block === true ) {
+		if ( $block === true ) {
 
-				echo $social_counter->init();
+			echo $social_counter->init();
 
-			} else {
+		} else {
 
-				if( $location == 'before_post' ) {
-					add_filter('the_content', array($social_counter, 'render_before'), 999, 1);
-				} else if( $location == 'after_post' ) {
-					add_filter('the_content',  array($social_counter, 'render_after'), 999, 1);
-				}
-
+			if( $location == 'before_post' ) {
+					// add_filter('the_content', array($social_counter, 'render_before'), 999, 1);
+			} else if( $location == 'after_post' ) {
+					// add_filter('the_content',  array($social_counter, 'render_after'), 999, 1);
 			}
 
 		}
 
-	}	
+	}
+
+}	
 
 }
 

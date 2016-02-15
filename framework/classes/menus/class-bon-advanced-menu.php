@@ -693,9 +693,9 @@ $this->default_keys = apply_filters( 'bon_nav_menu_option_key_defaults' , $this-
 
 			/* FOR SIDEBAR */
 
-			if( in_array( $args['menu']->term_id, $menus_on ) ) {
+			if( in_array( $args['menu'], $menus_on ) ) {
 				$args['walker'] 			= new BON_Advanced_Menu_Walker();
-				$args['container_id'] 		= 'bon-mega-menu-'. $args['menu']->slug;
+				$args['container_id'] 		= 'bon-mega-menu-'. $args['menu'];
 				$args['container_class'] 	= 'bon-mega-menu-container ';
 				$args['menu_class']			= ' bon-mega-menu-items clearfix ';
 				$args['items_wrap']			= '<ul id="%1$s" class="%2$s">%3$s</ul>';
