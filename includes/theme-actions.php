@@ -101,7 +101,7 @@ function get_ga_event() {
 
 	}
 
-	if ( is_array($combined_events) )
+	if ( isset($combined_events) && is_array($combined_events) )
 	{
 		foreach ( $combined_events as $key => $event )
 		{
@@ -2120,7 +2120,7 @@ function shandora_get_excluded_addons( $id = NULL ) {
 *
 */
 
-function shandora_print_home_cta ( $show, $link, $destination, $button_color, $onClick, $text ) {
+function shandora_print_home_cta ( $show, $link, $destination, $button_size, $button_color, $onClick, $text ) {
 
 	if ( $show ) {
 
@@ -2140,7 +2140,7 @@ function shandora_print_home_cta ( $show, $link, $destination, $button_color, $o
 				$ga_event_args = get_ga_event( 'CTA', 'Click on Home Page', $destination );
 			}
 		}
-		$output = "<a href='$link' class='table-cell align-middle cta flat button large " . $button_color . " radius' $onClick " . $ga_event_args . "><span" . $exClass . ">" . $text . "</span>" . $arrow . "</a>";
+		$output = "<a href='$link' class='table-cell align-middle cta flat button " . $button_size . " " . $button_color . " radius' $onClick " . $ga_event_args . "><span" . $exClass . ">" . $text . "</span>" . $arrow . "</a>";
 		echo $output;
 	}
 
@@ -2163,8 +2163,6 @@ function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
 	foreach ( $args as $cta ) {
 
 		if ( !$cta['disable_home_cta'] ) {
-
-			$button_color = $cta['home_cta_color'];
 
 			if ( $visited != 3 )
 			{
@@ -2189,7 +2187,7 @@ function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
 			}
 
 		// echo call to action
-			shandora_print_home_cta( $show, $link, $destination, $button_color, $onClick, $cta['home_cta_text'] );
+			shandora_print_home_cta( $show, $link, $destination, "", "main", $onClick, $cta['home_cta_text'] );
 
 		}
 
@@ -2201,7 +2199,7 @@ function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
 
 			if ( !$cta['disable_home_cta'] ) {
 
-				$button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
+				// $button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
 				$subline = $cta['home_cta_subline'];
 				if ( $subline != "" ) {
 					$cta['home_cta_text'] = $cta['home_cta_text'] . "</span><span class='cta-subline'>" . $subline;
@@ -2213,7 +2211,7 @@ function shandora_home_cta( $args, $tool = 0, $visited = 0 ) {
 					$show = FALSE;
 
 		// echo call to action
-				shandora_print_home_cta( $show, $link, $destination, $button_color, $onClick, $cta['home_cta_text'] );
+				shandora_print_home_cta( $show, $link, $destination, "small", "clouds", $onClick, $cta['home_cta_text'] );
 
 			}
 
@@ -2231,9 +2229,9 @@ function shandora_tool_cta() {
 
 	if ( $link != "" ) {
 
-		$button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
+		// $button_color = bon_get_option( 'tool_button_color', 'peterRiver' );
 		$onClick = 'onclick="window.open(\'' . $link . '\', \'VPWindow\', \'width=1024,height=768,toolbar=0,resizable=1,scrollbars=1,status=0,location=0\'); return false;"';
-		echo "<a href='$link' data-function='open-tool' class='flat button " . $button_color . " radius' $onClick ". get_ga_event( "Customize", "Open Tool" ) . ">" . __( 'Build your own', 'bon' ) . "</a>";
+		echo "<a href='$link' data-function='open-tool' class='flat button clouds radius' $onClick ". get_ga_event( "Customize", "Open Tool" ) . ">" . __( 'Build your own', 'bon' ) . "</a>";
 
 	}
 	

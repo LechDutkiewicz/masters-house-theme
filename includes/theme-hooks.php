@@ -36,7 +36,7 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_loop", "shandora_close_main_content_row", 10 );
 
-		add_action( "{$prefix}after_loop", "shandora_add_slidebox", 15 );
+		// add_action( "{$prefix}after_loop", "shandora_add_slidebox", 15 );
 
 		add_action( "{$prefix}before_home", "shandora_home_banners_slider", 3 );
 
@@ -44,9 +44,11 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}before_home", "shandora_home_toolsection", 5 );
 
-		add_action( "{$prefix}before_home", "shandora_home_we_are", 10 );
+		// add_action( "{$prefix}before_home", "shandora_featured_slider", 6 );
 
-		add_action( "{$prefix}before_home", "shandora_featured_slider", 15 );
+		add_action( "{$prefix}before_home", "shandora_chosen_categories", 7 );
+
+		add_action( "{$prefix}before_home", "shandora_home_we_are", 10 );
 
 		add_action( "{$prefix}before_home", "shandora_testimonials_slider", 20 );
 
@@ -86,15 +88,11 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}before_single_entry_content", "shandora_listing_gallery", 5 );
 
-		add_action( "{$prefix}before_single_entry_content", "shandora_listing_meta", 10 );
+		add_action( "{$prefix}before_single_entry_content", "shandora_listing_meta", 6 );
 
 	// removed by Lech Dutkiewicz add_action("{$prefix}after_single_entry_content", "shandora_listing_meta", 5);
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_addon", 8 );
-
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 9 );
-
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_services", 10 );
+		add_action( "{$prefix}after_single_entry_content", "shandora_social_counter", 10 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_spec_open", 15 );
 
@@ -102,9 +100,15 @@ function shandora_setup_theme_hook() {
 
 		// add_action( "{$prefix}after_single_entry_content", "shandora_listing_video", 25 );
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_spec_close", 30 );
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_spec_close", 25 );
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 35 );
+		// add_action( "{$prefix}after_single_entry_content", "shandora_listing_addon", 30 );
+
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_services", 35 );
+
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 40 );
+
+		// add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 35 );
 
 		// add_action("{$prefix}after_single_entry_content", "shandora_car_listing_video", 30);
 
@@ -112,13 +116,13 @@ function shandora_setup_theme_hook() {
 
 		//add_action("{$prefix}after_single_entry_content", "shandora_listing_map", 35);
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_quality_section", 45 );
+		// add_action( "{$prefix}after_single_entry_content", "shandora_quality_section", 45 );
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_testimonials_slider", 48 );
+		add_action( "{$prefix}after_single_entry_content", "shandora_testimonials_slider", 57 );
 
 		//add_action( "{$prefix}after_single_entry_content", "shandora_listing_agent", 50 );
 
-		add_action( "{$prefix}after_single_entry_content", "shandora_listing_related", 51 );
+		// add_action( "{$prefix}after_single_entry_content", "shandora_listing_related", 51 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_faq", 55 );
 
@@ -653,43 +657,44 @@ function shandora_entry_meta() {
 	/* $bed = shandora_get_meta( $post->ID, 'listing_bed' );
 	$bath = shandora_get_meta( $post->ID, 'listing_bath' ); */
 	$lotsize = shandora_get_meta( $post->ID, 'listing_lotsize' );
+	$terrace = shandora_get_meta( $post->ID, 'listing_terracesqmt' );
 	$rooms = shandora_get_meta( $post->ID, 'listing_rooms' );
 	/* $garage = shandora_get_meta( $post->ID, 'listing_garage' ); */
 
 
 	$html = '<div class="entry-meta">';
 
-	if ( $bed ) {
+	// if ( $bed ) {
 
-		$html .= '<div class="icon bed"><i class="' . apply_atomic( 'bed_icon', 'sha-bed' ) . '"></i>';
-		$html .= '<span>';
-		$html .= sprintf( _n( '%s Bed', '%s Beds', $bed, 'bon' ), $bed );
-		$html .= '</span>';
-		$html .= '</div>';
-	}
+	// 	$html .= '<div class="icon bed"><i class="' . apply_atomic( 'bed_icon', 'sha-bed' ) . '"></i>';
+	// 	$html .= '<span>';
+	// 	$html .= sprintf( _n( '%s Bed', '%s Beds', $bed, 'bon' ), $bed );
+	// 	$html .= '</span>';
+	// 	$html .= '</div>';
+	// }
 
-	if ( $bath ) {
-		$html .= '<div class="icon bath"><i class="' . apply_atomic( 'bath_icon', 'sha-bath' ) . '"></i>';
-		$html .= '<span>';
-		$html .= sprintf( _n( '%s Bath', '%s Baths', $bath, 'bon' ), $bath );
-		$html .= '</span>';
-		$html .= '</div>';
-	}
+	// if ( $bath ) {
+	// 	$html .= '<div class="icon bath"><i class="' . apply_atomic( 'bath_icon', 'sha-bath' ) . '"></i>';
+	// 	$html .= '<span>';
+	// 	$html .= sprintf( _n( '%s Bath', '%s Baths', $bath, 'bon' ), $bath );
+	// 	$html .= '</span>';
+	// 	$html .= '</div>';
+	// }
 
 	/* if ( $view == 'list' ) { */
 
-		if ( $garage ) {
-			$html .= '<div class="icon garage"><i class="' . apply_atomic( 'garage_icon', 'sha-car' ) . '"></i>';
-			$html .= '<span>';
-			$html .= sprintf( _n( '%s Garage', '%s Garages', $garage, 'bon' ), $garage );
-			$html .= '</span>';
-			$html .= '</div>';
-		}
+		// if ( $garage ) {
+		// 	$html .= '<div class="icon garage"><i class="' . apply_atomic( 'garage_icon', 'sha-car' ) . '"></i>';
+		// 	$html .= '<span>';
+		// 	$html .= sprintf( _n( '%s Garage', '%s Garages', $garage, 'bon' ), $garage );
+		// 	$html .= '</span>';
+		// 	$html .= '</div>';
+		// }
 
 		if ( $rooms ) {
-			$html .= '<div class="icon room"><i class="' . apply_atomic( 'room_icon', 'sha-bed-2' ) . '"></i>';
+			$html .= '<div class="icon room text-asbestos" title="' . __( "Number of rooms", "bon" ). '"><i class="' . apply_atomic( 'room_icon', 'sha-bed' ) . '"></i>';
 			$html .= '<span>';
-			$html .= sprintf( _n( '%s Room', '%s Rooms', $rooms, 'bon' ), $rooms );
+			$html .= sprintf( _n( '%s room', '%s rooms', $rooms, 'bon' ), $rooms );
 			$html .= '</span>';
 			$html .= '</div>';
 		}
@@ -697,9 +702,18 @@ function shandora_entry_meta() {
 
 		if ( $lotsize ) {
 
-			$html .= '<div class="icon size"><i class="' . apply_atomic( 'size_icon', 'sha-ruler' ) . '"></i>';
+			$html .= '<div class="icon size text-asbestos" title="' . __( "Cottage size", "bon" ). '"><i class="' . apply_atomic( 'size_icon', 'sha-area' ) . '"></i>';
 			$html .= '<span>';
 			$html .= ($lotsize) ? $lotsize . ' ' . $sizemeasurement : __( 'Unspecified', 'bon' );
+			$html .= '</span>';
+			$html .= '</div>';
+		}
+
+		if ( $terrace ) {
+
+			$html .= '<div class="icon terrace text-asbestos" title="' . __( "Terrace size", "bon" ). '"><i class="' . apply_atomic( 'terrace_icon', 'sha-coffee' ) . '"></i>';
+			$html .= '<span>';
+			$html .= ($terrace) ? $terrace . ' ' . $sizemeasurement : __( 'Unspecified', 'bon' );
 			$html .= '</span>';
 			$html .= '</div>';
 		}
@@ -827,7 +841,7 @@ function shandora_listing_entry_title() {
 		$price = '<a href="' . get_permalink( $post->ID ) . '" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '"><span class="price">' . shandora_get_listing_price( false ) . '</span></a>';
 	}
 
-	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title"><a href="' . get_permalink() . '" class="product-link" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '" ' . get_ga_event( 'Cottage List', 'Pick single cottage', 'Title' ) . '>', '</a>' . $price . '</h3>', false ) );
+	echo apply_atomic_shortcode( 'entry_title', the_title( '<h3 class="entry-title like-h4"><a href="' . get_permalink() . '" class="product-link" title="' . the_title_attribute( array( 'before' => __( 'Permalink to ', 'bon' ), 'echo' => false ) ) . '" ' . get_ga_event( 'Cottage List', 'Pick single cottage', 'Title' ) . '>', '</a>' . $price . '</h3>', false ) );
 }
 
 /**
@@ -1265,7 +1279,7 @@ function shandora_listing_toolsection() {
 function shandora_home_banners_slider() {
 
 	if ( bon_get_option( 'home_banners' ) && $_SESSION['layoutType'] !== 'mobile' )
-		bon_get_template_part( 'block', 'block-banners-slider' );
+		bon_get_template_part( 'loop', 'banner' );
 
 }
 
@@ -1310,7 +1324,7 @@ function shandora_home_we_are() { ?>
 <section>
 	<?php if (shandora_is_home()) { ?>
 	<header class="section-header">
-		<h2 class="home-section-header"><?php echo bon_get_option( 'home_features_title', 'yes' ); ?></h2>
+		<h2 class="home-section-header"><?php _e( "Why us?", "bon" ); ?></h2>
 	</header>
 	<?php } ?>
 	<?php bon_get_template_part( 'block', 'listing/services' ); ?>
@@ -1354,6 +1368,17 @@ function shandora_testimonials_slider() {
 */
 function shandora_featured_slider() {
 	bon_get_template_part( 'block', 'block-featured-slider' );
+}
+
+/**
+* Get Featured Cottages Slider
+* Added by Lech Dutkiewicz
+* @since 1.3.6
+* @return void
+*
+*/
+function shandora_chosen_categories() {
+	bon_get_template_part( 'block', 'block-chosen-categories' );
 }
 
 /**
@@ -1715,8 +1740,8 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 									$newurl = $uri . '?' . $newurl . '&view=';
 								}
 								?>
-								<a class="view-button button blue flat view-grid <?php echo ( $view == 'grid' ) ? 'selected' : ''; ?> " href="<?php echo $newurl . 'grid'; ?>" data-analytics-category="Cottage List" data-analytics-action="Switch View" data-analytics-label="grid"><i class="bonicons bi-th"></i></a>
-								<a class="view-button button blue flat view-list <?php echo ( $view == 'list' ) ? 'selected' : ''; ?>" href="<?php echo $newurl . 'list'; ?>" data-analytics-category="Cottage List" data-analytics-action="Switch View" data-analytics-label="list"><i class="bonicons bi-list"></i></a>
+								<a class="view-button button concrete flat view-grid <?php echo ( $view == 'grid' ) ? 'selected' : ''; ?> " href="<?php echo $newurl . 'grid'; ?>" data-analytics-category="Cottage List" data-analytics-action="Switch View" data-analytics-label="grid" title="<?php _e( "View as grid", "bon"); ?>"><i class="bonicons bi-th-large"></i></a>
+								<a class="view-button button concrete flat view-list <?php echo ( $view == 'list' ) ? 'selected' : ''; ?>" href="<?php echo $newurl . 'list'; ?>" data-analytics-category="Cottage List" data-analytics-action="Switch View" data-analytics-label="list" title="<?php _e( "View as list", "bon"); ?>"><i class="bonicons bi-th-list"></i></a>
 							</div>
 							<div class="column large-9">
 								<form class="custom" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="get" id="orderform" name="orderform">
@@ -2199,7 +2224,11 @@ function shandora_scroll_top_button() {
 function pippin_get_image_id( $image_url ) {
 	global $wpdb;
 	$attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ) );
-	return $attachment[0];
+	if ( isset($attachment) && array_key_exists(0, $attachment) ) {
+		return $attachment[0];
+	} else {
+		return;
+	}
 }
 
 function get_package_details( $id, $package_prefix ) {
@@ -2228,40 +2257,6 @@ function get_packages_details( $id, $package_prefix, $package ) {
 	return $output;
 
 }
-
-// Uncomment this if each product would have it's own package descriptions
-
-/*function package_details( $id, $package_prefix ) {
-
-$details = get_package_details( $id, $package_prefix );
-
-var_dump($details);
-
-foreach ( $details as $key => $value ) {
-	if ( !empty( $key ) ) { ?>
-	<li>
-		<strong><?php echo $value; ?> </strong>
-		<span>
-			<?php
-			echo $key;
-
-			if ( $key == 'lotsize' || $key == 'terracesqmt' ) {
-
-				echo ' ' . $sizemeasurement;
-
-			}
-
-			if ( $key == 'price' || $key == 'monprice' ) {
-
-				echo ' ' . $currency;
-
-			} ?>
-		</span>
-	</li>
-	<?php }
-}
-
-}*/
 
 function packages_details( $id, $package_prefix, $name = NULL ) {
 
