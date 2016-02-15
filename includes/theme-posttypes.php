@@ -99,6 +99,7 @@ function shandora_add_post_type()
         // Added by Lech Dutkiewicz
 		add_action('init', 'shandora_setup_addon_post_type', 1);
         //add_action('init', 'shandora_setup_service_post_type', 1);
+		add_action('init', 'shandora_setup_banner_post_type', 1);
 		add_action('init', 'shandora_setup_slidebox_post_type', 1);
 		add_action('init', 'shandora_setup_home_feature_post_type', 1);
 		add_action('init', 'shandora_setup_additional_service_post_type', 1);

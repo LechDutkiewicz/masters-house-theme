@@ -296,6 +296,23 @@ $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom JS', 'bon' )
 	'class' => 'code_mirror',
 	'type' => 'textarea' );
 
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Pages Options', 'bon' ),
+	'type' => 'subheading' );
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Page with all houses', 'bon' ),
+	'desc' => __( 'Choose page that displays houses catalog', 'bon' ),
+	'id' => 'catalog_page',
+	'std' => '',
+	'class' => 'code_mirror',
+	'type' => 'page_select' );
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Page with quality', 'bon' ),
+	'desc' => __( 'Choose page that displays quality information', 'bon' ),
+	'id' => 'quality_page',
+	'std' => '',
+	'class' => 'code_mirror',
+	'type' => 'page_select' );
+
 		/**
 		 * =====================================================================================================
 		 *
@@ -1757,94 +1774,111 @@ $options[] = array(
 			'type' => 'heading',
 			'icon' => 'dashicons-admin-home' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'About us section title', 'bon' ),
-			'desc' => __( 'Type in text displayed in home screen about us section title', 'bon' ),
-			'id' => 'home_features_title',
-			'type' => 'text' );
+		// $options[] = array( 'slug' => 'bon_options',
+		// 	'label' => __( 'About us section title', 'bon' ),
+		// 	'desc' => __( 'Type in text displayed in home screen about us section title', 'bon' ),
+		// 	'id' => 'home_features_title',
+		// 	'type' => 'text' );
 
-		/* CALL TO ACTION SETUP */
-
-		$options[] = array(
-			'slug' => 'bon_options',
-			'label' => __( 'Slogan', 'bon' ),
-			'desc' => __( 'Type in text displayed in home screen slogan', 'bon' ),
-			'id' => 'home_slogan',
-			'type' => 'text' );
-
-		$options[] = array(
-			'slug' => 'bon_options',
-			'label' => __( 'Home call to action', 'bon' ),
-			'desc' => __( 'Add call to action', 'bon' ),
-			'id' => 'home_cta',
+		$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Choose categories order', 'bon' ),
+			'id' => 'cats_home',
 			'type' => 'repeatable',
 			'sanitize' => array(
-				'name' => 'sanitize_text_field',
+				'sidebar_name' => 'sanitize_text_field',
+				'is_menu' => 'sanitize_checkbox',
 				),
 			'repeatable_fields' => array(
 				array(
-					'type' => 'text',
-					'label' => __( 'Call to action text', 'bon' ),
-					'id' => 'home_cta_text',
+					'type' => 'tax_select',
+					'label' => __( 'Category Name', 'bon' ),
+					'id' => 'cat_name',
 					'std' => '',
+					'tax_type' => 'property-type'
 					),
-				array(
-					'slug' => 'bon_options',
-					'label' => sprintf( __( 'Link to one of the pages', 'bon' ), $i ),
-					'id' => 'enable_home_cta_page',
-					'class' => 'collapsed',
-					'type' => 'checkbox'
-					),
-				array(
-					'type' => 'page_select',
-					'label' => __( 'Call to action link', 'bon' ),
-					'desc' => __( 'Choose page', 'bon' ),
-					'class' => 'hidden last',
-					'id' => 'home_cta_link_page'
-					),
-				array(
-					'slug' => 'bon_options',
-					'label' => sprintf( __( 'Link to one of the blog posts', 'bon' ), $i ),
-					'id' => 'enable_home_cta_post',
-					'class' => 'collapsed',
-					'type' => 'checkbox'
-					),
-				array(
-					'type' => 'post_select',
-					'label' => __( 'Call to action link', 'bon' ),
-					'desc' => __( 'Choose post', 'bon' ),
-					'class' => 'hidden last',
-					'id' => 'home_cta_link_post'
-					),
-				array(
-					'slug' => 'bon_options',
-					'label' => sprintf( __( 'Link to custom URL', 'bon' ), $i ),
-					'id' => 'enable_home_cta_url',
-					'class' => 'collapsed',
-					'type' => 'checkbox'
-					),
-				array(
-					'type' => 'text',
-					'label' => __( 'Custom link', 'bon' ),
-					'desc' => __( 'Or type your own link', 'bon' ),
-					'class' => 'hidden last',
-					'id' => 'home_cta_link_url'
-					),
-				array(
-					'options' => get_colors_list(),
-					'type' => 'radio-img',
-					'label' => __( 'Color', 'bon' ),
-					'id' => 'home_cta_color',
-					'std' => 'carrot',
-					),
-				array(
-					'slug' => 'bon_options',
-					'label' => sprintf( __( 'Make unactive', 'bon' ), $i ),
-					'id' => 'disable_home_cta',
-					'type' => 'checkbox',
-					),
-				),
-);
+				) );
+
+		/* CALL TO ACTION SETUP */
+
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'label' => __( 'Slogan', 'bon' ),
+		// 	'desc' => __( 'Type in text displayed in home screen slogan', 'bon' ),
+		// 	'id' => 'home_slogan',
+		// 	'type' => 'text' );
+
+// 		$options[] = array(
+// 			'slug' => 'bon_options',
+// 			'label' => __( 'Home call to action', 'bon' ),
+// 			'desc' => __( 'Add call to action', 'bon' ),
+// 			'id' => 'home_cta',
+// 			'type' => 'repeatable',
+// 			'sanitize' => array(
+// 				'name' => 'sanitize_text_field',
+// 				),
+// 			'repeatable_fields' => array(
+// 				array(
+// 					'type' => 'text',
+// 					'label' => __( 'Call to action text', 'bon' ),
+// 					'id' => 'home_cta_text',
+// 					'std' => '',
+// 					),
+// 				array(
+// 					'slug' => 'bon_options',
+// 					'label' => sprintf( __( 'Link to one of the pages', 'bon' ), $i ),
+// 					'id' => 'enable_home_cta_page',
+// 					'class' => 'collapsed',
+// 					'type' => 'checkbox'
+// 					),
+// 				array(
+// 					'type' => 'page_select',
+// 					'label' => __( 'Call to action link', 'bon' ),
+// 					'desc' => __( 'Choose page', 'bon' ),
+// 					'class' => 'hidden last',
+// 					'id' => 'home_cta_link_page'
+// 					),
+// 				array(
+// 					'slug' => 'bon_options',
+// 					'label' => sprintf( __( 'Link to one of the blog posts', 'bon' ), $i ),
+// 					'id' => 'enable_home_cta_post',
+// 					'class' => 'collapsed',
+// 					'type' => 'checkbox'
+// 					),
+// 				array(
+// 					'type' => 'post_select',
+// 					'label' => __( 'Call to action link', 'bon' ),
+// 					'desc' => __( 'Choose post', 'bon' ),
+// 					'class' => 'hidden last',
+// 					'id' => 'home_cta_link_post'
+// 					),
+// 				array(
+// 					'slug' => 'bon_options',
+// 					'label' => sprintf( __( 'Link to custom URL', 'bon' ), $i ),
+// 					'id' => 'enable_home_cta_url',
+// 					'class' => 'collapsed',
+// 					'type' => 'checkbox'
+// 					),
+// 				array(
+// 					'type' => 'text',
+// 					'label' => __( 'Custom link', 'bon' ),
+// 					'desc' => __( 'Or type your own link', 'bon' ),
+// 					'class' => 'hidden last',
+// 					'id' => 'home_cta_link_url'
+// 					),
+// 				array(
+// 					'options' => get_colors_list(),
+// 					'type' => 'radio-img',
+// 					'label' => __( 'Color', 'bon' ),
+// 					'id' => 'home_cta_color',
+// 					'std' => 'carrot',
+// 					),
+// 				array(
+// 					'slug' => 'bon_options',
+// 					'label' => sprintf( __( 'Make unactive', 'bon' ), $i ),
+// 					'id' => 'disable_home_cta',
+// 					'type' => 'checkbox',
+// 					),
+// 				),
+// );
 
 /*
 *
@@ -1852,83 +1886,83 @@ $options[] = array(
 *
 */
 
-$options[] = array(
-	'slug' => 'bon_options',
-	'label' => __( 'Slogan for returning users', 'bon' ),
-	'desc' => __( 'Type in text displayed in home screen slogan for returning users screen', 'bon' ),
-	'id' => 'home_slogan_returning',
-	'type' => 'text' );
+// $options[] = array(
+// 	'slug' => 'bon_options',
+// 	'label' => __( 'Slogan for returning users', 'bon' ),
+// 	'desc' => __( 'Type in text displayed in home screen slogan for returning users screen', 'bon' ),
+// 	'id' => 'home_slogan_returning',
+// 	'type' => 'text' );
 
-$options[] = array(
-	'slug' => 'bon_options',
-	'label' => __( 'Home call to action that opens drawing tool', 'bon' ),
-	'desc' => __( 'Add call to action', 'bon' ),
-	'id' => 'home_cta_tool',
-	'type' => 'repeatable',
-	'sanitize' => array(
-		'name' => 'sanitize_text_field',
-		),
-	'repeatable_fields' => array(
-		array(
-			'type' => 'text',
-			'label' => __( 'Call to action text', 'bon' ),
-			'id' => 'home_cta_text',
-			'std' => '',
-			),
-		array(
-			'type' => 'text',
-			'label' => __( 'Additional information in call to action text', 'bon' ),
-			'id' => 'home_cta_subline'
-			),
-		/*array(
-			'options' => get_colors_list(),
-			'type' => 'radio-img',
-			'label' => __( 'Color', 'bon' ),
-			'id' => 'home_cta_color',
-			'std' => 'carrot',
-			),*/
-	array(
-		'slug' => 'bon_options',
-		'label' => sprintf( __( 'Make unactive', 'bon' ), $i ),
-		'id' => 'disable_home_cta',
-		'type' => 'checkbox',
-		),
-	),
-	);
+// $options[] = array(
+// 	'slug' => 'bon_options',
+// 	'label' => __( 'Home call to action that opens drawing tool', 'bon' ),
+// 	'desc' => __( 'Add call to action', 'bon' ),
+// 	'id' => 'home_cta_tool',
+// 	'type' => 'repeatable',
+// 	'sanitize' => array(
+// 		'name' => 'sanitize_text_field',
+// 		),
+// 	'repeatable_fields' => array(
+// 		array(
+// 			'type' => 'text',
+// 			'label' => __( 'Call to action text', 'bon' ),
+// 			'id' => 'home_cta_text',
+// 			'std' => '',
+// 			),
+// 		array(
+// 			'type' => 'text',
+// 			'label' => __( 'Additional information in call to action text', 'bon' ),
+// 			'id' => 'home_cta_subline'
+// 			),
+// 		/*array(
+// 			'options' => get_colors_list(),
+// 			'type' => 'radio-img',
+// 			'label' => __( 'Color', 'bon' ),
+// 			'id' => 'home_cta_color',
+// 			'std' => 'carrot',
+// 			),*/
+// 	array(
+// 		'slug' => 'bon_options',
+// 		'label' => sprintf( __( 'Make unactive', 'bon' ), $i ),
+// 		'id' => 'disable_home_cta',
+// 		'type' => 'checkbox',
+// 		),
+// 	),
+// 	);
 
 /* CALL TO ACTION SETUP FOR RETURNING USERS */
 
-$options[] = array(
-	'slug' => 'bon_options',
-	'label' => __( 'Home call to action for returning users screen', 'bon' ),
-	'desc' => __( 'Add call to action', 'bon' ),
-	'id' => 'home_cta_returning',
-	'type' => 'repeatable',
-	'sanitize' => array(
-		'name' => 'sanitize_text_field',
-		),
-	'repeatable_fields' => array(
-		array(
-			'type' => 'text',
-			'label' => __( 'Call to action text', 'bon' ),
-			'id' => 'home_cta_text',
-			'std' => '',
-			),
-		array(
-			'options' => get_colors_list(),
-			'type' => 'radio-img',
-			'label' => __( 'Color', 'bon' ),
-			'id' => 'home_cta_color',
-			'std' => 'carrot',
-			),
-		array(
-			'slug' => 'bon_options',
-			'label' => sprintf( __( 'Make unactive', 'bon' ), $i ),
-			'id' => 'disable_home_cta',
-			'type' => 'checkbox',
-			),
-		),
-	);
+// $options[] = array(
+// 	'slug' => 'bon_options',
+// 	'label' => __( 'Home call to action for returning users screen', 'bon' ),
+// 	'desc' => __( 'Add call to action', 'bon' ),
+// 	'id' => 'home_cta_returning',
+// 	'type' => 'repeatable',
+// 	'sanitize' => array(
+// 		'name' => 'sanitize_text_field',
+// 		),
+// 	'repeatable_fields' => array(
+// 		array(
+// 			'type' => 'text',
+// 			'label' => __( 'Call to action text', 'bon' ),
+// 			'id' => 'home_cta_text',
+// 			'std' => '',
+// 			),
+// 		array(
+// 			'options' => get_colors_list(),
+// 			'type' => 'radio-img',
+// 			'label' => __( 'Color', 'bon' ),
+// 			'id' => 'home_cta_color',
+// 			'std' => 'carrot',
+// 			),
+// 		array(
+// 			'slug' => 'bon_options',
+// 			'label' => sprintf( __( 'Make unactive', 'bon' ), $i ),
+// 			'id' => 'disable_home_cta',
+// 			'type' => 'checkbox',
+// 			),
+// 		),
+// 	);
 
 $options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Display rotating banners', 'bon' ),

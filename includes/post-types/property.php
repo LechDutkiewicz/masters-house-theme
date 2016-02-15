@@ -638,7 +638,7 @@ if ( !function_exists( 'shandora_setup_agent_post_type' ) ) {
 		$plural = __( 'Agents', 'bon_admin' );
 
 
-		$cpt->create( 'Agent', array( 'supports' => array( 'title', 'page-attributes', 'thumbnail' ), 'exclude_from_search' => true, 'menu_position' => 20, 'menu_icon' => 'dashicons-businessman' ), array(), $name, $plural );
+		$cpt->create( 'Agent', array( 'supports' => array( 'title', 'page-attributes', 'thumbnail' ), 'exclude_from_search' => true, 'menu_position' => 60, 'menu_icon' => 'dashicons-businessman' ), array(), $name, $plural );
 
 
 		$agent_opt1 = array(
@@ -727,7 +727,7 @@ if ( !function_exists( 'shandora_setup_addon_post_type' ) ) {
 		$plural = __( 'Addons', 'bon_admin' );
 
 
-		$cpt->create( 'Addon', array( 'supports' => array( 'title', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 75, 'menu_icon' => 'dashicons-welcome-add-page' ), array(), $name, $plural );
+		$cpt->create( 'Addon', array( 'supports' => array( 'title', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 60, 'menu_icon' => 'dashicons-welcome-add-page' ), array(), $name, $plural );
 
 		$addon_opt1 = array(
 			array(
@@ -754,89 +754,121 @@ if ( !function_exists( 'shandora_setup_addon_post_type' ) ) {
 
 }
 
-if ( !function_exists( 'shandora_setup_service_post_type' ) ) {
+// if ( !function_exists( 'shandora_setup_service_post_type' ) ) {
 
-	function shandora_setup_service_post_type() {
+// 	function shandora_setup_service_post_type() {
+// 		global $bon;
+
+// 		$prefix = bon_get_prefix();
+
+// 		$cpt = $bon->cpt();
+
+// 		$name = __( 'Service', 'bon_admin' );
+// 		$plural = __( 'Services', 'bon_admin' );
+
+
+// 		$cpt->create( 'Service', array( 'supports' => array( 'editor', 'title', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 60, 'menu_icon' => 'dashicons-hammer' ), array(), $name, $plural );
+
+
+// 		$service_opt1 = array(
+// 			array(
+// 				'label' => __( 'Font awesome icon', 'bon_admin' ),
+// 				'id' => $prefix . 'serviceicon',
+// 				'type' => 'icon',
+// 				),
+// 			array(
+// 				'label' => __( 'Icon color', 'bon_admin' ),
+// 				'id' => $prefix . 'serviceiconcolor',
+// 				'type' => 'radio-img',
+// 				'options' => get_colors_list()
+// 				),
+// 			);
+
+// 		$service_opt2 = array(
+// 			array(
+// 				'label' => __( 'Title', 'bon_admin' ),
+// 				'id' => $prefix . 'service_more_title',
+// 				'type' => 'text',
+// 				),
+// 			array(
+// 				'label' => __( 'Content', 'bon_admin' ),
+// 				'id' => $prefix . 'service_more_content',
+// 				'type' => 'editor',
+// 				'settings' => array(
+// 					'media_buttons' => true,
+// 					'tinymce' => true,
+// 					'teeny' => false,
+// 					'wpautop' => true,
+// 					'textarea_rows' => 30
+// 					),
+// 				),
+// 			array(
+// 				'label' => __( 'Content', 'bon_admin' ),
+// 				'id' => $prefix . 'service_more_paragraphs',
+// 				'type' => 'repeatable',
+// 				'sanitize' => array(
+// 					'name' => 'sanitize_text_field',
+// 					),
+// 				'repeatable_fields' => array(
+// 					array(
+// 						'label' => __( 'Header', 'bon_admin' ),
+// 						'id' => $prefix . 'header',
+// 						'type' => 'text',
+// 						),
+// 					array(
+// 						'label' => __( 'Subeader', 'bon_admin' ),
+// 						'id' => $prefix . 'subheader',
+// 						'type' => 'text',
+// 						),
+// 					array(
+// 						'label' => __( 'Image', 'bon_admin' ),
+// 						'id' => $prefix . 'img',
+// 						'type' => 'upload',
+// 						),
+// 					),
+// 				),
+// 			);
+
+// $cpt->add_meta_box(
+// 	'service-options', 'Icon options', $service_opt1
+// 	);
+
+// $cpt->add_meta_box(
+// 	'service-more', 'Extended information', $service_opt2
+// 	);
+// }
+
+// }
+
+if ( !function_exists( 'shandora_setup_banner_post_type' ) ) {
+
+	function shandora_setup_banner_post_type() {
 		global $bon;
 
 		$prefix = bon_get_prefix();
 
 		$cpt = $bon->cpt();
 
-		$name = __( 'Service', 'bon_admin' );
-		$plural = __( 'Services', 'bon_admin' );
+		$name = __( 'Banner', 'bon_admin' );
+		$plural = __( 'Banners', 'bon_admin' );
 
 
-		$cpt->create( 'Service', array( 'supports' => array( 'editor', 'title', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 75, 'menu_icon' => 'dashicons-hammer' ), array(), $name, $plural );
+		$cpt->create( 'Banner', array( 'supports' => array( 'title', 'thumbnail', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 40, 'menu_icon' => 'dashicons-images-alt2' ), array(), $name, $plural );
 
 
 		$service_opt1 = array(
 			array(
-				'label' => __( 'Font awesome icon', 'bon_admin' ),
-				'id' => $prefix . 'serviceicon',
-				'type' => 'icon',
-				),
-			array(
-				'label' => __( 'Icon color', 'bon_admin' ),
-				'id' => $prefix . 'serviceiconcolor',
-				'type' => 'radio-img',
-				'options' => get_colors_list()
+				'label' => __( 'Destination page', 'bon_admin' ),
+				'id' => $prefix . 'banner_link',			
+				'type' => 'page_chosen'
 				),
 			);
 
-		$service_opt2 = array(
-			array(
-				'label' => __( 'Title', 'bon_admin' ),
-				'id' => $prefix . 'service_more_title',
-				'type' => 'text',
-				),
-			array(
-				'label' => __( 'Content', 'bon_admin' ),
-				'id' => $prefix . 'service_more_content',
-				'type' => 'editor',
-				'settings' => array(
-					'media_buttons' => true,
-					'tinymce' => true,
-					'teeny' => false,
-					'wpautop' => true,
-					'textarea_rows' => 30
-					),
-				),
-			array(
-				'label' => __( 'Content', 'bon_admin' ),
-				'id' => $prefix . 'service_more_paragraphs',
-				'type' => 'repeatable',
-				'sanitize' => array(
-					'name' => 'sanitize_text_field',
-					),
-				'repeatable_fields' => array(
-					array(
-						'label' => __( 'Header', 'bon_admin' ),
-						'id' => $prefix . 'header',
-						'type' => 'text',
-						),
-					array(
-						'label' => __( 'Subeader', 'bon_admin' ),
-						'id' => $prefix . 'subheader',
-						'type' => 'text',
-						),
-					array(
-						'label' => __( 'Image', 'bon_admin' ),
-						'id' => $prefix . 'img',
-						'type' => 'upload',
-						),
-					),
-				),
+		$cpt->add_meta_box(
+			'service-options', 'Banner link', $service_opt1
 			);
 
-$cpt->add_meta_box(
-	'service-options', 'Icon options', $service_opt1
-	);
-
-$cpt->add_meta_box(
-	'service-more', 'Extended information', $service_opt2
-	);
-}
+	}
 
 }
 
@@ -907,7 +939,7 @@ if ( !function_exists( 'shandora_setup_home_feature_post_type' ) ) {
 		$plural = __( 'Home features', 'bon_admin' );
 
 
-		$cpt->create( 'Home-feature', array( 'supports' => array( 'editor', 'title', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 20, 'menu_icon' => 'dashicons-star-filled' ), array(), $name, $plural );
+		$cpt->create( 'Home-feature', array( 'supports' => array( 'editor', 'title', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 60, 'menu_icon' => 'dashicons-star-filled' ), array(), $name, $plural );
 
 
 		$service_opt1 = array(
@@ -977,6 +1009,7 @@ if ( !function_exists( 'shandora_setup_testimonials_post_type' ) ) {
 		global $bon;
 
 		$prefix = bon_get_prefix();
+		$suffix = SHANDORA_MB_SUFFIX;
 
 		$cpt = $bon->cpt();
 
@@ -1109,10 +1142,6 @@ if ( !function_exists( 'shandora_setup_casestudy_post_type' ) ) {
 		$cpt->add_meta_box(
 			'building', 'Building', $prop_options_2
 			);
-
-		// $cpt->add_meta_box(
-		// 	'author', 'Author', $prop_options
-		// 	);
 	}
 
 }
@@ -1123,6 +1152,7 @@ if ( !function_exists( 'shandora_setup_ebooks_post_type' ) ) {
 		global $bon;
 
 		$prefix = bon_get_prefix();
+		$suffix = SHANDORA_MB_SUFFIX;
 
 		$cpt = $bon->cpt();
 
@@ -1180,6 +1210,7 @@ if ( !function_exists( 'shandora_setup_promotions_post_type' ) ) {
 		global $bon;
 
 		$prefix = bon_get_prefix();
+		$suffix = SHANDORA_MB_SUFFIX;
 
 		$cpt = $bon->cpt();
 
@@ -1224,6 +1255,7 @@ if ( !function_exists( 'shandora_setup_regular_post_type' ) ) {
 		global $bon;
 
 		$prefix = bon_get_prefix();
+		$suffix = SHANDORA_MB_SUFFIX;
 
 		$mb = new BON_Metabox();
 

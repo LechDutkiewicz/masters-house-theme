@@ -31,13 +31,13 @@ function shandora_get_search_option($option = 'status') {
 
 		case 'location':
 
-			$terms = get_terms('property-location');
-			$val['any'] = __('Any', 'bon');
-		    if( $terms ) {
-			    foreach($terms as $term) {
-			    	$val[$term->slug] = $term->name;
-			    }
-			}
+			// $terms = get_terms('property-location');
+			// $val['any'] = __('Any', 'bon');
+		 //    if( $terms ) {
+			//     foreach($terms as $term) {
+			//     	$val[$term->slug] = $term->name;
+			//     }
+			// }
 
 		break;
 
