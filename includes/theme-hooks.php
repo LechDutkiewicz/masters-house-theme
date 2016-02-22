@@ -94,6 +94,8 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_social_counter", 10 );
 
+		add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 12 );
+
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_spec_open", 15 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_detail_tabs", 20 );
@@ -107,8 +109,6 @@ function shandora_setup_theme_hook() {
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_services", 35 );
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_toolsection", 40 );
-
-		// add_action( "{$prefix}after_single_entry_content", "shandora_listing_packages", 35 );
 
 		// add_action("{$prefix}after_single_entry_content", "shandora_car_listing_video", 30);
 
@@ -882,7 +882,7 @@ function shandora_listing_gallery() {
 */
 function shandora_listing_meta() {
 
-	if ( $_SESSION['layoutType'] !== 'mobile' && ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) || shandora_get_meta( get_the_ID(), 'listing_enable_construction' ) ) ) {
+	// if ( $_SESSION['layoutType'] !== 'mobile' && ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) || shandora_get_meta( get_the_ID(), 'listing_enable_construction' ) ) ) {
 
 		?>
 
@@ -893,7 +893,7 @@ function shandora_listing_meta() {
 		</div>
 
 		<?php
-	}
+	// }
 }
 
 /**
@@ -909,7 +909,7 @@ function shandora_listing_packages() {
 
 		?>
 
-		<section class="row padding-large top bottom">
+		<section class="row">
 			<?php
 			bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'packages' );
 			?>
@@ -1260,11 +1260,23 @@ function shandora_listing_toolsection() {
 
 	$display = bon_get_option( 'tool_section_display' );
 
-	if ( $display === '1' && $_SESSION['layoutType'] !== 'mobile' ) {
-		if ( is_singular( 'listing' ) ) {
+	global $post;
+	// get taxonomies marked to display tool section
+	$toolsection_tax = bon_get_option( 'tool_section_taxonomies' );
+	// get current post term
+	$terms = wp_get_post_terms( $post->ID, 'property-type' );
+
+	// look if any of current post's terms is marked as checked
+	foreach ( $terms as $term ) {
+		if ( isset( $toolsection_tax[$term->term_id] ) &&
+			$toolsection_tax[$term->term_id] == 1 &&
+			$display === '1' &&
+			$_SESSION['layoutType'] !== 'mobile' &&
+			is_singular( 'listing' )
+			) {
 			bon_get_template_part( 'block', 'block-toolsection' );
-		}
 	}
+}
 
 }
 
@@ -1710,19 +1722,19 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 
 					<?php
 					if ( $show_listing_count ) {
-						echo '<div class="column large-5"><h3 id="listed-property"></h3></div>';
+						echo '<div class="column small-12 medium-6 show-for-medium-up"><h3 id="listed-property"></h3></div>';
 					}
 					?>
 
 					<?php
-					$search_order = isset( $_GET['search_order'] ) ? $_GET['search_order'] : bon_get_option( 'listing_order', 'DESC' );
-					$search_orderby = isset( $_GET['search_orderby'] ) ? $_GET['search_orderby'] : bon_get_option( 'listing_orderby', 'date' );
+					$search_order = isset( $_GET['search_order'] ) ? $_GET['search_order'] : bon_get_option( 'listing_order', 'PRICE_ASC' );
+					// $search_orderby = isset( $_GET['search_orderby'] ) ? $_GET['search_orderby'] : bon_get_option( 'listing_orderby', 'date' );
 					?>
 
-					<div class="column large-7 right">
+					<div class="column small-12 medium-6 right">
 
 						<div class="row">
-							<div class="column large-3">
+							<div class="column small-3">
 								<?php
 								$view = isset( $_GET['view'] ) ? $_GET['view'] : 'grid';
 								$newurl = '';
@@ -1743,17 +1755,19 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 								<a class="view-button button concrete flat view-grid <?php echo ( $view == 'grid' ) ? 'selected' : ''; ?> " href="<?php echo $newurl . 'grid'; ?>" data-analytics-category="Cottage List" data-analytics-action="Switch View" data-analytics-label="grid" title="<?php _e( "View as grid", "bon"); ?>"><i class="bonicons bi-th-large"></i></a>
 								<a class="view-button button concrete flat view-list <?php echo ( $view == 'list' ) ? 'selected' : ''; ?>" href="<?php echo $newurl . 'list'; ?>" data-analytics-category="Cottage List" data-analytics-action="Switch View" data-analytics-label="list" title="<?php _e( "View as list", "bon"); ?>"><i class="bonicons bi-th-list"></i></a>
 							</div>
-							<div class="column large-9">
+							<div class="column small-9">
 								<form class="custom" action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="get" id="orderform" name="orderform">
 
 									<div class="row">
-										<div class="column large-7 search-order">
+										<div class="column small-12 search-order">
 											<select class="no-mbot" name="search_order" onChange="document.forms['orderform'].submit()">
-												<option value="ASC" <?php selected( $search_order, 'ASC' ); ?> ><?php _e( 'Ascending', 'bon' ); ?></option>
-												<option value="DESC" <?php selected( $search_order, 'DESC' ); ?> ><?php _e( 'Descending', 'bon' ); ?></option>
+												<option value="PRICE_ASC" <?php selected( $search_order, 'PRICE_ASC' ); ?> ><?php _e( 'Price', 'bon' ); ?> <?php _e( 'Ascending', 'bon' ); ?></option>
+												<option value="PRICE_DESC" <?php selected( $search_order, 'PRICE_DESC' ); ?> ><?php _e( 'Price', 'bon' ); ?> <?php _e( 'Descending', 'bon' ); ?></option>
+												<option value="SIZE_ASC" <?php selected( $search_order, 'SIZE_ASC' ); ?> ><?php _e( 'Size', 'bon' ); ?> <?php _e( 'Ascending', 'bon' ); ?></option>
+												<option value="SIZE_DESC" <?php selected( $search_order, 'SIZE_DESC' ); ?> ><?php _e( 'Size', 'bon' ); ?> <?php _e( 'Descending', 'bon' ); ?></option>
 											</select>
 										</div>
-										<div class="column large-5 search-orderby">
+										<!-- <div class="column large-5 search-orderby">
 											<select class="no-mbot" name="search_orderby">
 												<option value="<?php _e( 'Price', 'bon' ); ?>" <?php selected( $search_orderby, 'Price' ); ?> ><?php _e( 'Price', 'bon' ); ?></option>
 												<?php // edited by Lech Dutkiewicz           ?>
@@ -1769,7 +1783,7 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 													?>
 												</option>
 											</select>
-										</div>
+										</div> -->
 										<?php
 										foreach ( $_GET as $name => $value ) {
 											if ( $name != 'search_order' && $name != 'search_orderby' ) {
@@ -2112,7 +2126,7 @@ if ( !function_exists( 'shandora_get_footer_widget' ) ) {
 
 					<?php for ( $i = 1; $i <= 4; $i++ ) { ?>
 
-					<div id="footer-widget-<?php echo $i; ?>" class="<?php echo shandora_column_class( "large-3" ); ?>">
+					<div id="footer-widget-<?php echo $i; ?>" class="column small-11 small-centered medium-3 medium-uncentered">
 
 						<?php if ( is_active_sidebar( 'footer' . $i ) ) : ?>
 
