@@ -179,7 +179,9 @@ if ( !class_exists( 'BON_Machine' ) ) {
 							$output .= '<div class="option">' . "\n" . '<div class="controls with-editor">' . "\n";
 						} elseif ( $value['type'] == 'info-img' ) {
 							$output .= '<div class="option">' . "\n" . '<div class="controls not-with-editor">' . "\n";
-							$output .= '<img class="admin-thumb" src="' . trailingslashit( BON_THEME_URI ) . 'assets/images/';
+							$output .= '<img class="admin-thumb';
+							$output .= isset( $value['class'] ) ? ' bg-' . esc_attr( $value['class'] ) : '';
+							$output .= '" src="' . trailingslashit( BON_THEME_URI ) . 'assets/images/';
 							$output .= $value['subfolder'] ? esc_attr( $value['subfolder'] ) . "/" : "";
 							$output .= sanitize_title( esc_attr( $value['label'] ) ) . '.' . esc_attr( $value['file-type'] ) .'">';
 						} else {
