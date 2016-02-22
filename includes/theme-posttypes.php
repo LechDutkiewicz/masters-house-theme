@@ -451,7 +451,7 @@ if (!function_exists('shandora_manage_columns')) {
 
 			case 'type':
 			/* Get the genres for the post. */
-			$terms = get_the_terms($post_id, 'property-type');
+			$terms = get_the_terms($post->ID, 'property-type');
 
 			/* If terms were found. */
 			if (!empty($terms)) {
