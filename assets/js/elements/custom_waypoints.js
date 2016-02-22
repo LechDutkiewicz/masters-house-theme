@@ -26,7 +26,7 @@
 					var el = $(this);
 
 					setTimeout(function () {
-						el.find('.like-h4').addClass('animated bounceIn').css({
+						el.find('.like-h4').addClass('animated fadeIn').css({
 							'opacity': 1
 						});
 					}, k * 1000 );
