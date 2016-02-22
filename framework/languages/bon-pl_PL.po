@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
-"POT-Creation-Date: 2015-12-08 12:33+0100\n"
-"PO-Revision-Date: 2015-12-08 12:33+0100\n"
+"POT-Creation-Date: 2016-02-22 12:07+0100\n"
+"PO-Revision-Date: 2016-02-22 12:21+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
@@ -66,19 +66,33 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-27: shandora/node_modules\n"
 "X-Poedit-SearchPathExcluded-28: shandora/bower_components\n"
 
-#: shandora-child/page-templates/page-template-about-us.php:126
+#: shandora-child/functions.php:163
+#: shandora-child/templates/blocks/block-home-bottom-cta.php:26
+#: shandora-child/templates/blocks/block-slider.php:57
+msgid "Order a free consultation"
+msgstr "Umów się na darmową wizytę"
+
+#: shandora-child/functions.php:204 shandora/includes/theme-hooks.php:2448
+msgid "Link to "
+msgstr "Odnośnik do"
+
+#: shandora-child/functions.php:224 shandora/includes/theme-hooks.php:2468
+msgid "Open window with more information"
+msgstr "Otwiera okno z dodatkowymi informacjami"
+
+#: shandora-child/page-templates/page-template-about-us.php:136
 #: shandora-child/templates/blocks/block-agent.php:48
 #: shandora-child/templates/contents/content-agent.php:150
 #: shandora-child/templates/contents/content-sales-representative.php:139
 msgid "Mobile:"
 msgstr "Tel. kom:"
 
-#: shandora-child/page-templates/page-template-about-us.php:135
+#: shandora-child/page-templates/page-template-about-us.php:145
 #: shandora-child/templates/blocks/block-agent.php:54
 msgid "Offce:"
 msgstr "Biuro:"
 
-#: shandora-child/page-templates/page-template-about-us.php:144
+#: shandora-child/page-templates/page-template-about-us.php:154
 #: shandora-child/templates/blocks/block-agent.php:60
 #: shandora-child/templates/contents/content-agent.php:162
 #: shandora-child/templates/contents/content-sales-representative.php:151
@@ -86,18 +100,20 @@ msgid "Fax:"
 msgstr "Fax:"
 
 #: shandora-child/page-templates/page-template-search-listings.php:436
-#: shandora-child/templates/loops/loop-listing.php:13
-#: shandora/includes/theme-hooks.php:1733
-#: shandora/includes/theme-hooks.php:2208
-#: shandora/includes/theme-hooks.php:2222
+#: shandora/includes/theme-hooks.php:1764
+#: shandora/includes/theme-hooks.php:1765
+#: shandora/includes/theme-hooks.php:1772
+#: shandora/includes/theme-hooks.php:2251
+#: shandora/includes/theme-hooks.php:2265
 msgid "Price"
 msgstr "Cena"
 
 #: shandora-child/page-templates/page-template-search-listings.php:440
-#: shandora-child/templates/loops/loop-listing.php:17
 #: shandora/includes/search-fields.php:893
-#: shandora/includes/theme-hooks.php:1735
-#: shandora/includes/theme-hooks.php:1738
+#: shandora/includes/theme-hooks.php:1766
+#: shandora/includes/theme-hooks.php:1767
+#: shandora/includes/theme-hooks.php:1774
+#: shandora/includes/theme-hooks.php:1777
 msgid "Size"
 msgstr "Rozmiar"
 
@@ -110,10 +126,13 @@ msgid "representatives"
 msgstr "przedstawiciele"
 
 #: shandora-child/page-templates/page-template-testimonials.php:82
+#: shandora-child/templates/blocks/block-banner.php:11
 #: shandora-child/templates/blocks/block-listing-price-excerpt.php:55
 #: shandora-child/templates/blocks/block-promotion-home.php:40
 #: shandora-child/templates/blocks/block-quality-section.php:18
-#: shandora-child/templates/blocks/listing/services.php:44
+#: shandora-child/templates/blocks/listing/meta.php:17
+#: shandora-child/templates/blocks/listing/packages-tables.php:54
+#: shandora-child/templates/blocks/listing/services.php:42
 #: shandora-child/templates/contents/content-gallery-portfolio.php:66
 #: shandora-child/templates/contents/content-gallery.php:46
 #: shandora-child/templates/contents/content-promotions.php:72
@@ -145,8 +164,8 @@ msgstr "Imię i nazwisko"
 #: shandora-child/templates/contents/content-sales-representative.php:77
 #: shandora-child/templates/forms/agent-contactform.php:30
 #: shandora/framework/classes/class-bon-accounts.php:269
-#: shandora/includes/theme-actions.php:1535
-#: shandora/includes/theme-actions.php:1780
+#: shandora/includes/theme-actions.php:1429
+#: shandora/includes/theme-actions.php:1674
 #: shandora/includes/theme-toolkit-override.php:752
 msgid "Please enter your name."
 msgstr "Wpisz proszę swoje imię i nazwisko."
@@ -167,7 +186,7 @@ msgstr "Adres e-mail"
 #: shandora-child/templates/contents/content-agent.php:91
 #: shandora-child/templates/contents/content-sales-representative.php:84
 #: shandora-child/templates/forms/agent-contactform.php:36
-#: shandora/includes/theme-actions.php:1542
+#: shandora/includes/theme-actions.php:1436
 msgid "Please enter your email."
 msgstr "Podaj proszę adres email."
 
@@ -194,7 +213,7 @@ msgstr "Wiadomość"
 #: shandora-child/templates/contents/content-agent.php:105
 #: shandora-child/templates/contents/content-sales-representative.php:98
 #: shandora-child/templates/forms/agent-contactform.php:48
-#: shandora/includes/theme-actions.php:1636
+#: shandora/includes/theme-actions.php:1530
 msgid "Please enter your messages."
 msgstr "Podaj proszę wiadomość."
 
@@ -211,8 +230,7 @@ msgid "Submit"
 msgstr "Wyślij"
 
 #: shandora-child/templates/blocks/block-agentlisting.php:67
-#: shandora-child/templates/loops/loop-listing.php:124
-#: shandora/includes/theme-hooks.php:666
+#: shandora-child/templates/loops/loop-listing.php:121
 #, php-format
 msgid "%s Bed"
 msgid_plural "%s Beds"
@@ -221,14 +239,24 @@ msgstr[1] "%s Łóżka"
 msgstr[2] "%s Łóżek"
 
 #: shandora-child/templates/blocks/block-agentlisting.php:72
-#: shandora-child/templates/loops/loop-listing.php:123
-#: shandora/includes/theme-hooks.php:674
+#: shandora-child/templates/loops/loop-listing.php:120
 #, php-format
 msgid "%s Bath"
 msgid_plural "%s Baths"
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+
+#: shandora-child/templates/blocks/block-chosen-categories.php:18
+#: shandora-child/templates/blocks/block-featured-slider.php:18
+msgid "Our ready projects"
+msgstr "Nasze gotowe domki"
+
+#: shandora-child/templates/blocks/block-chosen-categories.php:58
+#: shandora-child/templates/blocks/block-featured-slider.php:69
+#: shandora/includes/widgets/widget-featured-listing.php:128
+msgid "No property listing were found"
+msgstr ""
 
 #: shandora-child/templates/blocks/block-contactform-faq.php:24
 msgid "Contact"
@@ -244,27 +272,36 @@ msgid "Learn from our experts"
 msgstr "Dowiedz się od naszych ekspertów"
 
 #: shandora-child/templates/blocks/block-ebook.php:30
-#: shandora/includes/theme-actions.php:1845
+#: shandora/includes/theme-actions.php:1739
 msgid "Download"
 msgstr "Pobierz"
 
-#: shandora-child/templates/blocks/block-featured-slider.php:18
-msgid "Our ready projects"
-msgstr "Nasze gotowe domki"
+#: shandora-child/templates/blocks/block-home-bottom-cta.php:6
+msgid "Your house of rest and relaxation"
+msgstr "Twoje miejsce odpoczynku i relaksu"
 
-#: shandora-child/templates/blocks/block-featured-slider.php:69
-#: shandora/includes/widgets/widget-featured-listing.php:155
-msgid "No property listing were found"
-msgstr ""
+#: shandora-child/templates/blocks/block-home-bottom-cta.php:6
+msgid "Do you find it hard which house to choose?"
+msgstr "Czy trudno wybrać który domek byłby najlepszy?"
+
+#: shandora-child/templates/blocks/block-home-bottom-cta.php:17
+#: shandora-child/templates/blocks/block-slider.php:48
+msgid "Choose your project"
+msgstr "Wybierz projekt dla Ciebie"
+
+#: shandora-child/templates/blocks/block-home-bottom-cta.php:20
+#: shandora-child/templates/blocks/block-slider.php:51
+msgid "Learn more about us"
+msgstr "Więcej o nas"
 
 #: shandora-child/templates/blocks/block-listing-footer.php:3
 #: shandora-child/templates/blocks/block-salesreplisting.php:63
+#: shandora-child/templates/blocks/block-widget-single-listing.php:4
 #: shandora/framework/classes/class-bon-shortcodes.php:440
 #: shandora/framework/classes/class-bon-shortcodes.php:595
 #: shandora/framework/functions/shortcodes.php:403
 #: shandora/framework/functions/shortcodes.php:551
-#: shandora/includes/theme-hooks.php:827 shandora/includes/theme-hooks.php:830
-#: shandora/includes/widgets/widget-featured-listing.php:110
+#: shandora/includes/theme-hooks.php:841 shandora/includes/theme-hooks.php:844
 msgid "Permalink to "
 msgstr "Link do"
 
@@ -275,18 +312,18 @@ msgstr "zawiera VAT"
 
 #: shandora-child/templates/blocks/block-modal-contact.php:10
 #: shandora-child/templates/blocks/block-modal-customize.php:10
-#: shandora-child/templates/blocks/block-price.php:64
-#: shandora-child/templates/blocks/block-price.php:65
+#: shandora-child/templates/blocks/block-price.php:76
+#: shandora-child/templates/blocks/block-price.php:77
 #: shandora-child/templates/blocks/block-toolsection.php:52
 #: shandora-child/templates/blocks/block-toolsection.php:115
-#: shandora-child/templates/blocks/listing/services.php:51
+#: shandora-child/templates/blocks/listing/services.php:49
 msgid "Contact us"
 msgstr "Skontaktuj się z nami"
 
 #: shandora-child/templates/blocks/block-modal-contact.php:10
-#: shandora-child/templates/blocks/block-price.php:64
-#: shandora-child/templates/blocks/block-price.php:65
-#: shandora-child/templates/blocks/listing/services.php:51
+#: shandora-child/templates/blocks/block-price.php:76
+#: shandora-child/templates/blocks/block-price.php:77
+#: shandora-child/templates/blocks/listing/services.php:49
 msgid "and order your cottage"
 msgstr "i zamów swój domek"
 
@@ -312,6 +349,7 @@ msgstr "WYŚLIJ"
 #: shandora-child/templates/blocks/block-modal-contact.php:45
 #: shandora-child/templates/blocks/block-modal-customize.php:41
 #: shandora-child/templates/blocks/block-modal-newsletter.php:53
+#: shandora-child/templates/blocks/block-modal-packages.php:21
 #: shandora-child/templates/blocks/block-modal-quality.php:86
 #: shandora-child/templates/blocks/block-modal-visit-request.php:33
 msgid "Close"
@@ -350,7 +388,12 @@ msgstr ""
 msgid "Subscribe"
 msgstr "Subskrybuj"
 
+#: shandora-child/templates/blocks/block-modal-packages.php:14
+msgid "More information about packages"
+msgstr "Więcej informacji o pakietach"
+
 #: shandora-child/templates/blocks/block-modal-quality.php:36
+#: shandora-child/templates/blocks/house-bubbles.php:24
 msgid "Click here"
 msgstr "Kliknij tutaj"
 
@@ -372,16 +415,24 @@ msgstr "Wniosek o wizytę"
 msgid "Home"
 msgstr "Główna"
 
-#: shandora-child/templates/blocks/block-related.php:105
-#: shandora/includes/theme-hooks.php:1212
+#: shandora-child/templates/blocks/block-price.php:57
+#: shandora-child/templates/blocks/block-price.php:62
+msgid "More information about versions"
+msgstr "Więcej informacji o wersjach"
+
+#: shandora-child/templates/blocks/block-related.php:11
+#: shandora/includes/theme-hooks.php:1226
+#: shandora/includes/widgets/widget-related-cottages.php:74
+#: shandora/includes/widgets/widget-related-cottages.php:121
 msgid "You may also like"
 msgstr "Może także spodobać Ci się"
 
 #: shandora-child/templates/blocks/block-salesreplisting.php:68
 #: shandora-child/templates/blocks/block-salesreplisting.php:73
 #: shandora-child/templates/blocks/block-salesreplisting.php:77
-#: shandora/includes/theme-hooks.php:702 shandora/includes/theme-hooks.php:723
-#: shandora/includes/theme-hooks.php:729 shandora/includes/theme-hooks.php:735
+#: shandora/includes/theme-hooks.php:707 shandora/includes/theme-hooks.php:716
+#: shandora/includes/theme-hooks.php:737 shandora/includes/theme-hooks.php:743
+#: shandora/includes/theme-hooks.php:749
 msgid "Unspecified"
 msgstr "Niesprecyzowane"
 
@@ -398,9 +449,30 @@ msgstr "Schowaj"
 msgid "Link to"
 msgstr "Odnośnik do"
 
+#: shandora-child/templates/blocks/block-slider.php:27
+msgid "Your house"
+msgstr "Twoje miejsce"
+
+#: shandora-child/templates/blocks/block-slider.php:30
+msgid "of rest and relaxation"
+msgstr "odpoczynku i relaksu"
+
+#: shandora-child/templates/blocks/block-slider.php:34
+msgid "Do you find it hard"
+msgstr "Czy trudno wybrać"
+
+#: shandora-child/templates/blocks/block-slider.php:37
+msgid "which house to choose?"
+msgstr "który domek byłby najlepszy?"
+
 #: shandora-child/templates/blocks/block-testimonials-slider.php:16
 msgid "Our clients rock"
 msgstr "Nasi klienci już znaleźli"
+
+#: shandora-child/templates/blocks/block-testimonials-slider.php:48
+#: shandora/includes/theme-hooks.php:2397
+msgid "Read full story"
+msgstr "Przeczytaj całą historię"
 
 #: shandora-child/templates/blocks/block-toolsection.php:46
 #: shandora-child/templates/blocks/block-toolsection.php:47
@@ -423,6 +495,7 @@ msgid "View"
 msgstr "Zobacz"
 
 #: shandora-child/templates/blocks/listing/addon.php:35
+#: shandora-child/templates/blocks/listing/tab.php:153
 msgid "Price includes"
 msgstr "Cena zawiera"
 
@@ -439,170 +512,159 @@ msgstr "Zostaw nam wiadomość"
 msgid "Ask another question"
 msgstr "Zadaj inne pytanie"
 
-#: shandora-child/templates/blocks/listing/meta.php:25
-#, php-format
-msgid "1 Room"
-msgid_plural "%s Rooms"
-msgstr[0] "1 Pokój"
-msgstr[1] "%s Pokoje"
-msgstr[2] "%s Pokoi"
+#: shandora-child/templates/blocks/listing/meta.php:10
+msgid "Icon"
+msgstr "Ikona"
 
-#: shandora-child/templates/blocks/listing/meta.php:25
-msgid "No Room"
-msgstr "Brak pomieszczeń"
+#: shandora-child/templates/blocks/listing/packages-tables.php:40
+#: shandora/includes/theme-hooks.php:2252
+#: shandora/includes/theme-hooks.php:2266
+msgid "Wall material"
+msgstr "Materiał wykonania ściany"
 
-#: shandora-child/templates/blocks/listing/meta.php:48
-#: shandora/includes/theme-hooks.php:2210
-#: shandora/includes/theme-hooks.php:2224
+#: shandora-child/templates/blocks/listing/packages-tables.php:41
+#: shandora/includes/theme-hooks.php:2253
+#: shandora/includes/theme-hooks.php:2267
 msgid "Wall thickness"
 msgstr "Grubość ściany"
 
-#: shandora-child/templates/blocks/listing/meta.php:60
-msgid "Insulated"
-msgstr "Ocieplony"
+#: shandora-child/templates/blocks/listing/packages-tables.php:42
+#: shandora/includes/theme-hooks.php:2254
+#: shandora/includes/theme-hooks.php:2268
+msgid "Windows thickness"
+msgstr "Grubość okien"
 
-#: shandora-child/templates/blocks/listing/meta.php:60
-msgid "roof"
-msgstr "dach"
-
-#: shandora-child/templates/blocks/listing/meta.php:71
-msgid "Assemblage"
-msgstr "Montaż"
-
-#: shandora-child/templates/blocks/listing/meta.php:71
-msgid "included"
-msgstr "w cenie"
-
-#: shandora-child/templates/blocks/listing/meta.php:86
-msgid "Quick assemblage"
-msgstr "Szybki montaż"
-
-#: shandora-child/templates/blocks/listing/meta.php:93
-msgid "Robust construction"
-msgstr "Wytrzymała konstrukcja"
-
-#: shandora-child/templates/blocks/listing/meta.php:100
-msgid "Glued wood"
-msgstr "Klejone drewno"
-
-#: shandora-child/templates/blocks/listing/services.php:51
-#: shandora-child/templates/blocks/listing/services.php:52
+#: shandora-child/templates/blocks/listing/services.php:49
+#: shandora-child/templates/blocks/listing/services.php:50
 msgid "Ask a question"
 msgstr "Zadaj pytanie"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:53
-#: shandora-child/templates/blocks/listing/tab.php:59
-#: shandora-child/templates/blocks/listing/tab.php:68
+#: shandora-child/templates/blocks/listing/tab.php:87
+#: shandora-child/templates/blocks/listing/tab.php:109
 msgid "Price:"
 msgstr "Cena:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:54
-#: shandora-child/templates/blocks/listing/tab.php:60
-#: shandora-child/templates/blocks/listing/tab.php:69
+#: shandora-child/templates/blocks/listing/tab.php:88
+#: shandora-child/templates/blocks/listing/tab.php:110
 msgid "Monthly price:"
 msgstr "Miesięczna cena:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:55
-#: shandora-child/templates/blocks/listing/tab.php:61
-#: shandora-child/templates/blocks/listing/tab.php:70
+#: shandora-child/templates/blocks/listing/tab.php:89
+#: shandora-child/templates/blocks/listing/tab.php:111
 msgid "Size:"
 msgstr "Rozmiar:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:56
-#: shandora-child/templates/blocks/listing/tab.php:62
-#: shandora-child/templates/blocks/listing/tab.php:71
+#: shandora-child/templates/blocks/listing/tab.php:90
+#: shandora-child/templates/blocks/listing/tab.php:112
 msgid "Terrace size:"
 msgstr "Rozmiar tarasu:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:57
-#: shandora-child/templates/blocks/listing/tab.php:63
-#: shandora-child/templates/blocks/listing/tab.php:72
+#: shandora-child/templates/blocks/listing/tab.php:91
+#: shandora-child/templates/blocks/listing/tab.php:113
 msgid "Rooms:"
 msgstr "Pokoje:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:58
-#: shandora-child/templates/blocks/listing/tab.php:64
-#: shandora-child/templates/blocks/listing/tab.php:73
+#: shandora-child/templates/blocks/listing/tab.php:92
+#: shandora-child/templates/blocks/listing/tab.php:114
 msgid "Floors:"
 msgstr "Piętra:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:62
-#: shandora-child/templates/blocks/listing/tab.php:78
+#: shandora-child/templates/blocks/listing/tab.php:93
+#: shandora-child/templates/blocks/listing/tab.php:115
 msgid "Dimensions:"
 msgstr "Wymiary:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:63
-#: shandora-child/templates/blocks/listing/tab.php:79
+#: shandora-child/templates/blocks/listing/tab.php:94
+#: shandora-child/templates/blocks/listing/tab.php:116
 msgid "Height:"
 msgstr "Wysokość:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:64
-#: shandora-child/templates/blocks/listing/tab.php:80
+#: shandora-child/templates/blocks/listing/tab.php:95
+#: shandora-child/templates/blocks/listing/tab.php:117
 msgid "Wall height:"
 msgstr "Wysokość ścian:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:65
-#: shandora-child/templates/blocks/listing/tab.php:81
+#: shandora-child/templates/blocks/listing/tab.php:96
+#: shandora-child/templates/blocks/listing/tab.php:118
 msgid "Wall thickness:"
 msgstr "Grubość ścian:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:66
-#: shandora-child/templates/blocks/listing/tab.php:82
+#: shandora-child/templates/blocks/listing/tab.php:97
+#: shandora-child/templates/blocks/listing/tab.php:119
 msgid "Floor thickness:"
 msgstr "Grubość podłogi:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:67
-#: shandora-child/templates/blocks/listing/tab.php:83
+#: shandora-child/templates/blocks/listing/tab.php:98
+#: shandora-child/templates/blocks/listing/tab.php:120
 msgid "Roof thickness:"
 msgstr "Grubość dachu:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:68
-#: shandora-child/templates/blocks/listing/tab.php:84
+#: shandora-child/templates/blocks/listing/tab.php:99
+#: shandora-child/templates/blocks/listing/tab.php:121
 msgid "Windows:"
 msgstr "Okna:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:69
-#: shandora-child/templates/blocks/listing/tab.php:85
+#: shandora-child/templates/blocks/listing/tab.php:100
+#: shandora-child/templates/blocks/listing/tab.php:122
 msgid "Windows sizes:"
 msgstr "Rozmiary okien:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:70
-#: shandora-child/templates/blocks/listing/tab.php:86
+#: shandora-child/templates/blocks/listing/tab.php:101
+#: shandora-child/templates/blocks/listing/tab.php:123
 msgid "Doors:"
 msgstr "Drzwi:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:71
-#: shandora-child/templates/blocks/listing/tab.php:87
+#: shandora-child/templates/blocks/listing/tab.php:102
+#: shandora-child/templates/blocks/listing/tab.php:124
 msgid "Doors sizes:"
 msgstr "Rozmiary drzwi:"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:72
-#: shandora-child/templates/blocks/listing/tab.php:88
+#: shandora-child/templates/blocks/listing/tab.php:103
+#: shandora-child/templates/blocks/listing/tab.php:125
 msgid "Roof size"
 msgstr "Powierzchnia dachu"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:73
-#: shandora-child/templates/blocks/listing/tab.php:89
+#: shandora-child/templates/blocks/listing/tab.php:104
+#: shandora-child/templates/blocks/listing/tab.php:126
 msgid "Columns size"
 msgstr "Grubość kolumn"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:74
-#: shandora-child/templates/blocks/listing/tab.php:90
+#: shandora-child/templates/blocks/listing/tab.php:105
+#: shandora-child/templates/blocks/listing/tab.php:127
 msgid "Rafters size"
 msgstr "Grubość krokwi"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:82
-#: shandora-child/templates/blocks/listing/tab.php:99
+#: shandora-child/templates/blocks/listing/tab.php:159
 msgid "Details"
 msgstr "Szczegóły"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:88
-#: shandora-child/templates/blocks/listing/tab.php:105
+#: shandora-child/templates/blocks/listing/tab.php:165
 msgid "Specifications"
 msgstr "Specyfikacja"
 
 #: shandora-child/templates/blocks/listing/tab.old.php:96
-#: shandora-child/templates/blocks/listing/tab.php:115
+#: shandora-child/templates/blocks/listing/tab.php:175
 msgid "Additional services"
 msgstr "Dodatkowe usługi"
 
@@ -651,7 +713,7 @@ msgstr "Twitter"
 #: shandora-child/templates/contents/content-gallery.php:47
 #: shandora-child/templates/contents/content-image.php:31
 #: shandora-child/templates/contents/content-image.php:47
-#: shandora-child/templates/contents/content-listing.php:21
+#: shandora-child/templates/contents/content-listing.php:17
 #: shandora-child/templates/contents/content-page.php:21
 #: shandora-child/templates/contents/content-page.php:39
 #: shandora-child/templates/contents/content-poll.php:18
@@ -813,15 +875,15 @@ msgstr "Nic nie znaleziono"
 msgid "Apologies, but no entries were found."
 msgstr "Przepraszamy, ale nie ma wpisów."
 
-#: shandora-child/templates/loops/loop-listing.php:123
+#: shandora-child/templates/loops/loop-listing.php:120
 msgid "0 Bath"
 msgstr ""
 
-#: shandora-child/templates/loops/loop-listing.php:124
+#: shandora-child/templates/loops/loop-listing.php:121
 msgid "0 Bed"
 msgstr ""
 
-#: shandora-child/templates/loops/loop-listing.php:142
+#: shandora-child/templates/loops/loop-listing.php:139
 #, php-format
 msgid "%s Item Listed"
 msgid_plural "%s Items Listed"
@@ -854,7 +916,7 @@ msgid "No Slider no entries were found"
 msgstr ""
 
 #: shandora-child/templates/woocommerce/email-template.php:52
-#: shandora/includes/theme-actions.php:1841
+#: shandora/includes/theme-actions.php:1735
 msgid "Thank you for downloading our ebook."
 msgstr "Dziękujemy za pobranie e-booka."
 
@@ -867,7 +929,7 @@ msgid "We hope you find this helpful!"
 msgstr "Mamy nadzieję, że to pomocne!"
 
 #: shandora-child/templates/woocommerce/email-template.php:58
-#: shandora/includes/theme-actions.php:1847
+#: shandora/includes/theme-actions.php:1741
 msgid "All the best"
 msgstr "Wszystkiego dobrego"
 
@@ -954,7 +1016,7 @@ msgid "Log out of this account"
 msgstr "Wyloguj się z tego konta"
 
 #: shandora/comments.php:99 shandora/framework/functions/comments.php:201
-#: shandora/includes/theme-hooks.php:1159
+#: shandora/includes/theme-hooks.php:1173
 msgid "Comment"
 msgstr "Skomentuj"
 
@@ -1178,7 +1240,7 @@ msgid "Visit Support Forum"
 msgstr "Odwiedź Forum pomocy"
 
 #: shandora/framework/classes/class-bon-admin.php:531
-#: shandora/framework/classes/class-bon-machine.php:763
+#: shandora/framework/classes/class-bon-machine.php:767
 #: shandora/framework/classes/class-bon-meta-box.php:94
 #: shandora/framework/classes/menus/class-bon-advanced-menu.php:483
 #: shandora/framework/classes/menus/class-bon-advanced-menu.php:671
@@ -1186,7 +1248,7 @@ msgid "Upload"
 msgstr "Wgraj"
 
 #: shandora/framework/classes/class-bon-admin.php:532
-#: shandora/framework/classes/class-bon-machine.php:765
+#: shandora/framework/classes/class-bon-machine.php:769
 #: shandora/framework/classes/class-bon-meta-box.php:95
 #: shandora/framework/classes/menus/class-bon-advanced-menu.php:485
 #: shandora/framework/classes/menus/class-bon-advanced-menu.php:672
@@ -1743,10 +1805,10 @@ msgstr "Dyskusja"
 msgid "Featured Image"
 msgstr "Główny obraz"
 
-#: shandora/framework/classes/class-bon-machine.php:383
-#: shandora/framework/classes/class-bon-machine.php:411
-#: shandora/framework/classes/class-bon-machine.php:551
-#: shandora/framework/classes/class-bon-machine.php:552
+#: shandora/framework/classes/class-bon-machine.php:387
+#: shandora/framework/classes/class-bon-machine.php:415
+#: shandora/framework/classes/class-bon-machine.php:555
+#: shandora/framework/classes/class-bon-machine.php:556
 #: shandora/framework/classes/menus/class-bon-advanced-menu.php:88
 #: shandora/framework/extensions/input-filter.php:233
 #: shandora/framework/extensions/input-filter.php:268
@@ -1755,28 +1817,28 @@ msgstr "Główny obraz"
 msgid "Select One"
 msgstr "Wybierz"
 
-#: shandora/framework/classes/class-bon-machine.php:615
+#: shandora/framework/classes/class-bon-machine.php:619
 msgid "Delete image"
 msgstr "Usuń obraz"
 
-#: shandora/framework/classes/class-bon-machine.php:615
+#: shandora/framework/classes/class-bon-machine.php:619
 msgid "Delete"
 msgstr "Usuń"
 
-#: shandora/framework/classes/class-bon-machine.php:624
+#: shandora/framework/classes/class-bon-machine.php:628
 msgid "Add gallery images"
 msgstr "﻿Dodaj Galerię / Zdjęcia"
 
-#: shandora/framework/classes/class-bon-machine.php:760
+#: shandora/framework/classes/class-bon-machine.php:764
 #: shandora/framework/classes/menus/class-bon-advanced-menu.php:479
 msgid "No file chosen"
 msgstr "Nie wybrano pliku"
 
-#: shandora/framework/classes/class-bon-machine.php:768
+#: shandora/framework/classes/class-bon-machine.php:772
 msgid "Upgrade your version of WordPress for full media support."
 msgstr "Zmień swoją wersję WordPressa na pełną obsługę multimediów."
 
-#: shandora/framework/classes/class-bon-machine.php:792
+#: shandora/framework/classes/class-bon-machine.php:796
 msgid "View File"
 msgstr "Zobacz plik"
 
@@ -3040,7 +3102,6 @@ msgid "New"
 msgstr "Nowość"
 
 #: shandora/includes/search-fields.php:23
-#: shandora/includes/search-fields.php:35
 #: shandora/includes/search-fields.php:47
 #: shandora/includes/search-fields.php:59
 #: shandora/includes/search-fields.php:81
@@ -3134,15 +3195,15 @@ msgstr ""
 
 #: shandora/includes/search-fields.php:930
 msgid "Building Size"
-msgstr ""
+msgstr "Rozmiar domku"
 
 #: shandora/includes/search-fields.php:972
 msgid "Floor"
-msgstr ""
+msgstr "Parter"
 
 #: shandora/includes/search-fields.php:1038
 msgid "Basement"
-msgstr ""
+msgstr "Piwnica"
 
 #: shandora/includes/search-fields.php:1120
 #: shandora/includes/theme-actions.php:743
@@ -3187,7 +3248,7 @@ msgid "Manufacturer"
 msgstr ""
 
 #: shandora/includes/search-fields.php:1577
-#: shandora/includes/theme-hooks.php:1740
+#: shandora/includes/theme-hooks.php:1779
 msgid "Mileage"
 msgstr ""
 
@@ -3281,105 +3342,105 @@ msgstr "Znajdź nas na YouTube"
 msgid "Find us on LinkedIn"
 msgstr "Znajdź nas na LinkedIn"
 
-#: shandora/includes/theme-actions.php:1437
+#: shandora/includes/theme-actions.php:1331
 msgid "Cannot get object. No parameter receive form AJAX call."
 msgstr ""
 
-#: shandora/includes/theme-actions.php:1458
-#: shandora/includes/theme-actions.php:1500
-#: shandora/includes/theme-actions.php:1509
+#: shandora/includes/theme-actions.php:1352
+#: shandora/includes/theme-actions.php:1394
+#: shandora/includes/theme-actions.php:1403
 msgid "Cannot update package values. No parameter receive form AJAX call."
 msgstr ""
 
-#: shandora/includes/theme-actions.php:1528
-#: shandora/includes/theme-actions.php:1613
-#: shandora/includes/theme-actions.php:1773
+#: shandora/includes/theme-actions.php:1422
+#: shandora/includes/theme-actions.php:1507
+#: shandora/includes/theme-actions.php:1667
 msgid "Cannot send email to destination. No parameter receive form AJAX call."
 msgstr "Nie można wysłać e-mail do miejsca przeznaczenia."
 
-#: shandora/includes/theme-actions.php:1558
-#: shandora/includes/theme-actions.php:1576
+#: shandora/includes/theme-actions.php:1452
+#: shandora/includes/theme-actions.php:1470
 msgid "domainname.com"
 msgstr "dommistrza.pl"
 
-#: shandora/includes/theme-actions.php:1573
+#: shandora/includes/theme-actions.php:1467
 msgid "You have successfully subscribed to our newsletter."
 msgstr "Pomyślnie zapisałeś się na nasz newsletter."
 
-#: shandora/includes/theme-actions.php:1574
-#: shandora/includes/theme-actions.php:1727
+#: shandora/includes/theme-actions.php:1468
+#: shandora/includes/theme-actions.php:1621
 msgid "Kind regards"
 msgstr "Serdeczne pozdrowienia"
 
-#: shandora/includes/theme-actions.php:1576
+#: shandora/includes/theme-actions.php:1470
 msgid "Newsletter"
 msgstr "Newsletter"
 
-#: shandora/includes/theme-actions.php:1580
-#: shandora/includes/theme-actions.php:1588
+#: shandora/includes/theme-actions.php:1474
+#: shandora/includes/theme-actions.php:1482
 msgid "Thank you for subscribing to us"
 msgstr "Dziękujemy za zapisanie się na nasz newsletter"
 
-#: shandora/includes/theme-actions.php:1594
+#: shandora/includes/theme-actions.php:1488
 msgid "There is an error sending subscription request"
 msgstr ""
 
-#: shandora/includes/theme-actions.php:1622
-#: shandora/includes/theme-actions.php:2522
-#: shandora/includes/theme-actions.php:2533
+#: shandora/includes/theme-actions.php:1516
+#: shandora/includes/theme-actions.php:2414
+#: shandora/includes/theme-actions.php:2425
 msgid "Please enter either your email or phone number."
 msgstr ""
 "Proszę podać swój adres e-mail lub numer telefonu, abyśmy mogli się "
 "skontaktować."
 
-#: shandora/includes/theme-actions.php:1656
+#: shandora/includes/theme-actions.php:1550
 msgid "Cheatin Huh?!"
 msgstr "Oszukujesz, co?"
 
-#: shandora/includes/theme-actions.php:1673
+#: shandora/includes/theme-actions.php:1567
 #, php-format
 msgid "You have received a new contact form message via %s \n"
 msgstr "Odebrano nową wiadomość poprzez formularz kontaktowy %s \n"
 
-#: shandora/includes/theme-actions.php:1675
+#: shandora/includes/theme-actions.php:1569
 #, php-format
 msgid "Sender Email : %s \n"
 msgstr "Nadawca e-mail: %s \n"
 
-#: shandora/includes/theme-actions.php:1676
+#: shandora/includes/theme-actions.php:1570
 #, php-format
 msgid "Sender Phone Number : %s \n"
 msgstr "Nr tel : %s \n"
 
-#: shandora/includes/theme-actions.php:1677
+#: shandora/includes/theme-actions.php:1571
 #, php-format
 msgid "Subject : %s \n"
 msgstr "Temat: %s \n"
 
-#: shandora/includes/theme-actions.php:1678
+#: shandora/includes/theme-actions.php:1572
 #, php-format
 msgid "Email Send From : %s \n"
 msgstr "E-mail wysłany z : %s \n"
 
-#: shandora/includes/theme-actions.php:1679
+#: shandora/includes/theme-actions.php:1573
 #, php-format
 msgid "Message : %s \n"
 msgstr "Wiadomość : %s \n"
 
-#: shandora/includes/theme-actions.php:1697
-#: shandora/includes/theme-actions.php:1704
+#: shandora/includes/theme-actions.php:1591
+#: shandora/includes/theme-actions.php:1598
 msgid "Customer"
 msgstr "Klient"
 
-#: shandora/includes/theme-actions.php:1710
-#: shandora/includes/theme-actions.php:1729
-#: shandora/includes/theme-actions.php:1747
-#: shandora/includes/theme-actions.php:1866
-#: shandora/includes/theme-actions.php:1874
+#: shandora/includes/theme-actions.php:1604
+#: shandora/includes/theme-actions.php:1623
+#: shandora/includes/theme-actions.php:1641
+#: shandora/includes/theme-actions.php:1760
+#: shandora/includes/theme-actions.php:1768
 msgid "Masters House"
 msgstr "Dom Mistrza"
 
-#: shandora/includes/theme-actions.php:1726
+#: shandora/includes/theme-actions.php:1620
 msgid ""
 "We succesfully received your request. Our representative will contact you "
 "within one hour."
@@ -3387,90 +3448,90 @@ msgstr ""
 "Pomyślnie otrzymaliśmy Twoje zapytanie. Nasz przedstawiciel skontaktuje się "
 "z Tobą w ciągu jednej godziny."
 
-#: shandora/includes/theme-actions.php:1733
+#: shandora/includes/theme-actions.php:1627
 msgid "Thank you for contacting us"
 msgstr "Dziękujemy za skontaktowanie się z nami."
 
-#: shandora/includes/theme-actions.php:1755
-#: shandora/includes/theme-actions.php:1879
+#: shandora/includes/theme-actions.php:1649
+#: shandora/includes/theme-actions.php:1773
 msgid "Email was sent successfully."
 msgstr "E-mail został wysłany."
 
-#: shandora/includes/theme-actions.php:1761
-#: shandora/includes/theme-actions.php:1882
+#: shandora/includes/theme-actions.php:1655
+#: shandora/includes/theme-actions.php:1776
 msgid "There is an error sending email."
 msgstr "Wystąpił błąd podczas wysyłania poczty."
 
-#: shandora/includes/theme-actions.php:1787
+#: shandora/includes/theme-actions.php:1681
 msgid "Please enter a valid email address."
 msgstr "Wpisz proszę prawidłowy adres email."
 
-#: shandora/includes/theme-actions.php:1840
+#: shandora/includes/theme-actions.php:1734
 msgid "Hi"
 msgstr "Witaj"
 
-#: shandora/includes/theme-actions.php:1842
+#: shandora/includes/theme-actions.php:1736
 msgid "You can download it with this link"
 msgstr "Możesz otworzyć go klikając w ten link"
 
-#: shandora/includes/theme-actions.php:1843
+#: shandora/includes/theme-actions.php:1737
 msgid "We wish you a pleasant read!"
 msgstr "Życzymy udanej lektury!"
 
-#: shandora/includes/theme-actions.php:1931
+#: shandora/includes/theme-actions.php:1825
 #, php-format
 msgid "Permalink to %s"
 msgstr "Odnośnik do %s"
 
-#: shandora/includes/theme-actions.php:1935
+#: shandora/includes/theme-actions.php:1829
 msgid "View Image"
 msgstr "Zobacz zdjęcie"
 
-#: shandora/includes/theme-actions.php:1939
+#: shandora/includes/theme-actions.php:1833
 msgid "Compare Listing"
 msgstr "Porównaj"
 
-#: shandora/includes/theme-actions.php:1969
+#: shandora/includes/theme-actions.php:1863
 msgid "Ground floor"
 msgstr "Parter"
 
-#: shandora/includes/theme-actions.php:1973
+#: shandora/includes/theme-actions.php:1867
 msgid "First floor"
 msgstr "Pierwsze piętro"
 
-#: shandora/includes/theme-actions.php:2236
+#: shandora/includes/theme-actions.php:2128
 msgid "Build your own"
 msgstr "Zbuduj swój własny"
 
-#: shandora/includes/theme-actions.php:2445
+#: shandora/includes/theme-actions.php:2337
 msgid "Cottages"
 msgstr "Domki drewniane"
 
-#: shandora/includes/theme-actions.php:2445
+#: shandora/includes/theme-actions.php:2337
 msgid "Cottage"
 msgstr "Domek drewniany"
 
-#: shandora/includes/theme-actions.php:2452
+#: shandora/includes/theme-actions.php:2344
 msgctxt "product url slug"
 msgid "wooden-cottage"
 msgstr "domek-drewniany"
 
-#: shandora/includes/theme-actions.php:2458
+#: shandora/includes/theme-actions.php:2350
 msgctxt "products category url slug"
 msgid "type"
 msgstr "domki-drewniane"
 
-#: shandora/includes/theme-actions.php:2511
+#: shandora/includes/theme-actions.php:2403
 msgid "Call us directly at:"
 msgstr "Zadzwoń do nas na:"
 
-#: shandora/includes/theme-actions.php:2511
+#: shandora/includes/theme-actions.php:2403
 msgid "or leave us your details data, so our representative can contact you."
 msgstr ""
 "lub pozostaw nam swoje dane kontaktowe, aby mógł się z Tobą skontaktować "
 "nasz przedstawiciel."
 
-#: shandora/includes/theme-actions.php:2512
+#: shandora/includes/theme-actions.php:2404
 msgid ""
 "We work from Monday to Friday 8 am to 4 pm. During this time we contact you "
 "back within one hour"
@@ -3478,20 +3539,20 @@ msgstr ""
 "Pracujemy od poniedziałku do piątku od 8 do 16. W tym czasie odpowiemy w "
 "ciągu godziny."
 
-#: shandora/includes/theme-actions.php:2521
+#: shandora/includes/theme-actions.php:2413
 msgid "Your email address"
 msgstr "Twój adres email"
 
-#: shandora/includes/theme-actions.php:2521
-#: shandora/includes/theme-actions.php:2532
+#: shandora/includes/theme-actions.php:2413
+#: shandora/includes/theme-actions.php:2424
 msgid "optional"
 msgstr "opcjonalnie"
 
-#: shandora/includes/theme-actions.php:2532
+#: shandora/includes/theme-actions.php:2424
 msgid "Your phone number"
 msgstr "Twój numer telefonu"
 
-#: shandora/includes/theme-actions.php:2543
+#: shandora/includes/theme-actions.php:2435
 msgid ""
 "In case you want to ask us about something, type it here. You can also leave "
 "it empty and we'll contact you soon."
@@ -3499,71 +3560,67 @@ msgstr ""
 "Wpisz tutaj swoje pytania. Możesz również pozostawić to pole puste, "
 "oddzwonimy niebawem."
 
-#: shandora/includes/theme-hooks.php:684
-#, php-format
-msgid "%s Garage"
-msgid_plural "%s Garages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+#: shandora/includes/theme-hooks.php:695
+msgid "Number of rooms"
+msgstr "Ilość pokoi"
 
-#: shandora/includes/theme-hooks.php:692
+#: shandora/includes/theme-hooks.php:697
 #, php-format
-msgid "%s Room"
-msgid_plural "%s Rooms"
-msgstr[0] "%s Pokój"
-msgstr[1] "%s Pokoje"
-msgstr[2] "%s Pokoi"
+msgid "%s room"
+msgid_plural "%s rooms"
+msgstr[0] "%s pokój"
+msgstr[1] "%s pokoje"
+msgstr[2] "%s pokoi"
 
-#: shandora/includes/theme-hooks.php:793
+#: shandora/includes/theme-hooks.php:705
+msgid "Cottage size"
+msgstr "Rozmiar domku"
+
+#: shandora/includes/theme-hooks.php:714
+msgid "Terrace size"
+msgstr "Rozmiar tarasu"
+
+#: shandora/includes/theme-hooks.php:807
 msgid "People"
 msgstr ""
 
-#: shandora/includes/theme-hooks.php:1727
+#: shandora/includes/theme-hooks.php:1339
+msgid "Why us?"
+msgstr "Dlaczego wybrać nas?"
+
+#: shandora/includes/theme-hooks.php:1755
+msgid "View as grid"
+msgstr "Widok jako siatka"
+
+#: shandora/includes/theme-hooks.php:1756
+msgid "View as list"
+msgstr "Widok jako lista"
+
+#: shandora/includes/theme-hooks.php:1764
+#: shandora/includes/theme-hooks.php:1766
 msgid "Ascending"
 msgstr "Rosnąco"
 
-#: shandora/includes/theme-hooks.php:1728
+#: shandora/includes/theme-hooks.php:1765
+#: shandora/includes/theme-hooks.php:1767
 msgid "Descending"
 msgstr "Malejąco"
 
-#: shandora/includes/theme-hooks.php:1742
+#: shandora/includes/theme-hooks.php:1781
 msgid "Length"
 msgstr ""
 
-#: shandora/includes/theme-hooks.php:2069
+#: shandora/includes/theme-hooks.php:2108
 msgid "Back to Top"
 msgstr "Wróć na początek"
 
-#: shandora/includes/theme-hooks.php:2100
+#: shandora/includes/theme-hooks.php:2139
 msgid "Please activate some Widgets."
 msgstr ""
 
-#: shandora/includes/theme-hooks.php:2146
+#: shandora/includes/theme-hooks.php:2185
 msgid "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
 msgstr "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
-
-#: shandora/includes/theme-hooks.php:2209
-#: shandora/includes/theme-hooks.php:2223
-msgid "Wall material"
-msgstr "Materiał wykonania ściany"
-
-#: shandora/includes/theme-hooks.php:2211
-#: shandora/includes/theme-hooks.php:2225
-msgid "Windows thickness"
-msgstr "Gruność okien"
-
-#: shandora/includes/theme-hooks.php:2388
-msgid "Read full story"
-msgstr "Przeczytaj całą historię"
-
-#: shandora/includes/theme-hooks.php:2439
-msgid "Link to "
-msgstr "Odnośnik do"
-
-#: shandora/includes/theme-hooks.php:2459
-msgid "Open window with more information"
-msgstr ""
 
 #: shandora/includes/theme-social-share.php:29
 msgid "BT Social Share Options"
@@ -3573,11 +3630,11 @@ msgstr ""
 msgid "Enable social share in this page"
 msgstr ""
 
-#: shandora/includes/theme-social-share.php:210
+#: shandora/includes/theme-social-share.php:215
 msgid "Share this on :"
 msgstr ""
 
-#: shandora/includes/theme-social-share.php:339
+#: shandora/includes/theme-social-share.php:344
 #, php-format
 msgid "Share this on %s"
 msgstr ""
@@ -3719,24 +3776,26 @@ msgid "Please enter valid email address."
 msgstr ""
 
 #: shandora/includes/widgets/widget-featured-listing.php:37
+#: shandora/includes/widgets/widget-related-cottages.php:37
 msgid "Show featured property listing."
 msgstr ""
 
-#: shandora/includes/widgets/widget-featured-listing.php:193
+#: shandora/includes/widgets/widget-featured-listing.php:166
 msgid "Featured Listing"
 msgstr ""
 
-#: shandora/includes/widgets/widget-featured-listing.php:204
+#: shandora/includes/widgets/widget-featured-listing.php:177
 #: shandora/includes/widgets/widget-newsletter-form.php:125
+#: shandora/includes/widgets/widget-related-cottages.php:130
 #: shandora/includes/widgets/widget-search-listing.php:110
 msgid "Title:"
 msgstr "Tytuł:"
 
-#: shandora/includes/widgets/widget-featured-listing.php:208
+#: shandora/includes/widgets/widget-featured-listing.php:181
 msgid "Number of Posts"
 msgstr "Liczba postów"
 
-#: shandora/includes/widgets/widget-featured-listing.php:212
+#: shandora/includes/widgets/widget-featured-listing.php:185
 msgid "Post per slide:"
 msgstr "Postów na slajd:"
 
@@ -3767,6 +3826,45 @@ msgstr "Wprowadź szukany termin..."
 #: shandora/searchform.php:9
 msgid "Search"
 msgstr "Szukaj"
+
+#~ msgid "more information"
+#~ msgstr "więcej informacji"
+
+#~ msgid "1 Room"
+#~ msgid_plural "%s Rooms"
+#~ msgstr[0] "1 Pokój"
+#~ msgstr[1] "%s Pokoje"
+#~ msgstr[2] "%s Pokoi"
+
+#~ msgid "No Room"
+#~ msgstr "Brak pomieszczeń"
+
+#~ msgid "Insulated"
+#~ msgstr "Ocieplony"
+
+#~ msgid "roof"
+#~ msgstr "dach"
+
+#~ msgid "Assemblage"
+#~ msgstr "Montaż"
+
+#~ msgid "included"
+#~ msgstr "w cenie"
+
+#~ msgid "Quick assemblage"
+#~ msgstr "Szybki montaż"
+
+#~ msgid "Robust construction"
+#~ msgstr "Wytrzymała konstrukcja"
+
+#~ msgid "Glued wood"
+#~ msgstr "Klejone drewno"
+
+#~ msgid "%s Room"
+#~ msgid_plural "%s Rooms"
+#~ msgstr[0] "%s Pokój"
+#~ msgstr[1] "%s Pokoje"
+#~ msgstr[2] "%s Pokoi"
 
 #~ msgid "There is an error sending subscription request."
 #~ msgstr ""
