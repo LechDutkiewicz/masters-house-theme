@@ -875,93 +875,50 @@ function shandora_get_price_range( $type = '' ) {
 
 	$step = bon_get_option( 'price_range_step', '5000' );
 
-	/*if ( empty( $type ) && $type != 'rent' ) {
-
-		$min_val = bon_get_option( 'price_range_min', '000' );
-		$max_val = bon_get_option( 'price_range_max', '2000000' );
-		$step = bon_get_option( 'price_range_step', '5000' );
-	} else {
-
-		$min_val = bon_get_option( 'price_range_min_rent', '000' );
-		$max_val = bon_get_option( 'price_range_max_rent', '1000' );
-		$step = bon_get_option( 'price_range_step_rent', '50' );
-	}*/
-
-	// Find highest price
-	// query post with highest price
-
-	$args = array(
-		'post_type' => 'listing',
-		'posts_per_page' => 1,
-		'orderby' => 'meta_value_num',
-		'order' => 'DESC',
-		'meta_query' => array(
-			array(
-				'key' => bon_get_prefix() . 'listing_price'
-				),
-			),
-		);
-
-	$loop = new WP_Query( $args );
-
-	if ( $loop->have_posts() ) {
-
-		while ( $loop->have_posts() ) :
-
-			$loop->the_post();
-
-		global $post;
-
-		// assign max price to variable
-		$max_val = get_post_meta( $post->ID, bon_get_prefix() . 'listing_price', true );
-		$max_val = ceil($max_val/$step)*$step;
-		
-		endwhile;
-	}
-
-	wp_reset_query();
-
-	// Find lowest price
-	// query post with lowest price
-
-	$args = array(
-		'post_type' => 'listing',
-		'posts_per_page' => 1,
-		'orderby' => 'meta_value_num',
-		'order' => 'ASC',
-		'meta_query' => array(
-			array(
-				'key' => bon_get_prefix() . 'listing_price'
-				),
-			),
-		);
-
-	$loop = new WP_Query( $args );
-
-	if ( $loop->have_posts() ) {
-
-		while ( $loop->have_posts() ) :
-
-			$loop->the_post();
-
-		global $post;
-
-		// assign min price to variable
-		$min_val = get_post_meta( $post->ID, bon_get_prefix() . 'listing_price', true );
-		$min_val = floor($min_val/$step)*$step;
-
-		endwhile;
-	}
-	
-	wp_reset_query();
-
-	$o['min'] = $min_val;
-	$o['max'] = $max_val;
+	$o['min'] = shandora_get_searchfield_range( 'price', $step, false );
+	$o['max'] = shandora_get_searchfield_range( 'price', $step, true );
 	$o['step'] = $step;
 
-//wp_send_json($o);
-
 	return $o;
+}
+
+function shandora_get_searchfield_range( $fieldtype, $step, $highest = true ) {
+
+	$val = "";
+
+	// Find highest / lowest in range
+	// query post with highest / lowest meta value
+
+	$loop_args = array(
+		'post_type' => 'listing',
+		'posts_per_page' => 1,
+		'orderby' => 'meta_value_num',
+		'order' => $highest ? 'DESC' : 'ASC',
+		'meta_query' => array(
+			array(
+				'key' => bon_get_prefix() . 'listing_' . $fieldtype
+				),
+			),
+		);
+
+	$loop = new WP_Query( $loop_args );
+
+	// print_r($loop);
+
+	if ( $loop->have_posts() ) {
+
+		$post = $loop->post;
+
+		// assign max size to variable
+		$val = get_post_meta( $post->ID, bon_get_prefix() . 'listing_' . $fieldtype, true );
+		$val = ceil($val/$step)*$step;
+
+	}
+
+	wp_reset_query();
+
+	return $val;
+
 }
 
 function shandora_get_cottagesize_range() {
@@ -970,83 +927,9 @@ function shandora_get_cottagesize_range() {
 
 	$step = bon_get_option( 'size_range_step', '5' );
 
-	/*$min_val = bon_get_option( 'size_range_min', '000' );
-	$max_val = bon_get_option( 'size_range_max', '2000000' );
-	$step = bon_get_option( 'size_range_step', '5000' );*/
-
-	// Find highest size
-	// query post with highest size
-
-	$args = array(
-		'post_type' => 'listing',
-		'posts_per_page' => 1,
-		'orderby' => 'meta_value_num',
-		'order' => 'DESC',
-		'meta_query' => array(
-			array(
-				'key' => bon_get_prefix() . 'listing_lotsize'
-				),
-			),
-		);
-
-	$loop = new WP_Query( $args );
-
-	if ( $loop->have_posts() ) {
-
-		while ( $loop->have_posts() ) :
-
-			$loop->the_post();
-
-		global $post;
-
-		// assign max size to variable
-		$max_val = get_post_meta( $post->ID, bon_get_prefix() . 'listing_lotsize', true );
-		$max_val = ceil($max_val/$step)*$step;
-		
-		endwhile;
-	}
-
-	wp_reset_query();
-
-	// Find lowest size
-	// query post with lowest size
-
-	$args = array(
-		'post_type' => 'listing',
-		'posts_per_page' => 1,
-		'orderby' => 'meta_value_num',
-		'order' => 'ASC',
-		'meta_query' => array(
-			array(
-				'key' => bon_get_prefix() . 'listing_lotsize'
-				),
-			),
-		);
-
-	$loop = new WP_Query( $args );
-
-	if ( $loop->have_posts() ) {
-
-		while ( $loop->have_posts() ) :
-
-			$loop->the_post();
-
-		global $post;
-
-		// assign min size to variable
-		$min_val = get_post_meta( $post->ID, bon_get_prefix() . 'listing_lotsize', true );
-		$min_val = floor($min_val/$step)*$step;
-
-		endwhile;
-	}
-	
-	wp_reset_query();
-
-	$o['min'] = $min_val;
-	$o['max'] = $max_val;
+	$o['min'] = shandora_get_searchfield_range( 'lotsize', $step, false );
+	$o['max'] = shandora_get_searchfield_range( 'lotsize', $step, true );
 	$o['step'] = $step;
-
-//wp_send_json($o);
 
 	return $o;
 }
@@ -1378,12 +1261,23 @@ function shandora_listing_post_per_page( $query ) {
 				break;
 			}
 
-			if ( isset( $_GET['search_orderby'] ) ) {
-				$orderby = $_GET['search_orderby'];
-			}
-
 			if ( isset( $_GET['search_order'] ) ) {
-				$order = $_GET['search_order'];
+				switch ( $_GET['search_order'] ) {
+					case 'PRICE_ASC':
+					$order = 'ASC';
+					break;
+					case 'PRICE_DESC':
+					$order = 'DESC';
+					break;
+					case 'SIZE_ASC':
+					$key = bon_get_prefix() . 'listing_lotsize';
+					$order = 'ASC';
+					break;
+					case 'SIZE_DESC':
+					$key = bon_get_prefix() . 'listing_lotsize';
+					$order = 'DESC';
+					break;
+				}
 			}
 
 			if ( $query->is_tax( get_object_taxonomies( 'listing' ) ) ) {
@@ -1415,9 +1309,9 @@ function shandora_block_grid_column_class( $echo = true ) {
 
 	$mobile = bon_get_option( 'mobile_layout', '1' );
 	if ( $layout == '1c' ) {
-		$class = 'small-block-grid-' . $mobile . ' medium-block-grid-2 large-block-grid-4';
+		$class = 'mobile-block-grid-' . $mobile . ' xsmall-block-grid-2 small-block-grid-3';
 	} else {
-		$class = 'small-block-grid-' . $mobile . ' medium-block-grid-2 large-block-grid-2 extra-large-block-grid-3';
+		$class = 'mobile-block-grid-' . $mobile . ' xsmall-block-grid-2 small-block-grid-3';
 	}
 
 	if ( $echo ) {
@@ -2544,6 +2438,92 @@ function the_textarea( $required=NULL ) { ?>
 <?php
 }
 
+function get_meta_items() {
+
+	$meta_items = array(
+		array(
+			'name'			=>	'size',
+			'color'			=>	'carrot',
+			'post_meta'		=>	'listing_lotsize',
+			'measurement'	=>	'measurement'
+			),
+		array(
+			'name'			=>	'room',
+			'color'			=>	'alizarin',
+			'post_meta'		=>	'listing_rooms',
+			),
+		array(
+			'name'			=>	'wall',
+			'color'			=>	'turquoise',
+			'package'		=>	'package_wall_thickness',
+			'measurement'	=>	'height_measure'
+			),
+		array(
+			'name'			=>	'client',
+			'color'			=>	'peter-river'
+			),
+		array(
+			'name'			=>	'drill',
+			'color'			=>	'amethyst'
+			),
+		array(
+			'name'			=>	'star',
+			'color'			=>	'sun-flower'
+			),
+		);
+
+	return $meta_items;
+
+}
+
+function get_related_meta_items() {
+
+	global $post;
+	// get post terms to look for meta descriptions assigned to same terms
+	$terms = wp_get_post_terms( $post->ID, 'property-type' );
+	// set array to store matching results
+	$output = array();
+
+	foreach ( get_meta_items() as $meta_item ) {
+		// set allowed taxonomies for each meta description
+		$meta_allowed_tax = bon_get_option( sanitize_title( $meta_item['name'] ) . '_taxonomies' );
+
+		// run throught post terms and seek for taxonomies with same id as allowed
+		foreach ( $terms as $term ) {
+			if ( isset( $meta_allowed_tax[$term->term_id] ) && $meta_allowed_tax[$term->term_id] == 1 && is_singular( 'listing' ) ) {
+				$output[] = $meta_item;
+			}
+		}
+	}
+
+	return $output;
+
+}
+
+function render_meta_value( $meta ) {
+
+	global $post;
+
+	$name = array_key_exists( 'name', $meta ) ? bon_get_option( sanitize_title( $meta['name'] ) . '_name' ) : null;
+	$post_meta = array_key_exists( 'post_meta', $meta ) ? $meta['post_meta'] : null;
+	$package_info = array_key_exists( 'package', $meta ) ? $meta['package'] : null;
+	$measurement = array_key_exists( 'measurement', $meta ) ? $meta['measurement'] : null;
+
+	if ( $package_info ) {
+		$packages = get_packages_list();
+		$wall = '<span data-meta="thickness">' . $packages[0]['package_wall_thickness'] . '</span>';
+	}
+
+	$output = isset($package_info) ? '<span class="wall">' . $name : $name;
+	$output .= $post_meta ? ': ' . shandora_get_meta( $post->ID, $post_meta ) : '';
+	$output .= isset( $wall ) ? ': ' . $wall : '';
+	$output .= $measurement ? ' ' . bon_get_option( $measurement ) : '';
+	$output .= isset($package_info) ? '</span>' : '';
+
+	return $output;
+
+}
+
 // function to get array with quality items descriptions for quality section
 function get_qualities() {
 
@@ -2748,4 +2728,75 @@ function get_coded_email( $email = null ) {
 	$output = str_rot13("<a href='mailto: " . $email . "'>" . $email . "</a><br />");
 
 	return $output;
+}
+
+function shandora_get_related_query( $current_post ) {
+
+	$types = wp_get_object_terms( $current_post, 'property-type' );
+
+	$price = shandora_get_meta( $current_post, 'listing_price' );
+	$size = shandora_get_meta( $current_post, 'listing_lotsize' );
+	$price_min = $price - ( $price * 20 / 100 );
+	$price_max = $price + ( $price * 20 / 100 );
+	$size_min = $size - ( $size * 20 / 100 );
+	$size_max = $size + ( $size * 20 / 100 );
+
+	$type_query = array();
+	$tax_query = array();
+
+	if ( $types ) {
+		foreach ( $types as $type ) {
+			$type_query[] = $type->slug;
+		}
+		$tax_query[] = array(
+			'taxonomy' => 'property-type',
+			'field' => 'slug',
+			'terms' => $type_query,
+			);
+	}
+
+	if ( $tax_query && count( $tax_query ) > 1 ) {
+		$tax_query['relation'] = 'OR';
+	}
+
+	$layout = get_theme_mod( 'theme_layout' );
+	if ( empty( $layout ) ) {
+		$layout = get_post_layout( get_queried_object_id() );
+		if ( $layout == '1c' ) {
+			$posts_per_page = 4;
+		}
+	}
+
+	$args = array(
+		'posts_per_page' => 3,
+		'post_type' => 'listing',
+		'post_status' => 'publish',
+		'post__not_in' => (array) $current_post,
+		'tax_query' => $tax_query,
+		'meta_query' => array(
+			'relation' => 'OR',
+			array(
+				'key' => bon_get_prefix() . 'listing_price',
+				'compare' => 'BETWEEN',
+				'value' => array( $price_min, $price_max ),
+				'type' => 'NUMERIC',
+				),
+			array(
+				'key' => bon_get_prefix() . 'listing_lotsize',
+				'compare' => 'BETWEEN',
+				'value' => array( $size_min, $size_max ),
+				'type' => 'NUMERIC',
+				)
+			)
+		);
+
+	if ( $_SESSION['layoutType'] === 'mobile' ) {
+		$size = 'mobile_tall';
+	} else {
+		$size = 'listing_small';
+	}
+
+	$related_query = get_posts( $args );
+
+	return $related_query;
 }
