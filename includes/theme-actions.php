@@ -2470,6 +2470,18 @@ function get_meta_items() {
 			'name'			=>	'star',
 			'color'			=>	'sun-flower'
 			),
+		array(
+			'name'			=>	'timer',
+			'color'			=>	'green-sea'
+			),
+		array(
+			'name'			=>	'skeleton',
+			'color'			=>	'wisteria'
+			),
+		array(
+			'name'			=>	'wood',
+			'color'			=>	'belize-hole'
+			),
 		);
 
 	return $meta_items;
@@ -2491,7 +2503,10 @@ function get_related_meta_items() {
 		// run throught post terms and seek for taxonomies with same id as allowed
 		foreach ( $terms as $term ) {
 			if ( isset( $meta_allowed_tax[$term->term_id] ) && $meta_allowed_tax[$term->term_id] == 1 && is_singular( 'listing' ) ) {
-				$output[] = $meta_item;
+				// check for possible duplicates for posts with more than 1 matching taxonomy assigned
+				if ( !array_key_exists( $meta_item['name'], $output) ) {
+					$output[$meta_item['name']] = $meta_item;
+				}
 			}
 		}
 	}
