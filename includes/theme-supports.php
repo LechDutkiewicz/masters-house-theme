@@ -91,7 +91,7 @@ if( !function_exists('shandora_setup_theme_supports') ) {
 			);
 		$theme_supports['bon-fee'] = '';
 		$theme_supports['get-the-image'] = '';
-		//$theme_supports['theme-fonts'] = array( 'callback' => 'shandora_custom_typo','customizer' => true );
+		// $theme_supports['theme-fonts'] = array( 'callback' => 'shandora_custom_typo','customizer' => true );
 		$theme_supports['bon-core-sidebars'] = array( 
 			array(
 				'name' => __('Sidebar Primary','bon'),
@@ -228,32 +228,32 @@ if( !function_exists('shandora_setup_theme_supports') ) {
 
 				));
 
-		} else {*/
+} else {*/
 
-			$theme_supports['dynamic-style'] = apply_filters('shandora_dynamic_style', array(
+	$theme_supports['dynamic-style'] = apply_filters('shandora_dynamic_style', array(
 
-				'style' => array(
-					'name' => 'style',
-					'version' => false,
-					'dep' => false,
-					'media' => 'all',
-					'folder' => '/',
-					'filename' => 'style'
-					)
+		'style' => array(
+			'name' => 'style',
+			'version' => false,
+			'dep' => false,
+			'media' => 'all',
+			'folder' => '/',
+			'filename' => 'style'
+			)
 
-				));
+		));
 
-		/*}*/
-		
-		$theme_supports = apply_filters('shandora_default_theme_supports', $theme_supports);
+	/*}*/
 
-		foreach($theme_supports as $support_key => $support_args) {
-			add_theme_support( $support_key, $support_args );
-		}
+	$theme_supports = apply_filters('shandora_default_theme_supports', $theme_supports);
 
+	foreach($theme_supports as $support_key => $support_args) {
+		add_theme_support( $support_key, $support_args );
 	}
 
-	add_action('after_setup_theme', 'shandora_setup_theme_support', 5);
+}
+
+add_action('after_setup_theme', 'shandora_setup_theme_support', 5);
 }
 
 
@@ -299,8 +299,8 @@ if( !function_exists('shandora_setup_theme_thumbnails') ) {
 			
 			/* BLOG */
 			
-			//'blog_large' => array('width' => 620, 'height' => 310, 'crop' => true),
-			'blog_large' => array('width' => 620, 'crop' => false),		
+			'blog_large' => array('width' => 620, 'height' => 310, 'crop' => false),
+			// 'blog_large' => array('width' => 620, 'crop' => false),		
 			
 			/* GALLERY */
 			
@@ -311,11 +311,11 @@ if( !function_exists('shandora_setup_theme_thumbnails') ) {
 			
 			/* PEOPLE */		
 			
-			'agent_large' => array('width'=>237, 'crop' => false),
-			'mobile_agent_large' => array('width' => 75, 'crop' => false),
+			'agent_large' => array('width'=>237, 'height'=>237, 'crop' => false),
+			'mobile_agent_large' => array('width' => 75, 'height'=>75, 'crop' => false),
 			
-			'agent_small' => array('width'=>170, 'crop' => false),
-			'mobile_agent_small' => array('width' => 75, 'crop' => true),
+			'agent_small' => array('width'=>170, 'height'=>170, 'crop' => false),
+			'mobile_agent_small' => array('width' => 75, 'height'=>75, 'crop' => true),
 			
 			'user_small' => array('width'=>70, 'height'=>70, 'crop' => true),
 			
@@ -380,38 +380,48 @@ function shandora_custom_typo( $theme_fonts ) {
 
 	$theme_fonts->add_font(
 		array(
-			'handle' => 'titilium-stack',
-			'label'  => __( 'Titilium Web (font stack)', 'bon' ),
-			'stack'  => '"Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
-			)
-		);
-
-	$theme_fonts->add_font(
-		array(
-			'handle' => 'helvetica-neue-stack',
-			'label'  => __( 'Helvetica Neue (font stack)', 'bon' ),
-			'stack'  => '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
-			)
-		);
-
-	$theme_fonts->add_font(
-		array(
-			'handle' => 'muli',
-			'label'  => __( 'Muli', 'bon' ),
-			'family' => 'Muli',
-			'stack'  => "Muli, sans-serif",
+			'handle' => 'raleway',
+			'label'  => __( 'Raleway', 'bon' ),
+			'family' => 'Raleway',
+			'stack'  => "Raleway, sans-serif",
 			'type'   => 'google'
 			)
 		);
 
-	$theme_fonts->add_font(
-		array(
-			'handle' => 'bebeas-neue-stack',
-			'label' => 'Bebas Neue',
-			'stack' => '"BebasNeue", sans-serif',
+	// $theme_fonts->add_font(
+	// 	array(
+	// 		'handle' => 'titilium-stack',
+	// 		'label'  => __( 'Titilium Web (font stack)', 'bon' ),
+	// 		'stack'  => '"Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
+	// 		)
+	// 	);
 
-			)
-		);
+	// $theme_fonts->add_font(
+	// 	array(
+	// 		'handle' => 'helvetica-neue-stack',
+	// 		'label'  => __( 'Helvetica Neue (font stack)', 'bon' ),
+	// 		'stack'  => '"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif',
+	// 		)
+	// 	);
+
+	// $theme_fonts->add_font(
+	// 	array(
+	// 		'handle' => 'muli',
+	// 		'label'  => __( 'Muli', 'bon' ),
+	// 		'family' => 'Muli',
+	// 		'stack'  => "Muli, sans-serif",
+	// 		'type'   => 'google'
+	// 		)
+	// 	);
+
+	// $theme_fonts->add_font(
+	// 	array(
+	// 		'handle' => 'bebeas-neue-stack',
+	// 		'label' => 'Bebas Neue',
+	// 		'stack' => '"BebasNeue", sans-serif',
+
+	// 		)
+	// 	);
 
 
 }
