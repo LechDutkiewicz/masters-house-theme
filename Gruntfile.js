@@ -32,6 +32,7 @@ module.exports = function(grunt) {
 	'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
 	'bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
 	// 'bower_components/bootstrap/js/modal.js',
+	'bower_components/jquery-sticky/jquery.sticky.js',
 	// 'assets/js/foundation/foundation.joyride.js',
 	'assets/js/custom.js',
 	'assets/js/elements/*.js',
