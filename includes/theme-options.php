@@ -679,6 +679,65 @@ $options[] = array( 'slug' => 'bon_options',
 		)
 	);
 
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Meta Options', 'bon' ),
+	'type' => 'subheading' );
+
+foreach ( get_meta_items() as $meta_item ) {
+
+	$options[] = array(
+		'slug'			=> 'bon_options',
+		'std'			=> __( 'The section below will handle the', 'bon' ) . ' ' . $meta_item['name'],
+		'type'			=> 'info' );
+
+	$options[] = array(
+		'label'			=> $meta_item['name'],
+		'desc'			=> __( 'Icon used for this item', 'bon'),
+		'type'			=> 'info-img',
+		'class'			=> $meta_item['color'],
+		'subfolder'		=> 'meta-icons',
+		'file-type'		=> 'png',
+		);
+
+	$options[] = array(
+		'label'			=> __( 'Translated name', 'bon' ),
+		'desc'			=> $meta_item['name'] . ' name',
+		'id'			=> sanitize_title( $meta_item['name'] ) . '_name',
+		'type'			=> 'text',
+		);
+
+	$options[] = array(
+		'label'			=> __( 'Translated description', 'bon' ),
+		'desc'			=> $meta_item['name'] . ' short description after click',
+		'id'			=> sanitize_title( $meta_item['name'] ) . '_desc',
+		'type'			=> 'editor',
+		'settings'		=> array(
+			'media_buttons'			=> false,
+			'tinymce'				=> true,
+			'teeny'					=> false,
+			'wpautop'				=> true,
+			'textarea_rows'			=> 10
+			),
+		);
+
+	$options[] = array(
+		'type'			=> 'tax_checkboxes',
+		'label'			=> __( 'Display on categories', 'bon' ),
+		'desc'			=> __( 'Choose to show or hide it on single product pages for chosen categories', 'bon' ),
+		'id'			=> sanitize_title( $meta_item['name'] ) . '_taxonomies',
+		'tax_type'		=> 'property-type'
+		);
+
+}
+
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Packages Options', 'bon' ),
+	'type' => 'subheading' );
+
+$options[] = array( 'slug' => 'bon_options',
+	'label' => '',
+	'desc' => '',
+	'std' => __( 'The section below will handle the pricing packages for big houses.', 'bon' ),
+	'type' => 'info' );
+
 $options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Cottage package types', 'bon' ),
 	'desc' => __( 'Add package for cottages', 'bon' ),
@@ -707,17 +766,53 @@ $options[] = array( 'slug' => 'bon_options',
 			'type' => 'text',
 			),
 		array(
-			'label' => __( 'Wall thickness', 'bon' ),
-			'desc' => __( 'Product wall thickness in milimeters, without unit', 'bon' ),
+			'label' => __( 'Outer wall thickness', 'bon' ),
+			'desc' => __( 'Outer wall thickness in milimeters, without unit', 'bon' ),
 			'id' => 'package_wall_thickness',
 			'type' => 'number',
 			),
+		// array(
+		// 	'label' => __( 'Inner wall thickness', 'bon' ),
+		// 	'desc' => __( 'Inner wall thickness in milimeters, without unit', 'bon' ),
+		// 	'id' => 'package_inner_wall_thickness',
+		// 	'type' => 'number',
+		// 	),
+		// array(
+		// 	'label' => __( 'Feature', 'bon' ),
+		// 	'desc' => __( 'Package feature', 'bon' ),
+		// 	'id' => 'package_feature_1',
+		// 	'type' => 'text',
+		// 	),
+		// array(
+		// 	'label' => __( 'Feature', 'bon' ),
+		// 	'desc' => __( 'Package feature', 'bon' ),
+		// 	'id' => 'package_feature_2',
+		// 	'type' => 'text',
+		// 	),
+		// array(
+		// 	'label' => __( 'Feature', 'bon' ),
+		// 	'desc' => __( 'Package feature', 'bon' ),
+		// 	'id' => 'package_feature_3',
+		// 	'type' => 'text',
+		// 	),
 		array(
 			'label' => __( 'Windows and doors thickness', 'bon' ),
 			'desc' => __( 'Product windows and door thickness in milimeters, without unit', 'bon' ),
 			'id' => 'package_windows_thickness',
 			'type' => 'number',
 			),
+		// array(
+		// 	'label' => __( 'Package description', 'bon' ),
+		// 	'id' => 'package_excerpt',
+		// 	'type' => 'editor',
+		// 	'settings' => array(
+		// 		'media_buttons' => false,
+		// 		'tinymce' => true,
+		// 		'teeny' => false,
+		// 		'wpautop' => true,
+		// 		'textarea_rows' => 10
+		// 		),
+		// 	),
 		array(
 			'label' => __( 'Package description', 'bon' ),
 			'id' => 'package_desc',
@@ -938,19 +1033,19 @@ $options[] = array( 'slug' => 'bon_options',
 $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Search Panel Options', 'bon' ),
 	'type' => 'subheading' );
 
-$options[] = array( 'slug' => 'bon_options',
-	'label' => __( 'Price Slider Minimum Value', 'bon' ),
-	'desc' => __( 'Minimum Value for the Price Range slider in the Search Listing Options', 'bon' ),
-	'id' => 'price_range_min',
-	'std' => '0',
-	'type' => 'text' );
+// $options[] = array( 'slug' => 'bon_options',
+// 	'label' => __( 'Price Slider Minimum Value', 'bon' ),
+// 	'desc' => __( 'Minimum Value for the Price Range slider in the Search Listing Options', 'bon' ),
+// 	'id' => 'price_range_min',
+// 	'std' => '0',
+// 	'type' => 'text' );
 
-$options[] = array( 'slug' => 'bon_options',
-	'label' => __( 'Price Slider Maximum Value', 'bon' ),
-	'desc' => __( 'Maximum Value for the Price Range slider in the Search Listing Options', 'bon' ),
-	'id' => 'price_range_max',
-	'std' => '1000000',
-	'type' => 'text' );
+// $options[] = array( 'slug' => 'bon_options',
+// 	'label' => __( 'Price Slider Maximum Value', 'bon' ),
+// 	'desc' => __( 'Maximum Value for the Price Range slider in the Search Listing Options', 'bon' ),
+// 	'id' => 'price_range_max',
+// 	'std' => '1000000',
+// 	'type' => 'text' );
 
 		/* $options[] = array( 'slug' => 'bon_options',
 		  'label' => __( 'Price Slider Minimum Value (Rent Only)', 'bon' ),
@@ -1014,19 +1109,19 @@ $options[] = array( 'slug' => 'bon_options',
 		  'id' => 'maximum_bath',
 		  'type' => 'text' ); */
 
-$options[] = array( 'slug' => 'bon_options',
-	'label' => __( 'Size Slider Minimum Value', 'bon' ),
-	'desc' => __( 'The minimum lot size available for user to select', 'bon' ),
-	'id' => 'minimum_lotsize',
-	'std' => '0',
-	'type' => 'text' );
+// $options[] = array( 'slug' => 'bon_options',
+// 	'label' => __( 'Size Slider Minimum Value', 'bon' ),
+// 	'desc' => __( 'The minimum lot size available for user to select', 'bon' ),
+// 	'id' => 'minimum_lotsize',
+// 	'std' => '0',
+// 	'type' => 'text' );
 
-$options[] = array( 'slug' => 'bon_options',
-	'label' => __( 'Size Slider Maximum Value', 'bon' ),
-	'desc' => __( 'The maximum lot size available for user to select', 'bon' ),
-	'id' => 'maximum_lotsize',
-	'std' => '10000',
-	'type' => 'text' );
+// $options[] = array( 'slug' => 'bon_options',
+// 	'label' => __( 'Size Slider Maximum Value', 'bon' ),
+// 	'desc' => __( 'The maximum lot size available for user to select', 'bon' ),
+// 	'id' => 'maximum_lotsize',
+// 	'std' => '10000',
+// 	'type' => 'text' );
 
 $options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Size Slider Step', 'bon' ),
@@ -1565,6 +1660,14 @@ $options[] = array( 'slug' => 'bon_options',
 			);
 
 		$options[] = array(
+			'type' => 'tax_checkboxes',
+			'label' => __( 'Display on categories', 'bon' ),
+			'desc' => __( 'Choose to show or hide it on single product pages for chosen categories', 'bon' ),
+			'id' => 'tool_section_taxonomies',
+			'tax_type'	=> 'property-type'
+			);
+
+		$options[] = array(
 			'slug' => 'bon_options',
 			'label' => __( 'Text displayed as customization section title', 'bon' ),
 			'id' => 'customize_section_title',
@@ -2076,158 +2179,158 @@ $options[] = array( 'slug' => 'bon_options',
 		 * ======================================================================================================
 		 */
 		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Banners Settings', 'bon' ),
+			'label' => __( 'Quality Section Settings', 'bon' ),
 			'type' => 'heading',
 			'icon' => 'dashicons-format-image' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Banners', 'bon' ),
-			'type' => 'subheading',
-			);
+		// $options[] = array( 'slug' => 'bon_options',
+		// 	'label' => __( 'Banners', 'bon' ),
+		// 	'type' => 'subheading',
+		// 	);
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'label' => __( '1st slide image', 'bon' ),
-			//'desc' => __( 'Opens FAQ, image also displayed in services section', 'bon' ),
-			'id' => '1_slide',
-			'type' => 'upload'
-			);
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'label' => __( '1st slide image', 'bon' ),
+		// 	//'desc' => __( 'Opens FAQ, image also displayed in services section', 'bon' ),
+		// 	'id' => '1_slide',
+		// 	'type' => 'upload'
+		// 	);
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'desc' => __( 'Redirect to a page', 'bon' ),
-			'id' => '1_slide_page',
-			'type' => 'checkbox',
-			'class' => 'collapsed',
-			'std' => '0' );
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'desc' => __( 'Redirect to a page', 'bon' ),
+		// 	'id' => '1_slide_page',
+		// 	'type' => 'checkbox',
+		// 	'class' => 'collapsed',
+		// 	'std' => '0' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Pick a page', 'bon' ),
-			'id' => '1_slide_page_destination',
-			'type' => 'page_select',
-			'class' => 'hidden last' );
+		// $options[] = array( 'slug' => 'bon_options',
+		// 	'label' => __( 'Pick a page', 'bon' ),
+		// 	'id' => '1_slide_page_destination',
+		// 	'type' => 'page_select',
+		// 	'class' => 'hidden last' );
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'desc' => __( 'Redirect to drawing tool', 'bon' ),
-			'id' => '1_slide_tool',
-			'type' => 'checkbox',
-			'std' => '0' );
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'desc' => __( 'Redirect to drawing tool', 'bon' ),
+		// 	'id' => '1_slide_tool',
+		// 	'type' => 'checkbox',
+		// 	'std' => '0' );
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'desc' => __( 'Open modal window', 'bon' ),
-			'id' => '1_slide_modal',
-			'type' => 'checkbox',
-			'class' => 'collapsed',
-			'std' => '0' );
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'desc' => __( 'Open modal window', 'bon' ),
+		// 	'id' => '1_slide_modal',
+		// 	'type' => 'checkbox',
+		// 	'class' => 'collapsed',
+		// 	'std' => '0' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Pick a modal', 'bon' ),
-			'id' => '1_slide_modal_destination',
-			'type' => 'select',
-			'options' => array(
-				'quality' => __( 'Modal with quality images', 'bon' ),
-				'contact' => __( 'Modal with contact form', 'bon' ),
-				'visit' => __( 'Modal with visit request', 'bon' ),
-				),
-			'class' => 'hidden last' );
+		// $options[] = array( 'slug' => 'bon_options',
+		// 	'label' => __( 'Pick a modal', 'bon' ),
+		// 	'id' => '1_slide_modal_destination',
+		// 	'type' => 'select',
+		// 	'options' => array(
+		// 		'quality' => __( 'Modal with quality images', 'bon' ),
+		// 		'contact' => __( 'Modal with contact form', 'bon' ),
+		// 		'visit' => __( 'Modal with visit request', 'bon' ),
+		// 		),
+		// 	'class' => 'hidden last' );
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'label' => __( '2nd slide image', 'bon' ),
-			'desc' => __( 'Opens drawing Tool', 'bon' ),
-			'id' => '2_slide',
-			'type' => 'upload'
-			);
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'label' => __( '2nd slide image', 'bon' ),
+		// 	'desc' => __( 'Opens drawing Tool', 'bon' ),
+		// 	'id' => '2_slide',
+		// 	'type' => 'upload'
+		// 	);
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'desc' => __( 'Redirect to a page', 'bon' ),
-			'id' => '2_slide_page',
-			'type' => 'checkbox',
-			'class' => 'collapsed',
-			'std' => '0' );
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'desc' => __( 'Redirect to a page', 'bon' ),
+		// 	'id' => '2_slide_page',
+		// 	'type' => 'checkbox',
+		// 	'class' => 'collapsed',
+		// 	'std' => '0' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Pick a page', 'bon' ),
-			'id' => '2_slide_page_destination',
-			'type' => 'page_select',
-			'class' => 'hidden last' );
+		// $options[] = array( 'slug' => 'bon_options',
+		// 	'label' => __( 'Pick a page', 'bon' ),
+		// 	'id' => '2_slide_page_destination',
+		// 	'type' => 'page_select',
+		// 	'class' => 'hidden last' );
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'desc' => __( 'Redirect to drawing tool', 'bon' ),
-			'id' => '2_slide_tool',
-			'type' => 'checkbox',
-			'std' => '0' );
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'desc' => __( 'Redirect to drawing tool', 'bon' ),
+		// 	'id' => '2_slide_tool',
+		// 	'type' => 'checkbox',
+		// 	'std' => '0' );
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'desc' => __( 'Open modal window', 'bon' ),
-			'id' => '2_slide_modal',
-			'type' => 'checkbox',
-			'class' => 'collapsed',
-			'std' => '0' );
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'desc' => __( 'Open modal window', 'bon' ),
+		// 	'id' => '2_slide_modal',
+		// 	'type' => 'checkbox',
+		// 	'class' => 'collapsed',
+		// 	'std' => '0' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Pick a modal', 'bon' ),
-			'id' => '2_slide_modal_destination',
-			'type' => 'select',
-			'options' => array(
-				'quality' => __( 'Modal with quality images', 'bon' ),
-				'contact' => __( 'Modal with contact form', 'bon' ),
-				'visit' => __( 'Modal with visit request', 'bon' ),
-				),
-			'class' => 'hidden last' );
+		// $options[] = array( 'slug' => 'bon_options',
+		// 	'label' => __( 'Pick a modal', 'bon' ),
+		// 	'id' => '2_slide_modal_destination',
+		// 	'type' => 'select',
+		// 	'options' => array(
+		// 		'quality' => __( 'Modal with quality images', 'bon' ),
+		// 		'contact' => __( 'Modal with contact form', 'bon' ),
+		// 		'visit' => __( 'Modal with visit request', 'bon' ),
+		// 		),
+		// 	'class' => 'hidden last' );
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'label' => __( '3rd slide image', 'bon' ),
-			'desc' => __( 'Opens quality modal window, also displayed in quality section', 'bon' ),
-			'id' => '3_slide',
-			'type' => 'upload'
-			);
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'label' => __( '3rd slide image', 'bon' ),
+		// 	'desc' => __( 'Opens quality modal window, also displayed in quality section', 'bon' ),
+		// 	'id' => '3_slide',
+		// 	'type' => 'upload'
+		// 	);
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'desc' => __( 'Redirect to a page', 'bon' ),
-			'id' => '3_slide_page',
-			'type' => 'checkbox',
-			'class' => 'collapsed',
-			'std' => '0' );
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'desc' => __( 'Redirect to a page', 'bon' ),
+		// 	'id' => '3_slide_page',
+		// 	'type' => 'checkbox',
+		// 	'class' => 'collapsed',
+		// 	'std' => '0' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Pick a page', 'bon' ),
-			'id' => '3_slide_page_destination',
-			'type' => 'page_select',
-			'class' => 'hidden last' );
+		// $options[] = array( 'slug' => 'bon_options',
+		// 	'label' => __( 'Pick a page', 'bon' ),
+		// 	'id' => '3_slide_page_destination',
+		// 	'type' => 'page_select',
+		// 	'class' => 'hidden last' );
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'desc' => __( 'Redirect to drawing tool', 'bon' ),
-			'id' => '3_slide_tool',
-			'type' => 'checkbox',
-			'std' => '0' );
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'desc' => __( 'Redirect to drawing tool', 'bon' ),
+		// 	'id' => '3_slide_tool',
+		// 	'type' => 'checkbox',
+		// 	'std' => '0' );
 
-		$options[] = array(
-			'slug' => 'bon_options',
-			'desc' => __( 'Open modal window', 'bon' ),
-			'id' => '3_slide_modal',
-			'type' => 'checkbox',
-			'class' => 'collapsed',
-			'std' => '0' );
+		// $options[] = array(
+		// 	'slug' => 'bon_options',
+		// 	'desc' => __( 'Open modal window', 'bon' ),
+		// 	'id' => '3_slide_modal',
+		// 	'type' => 'checkbox',
+		// 	'class' => 'collapsed',
+		// 	'std' => '0' );
 
-		$options[] = array( 'slug' => 'bon_options',
-			'label' => __( 'Pick a modal', 'bon' ),
-			'id' => '3_slide_modal_destination',
-			'type' => 'select',
-			'options' => array(
-				'quality' => __( 'Modal with quality images', 'bon' ),
-				'contact' => __( 'Modal with contact form', 'bon' ),
-				'visit' => __( 'Modal with visit request', 'bon' ),
-				),
-			'class' => 'hidden last' );
+		// $options[] = array( 'slug' => 'bon_options',
+		// 	'label' => __( 'Pick a modal', 'bon' ),
+		// 	'id' => '3_slide_modal_destination',
+		// 	'type' => 'select',
+		// 	'options' => array(
+		// 		'quality' => __( 'Modal with quality images', 'bon' ),
+		// 		'contact' => __( 'Modal with contact form', 'bon' ),
+		// 		'visit' => __( 'Modal with visit request', 'bon' ),
+		// 		),
+		// 	'class' => 'hidden last' );
 
 		/*$options[] = array(
 			'slug' => 'bon_options',
