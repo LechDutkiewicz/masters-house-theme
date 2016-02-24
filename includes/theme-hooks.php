@@ -884,15 +884,15 @@ function shandora_listing_meta() {
 
 	// if ( $_SESSION['layoutType'] !== 'mobile' && ( shandora_get_meta( get_the_ID(), 'listing_enable_packages' ) || shandora_get_meta( get_the_ID(), 'listing_enable_construction' ) ) ) {
 
-		?>
+	?>
 
-		<div class="entry-meta" itemprop="description">
-			<?php
-			bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'meta' );
-			?>
-		</div>
-
+	<div class="entry-meta" itemprop="description">
 		<?php
+		bon_get_template_part( 'block', trailingslashit( get_post_type() ) . 'meta' );
+		?>
+	</div>
+
+	<?php
 	// }
 }
 
@@ -1331,18 +1331,11 @@ function shandora_home_toolsection() {
 * @return void
 *
 */
-function shandora_home_we_are() { ?>
+function shandora_home_we_are() {
 
-<section>
-	<?php if (shandora_is_home()) { ?>
-	<header class="section-header">
-		<h2 class="home-section-header"><?php _e( "Why us?", "bon" ); ?></h2>
-	</header>
-	<?php } ?>
-	<?php bon_get_template_part( 'block', 'listing/services' ); ?>
-</section>
+	bon_get_template_part( 'block', 'listing/home-features' );
 
-<?php }
+}
 
 /**
 * Get Quality Section
