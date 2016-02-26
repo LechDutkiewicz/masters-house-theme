@@ -2442,15 +2442,16 @@ function get_meta_items() {
 
 	$meta_items = array(
 		array(
-			'name'			=>	'size',
-			'color'			=>	'carrot',
-			'post_meta'		=>	'listing_lotsize',
-			'measurement'	=>	'measurement'
-			),
-		array(
 			'name'			=>	'room',
 			'color'			=>	'alizarin',
 			'post_meta'		=>	'listing_rooms',
+			),
+		array(
+			'name'			=>	'size',
+			'color'			=>	'carrot',
+			'post_meta'		=>	'listing_lotsize',
+			'measurement'	=>	'measurement',
+			'dependency'	=>	'listing_terracesqmt',
 			),
 		array(
 			'name'			=>	'wall',
@@ -2494,7 +2495,7 @@ function get_meta_items() {
 			),
 		);
 
-	return $meta_items;
+return $meta_items;
 
 }
 
@@ -2534,27 +2535,35 @@ function render_meta_value( $meta ) {
 	$name = array_key_exists( 'name', $meta ) ? bon_get_option( sanitize_title( $meta['name'] ) . '_name' ) : null;
 	$post_meta = array_key_exists( 'post_meta', $meta ) ? $meta['post_meta'] : null;
 	// check if current icon requires to fetch for cottages package information
-	$package_info = array_key_exists( 'package', $meta ) ? $meta['package'] : null;
+	// $package_info = array_key_exists( 'package', $meta ) ? $meta['package'] : null;
+	if ( array_key_exists( 'package', $meta ) && shandora_get_meta( $post->ID, 'listing_enable_packages' ) ) {
+		$package_info = true;
+	}
 	// check if current icon requires measurement data to display properly
 	$measurement = array_key_exists( 'measurement', $meta ) ? $meta['measurement'] : null;
 
 	// setup info from cottages package information only for products that allow to display package information
-	if ( shandora_get_meta( $post->ID, 'listing_enable_packages' ) && $package_info ) {
+	if ( isset($package_info) ) {
 		// get all packages
 		$packages = get_packages_list();
 		// get wall thickness from first package, which is displayed by default
-		$thickness = $packages[0]['package_wall_thickness'];
+		$meta_value = $packages[0]['package_wall_thickness'];
 	}
 
-	
-
-
+	// add aditional span for wall thickness meta for compatibility with js method to update in
 	$output = isset($package_info) ? '<span class="wall">' . $name : $name;
-	$output .= ( $post_meta && !shandora_get_meta( $post->ID, 'listing_enable_packages' ) ) ? ': ' . shandora_get_meta( $post->ID, $post_meta ) : '';
-	// add additional formatted data for wall thickness if cottage uses package information
-	$output .= isset( $thickness ) ? ': <span data-meta="thickness">' . $thickness . '</span>' : '';
+	
+	// add meta value based on current $meta reference to post's meta
+	if ( isset( $package_info ) ) {
+		$output .= ': <span data-meta="thickness">' . $meta_value . '</span>';
+	} else if ( isset( $post_meta ) ) {
+		$output .= ': ' . shandora_get_meta( $post->ID, $post_meta );
+	}
+
 	// add additional measurement unit for icons which require this information
 	$output .= $measurement ? ' ' . bon_get_option( $measurement ) : '';
+	
+	// close additional span for wall thickness meta
 	$output .= isset($package_info) ? '</span>' : '';
 
 	return $output;
