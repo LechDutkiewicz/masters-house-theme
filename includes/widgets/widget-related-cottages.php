@@ -75,12 +75,14 @@ class Shandora_Related_Cottages_Widget extends WP_Widget {
 			global $post;
 			$related_query = shandora_get_related_query( $post->ID );
 			?>
-			<ul class="listings related mobile-custom-grid-1">
+			<ul class="listings related mobile-block-grid-1">
 
 				<?php foreach ( $related_query as $post ) { ?>
 
 				<li class="<?php echo extra_class($post->ID); ?>">
-					<?php bon_get_template_part( 'block', 'widget-single-listing' ); ?>
+					<article class="hover-shadow">
+						<?php bon_get_template_part( 'block', 'widget-single-listing' ); ?>
+					</article>
 				</li>
 
 				<?php } ?>
