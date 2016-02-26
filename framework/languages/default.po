@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
-"POT-Creation-Date: 2016-02-22 15:25+0100\n"
-"PO-Revision-Date: 2016-02-22 15:25+0100\n"
+"POT-Creation-Date: 2016-02-26 15:16+0100\n"
+"PO-Revision-Date: 2016-02-26 15:16+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: en\n"
@@ -62,11 +62,11 @@ msgstr ""
 msgid "Order a free consultation"
 msgstr ""
 
-#: ../shandora-child/functions.php:204 includes/theme-hooks.php:2448
+#: ../shandora-child/functions.php:204 includes/theme-hooks.php:2441
 msgid "Link to "
 msgstr ""
 
-#: ../shandora-child/functions.php:224 includes/theme-hooks.php:2468
+#: ../shandora-child/functions.php:224 includes/theme-hooks.php:2461
 msgid "Open window with more information"
 msgstr ""
 
@@ -90,16 +90,16 @@ msgid "Fax:"
 msgstr ""
 
 #: ../shandora-child/page-templates/page-template-search-listings.php:436
-#: includes/theme-hooks.php:1764 includes/theme-hooks.php:1765
-#: includes/theme-hooks.php:1772 includes/theme-hooks.php:2251
-#: includes/theme-hooks.php:2265
+#: includes/theme-hooks.php:1757 includes/theme-hooks.php:1758
+#: includes/theme-hooks.php:1765 includes/theme-hooks.php:2244
+#: includes/theme-hooks.php:2258
 msgid "Price"
 msgstr ""
 
 #: ../shandora-child/page-templates/page-template-search-listings.php:440
-#: includes/search-fields.php:893 includes/theme-hooks.php:1766
-#: includes/theme-hooks.php:1767 includes/theme-hooks.php:1774
-#: includes/theme-hooks.php:1777
+#: includes/search-fields.php:893 includes/theme-hooks.php:1759
+#: includes/theme-hooks.php:1760 includes/theme-hooks.php:1767
+#: includes/theme-hooks.php:1770
 msgid "Size"
 msgstr ""
 
@@ -116,8 +116,7 @@ msgstr ""
 #: ../shandora-child/templates/blocks/block-listing-price-excerpt.php:55
 #: ../shandora-child/templates/blocks/block-promotion-home.php:40
 #: ../shandora-child/templates/blocks/block-quality-section.php:18
-#: ../shandora-child/templates/blocks/listing/meta.php:17
-#: ../shandora-child/templates/blocks/listing/packages-tables.php:54
+#: ../shandora-child/templates/blocks/listing/meta.php:41
 #: ../shandora-child/templates/blocks/listing/services.php:32
 #: ../shandora-child/templates/contents/content-gallery-portfolio.php:66
 #: ../shandora-child/templates/contents/content-gallery.php:46
@@ -265,7 +264,7 @@ msgstr ""
 
 #: ../shandora-child/templates/blocks/block-home-bottom-cta.php:17
 #: ../shandora-child/templates/blocks/block-slider.php:48
-msgid "Choose your project"
+msgid "Choose a house for you"
 msgstr ""
 
 #: ../shandora-child/templates/blocks/block-home-bottom-cta.php:20
@@ -275,7 +274,7 @@ msgstr ""
 
 #: ../shandora-child/templates/blocks/block-listing-footer.php:3
 #: ../shandora-child/templates/blocks/block-salesreplisting.php:63
-#: ../shandora-child/templates/blocks/block-widget-single-listing.php:4
+#: ../shandora-child/templates/blocks/block-widget-single-listing.php:29
 #: includes/theme-hooks.php:841 includes/theme-hooks.php:844
 msgid "Permalink to "
 msgstr ""
@@ -324,7 +323,6 @@ msgstr ""
 #: ../shandora-child/templates/blocks/block-modal-contact.php:45
 #: ../shandora-child/templates/blocks/block-modal-customize.php:41
 #: ../shandora-child/templates/blocks/block-modal-newsletter.php:53
-#: ../shandora-child/templates/blocks/block-modal-packages.php:21
 #: ../shandora-child/templates/blocks/block-modal-quality.php:86
 #: ../shandora-child/templates/blocks/block-modal-visit-request.php:33
 msgid "Close"
@@ -360,10 +358,6 @@ msgstr ""
 msgid "Subscribe"
 msgstr ""
 
-#: ../shandora-child/templates/blocks/block-modal-packages.php:14
-msgid "More information about packages"
-msgstr ""
-
 #: ../shandora-child/templates/blocks/block-modal-quality.php:36
 #: ../shandora-child/templates/blocks/house-bubbles.php:24
 msgid "Click here"
@@ -395,7 +389,7 @@ msgstr ""
 #: ../shandora-child/templates/blocks/block-related.php:11
 #: includes/theme-hooks.php:1226
 #: includes/widgets/widget-related-cottages.php:74
-#: includes/widgets/widget-related-cottages.php:121
+#: includes/widgets/widget-related-cottages.php:123
 msgid "You may also like"
 msgstr ""
 
@@ -442,7 +436,7 @@ msgid "Our clients rock"
 msgstr ""
 
 #: ../shandora-child/templates/blocks/block-testimonials-slider.php:48
-#: includes/theme-hooks.php:2397
+#: includes/theme-hooks.php:2390
 msgid "Read full story"
 msgstr ""
 
@@ -484,23 +478,13 @@ msgstr ""
 msgid "Ask another question"
 msgstr ""
 
-#: ../shandora-child/templates/blocks/listing/meta.php:10
+#: ../shandora-child/templates/blocks/listing/home-features.php:4
+#: ../shandora-child/templates/blocks/listing/home-features.php:8
+msgid "Why us?"
+msgstr ""
+
+#: ../shandora-child/templates/blocks/listing/meta.php:34
 msgid "Icon"
-msgstr ""
-
-#: ../shandora-child/templates/blocks/listing/packages-tables.php:40
-#: includes/theme-hooks.php:2252 includes/theme-hooks.php:2266
-msgid "Wall material"
-msgstr ""
-
-#: ../shandora-child/templates/blocks/listing/packages-tables.php:41
-#: includes/theme-hooks.php:2253 includes/theme-hooks.php:2267
-msgid "Wall thickness"
-msgstr ""
-
-#: ../shandora-child/templates/blocks/listing/packages-tables.php:42
-#: includes/theme-hooks.php:2254 includes/theme-hooks.php:2268
-msgid "Windows thickness"
 msgstr ""
 
 #: ../shandora-child/templates/blocks/listing/services.php:39
@@ -1492,7 +1476,7 @@ msgstr ""
 msgid "Manufacturer"
 msgstr ""
 
-#: includes/search-fields.php:1577 includes/theme-hooks.php:1779
+#: includes/search-fields.php:1577 includes/theme-hooks.php:1772
 msgid "Mileage"
 msgstr ""
 
@@ -1803,40 +1787,48 @@ msgstr ""
 msgid "People"
 msgstr ""
 
-#: includes/theme-hooks.php:1339
-msgid "Why us?"
-msgstr ""
-
-#: includes/theme-hooks.php:1755
+#: includes/theme-hooks.php:1748
 msgid "View as grid"
 msgstr ""
 
-#: includes/theme-hooks.php:1756
+#: includes/theme-hooks.php:1749
 msgid "View as list"
 msgstr ""
 
-#: includes/theme-hooks.php:1764 includes/theme-hooks.php:1766
+#: includes/theme-hooks.php:1757 includes/theme-hooks.php:1759
 msgid "Ascending"
 msgstr ""
 
-#: includes/theme-hooks.php:1765 includes/theme-hooks.php:1767
+#: includes/theme-hooks.php:1758 includes/theme-hooks.php:1760
 msgid "Descending"
 msgstr ""
 
-#: includes/theme-hooks.php:1781
+#: includes/theme-hooks.php:1774
 msgid "Length"
 msgstr ""
 
-#: includes/theme-hooks.php:2108
+#: includes/theme-hooks.php:2101
 msgid "Back to Top"
 msgstr ""
 
-#: includes/theme-hooks.php:2139
+#: includes/theme-hooks.php:2132
 msgid "Please activate some Widgets."
 msgstr ""
 
-#: includes/theme-hooks.php:2185
+#: includes/theme-hooks.php:2178
 msgid "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
+msgstr ""
+
+#: includes/theme-hooks.php:2245 includes/theme-hooks.php:2259
+msgid "Wall material"
+msgstr ""
+
+#: includes/theme-hooks.php:2246 includes/theme-hooks.php:2260
+msgid "Wall thickness"
+msgstr ""
+
+#: includes/theme-hooks.php:2247 includes/theme-hooks.php:2261
+msgid "Windows thickness"
 msgstr ""
 
 #: includes/theme-shortcodes.php:197
@@ -1871,7 +1863,7 @@ msgstr ""
 
 #: includes/widgets/widget-featured-listing.php:177
 #: includes/widgets/widget-newsletter-form.php:125
-#: includes/widgets/widget-related-cottages.php:130
+#: includes/widgets/widget-related-cottages.php:132
 #: includes/widgets/widget-search-listing.php:110
 msgid "Title:"
 msgstr ""

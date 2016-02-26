@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TechSavvy Marketers\n"
-"POT-Creation-Date: 2016-02-22 12:07+0100\n"
-"PO-Revision-Date: 2016-02-22 12:21+0100\n"
+"POT-Creation-Date: 2016-02-24 16:43+0100\n"
+"PO-Revision-Date: 2016-02-24 16:44+0100\n"
 "Last-Translator: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language-Team: Lech Dutkiewicz <lechdutkiewicz@gmail.com>\n"
 "Language: pl\n"
@@ -72,11 +72,11 @@ msgstr ""
 msgid "Order a free consultation"
 msgstr "Umów się na darmową wizytę"
 
-#: shandora-child/functions.php:204 shandora/includes/theme-hooks.php:2448
+#: shandora-child/functions.php:204 shandora/includes/theme-hooks.php:2441
 msgid "Link to "
 msgstr "Odnośnik do"
 
-#: shandora-child/functions.php:224 shandora/includes/theme-hooks.php:2468
+#: shandora-child/functions.php:224 shandora/includes/theme-hooks.php:2461
 msgid "Open window with more information"
 msgstr "Otwiera okno z dodatkowymi informacjami"
 
@@ -100,20 +100,20 @@ msgid "Fax:"
 msgstr "Fax:"
 
 #: shandora-child/page-templates/page-template-search-listings.php:436
-#: shandora/includes/theme-hooks.php:1764
+#: shandora/includes/theme-hooks.php:1757
+#: shandora/includes/theme-hooks.php:1758
 #: shandora/includes/theme-hooks.php:1765
-#: shandora/includes/theme-hooks.php:1772
-#: shandora/includes/theme-hooks.php:2251
-#: shandora/includes/theme-hooks.php:2265
+#: shandora/includes/theme-hooks.php:2244
+#: shandora/includes/theme-hooks.php:2258
 msgid "Price"
 msgstr "Cena"
 
 #: shandora-child/page-templates/page-template-search-listings.php:440
 #: shandora/includes/search-fields.php:893
-#: shandora/includes/theme-hooks.php:1766
+#: shandora/includes/theme-hooks.php:1759
+#: shandora/includes/theme-hooks.php:1760
 #: shandora/includes/theme-hooks.php:1767
-#: shandora/includes/theme-hooks.php:1774
-#: shandora/includes/theme-hooks.php:1777
+#: shandora/includes/theme-hooks.php:1770
 msgid "Size"
 msgstr "Rozmiar"
 
@@ -131,8 +131,7 @@ msgstr "przedstawiciele"
 #: shandora-child/templates/blocks/block-promotion-home.php:40
 #: shandora-child/templates/blocks/block-quality-section.php:18
 #: shandora-child/templates/blocks/listing/meta.php:17
-#: shandora-child/templates/blocks/listing/packages-tables.php:54
-#: shandora-child/templates/blocks/listing/services.php:42
+#: shandora-child/templates/blocks/listing/services.php:32
 #: shandora-child/templates/contents/content-gallery-portfolio.php:66
 #: shandora-child/templates/contents/content-gallery.php:46
 #: shandora-child/templates/contents/content-promotions.php:72
@@ -286,8 +285,8 @@ msgstr "Czy trudno wybrać który domek byłby najlepszy?"
 
 #: shandora-child/templates/blocks/block-home-bottom-cta.php:17
 #: shandora-child/templates/blocks/block-slider.php:48
-msgid "Choose your project"
-msgstr "Wybierz projekt dla Ciebie"
+msgid "Choose a house for you"
+msgstr "Wybierz dom dla Ciebie"
 
 #: shandora-child/templates/blocks/block-home-bottom-cta.php:20
 #: shandora-child/templates/blocks/block-slider.php:51
@@ -316,14 +315,14 @@ msgstr "zawiera VAT"
 #: shandora-child/templates/blocks/block-price.php:77
 #: shandora-child/templates/blocks/block-toolsection.php:52
 #: shandora-child/templates/blocks/block-toolsection.php:115
-#: shandora-child/templates/blocks/listing/services.php:49
+#: shandora-child/templates/blocks/listing/services.php:39
 msgid "Contact us"
 msgstr "Skontaktuj się z nami"
 
 #: shandora-child/templates/blocks/block-modal-contact.php:10
 #: shandora-child/templates/blocks/block-price.php:76
 #: shandora-child/templates/blocks/block-price.php:77
-#: shandora-child/templates/blocks/listing/services.php:49
+#: shandora-child/templates/blocks/listing/services.php:39
 msgid "and order your cottage"
 msgstr "i zamów swój domek"
 
@@ -349,7 +348,6 @@ msgstr "WYŚLIJ"
 #: shandora-child/templates/blocks/block-modal-contact.php:45
 #: shandora-child/templates/blocks/block-modal-customize.php:41
 #: shandora-child/templates/blocks/block-modal-newsletter.php:53
-#: shandora-child/templates/blocks/block-modal-packages.php:21
 #: shandora-child/templates/blocks/block-modal-quality.php:86
 #: shandora-child/templates/blocks/block-modal-visit-request.php:33
 msgid "Close"
@@ -387,10 +385,6 @@ msgstr ""
 #: shandora/includes/theme-toolkit-override.php:780
 msgid "Subscribe"
 msgstr "Subskrybuj"
-
-#: shandora-child/templates/blocks/block-modal-packages.php:14
-msgid "More information about packages"
-msgstr "Więcej informacji o pakietach"
 
 #: shandora-child/templates/blocks/block-modal-quality.php:36
 #: shandora-child/templates/blocks/house-bubbles.php:24
@@ -470,7 +464,7 @@ msgid "Our clients rock"
 msgstr "Nasi klienci już znaleźli"
 
 #: shandora-child/templates/blocks/block-testimonials-slider.php:48
-#: shandora/includes/theme-hooks.php:2397
+#: shandora/includes/theme-hooks.php:2390
 msgid "Read full story"
 msgstr "Przeczytaj całą historię"
 
@@ -512,30 +506,17 @@ msgstr "Zostaw nam wiadomość"
 msgid "Ask another question"
 msgstr "Zadaj inne pytanie"
 
+#: shandora-child/templates/blocks/listing/home-features.php:4
+#: shandora-child/templates/blocks/listing/home-features.php:8
+msgid "Why us?"
+msgstr "Dlaczego wybrać nas?"
+
 #: shandora-child/templates/blocks/listing/meta.php:10
 msgid "Icon"
 msgstr "Ikona"
 
-#: shandora-child/templates/blocks/listing/packages-tables.php:40
-#: shandora/includes/theme-hooks.php:2252
-#: shandora/includes/theme-hooks.php:2266
-msgid "Wall material"
-msgstr "Materiał wykonania ściany"
-
-#: shandora-child/templates/blocks/listing/packages-tables.php:41
-#: shandora/includes/theme-hooks.php:2253
-#: shandora/includes/theme-hooks.php:2267
-msgid "Wall thickness"
-msgstr "Grubość ściany"
-
-#: shandora-child/templates/blocks/listing/packages-tables.php:42
-#: shandora/includes/theme-hooks.php:2254
-#: shandora/includes/theme-hooks.php:2268
-msgid "Windows thickness"
-msgstr "Grubość okien"
-
-#: shandora-child/templates/blocks/listing/services.php:49
-#: shandora-child/templates/blocks/listing/services.php:50
+#: shandora-child/templates/blocks/listing/services.php:39
+#: shandora-child/templates/blocks/listing/services.php:40
 msgid "Ask a question"
 msgstr "Zadaj pytanie"
 
@@ -3248,7 +3229,7 @@ msgid "Manufacturer"
 msgstr ""
 
 #: shandora/includes/search-fields.php:1577
-#: shandora/includes/theme-hooks.php:1779
+#: shandora/includes/theme-hooks.php:1772
 msgid "Mileage"
 msgstr ""
 
@@ -3584,43 +3565,54 @@ msgstr "Rozmiar tarasu"
 msgid "People"
 msgstr ""
 
-#: shandora/includes/theme-hooks.php:1339
-msgid "Why us?"
-msgstr "Dlaczego wybrać nas?"
-
-#: shandora/includes/theme-hooks.php:1755
+#: shandora/includes/theme-hooks.php:1748
 msgid "View as grid"
 msgstr "Widok jako siatka"
 
-#: shandora/includes/theme-hooks.php:1756
+#: shandora/includes/theme-hooks.php:1749
 msgid "View as list"
 msgstr "Widok jako lista"
 
-#: shandora/includes/theme-hooks.php:1764
-#: shandora/includes/theme-hooks.php:1766
+#: shandora/includes/theme-hooks.php:1757
+#: shandora/includes/theme-hooks.php:1759
 msgid "Ascending"
 msgstr "Rosnąco"
 
-#: shandora/includes/theme-hooks.php:1765
-#: shandora/includes/theme-hooks.php:1767
+#: shandora/includes/theme-hooks.php:1758
+#: shandora/includes/theme-hooks.php:1760
 msgid "Descending"
 msgstr "Malejąco"
 
-#: shandora/includes/theme-hooks.php:1781
+#: shandora/includes/theme-hooks.php:1774
 msgid "Length"
 msgstr ""
 
-#: shandora/includes/theme-hooks.php:2108
+#: shandora/includes/theme-hooks.php:2101
 msgid "Back to Top"
 msgstr "Wróć na początek"
 
-#: shandora/includes/theme-hooks.php:2139
+#: shandora/includes/theme-hooks.php:2132
 msgid "Please activate some Widgets."
 msgstr ""
 
-#: shandora/includes/theme-hooks.php:2185
+#: shandora/includes/theme-hooks.php:2178
 msgid "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
 msgstr "Copyright &copy; [the-year] [site-link]. Powered by [theme-link]."
+
+#: shandora/includes/theme-hooks.php:2245
+#: shandora/includes/theme-hooks.php:2259
+msgid "Wall material"
+msgstr "Materiał wykonania ściany"
+
+#: shandora/includes/theme-hooks.php:2246
+#: shandora/includes/theme-hooks.php:2260
+msgid "Wall thickness"
+msgstr "Grubość ściany"
+
+#: shandora/includes/theme-hooks.php:2247
+#: shandora/includes/theme-hooks.php:2261
+msgid "Windows thickness"
+msgstr "Grubość okien"
 
 #: shandora/includes/theme-social-share.php:29
 msgid "BT Social Share Options"
@@ -3826,6 +3818,12 @@ msgstr "Wprowadź szukany termin..."
 #: shandora/searchform.php:9
 msgid "Search"
 msgstr "Szukaj"
+
+#~ msgid "Choose your project"
+#~ msgstr "Wybierz projekt dla Ciebie"
+
+#~ msgid "More information about packages"
+#~ msgstr "Więcej informacji o pakietach"
 
 #~ msgid "more information"
 #~ msgstr "więcej informacji"
