@@ -11,6 +11,7 @@
 		require_once( trailingslashit( BON_INC ) . 'widgets/widget-custom-image.php' );
 		//require_once( trailingslashit( BON_INC ) . 'widgets/widget-custom-numbers.php' );
 		require_once( trailingslashit( BON_INC ) . 'widgets/widget-newsletter-form.php' );
+		require_once( trailingslashit( BON_INC ) . 'widgets/widget-promotions.php' );
 		register_widget( 'Shandora_Featured_Listing_Widget' );
 		//register_widget( 'Shandora_Featured_Car_Listing_Widget' );
 		// register_widget( 'Shandora_Related_Listing_Widget' );
@@ -21,6 +22,7 @@
 		register_widget( 'Custom_Image_Widget' );
 		//register_widget( 'Widget_Custom_Numbers' );
 		register_widget( 'Newsletter_Form' );
+		register_widget( 'TSM_Promotions_Posts' );
 	}
 
 	add_action( 'widgets_init', 'shandora_register_widgets' );

@@ -1512,9 +1512,12 @@ function shandora_process_contactform() {
 
 	$phone = isset( $_POST['phone'] ) ? esc_attr( $_POST['phone'] ) : '';
 
-	if ( empty( $email ) && empty( $phone ) ) {
+	if ( isset( $_POST['email'] ) && empty( $email ) && isset( $_POST['phone'] ) && empty( $phone ) ) {
 		$return_data['value'] = __( 'Please enter either your email or phone number.', 'bon' );
 		die( json_encode( $return_data ) );		
+	} else if ( empty( $phone ) ) {
+		$return_data['value'] = __( 'Please enter your phone number.', 'bon' );
+		die( json_encode( $return_data ) );			
 	}
 
 	$subject = esc_html( $_POST['subject'] );
@@ -2247,7 +2250,11 @@ function get_thumbnail_src( $id = null, $size = 'listing_large' ) {
 
 	}
 
-	return $img['src'];
+	if ( array_key_exists('src', $img) ) {
+		return $img['src'];
+	} else {
+		return;
+	}
 }
 
 function get_open_graph_title() {
@@ -2406,23 +2413,40 @@ function the_contact_form_content() {
 	<?php
 }
 
+function the_contact_phone_form_content() {
+	?>
+	<p><?php _e( 'If for any reason you were unable to contact us during workin hours, please leave us your phone number. Our representative will get in touch with you.', 'bon' ); ?></p>	
+	<?php
+}
+
 // function to render email input for contact forms
-function the_email_input( $required=NULL ) { ?>
+function the_name_input( $required = NULL ) { ?>
 
 <div class='column large-12 small-11 input-container-inner mail'>
-	<input class="attached-input email<?php echo $required ? ' ' . $required : ''; ?>" type="email" placeholder="<?php echo __( 'Your email address', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="email" id="email" value="" />
-	<div class="contact-form-error" ><?php _e( 'Please enter either your email or phone number.', 'bon' ); ?></div>
+	<input class="attached-input name<?php echo $required ? ' ' . $required : ''; ?>" type="text" placeholder="<?php _e( 'Your first name', 'bon' ); ?>"  name="name" id="name" value="" />
+	<div class="contact-form-error" ><?php _e( 'Please enter your name.', 'bon' ); ?></div>
+</div>
+
+<?php
+}
+
+// function to render email input for contact forms
+function the_email_input( $required = NULL ) { ?>
+
+<div class='column large-12 small-11 input-container-inner mail'>
+	<input class="attached-input email<?php echo $required ? ' ' . $required : ''; ?>" type="email" placeholder="<?php echo $required ? __( 'Your email address', 'bon' ) : __( 'Your email address', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="email" id="email" value="" />
+	<div class="contact-form-error" ><?php _e( 'Please enter either your emailnumber.', 'bon' ); ?></div>
 </div>
 
 <?php
 }
 
 // function to render phone input for contact forms
-function the_phone_input( $required=NULL ) { ?>
+function the_phone_input( $required = NULL ) { ?>
 
 <div class='column large-12 small-11 input-container-inner phone'>
-	<input class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" type="text" placeholder="<?php echo __( 'Your phone number', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="phone" id="phone" value="" />
-	<div class="contact-form-error" ><?php _e( 'Please enter either your email or phone number.', 'bon' ); ?></div>
+	<input class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" type="text" placeholder="<?php echo $required? __( 'Your phone number', 'bon' ) : __( 'Your phone number', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="phone" id="phone" value="" />
+	<div class="contact-form-error" ><?php _e( 'Please enter your phone number.', 'bon' ); ?></div>
 </div>
 
 <?php
@@ -2649,7 +2673,7 @@ function get_village_map() {
 	global $post;
 
 	$cottages = array();
-	for ( $i = 1; $i <=11; $i++ )
+	for ( $i = 1; $i <=15; $i++ )
 	{
 		if ( shandora_get_meta( $post->ID, 'cottage_' . $i ) )
 		{

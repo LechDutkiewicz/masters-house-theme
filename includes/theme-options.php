@@ -178,17 +178,17 @@ $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Logo for ema
 	'std' => '',
 	'type' => 'upload' );
 
-$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Favicon', 'bon' ),
-	'desc' => __( 'Upload a Favicon', 'bon' ),
-	'id' => 'favicon',
-	'std' => '',
-	'type' => 'upload' );
+// $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Custom Favicon', 'bon' ),
+// 	'desc' => __( 'Upload a Favicon', 'bon' ),
+// 	'id' => 'favicon',
+// 	'std' => '',
+// 	'type' => 'upload' );
 
-$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Slider Posts Limit', 'bon' ),
-	'desc' => __( 'How many slideshow to show?', 'bon' ),
-	'id' => 'slider_post_per_page',
-	'std' => '',
-	'type' => 'text' );
+// $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Slider Posts Limit', 'bon' ),
+// 	'desc' => __( 'How many slideshow to show?', 'bon' ),
+// 	'id' => 'slider_post_per_page',
+// 	'std' => '',
+// 	'type' => 'text' );
 
 $options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Slider Interval', 'bon' ),
@@ -234,6 +234,14 @@ $options[] = array( 'slug' => 'bon_options', 'label' => __( 'AdWords', 'bon' ) .
 	'type' => 'textarea' );
 
 
+$options[] = array( 'slug' => 'bon_options', 'label' => __( 'Facebook', 'bon' ) . ' ' . __( 'Tracking Code', 'bon' ),
+	'desc' => __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the footer template of your theme.', 'bon' ),
+	'id' => 'facebook_tracking',
+	'std' => '',
+	'class' => 'code_mirror',
+	'type' => 'textarea' );
+
+
 // $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Conversion Code', 'bon' ),
 // 	'desc' => __( 'Paste your conversion tracking code here. This will be added into the footer template of your theme.', 'bon' ),
 // 	'id' => 'conversion_code',
@@ -248,23 +256,23 @@ $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Google Webmasters C
 	'std' => '',
 	'type' => 'text' );
 
-$options[] = array( 'slug' => 'bon_options',
-	'label' => __( 'Google Map center point latitude', 'bon' ),
-	'desc' => __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
-	'id' => 'global_latitude',
-	'type' => 'text' );
+// $options[] = array( 'slug' => 'bon_options',
+// 	'label' => __( 'Google Map center point latitude', 'bon' ),
+// 	'desc' => __('The Map Latitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
+// 	'id' => 'global_latitude',
+// 	'type' => 'text' );
 
-$options[] = array( 'slug' => 'bon_options',
-	'label' => __( 'Google Map center point longitude', 'bon' ),
-	'desc'	=> __('The Map Longitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
-	'id' => 'global_longitude',
-	'type' => 'text' );
+// $options[] = array( 'slug' => 'bon_options',
+// 	'label' => __( 'Google Map center point longitude', 'bon' ),
+// 	'desc'	=> __('The Map Longitude. You can easily find it <a href="http://www.itouchmap.com/latlong.html">here</a>. Copy and paste the latitude value generated there', 'bon'), 
+// 	'id' => 'global_longitude',
+// 	'type' => 'text' );
 
-$options[] = array( 'slug' => 'bon_options',
-	'label' => __( 'Google Map starting zoom level', 'bon' ),
-	'id' => 'global_zoom',
-	'type' => 'number',
-	'std' => '6' );
+// $options[] = array( 'slug' => 'bon_options',
+// 	'label' => __( 'Google Map starting zoom level', 'bon' ),
+// 	'id' => 'global_zoom',
+// 	'type' => 'number',
+// 	'std' => '6' );
 
 $options[] = array( 'slug' => 'bon_options',
 	'label' => __( 'Enable Disqus Comments. You can easily find how to menage it at https://disqus.com/', 'bon' ),
@@ -390,6 +398,17 @@ $options[] = array( 'slug' => 'bon_options', 'label' => __( 'Page with quality',
 			'std' => '',
 			'class' => 'hidden last',
 			'type' => 'text' );
+
+		$options[] = array( 'slug' => 'bon_options',
+			'label' => __( 'Type of contact form', 'bon' ),
+			'desc' => __( 'Choose wheather to display email and phone form, or just phone', 'bon' ),
+			'id' => 'form_type',
+			'std' => 'visit',
+			'type' => 'radio',
+			'options' => array(
+				'visit' => __( 'Form with email and phone', 'bon' ),
+				'phone' => __( 'Form with phone only', 'bon' )
+				) );
 
 		/* $options[] = array( 'slug' => 'bon_options',
 		  'label' => __( 'Opening Hours', 'bon' ),

@@ -1197,7 +1197,7 @@ function shandora_get_comments_template() {
 */
 function shandora_post_related() {
 
-	$orig_post = $post;
+	if (isset($post)) { $orig_post = $post; }
 	global $post;
 	$tags = wp_get_post_tags($post->ID);
 
@@ -1244,7 +1244,7 @@ function shandora_post_related() {
 
 	}
 
-	$post = $orig_post;
+	if (isset($orig_post)) { $post = $orig_post; }
 	wp_reset_query();
 
 }
@@ -2002,7 +2002,7 @@ if ( !function_exists( 'shandora_get_main_header' ) ) {
 						<span class="sha-calendar"></span>
 					</div>
 					<span class="info-title"><?php echo bon_get_option( 'hgroup2_title' ); ?></span>
-					<span class="phone visit"><strong><a href="#" data-reveal-id="visit-modal" title="<?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?>" <?php the_ga_event( "Contact", "Open Visit Request", "Menu Bar" ); ?>><?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?></a></strong></span>
+					<span class="phone visit"><strong><a href="#" data-reveal-id="<?php echo bon_get_option( 'form_type' ); ?>-modal" title="<?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?>" <?php the_ga_event( "Contact", "Open Visit Request", "Menu Bar" ); ?>><?php echo esc_attr( bon_get_option( 'hgroup2_line1' ) ); ?></a></strong></span>
 				</div>
 			<?php endif; ?>
 		</div>
@@ -2074,7 +2074,7 @@ if ( !function_exists( 'shandora_get_main_navigation' ) ) {
 			// render wordpress footer
 			wp_footer();
 			// render modal with visit request
-			bon_get_template_part( 'block', 'block-modal-visit-request' );
+			bon_get_template_part( 'block', 'block-modal-' . bon_get_option( 'form_type' ) . '-request' );
 			// render modal with newsletter
 			if ( bon_get_option( 'newsletter_modal' ) ) {
 				bon_get_template_part( 'block', 'block-modal-newsletter' );

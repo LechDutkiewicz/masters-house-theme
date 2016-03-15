@@ -65,12 +65,12 @@ class Shandora_Related_Cottages_Widget extends WP_Widget {
 			$args = $instance;
 
 			/* Overwrite the $echo argument and set it to false. */
-			$args['echo'] = false; ?>
+			$args['echo'] = false;
 
-			<?php /* Output the theme's $before_widget wrapper. */
-			echo $before_widget; ?>
+			/* Output the theme's $before_widget wrapper. */
+			echo $before_widget;
 
-			<?php /* If a title was input by the user, display it. */
+			/* If a title was input by the user, display it. */
 			echo $before_title . apply_filters( 'widget_title', __( 'You may also like', 'bon' ), $instance, $this->id_base ) . $after_title;
 			global $post;
 			$related_query = shandora_get_related_query( $post->ID );
@@ -91,9 +91,9 @@ class Shandora_Related_Cottages_Widget extends WP_Widget {
 
 			<?php
 			/* Close the theme's widget wrapper. */
-			echo $after_widget; ?>
+			echo $after_widget;
 
-			<?php }
+			}
 
 		}
 

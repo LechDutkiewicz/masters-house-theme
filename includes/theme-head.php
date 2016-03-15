@@ -47,9 +47,9 @@ if(!function_exists('shandora_print_dynamic_scripts')) {
 }
 
 
-if(!function_exists('shandora_print_tracking_code')) {
+if(!function_exists('shandora_print_analytics_tracking_code')) {
 
-	function shandora_print_tracking_code() {
+	function shandora_print_analytics_tracking_code() {
 
 		if ( WP_ENV === 'production' && !is_user_logged_in() ) {
 
@@ -67,7 +67,57 @@ if(!function_exists('shandora_print_tracking_code')) {
 
 	}
 
-	add_action('wp_head', 'shandora_print_tracking_code', 101);
+	add_action('wp_head', 'shandora_print_analytics_tracking_code', 101);
+
+}
+
+
+if(!function_exists('shandora_print_adwords_tracking_code')) {
+
+	function shandora_print_adwords_tracking_code() {
+
+		if ( WP_ENV === 'production' && !is_user_logged_in() ) {
+
+			$scripts = bon_get_option('google_adwords');
+			
+			if(!empty($scripts)) { ?>
+				
+					<?php echo $scripts; ?>
+
+
+				<?php 
+			}
+
+		}
+
+	}
+
+	add_action('wp_head', 'shandora_print_adwords_tracking_code', 101);
+
+}
+
+
+if(!function_exists('shandora_print_facebook_tracking_code')) {
+
+	function shandora_print_facebook_tracking_code() {
+
+		if ( WP_ENV === 'production' && !is_user_logged_in() ) {
+
+			$scripts = bon_get_option('facebook_tracking');
+			
+			if(!empty($scripts)) { ?>
+				
+					<?php echo $scripts; ?>
+
+
+				<?php 
+			}
+
+		}
+
+	}
+
+	add_action('wp_head', 'shandora_print_facebook_tracking_code', 101);
 
 }
 
