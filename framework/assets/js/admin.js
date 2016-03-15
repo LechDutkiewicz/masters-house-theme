@@ -464,6 +464,16 @@
 				     mode : 'htmlmixed'
 				});
 			}
+			if($('#facebook_tracking').length > 0) {
+				var adwords = CodeMirror.fromTextArea(document.getElementById('facebook_tracking'), {
+					 lineNumbers : true,
+					 matchBrackets: true,
+					 autoClearEmptyLines : false,
+					 onBlur : function() { adwords.save();},
+					 theme : 'default',
+				     mode : 'htmlmixed'
+				});
+			}
 			if($('#conversion_code').length > 0) {
 				/* JS */
 				var conversion_code = CodeMirror.fromTextArea(document.getElementById('conversion_code'), {
