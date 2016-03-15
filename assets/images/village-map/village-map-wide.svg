@@ -243,7 +243,7 @@
                         </g>
                     </g>
 
-                    <g class="camera-holder" transform="translate(264, 119)">
+                    <g class="camera-holder" transform="translate(264, 120)">
                         <use class="icon-gallery" xlink:href="#camera"/>
                         <use class="icon-video" xlink:href="#video"/>  
                     </g>
@@ -308,7 +308,7 @@
                         <path class="light-brown" d="m 571.3,142 0,-1.2 c 0,-0.5 -0.5,-1 -1.1,-1 l -46,0 c -0.6,0 -1.1,0.4 -1.1,1 l 0,1.2 48.2,0 z"/>
                         <rect class="lighter-brown" height="0.40000001" width="48.099998" y="141.60001" x="523.20001"/>                   
                     </g>
-                    <g class="camera-holder" transform="translate(546, 120)">
+                    <g class="camera-holder" transform="translate(547, 123)">
                         <use class="icon-gallery" xlink:href="#camera"/>
                         <use class="icon-video" xlink:href="#video"/>                            
                     </g>
@@ -458,7 +458,7 @@
                         <path class="lightest-brown" d="m 390.6,324.4 0,-1.1 c 0,-0.5 0.5,-0.9 1.1,-0.9 l 47.9,0 c 0.6,0 1.1,0.4 1.1,0.9 l 0,1.1 -50.1,0 z"/>
                         <rect class="teal" height="0.40000001" width="50.099998" y="324" x="390.60001"/>                      
                     </g>
-                    <g class="camera-holder" transform="translate(416, 304)">
+                    <g class="camera-holder" transform="translate(416, 309)">
                         <use class="icon-gallery" xlink:href="#camera"/>
                         <use class="icon-video" xlink:href="#video"/>                            
                     </g>
@@ -670,7 +670,7 @@
                         <path class="dark-brown" inkscape:connector-curvature="0" id="path1025" d="m 518.8,577.5 0,-1 c 0,-0.5 0.5,-0.9 1.1,-0.9 l 46.3,0 c 0.6,0 1.1,0.4 1.1,0.9 l 0,1 -48.5,0 z"/>
                         <rect class="light-brown" height="0.40000001" width="48.5" y="577.09998" x="518.79999"/>                        
                     </g>
-                    <g class="camera-holder" transform="translate(543, 561)">
+                    <g class="camera-holder" transform="translate(543, 562)">
                         <use class="icon-gallery" xlink:href="#camera"/>
                         <use class="icon-video" xlink:href="#video"/>
                     </g>
