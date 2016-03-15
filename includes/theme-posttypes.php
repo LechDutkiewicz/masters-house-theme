@@ -162,7 +162,7 @@ if (!function_exists('shandora_page_meta')) {
 
 				);
 
-			for ( $i = 1; $i <=11; $i++ )
+			for ( $i = 1; $i <=15; $i++ )
 			{				
 				$fields_map[] = array(
 					'id' => $prefix . 'cottage_' . $i,
