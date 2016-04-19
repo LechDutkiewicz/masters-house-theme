@@ -132,7 +132,7 @@ function shandora_setup_theme_hook() {
 
 		add_action( "{$prefix}after_single_entry_content", "shandora_listing_modal", 8 );
 
-		add_action( "{$prefix}after_single_post_content", "shandora_post_comments", 3 );
+		add_action( "{$prefix}after_single_post_entry", "shandora_post_comments", 3 );
 
 		add_action( "{$prefix}after_single_post_entry", "shandora_post_related", 5 );
 
@@ -1211,7 +1211,7 @@ function shandora_post_related() {
 			'tag__in' => $tag_ids,
 			'post__not_in' => array($post->ID),
 			'caller_get_posts'=>1,
-			'posts_per_page'=>5
+			'posts_per_page'=>4
 			);
 
 		$my_query = new wp_query( $args );
@@ -1227,14 +1227,15 @@ function shandora_post_related() {
 					<hr>
 				</header>
 
-				<?php
-
-				while( $my_query->have_posts() ) {
-					$my_query->the_post();
-
-					bon_get_template_part( 'content', ( post_type_supports( get_post_type(), 'post-formats' ) ? get_post_format() : get_post_type() ) );
-
-				} ?>
+				<?php if ( $my_query->have_posts() ) { ?>
+				<ul class="mobile-block-grid-1 xsmall-block-grid-2 small-block-grid-4 medium-block-grid-2">
+					<?php while( $my_query->have_posts() ) { $my_query->the_post(); ?>
+					<li>
+						<?php bon_get_template_part( 'content', ( post_type_supports( get_post_type(), 'post-formats' ) ? get_post_format() . 'related' : get_post_type() . 'related' ) ); ?>
+					</li>
+					<?php } ?>
+				</ul>
+				<?php }	?>
 
 			</section>
 
@@ -1819,8 +1820,6 @@ if ( !function_exists( 'shandora_listing_open_ul' ) ) {
 
 if ( !function_exists( 'shandora_listing_close_ul' ) ) {
 
-
-
 	function shandora_listing_close_ul() {
 
 		if ( (get_post_type() == 'listing' || get_post_type() == 'product' || get_post_type() == 'boat-listing' || is_page_template( 'page-templates/page-template-all-listings.php' ) ||
@@ -1833,7 +1832,6 @@ if ( !function_exists( 'shandora_listing_close_ul' ) ) {
 			<?php
 		}
 	}
-
 }
 
 
@@ -2500,6 +2498,21 @@ if ( !function_exists( 'get_modal' ) ) {
 
 		}
 
+	}
+
+}
+
+if ( !function_exists( 'shandora_get_content_color' ) ) {
+
+	function shandora_get_content_color() {
+		global $post;
+		$term_meta = wp_get_post_terms( $post->ID, 'category' ); //get post term meta
+		$ex_class = $term_meta[0]->slug; // get first term slug
+		$post_taxonomies = get_terms( 'category', array( 'slug' => $ex_class ) ); // get term from all terms that equals chosen slug
+		$color = get_option( "taxonomy_$color" ); // get taxonomy color
+		$color = $color['color']; // save color name as varialbe
+
+		return $color;
 	}
 
 }

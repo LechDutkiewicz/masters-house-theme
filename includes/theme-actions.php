@@ -514,7 +514,7 @@ function shandora_get_search_page_url() {
 	} else {
 		$output .= '<div class="column large-12 small-11 large-uncentered small-centered" style="margin-top: 1em;">';
 		$output .= wp_nonce_field( 'search-panel-submit', 'search_nonce', false, false );
-		$output .= $form->form_submit( '', $search_label, 'class="button flat ' . $button_color . ' radius"' . get_ga_event( "Sidebar", "Search Products" ) );
+		$output .= $form->form_submit( '', $search_label, 'class="button flat ' . $button_color . ' radius" ' . get_ga_event( "Sidebar", "Search Products" ) );
 	}
 
 	if ( defined( 'ICL_LANGUAGE_CODE' ) ) {
@@ -1221,6 +1221,9 @@ function shandora_register_script() {
 	// if ( !wp_script_is( 'jplayer', 'queue' ) ) {
 	// 	wp_enqueue_script( 'jplayer' );
 	// }
+	// if ( wp_script_is( 'jquery', 'queue' ) ) {
+	// 	wp_deregister_script( 'jquery' );
+	// }
 }
 
 function shandora_listing_post_per_page( $query ) {
@@ -1337,6 +1340,7 @@ function shandora_get_cot_details() {
 		$thumb_size = esc_html( $_POST['thumbSize'] );
 
 		$return_data['thumbnail'] = get_the_post_thumbnail( $postID, $thumb_size );
+		$return_data['url'] = get_the_permalink( $postID );
 		die( json_encode( $return_data ) );
 
 	}
@@ -2456,7 +2460,7 @@ function the_phone_input( $required = NULL ) { ?>
 function the_textarea( $required=NULL ) { ?>
 
 <div class='column large-12 small-11 input-container-inner pencil'>
-	<textarea class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" placeholder="<?php _e( "In case you want to ask us about something, type it here. You can also leave it empty and we'll contact you soon.", 'bon' ); ?>"  name="messages" id="messages" value="" cols="58" rows="10" /></textarea>
+	<textarea class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" placeholder="<?php _e( "In case you want to ask us about something, type it here. You can also leave it empty and we'll contact you soon.", 'bon' ); ?>"  name="messages" id="messages" value="" cols="58" rows="10"></textarea>
 </div>
 
 <?php
