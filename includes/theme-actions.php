@@ -1512,157 +1512,10 @@ function shandora_process_contactform() {
 		die( json_encode( $return_data ) );
 	}
 
-	$email = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
-
-	$phone = isset( $_POST['phone'] ) ? esc_attr( $_POST['phone'] ) : '';
-
-	if ( isset( $_POST['email'] ) && empty( $email ) && isset( $_POST['phone'] ) && empty( $phone ) ) {
-		$return_data['value'] = __( 'Please enter either your email or phone number.', 'bon' );
-		die( json_encode( $return_data ) );		
-	} else if ( empty( $phone ) ) {
-		$return_data['value'] = __( 'Please enter your phone number.', 'bon' );
-		die( json_encode( $return_data ) );			
-	}
-
-	$subject = esc_html( $_POST['subject'] );
-	$listing_id = absint( $_POST['listing_id'] );
-
-	$messages = esc_textarea( $_POST['messages'] );
-
-	if (!$messages) {
-		$messages = isset( $_POST['messages_default'] ) ? esc_attr( $_POST['messages_default'] ) : '';
-	}
-
-	if ( empty( $messages ) ) {
-		$return_data['value'] = __('Please enter your messages.', 'bon');
-		die( json_encode( $return_data ) );
-	}
-
-	if ( function_exists( 'akismet_http_post' ) && trim( get_option( 'wordpress_api_key' ) ) != '' ) {
-		global $akismet_api_host, $akismet_api_port;
-		$c['user_ip'] = preg_replace( '/[^0-9., ]/', '', $_SERVER['REMOTE_ADDR'] );
-		$c['blog'] = home_url();
-		if ( $email ) { $c['comment_author_email'] = $email; }
-		$c['comment_content'] = $messages;
-
-		$query_string = '';
-		foreach ( $c as $key => $data ) {
-			if ( is_string( $data ) )
-				$query_string .= $key . '=' . urlencode( stripslashes( $data ) ) . '&';
-		}
-
-		$response = akismet_http_post( $query_string, $akismet_api_host, '/1.1/comment-check', $akismet_api_port );
-
-		if ( 'true' == $response[1] ) {
-			$return_data['value'] = __( 'Cheatin Huh?!', 'bon' );
-			die( json_encode( $return_data ) );
-		}
-	}
-
-
-
-/************************
-*						*
-* Email configuration	*
-*						*
-************************/
-
-$receiver = $_POST['receiver'];
-
-// setup email to admin body
-
-$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "You have received a new contact form message via %s \n", "bon" ), get_bloginfo( 'name' ) ) . '</p>';
-//$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Name : %s \n", "bon" ), $name ) . '</p>';
-if ( $email ) { $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Email : %s \n", "bon" ), $email ) . '</p>'; }
-if ( $phone ) { $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Sender Phone Number : %s \n", "bon" ), $phone ) . '</p>'; }
-$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Subject : %s \n", "bon" ), $subject ) . '</p>';
-if ( $listing_id) { $body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Email Send From : %s \n", "bon" ), get_permalink( $listing_id ) ) . '</p>'; }
-$body .= '<p style = "margin-bottom:1em">' . sprintf( __( "Message : %s \n", "bon" ), $messages ) . '</p>';
-
-
-
-// setup email to admin headers
-
-// set email reply to header to admin if contact form was filled without email
-if ( $email ) {
-	$reply_email = $email;
-} else {
-	$reply_email = get_bloginfo( 'admin_email' );
-}
-// set content type header
-$headers[] = "Content-Type: text/html";
-
-// add WP filters for correct email headers
-if ( $email ) {
-// set from header
-	$headers[] = "From: " . __( 'Customer', 'bon' ) . ": " . $reply_email;
-	$headers[] = "Reply-To: " . $reply_email;
-	// add_filter( 'wp_mail_from', function() {
-	// 	return $reply_email;
-	// } );
-} else {
-// set from header
-	$headers[] = "From: " . __( "Customer", "bon" ) . ": " . $reply_email;
-}
-// add_filter( 'wp_mail_from_name', function() {
-// 	return __( "Masters House", 'bon' );
-// } );
-
-$subject = sprintf( "%s %s", $subject, __( "Masters House", 'bon' ) );
-
-
-
-/********************************
-*								*
-* Responsne email configuration	*
-*								*
-********************************/
-
-
-// setup response email body if email was filled in contact form
-if ( $email ) {
-
-	$response_receiver = $email;
-
-	$response_body = '<p style = "margin-bottom:1em">' . __( 'We succesfully received your request. Our representative will contact you within one hour.', 'bon' ) . '</p>';
-	$response_body .= '<p style = "margin-bottom:1em">' . __( 'Kind regards', 'bon' ) . ', <br>' . esc_attr( get_bloginfo( 'name' ) ) . '</p>';
-
-	$response_headers[] = "From: " . __( "Masters House", "bon" );
-	$response_headers[] = "Reply-To: " . 'no-reply@mastershouse.com';
-	$response_headers[] = "Content-Type: text/html";
-
-	$response_subject = __( 'Thank you for contacting us', 'bon' );
-
-}
-
-
-
-// send email to admin
-if ( wp_mail( $receiver, $subject, $body, $headers ) ) {
-
-	// add necessary WP filters
-	add_filter( 'wp_mail_from', function() {
-		return 'no-reply@mastershouse.com';
-	} );
-	add_filter( 'wp_mail_from_name', function() {
-		return __( "Masters House", 'bon' );
-	} );
-
-	// send response if email to admin was sent succesfully
-	if ( $email ) { wp_mail( $response_receiver, $response_subject, $response_body, $response_headers ); }
-
-	// set return data if email was sent successfully
-	$return_data['success'] = '1';
-	$return_data['value'] = __( 'Email was sent successfully.', 'bon' );
-	die( json_encode( $return_data ) );
-
-} else {
-
-	// set return data if there was an error with sending email
-	$return_data['value'] = __( 'There is an error sending email.', 'bon' );
-	die( json_encode( $return_data ) );
-
-}
+	$contact_form = new TSM_emails();
+	$contact_form->post_data = $_POST;
+	$contact_form->init();
+	die( json_encode($contact_form->setup_return_data()) );
 }
 
 add_action( 'wp_ajax_process-ebook-downloadform', 'shandora_process_ebook_downloadform' );
@@ -2426,8 +2279,8 @@ function the_contact_phone_form_content() {
 // function to render email input for contact forms
 function the_name_input( $required = NULL ) { ?>
 
-<div class='column large-12 small-11 input-container-inner mail'>
-	<input class="attached-input name<?php echo $required ? ' ' . $required : ''; ?>" type="text" placeholder="<?php _e( 'Your first name', 'bon' ); ?>"  name="name" id="name" value="" />
+<div class='column large-12 small-11 input-container-inner name'>
+	<input class="attached-input name<?php echo $required ? ' ' . 'required' : ''; ?>" type="text" placeholder="<?php _e( 'Your first name', 'bon' ); ?>"  name="name" id="name" value="" />
 	<div class="contact-form-error" ><?php _e( 'Please enter your name.', 'bon' ); ?></div>
 </div>
 
@@ -2438,8 +2291,8 @@ function the_name_input( $required = NULL ) { ?>
 function the_email_input( $required = NULL ) { ?>
 
 <div class='column large-12 small-11 input-container-inner mail'>
-	<input class="attached-input email<?php echo $required ? ' ' . $required : ''; ?>" type="email" placeholder="<?php echo $required ? __( 'Your email address', 'bon' ) : __( 'Your email address', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="email" id="email" value="" />
-	<div class="contact-form-error" ><?php _e( 'Please enter either your emailnumber.', 'bon' ); ?></div>
+	<input class="attached-input email<?php echo $required ? ' ' . 'required' : ''; ?>" type="email" placeholder="<?php echo $required ? __( 'Your email address', 'bon' ) : __( 'Your email address', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="email" id="email" value="" />
+	<div class="contact-form-error" ><?php _e( 'Please enter your email.', 'bon' ); ?></div>
 </div>
 
 <?php
@@ -2449,7 +2302,7 @@ function the_email_input( $required = NULL ) { ?>
 function the_phone_input( $required = NULL ) { ?>
 
 <div class='column large-12 small-11 input-container-inner phone'>
-	<input class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" type="text" placeholder="<?php echo $required? __( 'Your phone number', 'bon' ) : __( 'Your phone number', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="phone" id="phone" value="" />
+	<input class="attached-input<?php echo $required ? ' ' . 'required' : ''; ?>" type="text" placeholder="<?php echo $required? __( 'Your phone number', 'bon' ) : __( 'Your phone number', 'bon' ) . ' (' . __( 'optional', 'bon' ) . ')'; ?>"  name="phone" id="phone" value="" />
 	<div class="contact-form-error" ><?php _e( 'Please enter your phone number.', 'bon' ); ?></div>
 </div>
 
@@ -2457,10 +2310,10 @@ function the_phone_input( $required = NULL ) { ?>
 }
 
 // function to render textarea for contact forms
-function the_textarea( $required=NULL ) { ?>
+function the_textarea( $required = NULL ) { ?>
 
 <div class='column large-12 small-11 input-container-inner pencil'>
-	<textarea class="attached-input<?php echo $required ? ' ' . $required : ''; ?>" placeholder="<?php _e( "In case you want to ask us about something, type it here. You can also leave it empty and we'll contact you soon.", 'bon' ); ?>"  name="messages" id="messages" value="" cols="58" rows="10"></textarea>
+	<textarea class="attached-input<?php echo $required ? ' ' . 'required' : ''; ?>" placeholder="<?php _e( "In case you want to ask us about something, type it here. You can also leave it empty and we'll contact you soon.", 'bon' ); ?>"  name="messages" id="messages" value="" cols="58" rows="10"></textarea>
 </div>
 
 <?php

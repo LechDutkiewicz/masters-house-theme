@@ -754,92 +754,6 @@ if ( !function_exists( 'shandora_setup_addon_post_type' ) ) {
 
 }
 
-// if ( !function_exists( 'shandora_setup_service_post_type' ) ) {
-
-// 	function shandora_setup_service_post_type() {
-// 		global $bon;
-
-// 		$prefix = bon_get_prefix();
-
-// 		$cpt = $bon->cpt();
-
-// 		$name = __( 'Service', 'bon_admin' );
-// 		$plural = __( 'Services', 'bon_admin' );
-
-
-// 		$cpt->create( 'Service', array( 'supports' => array( 'editor', 'title', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 60, 'menu_icon' => 'dashicons-hammer' ), array(), $name, $plural );
-
-
-// 		$service_opt1 = array(
-// 			array(
-// 				'label' => __( 'Font awesome icon', 'bon_admin' ),
-// 				'id' => $prefix . 'serviceicon',
-// 				'type' => 'icon',
-// 				),
-// 			array(
-// 				'label' => __( 'Icon color', 'bon_admin' ),
-// 				'id' => $prefix . 'serviceiconcolor',
-// 				'type' => 'radio-img',
-// 				'options' => get_colors_list()
-// 				),
-// 			);
-
-// 		$service_opt2 = array(
-// 			array(
-// 				'label' => __( 'Title', 'bon_admin' ),
-// 				'id' => $prefix . 'service_more_title',
-// 				'type' => 'text',
-// 				),
-// 			array(
-// 				'label' => __( 'Content', 'bon_admin' ),
-// 				'id' => $prefix . 'service_more_content',
-// 				'type' => 'editor',
-// 				'settings' => array(
-// 					'media_buttons' => true,
-// 					'tinymce' => true,
-// 					'teeny' => false,
-// 					'wpautop' => true,
-// 					'textarea_rows' => 30
-// 					),
-// 				),
-// 			array(
-// 				'label' => __( 'Content', 'bon_admin' ),
-// 				'id' => $prefix . 'service_more_paragraphs',
-// 				'type' => 'repeatable',
-// 				'sanitize' => array(
-// 					'name' => 'sanitize_text_field',
-// 					),
-// 				'repeatable_fields' => array(
-// 					array(
-// 						'label' => __( 'Header', 'bon_admin' ),
-// 						'id' => $prefix . 'header',
-// 						'type' => 'text',
-// 						),
-// 					array(
-// 						'label' => __( 'Subeader', 'bon_admin' ),
-// 						'id' => $prefix . 'subheader',
-// 						'type' => 'text',
-// 						),
-// 					array(
-// 						'label' => __( 'Image', 'bon_admin' ),
-// 						'id' => $prefix . 'img',
-// 						'type' => 'upload',
-// 						),
-// 					),
-// 				),
-// 			);
-
-// $cpt->add_meta_box(
-// 	'service-options', 'Icon options', $service_opt1
-// 	);
-
-// $cpt->add_meta_box(
-// 	'service-more', 'Extended information', $service_opt2
-// 	);
-// }
-
-// }
-
 if ( !function_exists( 'shandora_setup_banner_post_type' ) ) {
 
 	function shandora_setup_banner_post_type() {
@@ -872,59 +786,59 @@ if ( !function_exists( 'shandora_setup_banner_post_type' ) ) {
 
 }
 
-if ( !function_exists( 'shandora_setup_slidebox_post_type' ) ) {
+// if ( !function_exists( 'shandora_setup_slidebox_post_type' ) ) {
 
-	function shandora_setup_slidebox_post_type() {
-		global $bon;
+// 	function shandora_setup_slidebox_post_type() {
+// 		global $bon;
 
-		$prefix = bon_get_prefix();
+// 		$prefix = bon_get_prefix();
 
-		$cpt = $bon->cpt();
+// 		$cpt = $bon->cpt();
 
-		$name = __( 'Slidebox', 'bon_admin' );
-		$plural = __( 'Slideboxes', 'bon_admin' );
-
-
-		$cpt->create( 'Slidebox', array( 'supports' => array( 'title', 'thumbnail', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 80, 'menu_icon' => 'dashicons-images-alt2' ), array(), $name, $plural );
+// 		$name = __( 'Slidebox', 'bon_admin' );
+// 		$plural = __( 'Slideboxes', 'bon_admin' );
 
 
-		$service_opt1 = array(
-			array(
-				'label' => __( 'Title', 'bon_admin' ),
-				'id' => $prefix . 'slidebox_title',
-				'type' => 'text',
-				),
-			);
+// 		$cpt->create( 'Slidebox', array( 'supports' => array( 'title', 'thumbnail', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 80, 'menu_icon' => 'dashicons-images-alt2' ), array(), $name, $plural );
 
-		$service_opt2 = array(
-			array(
-				'label' => __( 'Button text', 'bon_admin' ),
-				'id' => $prefix . 'slidebox_anchor',
-				'type' => 'text'
-				),
-			array(
-				'label' => __( 'Button color', 'bon_admin' ),
-				'id' => $prefix . 'slidebox_color',
-				'type' => 'radio-img',
-				'options' => get_colors_list()
-				),
-			array(
-				'label' => __( 'Destination page', 'bon_admin' ),
-				'id' => $prefix . 'slidebox_link',			
-				'type' => 'page_chosen'
-				),
-			);
 
-		$cpt->add_meta_box(
-			'service-options', 'Banner text options', $service_opt1
-			);
+// 		$service_opt1 = array(
+// 			array(
+// 				'label' => __( 'Title', 'bon_admin' ),
+// 				'id' => $prefix . 'slidebox_title',
+// 				'type' => 'text',
+// 				),
+// 			);
 
-		$cpt->add_meta_box(
-			'service-more', 'Button options', $service_opt2
-			);
-	}
+// 		$service_opt2 = array(
+// 			array(
+// 				'label' => __( 'Button text', 'bon_admin' ),
+// 				'id' => $prefix . 'slidebox_anchor',
+// 				'type' => 'text'
+// 				),
+// 			array(
+// 				'label' => __( 'Button color', 'bon_admin' ),
+// 				'id' => $prefix . 'slidebox_color',
+// 				'type' => 'radio-img',
+// 				'options' => get_colors_list()
+// 				),
+// 			array(
+// 				'label' => __( 'Destination page', 'bon_admin' ),
+// 				'id' => $prefix . 'slidebox_link',			
+// 				'type' => 'page_chosen'
+// 				),
+// 			);
 
-}
+// 		$cpt->add_meta_box(
+// 			'service-options', 'Banner text options', $service_opt1
+// 			);
+
+// 		$cpt->add_meta_box(
+// 			'service-more', 'Button options', $service_opt2
+// 			);
+// 	}
+
+// }
 
 if ( !function_exists( 'shandora_setup_home_feature_post_type' ) ) {
 
@@ -1094,25 +1008,6 @@ if ( !function_exists( 'shandora_setup_casestudy_post_type' ) ) {
 
 		$cpt->create( 'portfolio', array( 'supports' => array( 'editor', 'title', 'thumbnail', 'page-attributes', 'post-formats' ), 'exclude_from_search' => true, 'menu_position' => 15, 'menu_icon' => 'dashicons-welcome-view-site' ), array(), $name, $plural );
 
-		// $prop_options = array(
-		// 	array( 
-		// 		'label'	=> __('Case study', 'bon'),
-		// 		'id'	=> $prefix . $suffix .'case_study',
-		// 		'type'	=> 'text',				
-		// 		),
-		// 	array( 
-		// 		'label'	=> __('Full name of client', 'bon'),
-		// 		'id'	=> $prefix . $suffix .'full_name',
-		// 		'type'	=> 'text',				
-		// 		),
-		// 	array(
-		// 		'label' => __( 'Author image', 'bon_admin' ),
-		// 		'desc' => __( 'Upload author image to display it on testimonials carousel', 'bon_admin' ),
-		// 		'id' => $prefix . $suffix . 'user_img',
-		// 		'type' => 'image'
-		// 		),
-		// 	);
-
 		$prop_options_2 = array(
 			array(
 				'label' => __( 'Listings Gallery', 'bon_admin' ),
@@ -1146,63 +1041,63 @@ if ( !function_exists( 'shandora_setup_casestudy_post_type' ) ) {
 
 }
 
-if ( !function_exists( 'shandora_setup_ebooks_post_type' ) ) {
+// if ( !function_exists( 'shandora_setup_ebooks_post_type' ) ) {
 
-	function shandora_setup_ebooks_post_type() {
-		global $bon;
+// 	function shandora_setup_ebooks_post_type() {
+// 		global $bon;
 
-		$prefix = bon_get_prefix();
-		$suffix = SHANDORA_MB_SUFFIX;
+// 		$prefix = bon_get_prefix();
+// 		$suffix = SHANDORA_MB_SUFFIX;
 
-		$cpt = $bon->cpt();
+// 		$cpt = $bon->cpt();
 
-		$name = __( 'Ebook', 'bon_admin' );
-		$plural = __( 'Ebooks', 'bon_admin' );
+// 		$name = __( 'Ebook', 'bon_admin' );
+// 		$plural = __( 'Ebooks', 'bon_admin' );
 
 
-		$cpt->create( 'Ebook', array( 'supports' => array( 'editor', 'title', 'thumbnail', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 15, 'menu_icon' => 'dashicons-media-default' ), array(), $name, $plural );
+// 		$cpt->create( 'Ebook', array( 'supports' => array( 'editor', 'title', 'thumbnail', 'page-attributes' ), 'exclude_from_search' => true, 'menu_position' => 15, 'menu_icon' => 'dashicons-media-default' ), array(), $name, $plural );
 
-		$prop_options = array(
-			array(
-				'label' => __( 'Cta header', 'bon_admin' ),
-				'desc' => __( 'Ex: Get your free ebook', 'bon_admin' ),
-				'id' => $prefix . $suffix . 'cta_header',
-				'type' => 'text'
-				),
-			array(
-				'label' => __( 'Cta subheader', 'bon_admin' ),
-				'desc' => __( 'Ex: And learn more about roofing', 'bon_admin' ),
-				'id' => $prefix . $suffix . 'cta_subheader',
-				'type' => 'text'
-				),
-			array(
-				'label' => __( 'Cta color', 'bon_admin' ),
-				'desc' => __( 'Color of cta', 'bon_admin' ),
-				'id' => $prefix . $suffix . 'cta_color',
-				'type' => 'radio-img',
-				'options' => get_colors_list()
-				)
-			);
+// 		$prop_options = array(
+// 			array(
+// 				'label' => __( 'Cta header', 'bon_admin' ),
+// 				'desc' => __( 'Ex: Get your free ebook', 'bon_admin' ),
+// 				'id' => $prefix . $suffix . 'cta_header',
+// 				'type' => 'text'
+// 				),
+// 			array(
+// 				'label' => __( 'Cta subheader', 'bon_admin' ),
+// 				'desc' => __( 'Ex: And learn more about roofing', 'bon_admin' ),
+// 				'id' => $prefix . $suffix . 'cta_subheader',
+// 				'type' => 'text'
+// 				),
+// 			array(
+// 				'label' => __( 'Cta color', 'bon_admin' ),
+// 				'desc' => __( 'Color of cta', 'bon_admin' ),
+// 				'id' => $prefix . $suffix . 'cta_color',
+// 				'type' => 'radio-img',
+// 				'options' => get_colors_list()
+// 				)
+// 			);
 
-		$ebook = array(
-			array(
-				'label' => __( 'Ebook file', 'bon_admin' ),
-				'desc' => __( 'Upload pdf', 'bon_admin' ),
-				'id' => $prefix . $suffix . 'cta_file',
-				'type' => 'file'
-				)
-			);
+// 		$ebook = array(
+// 			array(
+// 				'label' => __( 'Ebook file', 'bon_admin' ),
+// 				'desc' => __( 'Upload pdf', 'bon_admin' ),
+// 				'id' => $prefix . $suffix . 'cta_file',
+// 				'type' => 'file'
+// 				)
+// 			);
 
-		$cpt->add_meta_box(
-			'CTA settings', 'CTA settings', $prop_options
-			);
+// 		$cpt->add_meta_box(
+// 			'CTA settings', 'CTA settings', $prop_options
+// 			);
 
-		$cpt->add_meta_box(
-			'Ebook ', 'Ebook', $ebook
-			);
-	}
+// 		$cpt->add_meta_box(
+// 			'Ebook ', 'Ebook', $ebook
+// 			);
+// 	}
 
-}
+// }
 
 if ( !function_exists( 'shandora_setup_promotions_post_type' ) ) {
 
@@ -1272,7 +1167,49 @@ if ( !function_exists( 'shandora_setup_regular_post_type' ) ) {
 			);
 
 		$mb->create_box( 'related-post', 'Related post', $fields, $page, $context = 'normal', $priority = 'high' );
-
 	}
+}
 
+// Setup emails post type to store emails from the website
+
+if ( !function_exists( 'shandora_setup_email_post_type' ) ) {
+
+	function shandora_setup_email_post_type() {
+		global $bon;
+
+		$prefix = bon_get_prefix();
+
+		$cpt = $bon->cpt();
+
+		$name = __( 'Email', 'bon_admin' );
+		$plural = __( 'Emails', 'bon_admin' );
+
+		$cpt->create( 'Email', array( 'supports' => array( 'title', 'editor' ), 'exclude_from_search' => true, 'menu_position' => 80, 'menu_icon' => 'dashicons-email' ), array(), $name, $plural );
+
+		$email_options = array(
+			array(
+				'label' => __( 'Sender\'s email', 'bon'),
+				'id' => $prefix . 'email',
+				'type' => 'text',
+				),
+			array(
+				'label' => __( 'Sender\'s phone', 'bon'),
+				'id' => $prefix . 'phone',
+				'type' => 'text',
+				),
+			array(
+				'label' 	=> __( 'Email status', 'bon'),
+				'id' 		=> $prefix . 'status',
+				'type' 		=> 'select',
+				'options'	=> array(
+					0 => 'error',
+					1 => 'sent'
+					)
+				),
+			);
+
+		$cpt->add_meta_box(
+			'email-meta', 'Email meta', $email_options
+			);
+	}
 }

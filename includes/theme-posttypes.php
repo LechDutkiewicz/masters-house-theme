@@ -96,19 +96,19 @@ function shandora_add_post_type()
 	if (bon_get_option('enable_property_listing', 'yes') == 'yes') {
 		add_action('init', 'shandora_setup_listing_post_type', 1);
 		add_action('init', 'shandora_setup_agent_post_type', 1);
-        // Added by Lech Dutkiewicz
 		add_action('init', 'shandora_setup_addon_post_type', 1);
         //add_action('init', 'shandora_setup_service_post_type', 1);
 		add_action('init', 'shandora_setup_banner_post_type', 1);
-		add_action('init', 'shandora_setup_slidebox_post_type', 1);
+		// add_action('init', 'shandora_setup_slidebox_post_type', 1);
 		add_action('init', 'shandora_setup_home_feature_post_type', 1);
 		add_action('init', 'shandora_setup_additional_service_post_type', 1);
 		add_action('init', 'shandora_setup_faq_post_type', 1);
 		add_action('init', 'shandora_setup_testimonials_post_type', 1);
-		add_action('init', 'shandora_setup_ebooks_post_type', 1);
+		// add_action('init', 'shandora_setup_ebooks_post_type', 1);
 		add_action('init', 'shandora_setup_promotions_post_type', 1);
 		add_action('init', 'shandora_setup_casestudy_post_type', 1);
 		add_action('init', 'shandora_setup_regular_post_type', 1);
+		add_action('init', 'shandora_setup_email_post_type', 1);
 	}
 
 }
@@ -128,36 +128,15 @@ if (!function_exists('shandora_page_meta')) {
 			global $bon;
 
 			$mb = $bon->mb();
-
-			// $fields = array(
-
-			// 	array(
-			// 		'id' => $prefix . 'slideshow_type',
-			// 		'type' => 'select',
-			// 		'label' => __('Slide Show Type', 'bon'),
-			// 		'options' => array(
-			// 			'full' => __('Full', 'bon'),
-			// 			'boxed' => __('Boxed', 'bon')
-			// 			)
-			// 		),
-
-
-			// 	array(
-			// 		'id' => $prefix . 'slideshow_ids',
-			// 		'type' => 'text',
-			// 		'label' => __('Slide show IDs to Show (optional)', 'bon'),
-			// 		'desc' => __('Input the slideshow ids you want to show separated by commas, if empty all latest slider post will be used.', 'bon')
-			// 		)
-
-			// 	);
 			
 			$fields_map = array(
 
 				array(
-					'label' => 'village map thumbnail',
-					'type' => 'info-img',
-					'subfolder' => 'village-map',
-					'file-type' => 'png',
+					'id'			=> 'village_map_thumbnail',
+					'label' 		=> 'village map thumbnail',
+					'type'			=> 'info-img',
+					'subfolder' 	=> 'village-map',
+					'file-type' 	=> 'png',
 					)
 
 				);
@@ -165,16 +144,12 @@ if (!function_exists('shandora_page_meta')) {
 			for ( $i = 1; $i <=15; $i++ )
 			{				
 				$fields_map[] = array(
-					'id' => $prefix . 'cottage_' . $i,
-					'post_type' => 'portfolio',
-					'type' => 'post_chosen',
-					'label' => __('Pick cottage', 'bon') . " $i",
+					'id' 			=> $prefix . 'cottage_' . $i,
+					'post_type' 	=> 'portfolio',
+					'type' 			=> 'post_chosen',
+					'label' 		=> __('Pick cottage', 'bon') . " $i",
 					);
 			}
-
-			// $mb->create_box('slider-opt', __('Slider Options', 'bon'), $fields, array(
-			// 	'page'
-			// 	));
 
 			$mb->create_box('cottage-map-opt', __('Cottage Map Options', 'bon'), $fields_map, array(
 				'page'
