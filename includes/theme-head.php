@@ -8,18 +8,18 @@ if(!function_exists('shandora_print_dynamic_styles')) {
 		$styles = bon_get_option('custom_css');
 		
 		if(!empty($styles)) { ?>
-			<style type="text/css" id="shandora-custom-styles">
-			
-				<?php echo $styles; ?>
+		<style type="text/css" id="shandora-custom-styles">
 
-			</style>
+		<?php echo $styles; ?>
 
-			<?php 
-		}
+		</style>
 
+		<?php 
 	}
 
-	add_action('wp_head', 'shandora_print_dynamic_styles', 100);
+}
+
+add_action('wp_head', 'shandora_print_dynamic_styles', 100);
 
 }
 
@@ -31,18 +31,18 @@ if(!function_exists('shandora_print_dynamic_scripts')) {
 		$scripts = bon_get_option('custom_js');
 		
 		if(!empty($scripts)) { ?>
-			<script>
-			
-				<?php echo $scripts; ?>
+		<script>
 
-			</script>
+		<?php echo $scripts; ?>
 
-			<?php 
-		}
+		</script>
 
+		<?php 
 	}
 
-	add_action('wp_head', 'shandora_print_dynamic_scripts', 100);
+}
+
+add_action('wp_head', 'shandora_print_dynamic_scripts', 100);
 
 }
 
@@ -55,20 +55,14 @@ if(!function_exists('shandora_print_analytics_tracking_code')) {
 
 			$scripts = bon_get_option('google_analytics');
 			
-			if(!empty($scripts)) { ?>
-				
-					<?php echo $scripts; ?>
+			if(!empty($scripts)) {
 
-
-				<?php 
+				echo $scripts;
 			}
-
 		}
-
 	}
 
 	add_action('wp_head', 'shandora_print_analytics_tracking_code', 101);
-
 }
 
 
@@ -81,18 +75,18 @@ if(!function_exists('shandora_print_adwords_tracking_code')) {
 			$scripts = bon_get_option('google_adwords');
 			
 			if(!empty($scripts)) { ?>
-				
-					<?php echo $scripts; ?>
+
+			<?php echo $scripts; ?>
 
 
-				<?php 
-			}
-
+			<?php 
 		}
 
 	}
 
-	add_action('wp_head', 'shandora_print_adwords_tracking_code', 101);
+}
+
+add_action('wp_head', 'shandora_print_adwords_tracking_code', 101);
 
 }
 
@@ -106,18 +100,18 @@ if(!function_exists('shandora_print_facebook_tracking_code')) {
 			$scripts = bon_get_option('facebook_tracking');
 			
 			if(!empty($scripts)) { ?>
-				
-					<?php echo $scripts; ?>
+
+			<?php echo $scripts; ?>
 
 
-				<?php 
-			}
-
+			<?php 
 		}
 
 	}
 
-	add_action('wp_head', 'shandora_print_facebook_tracking_code', 101);
+}
+
+add_action('wp_head', 'shandora_print_facebook_tracking_code', 101);
 
 }
 
@@ -131,18 +125,18 @@ if(!function_exists('shandora_print_site_verification')) {
 			$code = bon_get_option('site_verification');
 			
 			if(!empty($code)) { ?>
-				
-					<?php echo '<meta name="google-site-verification" content="' . $code . '" />'; ?>
+
+			<?php echo '<meta name="google-site-verification" content="' . $code . '" />'; ?>
 
 
-				<?php 
-			}
-
+			<?php 
 		}
 
 	}
 
-	add_action('wp_head', 'shandora_print_site_verification', 102);
+}
+
+add_action('wp_head', 'shandora_print_site_verification', 102);
 
 }
 
