@@ -345,7 +345,7 @@ function theme_layouts_strings() {
 		'3c-l'    => __( 'Three Columns, Left', 'theme-layouts' ),
 		'3c-r'    => __( 'Three Columns, Right', 'theme-layouts' ),
 		'3c-c'    => __( 'Three Columns, Center', 'theme-layouts' )
-	);
+		);
 
 	/* Allow devs to filter the strings for custom layouts. */
 	return apply_filters( 'theme_layouts_strings', $strings );
@@ -370,7 +370,7 @@ function theme_layouts_image_strings() {
 		'3c-l'    => trailingslashit( BON_IMAGES ) . '3c-l.png',
 		'3c-r'    => trailingslashit( BON_IMAGES ) . '3c-r.png',
 		'3c-c'    => trailingslashit( BON_IMAGES ) . '3c-c.png',
-	);
+		);
 
 	/* Allow devs to filter the strings for custom layouts. */
 	return apply_filters( 'theme_layouts_image_strings', $strings );
@@ -469,9 +469,12 @@ function theme_layouts_load_meta_boxes() {
  */
 function theme_layouts_add_meta_boxes( $post_type, $post ) {
 
-	/* Add the meta box if the post type supports 'post-stylesheets'. */
-	if ( ( post_type_supports( $post_type, 'theme-layouts' ) ) && ( current_user_can( 'edit_post_meta', $post->ID ) || current_user_can( 'add_post_meta', $post->ID ) || current_user_can( 'delete_post_meta', $post->ID ) ) )
-		add_meta_box( 'theme-layouts-post-meta-box', __( 'Layout', 'theme-layouts' ), 'theme_layouts_post_meta_box', $post_type, 'side', 'default' );
+	if ( $post_type !== 'email' ) {
+
+		/* Add the meta box if the post type supports 'post-stylesheets'. */
+		if ( ( post_type_supports( $post_type, 'theme-layouts' ) ) && ( current_user_can( 'edit_post_meta', $post->ID ) || current_user_can( 'add_post_meta', $post->ID ) || current_user_can( 'delete_post_meta', $post->ID ) ) )
+			add_meta_box( 'theme-layouts-post-meta-box', __( 'Layout', 'theme-layouts' ), 'theme_layouts_post_meta_box', $post_type, 'side', 'default' );
+	}
 }
 
 /**
@@ -504,12 +507,12 @@ function theme_layouts_post_meta_box( $post, $box ) {
 				<li><input type="radio" name="post-layout" id="post-layout-default" value="default" <?php checked( $post_layout, 'default' );?> /> <label for="post-layout-default"><?php echo esc_html( theme_layouts_get_string( 'default' ) ); ?></label></li>
 
 				<?php foreach ( $post_layouts as $layout ) { ?>
-					<li><input type="radio" name="post-layout" id="post-layout-<?php echo esc_attr( $layout ); ?>" value="<?php echo esc_attr( $layout ); ?>" <?php checked( $post_layout, $layout ); ?> /> <label for="post-layout-<?php echo esc_attr( $layout ); ?>"><?php echo esc_html( theme_layouts_get_string( $layout ) ); ?></label></li>
+				<li><input type="radio" name="post-layout" id="post-layout-<?php echo esc_attr( $layout ); ?>" value="<?php echo esc_attr( $layout ); ?>" <?php checked( $post_layout, $layout ); ?> /> <label for="post-layout-<?php echo esc_attr( $layout ); ?>"><?php echo esc_html( theme_layouts_get_string( $layout ) ); ?></label></li>
 				<?php } ?>
 			</ul>
 		</div>
-	</div><?php
-}
+		</div><?php
+	}
 
 /**
  * Saves the post layout metadata if on the post editing screen in the admin.
@@ -586,7 +589,7 @@ function theme_layouts_attachment_fields_to_edit( $fields, $post ) {
 		'html'          => $select,
 		'show_in_edit'  => false,
 		'show_in_modal' => true
-	);
+		);
 
 	/* Return the $fields array back to WordPress. */
 	return $fields;
@@ -669,8 +672,8 @@ function theme_layouts_customize_register( $wp_customize ) {
 				'title'      => esc_html__( 'Layout', 'theme-layouts' ),
 				'priority'   => 30,
 				'capability' => 'edit_theme_options'
-			)
-		);
+				)
+			);
 
 		/* Add the 'layout' setting. */
 		$wp_customize->add_setting(
@@ -681,8 +684,8 @@ function theme_layouts_customize_register( $wp_customize ) {
 				'capability'        => 'edit_theme_options',
 				'sanitize_callback' => 'sanitize_html_class',
 				'transport'         => 'postMessage'
-			)
-		);
+				)
+			);
 
 		/* Set up an array for the layout choices and add in the 'default' layout. */
 		$layout_choices = array();
@@ -704,8 +707,8 @@ function theme_layouts_customize_register( $wp_customize ) {
 				'settings' => 'theme_layout',
 				'type'     => 'radio',
 				'choices'  => $layout_choices
-			)
-		);
+				)
+			);
 
 		/* If viewing the customize preview screen, add a script to show a live preview. */
 		if ( $wp_customize->is_preview() && !is_admin() )
@@ -728,20 +731,20 @@ function theme_layouts_customize_register( $wp_customize ) {
  */
 function theme_layouts_customize_preview_script() { ?>
 
-	<script type="text/javascript">
-	wp.customize(
-		'theme_layout',
-		function( value ) {
-			value.bind( 
-				function( to ) {
-					var classes = jQuery( 'body' ).attr( 'class' ).replace( /layout-[a-zA-Z0-9_-]*/g, '' );
-					jQuery( 'body' ).attr( 'class', classes ).addClass( 'layout-' + to );
-				} 
+<script type="text/javascript">
+wp.customize(
+	'theme_layout',
+	function( value ) {
+		value.bind( 
+			function( to ) {
+				var classes = jQuery( 'body' ).attr( 'class' ).replace( /layout-[a-zA-Z0-9_-]*/g, '' );
+				jQuery( 'body' ).attr( 'class', classes ).addClass( 'layout-' + to );
+			} 
 			);
-		}
+	}
 	);
-	</script>
-	<?php
+</script>
+<?php
 }
 
 /**

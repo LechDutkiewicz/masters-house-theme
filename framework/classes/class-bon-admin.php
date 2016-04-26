@@ -325,7 +325,7 @@ if( ! class_exists( 'BON_Admin' ) )
 
 			if( !isset($this->option_pages) ) return;
 
-			$add_page = 'add_object_page';
+			$add_page = 'add_menu_page';
 
 			if(!function_exists( $add_page ) ) { $add_page = 'add_menu_page'; }
 		    
