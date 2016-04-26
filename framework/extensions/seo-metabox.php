@@ -20,9 +20,12 @@ function bon_meta_box_post_add_seo( $post_type, $post ) {
 
 	$post_type_object = get_post_type_object( $post_type );
 
-	/* Only add meta box if current user can edit, add, or delete meta for the post. */
-	if ( $post_type_object && ( true === $post_type_object->public ) && ( current_user_can( 'edit_post_meta', $post->ID ) || current_user_can( 'add_post_meta', $post->ID ) || current_user_can( 'delete_post_meta', $post->ID ) ) )
-		add_meta_box( 'bon-post-seo', __( 'SEO', 'bon' ), 'bon_meta_box_post_display_seo', $post_type, 'normal', 'high' );
+	if ( $post_type !== 'email' ) {
+
+		/* Only add meta box if current user can edit, add, or delete meta for the post. */
+		if ( $post_type_object && ( true === $post_type_object->public ) && ( current_user_can( 'edit_post_meta', $post->ID ) || current_user_can( 'add_post_meta', $post->ID ) || current_user_can( 'delete_post_meta', $post->ID ) ) )
+			add_meta_box( 'bon-post-seo', __( 'SEO', 'bon' ), 'bon_meta_box_post_display_seo', $post_type, 'normal', 'low' );
+	}
 }
 
 /**
@@ -90,8 +93,8 @@ function bon_meta_box_post_display_seo( $object, $box ) {
 				   ?>/>
 	</p>
 	 */ ?>
-	<?php
-}
+	 <?php
+	}
 
 /**
  * Saves the post SEO meta box settings as post metadata.
@@ -117,7 +120,7 @@ function bon_meta_box_post_save_seo( $post_id, $post = '' ) {
 		'Description' => $_POST['bon-meta-description'],
 		'Keywords' => $_POST['bon-meta-keywords'],
 		'Index' => $_POST['bon-meta-index']
-	);
+		);
 
 	foreach ( $meta as $meta_key => $new_meta_value ) {
 
