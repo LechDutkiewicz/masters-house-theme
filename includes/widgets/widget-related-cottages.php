@@ -42,7 +42,7 @@ class Shandora_Related_Cottages_Widget extends WP_Widget {
 			);
 
 		/* Create the widget. */
-		$this->WP_Widget(
+		parent::__construct(
 				'shandora-related-cottages', // $this->id_base
 				'Shandora Related Cottages', // $this->name
 				$widget_options, // $this->widget_options
