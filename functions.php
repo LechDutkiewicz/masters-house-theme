@@ -20,6 +20,7 @@ $includes = array(
 	'includes/theme-posttypes.php', // Custom theme posttypes
 	'includes/search-fields.php',
 	'includes/theme-social-share.php',
+	'includes/theme-emails.php',
 	'includes/theme-actions.php', // Theme actions & user defined hooks
 	'includes/theme-toolkit-override.php',
 	'includes/theme-hooks.php',
