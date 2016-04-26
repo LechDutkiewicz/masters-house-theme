@@ -1,1010 +1,1025 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 791 615" enable-background="new 0 0 791 615" xml:space="preserve" inkscape:version="0.91 r13725" sodipodi:docname="mapka.svg" width="1170" height="910">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="village-map" x="0px" y="0px" viewBox="0 0 791 615" enable-background="new 0 0 791 615" xml:space="preserve" inkscape:version="0.91 r13725" sodipodi:docname="mapka.svg" width="1170" height="910">
     <metadata id="metadata1921">
         <rdf:RDF>
             <cc:Work rdf:about="">
                 <dc:format>image/svg+xml</dc:format>
-                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-                <dc:title/>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
             </cc:Work>
         </rdf:RDF>
     </metadata>
-    <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1920" inkscape:window-height="1057" id="namedview1917" showgrid="false" inkscape:zoom="1.041193" inkscape:cx="172.19773" inkscape:cy="419.93519" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="g5"/>
+    <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1920" inkscape:window-height="1057" id="namedview1917" showgrid="false" inkscape:zoom="1.041193" inkscape:cx="172.19773" inkscape:cy="419.93519" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="g5"></sodipodi:namedview>
     <defs id="defs3">
-        <linearGradient id="XMLID_2_" y2="419.1" gradientUnits="userSpaceOnUse" x2="395.4" y1="44.76" x1="395.4">
-            <stop style="stop-color:#2BC4F3" offset="0"/>
-            <stop style="stop-color:#00AEEE" offset=".4454"/>
-            <stop style="stop-color:#0095DA" offset="1"/>
-        </linearGradient>
-        <clipPath id="XMLID_4_">
-            <use id="use23" overflow="visible" xlink:href="#XMLID_3_"/>
-        </clipPath>
-        <rect id="XMLID_3_" y="0" width="790.9" height="484.6" x="0"/>
         <g id="camera" transform="scale(.4)">
-            <path d="m -0.68542184,-2.0788827 c -4.99999996,0 -8.99999996,3.9999999 -8.99999996,8.9999999 0,4.9999998 4,8.9999988 8.99999996,8.9999988 5.00000004,0 9.00000004,-3.999999 9.00000004,-8.9999988 0,-5 -4,-8.9999999 -9.00000004,-8.9999999 z"/>
-            <path d="m 27.014578,-19.278885 -13.6,0 0,-1.4 c 0,-4.7 -3.8999998,-8.6 -8.5999998,-8.6 l -12.2,0 c -4.7000002,0 -8.6000002,3.9 -8.6000002,8.6 l 0,1.4 -12.3,0 c -4.7,0 -8.6,3.9 -8.6,8.6 l 0,31.3 c 0,4.7 3.9,8.6 8.6,8.6 l 55.3,0 c 4.7,0 8.6,-3.9 8.6,-8.6 l 0,-31.3 c 0,-4.7 -3.9,-8.6 -8.6,-8.6 z m -51.9,17.4000023 c -3.3,0 -6,-2.7000008 -6,-6.0000017 0,-3.3000006 2.7,-6.0000006 6,-6.0000006 3.3,0 6,2.7 6,6.0000006 0,3.3000009 -2.7,6.0000017 -6,6.0000017 z M -0.68542184,19.521115 c -6.89999996,0 -12.60000016,-5.599999 -12.60000016,-12.5999978 0,-6.99999995 5.6000002,-12.600001 12.60000016,-12.600001 6.90000004,0 12.59999984,5.60000105 12.59999984,12.600001 0,6.9999988 -5.5999998,12.5999978 -12.59999984,12.5999978 z"/>
-            <rect x="-50" y="-40" width="100" height="80" style="fill:#000;opacity:0"/>
+            <path d="m -0.68542184,-2.0788827 c -4.99999996,0 -8.99999996,3.9999999 -8.99999996,8.9999999 0,4.9999998 4,8.9999988 8.99999996,8.9999988 5.00000004,0 9.00000004,-3.999999 9.00000004,-8.9999988 0,-5 -4,-8.9999999 -9.00000004,-8.9999999 z"></path>
+            <path d="m 27.014578,-19.278885 -13.6,0 0,-1.4 c 0,-4.7 -3.8999998,-8.6 -8.5999998,-8.6 l -12.2,0 c -4.7000002,0 -8.6000002,3.9 -8.6000002,8.6 l 0,1.4 -12.3,0 c -4.7,0 -8.6,3.9 -8.6,8.6 l 0,31.3 c 0,4.7 3.9,8.6 8.6,8.6 l 55.3,0 c 4.7,0 8.6,-3.9 8.6,-8.6 l 0,-31.3 c 0,-4.7 -3.9,-8.6 -8.6,-8.6 z m -51.9,17.4000023 c -3.3,0 -6,-2.7000008 -6,-6.0000017 0,-3.3000006 2.7,-6.0000006 6,-6.0000006 3.3,0 6,2.7 6,6.0000006 0,3.3000009 -2.7,6.0000017 -6,6.0000017 z M -0.68542184,19.521115 c -6.89999996,0 -12.60000016,-5.599999 -12.60000016,-12.5999978 0,-6.99999995 5.6000002,-12.600001 12.60000016,-12.600001 6.90000004,0 12.59999984,5.60000105 12.59999984,12.600001 0,6.9999988 -5.5999998,12.5999978 -12.59999984,12.5999978 z"></path>
+            <rect x="-50" y="-40" width="100" height="80" style="fill:#000;opacity:0"></rect>
         </g>
         <g id="video" transform="scale(.4)">
-            <path d="m 27.970887,-9.8976823 -33.7000008,0 31.9000008,-16.8999997 c 3.2,-1.7 4.4,-5.6 2.7,-8.8 -1.7,-3.2 -5.6,-4.4 -8.8,-2.7 l -52.7,27.8 c -2.3,1.1999997 -3.6,3.6000047 -3.4,6.1000047 l 0,34.4000003 c 0,4.7 3.9,8.6 8.6,8.6 l 55.3,0 c 4.7,0 8.6,-3.9 8.6,-8.6 l 0,-31.3000003 c 0.1,-4.7 -3.8,-8.600005 -8.5,-8.600005 z m -7.3,-25.2999997 3.3,6.2 -6.2,3.3 -3.3,-6.2 6.2,-3.3 z m -15.1000004,7.7 3.3000001,6.2 -6.2000001,3.3 -3.30000046,-6.2 6.20000046,-3.3 z m -32.9999996,25.3000047 -3.3,-6.200005 6.2,-3.2999997 3.3,6.2000047 -6.2,3.3 z m 17.9999992,-17.2000047 3.3,6.2 -6.2000002,3.2999997 -3.3,-6.1999997 6.2000002,-3.3 z m 9.70000034,49.400005 c -8.60000034,0 -15.60000054,-7 -15.60000054,-15.6 0,-8.6000003 7.0000002,-15.6000003 15.60000054,-15.6000003 8.60000016,0 15.60000046,7 15.60000046,15.6000003 0.1,8.6 -6.9000003,15.6 -15.60000046,15.6 z"/>
-            <polygon points="-3.13 24.30 6.77 14.40 -3.13 4.40 "/>
+            <path d="m 27.970887,-9.8976823 -33.7000008,0 31.9000008,-16.8999997 c 3.2,-1.7 4.4,-5.6 2.7,-8.8 -1.7,-3.2 -5.6,-4.4 -8.8,-2.7 l -52.7,27.8 c -2.3,1.1999997 -3.6,3.6000047 -3.4,6.1000047 l 0,34.4000003 c 0,4.7 3.9,8.6 8.6,8.6 l 55.3,0 c 4.7,0 8.6,-3.9 8.6,-8.6 l 0,-31.3000003 c 0.1,-4.7 -3.8,-8.600005 -8.5,-8.600005 z m -7.3,-25.2999997 3.3,6.2 -6.2,3.3 -3.3,-6.2 6.2,-3.3 z m -15.1000004,7.7 3.3000001,6.2 -6.2000001,3.3 -3.30000046,-6.2 6.20000046,-3.3 z m -32.9999996,25.3000047 -3.3,-6.200005 6.2,-3.2999997 3.3,6.2000047 -6.2,3.3 z m 17.9999992,-17.2000047 3.3,6.2 -6.2000002,3.2999997 -3.3,-6.1999997 6.2000002,-3.3 z m 9.70000034,49.400005 c -8.60000034,0 -15.60000054,-7 -15.60000054,-15.6 0,-8.6000003 7.0000002,-15.6000003 15.60000054,-15.6000003 8.60000016,0 15.60000046,7 15.60000046,15.6000003 0.1,8.6 -6.9000003,15.6 -15.60000046,15.6 z"></path>
+            <polygon points="-3.13 24.30 6.77 14.40 -3.13 4.40 "></polygon>
             <rect x="-50" y="-40" width="100" height="80" style="fill:#000;opacity:0"></rect>
         </g>
         <g id="patch">
-            <path class="brown" d="m 512,107.5 c 1.4,-0.5 3.4,0.9 4.2,1.4 0.5,-0.4 1.7,-1.3 2.9,-1.6 1.4,-0.3 2.9,1 3.5,1.6 0.5,-0.3 1.5,-1 2.6,-1.4 1.4,-0.5 3.4,0.9 4.2,1.4 0.5,-0.4 1.7,-1.3 2.9,-1.6 1.4,-0.3 2.9,1 3.5,1.6 0.5,-0.3 1.5,-1 2.6,-1.4 1.4,-0.5 3.4,0.9 4.2,1.4 0.5,-0.4 1.7,-1.3 2.9,-1.6 1.4,-0.3 2.9,1 3.5,1.6 0.5,-0.3 1.5,-1 2.6,-1.4 1.4,-0.5 3.4,0.9 4.2,1.4 0.5,-0.4 1.7,-1.3 2.9,-1.6 1.7,-0.4 3.6,1.8 3.7,1.9 l -0.6,0.5 c -0.5,-0.5 -1.9,-1.9 -3,-1.6 -1.4,0.3 -2.8,1.6 -2.8,1.7 l -0.2,0.2 -0.2,-0.2 c -0.7,-0.6 -2.6,-1.9 -3.7,-1.5 -1.4,0.5 -2.7,1.5 -2.7,1.5 l -0.2,-0.3 -0.3,0.2 c -0.5,-0.5 -1.9,-1.9 -3,-1.6 -1.4,0.3 -2.8,1.6 -2.8,1.7 l -0.2,0.2 -0.2,-0.2 c -0.7,-0.6 -2.6,-1.9 -3.7,-1.5 -1.4,0.5 -2.7,1.5 -2.7,1.5 l -0.2,-0.3 -0.3,0.2 c -0.5,-0.5 -1.9,-1.9 -3,-1.6 -1.4,0.3 -2.8,1.6 -2.8,1.7 l -0.2,0.2 -0.2,-0.2 c -0.7,-0.6 -2.6,-1.9 -3.7,-1.5 -1.4,0.5 -2.7,1.5 -2.7,1.5 l -0.2,-0.3 -0.3,0.2 c -0.5,-0.5 -1.9,-1.9 -3,-1.6 -1.4,0.3 -2.8,1.6 -2.8,1.7 l -0.2,0.2 -0.3,-0.2 c -0.7,-0.6 -2.6,-1.9 -3.7,-1.5 -1.4,0.5 -2.7,1.5 -2.7,1.5 l -0.5,-0.6 c -0.2,-0.1 1.1,-1.1 2.7,-1.7 z"/>            
+            <path class="brown" d="m 512,107.5 c 1.4,-0.5 3.4,0.9 4.2,1.4 0.5,-0.4 1.7,-1.3 2.9,-1.6 1.4,-0.3 2.9,1 3.5,1.6 0.5,-0.3 1.5,-1 2.6,-1.4 1.4,-0.5 3.4,0.9 4.2,1.4 0.5,-0.4 1.7,-1.3 2.9,-1.6 1.4,-0.3 2.9,1 3.5,1.6 0.5,-0.3 1.5,-1 2.6,-1.4 1.4,-0.5 3.4,0.9 4.2,1.4 0.5,-0.4 1.7,-1.3 2.9,-1.6 1.4,-0.3 2.9,1 3.5,1.6 0.5,-0.3 1.5,-1 2.6,-1.4 1.4,-0.5 3.4,0.9 4.2,1.4 0.5,-0.4 1.7,-1.3 2.9,-1.6 1.7,-0.4 3.6,1.8 3.7,1.9 l -0.6,0.5 c -0.5,-0.5 -1.9,-1.9 -3,-1.6 -1.4,0.3 -2.8,1.6 -2.8,1.7 l -0.2,0.2 -0.2,-0.2 c -0.7,-0.6 -2.6,-1.9 -3.7,-1.5 -1.4,0.5 -2.7,1.5 -2.7,1.5 l -0.2,-0.3 -0.3,0.2 c -0.5,-0.5 -1.9,-1.9 -3,-1.6 -1.4,0.3 -2.8,1.6 -2.8,1.7 l -0.2,0.2 -0.2,-0.2 c -0.7,-0.6 -2.6,-1.9 -3.7,-1.5 -1.4,0.5 -2.7,1.5 -2.7,1.5 l -0.2,-0.3 -0.3,0.2 c -0.5,-0.5 -1.9,-1.9 -3,-1.6 -1.4,0.3 -2.8,1.6 -2.8,1.7 l -0.2,0.2 -0.2,-0.2 c -0.7,-0.6 -2.6,-1.9 -3.7,-1.5 -1.4,0.5 -2.7,1.5 -2.7,1.5 l -0.2,-0.3 -0.3,0.2 c -0.5,-0.5 -1.9,-1.9 -3,-1.6 -1.4,0.3 -2.8,1.6 -2.8,1.7 l -0.2,0.2 -0.3,-0.2 c -0.7,-0.6 -2.6,-1.9 -3.7,-1.5 -1.4,0.5 -2.7,1.5 -2.7,1.5 l -0.5,-0.6 c -0.2,-0.1 1.1,-1.1 2.7,-1.7 z"></path>            
         </g>
         <g id="car">
-            <path d="m 176.5,171.5 8.2,0 c 14.5,0 17.3,7.2 22.8,10.9 4,2.6 7.3,2.7 9.4,3.2 3.1,0.8 4.8,2.7 5.7,4.3 0.8,1.6 1.2,5.1 1.2,6.9 0,2 -1.3,2.8 -2.6,2.8 l -61.2,0 c -1.3,0 -1.9,-1.6 -2.1,-2.8 -0.2,-2.1 -0.4,-5.7 0,-7.7 1.6,-6.9 6.9,-17.6 18.6,-17.6 z" style="fill:#999999"/>
-            <path d="m 223.8,196.7 c 0,-0.2 0,-0.5 0,-0.8 L 157.9,195 c 0,0.6 0.1,1.2 0.1,1.6 0.1,1.3 0.8,2.8 2.1,2.8 l 61.1,0 c 1.3,0.1 2.6,-0.7 2.6,-2.7 z" style="fill:#d2ccc6"/>
-            <path d="m 163.1,199.5 c 0,-5 3.9,-8.8 8.8,-8.8 4.9,0 8.8,3.8 8.8,8.8 l -17.6,0 z" style="fill:#333333"/>
-            <circle cx="171.89999" cy="199.7" r="6.9000001" style="fill:#333333"/>
-            <circle cx="171.89999" cy="199.7" r="4.5999999" style="fill:#d2ccc6"/>
-            <path d="m 200.2,199.5 c 0,-5 3.9,-8.8 8.8,-8.8 4.9,0 8.8,3.8 8.8,8.8 l -17.6,0 z" style="fill:#333333"/>
-            <circle cx="209" cy="199.7" r="6.9000001" style="fill:#333333"/>
-            <circle cx="209" cy="199.7" r="4.5999999" style="fill:#d2ccc6"/>
-            <path d="m 157.6,190.4 c -0.6,0.2 -1.3,0.8 -1.3,1.5 l 0,0.2 c 0,0.7 0.6,1.3 1.2,1.6 0,-1.1 0.1,-2.3 0.1,-3.3 z" style="fill:#ed1c24"/>
-            <path d="m 219.9,187.7 c -0.8,0.5 -1.1,1.5 -0.7,2.3 l 0.7,1.2 c 0.5,0.8 1.5,1.1 2.3,0.7 l 0.2,-0.1 c 0.3,-0.2 0.6,-0.5 0.7,-0.8 -0.1,-0.5 -0.3,-0.9 -0.5,-1.2 -0.4,-0.7 -1,-1.6 -1.8,-2.3 -0.3,0 -0.5,0.1 -0.8,0.2 l -0.1,0 z" style="fill:#fcf47e"/>
-            <path d="m 189.3,172.9 c 0,0 10.1,1.6 15.1,10.6 l -15.1,0 0,-10.6 z" style="fill:#d2ccc6"/>
-            <rect x="176.3" y="172.5" width="11" height="11" style="fill:#d2ccc6"/>
-            <path d="m 173.3,172.9 0,10.6 c 0,0 -5.7,0 -9.7,0 -4,0 2.7,-10.3 9.7,-10.6 z" style="fill:#d2ccc6"/>
-            <path d="m 193.3,186 c 0,0.3 -0.2,0.5 -0.5,0.5 l -3.1,0 c -0.3,0 -0.5,-0.2 -0.5,-0.5 l 0,0 c 0,-0.3 0.2,-0.5 0.5,-0.5 l 3.1,0 c 0.3,0 0.5,0.2 0.5,0.5 l 0,0 z" style="fill:#333333"/>
-            <path d="m 180.3,186 c 0,0.3 -0.2,0.5 -0.5,0.5 l -3.1,0 c -0.3,0 -0.5,-0.2 -0.5,-0.5 l 0,0 c 0,-0.3 0.2,-0.5 0.5,-0.5 l 3.1,0 c 0.3,0 0.5,0.2 0.5,0.5 l 0,0 z" style="fill:#333333"/>
-            <path d="m 206.3,182.8 c 0,-0.3 -0.6,-0.3 -1,-0.3 l -4.3,0 c -0.4,0 0.3,0 0.3,0.3 l 0,2.1 c 0,0.3 -0.7,-0.5 -0.3,-0.5 l 4.3,0 c 0.4,0 1,0.8 1,0.5 l 0,-2.1 z" style="fill:#333333"/>
+            <path d="m 176.5,171.5 8.2,0 c 14.5,0 17.3,7.2 22.8,10.9 4,2.6 7.3,2.7 9.4,3.2 3.1,0.8 4.8,2.7 5.7,4.3 0.8,1.6 1.2,5.1 1.2,6.9 0,2 -1.3,2.8 -2.6,2.8 l -61.2,0 c -1.3,0 -1.9,-1.6 -2.1,-2.8 -0.2,-2.1 -0.4,-5.7 0,-7.7 1.6,-6.9 6.9,-17.6 18.6,-17.6 z" style="fill:#999999"></path>
+            <path d="m 223.8,196.7 c 0,-0.2 0,-0.5 0,-0.8 L 157.9,195 c 0,0.6 0.1,1.2 0.1,1.6 0.1,1.3 0.8,2.8 2.1,2.8 l 61.1,0 c 1.3,0.1 2.6,-0.7 2.6,-2.7 z" style="fill:#d2ccc6"></path>
+            <path d="m 163.1,199.5 c 0,-5 3.9,-8.8 8.8,-8.8 4.9,0 8.8,3.8 8.8,8.8 l -17.6,0 z" style="fill:#333333"></path>
+            <circle cx="171.89999" cy="199.7" r="6.9000001" style="fill:#333333"></circle>
+            <circle cx="171.89999" cy="199.7" r="4.5999999" style="fill:#d2ccc6"></circle>
+            <path d="m 200.2,199.5 c 0,-5 3.9,-8.8 8.8,-8.8 4.9,0 8.8,3.8 8.8,8.8 l -17.6,0 z" style="fill:#333333"></path>
+            <circle cx="209" cy="199.7" r="6.9000001" style="fill:#333333"></circle>
+            <circle cx="209" cy="199.7" r="4.5999999" style="fill:#d2ccc6"></circle>
+            <path d="m 157.6,190.4 c -0.6,0.2 -1.3,0.8 -1.3,1.5 l 0,0.2 c 0,0.7 0.6,1.3 1.2,1.6 0,-1.1 0.1,-2.3 0.1,-3.3 z" style="fill:#ed1c24"></path>
+            <path d="m 219.9,187.7 c -0.8,0.5 -1.1,1.5 -0.7,2.3 l 0.7,1.2 c 0.5,0.8 1.5,1.1 2.3,0.7 l 0.2,-0.1 c 0.3,-0.2 0.6,-0.5 0.7,-0.8 -0.1,-0.5 -0.3,-0.9 -0.5,-1.2 -0.4,-0.7 -1,-1.6 -1.8,-2.3 -0.3,0 -0.5,0.1 -0.8,0.2 l -0.1,0 z" style="fill:#fcf47e"></path>
+            <path d="m 189.3,172.9 c 0,0 10.1,1.6 15.1,10.6 l -15.1,0 0,-10.6 z" style="fill:#d2ccc6"></path>
+            <rect x="176.3" y="172.5" width="11" height="11" style="fill:#d2ccc6"></rect>
+            <path d="m 173.3,172.9 0,10.6 c 0,0 -5.7,0 -9.7,0 -4,0 2.7,-10.3 9.7,-10.6 z" style="fill:#d2ccc6"></path>
+            <path d="m 193.3,186 c 0,0.3 -0.2,0.5 -0.5,0.5 l -3.1,0 c -0.3,0 -0.5,-0.2 -0.5,-0.5 l 0,0 c 0,-0.3 0.2,-0.5 0.5,-0.5 l 3.1,0 c 0.3,0 0.5,0.2 0.5,0.5 l 0,0 z" style="fill:#333333"></path>
+            <path d="m 180.3,186 c 0,0.3 -0.2,0.5 -0.5,0.5 l -3.1,0 c -0.3,0 -0.5,-0.2 -0.5,-0.5 l 0,0 c 0,-0.3 0.2,-0.5 0.5,-0.5 l 3.1,0 c 0.3,0 0.5,0.2 0.5,0.5 l 0,0 z" style="fill:#333333"></path>
+            <path d="m 206.3,182.8 c 0,-0.3 -0.6,-0.3 -1,-0.3 l -4.3,0 c -0.4,0 0.3,0 0.3,0.3 l 0,2.1 c 0,0.3 -0.7,-0.5 -0.3,-0.5 l 4.3,0 c 0.4,0 1,0.8 1,0.5 l 0,-2.1 z" style="fill:#333333"></path>
+        </g>
+        <g id="hook" class="lines">
+            <line x1="0" y1="4.6" x2="0" y2="125"></line>
+            <circle cx="0" cy="0" r="4.6"></circle>
+        </g>
+        <g id="line" class="lines">
+            <line x1="0" y1="0" x2="791" y2="0"></line>
         </g>
         <style type="text/css">
             <![CDATA[
-            svg .brown{fill:#684C46}svg .dark-brown{fill:#442E2A}svg .light-brown{fill:#754C24}svg .lighter-brown{fill:#8B6239}svg .lightest-brown{fill:#c59b6d}svg .snow{fill:#FDFAE2}svg .teal{fill:#A67C52}svg .teal-dark{fill:#E4C092}svg .teal-darker{fill:#603813}svg .wooden{fill:#E2AD59}svg .wooden-dark{fill:#D6912D}svg .hidden{display:none}svg .road *{fill:#735542;stroke:#442E2A}svg .grass{fill:#c7cb36}svg .lake .surface *{fill:#40ADB2}svg .lake .coast *{fill:#376D99}svg .lake .weaves{fill:none;stroke:#376D99;stroke-width:.4492}svg .lake .plants .plant .flower>*{fill:#754C29;stroke:none}svg .lake .plants .plant .root{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-moz-animation-direction:alternate;-webkit-animation-direction:alternate;animation-direction:alternate;-moz-animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}svg .lake .plants .plant .root>*{stroke-linejoin:round;stroke:#737900;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.348;fill:none}svg .lake .plants .plant.short .root{-moz-animation-name:skew;-webkit-animation-name:skew;animation-name:skew}svg .lake .plants .plant.long .root{-moz-animation-name:skew-small;-webkit-animation-name:skew-small;animation-name:skew-small}svg .lake .plants .plant:nth-child(4n+1) .root{-moz-animation-duration:3s;-webkit-animation-duration:3s;animation-duration:3s}svg .lake .plants .plant:nth-child(4n+2) .root{-moz-animation-duration:4s;-webkit-animation-duration:4s;animation-duration:4s}svg .lake .plants .plant:nth-child(4n+3) .root{-moz-animation-duration:5s;-webkit-animation-duration:5s;animation-duration:5s}svg .lake .fish .fish-body .main{fill:#E44326}svg .lake .fish .fish-body .tail{fill:#CF3D22}svg .lake .fish .eye .white{fill:#fff}svg .lake .fish .eye .dark{fill:#414042}svg .plot .cottage .roof *,svg .plot .cottage .walls *,svg .plot .cottage .stairs *,svg .plot .cottage .camera-holder *{-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-webkit-transition:all 0.2s ease-in;transition:all 0.2s ease-in}svg .plot .cottage .camera-holder{fill:#442E2A}svg .plot .cottage .camera-holder>*{display:none}svg .plot .cottage .camera-holder[data-type='gallery']>.icon-gallery{display:inline}svg .plot .cottage .camera-holder[data-type='video']>.icon-video{display:inline}svg .plot .cottage:hover .camera-holder *,svg .plot .cottage:focus .camera-holder *{-moz-transform:scale(1.1);-ms-transform:scale(1.1);-webkit-transform:scale(1.1);transform:scale(1.1);fill:#FE3209}svg .plot .cottage .ground *{fill:#684C46}svg .triangle-tree .root .light{fill:#422D1A}svg .triangle-tree .root .dark{fill:#301B08}svg .triangle-tree .root .leaves .light{fill:#9EA424}svg .triangle-tree .root .leaves .dark{fill:#737900}svg .round-tree.light .leaves{fill:#6BB354}svg .round-tree.dark .leaves{fill:#5D9B46}svg .round-tree .root{fill:#59452B}svg .flower.red .leaves{fill:#E87464}svg .flower.dark-red .leaves{fill:#E9503F}svg .flower.yellow .leaves{fill:#FCEE21}svg .flower.green .leaves{fill:#006837}svg .flower .root{fill:#82BF73}svg .fence.lightest-brown *{fill:#c59b6d}svg .fence.brown *{fill:#684C46}svg .fence.dark-brown *{fill:#442E2A}svg .fence.snow *{fill:#FDFAE2}svg .fence.teal *{fill:#A67C52}svg .walls.yellow{fill:#F8F4C5}svg .walls.yellow .top{fill:#d6d69d}svg .walls.snow{fill:#F8E9CB}svg .walls.snow .top{fill:#c59b6d}svg .walls.teal{fill:#E4C092}svg .walls.teal .top{fill:#c59b6d}svg .walls.white{fill:#E5E5E5}svg .walls.white .top{fill:#A67C52}svg .walls.brown{fill:#E2AD59}svg .walls.brown .top{fill:#D6912D}svg .shadow{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);opacity:0.7}svg .roof.teal *{fill:#A67C52}svg .roof.light-brown *{fill:#754C24}svg .roof.dark-brown *{fill:#442E2A}svg .roof.shadowed.l-r polygon:first-child{fill:#684C46}svg .roof.shadowed.l-r polygon:last-child{fill:#442E2A}svg .roof.shadowed.r-l polygon:first-child{fill:#442E2A}svg .roof.shadowed.r-l polygon:last-child{fill:#684C46}@keyframes skew-tiny{0%{-moz-transform:skew(-0.5deg);-ms-transform:skew(-0.5deg);-webkit-transform:skew(-0.5deg);transform:skew(-0.5deg)}50%{-moz-transform:skew(0.5deg);-ms-transform:skew(0.5deg);-webkit-transform:skew(0.5deg);transform:skew(0.5deg)}}@keyframes skew-small{0%{-moz-transform:skew(-1deg);-ms-transform:skew(-1deg);-webkit-transform:skew(-1deg);transform:skew(-1deg)}50%{-moz-transform:skew(1deg);-ms-transform:skew(1deg);-webkit-transform:skew(1deg);transform:skew(1deg)}}@keyframes skew{0%{-moz-transform:skew(-2deg);-ms-transform:skew(-2deg);-webkit-transform:skew(-2deg);transform:skew(-2deg)}50%{-moz-transform:skew(2deg);-ms-transform:skew(2deg);-webkit-transform:skew(2deg);transform:skew(2deg)}}
+           svg .brown{fill:#684C46}svg .dark-brown{fill:#442E2A}svg .light-brown{fill:#754C24}svg .lighter-brown{fill:#8B6239}svg .lightest-brown{fill:#c59b6d}svg .snow{fill:#FDFAE2}svg .teal{fill:#A67C52}svg .teal-dark{fill:#E4C092}svg .teal-darker{fill:#603813}svg .wooden{fill:#E2AD59}svg .wooden-dark{fill:#D6912D}svg .hidden{display:none}svg .road *{fill:#735542;stroke:#442E2A}svg .grass{fill:#c7cb36}svg .lake .surface *{fill:#40ADB2}svg .lake .coast *{fill:#376D99}svg .lake .weaves{fill:none;stroke:#376D99;stroke-width:.4492}svg .lake .plants .plant .flower>*{fill:#754C29;stroke:none}svg .lake .plants .plant .root{-moz-animation-timing-function:ease-in-out;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;-moz-animation-direction:alternate;-webkit-animation-direction:alternate;animation-direction:alternate;-moz-animation-iteration-count:infinite;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}svg .lake .plants .plant .root>*{stroke-linejoin:round;stroke:#737900;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.348;fill:none}svg .lake .plants .plant.short .root{-moz-animation-name:skew;-webkit-animation-name:skew;animation-name:skew}svg .lake .plants .plant.long .root{-moz-animation-name:skew-small;-webkit-animation-name:skew-small;animation-name:skew-small}svg .lake .plants .plant:nth-child(4n+1) .root{-moz-animation-duration:3s;-webkit-animation-duration:3s;animation-duration:3s}svg .lake .plants .plant:nth-child(4n+2) .root{-moz-animation-duration:4s;-webkit-animation-duration:4s;animation-duration:4s}svg .lake .plants .plant:nth-child(4n+3) .root{-moz-animation-duration:5s;-webkit-animation-duration:5s;animation-duration:5s}svg .lake .fish .fish-body .main{fill:#E44326}svg .lake .fish .fish-body .tail{fill:#CF3D22}svg .lake .fish .eye .white{fill:#fff}svg .lake .fish .eye .dark{fill:#414042}svg .plot .cottage .roof *,svg .plot .cottage .walls *,svg .plot .cottage .stairs *,svg .plot .cottage .camera-holder *{-moz-transition:all 0.2s ease-in;-o-transition:all 0.2s ease-in;-webkit-transition:all 0.2s ease-in;transition:all 0.2s ease-in}svg .plot .cottage .camera-holder{fill:#442E2A}svg .plot .cottage .camera-holder>*{display:none}svg .plot .cottage .camera-holder[data-type='gallery']>.icon-gallery{display:inline}svg .plot .cottage .camera-holder[data-type='video']>.icon-video{display:inline}svg .plot .cottage:hover .camera-holder *,svg .plot .cottage:focus .camera-holder *{fill:#FE3209}svg .plot .cottage .ground *{fill:#684C46}svg .triangle-tree .root .light{fill:#422D1A}svg .triangle-tree .root .dark{fill:#301B08}svg .triangle-tree .root .leaves .light{fill:#9EA424}svg .triangle-tree .root .leaves .dark{fill:#737900}svg .round-tree.light .leaves{fill:#6BB354}svg .round-tree.dark .leaves{fill:#5D9B46}svg .round-tree .root{fill:#59452B}svg .flower.red .leaves{fill:#E87464}svg .flower.dark-red .leaves{fill:#E9503F}svg .flower.yellow .leaves{fill:#FCEE21}svg .flower.green .leaves{fill:#006837}svg .flower .root{fill:#82BF73}svg .fence.lightest-brown *{fill:#c59b6d}svg .fence.brown *{fill:#684C46}svg .fence.dark-brown *{fill:#442E2A}svg .fence.snow *{fill:#FDFAE2}svg .fence.teal *{fill:#A67C52}svg .walls.yellow{fill:#F8F4C5}svg .walls.yellow .top{fill:#d6d69d}svg .walls.snow{fill:#F8E9CB}svg .walls.snow .top{fill:#c59b6d}svg .walls.teal{fill:#E4C092}svg .walls.teal .top{fill:#c59b6d}svg .walls.white{fill:#E5E5E5}svg .walls.white .top{fill:#A67C52}svg .walls.brown{fill:#E2AD59}svg .walls.brown .top{fill:#D6912D}svg .shadow{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=70);opacity:0.7}svg .roof.teal *{fill:#A67C52}svg .roof.light-brown *{fill:#754C24}svg .roof.dark-brown *{fill:#442E2A}svg .roof.shadowed.l-r polygon:first-child{fill:#684C46}svg .roof.shadowed.l-r polygon:last-child{fill:#442E2A}svg .roof.shadowed.r-l polygon:first-child{fill:#442E2A}svg .roof.shadowed.r-l polygon:last-child{fill:#684C46}svg .lines line,svg .lines circle{stroke:#fff;stroke-miterlimit:10}svg .lines circle{fill:transparent}@keyframes skew-tiny{0%{-moz-transform:skew(-0.5deg);-ms-transform:skew(-0.5deg);-webkit-transform:skew(-0.5deg);transform:skew(-0.5deg)}50%{-moz-transform:skew(0.5deg);-ms-transform:skew(0.5deg);-webkit-transform:skew(0.5deg);transform:skew(0.5deg)}}@keyframes skew-small{0%{-moz-transform:skew(-1deg);-ms-transform:skew(-1deg);-webkit-transform:skew(-1deg);transform:skew(-1deg)}50%{-moz-transform:skew(1deg);-ms-transform:skew(1deg);-webkit-transform:skew(1deg);transform:skew(1deg)}}@keyframes skew{0%{-moz-transform:skew(-2deg);-ms-transform:skew(-2deg);-webkit-transform:skew(-2deg);transform:skew(-2deg)}50%{-moz-transform:skew(2deg);-ms-transform:skew(2deg);-webkit-transform:skew(2deg);transform:skew(2deg)}}
+
+
 
             ]]>
         </style>
         <g id="round-tree-light" class="tree round-tree light">
             <g class="root">
-                <circle class="leaves" r="11.4" cx="11.4" cy="11.4"/>
-                <polygon points="10.6,18.5 11.4,13.4 12.5,18.9 18.5,14.5 12.5,20.5 12.4,32.8 10.6,32.8 10.7,20.5 5.2,14 5.2,14 "/>
+                <circle class="leaves" r="11.4" cx="11.4" cy="11.4"></circle>
+                <polygon points="10.6,18.5 11.4,13.4 12.5,18.9 18.5,14.5 12.5,20.5 12.4,32.8 10.6,32.8 10.7,20.5 5.2,14 5.2,14 "></polygon>
             </g>
         </g>
         <g id="round-tree-dark" class="tree round-tree dark">
             <g class="root">
-                <circle class="leaves" r="11.4" cx="11.4" cy="11.4"/>
-                <polygon points="10.6,18.5 11.4,13.4 12.5,18.9 18.5,14.5 12.5,20.5 12.4,32.8 10.6,32.8 10.7,20.5 5.2,14 5.2,14 "/>
+                <circle class="leaves" r="11.4" cx="11.4" cy="11.4"></circle>
+                <polygon points="10.6,18.5 11.4,13.4 12.5,18.9 18.5,14.5 12.5,20.5 12.4,32.8 10.6,32.8 10.7,20.5 5.2,14 5.2,14 "></polygon>
             </g>
         </g>
         <g id="triangle-tree" class="tree triangle-tree">
             <g class="root">
                 <g class="leaves">
-                    <polygon class="light" points="5.7,24.3 5.7,0 5.7,0 0,24.3"/>
-                    <polygon class="dark" points="11.3,24.3 5.7,0 5.7,24.3"/>                    
+                    <polygon class="light" points="5.7,24.3 5.7,0 5.7,0 0,24.3"></polygon>
+                    <polygon class="dark" points="11.3,24.3 5.7,0 5.7,24.3"></polygon>                    
                 </g>
-                <polygon class="light" points="5.5,14 3.7,12.3 5.4,14.7 5.4,17.2 2.7,14.6 5.3,18.1 5.3,20.8 2,17.7 5.2,21.7 5,28.9 5.7,28.9 5.7,9.5 5.6,8.3"/>
-                <polygon class="dark" points="6,20.9 5.9,18.2 8.6,14.6 5.9,17.2 5.8,14.6 7.5,12.2 5.8,14 5.7,9.5 5.7,28.9 6.3,28.9 6,21.8 9.3,17.7"/>
+                <polygon class="light" points="5.5,14 3.7,12.3 5.4,14.7 5.4,17.2 2.7,14.6 5.3,18.1 5.3,20.8 2,17.7 5.2,21.7 5,28.9 5.7,28.9 5.7,9.5 5.6,8.3"></polygon>
+                <polygon class="dark" points="6,20.9 5.9,18.2 8.6,14.6 5.9,17.2 5.8,14.6 7.5,12.2 5.8,14 5.7,9.5 5.7,28.9 6.3,28.9 6,21.8 9.3,17.7"></polygon>
             </g>
         </g>
         <g id="road" class="road">
-            <path d="m 791.18156,190.1 c -47.7,10 -127.1,15.6 -206,12.2 -80.4,-3.5 -265.2,-14.6 -410.5,-15 C 75.781558,187 0.08155838,200.9 0.08155838,200.9 l 0,24 c 0,0 87.39999962,-16.9 196.10000162,-16.5 136.8,0.5 299.6,11 379.1,15 78.2,4 157.2,-0.3 215.8,-11 l 0,-22.3 z"/>
+            <path d="m 791.18156,190.1 c -47.7,10 -127.1,15.6 -206,12.2 -80.4,-3.5 -265.2,-14.6 -410.5,-15 C 75.781558,187 0.08155838,200.9 0.08155838,200.9 l 0,24 c 0,0 87.39999962,-16.9 196.10000162,-16.5 136.8,0.5 299.6,11 379.1,15 78.2,4 157.2,-0.3 215.8,-11 l 0,-22.3 z"></path>
         </g>
     </defs>
-    <rect x="0" y="0" width="791" height="615" class="grass"/>
-    <use xlink:href="#road" transform="translate(0)"/>
-    <use xlink:href="#road" transform="translate(0 228.1)"/>
-    <use xlink:href="#car"/>
+    <rect x="0" y="0" width="791" height="615" class="grass"></rect>
+    <use xlink:href="#road" transform="translate(0)"></use>
+    <use xlink:href="#road" transform="translate(0 228.1)"></use>
+    <use xlink:href="#car"></use>
+    <g class="lines">
+        <use xlink:href="#line" transform="translate(0 35)"></use>
+        <use xlink:href="#line" transform="translate(0 378)"></use>
+        <use xlink:href="#line" transform="translate(0 475)"></use>
+    </g>
     <g class="flowers">
         <g class="ground">
-            <use xlink:href="#patch"/>
-            <use xlink:href="#patch" transform="translate(0 4)"/>
-            <use xlink:href="#patch" transform="translate(0 8)"/>
-            <use xlink:href="#patch" transform="translate(0 12)"/>
-            <use xlink:href="#patch" transform="translate(-278 434)"/>
-            <use xlink:href="#patch" transform="translate(-278 438)"/>
-            <use xlink:href="#patch" transform="translate(-278 442)"/>
-            <use xlink:href="#patch" transform="translate(-278 446)"/>
+            <use xlink:href="#patch"></use>
+            <use xlink:href="#patch" transform="translate(0 4)"></use>
+            <use xlink:href="#patch" transform="translate(0 8)"></use>
+            <use xlink:href="#patch" transform="translate(0 12)"></use>
+            <use xlink:href="#patch" transform="translate(-278 434)"></use>
+            <use xlink:href="#patch" transform="translate(-278 438)"></use>
+            <use xlink:href="#patch" transform="translate(-278 442)"></use>
+            <use xlink:href="#patch" transform="translate(-278 446)"></use>
         </g>
         <g class="flower green">
-            <path class="leaves" d="m 530.7,111 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -0.9,0 -1.8,0.8 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 519.5,108.6 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,-0.1 -1.8,0.7 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 523.4,112.5 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,0 -1.8,0.8 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 513.1,113 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,0 -1.8,0.8 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 535.3,112.5 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,0 -1.8,0.8 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 558,114.6 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -0.9,0 -1.8,0.8 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 253,544.9 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.8 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 241.3,542.3 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1,0.1 -1.9,0.9 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 245.4,546.4 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 234.7,546.9 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 257.7,546.4 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 281.1,548.6 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"/>
+            <path class="leaves" d="m 530.7,111 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -0.9,0 -1.8,0.8 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 519.5,108.6 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,-0.1 -1.8,0.7 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 523.4,112.5 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,0 -1.8,0.8 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 513.1,113 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,0 -1.8,0.8 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 535.3,112.5 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,0 -1.8,0.8 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 558,114.6 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -0.9,0 -1.8,0.8 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 253,544.9 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.8 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 241.3,542.3 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1,0.1 -1.9,0.9 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 245.4,546.4 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 234.7,546.9 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 257.7,546.4 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 281.1,548.6 c 0,1 0.8,1.9 1.9,1.9 l 0,0 c 1,0 1.9,-0.8 1.9,-1.9 l 0,0 c 0,-1 -0.8,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"></path>
         </g>
         <g class="flower yellow">
-            <path class="leaves" d="m 528.6,108.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 528.8,113.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 518.4,111.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.6 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 510.5,113.5 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0.1 -1.1,0.6 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 550.6,110 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.6 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 554.4,115.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 250.8,542.6 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 250.9,547.7 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 240.2,545.3 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 232.1,547.5 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 273.4,543.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 277.3,549.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
+            <path class="leaves" d="m 528.6,108.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 528.8,113.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 518.4,111.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.6 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 510.5,113.5 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0.1 -1.1,0.6 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 550.6,110 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.6 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 554.4,115.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 250.8,542.6 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 250.9,547.7 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 240.2,545.3 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 232.1,547.5 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 273.4,543.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 277.3,549.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
         </g>
-        <polygon class="root" points="537.4,115.7 536.9,115.7 537.2,113.3 "/>
-        <polygon class="root" points="532.6,115.3 532.7,111.2 533.1,115.3 "/>
-        <polygon class="root" points="530.1,115.5 529.8,113.8 529.7,115.5 "/>
-        <polygon class="root" points="529.8,112.3 529.7,108.8 529.5,112.3 "/>
-        <polygon class="root" points="525,115.3 525.2,112.3 525.5,115.3 "/>
-        <polygon class="root" points="521,115.3 521.3,108.6 521.9,115.3 "/>
-        <polygon class="root" points="519.4,111.9 519.1,115.5 519.8,115.5 "/>
-        <polygon class="root" points="514.8,115.5 514.9,112.9 515.1,115.5 "/>
-        <polygon class="root" points="551.9,111.8 551.6,110 551.5,111.8 "/>
-        <polygon class="root" points="555.4,116.4 555.1,120 555.8,120 "/>
-        <polygon class="root" points="559.7,117.2 559.9,114.5 560.1,117.2 "/>
-        <polygon class="root" points="511.5,115.5 511.5,113.5 511.2,115.5 "/>
-        <polygon class="root" points="259.8,549.7 259.3,549.7 259.6,547.2 "/>
-        <polygon class="root" points="254.8,549.3 255,545 255.4,549.3 "/>
-        <polygon class="root" points="252.3,549.5 252,547.7 251.9,549.5 "/>
-        <polygon class="root" points="252,546.2 251.9,542.6 251.7,546.2 "/>
-        <polygon class="root" points="247,549.3 247.3,546.2 247.6,549.3 "/>
-        <polygon class="root" points="242.9,549.3 243.2,542.3 243.9,549.3 "/>
-        <polygon class="root" points="241.3,545.8 241,549.5 241.7,549.5 "/>
-        <polygon class="root" points="236.5,549.5 236.6,546.8 236.8,549.5 "/>
-        <polygon class="root" points="274.8,545.7 274.5,543.9 274.4,545.7 "/>
-        <polygon class="root" points="278.4,550.4 278,554.1 278.7,554.1 "/>
-        <polygon class="root" points="282.8,551.2 283,548.5 283.1,551.2 "/>
-        <polygon class="root" points="233.1,549.5 233.1,547.5 232.8,549.5 "/>
+        <polygon class="root" points="537.4,115.7 536.9,115.7 537.2,113.3 "></polygon>
+        <polygon class="root" points="532.6,115.3 532.7,111.2 533.1,115.3 "></polygon>
+        <polygon class="root" points="530.1,115.5 529.8,113.8 529.7,115.5 "></polygon>
+        <polygon class="root" points="529.8,112.3 529.7,108.8 529.5,112.3 "></polygon>
+        <polygon class="root" points="525,115.3 525.2,112.3 525.5,115.3 "></polygon>
+        <polygon class="root" points="521,115.3 521.3,108.6 521.9,115.3 "></polygon>
+        <polygon class="root" points="519.4,111.9 519.1,115.5 519.8,115.5 "></polygon>
+        <polygon class="root" points="514.8,115.5 514.9,112.9 515.1,115.5 "></polygon>
+        <polygon class="root" points="551.9,111.8 551.6,110 551.5,111.8 "></polygon>
+        <polygon class="root" points="555.4,116.4 555.1,120 555.8,120 "></polygon>
+        <polygon class="root" points="559.7,117.2 559.9,114.5 560.1,117.2 "></polygon>
+        <polygon class="root" points="511.5,115.5 511.5,113.5 511.2,115.5 "></polygon>
+        <polygon class="root" points="259.8,549.7 259.3,549.7 259.6,547.2 "></polygon>
+        <polygon class="root" points="254.8,549.3 255,545 255.4,549.3 "></polygon>
+        <polygon class="root" points="252.3,549.5 252,547.7 251.9,549.5 "></polygon>
+        <polygon class="root" points="252,546.2 251.9,542.6 251.7,546.2 "></polygon>
+        <polygon class="root" points="247,549.3 247.3,546.2 247.6,549.3 "></polygon>
+        <polygon class="root" points="242.9,549.3 243.2,542.3 243.9,549.3 "></polygon>
+        <polygon class="root" points="241.3,545.8 241,549.5 241.7,549.5 "></polygon>
+        <polygon class="root" points="236.5,549.5 236.6,546.8 236.8,549.5 "></polygon>
+        <polygon class="root" points="274.8,545.7 274.5,543.9 274.4,545.7 "></polygon>
+        <polygon class="root" points="278.4,550.4 278,554.1 278.7,554.1 "></polygon>
+        <polygon class="root" points="282.8,551.2 283,548.5 283.1,551.2 "></polygon>
+        <polygon class="root" points="233.1,549.5 233.1,547.5 232.8,549.5 "></polygon>
     </g>
     <g class="trees">
-        <use xlink:href="#round-tree-dark" transform="translate(196 92) scale(1.368421052)"/>
-        <use xlink:href="#round-tree-light" transform="translate(208 101)"/>
-        <use xlink:href="#round-tree-light" transform="translate(363 96) scale(1.27192982)"/>
-        <use xlink:href="#round-tree-light" transform="translate(509 65) scale(1.72807017)"/>
-        <use xlink:href="#round-tree-dark" transform="translate(123 287) scale(0.75438596)"/>
-        <use xlink:href="#round-tree-light" transform="translate(124 270) scale(1.36842105)"/>
-        <use xlink:href="#round-tree-light" transform="translate(279 281) scale(1.26315789)"/>
-        <use xlink:href="#round-tree-light" transform="translate(359 279) scale(1.16666667)"/>
-        <use xlink:href="#round-tree-light" transform="translate(548 263) scale(1.43859649)"/>
-        <use xlink:href="#round-tree-light" transform="translate(648 289) scale(1.07894736)"/>
-        <use xlink:href="#round-tree-light" transform="translate(206 511) scale(1.78070175)"/>
-        <use xlink:href="#round-tree-light" transform="translate(367 532) scale(1.25438596)"/>
-        <use xlink:href="#round-tree-dark" transform="translate(597 560) scale(0.73684210)"/>
-        <use xlink:href="#round-tree-light" transform="translate(583 542) scale(1.35964912)"/>
-        <use xlink:href="#round-tree-dark" transform="translate(712 528) scale(1.35964912)"/>
-        <use xlink:href="#round-tree-light" transform="translate(707 537)"/>
+        <use xlink:href="#round-tree-dark" transform="translate(196 92) scale(1.368421052)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(208 101)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(363 96) scale(1.27192982)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(509 65) scale(1.72807017)"></use>
+        <use xlink:href="#round-tree-dark" transform="translate(123 287) scale(0.75438596)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(124 270) scale(1.36842105)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(279 281) scale(1.26315789)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(359 279) scale(1.16666667)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(548 263) scale(1.43859649)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(648 289) scale(1.07894736)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(206 511) scale(1.78070175)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(367 532) scale(1.25438596)"></use>
+        <use xlink:href="#round-tree-dark" transform="translate(597 560) scale(0.73684210)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(583 542) scale(1.35964912)"></use>
+        <use xlink:href="#round-tree-dark" transform="translate(712 528) scale(1.35964912)"></use>
+        <use xlink:href="#round-tree-light" transform="translate(707 537)"></use>
 
-        <use xlink:href="#triangle-tree" transform="translate(698.7 79.3) scale(1)"/>
-        <use xlink:href="#triangle-tree" transform="translate(702 78.9) scale(1.681416)"/>
-        <use xlink:href="#triangle-tree" transform="translate(687.6 68.6) scale(1.681416)"/>
-        <use xlink:href="#triangle-tree" transform="translate(538.5 60.3) scale(1.849558)"/>
-        <use xlink:href="#triangle-tree" transform="translate(554 79.4) scale(1.141593)"/>
-        <use xlink:href="#triangle-tree" transform="translate(278.9 518.7) scale(1.902655)"/>
-        <use xlink:href="#triangle-tree" transform="translate(294.8 538.3) scale(1.185841)"/>
+        <use xlink:href="#triangle-tree" transform="translate(698.7 79.3) scale(1)"></use>
+        <use xlink:href="#triangle-tree" transform="translate(702 78.9) scale(1.681416)"></use>
+        <use xlink:href="#triangle-tree" transform="translate(687.6 68.6) scale(1.681416)"></use>
+        <use xlink:href="#triangle-tree" transform="translate(538.5 60.3) scale(1.849558)"></use>
+        <use xlink:href="#triangle-tree" transform="translate(554 79.4) scale(1.141593)"></use>
+        <use xlink:href="#triangle-tree" transform="translate(278.9 518.7) scale(1.902655)"></use>
+        <use xlink:href="#triangle-tree" transform="translate(294.8 538.3) scale(1.185841)"></use>
     </g>
 
     <g id="plots">
-        <g class="plot" id="plot-1">
-            <g class="fence hidden dark-brown">
-                <polygon points="84.6,116.2 84.6,101.8 86,100.7 87.4,101.8 87.4,116.2 "/>
-                <polygon points="78.7,116.2 78.7,101.8 80.1,100.7 81.5,101.8 81.5,116.2 "/>
-                <polygon points="72.6,116.2 72.6,101.8 74,100.7 75.4,101.8 75.4,116.2 "/>
-                <polygon points="66.6,116.2 66.6,101.8 68,100.7 69.4,101.8 69.4,116.2 "/>
-                <polygon points="60.5,116.2 60.5,101.8 61.9,100.7 63.3,101.8 63.3,116.2 "/>
-                <rect height="0.89999998" width="24.299999" y="104.7" x="61.400002"/>
-                <rect height="0.89999998" width="24.6" y="110.8" x="61.400002"/>                  
+        <g class="plot hidden" data-thumb-position="over" id="plot-1">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-108 -160)"></use>
+            <g class="fence dark-brown">
+                <polygon points="84.6,116.2 84.6,101.8 86,100.7 87.4,101.8 87.4,116.2 "></polygon>
+                <polygon points="78.7,116.2 78.7,101.8 80.1,100.7 81.5,101.8 81.5,116.2 "></polygon>
+                <polygon points="72.6,116.2 72.6,101.8 74,100.7 75.4,101.8 75.4,116.2 "></polygon>
+                <polygon points="66.6,116.2 66.6,101.8 68,100.7 69.4,101.8 69.4,116.2 "></polygon>
+                <polygon points="60.5,116.2 60.5,101.8 61.9,100.7 63.3,101.8 63.3,116.2 "></polygon>
+                <rect height="0.89999998" width="24.299999" y="104.7" x="61.400002"></rect>
+                <rect height="0.89999998" width="24.6" y="110.8" x="61.400002"></rect>                  
             </g>
-            <g class="cottage hidden" id="cottage-1">
+            <g class="cottage" id="cottage-1">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls brown">
-                        <polygon points="82,135.6 134.1,135.5 134.1,108.3 108,85.1 82,108.3 "/>
-                        <path class="shadow top" d="m 102.2,99.4 c 6.2,0.8 12.1,2.5 17.8,4.9 5,2.1 9.7,4.7 14.1,7.9 l 0,-3.8 L 107.2,85.2 86.7,103 c 5,-2.2 9.6,-4.4 15.5,-3.6 z"/>
+                        <polygon points="82,135.6 134.1,135.5 134.1,108.3 108,85.1 82,108.3 "></polygon>
+                        <path class="shadow top" d="m 102.2,99.4 c 6.2,0.8 12.1,2.5 17.8,4.9 5,2.1 9.7,4.7 14.1,7.9 l 0,-3.8 L 107.2,85.2 86.7,103 c 5,-2.2 9.6,-4.4 15.5,-3.6 z"></path>
                     </g>
                     <g class="roof shadowed l-r">
-                        <polygon points="82.3,108.3 108,87.8 108,83.7 77.5,108.3 "/>
-                        <polygon points="133.8,108.3 108,87.8 108,83.7 138.6,108.3 "/>
+                        <polygon points="82.3,108.3 108,87.8 108,83.7 77.5,108.3 "></polygon>
+                        <polygon points="133.8,108.3 108,87.8 108,83.7 138.6,108.3 "></polygon>
                     </g>
                     <g class="stairs fence brown">
-                        <path d="m 81.3,136.4 c 0,0.5 0.4,0.9 0.9,0.9 l 52.5,0 c 0.5,0 0.9,-0.4 0.9,-0.9 l 0,0 c 0,-0.5 -0.4,-0.9 -0.9,-0.9 l -52.4,0 c -0.6,0 -1,0.4 -1,0.9 l 0,0 z"/>                            
+                        <path d="m 81.3,136.4 c 0,0.5 0.4,0.9 0.9,0.9 l 52.5,0 c 0.5,0 0.9,-0.4 0.9,-0.9 l 0,0 c 0,-0.5 -0.4,-0.9 -0.9,-0.9 l -52.4,0 c -0.6,0 -1,0.4 -1,0.9 l 0,0 z"></path>                            
                     </g>
                     <g class="camera-holder" transform="translate(107, 114)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>
                     </g>
                 </a>
             </g>
-            <g class="fence hidden dark-brown">
-                <polygon points="84.4,144.9 84.4,130.5 85.8,129.5 87.2,130.5 87.2,144.9 "/>
-                <polygon points="78.4,144.9 78.4,130.5 79.8,129.5 81.2,130.5 81.2,144.9 "/>
-                <polygon points="72.4,144.9 72.4,130.5 73.8,129.5 75.2,130.5 75.2,144.9 "/>
-                <polygon points="66.4,144.9 66.4,130.5 67.8,129.5 69.2,130.5 69.2,144.9 "/>
-                <polygon points="60.2,144.9 60.2,130.5 61.6,129.5 63,130.5 63,144.9 "/>
-                <rect height="0.89999998" width="24.299999" y="133.39999" x="61.200001"/>
-                <rect height="0.89999998" width="24.6" y="139.5" x="61.200001"/> 
+            <g class="fence dark-brown">
+                <polygon points="84.4,144.9 84.4,130.5 85.8,129.5 87.2,130.5 87.2,144.9 "></polygon>
+                <polygon points="78.4,144.9 78.4,130.5 79.8,129.5 81.2,130.5 81.2,144.9 "></polygon>
+                <polygon points="72.4,144.9 72.4,130.5 73.8,129.5 75.2,130.5 75.2,144.9 "></polygon>
+                <polygon points="66.4,144.9 66.4,130.5 67.8,129.5 69.2,130.5 69.2,144.9 "></polygon>
+                <polygon points="60.2,144.9 60.2,130.5 61.6,129.5 63,130.5 63,144.9 "></polygon>
+                <rect height="0.89999998" width="24.299999" y="133.39999" x="61.200001"></rect>
+                <rect height="0.89999998" width="24.6" y="139.5" x="61.200001"></rect> 
             </g>
         </g>
-        <g class="plot" id="plot-2">
-            <g class="cottage hidden" id="cottage-2">
+        <g class="plot hidden" data-thumb-position="over" id="plot-2">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-254 -160)"></use>
+            <g class="cottage" id="cottage-2">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls white">
-                        <polygon points="224.4,138.6 224.4,125.5 239.6,118.6 254.8,124.5 254.8,138.6 "/>
-                        <polygon points="239.6,138.6 239.6,110.9 263.9,99.3 288.1,110.9 288.1,138.6 "/>
-                        <polygon class="top" points="239.6,119.5 254.8,125.7 254.8,127.5 239.6,121.1 224.4,127.5 224.4,125.7 "/>
-                        <polygon class="top" points="263.9,100.2 288.1,110.2 288.1,113 263.9,102.9 239.6,113 239.6,110.2 "/>
+                        <polygon points="224.4,138.6 224.4,125.5 239.6,118.6 254.8,124.5 254.8,138.6 "></polygon>
+                        <polygon points="239.6,138.6 239.6,110.9 263.9,99.3 288.1,110.9 288.1,138.6 "></polygon>
+                        <polygon class="top" points="239.6,119.5 254.8,125.7 254.8,127.5 239.6,121.1 224.4,127.5 224.4,125.7 "></polygon>
+                        <polygon class="top" points="263.9,100.2 288.1,110.2 288.1,113 263.9,102.9 239.6,113 239.6,110.2 "></polygon>
                     </g>
                     <g class="roof dark-brown">
-                        <polygon points="254.8,126.4 239.6,119.9 224.4,126.4 220.9,126.4 239.6,117.2 258.3,126.4 "/>
-                        <polygon points="288.2,111.9 263.9,101.4 239.5,111.9 234,111.9 263.9,97.2 293.8,111.9 "/>
+                        <polygon points="254.8,126.4 239.6,119.9 224.4,126.4 220.9,126.4 239.6,117.2 258.3,126.4 "></polygon>
+                        <polygon points="288.2,111.9 263.9,101.4 239.5,111.9 234,111.9 263.9,97.2 293.8,111.9 "></polygon>
                     </g>
                     <g class="stairs">
                         <g class="fence teal">
-                            <path d="m 223.3,140.9 0,-1.2 c 0,-0.6 0.5,-1 1.2,-1 l 63.8,0 c 0.6,0 1.2,0.5 1.2,1 l 0,1.2 -66.2,0 z"/>                                
+                            <path d="m 223.3,140.9 0,-1.2 c 0,-0.6 0.5,-1 1.2,-1 l 63.8,0 c 0.6,0 1.2,0.5 1.2,1 l 0,1.2 -66.2,0 z"></path>                                
                         </g>
                         <g class="fence dark-brown">
-                            <rect height="0.5" width="66.099998" y="140.39999" x="223.3"/>
+                            <rect height="0.5" width="66.099998" y="140.39999" x="223.3"></rect>
                         </g>
                     </g>
 
                     <g class="camera-holder" transform="translate(264, 120)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>  
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>  
                     </g>
                 </a>
             </g>
-            <g class="fence hidden dark-brown">       
-                <path d="m 221.8,133.7 0,-0.6 -1.7,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.3,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -0.5,0 -1.6,0 0,-2 -0.9,-0.7 -0.9,0.7 0,9.7 1.9,0 0,-3 1.4,0 0.7,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.3,0 0,3 1.9,0 0,-3 1.7,0 0,-0.6 -1.7,0 0,-3.5 1.2,0 z m -16.6,3.5 -1.4,0 0,-3.5 1.6,0 0.5,0 0,3.5 -0.7,0 z m 2.6,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m 4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m 4,0 0,-3.5 2.3,0 0,3.5 -2.3,0 z"/>
-                <path d="m 239.9,133.1 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.3,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -0.5,0 -1.6,0 0,-2 -0.9,-0.7 -0.9,0.7 0,9.7 1.9,0 0,-3 1.4,0 0.7,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.3,0 0,3 1.9,0 0,-3 0,-0.6 0,-3.5 0,-0.6 z m -14.8,4.1 -1.4,0 0,-3.5 1.6,0 0.5,0 0,3.5 -0.7,0 z m 2.6,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m 4,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m 4.1,0 0,-3.5 2.3,0 0,3.5 -2.3,0 z"/>       
+            <g class="fence dark-brown">       
+                <path d="m 221.8,133.7 0,-0.6 -1.7,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.3,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -0.5,0 -1.6,0 0,-2 -0.9,-0.7 -0.9,0.7 0,9.7 1.9,0 0,-3 1.4,0 0.7,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.3,0 0,3 1.9,0 0,-3 1.7,0 0,-0.6 -1.7,0 0,-3.5 1.2,0 z m -16.6,3.5 -1.4,0 0,-3.5 1.6,0 0.5,0 0,3.5 -0.7,0 z m 2.6,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m 4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m 4,0 0,-3.5 2.3,0 0,3.5 -2.3,0 z"></path>
+                <path d="m 239.9,133.1 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.3,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -0.5,0 -1.6,0 0,-2 -0.9,-0.7 -0.9,0.7 0,9.7 1.9,0 0,-3 1.4,0 0.7,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.3,0 0,3 1.9,0 0,-3 0,-0.6 0,-3.5 0,-0.6 z m -14.8,4.1 -1.4,0 0,-3.5 1.6,0 0.5,0 0,3.5 -0.7,0 z m 2.6,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m 4,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m 4.1,0 0,-3.5 2.3,0 0,3.5 -2.3,0 z"></path>       
             </g>
         </g>
-        <g class="plot" id="plot-3">
-            <g class="fence hidden dark-brown">              
+        <g class="plot hidden" data-thumb-position="over" id="plot-3">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-405 -160)"></use>
+            <g class="fence dark-brown">              
             </g>
-            <g class="cottage hidden" id="cottage-3">
+            <g class="cottage" id="cottage-3">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls snow">
-                        <polygon points="379.2,140.7 431.6,140.5 431.6,113.1 405.3,89.8 379.2,113.1 "/>
-                        <path class="shadow top" d="m 399.5,104.1 c 6.2,0.8 12.2,2.5 18,4.9 5,2.1 9.8,4.8 14.2,8 l 0,-3.9 -27.1,-23.3 -20.8,18 c 5.1,-2.3 9.8,-4.5 15.7,-3.7 z"/>
+                        <polygon points="379.2,140.7 431.6,140.5 431.6,113.1 405.3,89.8 379.2,113.1 "></polygon>
+                        <path class="shadow top" d="m 399.5,104.1 c 6.2,0.8 12.2,2.5 18,4.9 5,2.1 9.8,4.8 14.2,8 l 0,-3.9 -27.1,-23.3 -20.8,18 c 5.1,-2.3 9.8,-4.5 15.7,-3.7 z"></path>
                     </g>
                     <g class="roof shadowed l-r">
-                        <polygon points="379.4,113.1 405.4,92.5 405.4,88.4 374.7,113.1 "/>
-                        <polygon points="431.4,113.1 405.4,92.5 405.4,88.4 436.2,113.1 "/>
+                        <polygon points="379.4,113.1 405.4,92.5 405.4,88.4 374.7,113.1 "></polygon>
+                        <polygon points="431.4,113.1 405.4,92.5 405.4,88.4 436.2,113.1 "></polygon>
                     </g>
                     <g class="stairs fence brown">                           
                     </g>
                     <g class="camera-holder" transform="translate(405, 118)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>                            
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>                            
                     </g>
                 </a>
             </g>
-            <g class="fence hidden brown">
-                <polygon points="423,145.8 423,134.8 421.9,134 420.9,134.8 420.9,145.8 "/>
-                <polygon points="427.6,145.8 427.6,134.8 426.5,134 425.4,134.8 425.4,145.8 "/>
-                <polygon points="432.2,145.8 432.2,134.8 431.1,134 430.1,134.8 430.1,145.8 "/>
-                <polygon points="436.8,145.8 436.8,134.8 435.8,134 434.7,134.8 434.7,145.8 "/>
-                <polygon points="441.6,145.8 441.6,134.8 440.5,134 439.4,134.8 439.4,145.8 "/>
-                <rect height="0.69999999" width="19.200001" y="137" x="421.60001"/>
-                <rect height="0.69999999" width="19.299999" y="141.7" x="421.60001"/>
-                <polygon points="387.8,145.8 387.8,134.8 388.9,134 389.9,134.8 389.9,145.8 "/>
-                <polygon points="383.2,145.8 383.2,134.8 384.3,134 385.4,134.8 385.4,145.8 "/>
-                <polygon points="378.6,145.8 378.6,134.8 379.7,134 380.7,134.8 380.7,145.8 "/>
-                <polygon points="374,145.8 374,134.8 375,134 376.1,134.8 376.1,145.8 "/>
-                <polygon points="369.2,145.8 369.2,134.8 370.3,134 371.4,134.8 371.4,145.8 "/>
-                <rect height="0.69999999" width="18.700001" y="137" x="370"/>
-                <rect height="0.69999999" width="18.9" y="141.7" x="370"/>
+            <g class="fence brown">
+                <polygon points="423,145.8 423,134.8 421.9,134 420.9,134.8 420.9,145.8 "></polygon>
+                <polygon points="427.6,145.8 427.6,134.8 426.5,134 425.4,134.8 425.4,145.8 "></polygon>
+                <polygon points="432.2,145.8 432.2,134.8 431.1,134 430.1,134.8 430.1,145.8 "></polygon>
+                <polygon points="436.8,145.8 436.8,134.8 435.8,134 434.7,134.8 434.7,145.8 "></polygon>
+                <polygon points="441.6,145.8 441.6,134.8 440.5,134 439.4,134.8 439.4,145.8 "></polygon>
+                <rect height="0.69999999" width="19.200001" y="137" x="421.60001"></rect>
+                <rect height="0.69999999" width="19.299999" y="141.7" x="421.60001"></rect>
+                <polygon points="387.8,145.8 387.8,134.8 388.9,134 389.9,134.8 389.9,145.8 "></polygon>
+                <polygon points="383.2,145.8 383.2,134.8 384.3,134 385.4,134.8 385.4,145.8 "></polygon>
+                <polygon points="378.6,145.8 378.6,134.8 379.7,134 380.7,134.8 380.7,145.8 "></polygon>
+                <polygon points="374,145.8 374,134.8 375,134 376.1,134.8 376.1,145.8 "></polygon>
+                <polygon points="369.2,145.8 369.2,134.8 370.3,134 371.4,134.8 371.4,145.8 "></polygon>
+                <rect height="0.69999999" width="18.700001" y="137" x="370"></rect>
+                <rect height="0.69999999" width="18.9" y="141.7" x="370"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-4">
-            <g class="cottage hidden" id="cottage-4">
+        <g class="plot hidden" data-thumb-position="over" id="plot-4">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-547 -160)"></use>
+            <g class="cottage" id="cottage-4">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls teal">
-                        <polygon points="570.1,139.9 570.1,113.7 547.2,102.8 524.4,113.7 524.4,139.9 "/>
-                        <polygon class="top" points="547.2,104.7 524.4,114.2 524.4,116.8 547.2,107.2 570.1,116.8 570.1,114.2 "/>
+                        <polygon points="570.1,139.9 570.1,113.7 547.2,102.8 524.4,113.7 524.4,139.9 "></polygon>
+                        <polygon class="top" points="547.2,104.7 524.4,114.2 524.4,116.8 547.2,107.2 570.1,116.8 570.1,114.2 "></polygon>
                     </g>
                     <g class="roof light-brown">
-                        <polygon points="524.3,114.6 547.2,104.8 570.2,114.6 575.4,114.6 547.2,100.8 519.1,114.6 "/>
+                        <polygon points="524.3,114.6 547.2,104.8 570.2,114.6 575.4,114.6 547.2,100.8 519.1,114.6 "></polygon>
                     </g>
                     <g class="stairs">
-                        <path class="light-brown" d="m 571.3,142 0,-1.2 c 0,-0.5 -0.5,-1 -1.1,-1 l -46,0 c -0.6,0 -1.1,0.4 -1.1,1 l 0,1.2 48.2,0 z"/>
-                        <rect class="lighter-brown" height="0.40000001" width="48.099998" y="141.60001" x="523.20001"/>                   
+                        <path class="light-brown" d="m 571.3,142 0,-1.2 c 0,-0.5 -0.5,-1 -1.1,-1 l -46,0 c -0.6,0 -1.1,0.4 -1.1,1 l 0,1.2 48.2,0 z"></path>
+                        <rect class="lighter-brown" height="0.40000001" width="48.099998" y="141.60001" x="523.20001"></rect>                   
                     </g>
                     <g class="camera-holder" transform="translate(547, 123)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>                            
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>                            
                     </g>
                 </a>
             </g>
-            <g class="fence hidden teal">
-                <polygon points="499.5,141.1 499.5,127.6 498.2,126.6 496.9,127.6 496.9,141.1 "/>
-                <polygon points="505.1,141.1 505.1,127.6 503.8,126.6 502.5,127.6 502.5,141.1 "/>
-                <polygon points="510.7,141.1 510.7,127.6 509.4,126.6 508.1,127.6 508.1,141.1 "/>
-                <polygon points="516.4,141.1 516.4,127.6 515.1,126.6 513.8,127.6 513.8,141.1 "/>
-                <polygon points="522.2,141.1 522.2,127.6 520.9,126.6 519.6,127.6 519.6,141.1 "/>
-                <rect height="0.89999998" width="22.9" y="130.3" x="498.39999"/>
-                <rect height="0.89999998" width="23.1" y="136" x="498.20001"/>
-                <rect height="0.89999998" width="22.9" y="130.3" x="501.79999"/>
-                <rect height="0.89999998" width="23.1" y="136" x="501.5"/>
+            <g class="fence teal">
+                <polygon points="499.5,141.1 499.5,127.6 498.2,126.6 496.9,127.6 496.9,141.1 "></polygon>
+                <polygon points="505.1,141.1 505.1,127.6 503.8,126.6 502.5,127.6 502.5,141.1 "></polygon>
+                <polygon points="510.7,141.1 510.7,127.6 509.4,126.6 508.1,127.6 508.1,141.1 "></polygon>
+                <polygon points="516.4,141.1 516.4,127.6 515.1,126.6 513.8,127.6 513.8,141.1 "></polygon>
+                <polygon points="522.2,141.1 522.2,127.6 520.9,126.6 519.6,127.6 519.6,141.1 "></polygon>
+                <rect height="0.89999998" width="22.9" y="130.3" x="498.39999"></rect>
+                <rect height="0.89999998" width="23.1" y="136" x="498.20001"></rect>
+                <rect height="0.89999998" width="22.9" y="130.3" x="501.79999"></rect>
+                <rect height="0.89999998" width="23.1" y="136" x="501.5"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-5">
-            <g class="fence hidden dark-brown">              
-            </g>
-            <g class="cottage hidden" id="cottage-5">
+        <g class="plot hidden" data-thumb-position="over" id="plot-5">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-674 -160)"></use>
+            <g class="cottage" id="cottage-5">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls snow">
-                        <polygon points="669,136.9 669,138.4 704.4,138.4 704.4,111.1 680.2,111.1 680.2,110.7 660.6,91.5 640.9,110.7 640.9,136.9 "/>   
-                        <polygon class="shadow" points="680.2,113 660.6,93.7 640.9,113 640.9,110.7 660.6,91.5 680.2,110.7 704.4,110.7 704.4,113 "/>         
+                        <polygon points="669,136.9 669,138.4 704.4,138.4 704.4,111.1 680.2,111.1 680.2,110.7 660.6,91.5 640.9,110.7 640.9,136.9 "></polygon>   
+                        <polygon class="shadow" points="680.2,113 660.6,93.7 640.9,113 640.9,110.7 660.6,91.5 680.2,110.7 704.4,110.7 704.4,113 "></polygon>         
                     </g>
                     <g class="roof">
-                        <polygon class="teal" points="640.8,111.1 660.6,92 680.3,111.1 681.1,111.1 684.8,111.1 707.9,111.1 705.5,101.4 675,101.4 660.6,86.9 636.3,111.1 "/>
+                        <polygon class="teal" points="640.8,111.1 660.6,92 680.3,111.1 681.1,111.1 684.8,111.1 707.9,111.1 705.5,101.4 675,101.4 660.6,86.9 636.3,111.1 "></polygon>
                     </g>
                     <g>
-                        <path class="light-brown" id="path575" d="m 639.9,138.7 0,-1 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 64.1,0 c 0.5,0 0.9,0.4 0.9,0.9 l 0,1 -65.9,0 z"/>
-                        <rect class="teal" height="0.40000001" width="66" y="138.39999" x="639.90002"/>
+                        <path class="light-brown" id="path575" d="m 639.9,138.7 0,-1 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 64.1,0 c 0.5,0 0.9,0.4 0.9,0.9 l 0,1 -65.9,0 z"></path>
+                        <rect class="teal" height="0.40000001" width="66" y="138.39999" x="639.90002"></rect>
                     </g>
                     <g>
-                        <rect class="light-brown" height="7.0999999" width="4" y="94.699997" x="671.09998"/>
-                        <path class="teal" d="m 670,94.5 c 0,0.5 0.4,0.9 0.9,0.9 l 4.2,0 c 0.5,0 0.9,-0.4 0.9,-0.9 l 0,-1.5 c 0,-0.5 -0.4,-0.9 -0.9,-0.9 l -4.1,0 c -0.5,0 -0.9,0.4 -0.9,0.9 l 0,1.5 z"/>
+                        <rect class="light-brown" height="7.0999999" width="4" y="94.699997" x="671.09998"></rect>
+                        <path class="teal" d="m 670,94.5 c 0,0.5 0.4,0.9 0.9,0.9 l 4.2,0 c 0.5,0 0.9,-0.4 0.9,-0.9 l 0,-1.5 c 0,-0.5 -0.4,-0.9 -0.9,-0.9 l -4.1,0 c -0.5,0 -0.9,0.4 -0.9,0.9 l 0,1.5 z"></path>
                     </g>
                     <g class="fence lightest-brown">
-                        <rect height="0.69999999" width="15.4" y="130" x="684.59998"/>
-                        <rect height="0.69999999" width="15.4" y="127.7" x="684.59998"/>
-                        <rect height="0.69999999" width="15.4" y="125.4" x="684.59998"/>
-                        <rect height="0.69999999" width="15.4" y="123.1" x="684.59998"/>
-                        <rect height="0.69999999" width="15.4" y="134.60001" x="684.59998"/>
-                        <rect height="0.69999999" width="15.4" y="132.3" x="684.59998"/>
-                    </g>
-                    <g class="fence lightest-brown">
-                        <polygon points="707.1,138.7 707.1,124.7 705.7,123.6 704.4,124.7 704.4,138.7 "/>
-                        <polygon points="712.9,138.7 712.9,124.7 711.5,123.6 710.1,124.7 710.1,138.7 "/>
-                        <polygon points="718.7,138.7 718.7,124.7 717.4,123.6 716,124.7 716,138.7 "/>
-                        <polygon points="724.6,138.7 724.6,124.7 723.3,123.6 721.9,124.7 721.9,138.7 "/>
-                        <polygon points="730.6,138.7 730.6,124.7 729.3,123.6 727.9,124.7 727.9,138.7 "/>
-                        <rect height="0.89999998" width="23.700001" y="127.5" x="706"/>
-                        <rect height="0.89999998" width="24" y="133.39999" x="705.70001"/>
+                        <rect height="0.69999999" width="15.4" y="130" x="684.59998"></rect>
+                        <rect height="0.69999999" width="15.4" y="127.7" x="684.59998"></rect>
+                        <rect height="0.69999999" width="15.4" y="125.4" x="684.59998"></rect>
+                        <rect height="0.69999999" width="15.4" y="123.1" x="684.59998"></rect>
+                        <rect height="0.69999999" width="15.4" y="134.60001" x="684.59998"></rect>
+                        <rect height="0.69999999" width="15.4" y="132.3" x="684.59998"></rect>
                     </g>
                     <g class="camera-holder" transform="translate(661, 117)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>                            
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>                            
                     </g>
                 </a>
             </g>
-            <g class="fence hidden dark-brown">
+            <g class="fence lightest-brown">
+                <polygon points="707.1,138.7 707.1,124.7 705.7,123.6 704.4,124.7 704.4,138.7 "></polygon>
+                <polygon points="712.9,138.7 712.9,124.7 711.5,123.6 710.1,124.7 710.1,138.7 "></polygon>
+                <polygon points="718.7,138.7 718.7,124.7 717.4,123.6 716,124.7 716,138.7 "></polygon>
+                <polygon points="724.6,138.7 724.6,124.7 723.3,123.6 721.9,124.7 721.9,138.7 "></polygon>
+                <polygon points="730.6,138.7 730.6,124.7 729.3,123.6 727.9,124.7 727.9,138.7 "></polygon>
+                <rect height="0.89999998" width="23.700001" y="127.5" x="706"></rect>
+                <rect height="0.89999998" width="24" y="133.39999" x="705.70001"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-6">
-            <g class="cottage hidden" id="cottage-6">
+        <g class="plot hidden" data-thumb-position="under" id="plot-6">
+            <use xlink:href="#hook" class="lines" transform="translate(108 253)"></use>
+            <g class="cottage" id="cottage-6">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls white">
-                        <rect height="28.1" width="46" y="293.10001" x="81.800003"/>
+                        <rect height="28.1" width="46" y="293.10001" x="81.800003"></rect>
                     </g>
                     <g class="roof dark-brown">
-                        <polygon points="82.3,281.6 127.3,281.6 130,293.1 79.6,293.1 "/>
+                        <polygon points="82.3,281.6 127.3,281.6 130,293.1 79.6,293.1 "></polygon>
                     </g>
                     <g class="stairs">
-                        <path class="dark-brown" d="m 128.9,321.2 0,-1 c 0,-0.5 -0.5,-0.9 -1.1,-0.9 l -46.1,0 c -0.6,0 -1.1,0.4 -1.1,0.9 l 0,1 48.3,0 z"/>
-                        <rect class="light-brown" height="0.40000001" width="48.299999" y="320.79999" x="80.599998"/>                          
+                        <path class="dark-brown" d="m 128.9,321.2 0,-1 c 0,-0.5 -0.5,-0.9 -1.1,-0.9 l -46.1,0 c -0.6,0 -1.1,0.4 -1.1,0.9 l 0,1 48.3,0 z"></path>
+                        <rect class="light-brown" height="0.40000001" width="48.299999" y="320.79999" x="80.599998"></rect>                          
                     </g>
                     <g class="camera-holder" transform="translate(105, 306)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>                            
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>                            
                     </g>
                 </a>
             </g>
-            <g class="fence hidden dark-brown">
-                <polygon points="67.4,326.8 67.4,314 66.2,313.1 65,314 65,326.8 "/>
-                <polygon points="72.7,326.8 72.7,314 71.5,313.1 70.2,314 70.2,326.8 "/>
-                <polygon points="78,326.8 78,314 76.8,313.1 75.6,314 75.6,326.8 "/>
-                <polygon points="83.4,326.8 83.4,314 82.1,313.1 80.9,314 80.9,326.8 "/>
-                <polygon points="88.8,326.8 88.8,314 87.6,313.1 86.3,314 86.3,326.8 "/>
-                <polygon points="122.4,326.8 122.4,314 121.2,313.1 120,314 120,326.8 "/>
-                <polygon points="127.7,326.8 127.7,314 126.5,313.1 125.2,314 125.2,326.8 "/>
-                <polygon points="133,326.8 133,314 131.8,313.1 130.6,314 130.6,326.8 "/>
-                <polygon points="138.4,326.8 138.4,314 137.1,313.1 135.9,314 135.9,326.8 "/>
-                <polygon points="143.8,326.8 143.8,314 142.6,313.1 141.3,314 141.3,326.8 "/>
-                <rect height="0.80000001" width="21.5" y="316.60001" x="66.400002"/>
-                <rect height="0.80000001" width="21.700001" y="322" x="66.199997"/>
-                <rect height="0.80000001" width="21.5" y="316.60001" x="121.4"/>
-                <rect height="0.80000001" width="21.700001" y="322" x="121.2"/>
+            <g class="fence dark-brown">
+                <polygon points="67.4,326.8 67.4,314 66.2,313.1 65,314 65,326.8 "></polygon>
+                <polygon points="72.7,326.8 72.7,314 71.5,313.1 70.2,314 70.2,326.8 "></polygon>
+                <polygon points="78,326.8 78,314 76.8,313.1 75.6,314 75.6,326.8 "></polygon>
+                <polygon points="83.4,326.8 83.4,314 82.1,313.1 80.9,314 80.9,326.8 "></polygon>
+                <polygon points="88.8,326.8 88.8,314 87.6,313.1 86.3,314 86.3,326.8 "></polygon>
+                <polygon points="122.4,326.8 122.4,314 121.2,313.1 120,314 120,326.8 "></polygon>
+                <polygon points="127.7,326.8 127.7,314 126.5,313.1 125.2,314 125.2,326.8 "></polygon>
+                <polygon points="133,326.8 133,314 131.8,313.1 130.6,314 130.6,326.8 "></polygon>
+                <polygon points="138.4,326.8 138.4,314 137.1,313.1 135.9,314 135.9,326.8 "></polygon>
+                <polygon points="143.8,326.8 143.8,314 142.6,313.1 141.3,314 141.3,326.8 "></polygon>
+                <rect height="0.80000001" width="21.5" y="316.60001" x="66.400002"></rect>
+                <rect height="0.80000001" width="21.700001" y="322" x="66.199997"></rect>
+                <rect height="0.80000001" width="21.5" y="316.60001" x="121.4"></rect>
+                <rect height="0.80000001" width="21.700001" y="322" x="121.2"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-7">
-            <g class="cottage hidden" id="cottage-7">
+        <g class="plot hidden" data-thumb-position="under" id="plot-7">
+            <use xlink:href="#hook" class="lines" transform="translate(254 253)"></use>
+            <g class="cottage" id="cottage-7">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls brown">
-                        <polygon points="283.4,298 283.4,324.8 243.1,324.8 243.1,298 263.2,278.3 "/>
-                        <polygon class="shadow top" points="243.1,300.3 243.1,298 263.2,278.3 283.4,298 283.4,300.3 263.2,280.5 "/>
+                        <polygon points="283.4,298 283.4,324.8 243.1,324.8 243.1,298 263.2,278.3 "></polygon>
+                        <polygon class="shadow top" points="243.1,300.3 243.1,298 263.2,278.3 283.4,298 283.4,300.3 263.2,280.5 "></polygon>
                     </g>
                     <g class="roof shadowed l-r">
-                        <polygon points="263.2,273.6 288,298.4 283.4,298.4 263.2,278.8 243,298.4 238.4,298.4 "/>
-                        <polygon points="263.2,273.6 288,298.4 283.4,298.4 263.2,278.8 "/>
+                        <polygon points="263.2,273.6 288,298.4 283.4,298.4 263.2,278.8 243,298.4 238.4,298.4 "></polygon>
+                        <polygon points="263.2,273.6 288,298.4 283.4,298.4 263.2,278.8 "></polygon>
                     </g>
                     <g class="chimney">
-                        <rect class="brown" x="274" y="281.5" width="4.0999999" height="7.3000002"/>
-                        <path class="dark-brown" d="m 272.9,281.4 c 0,0.5 0.4,1 1,1 l 4.3,0 c 0.5,0 1,-0.4 1,-1 l 0,-1.6 c 0,-0.5 -0.4,-1 -1,-1 l -4.3,0 c -0.5,0 -1,0.4 -1,1 l 0,1.6 z"/>
+                        <rect class="brown" x="274" y="281.5" width="4.0999999" height="7.3000002"></rect>
+                        <path class="dark-brown" d="m 272.9,281.4 c 0,0.5 0.4,1 1,1 l 4.3,0 c 0.5,0 1,-0.4 1,-1 l 0,-1.6 c 0,-0.5 -0.4,-1 -1,-1 l -4.3,0 c -0.5,0 -1,0.4 -1,1 l 0,1.6 z"></path>
                     </g>
                     <g class="terrace">
-                        <line class="wooden" x1="216.89999" y1="311.39999" x2="243.10001" y2="305.10001"/>
-                        <polygon class="shadow wooden-dark" points="243.1,303.5 216.9,309.9 216.9,311.4 243.1,305.1 " id="polygon1267"/>   
-                        <path class="dark-brown" d="m 243.1,304.5 0,-1.6 -26.2,6.3 0,1.5 1.2,-0.3 0,13.4 0,0 0,0.9 25,0 0,-0.9 0,-5.5 0,-0.8 0,-0.1 -24.1,0 0,-7.2 24.1,-5.7 z m -3.4,15.9 -2,-2 4.1,0 -2.1,2 z m 2.6,-1.5 0,4.1 -2,-2 2,-2.1 z m -3.2,2.1 -2.5,2.5 -2.5,-2.5 2.5,-2.5 2.5,2.5 z m -5.5,-0.6 -2,-2 4.1,0 -2.1,2 z m -0.6,0.6 -2.4,2.4 -2.4,-2.4 2.4,-2.4 2.4,2.4 z m -5.4,-0.6 -2,-2 4.1,0 -2.1,2 z m -0.5,0.6 -2.5,2.5 -2.5,-2.5 2.5,-2.5 2.5,2.5 z m -5.6,-0.6 -2,-2 4.1,0 -2.1,2 z m -0.5,0.6 -2,2 0,-4 2,2 z m -1.8,2.9 2.4,-2.4 2.4,2.4 -4.8,0 z m 6.1,0 2.4,-2.4 2.4,2.4 -4.8,0 z m 5.9,0 2.4,-2.4 2.4,2.4 -4.8,0 z m 6.1,0 2.4,-2.4 2.4,2.4 -4.8,0 z"/>                     
+                        <line class="wooden" x1="216.89999" y1="311.39999" x2="243.10001" y2="305.10001"></line>
+                        <polygon class="shadow wooden-dark" points="243.1,303.5 216.9,309.9 216.9,311.4 243.1,305.1 " id="polygon1267"></polygon>   
+                        <path class="dark-brown" d="m 243.1,304.5 0,-1.6 -26.2,6.3 0,1.5 1.2,-0.3 0,13.4 0,0 0,0.9 25,0 0,-0.9 0,-5.5 0,-0.8 0,-0.1 -24.1,0 0,-7.2 24.1,-5.7 z m -3.4,15.9 -2,-2 4.1,0 -2.1,2 z m 2.6,-1.5 0,4.1 -2,-2 2,-2.1 z m -3.2,2.1 -2.5,2.5 -2.5,-2.5 2.5,-2.5 2.5,2.5 z m -5.5,-0.6 -2,-2 4.1,0 -2.1,2 z m -0.6,0.6 -2.4,2.4 -2.4,-2.4 2.4,-2.4 2.4,2.4 z m -5.4,-0.6 -2,-2 4.1,0 -2.1,2 z m -0.5,0.6 -2.5,2.5 -2.5,-2.5 2.5,-2.5 2.5,2.5 z m -5.6,-0.6 -2,-2 4.1,0 -2.1,2 z m -0.5,0.6 -2,2 0,-4 2,2 z m -1.8,2.9 2.4,-2.4 2.4,2.4 -4.8,0 z m 6.1,0 2.4,-2.4 2.4,2.4 -4.8,0 z m 5.9,0 2.4,-2.4 2.4,2.4 -4.8,0 z m 6.1,0 2.4,-2.4 2.4,2.4 -4.8,0 z"></path>                     
                     </g>
                     <g class="stairs">    
-                        <path class="brown" d="m 216.4,326.7 0,-1 c 0,-0.5 0.4,-0.9 1,-0.9 l 66.1,0 c 0.5,0 1,0.4 1,0.9 l 0,1 -68.1,0 z"/>
-                        <rect class="dark-brown" x="216.39999" y="326.29999" width="68" height="0.40000001"/>                       
+                        <path class="brown" d="m 216.4,326.7 0,-1 c 0,-0.5 0.4,-0.9 1,-0.9 l 66.1,0 c 0.5,0 1,0.4 1,0.9 l 0,1 -68.1,0 z"></path>
+                        <rect class="dark-brown" x="216.39999" y="326.29999" width="68" height="0.40000001"></rect>                       
                     </g>
                     <g class="camera-holder" transform="translate(263, 306)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>                            
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>                            
                     </g>
                 </a>
             </g>
-            <g class="fence hidden dark-brown">
+            <g class="fence dark-brown">
             </g>
         </g>
-        <g class="plot" id="plot-8">
-            <g class="cottage hidden" id="cottage-8">
+        <g class="plot hidden" data-thumb-position="under" id="plot-8">
+            <use xlink:href="#hook" class="lines" transform="translate(405 253)"></use>
+            <g class="cottage" id="cottage-8">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls snow">
-                        <rect height="29.200001" width="47.700001" y="295.20001" x="391.79999"/>
+                        <rect height="29.200001" width="47.700001" y="295.20001" x="391.79999"></rect>
                     </g>
                     <g class="roof teal">
-                        <polygon points="430.7,283.3 400.5,283.3 389.4,295.2 441.8,295.2 "/>
+                        <polygon points="430.7,283.3 400.5,283.3 389.4,295.2 441.8,295.2 "></polygon>
                     </g>
                     <g class="stairs">     
-                        <path class="lightest-brown" d="m 390.6,324.4 0,-1.1 c 0,-0.5 0.5,-0.9 1.1,-0.9 l 47.9,0 c 0.6,0 1.1,0.4 1.1,0.9 l 0,1.1 -50.1,0 z"/>
-                        <rect class="teal" height="0.40000001" width="50.099998" y="324" x="390.60001"/>                      
+                        <path class="lightest-brown" d="m 390.6,324.4 0,-1.1 c 0,-0.5 0.5,-0.9 1.1,-0.9 l 47.9,0 c 0.6,0 1.1,0.4 1.1,0.9 l 0,1.1 -50.1,0 z"></path>
+                        <rect class="teal" height="0.40000001" width="50.099998" y="324" x="390.60001"></rect>                      
                     </g>
-                    <g class="camera-holder" transform="translate(416, 309)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>                            
+                    <g class="camera-holder" transform="translate(416, 304)">
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>                            
                     </g>
                 </a>
             </g>
-            <g class="fence hidden snow">
-                <polygon points="374.3,322.7 374.3,310.7 373.1,309.9 371.9,310.7 371.9,322.7 "/>
-                <polygon points="379.2,322.7 379.2,310.7 378,309.9 376.9,310.7 376.9,322.7 "/>
-                <polygon points="384.2,322.7 384.2,310.7 383.1,309.9 381.9,310.7 381.9,322.7 "/>
-                <polygon points="389.3,322.7 389.3,310.7 388.1,309.9 386.9,310.7 386.9,322.7 "/>
-                <polygon points="394.4,322.7 394.4,310.7 393.2,309.9 392,310.7 392,322.7 "/>
-                <rect height="0.80000001" width="20.200001" y="313.20001" x="373.29999"/>
-                <rect height="0.80000001" width="20.5" y="318.20001" x="373.10001"/>
+            <g class="fence snow">
+                <polygon points="374.3,322.7 374.3,310.7 373.1,309.9 371.9,310.7 371.9,322.7 "></polygon>
+                <polygon points="379.2,322.7 379.2,310.7 378,309.9 376.9,310.7 376.9,322.7 "></polygon>
+                <polygon points="384.2,322.7 384.2,310.7 383.1,309.9 381.9,310.7 381.9,322.7 "></polygon>
+                <polygon points="389.3,322.7 389.3,310.7 388.1,309.9 386.9,310.7 386.9,322.7 "></polygon>
+                <polygon points="394.4,322.7 394.4,310.7 393.2,309.9 392,310.7 392,322.7 "></polygon>
+                <rect height="0.80000001" width="20.200001" y="313.20001" x="373.29999"></rect>
+                <rect height="0.80000001" width="20.5" y="318.20001" x="373.10001"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-9">
-            <g class="cottage hidden" id="cottage-9">
+        <g class="plot hidden" data-thumb-position="under" id="plot-9">
+            <use xlink:href="#hook" class="lines" transform="translate(547 253)"></use>
+            <g class="cottage" id="cottage-9">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls teal">
-                        <polygon points="524.8,325.4 570.7,325.3 570.7,301.3 547.7,280.9 524.8,301.3 "/>
-                        <path style="shadow" d="m 542.6,293.4 c 5.4,0.7 10.7,2.2 15.7,4.3 4.4,1.8 8.6,4.2 12.5,7 l 0,-3.4 -23.8,-20.4 -18.2,15.7 c 4.5,-1.9 8.6,-3.9 13.8,-3.2 z"/>
+                        <polygon points="524.8,325.4 570.7,325.3 570.7,301.3 547.7,280.9 524.8,301.3 "></polygon>
+                        <path style="shadow" d="m 542.6,293.4 c 5.4,0.7 10.7,2.2 15.7,4.3 4.4,1.8 8.6,4.2 12.5,7 l 0,-3.4 -23.8,-20.4 -18.2,15.7 c 4.5,-1.9 8.6,-3.9 13.8,-3.2 z"></path>
                     </g>
                     <g class="roof shadowed l-r">
-                        <polygon points="525,301.3 547.7,283.2 547.7,279.6 520.8,301.3 "/>
-                        <polygon points="570.5,301.3 547.7,283.2 547.7,279.6 574.6,301.3 "/>
+                        <polygon points="525,301.3 547.7,283.2 547.7,279.6 520.8,301.3 "></polygon>
+                        <polygon points="570.5,301.3 547.7,283.2 547.7,279.6 574.6,301.3 "></polygon>
                     </g>
                     <g class="stairs fence brown">
                     </g>
                     <g class="camera-holder" transform="translate(548, 306)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>
                     </g>
                 </a>
             </g>
-            <g class="fence hidden snow">
-                <polygon points="563.1,329.9 563.1,320.2 562.2,319.5 561.2,320.2 561.2,329.9 "/>
-                <polygon points="567.1,329.9 567.1,320.2 566.2,319.5 565.2,320.2 565.2,329.9 "/>
-                <polygon points="571.2,329.9 571.2,320.2 570.2,319.5 569.3,320.2 569.3,329.9 "/>
-                <polygon points="575.2,329.9 575.2,320.2 574.3,319.5 573.4,320.2 573.4,329.9 "/>
-                <polygon points="579.4,329.9 579.4,320.2 578.4,319.5 577.5,320.2 577.5,329.9 "/>
-                <polygon points="532.3,329.9 532.3,320.2 533.2,319.5 534.2,320.2 534.2,329.9 "/>
-                <polygon points="528.3,329.9 528.3,320.2 529.2,319.5 530.2,320.2 530.2,329.9 "/>
-                <polygon points="524.3,329.9 524.3,320.2 525.2,319.5 526.1,320.2 526.1,329.9 "/>
-                <polygon points="520.2,329.9 520.2,320.2 521.1,319.5 522.1,320.2 522.1,329.9 "/>
-                <polygon points="516.1,329.9 516.1,320.2 517,319.5 517.9,320.2 517.9,329.9 "/>
-                <rect height="0.60000002" width="16.799999" y="322.20001" x="561.90002"/>
-                <rect height="0.60000002" width="16.9" y="326.29999" x="561.79999"/>
-                <rect height="0.60000002" width="16.4" y="322.20001" x="516.70001"/>
-                <rect height="0.60000002" width="16.5" y="326.29999" x="516.70001"/>
+            <g class="fence snow">
+                <polygon points="563.1,329.9 563.1,320.2 562.2,319.5 561.2,320.2 561.2,329.9 "></polygon>
+                <polygon points="567.1,329.9 567.1,320.2 566.2,319.5 565.2,320.2 565.2,329.9 "></polygon>
+                <polygon points="571.2,329.9 571.2,320.2 570.2,319.5 569.3,320.2 569.3,329.9 "></polygon>
+                <polygon points="575.2,329.9 575.2,320.2 574.3,319.5 573.4,320.2 573.4,329.9 "></polygon>
+                <polygon points="579.4,329.9 579.4,320.2 578.4,319.5 577.5,320.2 577.5,329.9 "></polygon>
+                <polygon points="532.3,329.9 532.3,320.2 533.2,319.5 534.2,320.2 534.2,329.9 "></polygon>
+                <polygon points="528.3,329.9 528.3,320.2 529.2,319.5 530.2,320.2 530.2,329.9 "></polygon>
+                <polygon points="524.3,329.9 524.3,320.2 525.2,319.5 526.1,320.2 526.1,329.9 "></polygon>
+                <polygon points="520.2,329.9 520.2,320.2 521.1,319.5 522.1,320.2 522.1,329.9 "></polygon>
+                <polygon points="516.1,329.9 516.1,320.2 517,319.5 517.9,320.2 517.9,329.9 "></polygon>
+                <rect height="0.60000002" width="16.799999" y="322.20001" x="561.90002"></rect>
+                <rect height="0.60000002" width="16.9" y="326.29999" x="561.79999"></rect>
+                <rect height="0.60000002" width="16.4" y="322.20001" x="516.70001"></rect>
+                <rect height="0.60000002" width="16.5" y="326.29999" x="516.70001"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-10">
-            <g class="cottage hidden" id="cottage-10">
+        <g class="plot hidden" data-thumb-position="under" id="plot-10">
+            <use xlink:href="#hook" class="lines" transform="translate(674 253)"></use>
+            <g class="cottage" id="cottage-10">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls snow">
-                        <polygon points="661.8,326.9 706.5,326.8 706.5,303.4 684.1,283.5 661.8,303.4 "/>
-                        <path class="shadow" d="m 679.2,295.7 c 5.3,0.7 10.4,2.1 15.3,4.2 4.3,1.8 8.4,4.1 12.1,6.8 l 0,-3.3 -23.1,-19.9 -17.7,15.3 c 4.3,-1.9 8.3,-3.8 13.4,-3.1 z"/>
+                        <polygon points="661.8,326.9 706.5,326.8 706.5,303.4 684.1,283.5 661.8,303.4 "></polygon>
+                        <path class="shadow" d="m 679.2,295.7 c 5.3,0.7 10.4,2.1 15.3,4.2 4.3,1.8 8.4,4.1 12.1,6.8 l 0,-3.3 -23.1,-19.9 -17.7,15.3 c 4.3,-1.9 8.3,-3.8 13.4,-3.1 z"></path>
                     </g>
                     <g class="roof shadowed l-r">
-                        <polygon points="662,303.4 684.2,285.8 684.2,282.3 657.9,303.4 "/>
-                        <polygon points="706.3,303.4 684.2,285.8 684.2,282.3 710.4,303.4 "/>
+                        <polygon points="662,303.4 684.2,285.8 684.2,282.3 657.9,303.4 "></polygon>
+                        <polygon points="706.3,303.4 684.2,285.8 684.2,282.3 710.4,303.4 "></polygon>
                     </g>
                     <g class="stairs fence brown">                           
                     </g>
                     <g class="camera-holder" transform="translate(684, 308)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>                            
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>                            
                     </g>
                 </a>
             </g>
-            <g class="fence hidden brown">
-                <polygon points="699.2,331.3 699.2,321.8 698.3,321.1 697.4,321.8 697.4,331.3 "/>
-                <polygon points="703.1,331.3 703.1,321.8 702.2,321.1 701.2,321.8 701.2,331.3 "/>
-                <polygon points="707,331.3 707,321.8 706.1,321.1 705.2,321.8 705.2,331.3 "/>
-                <polygon points="711,331.3 711,321.8 710.1,321.1 709.2,321.8 709.2,331.3 "/>
-                <polygon points="715,331.3 715,321.8 714.1,321.1 713.2,321.8 713.2,331.3 "/>
-                <polygon points="669.1,331.3 669.1,321.8 670.1,321.1 671,321.8 671,331.3 "/>
-                <polygon points="665.3,331.3 665.3,321.8 666.2,321.1 667.1,321.8 667.1,331.3 "/>
-                <polygon points="661.3,331.3 661.3,321.8 662.2,321.1 663.1,321.8 663.1,331.3 "/>
-                <polygon points="657.3,331.3 657.3,321.8 658.3,321.1 659.2,321.8 659.2,331.3 "/>
-                <polygon points="653.3,331.3 653.3,321.8 654.2,321.1 655.2,321.8 655.2,331.3 "/>
-                <rect height="0.60000002" width="16.4" y="323.70001" x="698"/>
-                <rect height="0.60000002" width="16.4" y="327.70001" x="697.90002"/>
-                <rect height="0.60000002" width="15.9" y="323.70001" x="654"/>
-                <rect height="0.60000002" width="16.1" y="327.70001" x="654"/>
+            <g class="fence brown">
+                <polygon points="699.2,331.3 699.2,321.8 698.3,321.1 697.4,321.8 697.4,331.3 "></polygon>
+                <polygon points="703.1,331.3 703.1,321.8 702.2,321.1 701.2,321.8 701.2,331.3 "></polygon>
+                <polygon points="707,331.3 707,321.8 706.1,321.1 705.2,321.8 705.2,331.3 "></polygon>
+                <polygon points="711,331.3 711,321.8 710.1,321.1 709.2,321.8 709.2,331.3 "></polygon>
+                <polygon points="715,331.3 715,321.8 714.1,321.1 713.2,321.8 713.2,331.3 "></polygon>
+                <polygon points="669.1,331.3 669.1,321.8 670.1,321.1 671,321.8 671,331.3 "></polygon>
+                <polygon points="665.3,331.3 665.3,321.8 666.2,321.1 667.1,321.8 667.1,331.3 "></polygon>
+                <polygon points="661.3,331.3 661.3,321.8 662.2,321.1 663.1,321.8 663.1,331.3 "></polygon>
+                <polygon points="657.3,331.3 657.3,321.8 658.3,321.1 659.2,321.8 659.2,331.3 "></polygon>
+                <polygon points="653.3,331.3 653.3,321.8 654.2,321.1 655.2,321.8 655.2,331.3 "></polygon>
+                <rect height="0.60000002" width="16.4" y="323.70001" x="698"></rect>
+                <rect height="0.60000002" width="16.4" y="327.70001" x="697.90002"></rect>
+                <rect height="0.60000002" width="15.9" y="323.70001" x="654"></rect>
+                <rect height="0.60000002" width="16.1" y="327.70001" x="654"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-11">
-            <g class="fence hidden dark-brown">  
-                <polygon points="129.2,556.1 129.2,542.8 127.9,541.8 126.6,542.8 126.6,556.1 "/>
-                <polygon points="134.7,556.1 134.7,542.8 133.4,541.8 132.1,542.8 132.1,556.1 "/>
-                <polygon points="140.3,556.1 140.3,542.8 139,541.8 137.7,542.8 137.7,556.1 "/>
-                <polygon points="145.8,556.1 145.8,542.8 144.6,541.8 143.3,542.8 143.3,556.1 "/>
-                <polygon points="151.5,556.1 151.5,542.8 150.2,541.8 148.9,542.8 148.9,556.1 "/>
-                <rect height="0.80000001" width="22.5" y="545.5" x="128.10001"/>
-                <rect height="0.80000001" width="22.700001" y="551.09998" x="127.9"/>               
+        <g class="plot hidden" data-thumb-position="over" id="plot-11">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-108 -600)"></use>
+            <g class="fence dark-brown">  
+                <polygon points="129.2,556.1 129.2,542.8 127.9,541.8 126.6,542.8 126.6,556.1 "></polygon>
+                <polygon points="134.7,556.1 134.7,542.8 133.4,541.8 132.1,542.8 132.1,556.1 "></polygon>
+                <polygon points="140.3,556.1 140.3,542.8 139,541.8 137.7,542.8 137.7,556.1 "></polygon>
+                <polygon points="145.8,556.1 145.8,542.8 144.6,541.8 143.3,542.8 143.3,556.1 "></polygon>
+                <polygon points="151.5,556.1 151.5,542.8 150.2,541.8 148.9,542.8 148.9,556.1 "></polygon>
+                <rect height="0.80000001" width="22.5" y="545.5" x="128.10001"></rect>
+                <rect height="0.80000001" width="22.700001" y="551.09998" x="127.9"></rect>               
             </g>
-            <g class="cottage hidden" id="cottage-11">
+            <g class="cottage" id="cottage-11">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls brown">
-                        <polygon points="131.6,574.1 83.4,574 83.4,548.8 107.6,527.4 131.6,548.8 "/>
-                        <path class="shadow top" d="m 112.9,540.6 c -5.7,0.7 -11.2,2.3 -16.5,4.5 -4.6,1.9 -9,4.4 -13.1,7.3 l 0,-3.5 24.9,-21.4 19.1,16.5 c -4.7,-2.1 -8.9,-4.1 -14.4,-3.4 z"/>
+                        <polygon points="131.6,574.1 83.4,574 83.4,548.8 107.6,527.4 131.6,548.8 "></polygon>
+                        <path class="shadow top" d="m 112.9,540.6 c -5.7,0.7 -11.2,2.3 -16.5,4.5 -4.6,1.9 -9,4.4 -13.1,7.3 l 0,-3.5 24.9,-21.4 19.1,16.5 c -4.7,-2.1 -8.9,-4.1 -14.4,-3.4 z"></path>
                     </g>
                     <g class="roof shadowed l-r">
-                        <polygon points="131.4,548.8 107.5,529.9 107.5,526.1 135.7,548.8 "/>
-                        <polygon points="83.7,548.8 107.5,529.9 107.5,526.1 79.3,548.8 "/>
+                        <polygon points="131.4,548.8 107.5,529.9 107.5,526.1 135.7,548.8 "></polygon>
+                        <polygon points="83.7,548.8 107.5,529.9 107.5,526.1 79.3,548.8 "></polygon>
                     </g>
                     <g class="stairs fence brown">  
-                        <path d="m 132.2,574.9 c 0,0.5 -0.4,0.9 -0.9,0.9 l -48.5,0 c -0.5,0 -0.9,-0.4 -0.9,-0.9 l 0,0 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 48.6,0 c 0.4,0 0.8,0.4 0.8,0.9 l 0,0 z"/>                          
+                        <path d="m 132.2,574.9 c 0,0.5 -0.4,0.9 -0.9,0.9 l -48.5,0 c -0.5,0 -0.9,-0.4 -0.9,-0.9 l 0,0 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 48.6,0 c 0.4,0 0.8,0.4 0.8,0.9 l 0,0 z"></path>                          
                     </g>
                     <g class="camera-holder" transform="translate(107, 556)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>
                     </g>
                 </a>
             </g>
-            <g class="fence hidden dark-brown">
-                <polygon points="129.4,582.7 129.4,569.4 128.1,568.4 126.8,569.4 126.8,582.7 "/>
-                <polygon points="134.9,582.7 134.9,569.4 133.6,568.4 132.3,569.4 132.3,582.7 "/>
-                <polygon points="140.5,582.7 140.5,569.4 139.2,568.4 137.9,569.4 137.9,582.7 "/>
-                <polygon points="146.1,582.7 146.1,569.4 144.8,568.4 143.5,569.4 143.5,582.7 "/>
-                <polygon points="151.7,582.7 151.7,569.4 150.4,568.4 149.2,569.4 149.2,582.7 "/>
-                <rect height="0.80000001" width="22.5" y="572.09998" x="128.39999"/>
-                <rect height="0.80000001" width="22.700001" y="577.70001" x="128.10001"/>
+            <g class="fence dark-brown">
+                <polygon points="129.4,582.7 129.4,569.4 128.1,568.4 126.8,569.4 126.8,582.7 "></polygon>
+                <polygon points="134.9,582.7 134.9,569.4 133.6,568.4 132.3,569.4 132.3,582.7 "></polygon>
+                <polygon points="140.5,582.7 140.5,569.4 139.2,568.4 137.9,569.4 137.9,582.7 "></polygon>
+                <polygon points="146.1,582.7 146.1,569.4 144.8,568.4 143.5,569.4 143.5,582.7 "></polygon>
+                <polygon points="151.7,582.7 151.7,569.4 150.4,568.4 149.2,569.4 149.2,582.7 "></polygon>
+                <rect height="0.80000001" width="22.5" y="572.09998" x="128.39999"></rect>
+                <rect height="0.80000001" width="22.700001" y="577.70001" x="128.10001"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-12">
-            <g class="cottage hidden" id="cottage-12">
+        <g class="plot hidden" data-thumb-position="over" id="plot-12">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-254 -600)"></use>
+            <g class="cottage" id="cottage-12">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls teal">
-                        <polygon points="293.5,574.6 293.5,547.6 270,536.4 246.4,547.6 246.4,574.6 "/>
-                        <polygon class="top" points="270,538.4 246.4,548.1 246.4,550.8 270,541 293.5,550.8 293.5,548.1 "/>
+                        <polygon points="293.5,574.6 293.5,547.6 270,536.4 246.4,547.6 246.4,574.6 "></polygon>
+                        <polygon class="top" points="270,538.4 246.4,548.1 246.4,550.8 270,541 293.5,550.8 293.5,548.1 "></polygon>
                     </g>
                     <g class="roof light-brown">
-                        <polygon points="246.3,548.6 270,538.4 293.6,548.6 299,548.6 270,534.3 240.9,548.6 "/>
+                        <polygon points="246.3,548.6 270,538.4 293.6,548.6 299,548.6 270,534.3 240.9,548.6 "></polygon>
                     </g>
                     <g class="stairs">    
-                        <path class="lightest-brown" d="m 294.7,576.8 0,-1.2 c 0,-0.6 -0.5,-1 -1.1,-1 l -47.3,0 c -0.6,0 -1.1,0.5 -1.1,1 l 0,1.2 49.5,0 z"/>
-                        <rect class="lighter-brown" height="0.40000001" width="49.599998" y="576.29999" x="245.2"/>                       
+                        <path class="lightest-brown" d="m 294.7,576.8 0,-1.2 c 0,-0.6 -0.5,-1 -1.1,-1 l -47.3,0 c -0.6,0 -1.1,0.5 -1.1,1 l 0,1.2 49.5,0 z"></path>
+                        <rect class="lighter-brown" height="0.40000001" width="49.599998" y="576.29999" x="245.2"></rect>                       
                     </g>
                     <g class="camera-holder" transform="translate(270, 558)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>
                     </g>
                 </a>
             </g>
-            <g class="fence hidden teal">
-                <polygon points="220.8,575.9 220.8,561.9 219.4,560.9 218.1,561.9 218.1,575.9 "/>
-                <polygon points="226.5,575.9 226.5,561.9 225.2,560.9 223.8,561.9 223.8,575.9 "/>
-                <polygon points="232.4,575.9 232.4,561.9 231,560.9 229.7,561.9 229.7,575.9 "/>
-                <polygon points="238.2,575.9 238.2,561.9 236.8,560.9 235.5,561.9 235.5,575.9 "/>
-                <polygon points="244.1,575.9 244.1,561.9 242.8,560.9 241.4,561.9 241.4,575.9 "/>
-                <rect height="0.89999998" width="23.5" y="564.70001" x="219.7"/>
-                <rect height="0.89999998" width="23.799999" y="570.59998" x="219.39999"/>
-                <rect height="0.89999998" width="23.5" y="564.70001" x="223.10001"/>
-                <rect height="0.89999998" width="23.799999" y="570.59998" x="222.8"/>
+            <g class="fence teal">
+                <polygon points="220.8,575.9 220.8,561.9 219.4,560.9 218.1,561.9 218.1,575.9 "></polygon>
+                <polygon points="226.5,575.9 226.5,561.9 225.2,560.9 223.8,561.9 223.8,575.9 "></polygon>
+                <polygon points="232.4,575.9 232.4,561.9 231,560.9 229.7,561.9 229.7,575.9 "></polygon>
+                <polygon points="238.2,575.9 238.2,561.9 236.8,560.9 235.5,561.9 235.5,575.9 "></polygon>
+                <polygon points="244.1,575.9 244.1,561.9 242.8,560.9 241.4,561.9 241.4,575.9 "></polygon>
+                <rect height="0.89999998" width="23.5" y="564.70001" x="219.7"></rect>
+                <rect height="0.89999998" width="23.799999" y="570.59998" x="219.39999"></rect>
+                <rect height="0.89999998" width="23.5" y="564.70001" x="223.10001"></rect>
+                <rect height="0.89999998" width="23.799999" y="570.59998" x="222.8"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-13">
-            <g class="cottage hidden" id="cottage-13">
+        <g class="plot hidden" data-thumb-position="over" id="plot-13">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-405 -600)"></use>
+            <g class="cottage" id="cottage-13">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls teal">
-                        <polygon points="387.8,575.3 387.8,548.8 407.8,529.3 427.7,548.8 427.7,575.3 "/>
-                        <polygon class="top" points="407.8,529.3 427.7,548.8 427.7,551.1 407.8,531.5 387.8,551.1 387.8,548.8 "/>
+                        <polygon points="387.8,575.3 387.8,548.8 407.8,529.3 427.7,548.8 427.7,575.3 "></polygon>
+                        <polygon class="top" points="407.8,529.3 427.7,548.8 427.7,551.1 407.8,531.5 387.8,551.1 387.8,548.8 "></polygon>
                     </g>
                     <g class="roof light-brown">
-                        <polygon points="427.8,549.2 407.8,529.8 387.8,549.2 383.2,549.2 407.8,524.6 432.3,549.2 "/>
+                        <polygon points="427.8,549.2 407.8,529.8 387.8,549.2 383.2,549.2 407.8,524.6 432.3,549.2 "></polygon>
                     </g>
                     <g class="chimney">
-                        <rect class="teal-darker" height="7.1999998" width="4.0999999" y="532.5" x="418.39999"/>
-                        <path class="lighter-brown" d="m 417.4,532.4 c 0,0.5 0.4,0.9 0.9,0.9 l 4.3,0 c 0.5,0 0.9,-0.4 0.9,-0.9 l 0,-1.6 c 0,-0.5 -0.4,-0.9 -0.9,-0.9 l -4.3,0 c -0.5,0 -0.9,0.4 -0.9,0.9 l 0,1.6 z"/>
+                        <rect class="teal-darker" height="7.1999998" width="4.0999999" y="532.5" x="418.39999"></rect>
+                        <path class="lighter-brown" d="m 417.4,532.4 c 0,0.5 0.4,0.9 0.9,0.9 l 4.3,0 c 0.5,0 0.9,-0.4 0.9,-0.9 l 0,-1.6 c 0,-0.5 -0.4,-0.9 -0.9,-0.9 l -4.3,0 c -0.5,0 -0.9,0.4 -0.9,0.9 l 0,1.6 z"></path>
                     </g>
                     <g class="stairs">
-                        <path class="lightest-brown" d="m 386.8,577.2 0,-1 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 40,0 c 0.5,0 0.9,0.4 0.9,0.9 l 0,1 -41.8,0 z"/>
-                        <rect class="lighter-brown" height="0.40000001" width="41.900002" y="576.79999" x="386.79999"/>
+                        <path class="lightest-brown" d="m 386.8,577.2 0,-1 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 40,0 c 0.5,0 0.9,0.4 0.9,0.9 l 0,1 -41.8,0 z"></path>
+                        <rect class="lighter-brown" height="0.40000001" width="41.900002" y="576.79999" x="386.79999"></rect>
                     </g>
                     <g class="camera-holder" transform="translate(408, 556)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>                            
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>                            
                     </g>
                 </a>
             </g>
-            <g class="fence hidden snow">
-                <polygon points="367.2,577.4 367.2,564.4 366,563.5 364.7,564.4 364.7,577.4 "/>
-                <polygon points="372.5,577.4 372.5,564.4 371.3,563.5 370,564.4 370,577.4 "/>
-                <polygon points="377.9,577.4 377.9,564.4 376.7,563.5 375.5,564.4 375.5,577.4 "/>
-                <polygon points="383.4,577.4 383.4,564.4 382.1,563.5 380.9,564.4 380.9,577.4 "/>
-                <polygon points="388.8,577.4 388.8,564.4 387.6,563.5 386.3,564.4 386.3,577.4 "/>
-                <rect height="0.80000001" width="21.799999" y="567" x="366.20001"/>
-                <rect height="0.80000001" width="22" y="572.5" x="366"/>
+            <g class="fence snow">
+                <polygon points="367.2,577.4 367.2,564.4 366,563.5 364.7,564.4 364.7,577.4 "></polygon>
+                <polygon points="372.5,577.4 372.5,564.4 371.3,563.5 370,564.4 370,577.4 "></polygon>
+                <polygon points="377.9,577.4 377.9,564.4 376.7,563.5 375.5,564.4 375.5,577.4 "></polygon>
+                <polygon points="383.4,577.4 383.4,564.4 382.1,563.5 380.9,564.4 380.9,577.4 "></polygon>
+                <polygon points="388.8,577.4 388.8,564.4 387.6,563.5 386.3,564.4 386.3,577.4 "></polygon>
+                <rect height="0.80000001" width="21.799999" y="567" x="366.20001"></rect>
+                <rect height="0.80000001" width="22" y="572.5" x="366"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-14">
-            <g class="cottage hidden" id="cottage-14">
+        <g class="plot hidden" data-thumb-position="over" id="plot-14">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-547 -600)"></use>
+            <g class="cottage" id="cottage-14">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls white">
-                        <rect height="28.200001" width="46.099998" y="549.29999" x="520"/>
+                        <rect height="28.200001" width="46.099998" y="549.29999" x="520"></rect>
                     </g>
                     <g class="roof dark-brown">
-                        <polygon points="565.6,537.7 520.5,537.7 517.7,549.3 568.4,549.3 "/>
+                        <polygon points="565.6,537.7 520.5,537.7 517.7,549.3 568.4,549.3 "></polygon>
                     </g>
                     <g class="stairs">   
-                        <path class="dark-brown" inkscape:connector-curvature="0" id="path1025" d="m 518.8,577.5 0,-1 c 0,-0.5 0.5,-0.9 1.1,-0.9 l 46.3,0 c 0.6,0 1.1,0.4 1.1,0.9 l 0,1 -48.5,0 z"/>
-                        <rect class="light-brown" height="0.40000001" width="48.5" y="577.09998" x="518.79999"/>                        
+                        <path class="dark-brown" inkscape:connector-curvature="0" id="path1025" d="m 518.8,577.5 0,-1 c 0,-0.5 0.5,-0.9 1.1,-0.9 l 46.3,0 c 0.6,0 1.1,0.4 1.1,0.9 l 0,1 -48.5,0 z"></path>
+                        <rect class="light-brown" height="0.40000001" width="48.5" y="577.09998" x="518.79999"></rect>                        
                     </g>
                     <g class="camera-holder" transform="translate(543, 562)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>
                     </g>
                 </a>
             </g>
-            <g class="fence hidden dark-brown">
-                <polygon points="580.5,583.1 580.5,570.3 581.8,569.4 583,570.3 583,583.1 "/>
-                <polygon points="575.3,583.1 575.3,570.3 576.5,569.4 577.7,570.3 577.7,583.1 "/>
-                <polygon points="569.9,583.1 569.9,570.3 571.1,569.4 572.4,570.3 572.4,583.1 "/>
-                <polygon points="564.5,583.1 564.5,570.3 565.8,569.4 567,570.3 567,583.1 "/>
-                <polygon points="559.1,583.1 559.1,570.3 560.3,569.4 561.6,570.3 561.6,583.1 "/>
-                <rect height="0.80000001" width="21.6" y="572.90002" x="559.90002"/>
-                <rect height="0.80000001" width="21.799999" y="578.29999" x="559.90002"/>
+            <g class="fence dark-brown">
+                <polygon points="580.5,583.1 580.5,570.3 581.8,569.4 583,570.3 583,583.1 "></polygon>
+                <polygon points="575.3,583.1 575.3,570.3 576.5,569.4 577.7,570.3 577.7,583.1 "></polygon>
+                <polygon points="569.9,583.1 569.9,570.3 571.1,569.4 572.4,570.3 572.4,583.1 "></polygon>
+                <polygon points="564.5,583.1 564.5,570.3 565.8,569.4 567,570.3 567,583.1 "></polygon>
+                <polygon points="559.1,583.1 559.1,570.3 560.3,569.4 561.6,570.3 561.6,583.1 "></polygon>
+                <rect height="0.80000001" width="21.6" y="572.90002" x="559.90002"></rect>
+                <rect height="0.80000001" width="21.799999" y="578.29999" x="559.90002"></rect>
             </g>
         </g>
-        <g class="plot" id="plot-15">
-            <g class="fence hidden dark-brown">              
+        <g class="plot hidden" data-thumb-position="over" id="plot-15">
+            <use xlink:href="#hook" class="lines" transform="rotate(180) translate(-674 -600)"></use>
+            <g class="fence dark-brown">              
             </g>
-            <g class="cottage hidden" id="cottage-15">
+            <g class="cottage" id="cottage-15">
                 <title></title>
                 <a class="cottage-link" xlink:href="">
                     <g class="walls white">
-                        <polygon points="698.8,554.9 683.6,560.8 683.6,574.9 713.9,574.9 713.9,561.9 " />
-                        <polygon class="top" points="683.6,563.8 698.8,557.5 713.9,563.8 713.9,562.1 698.8,555.8 683.6,562.1 "/>
+                        <polygon points="698.8,554.9 683.6,560.8 683.6,574.9 713.9,574.9 713.9,561.9 " ></polygon>
+                        <polygon class="top" points="683.6,563.8 698.8,557.5 713.9,563.8 713.9,562.1 698.8,555.8 683.6,562.1 "></polygon>
                     </g>
                     <g class="roof dark-brown">
-                        <polygon points="714,562.7 717.4,562.7 698.8,553.6 680.1,562.7 683.6,562.7 698.8,556.2 "/>
+                        <polygon points="714,562.7 717.4,562.7 698.8,553.6 680.1,562.7 683.6,562.7 698.8,556.2 "></polygon>
                     </g>
                     <g class="walls white">
-                        <polygon points="674.5,535.6 650.2,547.2 650.2,574.9 698.8,574.9 698.8,547.2 " />
-                        <polygon class="top" points="650.2,549.3 674.5,539.2 698.8,549.3 698.8,546.6 674.5,536.5 650.2,546.6 "/>                            
+                        <polygon points="674.5,535.6 650.2,547.2 650.2,574.9 698.8,574.9 698.8,547.2 " ></polygon>
+                        <polygon class="top" points="650.2,549.3 674.5,539.2 698.8,549.3 698.8,546.6 674.5,536.5 650.2,546.6 "></polygon>                            
                     </g>
                     <g class="roof dark-brown">
-                        <polygon points="698.8,548.2 704.4,548.2 674.5,533.5 644.6,548.2 650.2,548.2 674.5,537.7 "/>                            
+                        <polygon points="698.8,548.2 704.4,548.2 674.5,533.5 644.6,548.2 650.2,548.2 674.5,537.7 "></polygon>                            
                     </g>
                     <g class="stairs">
                         <g class="fence teal">
-                            <path d="m 715.1,577.2 0,-1.2 c 0,-0.6 -0.5,-1 -1.2,-1 l -63.8,0 c -0.6,0 -1.2,0.5 -1.2,1 l 0,1.2 66.2,0 z"/>
+                            <path d="m 715.1,577.2 0,-1.2 c 0,-0.6 -0.5,-1 -1.2,-1 l -63.8,0 c -0.6,0 -1.2,0.5 -1.2,1 l 0,1.2 66.2,0 z"></path>
                         </g>
                         <g class="fence dark-brown">
-                            <rect x="649" y="576.79999" width="66.099998" height="0.5"/>
+                            <rect x="649" y="576.79999" width="66.099998" height="0.5"></rect>
                         </g>                    
                     </g>
                     <g class="camera-holder" transform="translate(674, 557)">
-                        <use class="icon-gallery" xlink:href="#camera"/>
-                        <use class="icon-video" xlink:href="#video"/>
+                        <use class="icon-gallery" xlink:href="#camera"></use>
+                        <use class="icon-video" xlink:href="#video"></use>
                     </g>
                 </a>
             </g>
-            <g class="fence hidden dark-brown">
-                <path d="m 718.3,570.1 0,3.5 -1.7,0 0,0.6 1.7,0 0,3 1.9,0 0,-3 2.3,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 0.7,0 1.4,0 0,3 1.9,0 0,-9.7 -0.9,-0.7 -0.9,0.7 0,2 -1.8,0 -0.5,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.3,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -1.7,0 0,0.6 1.4,0 z m 14.2,3.5 0,-3.5 0.5,0 1.6,0 0,3.5 -1.4,0 -0.7,0 z m -4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m -4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m -4.1,0 0,-3.5 2.3,0 0,3.5 -2.3,0 z"/>
-                <path d="m 698.4,570.1 0,3.5 0,0.6 0,3 1.9,0 0,-3 2.3,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 0.7,0 1.4,0 0,3 1.9,0 0,-9.7 -0.9,-0.7 -0.9,0.7 0,2 -1.6,0 -0.5,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.3,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 0,0.6 z m 14.2,3.5 0,-3.5 0.5,0 1.6,0 0,3.5 -1.4,0 -0.7,0 z m -4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m -4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m -4.1,0 0,-3.5 2.3,0 0,3.5 -2.3,0 z"/>
+            <g class="fence dark-brown">
+                <path d="m 718.3,570.1 0,3.5 -1.7,0 0,0.6 1.7,0 0,3 1.9,0 0,-3 2.3,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 0.7,0 1.4,0 0,3 1.9,0 0,-9.7 -0.9,-0.7 -0.9,0.7 0,2 -1.8,0 -0.5,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.3,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -1.7,0 0,0.6 1.4,0 z m 14.2,3.5 0,-3.5 0.5,0 1.6,0 0,3.5 -1.4,0 -0.7,0 z m -4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m -4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m -4.1,0 0,-3.5 2.3,0 0,3.5 -2.3,0 z"></path>
+                <path d="m 698.4,570.1 0,3.5 0,0.6 0,3 1.9,0 0,-3 2.3,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 2.2,0 0,3 1.9,0 0,-3 0.7,0 1.4,0 0,3 1.9,0 0,-9.7 -0.9,-0.7 -0.9,0.7 0,2 -1.6,0 -0.5,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.2,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 -2.3,0 0,-2 -0.9,-0.7 -0.9,0.7 0,2 0,0.6 z m 14.2,3.5 0,-3.5 0.5,0 1.6,0 0,3.5 -1.4,0 -0.7,0 z m -4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m -4.1,0 0,-3.5 2.2,0 0,3.5 -2.2,0 z m -4.1,0 0,-3.5 2.3,0 0,3.5 -2.3,0 z"></path>
             </g>
         </g>
     </g>
 
     <g class="flowers">
         <g class="flower red 1">
-            <path class="leaves" d="m 111.6,147.5 c 0,1.2 0.9,2.1 2.1,2.1 l 0,0 c 1.2,0 2.1,-0.9 2.1,-2.1 l 0,0 c 0,-1.2 -0.9,-2.1 -2.1,-2.1 l 0,0 c -1.2,0 -2.1,0.9 -2.1,2.1 l 0,0 z"/>
-            <path class="leaves" d="m 98.6,144.6 c 0,1.2 0.9,2.1 2.1,2.1 l 0,0 c 1.2,0 2.1,-0.9 2.1,-2.1 l 0,0 c 0,-1.2 -0.9,-2.1 -2.1,-2.1 l 0,0 c -1.2,0.1 -2.1,1 -2.1,2.1 l 0,0 z"/>
-            <path class="leaves" d="m 103.1,149.2 c 0,1.2 0.9,2.1 2.1,2.1 l 0,0 c 1.2,0 2.1,-0.9 2.1,-2.1 l 0,0 c 0,-1.2 -0.9,-2.1 -2.1,-2.1 l 0,0 c -1.1,0 -2.1,0.9 -2.1,2.1 l 0,0 z"/>
-            <path class="leaves" d="m 88.2,150.4 c 0,0.7 0.5,1.2 1.2,1.2 l 0,0 c 0.7,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.7 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.6,0 -1.2,0.5 -1.2,1.2 l 0,0 z"/>
-            <path class="leaves" d="m 133,150.2 c 0,1.2 0.9,2.1 2.1,2.1 l 0,0 c 1.2,0 2.1,-0.9 2.1,-2.1 l 0,0 c 0,-1.2 -0.9,-2.1 -2.1,-2.1 l 0,0 c -1.2,0 -2.1,0.9 -2.1,2.1 l 0,0 z"/>
-            <path class="leaves" d="m 147.1,145.7 c 0,0.7 0.5,1.2 1.2,1.2 l 0,0 c 0.7,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.7 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.6,0 -1.2,0.5 -1.2,1.2 l 0,0 z"/>
-            <path class="leaves" d="m 139.1,148.4 c 0,0.7 0.5,1.2 1.2,1.2 l 0,0 c 0.7,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.7 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.6,0 -1.2,0.5 -1.2,1.2 l 0,0 z"/>
-            <polygon class="root" points="113.7,152.4 113.8,147.7 114.3,152.4 "/>
-            <polygon class="root" points="104.9,152.4 105.2,149 105.5,152.4 "/>
-            <polygon class="root" points="100.4,152.4 100.7,144.6 101.4,152.4 "/>
-            <polygon class="root" points="148.7,147.6 148.4,145.7 148.2,147.8 "/>
-            <polygon class="root" points="140.3,148.9 139.9,153.1 140.7,153.1 "/>
-            <polygon class="root" points="134.9,153.1 135.1,150 135.3,153.1 "/>
-            <polygon class="root" points="89.4,152.7 89.4,150.4 89.1,152.7 "/>
+            <path class="leaves" d="m 111.6,147.5 c 0,1.2 0.9,2.1 2.1,2.1 l 0,0 c 1.2,0 2.1,-0.9 2.1,-2.1 l 0,0 c 0,-1.2 -0.9,-2.1 -2.1,-2.1 l 0,0 c -1.2,0 -2.1,0.9 -2.1,2.1 l 0,0 z"></path>
+            <path class="leaves" d="m 98.6,144.6 c 0,1.2 0.9,2.1 2.1,2.1 l 0,0 c 1.2,0 2.1,-0.9 2.1,-2.1 l 0,0 c 0,-1.2 -0.9,-2.1 -2.1,-2.1 l 0,0 c -1.2,0.1 -2.1,1 -2.1,2.1 l 0,0 z"></path>
+            <path class="leaves" d="m 103.1,149.2 c 0,1.2 0.9,2.1 2.1,2.1 l 0,0 c 1.2,0 2.1,-0.9 2.1,-2.1 l 0,0 c 0,-1.2 -0.9,-2.1 -2.1,-2.1 l 0,0 c -1.1,0 -2.1,0.9 -2.1,2.1 l 0,0 z"></path>
+            <path class="leaves" d="m 88.2,150.4 c 0,0.7 0.5,1.2 1.2,1.2 l 0,0 c 0.7,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.7 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.6,0 -1.2,0.5 -1.2,1.2 l 0,0 z"></path>
+            <path class="leaves" d="m 133,150.2 c 0,1.2 0.9,2.1 2.1,2.1 l 0,0 c 1.2,0 2.1,-0.9 2.1,-2.1 l 0,0 c 0,-1.2 -0.9,-2.1 -2.1,-2.1 l 0,0 c -1.2,0 -2.1,0.9 -2.1,2.1 l 0,0 z"></path>
+            <path class="leaves" d="m 147.1,145.7 c 0,0.7 0.5,1.2 1.2,1.2 l 0,0 c 0.7,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.7 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.6,0 -1.2,0.5 -1.2,1.2 l 0,0 z"></path>
+            <path class="leaves" d="m 139.1,148.4 c 0,0.7 0.5,1.2 1.2,1.2 l 0,0 c 0.7,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.7 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.6,0 -1.2,0.5 -1.2,1.2 l 0,0 z"></path>
+            <polygon class="root" points="113.7,152.4 113.8,147.7 114.3,152.4 "></polygon>
+            <polygon class="root" points="104.9,152.4 105.2,149 105.5,152.4 "></polygon>
+            <polygon class="root" points="100.4,152.4 100.7,144.6 101.4,152.4 "></polygon>
+            <polygon class="root" points="148.7,147.6 148.4,145.7 148.2,147.8 "></polygon>
+            <polygon class="root" points="140.3,148.9 139.9,153.1 140.7,153.1 "></polygon>
+            <polygon class="root" points="134.9,153.1 135.1,150 135.3,153.1 "></polygon>
+            <polygon class="root" points="89.4,152.7 89.4,150.4 89.1,152.7 "></polygon>
         </g>
         <g class="flower red 2">
-            <path class="leaves" d="m 258.3,139.9 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1,0 -1.9,0.8 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 246.4,137.3 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.1,-0.1 -1.9,0.8 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 250.5,141.4 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 239.6,142 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.1,-0.1 -1.9,0.8 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 263.2,141.4 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 256.1,137.5 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 256.2,142.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 245.2,140.3 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 236.8,142.6 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,-0.1 -1.1,0.4 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 287.3,143.7 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 300.3,139.6 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 292.9,142.1 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <polygon class="root" points="265.3,144.9 264.8,144.9 265.1,142.3 "/>
-            <polygon class="root" points="260.3,144.4 260.4,140 260.8,144.4 "/>
-            <polygon class="root" points="257.6,144.7 257.3,142.8 257.2,144.7 "/>
-            <polygon class="root" points="257.3,141.3 257.2,137.5 257,141.3 "/>
-            <polygon class="root" points="252.2,144.4 252.5,141.3 252.8,144.4 "/>
-            <polygon class="root" points="248,144.4 248.3,137.3 249,144.4 "/>
-            <polygon class="root" points="246.3,140.8 246,144.7 246.7,144.7 "/>
-            <polygon class="root" points="241.4,144.7 241.5,141.8 241.7,144.7 "/>
-            <polygon class="root" points="301.8,141.5 301.4,139.6 301.3,141.5 "/>
-            <polygon class="root" points="294,142.6 293.7,146.4 294.4,146.4 "/>
-            <polygon class="root" points="289.1,146.4 289.2,143.6 289.4,146.4 "/>
-            <polygon class="root" points="237.9,144.7 237.9,142.6 237.6,144.7 "/>
+            <path class="leaves" d="m 258.3,139.9 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1,0 -1.9,0.8 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 246.4,137.3 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.1,-0.1 -1.9,0.8 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 250.5,141.4 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 239.6,142 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.1,-0.1 -1.9,0.8 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 263.2,141.4 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 256.1,137.5 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 256.2,142.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 245.2,140.3 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 236.8,142.6 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,-0.1 -1.1,0.4 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 287.3,143.7 c 0,1.1 0.9,1.9 1.9,1.9 l 0,0 c 1.1,0 1.9,-0.9 1.9,-1.9 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.1,0 -1.9,0.9 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 300.3,139.6 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 292.9,142.1 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <polygon class="root" points="265.3,144.9 264.8,144.9 265.1,142.3 "></polygon>
+            <polygon class="root" points="260.3,144.4 260.4,140 260.8,144.4 "></polygon>
+            <polygon class="root" points="257.6,144.7 257.3,142.8 257.2,144.7 "></polygon>
+            <polygon class="root" points="257.3,141.3 257.2,137.5 257,141.3 "></polygon>
+            <polygon class="root" points="252.2,144.4 252.5,141.3 252.8,144.4 "></polygon>
+            <polygon class="root" points="248,144.4 248.3,137.3 249,144.4 "></polygon>
+            <polygon class="root" points="246.3,140.8 246,144.7 246.7,144.7 "></polygon>
+            <polygon class="root" points="241.4,144.7 241.5,141.8 241.7,144.7 "></polygon>
+            <polygon class="root" points="301.8,141.5 301.4,139.6 301.3,141.5 "></polygon>
+            <polygon class="root" points="294,142.6 293.7,146.4 294.4,146.4 "></polygon>
+            <polygon class="root" points="289.1,146.4 289.2,143.6 289.4,146.4 "></polygon>
+            <polygon class="root" points="237.9,144.7 237.9,142.6 237.6,144.7 "></polygon>
         </g>
         <g class="flower red 3">
-            <path style="fill:#e87464" inkscape:connector-curvature="0" id="path519" d="m 354.4,146.7 c 0,0.8 -0.7,1.5 -1.5,1.5 l 0,0 c -0.8,0 -1.5,-0.7 -1.5,-1.5 l 0,0 c 0,-0.8 0.7,-1.5 1.5,-1.5 l 0,0 c 0.8,0 1.5,0.7 1.5,1.5 l 0,0 z"/>
-            <path style="fill:#e87464" inkscape:connector-curvature="0" id="path525" d="m 364,146.7 c 0,0.8 -0.7,1.5 -1.5,1.5 l 0,0 c -0.8,0 -1.5,-0.7 -1.5,-1.5 l 0,0 c 0,-0.8 0.7,-1.5 1.5,-1.5 l 0,0 c 0.8,0 1.5,0.7 1.5,1.5 l 0,0 z"/>
-            <path style="fill:#e87464" inkscape:connector-curvature="0" id="path531" d="m 372.3,147.1 c 0,0.8 -0.7,1.5 -1.5,1.5 l 0,0 c -0.8,0 -1.5,-0.7 -1.5,-1.5 l 0,0 c 0,-0.8 0.7,-1.5 1.5,-1.5 l 0,0 c 0.8,0 1.5,0.7 1.5,1.5 l 0,0 z"/>
-            <path style="fill:#e87464" inkscape:connector-curvature="0" id="path537" d="m 367.1,143.5 c 0,0.8 -0.7,1.5 -1.5,1.5 l 0,0 c -0.8,0 -1.5,-0.7 -1.5,-1.5 l 0,0 c 0,-0.8 0.7,-1.5 1.5,-1.5 l 0,0 c 0.9,0.1 1.5,0.7 1.5,1.5 l 0,0 z"/>
-            <polygon style="fill:#82bf73" id="polygon533" points="370.9,149.2 370.8,147 370.7,149.2 "/>
-            <polygon style="fill:#82bf73" id="polygon521" points="352.7,149.3 353.1,149.3 352.9,147.4 "/>
-            <polygon style="fill:#82bf73" id="polygon527" points="362.7,149 362.5,146.6 362.3,149 "/>
-            <polygon style="fill:#82bf73" id="polygon539" points="365.9,149 365.7,143.5 365.2,149 "/>
+            <path style="fill:#e87464" inkscape:connector-curvature="0" id="path519" d="m 354.4,146.7 c 0,0.8 -0.7,1.5 -1.5,1.5 l 0,0 c -0.8,0 -1.5,-0.7 -1.5,-1.5 l 0,0 c 0,-0.8 0.7,-1.5 1.5,-1.5 l 0,0 c 0.8,0 1.5,0.7 1.5,1.5 l 0,0 z"></path>
+            <path style="fill:#e87464" inkscape:connector-curvature="0" id="path525" d="m 364,146.7 c 0,0.8 -0.7,1.5 -1.5,1.5 l 0,0 c -0.8,0 -1.5,-0.7 -1.5,-1.5 l 0,0 c 0,-0.8 0.7,-1.5 1.5,-1.5 l 0,0 c 0.8,0 1.5,0.7 1.5,1.5 l 0,0 z"></path>
+            <path style="fill:#e87464" inkscape:connector-curvature="0" id="path531" d="m 372.3,147.1 c 0,0.8 -0.7,1.5 -1.5,1.5 l 0,0 c -0.8,0 -1.5,-0.7 -1.5,-1.5 l 0,0 c 0,-0.8 0.7,-1.5 1.5,-1.5 l 0,0 c 0.8,0 1.5,0.7 1.5,1.5 l 0,0 z"></path>
+            <path style="fill:#e87464" inkscape:connector-curvature="0" id="path537" d="m 367.1,143.5 c 0,0.8 -0.7,1.5 -1.5,1.5 l 0,0 c -0.8,0 -1.5,-0.7 -1.5,-1.5 l 0,0 c 0,-0.8 0.7,-1.5 1.5,-1.5 l 0,0 c 0.9,0.1 1.5,0.7 1.5,1.5 l 0,0 z"></path>
+            <polygon style="fill:#82bf73" id="polygon533" points="370.9,149.2 370.8,147 370.7,149.2 "></polygon>
+            <polygon style="fill:#82bf73" id="polygon521" points="352.7,149.3 353.1,149.3 352.9,147.4 "></polygon>
+            <polygon style="fill:#82bf73" id="polygon527" points="362.7,149 362.5,146.6 362.3,149 "></polygon>
+            <polygon style="fill:#82bf73" id="polygon539" points="365.9,149 365.7,143.5 365.2,149 "></polygon>
         </g>
         <g class="flower red 4">
-            <path class="leaves" d="m 499.8,142 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.7,0 -1.4,0.6 -1.4,1.4 l 0,0 z"/>
-            <path class="leaves" d="m 490.6,142 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.6 -1.4,1.4 l 0,0 z"/>
-            <path class="leaves" d="m 487.6,139 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.6 -1.4,1.4 l 0,0 z"/>
-            <path class="leaves" d="m 482.6,142.4 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.6 -1.4,1.4 l 0,0 z"/>
-            <polygon class="root" points="491.8,144.2 492,141.9 492.2,144.2 "/>
-            <polygon class="root" points="488.8,144.2 489,139 489.5,144.2 "/>
-            <polygon class="root" points="501.4,144.5 501,144.5 501.3,142.6 "/>
-            <polygon class="root" points="483.9,144.4 484,142.3 484.2,144.4 "/>                
+            <path class="leaves" d="m 499.8,142 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.7,0 -1.4,0.6 -1.4,1.4 l 0,0 z"></path>
+            <path class="leaves" d="m 490.6,142 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.6 -1.4,1.4 l 0,0 z"></path>
+            <path class="leaves" d="m 487.6,139 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.6 -1.4,1.4 l 0,0 z"></path>
+            <path class="leaves" d="m 482.6,142.4 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.6 -1.4,1.4 l 0,0 z"></path>
+            <polygon class="root" points="491.8,144.2 492,141.9 492.2,144.2 "></polygon>
+            <polygon class="root" points="488.8,144.2 489,139 489.5,144.2 "></polygon>
+            <polygon class="root" points="501.4,144.5 501,144.5 501.3,142.6 "></polygon>
+            <polygon class="root" points="483.9,144.4 484,142.3 484.2,144.4 "></polygon>                
         </g>
         <g class="flower red 5">
-            <path class="leaves" d="m 648,137.6 c 0,1.1 0.9,2 1.9,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0.1 -1.9,0.9 -1.9,2 l 0,0 z"/>
-            <path class="leaves" d="m 635.9,135 c 0,1.1 0.9,2 1.9,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-1.9 -2,-1.9 l 0,0 c -1,-0.1 -1.9,0.8 -1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 640.1,139.2 c 0,1.1 0.9,2 1.9,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1,0 -1.9,0.9 -1.9,2 l 0,0 z"/>
-            <path class="leaves" d="m 629.1,139.7 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 1.9,-0.9 1.9,-2 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.2,0 -2,0.8 -2,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 652.9,139.2 c 0,1.1 0.9,2 1.9,2 l 0,0 c 1.1,0 1.9,-0.9 1.9,-2 l 0,0 c 0,-1.1 -0.9,-2 -1.9,-2 l 0,0 c -1.1,0 -1.9,0.9 -1.9,2 l 0,0 z"/>
-            <path class="leaves" d="m 645.7,135.2 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 645.8,140.5 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 634.8,138 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 626.3,140.3 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 736.4,139.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 723.3,139 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 1.9,-0.9 1.9,-2 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.2,0 -2,0.8 -2,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 729,137.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,-0.1 -1.1,0.4 -1.1,1.1 l 0,0 z"/>
-            <polygon class="root" points="655,142.6 654.5,142.6 654.8,140 "/>
-            <polygon class="root" points="649.9,142.2 650,137.8 650.4,142.2 "/>
-            <polygon class="root" points="647.3,142.4 647,140.5 646.8,142.4 "/>
-            <polygon class="root" points="647,139 646.8,135.2 646.6,139 "/>
-            <polygon class="root" points="641.8,142.2 642.1,139 642.4,142.2 "/>
-            <polygon class="root" points="637.6,142.2 637.9,135 638.5,142.2 "/>
-            <polygon class="root" points="635.9,138.6 635.5,142.4 636.2,142.4 "/>
-            <polygon class="root" points="630.9,142.4 631,139.6 631.2,142.4 "/>
-            <polygon class="root" points="627.4,142.4 627.4,140.3 627.1,142.4 "/>
-            <polygon class="root" points="737.9,141.8 737.6,139.9 737.4,141.8 "/>
-            <polygon class="root" points="730.1,137.9 729.7,141.8 730.4,141.8 "/>
-            <polygon class="root" points="725.1,141.8 725.2,138.9 725.4,141.8 "/>
+            <path class="leaves" d="m 648,137.6 c 0,1.1 0.9,2 1.9,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0.1 -1.9,0.9 -1.9,2 l 0,0 z"></path>
+            <path class="leaves" d="m 635.9,135 c 0,1.1 0.9,2 1.9,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-1.9 -2,-1.9 l 0,0 c -1,-0.1 -1.9,0.8 -1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 640.1,139.2 c 0,1.1 0.9,2 1.9,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1,0 -1.9,0.9 -1.9,2 l 0,0 z"></path>
+            <path class="leaves" d="m 629.1,139.7 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 1.9,-0.9 1.9,-2 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.2,0 -2,0.8 -2,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 652.9,139.2 c 0,1.1 0.9,2 1.9,2 l 0,0 c 1.1,0 1.9,-0.9 1.9,-2 l 0,0 c 0,-1.1 -0.9,-2 -1.9,-2 l 0,0 c -1.1,0 -1.9,0.9 -1.9,2 l 0,0 z"></path>
+            <path class="leaves" d="m 645.7,135.2 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 645.8,140.5 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 634.8,138 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 626.3,140.3 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 736.4,139.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 723.3,139 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 1.9,-0.9 1.9,-2 l 0,0 c 0,-1.1 -0.9,-1.9 -1.9,-1.9 l 0,0 c -1.2,0 -2,0.8 -2,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 729,137.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,-0.1 -1.1,0.4 -1.1,1.1 l 0,0 z"></path>
+            <polygon class="root" points="655,142.6 654.5,142.6 654.8,140 "></polygon>
+            <polygon class="root" points="649.9,142.2 650,137.8 650.4,142.2 "></polygon>
+            <polygon class="root" points="647.3,142.4 647,140.5 646.8,142.4 "></polygon>
+            <polygon class="root" points="647,139 646.8,135.2 646.6,139 "></polygon>
+            <polygon class="root" points="641.8,142.2 642.1,139 642.4,142.2 "></polygon>
+            <polygon class="root" points="637.6,142.2 637.9,135 638.5,142.2 "></polygon>
+            <polygon class="root" points="635.9,138.6 635.5,142.4 636.2,142.4 "></polygon>
+            <polygon class="root" points="630.9,142.4 631,139.6 631.2,142.4 "></polygon>
+            <polygon class="root" points="627.4,142.4 627.4,140.3 627.1,142.4 "></polygon>
+            <polygon class="root" points="737.9,141.8 737.6,139.9 737.4,141.8 "></polygon>
+            <polygon class="root" points="730.1,137.9 729.7,141.8 730.4,141.8 "></polygon>
+            <polygon class="root" points="725.1,141.8 725.2,138.9 725.4,141.8 "></polygon>
         </g>
         <g class="flower red 6">
-            <path class="leaves" d="m 148.8,325.4 c 0,0.9 -0.7,1.6 -1.6,1.6 l 0,0 c -0.9,0 -1.6,-0.7 -1.6,-1.6 l 0,0 c 0,-0.9 0.7,-1.6 1.6,-1.6 l 0,0 c 0.9,0 1.6,0.7 1.6,1.6 l 0,0 z"/>
-            <path class="leaves" d="m 158.7,323.2 c 0,0.9 -0.7,1.6 -1.6,1.6 l 0,0 c -0.9,0 -1.6,-0.7 -1.6,-1.6 l 0,0 c 0,-0.9 0.7,-1.6 1.6,-1.6 l 0,0 c 0.9,0 1.6,0.8 1.6,1.6 l 0,0 z"/>
-            <path class="leaves" d="m 155.2,326.7 c 0,0.9 -0.7,1.6 -1.6,1.6 l 0,0 c -0.9,0 -1.6,-0.7 -1.6,-1.6 l 0,0 c 0,-0.9 0.7,-1.6 1.6,-1.6 l 0,0 c 0.9,0 1.6,0.7 1.6,1.6 l 0,0 z"/>
-            <path class="leaves" d="m 166.6,327.6 c 0,0.5 -0.4,0.9 -0.9,0.9 l 0,0 c -0.5,0 -0.9,-0.4 -0.9,-0.9 l 0,0 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 0,0 c 0.5,0 0.9,0.4 0.9,0.9 l 0,0 z"/>
-            <path class="leaves" d="m 132.5,327.4 c 0,0.9 -0.7,1.6 -1.6,1.6 l 0,0 c -0.9,0 -1.6,-0.7 -1.6,-1.6 l 0,0 c 0,-0.9 0.7,-1.6 1.6,-1.6 l 0,0 c 0.9,0 1.6,0.8 1.6,1.6 l 0,0 z"/>
-            <path class="leaves" d="m 127.9,326.1 c 0,0.5 -0.4,0.9 -0.9,0.9 l 0,0 c -0.5,0 -0.9,-0.4 -0.9,-0.9 l 0,0 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 0,0 c 0.4,0 0.9,0.4 0.9,0.9 l 0,0 z"/>
-            <polygon class="root" points="147.2,329.2 147.1,325.5 146.8,329.2 "/>
-            <polygon class="root" points="153.9,329.2 153.7,326.6 153.4,329.2 "/>
-            <polygon class="root" points="157.3,329.2 157.1,323.2 156.5,329.2 "/>
-            <polygon class="root" points="127,326.5 127.3,329.7 126.7,329.7 "/>
-            <polygon class="root" points="131,329.7 130.9,327.3 130.8,329.7 "/>
-            <polygon class="root" points="165.7,329.4 165.7,327.6 165.9,329.4 "/>
+            <path class="leaves" d="m 148.8,325.4 c 0,0.9 -0.7,1.6 -1.6,1.6 l 0,0 c -0.9,0 -1.6,-0.7 -1.6,-1.6 l 0,0 c 0,-0.9 0.7,-1.6 1.6,-1.6 l 0,0 c 0.9,0 1.6,0.7 1.6,1.6 l 0,0 z"></path>
+            <path class="leaves" d="m 158.7,323.2 c 0,0.9 -0.7,1.6 -1.6,1.6 l 0,0 c -0.9,0 -1.6,-0.7 -1.6,-1.6 l 0,0 c 0,-0.9 0.7,-1.6 1.6,-1.6 l 0,0 c 0.9,0 1.6,0.8 1.6,1.6 l 0,0 z"></path>
+            <path class="leaves" d="m 155.2,326.7 c 0,0.9 -0.7,1.6 -1.6,1.6 l 0,0 c -0.9,0 -1.6,-0.7 -1.6,-1.6 l 0,0 c 0,-0.9 0.7,-1.6 1.6,-1.6 l 0,0 c 0.9,0 1.6,0.7 1.6,1.6 l 0,0 z"></path>
+            <path class="leaves" d="m 166.6,327.6 c 0,0.5 -0.4,0.9 -0.9,0.9 l 0,0 c -0.5,0 -0.9,-0.4 -0.9,-0.9 l 0,0 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 0,0 c 0.5,0 0.9,0.4 0.9,0.9 l 0,0 z"></path>
+            <path class="leaves" d="m 132.5,327.4 c 0,0.9 -0.7,1.6 -1.6,1.6 l 0,0 c -0.9,0 -1.6,-0.7 -1.6,-1.6 l 0,0 c 0,-0.9 0.7,-1.6 1.6,-1.6 l 0,0 c 0.9,0 1.6,0.8 1.6,1.6 l 0,0 z"></path>
+            <path class="leaves" d="m 127.9,326.1 c 0,0.5 -0.4,0.9 -0.9,0.9 l 0,0 c -0.5,0 -0.9,-0.4 -0.9,-0.9 l 0,0 c 0,-0.5 0.4,-0.9 0.9,-0.9 l 0,0 c 0.4,0 0.9,0.4 0.9,0.9 l 0,0 z"></path>
+            <polygon class="root" points="147.2,329.2 147.1,325.5 146.8,329.2 "></polygon>
+            <polygon class="root" points="153.9,329.2 153.7,326.6 153.4,329.2 "></polygon>
+            <polygon class="root" points="157.3,329.2 157.1,323.2 156.5,329.2 "></polygon>
+            <polygon class="root" points="127,326.5 127.3,329.7 126.7,329.7 "></polygon>
+            <polygon class="root" points="131,329.7 130.9,327.3 130.8,329.7 "></polygon>
+            <polygon class="root" points="165.7,329.4 165.7,327.6 165.9,329.4 "></polygon>
         </g>
         <g class="flower red 7">
-            <path class="leaves" d="m 281.7,327.9 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.9 2,2 l 0,0 z"/>
-            <path class="leaves" d="m 294,325.2 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.8 2,2 l 0,0 z"/>
-            <path class="leaves" d="m 289.7,329.5 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.9 2,2 l 0,0 z"/>
-            <path class="leaves" d="m 301.1,330 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.9 2,2 l 0,0 z"/>
-            <path class="leaves" d="m 276.7,329.5 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.9 2,2 l 0,0 z"/>
-            <path class="leaves" d="m 284,325.4 c 0,0.6 -0.5,1.2 -1.2,1.2 l 0,0 c -0.6,0 -1.2,-0.5 -1.2,-1.2 l 0,0 c 0,-0.6 0.5,-1.2 1.2,-1.2 l 0,0 c 0.7,0.1 1.2,0.6 1.2,1.2 l 0,0 z"/>
-            <path class="leaves" d="m 283.9,330.8 c 0,0.6 -0.5,1.2 -1.2,1.2 l 0,0 c -0.6,0 -1.2,-0.5 -1.2,-1.2 l 0,0 c 0,-0.6 0.5,-1.2 1.2,-1.2 l 0,0 c 0.6,0.1 1.2,0.6 1.2,1.2 l 0,0 z"/>
-            <path class="leaves" d="m 295.2,328.3 c 0,0.6 -0.5,1.2 -1.2,1.2 l 0,0 c -0.6,0 -1.2,-0.5 -1.2,-1.2 l 0,0 c 0,-0.6 0.5,-1.2 1.2,-1.2 l 0,0 c 0.7,0.1 1.2,0.6 1.2,1.2 l 0,0 z"/>
-            <path class="leaves" d="m 303.9,330.6 c 0,0.6 -0.5,1.2 -1.2,1.2 l 0,0 c -0.6,0 -1.2,-0.5 -1.2,-1.2 l 0,0 c 0,-0.6 0.5,-1.2 1.2,-1.2 l 0,0 c 0.7,0.1 1.2,0.6 1.2,1.2 l 0,0 z"/>
-            <path class="leaves" d="m 222.5,326.5 c 0,0.6 0.5,1.2 1.2,1.2 l 0,0 c 0.6,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.6 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.7,0.1 -1.2,0.6 -1.2,1.2 l 0,0 z"/>
-            <path class="leaves" d="m 207.4,329.1 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"/>
-            <path class="leaves" d="m 213.3,327.4 c 0,0.6 0.5,1.2 1.2,1.2 l 0,0 c 0.6,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.6 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.7,0 -1.2,0.6 -1.2,1.2 l 0,0 z"/>
-            <polygon class="root" points="275,333 274.7,330.3 274.4,333 "/>
-            <polygon class="root" points="279.5,328 279.1,332.5 279.7,332.5 "/>
-            <polygon class="root" points="282.7,330.8 282.8,332.8 282.4,332.8 "/>
-            <polygon class="root" points="282.8,325.4 283.1,329.3 282.7,329.3 "/>
-            <polygon class="root" points="287.7,329.3 287.4,332.5 288,332.5 "/>
-            <polygon class="root" points="292,325.2 291.3,332.5 292.3,332.5 "/>
-            <polygon class="root" points="294.4,332.8 293.7,332.8 294.1,328.8 "/>
-            <polygon class="root" points="299.1,329.9 298.9,332.8 299.2,332.8 "/>
-            <polygon class="root" points="302.8,330.6 303.1,332.8 302.8,332.8 "/>
-            <polygon class="root" points="223.6,326.5 223.5,328.5 224,328.5 "/>
-            <polygon class="root" points="214,331.9 214.8,331.9 214.4,327.9 "/>
-            <polygon class="root" points="209.4,328.9 209.6,331.9 209.3,331.9 "/>
+            <path class="leaves" d="m 281.7,327.9 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.9 2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 294,325.2 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.8 2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 289.7,329.5 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.9 2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 301.1,330 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.9 2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 276.7,329.5 c 0,1.1 -0.9,2 -2,2 l 0,0 c -1.1,0 -2,-0.9 -2,-2 l 0,0 c 0,-1.1 0.9,-2 2,-2 l 0,0 c 1.1,0 2,0.9 2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 284,325.4 c 0,0.6 -0.5,1.2 -1.2,1.2 l 0,0 c -0.6,0 -1.2,-0.5 -1.2,-1.2 l 0,0 c 0,-0.6 0.5,-1.2 1.2,-1.2 l 0,0 c 0.7,0.1 1.2,0.6 1.2,1.2 l 0,0 z"></path>
+            <path class="leaves" d="m 283.9,330.8 c 0,0.6 -0.5,1.2 -1.2,1.2 l 0,0 c -0.6,0 -1.2,-0.5 -1.2,-1.2 l 0,0 c 0,-0.6 0.5,-1.2 1.2,-1.2 l 0,0 c 0.6,0.1 1.2,0.6 1.2,1.2 l 0,0 z"></path>
+            <path class="leaves" d="m 295.2,328.3 c 0,0.6 -0.5,1.2 -1.2,1.2 l 0,0 c -0.6,0 -1.2,-0.5 -1.2,-1.2 l 0,0 c 0,-0.6 0.5,-1.2 1.2,-1.2 l 0,0 c 0.7,0.1 1.2,0.6 1.2,1.2 l 0,0 z"></path>
+            <path class="leaves" d="m 303.9,330.6 c 0,0.6 -0.5,1.2 -1.2,1.2 l 0,0 c -0.6,0 -1.2,-0.5 -1.2,-1.2 l 0,0 c 0,-0.6 0.5,-1.2 1.2,-1.2 l 0,0 c 0.7,0.1 1.2,0.6 1.2,1.2 l 0,0 z"></path>
+            <path class="leaves" d="m 222.5,326.5 c 0,0.6 0.5,1.2 1.2,1.2 l 0,0 c 0.6,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.6 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.7,0.1 -1.2,0.6 -1.2,1.2 l 0,0 z"></path>
+            <path class="leaves" d="m 207.4,329.1 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 213.3,327.4 c 0,0.6 0.5,1.2 1.2,1.2 l 0,0 c 0.6,0 1.2,-0.5 1.2,-1.2 l 0,0 c 0,-0.6 -0.5,-1.2 -1.2,-1.2 l 0,0 c -0.7,0 -1.2,0.6 -1.2,1.2 l 0,0 z"></path>
+            <polygon class="root" points="275,333 274.7,330.3 274.4,333 "></polygon>
+            <polygon class="root" points="279.5,328 279.1,332.5 279.7,332.5 "></polygon>
+            <polygon class="root" points="282.7,330.8 282.8,332.8 282.4,332.8 "></polygon>
+            <polygon class="root" points="282.8,325.4 283.1,329.3 282.7,329.3 "></polygon>
+            <polygon class="root" points="287.7,329.3 287.4,332.5 288,332.5 "></polygon>
+            <polygon class="root" points="292,325.2 291.3,332.5 292.3,332.5 "></polygon>
+            <polygon class="root" points="294.4,332.8 293.7,332.8 294.1,328.8 "></polygon>
+            <polygon class="root" points="299.1,329.9 298.9,332.8 299.2,332.8 "></polygon>
+            <polygon class="root" points="302.8,330.6 303.1,332.8 302.8,332.8 "></polygon>
+            <polygon class="root" points="223.6,326.5 223.5,328.5 224,328.5 "></polygon>
+            <polygon class="root" points="214,331.9 214.8,331.9 214.4,327.9 "></polygon>
+            <polygon class="root" points="209.4,328.9 209.6,331.9 209.3,331.9 "></polygon>
         </g>
         <g class="flower red 8">
-            <path class="leaves" d="m 514.2,327.9 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0 1.3,0.6 1.3,1.3 l 0,0 z"/>
-            <path class="leaves" d="m 394.4,323.7 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,-0.1 -1.8,0.8 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 383,321.2 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -0.9,0 -1.8,0.8 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 387,325.2 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,-0.1 -1.8,0.7 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 376.6,325.7 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,-0.1 -1.8,0.7 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 399,325.2 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -0.9,-0.1 -1.8,0.7 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 392.3,321.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 392.4,326.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 382,324.1 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 374,326.2 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 421.9,327.3 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,0 -1.8,0.8 -1.8,1.8 l 0,0 z"/>
-            <path class="leaves" d="m 434.3,323.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 427.3,325.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <polygon class="root" points="513.1,332.7 512.9,327.9 512.5,332.7 "/>
-            <polygon class="root" points="401.1,328.4 400.6,328.4 400.9,326 "/>
-            <polygon class="root" points="396.3,328 396.4,323.8 396.8,328 "/>
-            <polygon class="root" points="393.8,328.2 393.5,326.4 393.3,328.2 "/>
-            <polygon class="root" points="393.5,325 393.3,321.4 393.2,325 "/>
-            <polygon class="root" points="388.6,328 388.9,325 389.1,328 "/>
-            <polygon class="root" points="384.6,328 384.9,321.2 385.5,328 "/>
-            <polygon class="root" points="383,324.6 382.7,328.2 383.4,328.2 "/>
-            <polygon class="root" points="378.3,328.2 378.4,325.5 378.6,328.2 "/>
-            <polygon class="root" points="435.7,325.2 435.4,323.4 435.3,325.2 "/>
-            <polygon class="root" points="428.4,326.3 428,329.9 428.7,329.9 "/>
-            <polygon class="root" points="423.6,329.9 423.8,327.2 424,329.9 "/>
-            <polygon class="root" points="375,328.2 375,326.2 374.7,328.2 "/>
+            <path class="leaves" d="m 514.2,327.9 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0 1.3,0.6 1.3,1.3 l 0,0 z"></path>
+            <path class="leaves" d="m 394.4,323.7 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,-0.1 -1.8,0.8 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 383,321.2 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -0.9,0 -1.8,0.8 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 387,325.2 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,-0.1 -1.8,0.7 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 376.6,325.7 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,-0.1 -1.8,0.7 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 399,325.2 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -0.9,-0.1 -1.8,0.7 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 392.3,321.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 392.4,326.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 382,324.1 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 374,326.2 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 421.9,327.3 c 0,1 0.8,1.8 1.8,1.8 l 0,0 c 1,0 1.8,-0.8 1.8,-1.8 l 0,0 c 0,-1 -0.8,-1.8 -1.8,-1.8 l 0,0 c -1,0 -1.8,0.8 -1.8,1.8 l 0,0 z"></path>
+            <path class="leaves" d="m 434.3,323.4 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 427.3,325.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <polygon class="root" points="513.1,332.7 512.9,327.9 512.5,332.7 "></polygon>
+            <polygon class="root" points="401.1,328.4 400.6,328.4 400.9,326 "></polygon>
+            <polygon class="root" points="396.3,328 396.4,323.8 396.8,328 "></polygon>
+            <polygon class="root" points="393.8,328.2 393.5,326.4 393.3,328.2 "></polygon>
+            <polygon class="root" points="393.5,325 393.3,321.4 393.2,325 "></polygon>
+            <polygon class="root" points="388.6,328 388.9,325 389.1,328 "></polygon>
+            <polygon class="root" points="384.6,328 384.9,321.2 385.5,328 "></polygon>
+            <polygon class="root" points="383,324.6 382.7,328.2 383.4,328.2 "></polygon>
+            <polygon class="root" points="378.3,328.2 378.4,325.5 378.6,328.2 "></polygon>
+            <polygon class="root" points="435.7,325.2 435.4,323.4 435.3,325.2 "></polygon>
+            <polygon class="root" points="428.4,326.3 428,329.9 428.7,329.9 "></polygon>
+            <polygon class="root" points="423.6,329.9 423.8,327.2 424,329.9 "></polygon>
+            <polygon class="root" points="375,328.2 375,326.2 374.7,328.2 "></polygon>
         </g>
         <g class="flower red 9">
-            <path class="leaves" d="m 551.6,330.8 c 0,0.9 -0.7,1.7 -1.7,1.7 l 0,0 c -0.9,0 -1.7,-0.7 -1.7,-1.7 l 0,0 c 0,-0.9 0.7,-1.7 1.7,-1.7 l 0,0 c 1,0.1 1.7,0.8 1.7,1.7 l 0,0 z"/>
-            <path class="leaves" d="m 562.4,330.8 c 0,0.9 -0.7,1.7 -1.7,1.7 l 0,0 c -0.9,0 -1.7,-0.7 -1.7,-1.7 l 0,0 c 0,-0.9 0.7,-1.7 1.7,-1.7 l 0,0 c 1,0.1 1.7,0.8 1.7,1.7 l 0,0 z"/>
-            <path class="leaves" d="m 566,327.3 c 0,0.9 -0.7,1.7 -1.7,1.7 l 0,0 c -0.9,0 -1.7,-0.7 -1.7,-1.7 l 0,0 c 0,-0.9 0.7,-1.7 1.7,-1.7 l 0,0 c 1,0 1.7,0.8 1.7,1.7 l 0,0 z"/>
-            <path class="leaves" d="m 571.8,331.3 c 0,0.9 -0.7,1.7 -1.7,1.7 l 0,0 c -0.9,0 -1.7,-0.7 -1.7,-1.7 l 0,0 c 0,-0.9 0.7,-1.7 1.7,-1.7 l 0,0 c 1,0 1.7,0.8 1.7,1.7 l 0,0 z"/>
-            <polygon class="root" points="564.6,333.4 564.3,327.3 563.8,333.4 "/>
-            <polygon class="root" points="561,333.4 560.8,330.7 560.5,333.4 "/>
-            <polygon class="root" points="549.8,333.8 550.2,333.8 550,331.6 "/>
-            <polygon class="root" points="570.3,333.6 570.2,331.2 570,333.6 "/>
+            <path class="leaves" d="m 551.6,330.8 c 0,0.9 -0.7,1.7 -1.7,1.7 l 0,0 c -0.9,0 -1.7,-0.7 -1.7,-1.7 l 0,0 c 0,-0.9 0.7,-1.7 1.7,-1.7 l 0,0 c 1,0.1 1.7,0.8 1.7,1.7 l 0,0 z"></path>
+            <path class="leaves" d="m 562.4,330.8 c 0,0.9 -0.7,1.7 -1.7,1.7 l 0,0 c -0.9,0 -1.7,-0.7 -1.7,-1.7 l 0,0 c 0,-0.9 0.7,-1.7 1.7,-1.7 l 0,0 c 1,0.1 1.7,0.8 1.7,1.7 l 0,0 z"></path>
+            <path class="leaves" d="m 566,327.3 c 0,0.9 -0.7,1.7 -1.7,1.7 l 0,0 c -0.9,0 -1.7,-0.7 -1.7,-1.7 l 0,0 c 0,-0.9 0.7,-1.7 1.7,-1.7 l 0,0 c 1,0 1.7,0.8 1.7,1.7 l 0,0 z"></path>
+            <path class="leaves" d="m 571.8,331.3 c 0,0.9 -0.7,1.7 -1.7,1.7 l 0,0 c -0.9,0 -1.7,-0.7 -1.7,-1.7 l 0,0 c 0,-0.9 0.7,-1.7 1.7,-1.7 l 0,0 c 1,0 1.7,0.8 1.7,1.7 l 0,0 z"></path>
+            <polygon class="root" points="564.6,333.4 564.3,327.3 563.8,333.4 "></polygon>
+            <polygon class="root" points="561,333.4 560.8,330.7 560.5,333.4 "></polygon>
+            <polygon class="root" points="549.8,333.8 550.2,333.8 550,331.6 "></polygon>
+            <polygon class="root" points="570.3,333.6 570.2,331.2 570,333.6 "></polygon>
         </g>
         <g class="flower red 10">
-            <path class="leaves" d="m 640.6,332 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0.1 1.3,0.6 1.3,1.3 l 0,0 z"/>
-            <path class="leaves" d="m 648.8,332 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0.1 1.3,0.6 1.3,1.3 l 0,0 z"/>
-            <path class="leaves" d="m 655.9,332.4 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0 1.3,0.6 1.3,1.3 l 0,0 z"/>
-            <path class="leaves" d="m 651.5,329.3 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0.1 1.3,0.6 1.3,1.3 l 0,0 z"/>
-            <polygon class="root" points="639.2,334.2 639.6,334.2 639.4,332.6 "/>
-            <polygon class="root" points="647.7,334 647.6,331.9 647.4,334 "/>
-            <polygon class="root" points="654.8,334.1 654.7,332.3 654.6,334.1 "/>
-            <polygon class="root" points="650.5,334 650.3,329.3 649.8,334 "/>
+            <path class="leaves" d="m 640.6,332 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0.1 1.3,0.6 1.3,1.3 l 0,0 z"></path>
+            <path class="leaves" d="m 648.8,332 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0.1 1.3,0.6 1.3,1.3 l 0,0 z"></path>
+            <path class="leaves" d="m 655.9,332.4 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0 1.3,0.6 1.3,1.3 l 0,0 z"></path>
+            <path class="leaves" d="m 651.5,329.3 c 0,0.7 -0.6,1.3 -1.3,1.3 l 0,0 c -0.7,0 -1.3,-0.6 -1.3,-1.3 l 0,0 c 0,-0.7 0.6,-1.3 1.3,-1.3 l 0,0 c 0.8,0.1 1.3,0.6 1.3,1.3 l 0,0 z"></path>
+            <polygon class="root" points="639.2,334.2 639.6,334.2 639.4,332.6 "></polygon>
+            <polygon class="root" points="647.7,334 647.6,331.9 647.4,334 "></polygon>
+            <polygon class="root" points="654.8,334.1 654.7,332.3 654.6,334.1 "></polygon>
+            <polygon class="root" points="650.5,334 650.3,329.3 649.8,334 "></polygon>
         </g>
         <g class="flower red 11">
-            <path class="leaves" d="m 104.2,585.1 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 116.2,582.5 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 112.1,586.6 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,0 1.9,0.9 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 125.8,587.8 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,-0.1 1.1,0.5 1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 84.4,587.6 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 71.3,583.4 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 78.8,585.9 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"/>
-            <polygon class="root" points="102.3,589.6 102.2,585.2 101.8,589.6 "/>
-            <polygon class="root" points="110.4,589.6 110.1,586.5 109.8,589.6 "/>
-            <polygon class="root" points="114.6,589.6 114.3,582.5 113.6,589.6 "/>
-            <polygon class="root" points="69.9,585.2 70.2,583.4 70.3,585.3 "/>
-            <polygon class="root" points="77.7,586.4 78,590.3 77.3,590.3 "/>
-            <polygon class="root" points="82.6,590.3 82.5,587.4 82.3,590.3 "/>
-            <polygon class="root" points="124.7,589.9 124.7,587.8 125,589.9 "/>
+            <path class="leaves" d="m 104.2,585.1 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 116.2,582.5 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 112.1,586.6 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,0 1.9,0.9 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 125.8,587.8 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,-0.1 1.1,0.5 1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 84.4,587.6 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 71.3,583.4 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 78.8,585.9 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"></path>
+            <polygon class="root" points="102.3,589.6 102.2,585.2 101.8,589.6 "></polygon>
+            <polygon class="root" points="110.4,589.6 110.1,586.5 109.8,589.6 "></polygon>
+            <polygon class="root" points="114.6,589.6 114.3,582.5 113.6,589.6 "></polygon>
+            <polygon class="root" points="69.9,585.2 70.2,583.4 70.3,585.3 "></polygon>
+            <polygon class="root" points="77.7,586.4 78,590.3 77.3,590.3 "></polygon>
+            <polygon class="root" points="82.6,590.3 82.5,587.4 82.3,590.3 "></polygon>
+            <polygon class="root" points="124.7,589.9 124.7,587.8 125,589.9 "></polygon>
         </g>
         <g class="flower red 13">
-            <path class="leaves" d="m 388.9,578.4 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"/>
-            <path class="leaves" d="m 376.7,575.7 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"/>
-            <path class="leaves" d="m 380.9,580 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"/>
-            <path class="leaves" d="m 369.7,580.5 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"/>
-            <path class="leaves" d="m 393.9,580 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"/>
-            <path class="leaves" d="m 386.6,575.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 386.7,581.3 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.5,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 375.5,578.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 366.9,581.1 c 0,0.6 0.5,1.2 1.1,1.2 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.2 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 418.5,582.3 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"/>
-            <path class="leaves" d="m 431.8,578.1 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.5,-0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 424.3,580.6 c 0,0.6 0.5,1.1 1.2,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0 -1.2,0.5 -1.2,1.1 l 0,0 z"/>
-            <polygon class="root" points="396.1,583.4 395.5,583.4 395.8,580.8 "/>
-            <polygon class="root" points="390.9,583 391,578.5 391.4,583 "/>
-            <polygon class="root" points="388.2,583.3 387.9,581.3 387.8,583.3 "/>
-            <polygon class="root" points="387.9,579.8 387.8,575.9 387.5,579.8 "/>
-            <polygon class="root" points="382.7,583 382.9,579.8 383.2,583 "/>
-            <polygon class="root" points="378.3,583 378.7,575.7 379.3,583 "/>
-            <polygon class="root" points="376.6,579.3 376.3,583.3 377,583.3 "/>
-            <polygon class="root" points="371.6,583.3 371.7,580.3 371.9,583.3 "/>
-            <polygon class="root" points="433.3,580 433,578.1 432.9,580 "/>
-            <polygon class="root" points="425.4,581.1 425,585.1 425.8,585.1 "/>
-            <polygon class="root" points="420.3,585.1 420.5,582.1 420.7,585.1 "/>
-            <polygon class="root" points="368,583.3 368,581.1 367.7,583.3 "/>
+            <path class="leaves" d="m 388.9,578.4 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 376.7,575.7 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 380.9,580 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 369.7,580.5 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 393.9,580 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 386.6,575.9 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 386.7,581.3 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.5,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 375.5,578.8 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 366.9,581.1 c 0,0.6 0.5,1.2 1.1,1.2 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.2 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.6,0 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 418.5,582.3 c 0,1.1 0.9,2 2,2 l 0,0 c 1.1,0 2,-0.9 2,-2 l 0,0 c 0,-1.1 -0.9,-2 -2,-2 l 0,0 c -1.1,0 -2,0.9 -2,2 l 0,0 z"></path>
+            <path class="leaves" d="m 431.8,578.1 c 0,0.6 0.5,1.1 1.1,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.5,-0.1 -1.1,0.5 -1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 424.3,580.6 c 0,0.6 0.5,1.1 1.2,1.1 l 0,0 c 0.6,0 1.1,-0.5 1.1,-1.1 l 0,0 c 0,-0.6 -0.5,-1.1 -1.1,-1.1 l 0,0 c -0.7,0 -1.2,0.5 -1.2,1.1 l 0,0 z"></path>
+            <polygon class="root" points="396.1,583.4 395.5,583.4 395.8,580.8 "></polygon>
+            <polygon class="root" points="390.9,583 391,578.5 391.4,583 "></polygon>
+            <polygon class="root" points="388.2,583.3 387.9,581.3 387.8,583.3 "></polygon>
+            <polygon class="root" points="387.9,579.8 387.8,575.9 387.5,579.8 "></polygon>
+            <polygon class="root" points="382.7,583 382.9,579.8 383.2,583 "></polygon>
+            <polygon class="root" points="378.3,583 378.7,575.7 379.3,583 "></polygon>
+            <polygon class="root" points="376.6,579.3 376.3,583.3 377,583.3 "></polygon>
+            <polygon class="root" points="371.6,583.3 371.7,580.3 371.9,583.3 "></polygon>
+            <polygon class="root" points="433.3,580 433,578.1 432.9,580 "></polygon>
+            <polygon class="root" points="425.4,581.1 425,585.1 425.8,585.1 "></polygon>
+            <polygon class="root" points="420.3,585.1 420.5,582.1 420.7,585.1 "></polygon>
+            <polygon class="root" points="368,583.3 368,581.1 367.7,583.3 "></polygon>
         </g>
         <g class="flower red 14">
-            <path class="leaves" d="m 531.6,578.1 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.6 -1.4,1.4 l 0,0 z"/>
-            <path class="leaves" d="m 522.3,578.1 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.7,0 -1.4,0.6 -1.4,1.4 l 0,0 z"/>
-            <path class="leaves" d="m 519.3,575 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.7 -1.4,1.4 l 0,0 z"/>
-            <path class="leaves" d="m 514.3,578.5 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.7,0 -1.4,0.6 -1.4,1.4 l 0,0 z"/>
-            <polygon class="root" points="532.7,580.6 533,578.7 533.1,580.6 "/>
-            <polygon class="root" points="523.7,578 524,580.3 523.6,580.3 "/>
-            <polygon class="root" points="520.7,575 521.2,580.3 520.5,580.3 "/>
-            <polygon class="root" points="515.7,578.4 515.9,580.5 515.6,580.5 "/>
+            <path class="leaves" d="m 531.6,578.1 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.6 -1.4,1.4 l 0,0 z"></path>
+            <path class="leaves" d="m 522.3,578.1 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.7,0 -1.4,0.6 -1.4,1.4 l 0,0 z"></path>
+            <path class="leaves" d="m 519.3,575 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.8,0 -1.4,0.7 -1.4,1.4 l 0,0 z"></path>
+            <path class="leaves" d="m 514.3,578.5 c 0,0.8 0.6,1.4 1.4,1.4 l 0,0 c 0.8,0 1.4,-0.6 1.4,-1.4 l 0,0 c 0,-0.8 -0.6,-1.4 -1.4,-1.4 l 0,0 c -0.7,0 -1.4,0.6 -1.4,1.4 l 0,0 z"></path>
+            <polygon class="root" points="532.7,580.6 533,578.7 533.1,580.6 "></polygon>
+            <polygon class="root" points="523.7,578 524,580.3 523.6,580.3 "></polygon>
+            <polygon class="root" points="520.7,575 521.2,580.3 520.5,580.3 "></polygon>
+            <polygon class="root" points="515.7,578.4 515.9,580.5 515.6,580.5 "></polygon>
         </g>
         <g class="flower red 15">
-            <path class="leaves" d="m 680,576.2 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,0 1.9,0.9 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 692,573.6 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,0 1.9,0.8 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 687.8,577.8 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 698.8,578.3 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,0 1.9,0.8 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 675.2,577.8 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 682.3,573.9 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,-0.1 1.1,0.4 1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 682.2,579.1 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 693.1,576.7 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,-0.1 1.1,0.4 1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 701.6,578.9 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 651.1,580.1 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"/>
-            <path class="leaves" d="m 638,575.9 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"/>
-            <path class="leaves" d="m 645.4,578.4 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"/>
-            <polygon class="root" points="673,581.2 673.6,581.2 673.3,578.6 "/>
-            <polygon class="root" points="678.1,580.8 678,576.4 677.6,580.8 "/>
-            <polygon class="root" points="680.7,581 681,579.1 681.2,581 "/>
-            <polygon class="root" points="681,577.6 681.2,573.9 681.4,577.6 "/>
-            <polygon class="root" points="686.2,580.8 685.9,577.6 685.6,580.8 "/>
-            <polygon class="root" points="690.4,580.8 690.1,573.6 689.4,580.8 "/>
-            <polygon class="root" points="692,577.2 692.4,581 691.7,581 "/>
-            <polygon class="root" points="697,581 696.9,578.2 696.7,581 "/>
-            <polygon class="root" points="636.6,577.8 636.9,575.9 637.1,577.8 "/>
-            <polygon class="root" points="644.3,578.9 644.7,582.8 644,582.8 "/>
-            <polygon class="root" points="649.3,582.8 649.2,579.9 649,582.8 "/>
-            <polygon class="root" points="700.4,581 700.4,578.9 700.8,581 "/>
+            <path class="leaves" d="m 680,576.2 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,0 1.9,0.9 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 692,573.6 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,0 1.9,0.8 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 687.8,577.8 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1.1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 698.8,578.3 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,0 1.9,0.8 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 675.2,577.8 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 682.3,573.9 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,-0.1 1.1,0.4 1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 682.2,579.1 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 693.1,576.7 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,-0.1 1.1,0.4 1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 701.6,578.9 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 651.1,580.1 c 0,1.1 -0.9,1.9 -1.9,1.9 l 0,0 c -1.1,0 -1.9,-0.9 -1.9,-1.9 l 0,0 c 0,-1.1 0.9,-1.9 1.9,-1.9 l 0,0 c 1,-0.1 1.9,0.8 1.9,1.9 l 0,0 z"></path>
+            <path class="leaves" d="m 638,575.9 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"></path>
+            <path class="leaves" d="m 645.4,578.4 c 0,0.6 -0.5,1.1 -1.1,1.1 l 0,0 c -0.6,0 -1.1,-0.5 -1.1,-1.1 l 0,0 c 0,-0.6 0.5,-1.1 1.1,-1.1 l 0,0 c 0.6,0 1.1,0.5 1.1,1.1 l 0,0 z"></path>
+            <polygon class="root" points="673,581.2 673.6,581.2 673.3,578.6 "></polygon>
+            <polygon class="root" points="678.1,580.8 678,576.4 677.6,580.8 "></polygon>
+            <polygon class="root" points="680.7,581 681,579.1 681.2,581 "></polygon>
+            <polygon class="root" points="681,577.6 681.2,573.9 681.4,577.6 "></polygon>
+            <polygon class="root" points="686.2,580.8 685.9,577.6 685.6,580.8 "></polygon>
+            <polygon class="root" points="690.4,580.8 690.1,573.6 689.4,580.8 "></polygon>
+            <polygon class="root" points="692,577.2 692.4,581 691.7,581 "></polygon>
+            <polygon class="root" points="697,581 696.9,578.2 696.7,581 "></polygon>
+            <polygon class="root" points="636.6,577.8 636.9,575.9 637.1,577.8 "></polygon>
+            <polygon class="root" points="644.3,578.9 644.7,582.8 644,582.8 "></polygon>
+            <polygon class="root" points="649.3,582.8 649.2,579.9 649,582.8 "></polygon>
+            <polygon class="root" points="700.4,581 700.4,578.9 700.8,581 "></polygon>
         </g>
     </g>
     <g class="lake">
         <g class="water">
             <g class="coast">
-                <path d="m 758.1,87.5 c -12.1,-1.4 -18.5,4.7 -19.2,8.2 -0.9,4.6 2,9.5 9.3,10.5 8.9,1.2 16.3,3.6 24.5,10.4 8.2,6.7 17.8,5.6 22.5,5.6 4.7,0 52.7,-4 55.3,-14.1 2.6,-10.1 -6.8,-19.5 -20.4,-19.5 -13.6,0 -33.6,-6.3 -42.4,-4.7 -15,2.7 -21.7,4.6 -29.6,3.6 z"/>
+                <path d="m 758.1,87.5 c -12.1,-1.4 -18.5,4.7 -19.2,8.2 -0.9,4.6 2,9.5 9.3,10.5 8.9,1.2 16.3,3.6 24.5,10.4 8.2,6.7 17.8,5.6 22.5,5.6 4.7,0 52.7,-4 55.3,-14.1 2.6,-10.1 -6.8,-19.5 -20.4,-19.5 -13.6,0 -33.6,-6.3 -42.4,-4.7 -15,2.7 -21.7,4.6 -29.6,3.6 z"></path>
             </g>
             <g class="surface">
-                <path d="m 758.1,89.3 c -12.1,-1.4 -18.5,4.7 -19.2,8.2 -0.9,4.6 2,9.5 9.3,10.5 8.9,1.2 16.3,3.6 24.5,10.4 8.2,6.7 17.8,5.6 22.5,5.6 4.7,0 52.7,-4 55.3,-14.1 2.6,-10.1 -6.8,-19.5 -20.4,-19.5 -13.6,0 -33.6,-6.3 -42.4,-4.7 -15,2.6 -21.7,4.5 -29.6,3.6 z"/>
+                <path d="m 758.1,89.3 c -12.1,-1.4 -18.5,4.7 -19.2,8.2 -0.9,4.6 2,9.5 9.3,10.5 8.9,1.2 16.3,3.6 24.5,10.4 8.2,6.7 17.8,5.6 22.5,5.6 4.7,0 52.7,-4 55.3,-14.1 2.6,-10.1 -6.8,-19.5 -20.4,-19.5 -13.6,0 -33.6,-6.3 -42.4,-4.7 -15,2.6 -21.7,4.5 -29.6,3.6 z"></path>
             </g>
         </g>
         <g class="weaves">
-            <ellipse cx="767.5" cy="101.5" rx="3.0999999" ry="0.69999999"/>                    
+            <ellipse cx="767.5" cy="101.5" rx="3.0999999" ry="0.69999999"></ellipse>                    
         </g>
         <g class="fish">
             <g class="fish-body">
-                <path class="tail" d="m 770.1,94.6 c 0,0 -3,0.1 -3.3,0.5 -0.1,0.2 0.7,0.6 1.2,1.2 0.5,0.6 0.6,1.4 0.8,1.3 0.6,-0.1 1.3,-3 1.3,-3 z"/>
-                <path class="main" d="m 769.2,95.1 c 0.6,0.7 1.6,0.8 2.5,0.1 0.9,-0.7 1.1,-2.3 0.8,-2.7 -0.4,-0.5 -1.9,-0.6 -2.8,0.1 -0.9,0.7 -1,1.7 -0.5,2.5 z"/>
+                <path class="tail" d="m 770.1,94.6 c 0,0 -3,0.1 -3.3,0.5 -0.1,0.2 0.7,0.6 1.2,1.2 0.5,0.6 0.6,1.4 0.8,1.3 0.6,-0.1 1.3,-3 1.3,-3 z"></path>
+                <path class="main" d="m 769.2,95.1 c 0.6,0.7 1.6,0.8 2.5,0.1 0.9,-0.7 1.1,-2.3 0.8,-2.7 -0.4,-0.5 -1.9,-0.6 -2.8,0.1 -0.9,0.7 -1,1.7 -0.5,2.5 z"></path>
             </g>
             <g class="eye">
-                <circle class="white" cx="771.20001" cy="93" r="0.40000001"/>
+                <circle class="white" cx="771.20001" cy="93" r="0.40000001"></circle>
                 <g id="g47">
-                    <circle class="dark" cx="771.20001" cy="93" r="0.2"/>
-                    <circle class="white" cx="771.09998" cy="92.900002" r="0.1"/>
+                    <circle class="dark" cx="771.20001" cy="93" r="0.2"></circle>
+                    <circle class="white" cx="771.09998" cy="92.900002" r="0.1"></circle>
                 </g>
             </g>
         </g>
@@ -1012,89 +1027,89 @@
     <g class="lake">
         <g class="water">
             <g class="coast">
-                <path d="m -64.2,319.3 c -12.1,-1.4 -18.5,4.7 -19.2,8.2 -0.9,4.6 2,9.5 9.3,10.5 8.9,1.2 16.3,3.6 24.5,10.4 8.2,6.7 17.8,5.6 22.5,5.6 4.7,0 52.7,-4 55.3,-14.1 2.6,-10.1 -6.8,-19.5 -20.4,-19.5 -13.6,0 -33.6,-6.3 -42.4,-4.7 -15,2.7 -21.7,4.5 -29.6,3.6 z"/>
+                <path d="m -64.2,319.3 c -12.1,-1.4 -18.5,4.7 -19.2,8.2 -0.9,4.6 2,9.5 9.3,10.5 8.9,1.2 16.3,3.6 24.5,10.4 8.2,6.7 17.8,5.6 22.5,5.6 4.7,0 52.7,-4 55.3,-14.1 2.6,-10.1 -6.8,-19.5 -20.4,-19.5 -13.6,0 -33.6,-6.3 -42.4,-4.7 -15,2.7 -21.7,4.5 -29.6,3.6 z"></path>
             </g>
             <g class="surface">
-                <path d="m -64.2,321 c -12.1,-1.4 -18.5,4.7 -19.2,8.2 -0.9,4.6 2,9.5 9.3,10.5 8.9,1.2 16.3,3.6 24.5,10.4 8.2,6.7 17.8,5.6 22.5,5.6 4.7,0 52.7,-4 55.3,-14.1 2.6,-10.1 -6.8,-19.5 -20.4,-19.5 -13.6,0 -33.6,-6.3 -42.4,-4.7 -15,2.7 -21.7,4.5 -29.6,3.6 z"/>
+                <path d="m -64.2,321 c -12.1,-1.4 -18.5,4.7 -19.2,8.2 -0.9,4.6 2,9.5 9.3,10.5 8.9,1.2 16.3,3.6 24.5,10.4 8.2,6.7 17.8,5.6 22.5,5.6 4.7,0 52.7,-4 55.3,-14.1 2.6,-10.1 -6.8,-19.5 -20.4,-19.5 -13.6,0 -33.6,-6.3 -42.4,-4.7 -15,2.7 -21.7,4.5 -29.6,3.6 z"></path>
             </g>
         </g>
         <g class="weaves">
-            <ellipse cx="9.3999996" cy="344.20001" rx="4.8000002" ry="1.1"/>
-            <ellipse cx="13.7" cy="335.79999" rx="2.0999999" ry="0.60000002"/>
-            <ellipse cx="17.1" cy="337.70001" rx="1.8" ry="0.30000001"/>
-            <ellipse cx="18.9" cy="337.70001" rx="4.6999998" ry="1.1"/>
-            <ellipse cx="20.299999" cy="340.89999" rx="3" ry="0.60000002"/>
-            <ellipse cx="24.9" cy="338" rx="2.5" ry="0.40000001"/>
-            <ellipse cx="18.1" cy="347.20001" rx="2.7" ry="0.5"/>
-            <ellipse cx="18.6" cy="338" rx="2.4000001" ry="0.5"/>
-            <path d="m 13.7,349.7 c -0.8,-0.4 -1.2,-0.9 -1.2,-1.4 0,-1.3 2.5,-2.3 5.6,-2.3 1.7,0 3.1,0.3 4.2,0.8"/>
+            <ellipse cx="9.3999996" cy="344.20001" rx="4.8000002" ry="1.1"></ellipse>
+            <ellipse cx="13.7" cy="335.79999" rx="2.0999999" ry="0.60000002"></ellipse>
+            <ellipse cx="17.1" cy="337.70001" rx="1.8" ry="0.30000001"></ellipse>
+            <ellipse cx="18.9" cy="337.70001" rx="4.6999998" ry="1.1"></ellipse>
+            <ellipse cx="20.299999" cy="340.89999" rx="3" ry="0.60000002"></ellipse>
+            <ellipse cx="24.9" cy="338" rx="2.5" ry="0.40000001"></ellipse>
+            <ellipse cx="18.1" cy="347.20001" rx="2.7" ry="0.5"></ellipse>
+            <ellipse cx="18.6" cy="338" rx="2.4000001" ry="0.5"></ellipse>
+            <path d="m 13.7,349.7 c -0.8,-0.4 -1.2,-0.9 -1.2,-1.4 0,-1.3 2.5,-2.3 5.6,-2.3 1.7,0 3.1,0.3 4.2,0.8"></path>
         </g> 
         <g class="plants">
             <g class="plant short" transform="translate(10 345) scale(.7)">
                 <g class="root">
-                    <path d="m -0.07572306,-0.72334168 c 0,0 -4.39999984,-17.00000032 1.89999996,-27.10000032"/>
+                    <path d="m -0.07572306,-0.72334168 c 0,0 -4.39999984,-17.00000032 1.89999996,-27.10000032"></path>
                     <g class="flower">
-                        <path d="m 0.43221674,-20.348621 c -0.1,0.3 -0.7,0.3 -1.4,0.1 -0.70000004,-0.2 -1.20000014,-0.6 -1.10000014,-0.9 l 2.00000014,-6.200001 c 0.1,-0.3 0.7,-0.3 1.40000006,-0.1 0.6999999,0.2 1.1999999,0.6 1.0999999,0.9 l -1.99999996,6.200001 z"/>
+                        <path d="m 0.43221674,-20.348621 c -0.1,0.3 -0.7,0.3 -1.4,0.1 -0.70000004,-0.2 -1.20000014,-0.6 -1.10000014,-0.9 l 2.00000014,-6.200001 c 0.1,-0.3 0.7,-0.3 1.40000006,-0.1 0.6999999,0.2 1.1999999,0.6 1.0999999,0.9 l -1.99999996,6.200001 z"></path>
                     </g>
                 </g>
             </g>
             <g class="plant long" transform="translate(13 336) scale(.7)">
                 <g class="root">
-                    <path d="m 0.09972346,-69.806232 c 0,0 1.20000004,59.8 0,69.00000033"/>
+                    <path d="m 0.09972346,-69.806232 c 0,0 1.20000004,59.8 0,69.00000033"></path>
                     <g class="flower">
-                        <path d="m 2.4997235,-50.806232 c 0,0.6 -1,1.2 -2.20000004,1.2 -1.200001,0 -2.20000096,-0.5 -2.20000096,-1.1 l -0.3,-15.4 c 0,-0.6 1,-1.2 2.20000096433,-1.2 1.20000003567,0 2.20000003567,0.5 2.20000003567,1.1 l 0.3,15.4 z"/>
+                        <path d="m 2.4997235,-50.806232 c 0,0.6 -1,1.2 -2.20000004,1.2 -1.200001,0 -2.20000096,-0.5 -2.20000096,-1.1 l -0.3,-15.4 c 0,-0.6 1,-1.2 2.20000096433,-1.2 1.20000003567,0 2.20000003567,0.5 2.20000003567,1.1 l 0.3,15.4 z"></path>
                     </g>
                 </g>
             </g>
             <g class="plant long" transform="translate(10 345) scale(.7)">
                 <g class="root">
-                    <path d="m -3.6115716,-59.411879 c 0,0 7.4,50.3000001 3.89999998,58.50000014"/>
+                    <path d="m -3.6115716,-59.411879 c 0,0 7.4,50.3000001 3.89999998,58.50000014"></path>
                     <g class="flower">
-                        <path d="m -0.01157162,-45.111879 c 0.1,0.5 -0.59999995,0.9 -1.49999998,1 -0.9,0.1 -1.7,-0.2 -1.7,-0.6 l -1.4,-11.4 c -0.1,-0.5 0.6,-0.9 1.5,-1 0.9,-0.1 1.7,0.2 1.7,0.6 l 1.39999998,11.4 z"/>
+                        <path d="m -0.01157162,-45.111879 c 0.1,0.5 -0.59999995,0.9 -1.49999998,1 -0.9,0.1 -1.7,-0.2 -1.7,-0.6 l -1.4,-11.4 c -0.1,-0.5 0.6,-0.9 1.5,-1 0.9,-0.1 1.7,0.2 1.7,0.6 l 1.39999998,11.4 z"></path>
                     </g>
                 </g>
             </g>
             <g class="plant long" transform="translate(19 348) scale(.7)">
                 <g class="root">
-                    <line y2="-0.74007094" x1="-3.1794016" y1="-86.340149" x2="0.020593448"/>
+                    <line y2="-0.74007094" x1="-3.1794016" y1="-86.340149" x2="0.020593448"></line>
                     <g class="flower">
-                        <path d="m -0.47940444,-67.540137 c 0,0.6 -0.99999996,1.2 -2.19999996,1.2 -1.2,0 -2.2,-0.4 -2.2,-1.1 l -0.5,-15.400001 c 0,-0.6 1,-1.2 2.2,-1.2 1.2,0 2.19999996,0.4 2.19999996,1.1 l 0.5,15.400001 z"/>
+                        <path d="m -0.47940444,-67.540137 c 0,0.6 -0.99999996,1.2 -2.19999996,1.2 -1.2,0 -2.2,-0.4 -2.2,-1.1 l -0.5,-15.400001 c 0,-0.6 1,-1.2 2.2,-1.2 1.2,0 2.19999996,0.4 2.19999996,1.1 l 0.5,15.400001 z"></path>
                     </g>
                 </g>
             </g>
             <g class="plant long" transform="translate(19 338) scale(.7)">
                 <g class="root">
-                    <path d="m 11.223761,-78.614115 c 0,0 -12.4000004,72.4000009 -11.20000036,77.800001"/>
+                    <path d="m 11.223761,-78.614115 c 0,0 -12.4000004,72.4000009 -11.20000036,77.800001"></path>
                     <g class="flower">
-                        <path d="m 10.023761,-56.114114 c -0.1000001,0.7 -1.4000004,1.1 -2.8000004,0.9 -1.4,-0.2 -2.5,-1 -2.4,-1.8 l 3.1,-18.200001 c 0.1,-0.7 1.4,-1.1 2.8000004,-0.9 1.4,0.2 2.5,1 2.4,1.8 l -3.1,18.200001 z"/>
+                        <path d="m 10.023761,-56.114114 c -0.1000001,0.7 -1.4000004,1.1 -2.8000004,0.9 -1.4,-0.2 -2.5,-1 -2.4,-1.8 l 3.1,-18.200001 c 0.1,-0.7 1.4,-1.1 2.8000004,-0.9 1.4,0.2 2.5,1 2.4,1.8 l -3.1,18.200001 z"></path>
                     </g>
                 </g>
             </g>
             <g class="plant short" transform="translate(21 340) scale(.7)">
                 <g class="root">
-                    <path d="m 0.10218502,-0.71269296 c 0,0 -1.20000002,-28.90000104 8.09999978,-50.20000004"/>
+                    <path d="m 0.10218502,-0.71269296 c 0,0 -1.20000002,-28.90000104 8.09999978,-50.20000004"></path>
                     <g class="flower">
-                        <path d="m 6.0021848,-40.312694 c -0.1,0.4 -0.8,0.5 -1.5,0.2 -0.7,-0.2 -1.2,-0.7 -1.1,-1.1 l 2.9,-8.899999 c 0.1,-0.4 0.8,-0.5 1.5,-0.2 0.7,0.2 1.2,0.7 1.1,1.1 l -2.9,8.899999 z"/>
+                        <path d="m 6.0021848,-40.312694 c -0.1,0.4 -0.8,0.5 -1.5,0.2 -0.7,-0.2 -1.2,-0.7 -1.1,-1.1 l 2.9,-8.899999 c 0.1,-0.4 0.8,-0.5 1.5,-0.2 0.7,0.2 1.2,0.7 1.1,1.1 l -2.9,8.899999 z"></path>
                     </g>
                 </g>
             </g>
             <g class="plant short" transform="translate(25 338) scale(.7)">
                 <g class="root">
-                    <line y2="-0.70610714" x1="9.4329414" y1="-51.406155" x2="0.13293834"/>
+                    <line y2="-0.70610714" x1="9.4329414" y1="-51.406155" x2="0.13293834"></line>
                     <g class="flower">
-                        <path d="m 8.5329496,-37.606174 c -0.1,0.5 -0.9,0.7 -1.8,0.6 -0.9,-0.2 -1.6,-0.7 -1.5,-1.1 l 2,-11.5 c 0.1,-0.5 0.9,-0.7 1.8,-0.6 0.9,0.2 1.6000004,0.7 1.5000004,1.1 l -2.0000004,11.5 z"/>
+                        <path d="m 8.5329496,-37.606174 c -0.1,0.5 -0.9,0.7 -1.8,0.6 -0.9,-0.2 -1.6,-0.7 -1.5,-1.1 l 2,-11.5 c 0.1,-0.5 0.9,-0.7 1.8,-0.6 0.9,0.2 1.6000004,0.7 1.5000004,1.1 l -2.0000004,11.5 z"></path>
                     </g>
                 </g>
             </g>
             <g class="plant short" transform="translate(227 821)">
                 <g class="root">
-                    <path d="m 0.01402657,-0.71006547 c 0,0 3.69999993,-37.30000253 -10.60000057,-56.80000253"/>
+                    <path d="m 0.01402657,-0.71006547 c 0,0 3.69999993,-37.30000253 -10.60000057,-56.80000253"></path>
                     <g class="flower">
-                        <path d="m -3.8859735,-48.410068 c 0.2,0.3 -0.2,0.9 -0.9,1.2 -0.7,0.3 -1.3,0.3 -1.5,0 l -4.3000005,-8.3 c -0.2,-0.3 0.2,-0.9 0.8999995,-1.2 0.7,-0.3 1.3,-0.3 1.5,0 l 4.300001,8.3 z"/>
+                        <path d="m -3.8859735,-48.410068 c 0.2,0.3 -0.2,0.9 -0.9,1.2 -0.7,0.3 -1.3,0.3 -1.5,0 l -4.3000005,-8.3 c -0.2,-0.3 0.2,-0.9 0.8999995,-1.2 0.7,-0.3 1.3,-0.3 1.5,0 l 4.300001,8.3 z"></path>
                     </g>
                 </g>
             </g>
-        </g>              
+        </g>
     </g>
 
 </svg>
