@@ -40,7 +40,7 @@ class Newsletter_Form extends WP_Widget {
 		$control_options = array();
 
 		/* Create the widget. */
-		$this->WP_Widget(
+		parent::__construct(
 			'newsletterform',               // $this->id_base
 			__( 'Widget Newsletter.', 'bon' ), // $this->name
 			$widget_options,                 // $this->widget_options
