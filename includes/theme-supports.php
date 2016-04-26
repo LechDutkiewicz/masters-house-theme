@@ -311,11 +311,10 @@ if( !function_exists('shandora_setup_theme_thumbnails') ) {
 			
 			/* PEOPLE */		
 			
-			'agent_large' => array('width'=>237, 'height'=>237, 'crop' => false),
-			'mobile_agent_large' => array('width' => 75, 'height'=>75, 'crop' => false),
+			'agent_large' => array('width'=>270, 'height'=>395, 'crop' => false),
 			
-			'agent_small' => array('width'=>170, 'height'=>170, 'crop' => false),
-			'mobile_agent_small' => array('width' => 75, 'height'=>75, 'crop' => true),
+			'agent_small' => array('width'=>150, 'height'=>225, 'crop' => false),
+			'mobile_agent_small' => array('width' => 75, 'height'=>113, 'crop' => true),
 			
 			'user_small' => array('width'=>70, 'height'=>70, 'crop' => true),
 			
